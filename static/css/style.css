@@ -218,7 +218,7 @@ header {
   /* Initially hide the mobile menu */
   .mobile-menu {
     display: none; /* Hidden by default */
-    background-color: #EFB071;
+    background-color: var(--main-orange);
     position: absolute;
     top: 60px;
     left: 0;
@@ -267,10 +267,112 @@ header {
   }
 }
 
+/* Global */
+body {
+  font-family: Arial, sans-serif;
+}
 
-.section-hero {
+main {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2 {
+  color: var(--contrast-blue); /* Primary blue color for headings */
+}
+
+/* Ensure each section background spans full width */
+section {
+    margin: 0; /* Remove default margin */
+    padding: 5rem 0; /* Adjust for top/bottom padding */
+    box-sizing: border-box; /* Ensure padding doesn’t overflow */
+}
+
+/* Optional: Remove padding on .container-fluid within sections */
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: var(--main-orange);
+  padding: 5rem 0;
+  position: relative;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+.services-banner {
+  font-size: 1rem;
+  color: #fff;
+}
+
+/* About Us Section */
+.about-section {
   background-color: var(--main-orange);
 }
+.about-title {
+  color: var(--contrast-blue);
+}
+.about-text {
+  margin-top: -5rem;
+  background: rgba(255, 127, 80, 0.8);
+  padding: 2rem;
+}
+
+/* Client Reviews Section */
+.reviews-section {
+  background-color: var(--contrast-blue);
+}
+.review p {
+  font-size: 1.2rem;
+  color: var(--main-orange);
+}
+
+/* Packages Section */
+.packages-section {
+  background-color: var(--main-orange);
+}
+.package-card {
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Hosting Section */
+.hosting-section {
+  background-color: var(--contrast-blue);
+}
+.hosting-card {
+  background-color: var(--main-orange);
+}
+
+/* Consultation Section */
+.consultation-section {
+  background-color: var(--main-orange);
+}
+.consultation-text h2 {
+  color: var(--contrast-blue);
+}
+
+/* Contact Section */
+.contact-section {
+  background-color: var(--contrast-blue);
+}
+.contact-section h2, .contact-form label {
+  color: var(--main-orange);
+}
+
+/* Footer Section */
+.footer {
+  background-color: var(--main-orange);
+}
+.footer-nav a {
+  color: white;
+  margin-right: 1rem;
+}
+
 
 
 
