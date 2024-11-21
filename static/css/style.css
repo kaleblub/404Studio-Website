@@ -314,6 +314,11 @@ section {
 .hero-text h1 {
   margin: 0;
 }
+
+.hero-image {
+  max-height: 300px;
+}
+
 .services-banner {
   overflow: hidden;
   white-space: nowrap;
@@ -324,6 +329,8 @@ section {
   color: #fff;
   background-color: var(--contrast-blue);
   margin-top: 3.5rem;
+  border-top: #000000 solid 2px;
+  border-bottom: #000000 solid 2px;
 }
 .scrolling-text {
   display: inline-block;
@@ -357,9 +364,13 @@ section {
   color: var(--contrast-blue);
 }
 .about-text {
-  margin-top: -5rem;
-  background: rgba(255, 127, 80, 0.8);
+  margin-top: -1rem;
+  margin-bottom: -6rem;
   padding: 2rem;
+  z-index: 1;
+}
+.about-section-image {
+  position: relative;
 }
 
 /* Client Reviews Section */

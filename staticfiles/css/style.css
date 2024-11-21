@@ -36,6 +36,12 @@ table {
     border-spacing: 0;
 }
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 /* Set base font and line-height */
 body {
     font-family: sans-serif, Arial, Helvetica, sans-serif;
@@ -86,6 +92,11 @@ img, svg {
 :root {
   --main-orange: #EFB071;
   --contrast-blue: #486d76;
+}
+
+@font-face {
+  font-family: NeonLEDLight;
+  src: url(../fonts/NEONLEDLight.ttf);
 }
 
 html {
@@ -301,12 +312,48 @@ section {
   position: relative;
 }
 .hero-text h1 {
-  font-size: 3rem;
   margin: 0;
 }
+
+.hero-image {
+  max-height: 300px;
+}
+
 .services-banner {
-  font-size: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+  font-family: 'NeonLEDLight', sans-serif;
+  font-size: 1.65rem;
   color: #fff;
+  background-color: var(--contrast-blue);
+  margin-top: 3.5rem;
+  border-top: #000000 solid 2px;
+  border-bottom: #000000 solid 2px;
+}
+.scrolling-text {
+  display: inline-block;
+  animation: scroll 20s linear infinite;
+  /* padding: 0 -00px; */
+}
+
+.scrolling-text span {
+  display: inline-block;
+  margin: 0 20px;
+  padding: 20px;
+  font-size: 2rem;
+  color: gainsboro;
+}
+
+/* Keyframes for the scrolling animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* About Us Section */
@@ -317,9 +364,13 @@ section {
   color: var(--contrast-blue);
 }
 .about-text {
-  margin-top: -5rem;
-  background: rgba(255, 127, 80, 0.8);
+  margin-top: -1rem;
+  margin-bottom: -6rem;
   padding: 2rem;
+  z-index: 1;
+}
+.about-section-image {
+  position: relative;
 }
 
 /* Client Reviews Section */
