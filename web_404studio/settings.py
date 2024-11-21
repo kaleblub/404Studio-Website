@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ap9$h39dl@*+eo3$_00^e9ai_462ae7e+*dd6%b1#w754*4w4='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['www.404studio.net', '404-studio-website.vercel.app', 'https://404-studio-website-kaleblubs-projects.vercel.app/', 'https://404-studio-website-git-master-kaleblubs-projects.vercel.app/']
 
