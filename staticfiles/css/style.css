@@ -376,24 +376,61 @@ section {
 /* Client Reviews Section */
 .reviews-section {
   background-color: var(--contrast-blue);
+  padding: 0 100px;
+}
+.reviews-section h2 {
+  color: var(--main-orange);
 }
 .review p {
   font-size: 1.2rem;
   color: var(--main-orange);
 }
 
+.reviews {
+  padding-top: 3rem;
+}
+
+.client-review-image {
+  border-radius: 500px;
+  width: 75px;
+  height: 100px;
+}
+
 /* Packages Section */
 .packages-section {
   background-color: var(--main-orange);
 }
-.package-card {
-  background-color: #fff;
+.package-card, .hosting-card {
+  color: gainsboro;
   border-radius: 5px;
+  max-width: 75vw;
+}
+
+.package-card {
+  background-color: var(--contrast-blue);
+}
+.package-card .cost-subtitle {
+  color: var(--main-orange);
+}
+
+.hosting-card {
+  background-color: var(--main-orange);
+}
+.hosting-card .cost-subtitle {
+  color: var(--contrast-blue);
+}
+
+.cost-subtitle {
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 /* Hosting Section */
 .hosting-section {
   background-color: var(--contrast-blue);
+}
+.hosting-title {
+  color: var(--main-orange);
 }
 .hosting-card {
   background-color: var(--main-orange);
@@ -410,6 +447,7 @@ section {
 /* Contact Section */
 .contact-section {
   background-color: var(--contrast-blue);
+  padding: 150px;
 }
 .contact-section h2, .contact-form label {
   color: var(--main-orange);

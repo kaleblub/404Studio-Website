@@ -219,17 +219,20 @@
   <section class="reviews-section py-5">
       <div class="container-fluid text-white">
           <h2>Client Reviews</h2>
-          <div class="row">
+          <div class="row reviews">
               <div class="col-md-4 review">
                   <p>"Exceptional work! They really understand our needs."</p>
+                  <img src="{% static 'img/images/profile-photo-1.jpg' %}" alt="client-review-1-profile-image" class="client-review-image">
                   <small>- Client 1</small>
               </div>
               <div class="col-md-4 review">
                   <p>"Highly recommend their services to any business!"</p>
+                  <img src="{% static 'img/images/profile-photo-2.jpg' %}" alt="client-review-2-profile-image" class="client-review-image">
                   <small>- Client 2</small>
               </div>
               <div class="col-md-4 review">
                   <p>"Great attention to detail and commitment."</p>
+                  <img src="{% static 'img/images/profile-photo-3.jpg' %}" alt="client-review-3-profile-image" class="client-review-image">
                   <small>- Client 3</small>
               </div>
           </div>
@@ -244,7 +247,7 @@
               <div class="col-md-4">
                   <div class="package-card p-4">
                       <h4>Basic</h4>
-                      <p>$499</p>
+                      <p class="cost-subtitle">$499</p>
                       <p>Services Included:</p>
                       <ul>
                           <li>1-page website</li>
@@ -256,7 +259,7 @@
               <div class="col-md-4">
                   <div class="package-card p-4">
                       <h4>Standard</h4>
-                      <p>$999</p>
+                      <p class="cost-subtitle">$999</p>
                       <p>Services Included:</p>
                       <ul>
                           <li>Up to 5 pages</li>
@@ -268,7 +271,7 @@
               <div class="col-md-4">
                   <div class="package-card p-4">
                       <h4>Premium</h4>
-                      <p>$1499</p>
+                      <p class="cost-subtitle">$1499</p>
                       <p>Services Included:</p>
                       <ul>
                           <li>Custom design</li>
@@ -284,12 +287,12 @@
   <!-- Web Hosting Plans Section -->
   <section class="hosting-section py-5">
       <div class="container-fluid text-center text-white">
-          <h2>Web Hosting Plans</h2>
+          <h2 class="hosting-title">Web Hosting Plans</h2>
           <div class="row">
               <div class="col-md-4">
                   <div class="hosting-card p-4">
                       <h4>Basic Hosting</h4>
-                      <p>$10/month</p>
+                      <p class="cost-subtitle">$10/month</p>
                       <ul>
                           <li>1 website</li>
                           <li>5 GB storage</li>
@@ -300,7 +303,7 @@
               <div class="col-md-4">
                   <div class="hosting-card p-4">
                       <h4>Standard Hosting</h4>
-                      <p>$25/month</p>
+                      <p class="cost-subtitle">$25/month</p>
                       <ul>
                           <li>3 websites</li>
                           <li>20 GB storage</li>
@@ -311,7 +314,7 @@
               <div class="col-md-4">
                   <div class="hosting-card p-4">
                       <h4>Premium Hosting</h4>
-                      <p>$50/month</p>
+                      <p class="cost-subtitle">$50/month</p>
                       <ul>
                           <li>Unlimited websites</li>
                           <li>100 GB storage</li>
