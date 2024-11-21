@@ -92,6 +92,13 @@ DATABASES = {
     }
 }
 
+if os.getenv("USE_DUMMY_DB") == "1":
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.dummy',
+        }
+    }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators

@@ -9,7 +9,8 @@ pip install -r requirements.txt # /production.txt
 /vercel/path0/venv/python3 -m pip install --upgrade pip
 
 echo "--Collecting Static Files--"
-mkdir staticfiles
+export USE_DUMMY_DB=1
+mkdir -p staticfiles
 python3 manage.py collectstatic --noinput
 
 # Set PYTHONPATH to the project root directory
