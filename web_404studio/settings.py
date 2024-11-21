@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ap9$h39dl@*+eo3$_00^e9ai_462ae7e+*dd6%b1#w754*4w4=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['www.404studio.net', '404-studio-website.vercel.app', 'https://404-studio-website-kaleblubs-projects.vercel.app/', 'https://404-studio-website-git-master-kaleblubs-projects.vercel.app/']
+ALLOWED_HOSTS = ['127.0.0.1', 'www.404studio.net', '404-studio-website.vercel.app', 'https://404-studio-website-kaleblubs-projects.vercel.app/', 'https://404-studio-website-git-master-kaleblubs-projects.vercel.app/']
 
 
 # Application definition
