@@ -17,3 +17,5 @@ def home(request):
     # }
     return render(request, 'main/home.html')
 
+def links(request):
+    return render(request, 'main/links-page.html')
