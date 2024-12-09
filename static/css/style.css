@@ -91,7 +91,12 @@ img, svg {
 /* STYLES START */
 :root {
   --main-orange: #EFB071;
-  --contrast-blue: #486d76;
+  --contrast-blue-green: #486d76;
+  --contrast-blue: #14213d;
+  --contrast-grey: #2f2f2f;
+  --text-grey: #404040;
+  --contrast-darker: #1e1e1e;
+  --black: #000000;
 }
 
 @font-face {
@@ -164,6 +169,28 @@ header {
 
 .skip-link {
   display: none;
+}
+
+/*--------- Buttons ---------*/
+/* .button {
+
+} */
+
+.btn-primary-orange {
+  background-color: var(--main-orange);
+}
+.btn-secondary-orange {
+  border: var(--main-orange) 2px solid;
+}
+
+.btn-primary-blue {
+  background-color: var(--contrast-blue);
+  color: white;
+}
+
+.btn-secondary-blue {
+  background-color: none;
+  border: var(--contrast-blue) 2px solid;
 }
 
 /*--------- Social Media Icons ---------*/
@@ -308,7 +335,7 @@ section {
 /* Hero Section */
 .hero-section {
   background-color: var(--main-orange);
-  padding: 5rem 0;
+  padding: 3.5rem 0 0 0;
   position: relative;
 }
 .hero-text h1 {
@@ -373,10 +400,15 @@ section {
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .about-section-image {
+    padding-top: 3.5rem;
+  }
+}
 /* Client Reviews Section */
 .reviews-section {
   background-color: var(--contrast-blue);
-  padding: 0 100px;
+  padding: 0 20px;
 }
 .reviews-section h2 {
   color: var(--main-orange);
@@ -403,7 +435,6 @@ section {
 .package-card, .hosting-card {
   color: gainsboro;
   border-radius: 5px;
-  max-width: 75vw;
 }
 
 .package-card {
@@ -411,6 +442,12 @@ section {
 }
 .package-card .cost-subtitle {
   color: var(--main-orange);
+}
+
+.package-card ul,
+.hosting-card ul {
+  list-style: square;
+  text-align: left;
 }
 
 .hosting-card {
@@ -434,6 +471,7 @@ section {
 }
 .hosting-card {
   background-color: var(--main-orange);
+  color: var(--text-grey);
 }
 
 /* Consultation Section */
@@ -447,10 +485,16 @@ section {
 /* Contact Section */
 .contact-section {
   background-color: var(--contrast-blue);
-  padding: 150px;
+  padding: 20px;
 }
 .contact-section h2, .contact-form label {
   color: var(--main-orange);
+}
+
+@media (min-width: 768px) {
+  .contact-section {
+    padding: 150px;
+  }
 }
 
 /* Footer Section */
@@ -471,9 +515,9 @@ section {
 
 
 
-@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+/* @supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
   .header-blur-background {}
-}
+} */
 
 .top-bun,
 .patty,
