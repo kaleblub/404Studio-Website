@@ -98,15 +98,15 @@
                 <li class="nav-item">
                   <a class="nav-link" href="#">Contact</a>
                 </li>
-                <li>
+                <!-- <li>
                   <a href="#" class="nav-link account-link">Login / Account</a>
-                </li>
+                </li> -->
               </ul>
             </nav>
           </div>
 
           <!-- Social Media Links -->
-          <div class="social-links col-auto flex-column align-items-end">
+          <!-- <div class="social-links col-auto flex-column align-items-end">
             <a href="http://squarespace.com/" target="_blank" class="social-icon mb-2">
               <svg viewBox="23 23 64 64">
                 <use height="110" width="110" xlink:href="#tiktok-icon"></use>
@@ -122,7 +122,7 @@
                 <use height="110" width="110" xlink:href="#twitter-icon"></use>
               </svg>
             </a>
-          </div>
+          </div> -->
         </div>
 
         <!-- Mobile Burger Menu -->
@@ -146,13 +146,13 @@
               <!-- Add more menu items as needed -->
             </ul>
           </nav>
-          <div class="mobile-social-links">
+          <!-- <div class="mobile-social-links">
             <a href="http://squarespace.com/" target="_blank" class="social-icon social-icon--tiktok">Tiktok</a>
             <a href="http://instagram.com/squarespace" target="_blank"
               class="social-icon social-icon--instagram">Instagram</a>
             <a href="http://twitter.com/squarespace" target="_blank"
               class="social-icon social-icon--twitter">Twitter</a>
-          </div>
+          </div> -->
         </div>
 
   </header>
@@ -174,9 +174,9 @@
                   <p class="hero-summary">
                     We help businesses transform their digital presence with custom solutions that drive real growth.
                 </p>
-                <div class="hero-buttons mt-3">
-                    <button class="btn btn-primary-blue">Get a Free Consultation</button>
-                    <button class="btn btn-secondary-blue">View Our Portfolio</button>
+                <div class="buttons hero-buttons mt-3">
+                    <!-- btn btn-primary-blue --><button class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Get a Free Consultation</button>
+                    <!-- btn btn-secondary-blue --><button class="button button--quidel button--inverted">View Our Portfolio</button>
                 </div>
               </div>
           </div>
@@ -200,17 +200,19 @@
   
   <!-- About Us Section -->
   <section class="about-section py-5">
-      <div class="container">
-          <h2 class="about-title">Your Partner in Web Development and Digital Solutions</h2>
-          <div class="row">
-            <div class="col-12 col-md-6 about-text">
-              <p>404 Studio LLC is a web development agency committed to delivering modern, user-centric websites that elevate your business. With years of experience in the industry, we are passionate about bringing your vision to life through cutting-edge design, development, and ongoing support.</p>
-            </div>  
-            <div class="col-12 col-md-6">
-                  <img src="{% static 'img/images/home-about-us-partnership-image.jpg' %}" class="about-section-image img-fluid w-100" alt="About Us Image">
-              </div>  
+    <div class="container">
+      <h2 class="about-title">Your Partner in Web Development and Digital Solutions</h2>
+      <div class="row">
+        <div class="col-12 col-md-6 about-text">
+          <p>404 Studio LLC is a web development agency committed to delivering modern, user-centric websites that elevate your business. With years of experience in the industry, we are passionate about bringing your vision to life through cutting-edge design, development, and ongoing support.</p>
+        </div>  
+        <div class="col-12 col-md-6">
+          <div class="about-section-image-container noise-effect">
+            <img src="{% static 'img/images/home-about-us-partnership-image.jpg' %}" class="about-section-image img-fluid w-100" alt="About Us Image">
           </div>
-      </div>
+        </div>
+      </div>  
+    </div>
   </section>
   
   <!-- Client Reviews Section -->
@@ -244,66 +246,71 @@
       <h2>Website Development Packages</h2>
       <div class="row mx-0">
         <div class="col-sm-12 col-md-4 mb-4">
-          <div class="package-card p-4 border shadow-sm">
+          <div class="package-card">
             <h4>Basic</h4>
             <p class="cost-subtitle">$500-$1,000</p>
+            <br/>
             <p>Services Included:</p>
             <ul>
-              <li>Template-based website design (up to 5 pages)</li>
-              <li>Basic customization of pre-designed templates</li>
-              <li>Basic SEO setup for search engine visibility</li>
+              <li>Pre-designed layout selection and customization</li>
+              <li>Up to 5 pages</li>
+              <li>Basic SEO setup</li>
               <li>Mobile-responsive design</li>
-              <li>1 round of revisions for layout and color adjustments</li>
-              <li>Content formatting (text, images, and videos)</li>
+              <li>1 round of revisions</li>
+              <li>Content formatting</li>
             </ul>
+            <br/>
             <p>Ideal For:</p>
             <ul>
-              <li>Personal projects, small businesses, or blogs with limited budget</li>
-              <li>Simple websites that don’t require extensive customization</li>
+              <li>Small businesses or personal sites needing a professional web presence with minimal customization</li>
             </ul>
-            <button class="btn btn-primary-orange">Request this Package</button>
+            <button class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Request this Package</button>
           </div>
         </div>
         <div class="col-sm-12 col-md-4 mb-4">
-          <div class="package-card p-4 border shadow-sm">
+          <div class="package-card">
             <h4>Standard</h4>
             <p class="cost-subtitle">$1,500-$2,500</p>
+            <br/>
             <p>Services Included:</p>
             <ul>
-              <li>Semi-custom website design using a website builder (e.g., WordPress, Wix)</li>
-              <li>5-10 pages with customization beyond a basic template</li>
+              <li>Semi-custom design with unique styling</li>
+              <li>Up to 10 pages</li>
               <li>Advanced SEO setup</li>
               <li>Speed optimization</li>
-              <li>E-commerce integration (up to 10 products)</li>
+              <li>Basic E-commerce capability (up to 10 products)</li>
               <li>2 rounds of revisions</li>
+              <li>Contact form integration</li>
             </ul>
+            <br/>
             <p>Ideal For:</p>
             <ul>
-              <li>Small to medium-sized businesses that need more customization</li>
-              <li>E-commerce sites or blogs that need additional functionality</li>
+              <li>Growing businesses needing more customization and basic e-commerce functionality
+              </li>
             </ul>
-            <button class="btn btn-primary-orange">Request this Package</button>
+            <button class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Request this Package</button>
           </div>
         </div>
         <div class="col-sm-12 col-md-4 mb-4">
-          <div class="package-card p-4 border shadow-sm">
+          <div class="package-card">
             <h4>Premium</h4>
             <p class="cost-subtitle">$5,000+</p>
+            <br/>
             <p>Services Include:</p>
             <ul>
-              <li>Fully custom-built website tailored to your needs</li>
-              <li>E-commerce integration (unlimited products)</li>
-              <li>Membership sites or custom features (e.g., booking systems, user profiles)</li>
-              <li>Advanced SEO, speed optimization, and content management system</li>
+              <li>Fully custom design from scratch</li>
+              <li>Unlimited pages</li>
+              <li>E-commerce with unlimited products</li>
+              <li>Custom features (user profiles, booking systems, etc.)</li>
               <li>4 rounds of revisions</li>
-              <li>Full integration with third-party tools (CRM, marketing platforms)</li>
+              <li>Third-party integrations (CRM, marketing platforms)</li>
             </ul>
+            <br/>
             <p>Ideal For:</p>
             <ul>
-              <li>Businesses with complex requirements or unique needs</li>
-              <li>Websites requiring advanced functionality like custom designs, memberships, or large-scale e-commerce</li>
+              <li>Businesses needing complex functionality or unique custom features</li>
             </ul>
-            <button class="btn btn-primary-orange">Request this Package</button>
+            <button class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Request this Package</button>
           </div>
         </div>
       </div>
@@ -316,126 +323,185 @@
       <h2 class="hosting-title">Web Hosting Plans</h2>
       <div class="row mx-0">
         <div class="col-sm-12 col-md-4 mb-4">
-          <div class="hosting-card p-4 border shadow-sm">
+          <div class="hosting-card">
             <h4>Basic Hosting</h4>
             <p class="cost-subtitle">$20/month</p>
+            <br/>
+            <p>Service Includes:</p>
             <ul>
-              <li>Shared hosting with 2GB storage</li>
-              <li>5 GB storage</li>
-              <li>Basic SSL certificate for security</li>
-              <li>99.9% uptime guarantee</li>
+              <li>2GB Storage </li>
+              <li>Basic SSL certificate</li>
               <li>10GB monthly bandwidth</li>
               <li>1 email account</li>
+              <li>99.9% uptime guarantee</li>
             </ul>
+            <br/>
             <p>Ideal For:</p>
             <ul>
               <li>Simple websites or blogs that don't need a lot of storage or bandwidth</li>
             </ul>
-            <button class="btn btn-primary-blue">Request this Plan</button>
+            <button class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Request this Plan</button>
           </div>
         </div>
         <div class="col-sm-12 col-md-4 mb-4">
-          <div class="hosting-card p-4 border shadow-sm">
+          <div class="hosting-card">
             <h4>Standard Hosting</h4>
             <p class="cost-subtitle">$40/month</p>
+            <br/>
+            <p>Service Includes:</p>
             <ul>
-              <li>10GB storage with automatic backups</li>
+              <li>10GB storage</li>
               <li>Free SSL certificate</li>
               <li>99.9% uptime guarantee</li>
               <li>50GB monthly bandwidth</li>
               <li>3 email accounts</li>
-              <li>WordPress or website builder support</li>
+              <li>Priority support</li>
             </ul>
+            <br/>
             <p>Ideal For:</p>
             <ul>
               <li>Small business websites or blogs with moderate traffic and extra features</li>
             </ul>
-            <button class="btn btn-primary-blue">Request this Plan</button>
+            <button class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Request this Plan</button>
           </div>
         </div>
         <div class="col-sm-12 col-md-4 mb-4">
-          <div class="hosting-card p-4 border shadow-sm">
+          <div class="hosting-card">
             <h4>Premium Hosting</h4>
             <p class="cost-subtitle">$80/month</p>
+            <br/>
+            <p>Service Includes:</p>
             <ul>
-              <li>30GB storage with nightly backups</li>
-              <li>Free SSL and enhanced security</li>
-              <li>99.9% uptime guarantee</li>
+              <li>30GB storage</li>
+              <li>Premium SSL certificate</li>
               <li>Unlimited bandwidth</li>
               <li>10+ email accounts</li>
-              <li>Priority customer support</li>
-              <li>Support for custom features or advanced setups</li>
+              <li>Nightly backups</li>
+              <li>Advanced security features</li>
+              <li>Priority support with custom setup assistance</li>
             </ul>
+            <br/>
             <p>Ideal For:</p>
             <ul>
               <li>High-traffic sites or businesses with custom needs that require a high-performance hosting environment</li>
             </ul>
-            <button class="btn btn-primary-blue">Request this Plan</button>
+            <button class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Request this Plan</button>
           </div>
         </div>
       </div>
     </div>
   </section>
-
   
   <!-- Consultation Prompt Section -->
   <section class="consultation-section py-5">
-      <div class="container-fluid d-flex">
-          <div class="consultation-image col-6">
-              <img src="consultation.jpg" alt="Consultation">
-          </div>
-          <div class="consultation-text col-6">
-              <h2>Need Help Choosing?</h2>
-              <p>Schedule a free consultation now, and we will figure out which package and/or plan is right for your situation!</p>
-              <button class="btn btn-primary-blue">Schedule Consultation</button>
-          </div>
-      </div>
+    <div class="container-fluid d-flex justify-content-center align-items-center">
+        <div class="consultation-image-container noise-effect col-4">
+            <img src="{% static '/img/images/consultation-image.jpg' %}" alt="Consultation">
+        </div>
+        <div class="consultation-text col-4">
+            <h2>Need Help Choosing?</h2>
+            <p>Schedule a free consultation now, and we will figure out which package and/or plan is right for your situation!</p>
+            <button class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Schedule Consultation</button>
+        </div>
+    </div>
   </section>
+
   
   <!-- Contact Section -->
   <section class="contact-section py-5 text-white">
-      <div class="container-fluid">
-          <h2>Still have questions? Let's Chat.</h2>
-          <form class="contact-form">
-              <div class="mb-3">
-                  <label>First Name</label>
-                  <input type="text" class="form-control">
-              </div>
-              <div class="mb-3">
-                  <label>Last Name</label>
-                  <input type="text" class="form-control">
-              </div>
-              <div class="mb-3">
-                  <label>Email</label>
-                  <input type="email" class="form-control">
-              </div>
-              <div class="mb-3">
-                  <label>Subject</label>
-                  <input type="text" class="form-control">
-              </div>
-              <div class="mb-3">
-                  <label>Message</label>
-                  <textarea class="form-control"></textarea>
-              </div>
-              <button class="btn btn-primary-orange">Submit</button>
-          </form>
-      </div>
+    <div class="container-fluid">
+        <h2>Still have questions? Let's Chat.</h2>
+        <div class="row align-items-center">
+            <!-- Form Column -->
+            <div class="col-md-6">
+                <form class="contact-form">
+                    <div class="mb-3">
+                        <label>First Name</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label>Last Name</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label>Email</label>
+                        <input type="email" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label>Subject</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label>Message</label>
+                        <textarea class="form-control"></textarea>
+                    </div>
+                    <button class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Submit</button>
+                </form>
+            </div>
+            <!-- Image Column -->
+            <div class="col-md-6">
+                <img src="{% static '/img/images/contact-image.jpg' %}" alt="Contact Us" class="img-fluid noise-effect">
+            </div>
+        </div>
+    </div>
   </section>
   
-  <!-- Footer Section -->
-  <footer class="footer py-3">
-      <div class="container d-flex justify-content-between">
-          <div class="footer-logo">Your Logo</div>
-          <nav class="footer-nav">
-              <a href="#">Home</a>
-              <a href="#">About Us</a>
-              <a href="#">Contact</a>
-              <a href="#">Services</a>
-          </nav>
-          <div>&copy; 2024 Design & Development by Kaleb Humpal</div>
+<!-- Footer Section -->
+<footer class="footer py-4">
+  <div class="container">
+      <div class="row">
+          <!-- Left Content -->
+          <div class="col-md-9">
+              <div class="row">
+                  <!-- About Section -->
+                  <div class="col-md-3">
+                      <h5>About</h5>
+                      <p>Steinpeir is a showcase of the finest web and interactive design.</p>
+                  </div>
+                  <!-- Latest Websites Section -->
+                  <div class="col-md-3">
+                      <h5>Latest Websites</h5>
+                      <ul class="list-unstyled">
+                          <li><a href="#">Noom — Brand Hub</a></li>
+                          <li><a href="#">Terminal</a></li>
+                          <li><a href="#">Yu Rong</a></li>
+                      </ul>
+                  </div>
+                  <!-- Information Section -->
+                  <div class="col-md-3">
+                      <h5>Information</h5>
+                      <ul class="list-unstyled">
+                          <li><a href="#">Sponsorship</a></li>
+                          <li><a href="#">Privacy</a></li>
+                      </ul>
+                  </div>
+                  <!-- Social Media Section
+                  <div class="col-md-3">
+                      <h5>Connect With Us</h5>
+                      <ul class="list-inline">
+                          <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
+                          <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                          <li class="list-inline-item"><a href="#"><i class="fab fa-rss"></i></a></li>
+                          <li class="list-inline-item"><a href="#"><i class="fab fa-envelope"></i></a></li>
+                      </ul>
+                  </div> -->
+              </div>
+          </div>
+          <!-- Logo Section -->
+          <div class="col-md-3 d-flex justify-content-end align-items-center">
+              <img src="{% static '/img/images/404Studio-logo-website.png' %}" alt="Logo" class="footer-logo">
+          </div>
       </div>
-  </footer>
-  
+      <!-- Copyright Section -->
+      <div class="row mt-4">
+          <div class="col-12 text-center">
+              <p class="mb-0">&copy; 2025 404 Studio LLC. All rights reserved.</p>
+          </div>
+      </div>
+  </div>
+</footer>
+
+
 
 
 
