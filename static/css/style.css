@@ -126,10 +126,25 @@ h2 {
   font-size: 3rem;
 }
 
+h5 {
+  font-weight: 600;
+}
+
 p {
   font-size: 1rem;
 }
 
+@media (min-width:768px) and (max-width:992px) {
+  h1 {
+    font-size: 5.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+}
 
 /* --------------------- Header --------------------- */
 header {
@@ -190,6 +205,13 @@ header {
 }
 .button > span {
 	vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  .button {
+    padding: 0.9rem 1.75rem;
+    font-size: 0.80rem;
+  }
 }
 
 .button--quidel {
@@ -456,6 +478,22 @@ section {
   display: inline-block;
 }
 
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 0;
+    padding-bottom: 0;
+  }
+
+  .hero-summary {
+    max-width: 18rem;
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    height: auto;
+  }
+}
+
 .services-banner {
   overflow: hidden;
   white-space: nowrap;
@@ -492,7 +530,6 @@ section {
   }
 }
 
-
 /* ------ Images ------ */
 
 .noise-effect {
@@ -509,7 +546,7 @@ section {
 .noise-effect:after {
   animation: grain 8s steps(10) infinite;
   background-image: url(https://img.freepik.com/free-photo/white-striped-wallpaper-texture_1194-5674.jpg?t=st=1736535102~exp=1736538702~hmac=84be75980ddf951d3d3c72d2bd87ead20ee9b6dad6ecea0d7d2e259a29523c26&w=826);  content: "";
-  height: 300%;
+  height: 200%;
   width: 200%;
   opacity: 0.12;
   position: absolute;
@@ -520,6 +557,19 @@ section {
 
 /* Static Animation Keyframes */
 @keyframes grain {
+  0%, 100% { transform: translate(0, 15%); }
+  10% { transform: translate(-10%, 20%); }
+  20% { transform: translate(20%, 10%); }
+  30% { transform: translate(0%, 35%); }
+  40% { transform: translate(10%, 10%); }
+  50% { transform: translate(-10%, 20%); }
+  60% { transform: translate(20%, 35%); }
+  70% { transform: translate(10%, 10%); }
+  80% { transform: translate(-10%, 20%); }
+  90% { transform: translate(10%, 45%); }
+}
+
+/* @keyframes grain {
   0%, 100% { transform:translate(0, 0) }
   10% { transform:translate(-5%, -10%) }
   20% { transform:translate(-15%, 5%) }
@@ -530,7 +580,7 @@ section {
   70% { transform:translate(0%, 15%) }
   80% { transform:translate(3%, 35%) }
   90% { transform:translate(-10%, 10%) }
-}
+} */
 
 /* Hero Image Container */
 .hero-image-container {
@@ -572,15 +622,30 @@ section {
   top: 28%;
 }
 
+@media (min-width:768px) and (max-width:992px) {
+  .hero-first-image {
+    width: 160px;
+  }
+  .hero-second-image {
+    width: 225px;
+  }
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .hero-image-container:first-of-type {
+  .hero-image-container:nth-of-type(1) {
     left: 5%;
+    top: 0%;
+  }
+  .hero-image-container:nth-of-type(2) {
+    right: 5%;
     top: 20%;
   }
-  .hero-image-container:last-of-type {
-    right: 5%;
-    top: 25%;
+  .hero-first-image {
+    width: 100px;
+  }
+  .hero-second-image {
+    width: 125px;
   }
 }
 
@@ -606,8 +671,14 @@ section {
 } */
 
 @media (max-width: 768px) {
+  .about-title {
+    width: 100%;
+  }
+  .about-section-image-container {
+    top: 60px;
+  }
   .about-section-image {
-    padding-top: 3.5rem;
+    margin-bottom: 2rem;
   }
 }
 /* Client Reviews Section */
@@ -738,6 +809,17 @@ section {
 .consultation-text h2 {
   color: var(--contrast-blue);
 }
+
+.consultation-image-container {
+  width: 50%;
+}
+
+@media (max-width: 768px) {
+  .consultation-image-container {
+    width: 55%;
+  }
+}
+
 
 /* Contact Section */
 .contact-section {
