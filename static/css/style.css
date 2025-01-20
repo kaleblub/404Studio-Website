@@ -331,17 +331,18 @@ header {
   display: none;
   background-color: var(--main-orange);
   position: absolute;
-  top: 60px;
   left: 0;
   width: 100%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  z-index: 2;
+  z-index: 4;
   text-align: right;
   padding-right: 20px;
+  font-weight: 600;
 }
 
 .mobile-menu.active {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .mobile-social-links {
@@ -353,6 +354,9 @@ header {
 .mobile-nav-list ul {
   margin: 0;
   padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .mobile-nav-list li {
@@ -363,6 +367,25 @@ header {
   color: #333;
   text-decoration: none;
   display: block;
+}
+
+.mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+
+.mobile-menu-overlay.active {
+  display: block;
+}
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
 }
 
 @media (max-width: 768px) {
@@ -376,55 +399,9 @@ header {
     display: block;
   }
 
-  /* Initially hide the mobile menu */
-  .mobile-menu {
-    display: none; /* Hidden by default */
-    background-color: var(--main-orange);
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 2;
-    text-align: right; /* Align text to the right */
-    padding-right: 20px; /* Add padding to move content slightly from the edge */
-
-  }
-
-  /* Show mobile menu when it has the 'active' class */
-  .mobile-menu.active {
-    display: block; /* Show when active */
-  }
-
   /* Hide social links for the main navigation, but show them inside mobile menu */
   .social-links {
     display: none;
-  }
-
-  .mobile-social-links {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 20px;
-  }
-
-  .mobile-social-links a {
-    margin: 0 10px;
-  }
-
-  .mobile-nav-list ul {
-    list-style: none;
-    margin: 0;
-    padding: 20px 0;
-  }
-
-  .mobile-nav-list li {
-    margin-bottom: 15px;
-  }
-
-  .mobile-nav-list a {
-    color: #333;
-    text-decoration: none;
-    display: block;
   }
 }
 
@@ -481,7 +458,10 @@ section {
 @media (max-width: 768px) {
   .hero-section {
     min-height: 0;
-    padding-bottom: 0;
+    padding: 1rem 0;
+  }
+  .hero-text h1 {
+    padding-top: 1rem;
   }
 
   .hero-summary {
@@ -635,17 +615,17 @@ section {
 @media (max-width: 768px) {
   .hero-image-container:nth-of-type(1) {
     left: 5%;
-    top: 0%;
+    top: 5%;
   }
   .hero-image-container:nth-of-type(2) {
     right: 5%;
-    top: 20%;
+    top: 25%;
   }
   .hero-first-image {
-    width: 100px;
+    width: 120px;
   }
   .hero-second-image {
-    width: 125px;
+    width: 160px;
   }
 }
 
