@@ -451,8 +451,8 @@ section {
 }
 
 .hero-buttons {
-  height: 200px;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
@@ -487,12 +487,18 @@ section {
   border-top: #000000 solid 2px;
   border-bottom: #000000 solid 2px;
 }
+
 .scrolling-text {
-  display: inline-block;
+  display: flex;
+  width: 200%; /* Ensure enough space for seamless scrolling */
+}
+
+.scrolling-content {
+  display: flex;
   animation: scroll 20s linear infinite;
 }
 
-.scrolling-text span {
+.scrolling-content span {
   display: inline-block;
   margin: 0 20px;
   padding: 20px;
@@ -689,10 +695,22 @@ section {
   background-color: var(--main-orange);
 }
 
-@media (min-width: 1200px) {
+.packages-section .container,
+.hosting-section .container {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
   .packages-section .container,
   .hosting-section .container {
-    max-width: 85%;
+    max-width: 75%;
+  }
+}
+
+@media (max-width: 455px) {
+  .packages-section .container,
+  .hosting-section .container {
+    max-width: 100%;
   }
 }
 
@@ -761,9 +779,16 @@ section {
 
 .package-card button,
 .hosting-card button {
-  top: -0.3rem;
-  left: 1.25rem;
   min-width: 120px; /* Ensure the button isn't too small */
+  align-self: center;
+}
+
+@media (max-width: 1200px) {
+  .packages-section .container .row .col-sm-12,
+  .hosting-section .container .row .col-sm-12 {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
 }
 
 @media (max-width: 768px) {

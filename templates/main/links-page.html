@@ -34,7 +34,7 @@
         </header>
         <main>
             <div class="flex-column">
-            <a href="https://404studio.net" target="_blank" class="link-button">
+            <a href="{% url 'home' %}" target="_blank" class="link-button">
                 <span class="icon"><img src="{% static 'img/icons/laptop.svg' %}" alt="Website Icon"></span>
                 <span class="button-text">Go to our <strong>Website</strong></span>
             </a>
@@ -42,7 +42,7 @@
                 <span class="icon"><img src="{% static 'img/icons/gmail.svg' %}" alt="Email Icon"></span>
                 <span class="button-text">Send us an <strong>Email</strong></span>
             </a>
-            <a href="https://404studio.net/portfolio" target="_blank" class="link-button">
+            <a href="{% url 'portfolio' %}" target="_blank" class="link-button">
                 <span class="icon"><img src="{% static 'img/icons/briefcase.svg' %}" alt="Portfolio/Briefcase Icon"></span>
                 <span class="button-text">See our <strong>Portfolio</strong></span>
             </a>

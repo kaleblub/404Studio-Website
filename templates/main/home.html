@@ -1,172 +1,9 @@
+{% extends "main/base.html" %}
 {% load static %}
-<!DOCTYPE html>
 
-<html data-authenticated-account="" lang="en-US" xmlns:fb="http://www.facebook.com/2008/fbml"
-  xmlns:og="http://opengraphprotocol.org/schema/">
-
-<head>
-  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <!-- This is Squarespace. --><!-- saffron-chicory-df9f -->
-  <meta charset="utf-8">
-  <title>{% block title %}404Studio{% endblock %}</title>
-  <meta content="Sec-CH-UA-Platform-Version, Sec-CH-UA-Model" http-equiv="Accept-CH">
-  <link href="https://assets.squarespace.com/universal/default-favicon.ico" rel="icon" type="image/x-icon" />
-  <link href="https://saffron-chicory-df9f.squarespace.com" rel="canonical" />
-  <meta content="404Studio" property="og:site_name" />
-  <meta content="404Studio" property="og:title" />
-  <meta content="https://saffron-chicory-df9f.squarespace.com" property="og:url" />
-  <meta content="website" property="og:type" />
-  <meta
-    content="http://static1.squarespace.com/static/6718b30b131cc651070af13a/t/671ec5aaa7993b1341f8510d/1730069930692/404Studio-Logo.png?format=1500w"
-    property="og:image" />
-  <meta content="476" property="og:image:width" />
-  <meta content="183" property="og:image:height" />
-  <meta content="404Studio" itemprop="name" />
-  <meta content="https://saffron-chicory-df9f.squarespace.com" itemprop="url" />
-  <meta
-    content="http://static1.squarespace.com/static/6718b30b131cc651070af13a/t/671ec5aaa7993b1341f8510d/1730069930692/404Studio-Logo.png?format=1500w"
-    itemprop="thumbnailUrl" />
-  <link
-    href="http://static1.squarespace.com/static/6718b30b131cc651070af13a/t/671ec5aaa7993b1341f8510d/1730069930692/404Studio-Logo.png?format=1500w"
-    rel="image_src" />
-  <meta
-    content="http://static1.squarespace.com/static/6718b30b131cc651070af13a/t/671ec5aaa7993b1341f8510d/1730069930692/404Studio-Logo.png?format=1500w"
-    itemprop="image" />
-  <meta content="404Studio" name="twitter:title" />
-  <meta
-    content="http://static1.squarespace.com/static/6718b30b131cc651070af13a/t/671ec5aaa7993b1341f8510d/1730069930692/404Studio-Logo.png?format=1500w"
-    name="twitter:image" />
-  <meta content="https://saffron-chicory-df9f.squarespace.com" name="twitter:url" />
-  <meta content="summary" name="twitter:card" />
-  <meta content="" name="description" />
-  <script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Anton+SC&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
-  <!-- End of Squarespace Headers -->
-
-  <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Bootstrap JS (with Popper.js for dropdowns) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-  <!-- Custom Styles -->
-  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-</head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMD2LS33KT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-ZMD2LS33KT');
-</script>
-
-<body>
-  <header>
-    <!-- Announcement Bar (if needed) -->
-    <div class="header-announcement-bar">
-      <!-- Announcement Content -->
-    </div>
-
-    <!-- Header Wrapper -->
-    <div class="header-wrapper">
-      <div class="container-fluid">
-        <!-- Skip to Content Link -->
-        <a class="skip-link" href="#page">Skip to Content</a>
-
-        <!-- Logo Section -->
-        <div class="row align-items-center">
-          <div class="col-12 col-md-3">
-            <div class="logo-container">
-              <a href="/">
-                <img
-                  src="{% static 'img/images/404Studio-logo-website.png' %}"
-                  alt="404Studio" />
-              </a>
-            </div>
-          </div>
-
-          <!-- Navigation -->
-          <div class="col d-flex justify-content-end">
-            <nav class="navigation">
-              <ul class="nav list-unstyled d-flex">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Services</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
-                </li>
-                <!-- <li>
-                  <a href="#" class="nav-link account-link">Login / Account</a>
-                </li> -->
-              </ul>
-            </nav>
-          </div>
-
-          <!-- Social Media Links -->
-          <!-- <div class="social-links col-auto flex-column align-items-end">
-            <a href="http://squarespace.com/" target="_blank" class="social-icon mb-2">
-              <svg viewBox="23 23 64 64">
-                <use height="110" width="110" xlink:href="#tiktok-icon"></use>
-              </svg>
-            </a>
-            <a href="http://instagram.com/squarespace" target="_blank" class="social-icon mb-2">
-              <svg viewBox="23 23 64 64">
-                <use height="110" width="110" xlink:href="#instagram-icon"></use>
-              </svg>
-            </a>
-            <a href="http://twitter.com/squarespace" target="_blank" class="social-icon mb-2">
-              <svg viewBox="23 23 64 64">
-                <use height="110" width="110" xlink:href="#twitter-icon"></use>
-              </svg>
-            </a>
-          </div> -->
-        </div>
-
-        <!-- Mobile Burger Menu -->
-        <div class="burger-menu">
-          <button class="burger-btn" onclick="toggleMenu()">
-            <div class="burger-icon">
-              <div class="top-bun"></div>
-              <div class="patty"></div>
-              <div class="bottom-bun"></div>
-            </div>
-          </button>
-        </div>
-
-        <!-- Mobile Menu Navigation -->
-        <div class="mobile-menu">
-          <nav class="mobile-nav-list">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-              <!-- Add more menu items as needed -->
-            </ul>
-          </nav>
-          <!-- <div class="mobile-social-links">
-            <a href="http://squarespace.com/" target="_blank" class="social-icon social-icon--tiktok">Tiktok</a>
-            <a href="http://instagram.com/squarespace" target="_blank"
-              class="social-icon social-icon--instagram">Instagram</a>
-            <a href="http://twitter.com/squarespace" target="_blank"
-              class="social-icon social-icon--twitter">Twitter</a>
-          </div> -->
-        </div>
-  </header>
-  <div class="mobile-menu-overlay"></div>
-
-  <main class="container-fluid" id="page" role="main">
+{% block title %}404 Studio | Professional Web Development and Hosting Services{% endblock title %}
+{% block meta_description %}Build your online presence with 404 Studio. We offer expert web development, hosting, and design services to help your business grow.{% endblock meta_description %}
+{% block content %}
     <section class="hero-section text-center text-white">
       <div class="container position-relative">
           <div class="row align-items-center">
@@ -183,27 +20,29 @@
                   <p class="hero-summary">
                     We help businesses transform their digital presence with custom solutions that drive real growth.
                 </p>
-                <div class="buttons hero-buttons mt-3">
-                    <!-- btn btn-primary-blue --><button class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Get a Free Consultation</button>
-                    <!-- btn btn-secondary-blue --><button class="button button--quidel button--inverted">View Our Portfolio</button>
+                <div class="buttons hero-buttons">
+                    <!-- btn btn-primary-blue --><button onclick="location.href='{% url 'contact' %}'" type="button" class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Get a Free Consultation</button>
+                    <!-- btn btn-secondary-blue --><button onclick="location.href='{% url 'portfolio' %}'" type="button" class="button button--quidel button--inverted">View Our Portfolio</button>
                 </div>
               </div>
           </div>
       </div>
       <div class="services-banner">
         <div class="scrolling-text">
-          <span>Web Development</span>
-          <span>SEO Improvement</span>
-          <span>Graphic Design</span>
-          <span>Website Hosting</span>
-          <span>Website Migration</span>
-          <!-- Duplicate content for smooth scrolling -->
-          <span>Web Development</span>
-          <span>SEO Improvement</span>
-          <span>Web Design</span>
-          <span>Website Hosting</span>
-          <span>Website Migration</span>
-        </div>      
+          <div class="scrolling-content">
+            <span>Web Development</span>
+            <span>SEO Improvement</span>
+            <span>Graphic Design</span>
+            <span>Website Hosting</span>
+            <span>Website Migration</span>
+            <!-- Duplicate content -->
+            <span>Web Development</span>
+            <span>SEO Improvement</span>
+            <span>Graphic Design</span>
+            <span>Website Hosting</span>
+            <span>Website Migration</span>
+          </div>
+        </div>
       </div>
   </section>
   
@@ -273,7 +112,7 @@
             <ul>
               <li>Small businesses or personal sites needing a professional web presence with minimal customization</li>
             </ul>
-            <button class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Request this Package</button>
+            <button onclick="location.href='{% url 'development_packages' %}'" type="button" class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Request this Package</button>
           </div>
         </div>
         <div class="col-sm-12 col-md-4 mb-4">
@@ -297,7 +136,7 @@
               <li>Growing businesses needing more customization and basic e-commerce functionality
               </li>
             </ul>
-            <button class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Request this Package</button>
+            <button onclick="location.href='{% url 'development_packages' %}'" type="button" class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Request this Package</button>
           </div>
         </div>
         <div class="col-sm-12 col-md-4 mb-4">
@@ -319,7 +158,7 @@
             <ul>
               <li>Businesses needing complex functionality or unique custom features</li>
             </ul>
-            <button class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Request this Package</button>
+            <button onclick="location.href='{% url 'development_packages' %}'" type="button" class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Request this Package</button>
           </div>
         </div>
       </div>
@@ -349,7 +188,7 @@
             <ul>
               <li>Simple websites or blogs that don't need a lot of storage or bandwidth</li>
             </ul>
-            <button class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Request this Plan</button>
+            <button onclick="location.href='{% url 'hosting_packages' %}'" type="button" class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Request this Plan</button>
           </div>
         </div>
         <div class="col-sm-12 col-md-4 mb-4">
@@ -371,7 +210,7 @@
             <ul>
               <li>Small business websites or blogs with moderate traffic and extra features</li>
             </ul>
-            <button class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Request this Plan</button>
+            <button onclick="location.href='{% url 'hosting_packages' %}'" type="button" class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Request this Plan</button>
           </div>
         </div>
         <div class="col-sm-12 col-md-4 mb-4">
@@ -394,7 +233,7 @@
             <ul>
               <li>High-traffic sites or businesses with custom needs that require a high-performance hosting environment</li>
             </ul>
-            <button class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Request this Plan</button>
+            <button onclick="location.href='{% url 'hosting_packages' %}'" type="button" class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Request this Plan</button>
           </div>
         </div>
       </div>
@@ -410,7 +249,7 @@
         <div class="consultation-text">
             <h2>Need Help Choosing?</h2>
             <p>Schedule a free consultation now, and we will figure out which package and/or plan is right for your situation!</p>
-            <button class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Schedule Consultation</button>
+            <button onclick="location.href='{% url 'contact' %}'" type="button" class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Schedule Consultation</button>
         </div>
     </div>
   </section>
@@ -454,71 +293,4 @@
         </div>
     </div>
   </section>
-  
-<!-- Footer Section -->
-<footer class="footer py-4">
-  <div class="container">
-      <div class="row">
-          <!-- Left Content -->
-          <div class="col-md-9">
-              <div class="row">
-                  <!-- About Section -->
-                  <div class="col-md-3">
-                      <h5>About</h5>
-                      <p>
-                        404 Studio helps businesses transform their digital presence with custom solutions that drive real growth.</p>
-                  </div>
-                  <!-- Latest Websites Section -->
-                  <div class="col-md-3">
-                      <h5>Latest Websites</h5>
-                      <ul class="list-unstyled">
-                          <li><a href="https://wovendignity.com" target="_blank">Woven Dignity</a></li>
-                          <li><a href="https://ilcabejaia.com" target="_blank">ILCABejaia</a></li>
-                          <li><a href="https://balancedaccountant.com" target="_blank">Balanced Accountant</a></li>
-                      </ul>
-                  </div>
-                  <!-- Information Section -->
-                  <div class="col-md-3">
-                      <h5>Information</h5>
-                      <ul class="list-unstyled">
-                          <li><a href="#">Sponsorship</a></li>
-                          <li><a href="#">Privacy</a></li>
-                      </ul>
-                  </div>
-                  <!-- Social Media Section
-                  <div class="col-md-3">
-                      <h5>Connect With Us</h5>
-                      <ul class="list-inline">
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-facebook"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-rss"></i></a></li>
-                          <li class="list-inline-item"><a href="#"><i class="fab fa-envelope"></i></a></li>
-                      </ul>
-                  </div> -->
-              </div>
-          </div>
-          <!-- Logo Section -->
-          <div class="col-md-3 d-flex justify-content-end align-items-center">
-              <img src="{% static '/img/images/404Studio-logo-website.png' %}" alt="Logo" class="footer-logo">
-          </div>
-      </div>
-      <!-- Copyright Section -->
-      <div class="row mt-4">
-          <div class="col-12 text-center">
-              <p class="mb-0">&copy; 2025 404 Studio LLC. All rights reserved.</p>
-          </div>
-      </div>
-  </div>
-</footer>
-
-
-
-
-
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<script src="{% static '/js/burgerbutton.js' %}"></script>
-</body>
-</html>
+{% endblock content %}

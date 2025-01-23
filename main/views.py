@@ -17,5 +17,17 @@ def home(request):
     # }
     return render(request, 'main/home.html')
 
+def portfolio(request):
+    return render(request, 'main/portfolio.html')
+
+def contact(request):
+    return render(request, 'main/contact.html')
+
+def development_packages(request):
+    return render(request, 'main/development_packages.html')
+
+def hosting_packages(request):
+    return render(request, 'main/hosting_packages.html')
+
 def links(request):
     return render(request, 'main/links-page.html')
