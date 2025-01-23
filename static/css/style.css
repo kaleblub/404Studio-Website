@@ -784,8 +784,8 @@ section {
 }
 
 @media (max-width: 1200px) {
-  .packages-section .container .row .col-sm-12,
-  .hosting-section .container .row .col-sm-12 {
+  .packages-section .container .row > .col-sm-12,
+  .hosting-section .container .row > .col-sm-12 {
     padding-right: 5px;
     padding-left: 5px;
   }
