@@ -667,6 +667,10 @@ section {
   z-index: 1;
 }
 
+.about-text .button {
+  margin: 0 0 2rem 0;
+}
+
 .about-section-image-container {
   top: -50px;
 }
@@ -828,12 +832,21 @@ section {
 .consultation-section {
   background-color: var(--main-orange);
 }
+
+.consultation-text {
+  margin-left: 3rem;
+  width: 40%;
+}
 .consultation-text h2 {
   color: var(--contrast-blue);
 }
 
+.consultation-text .button {
+  margin: 0 0 3rem 0;
+}
+
 .consultation-image-container {
-  width: 50%;
+  width: 35%;
 }
 
 @media (max-width: 768px) {
@@ -850,6 +863,10 @@ section {
 }
 .contact-section h2, .contact-form label {
   color: var(--main-orange);
+}
+
+.contact-form .button {
+  margin: 0 0 2rem 0;
 }
 
 @media (min-width: 768px) {
