@@ -26,8 +26,8 @@ def contact(request):
 def development_packages(request):
     return render(request, 'main/development_packages.html')
 
-def hosting_packages(request):
-    return render(request, 'main/hosting_packages.html')
+def hosting_plans(request):
+    return render(request, 'main/hosting_plans.html')
 
 def links(request):
     return render(request, 'main/links-page.html')

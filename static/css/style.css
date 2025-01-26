@@ -160,18 +160,18 @@ header {
 
 /* --------------------- Navigation --------------------- */
 .navigation {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  display: table;
 }
 
 .nav-item {
   font-family: 'Anton SC', sans-serif;
-  color: #000000;
+  color: var(--contrast-blue);
   text-decoration: none;
 }
 
 .nav-link:hover {
-  color: var(--contrast-blue);
+  color: #3f4b67;
 }
 
 .user-account-link .account-link {
@@ -181,6 +181,19 @@ header {
 
 .skip-link {
   display: none;
+}
+
+.nav-item.active a {
+	position: relative;
+  color: #3f4b67;
+}
+
+.slippery {
+	position: absolute;
+	height: 2px;
+	transform: scaleX(1);
+	transform-origin: left;
+	transition: transform 0.3s ease;
 }
 
 /* --------------------- Buttons --------------------- */
@@ -211,6 +224,10 @@ header {
   .button {
     padding: 0.9rem 1.75rem;
     font-size: 0.80rem;
+  }
+
+  .navigation {
+    display: none;
   }
 }
 
