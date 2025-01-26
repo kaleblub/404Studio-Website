@@ -62,6 +62,10 @@ button {
     cursor: pointer;
 }
 
+button:focus {
+  outline: none;
+}
+
 /* Remove horizontal scrollbar in input/textarea */
 input[type="text"], input[type="email"], input[type="password"], textarea {
   resize: none;
@@ -330,7 +334,7 @@ header {
 }
 
 .burger-btn:hover .burger-icon div {
-  background-color: #9e1f09; /* Color when hovering over the burger button (tomato color) */
+  background-color: #3f4b67;
 }
 
 .burger-icon {
