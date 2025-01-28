@@ -31,6 +31,11 @@
   <!-- Custom Styles -->
   <!-- <link rel="stylesheet" type="text/css" href="{% static 'css/loadingScreen.css' %}"> -->
   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+  <!-- Page Specific Styles -->
+  {% block extra_head %}
+  {% endblock extra_head %}
+
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -80,7 +85,7 @@
                 <li class="nav-item {% if request.path == '/development_packages/' %}active{% endif %}">
                   <a class="nav-link" href="{% url 'development_packages' %}">DEVELOPMENT</a>
                 </li>
-                <li class="nav-item {% if request.path == '/hosting_plans' %}active{% endif %}">
+                <li class="nav-item {% if request.path == '/hosting_plans/' %}active{% endif %}">
                   <a class="nav-link" href="{% url 'hosting_plans' %}">HOSTING</a>
                 </li>
                 <li class="nav-item {% if request.path == '/portfolio/' %}active{% endif %}">
@@ -175,6 +180,10 @@
     overline: true,
   });
 </script>
+
+<!-- Page Specific JavaScript -->
+{% block extra_scripts %}
+{% endblock extra_scripts %}
 
 <script src="{% static '/js/burgerButton.js' %}"></script>
 </body>
