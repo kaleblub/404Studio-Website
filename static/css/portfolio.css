@@ -28,17 +28,73 @@
 .portfolio-item {
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s;
-  max-width: 80%;
+  width: 80%;
+  height: auto;
   background-color: var(--contrast-blue);
   justify-self: center;
   padding-top: 3rem;
   border-radius: 5%;
+  transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
+  transform-origin: bottom right;
 }
 
 .portfolio-item:hover {
   transform: scale(1.05);
 }
+
+.portfolio-item.portfolio-item.active:hover {
+  transform: none;
+}
+
+.portfolio-item.active {
+  position: fixed;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  border-radius: 0;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.portfolio-item.active h3,
+.portfolio-item.active p {
+  white-space: nowrap;
+  transition: transform 0.5s ease-in-out, left 0.5s ease-in-out;
+}
+
+.portfolio-item.active h3 {
+  font-size: 2rem;
+  color: var(--main-orange);
+}
+.portfolio-item.active h3,
+.portfolio-item.active p,
+.portfolio-item.active ul {
+  display: none;
+}
+
+/* .portfolio-item.active p {
+
+} */
+
+/* .portfolio-item.active .mockup {
+  width: 60%;
+  height: 100%;
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+} */
+
+.portfolio-item .mockup {
+  transition: all 0.3s ease-in-out;
+}
+
+/* .modal-content {
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+} */
 
 .portfolio-item h3 {
   font-weight: 600;
@@ -51,11 +107,26 @@
   padding-top: 2rem;
 }
 
+.portfolio-item .close-btn {
+  display: none;
+}
+
+.portfolio-item.active .close-btn {
+  display: block;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+
 .mockup {
   position: relative;
   width: 80%;
   margin: 0 auto;
 } 
+
+.portfolio-item.active .mockup > img {
+  display: none;
+}
 
 .artwork {
   position: absolute;
@@ -64,9 +135,79 @@
   top: 6%;
   left: 15%;
   overflow: scroll;
+  transition: transform 0.5s ease-in-out;
+  transform-origin: bottom right;
 }
 
-.modal {
+.portfolio-item.active .artwork {
+  position: fixed;
+  width: 70%;
+  height: 100vh;
+  right: 0;
+  transition: transform 0.5s ease-in-out;
+  top: 0;
+  left: inherit;
+}
+
+.portfolio-info {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 20px;
+  max-width: 30vw;
+  text-align: left;
+}
+
+.portfolio-item.active .portfolio-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  opacity: 1;
+  text-align: left;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  transform: translateY(0); /* Slide into view */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.portfolio-item.active .portfolio-info h3,
+.portfolio-item.active .portfolio-info p,
+.portfolio-item.active .portfolio-info ul {
+  display: block;
+}
+
+.portfolio-info ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Optional: Styling the description text */
+.portfolio-info .description {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+/* Ensure h3 and p elements are block-level */
+.portfolio-info h3, 
+.portfolio-info p {
+  display: block; /* Ensure block-level elements */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Optional: Adjust the spacing between the elements */
+.portfolio-info h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.portfolio-info p {
+  font-size: 1.1em;
+}
+
+/* .modal {
   display: none;
   position: fixed;
   top: 0;
@@ -105,7 +246,7 @@
   font-size: 1.5rem;
   cursor: pointer;
   color: #555;
-}
+} */
 
 @keyframes fadeIn {
   from {

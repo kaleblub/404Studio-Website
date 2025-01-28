@@ -13,7 +13,8 @@
     <p>Below is a list of our top projects for clients of various purposes and goals.</p>
     <div class="portfolio">
       <!-- Portfolio Item 1 -->
-      <div class="portfolio-item text-white" data-modal="modal-1">
+      <div class="portfolio-item text-white"> <!-- data-modal="modal-1"> -->
+        <button class="close-btn">Close</button>
         <h3>ILCA Bejaia</h3>
         <p>International Learning Center in Algeria</p>
         <div class="mockup">
@@ -26,19 +27,30 @@
           <li><b>Platform:</b> Square Online</li>
           <li><b>Site Type:</b> Store & Blog</li>
         </ul>
+        <div class="portfolio-info">
+          <h3>ILCA Bejaia</h3>
+          <p>International Learning Center in Algeria</p>
+          <span class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora pariatur laudantium magnam. Veritatis quibusdam quasi dolor earum, quaerat tempora pariatur fuga ipsam repudiandae, dicta recusandae, voluptatem mollitia corporis dolorem voluptas.</span>
+          <ul>
+            <li>example</li>
+            <li>example 2</li>
+            <li>example</li>
+          </ul>
+        </div>
       </div>
 
       <!-- Modal -->
-      <div class="modal" id="modal-1">
+      <!-- <div class="modal" id="modal-1">
         <div class="modal-content">
           <button class="modal-close">&times;</button>
           <h3>ILCA Bejaia</h3>
           <p>More details about the project will go here...</p>
         </div>
-      </div>
+      </div> -->
 
       <!-- Portfolio Item 2 -->
-      <div class="portfolio-item text-white" data-modal="modal-2">
+      <div class="portfolio-item text-white"> <!--data-modal="modal-2"> -->
+        <button class="close-btn">Close</button>
         <h3>Woven Dignity</h3>
         <p>Hand-sewn craft business</p>
         <div class="mockup">
@@ -51,47 +63,30 @@
           <li><b>Platform:</b> Square Online</li>
           <li><b>Site Type:</b> Store & Blog</li>
         </ul>
+        <div class="portfolio-info">
+          <h3>Woven Dignity</h3>
+          <p>Hand-sewn gift card business</p>
+          <span class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora pariatur laudantium magnam. Veritatis quibusdam quasi dolor earum, quaerat tempora pariatur fuga ipsam repudiandae, dicta recusandae, voluptatem mollitia corporis dolorem voluptas.</span>
+          <ul>
+            <li>example</li>
+            <li>example 2</li>
+            <li>example</li>
+          </ul>
+        </div>
       </div>
 
       <!-- Modal -->
-      <div class="modal" id="modal-2">
+      <!-- <div class="modal" id="modal-2">
         <div class="modal-content">
           <button class="modal-close">&times;</button>
           <h2>Woven Dignity</h2>
           <p>More details about the project will go here...</p>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </section>
 
-<script>
-  // Modal functionality
-//   const portfolioItems = document.querySelectorAll('.portfolio-item');
-//   const modals = document.querySelectorAll('.modal');
-//   const closeButtons = document.querySelectorAll('.modal-close');
-
-//   portfolioItems.forEach(item => {
-//     item.addEventListener('click', () => {
-//       const modalId = item.getAttribute('data-modal');
-//       document.getElementById(modalId).style.display = 'flex';
-//     });
-//   });
-
-//   closeButtons.forEach(button => {
-//     button.addEventListener('click', () => {
-//       button.closest('.modal').style.display = 'none';
-//     });
-//   });
-
-//   window.addEventListener('click', (e) => {
-//     modals.forEach(modal => {
-//       if (e.target === modal) {
-//         modal.style.display = 'none';
-//       }
-//     });
-//   });
-// </script>
 {% endblock content %}
 
 {% block extra_scripts %}

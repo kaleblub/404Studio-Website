@@ -1,41 +1,30 @@
-// Modal functionality with animation
-const portfolioItems = document.querySelectorAll('.portfolio-item');
-const modals = document.querySelectorAll('.modal');
-const closeButtons = document.querySelectorAll('.modal-close');
+document.addEventListener('DOMContentLoaded', () => {
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
 
-portfolioItems.forEach(item => {
-  item.addEventListener('click', () => {
-    const modalId = item.getAttribute('data-modal');
-    const modal = document.getElementById(modalId);
+    portfolioItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            // Expand the clicked card
+            item.classList.add('active');
 
-    // Get the card's bounding box for animation
-    const rect = item.getBoundingClientRect();
+            const button = item.querySelector('.close-btn');
+            if (button) {
+                button.classList.add('button', 'button--quidel', 'button--inverted');
+            }
 
-    // Set the modal's initial position to match the card
-    modal.style.display = 'flex';
-    const modalContent = modal.querySelector('.modal-content');
-    modalContent.style.transform = `translate(${rect.left}px, ${rect.top}px) scale(0.5)`;
+            // Disable scrolling on the body
+            document.body.style.overflow = 'hidden';
+        });
 
-    // Animate to fullscreen
-    setTimeout(() => {
-      modal.classList.add('open');
-      modalContent.style.transform = 'translate(0, 0) scale(1)';
-    }, 10); // Timeout ensures the animation runs
-  });
-});
-
-closeButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const modal = button.closest('.modal');
-    const modalContent = modal.querySelector('.modal-content');
-
-    // Animate back to the card
-    modalContent.style.transform = 'scale(0.5)';
-    modal.classList.remove('open');
-
-    // Hide modal after animation
-    setTimeout(() => {
-      modal.style.display = 'none';
-    }, 300); // Match this to the animation duration
-  });
+        const closeButton = item.querySelector('.close-btn');
+        if (closeButton) {
+        closeButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            // console.log('Close button clicked');
+            item.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        } else {
+        console.log(`No close button found in item ${index}`);
+        }
+    });
 });
