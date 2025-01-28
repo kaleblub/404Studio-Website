@@ -132,3 +132,17 @@
     padding-left: 3rem;
   }
 }
+
+@media (max-width: 623px) {
+  .portfolio-container {
+    padding: 0;
+  }
+  .portfolio-container h2,
+  .portfolio-container p {
+    padding: 0 2rem 0 2rem;
+  }
+  .portfolio-item {
+    max-width: 90%;
+    padding-top: 2rem;
+  }
+}
