@@ -28,7 +28,7 @@
         $this = $(this);
         $defaultsBorderOptions = defaults.borderWidth + ' ' + defaults.borderStyle + ' ' + defaults.borderColor;
         $this.find('ul').append("<li class='slippery'></li>");
-        $active = $('.active');
+        $active = $('.nav-item.active');
         $slippery = $this.find('.slippery');
         $actionElement = $this.find('a');
         // $this.css({
