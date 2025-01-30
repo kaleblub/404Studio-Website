@@ -1,7 +1,9 @@
 {% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 <!DOCTYPE html>
 
-<html data-authenticated-account="" lang="en-US" xmlns:fb="http://www.facebook.com/2008/fbml"
+<html lang="{{ LANGUAGE_CODE }}" data-authenticated-account="" xmlns:fb="http://www.facebook.com/2008/fbml"
   xmlns:og="http://opengraphprotocol.org/schema/">
 
 <head>
@@ -77,19 +79,19 @@
             <nav class="navigation overline">
               <ul class="nav list-unstyled d-flex">
                 <li class="nav-item {% if request.path == '/' %}active{% endif %}">
-                  <a class="nav-link" href="{% url 'home' %}">HOME</a>
+                  <a class="nav-link" href="{% url 'home' %}">{% trans "HOME" %}</a>
                 </li>
                 <li class="nav-item {% if request.path == '/contact/' %}active{% endif %}">
-                  <a class="nav-link" href="{% url 'contact' %}">CONTACT</a>
+                  <a class="nav-link" href="{% url 'contact' %}">{% trans "CONTACT" %}</a>
                 </li>
                 <li class="nav-item {% if request.path == '/development_packages/' %}active{% endif %}">
-                  <a class="nav-link" href="{% url 'development_packages' %}">DEVELOPMENT</a>
+                  <a class="nav-link" href="{% url 'development_packages' %}">{% trans "DEVELOPMENT" %}</a>
                 </li>
                 <li class="nav-item {% if request.path == '/hosting_plans/' %}active{% endif %}">
-                  <a class="nav-link" href="{% url 'hosting_plans' %}">HOSTING</a>
+                  <a class="nav-link" href="{% url 'hosting_plans' %}">{% trans "HOSTING" %}</a>
                 </li>
                 <li class="nav-item {% if request.path == '/portfolio/' %}active{% endif %}">
-                  <a class="nav-link" href="{% url 'portfolio' %}">PORTFOLIO</a>
+                  <a class="nav-link" href="{% url 'portfolio' %}">{% trans "PORTFOLIO" %}</a>
                 </li>
                 <!-- <li>
                   <a href="#" class="nav-link account-link">Login / Account</a>
@@ -134,19 +136,19 @@
           <nav class="mobile-nav-list">
             <ul>
               <li class="nav-item {% if request.path == '/' %}active{% endif %}">
-                <a class="nav-link" href="{% url 'home' %}">HOME</a>
+                <a class="nav-link" href="{% url 'home' %}">{% trans "HOME" %}</a>
               </li>
               <li class="nav-item {% if request.path == '/contact/' %}active{% endif %}">
-                <a class="nav-link" href="{% url 'contact' %}">CONTACT</a>
+                <a class="nav-link" href="{% url 'contact' %}">{% trans "CONTACT" %}</a>
               </li>
               <li class="nav-item {% if request.path == '/development_packages/' %}active{% endif %}">
-                <a class="nav-link" href="{% url 'development_packages' %}">DEVELOPMENT</a>
+                <a class="nav-link" href="{% url 'development_packages' %}">{% trans "DEVELOPMENT" %}</a>
               </li>
               <li class="nav-item {% if request.path == '/hosting_plans' %}active{% endif %}">
-                <a class="nav-link" href="{% url 'hosting_plans' %}">HOSTING</a>
+                <a class="nav-link" href="{% url 'hosting_plans' %}">{% trans "HOSTING" %}</a>
               </li>
               <li class="nav-item {% if request.path == '/portfolio/' %}active{% endif %}">
-                <a class="nav-link" href="{% url 'portfolio' %}">PORTFOLIO</a>
+                <a class="nav-link" href="{% url 'portfolio' %}">{% trans "PORTFOLIO" %}</a>
               </li>
             </ul>
           </nav>
