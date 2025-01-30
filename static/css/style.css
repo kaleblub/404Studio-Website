@@ -538,6 +538,42 @@ section {
 }
 
 /* ------ Images ------ */
+.frame {
+  position: relative;
+  display: inline-block;
+  overflow: visible; /* Allows chevrons to extend outside */
+}
+
+/* Ensures image is positioned correctly */
+.frame img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%; /* Ensures responsiveness */
+}
+
+.frame::before,
+.frame::after {
+    content: "";
+    position: absolute;
+    width: 30px;  /* Chevron size */
+    height: 30px;
+    border-style: solid;
+    border-width: 4px 4px 0 0; /* Creates the chevron shape */
+    border-color: #fff; /* Adjust color */
+    z-index: 3;
+}
+
+/* Positioning chevrons to extend OUTSIDE the frame */
+.frame::before {
+    transform: rotate(-90deg);
+}
+
+.frame::after {
+    /* bottom: -10px;
+    right: -10px; */
+    transform: rotate(90deg);
+}
 
 .noise-effect {
   position: relative;
@@ -681,6 +717,15 @@ section {
 /* .about-section-image {
 } */
 
+.frame:has(.about-section-image-container)::before {
+  top: -3.85rem;
+  left: -0.6rem;
+}
+.frame:has(.about-section-image-container)::after {
+  bottom: 3rem;
+  right: -0.6rem;
+}
+
 @media (max-width: 768px) {
   .about-title {
     width: 100%;
@@ -691,6 +736,15 @@ section {
   .about-section-image {
     margin-bottom: 2rem;
   }
+  .frame:has(.about-section-image-container)::before {
+    top: 3rem;
+    left: -0.7rem;
+  }
+  .frame:has(.about-section-image-container)::after {
+    bottom: -2rem;
+    right: -0.65rem;
+  }
+
 }
 /* Client Reviews Section */
 .reviews-section {

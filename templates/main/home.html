@@ -2,346 +2,372 @@
 {% load static %}
 
 {% block title %}404 Studio | Professional Web Development and Hosting Services{% endblock title %}
-{% block meta_description %}Build your online presence with 404 Studio. We offer expert web development, hosting, and design services to help your business grow.{% endblock meta_description %}
+{% block meta_description %}Build your online presence with 404 Studio. We offer expert web development, hosting, and
+design services to help your business grow.{% endblock meta_description %}
 {% block content %}
-    <section class="hero-section text-center text-white">
-      <div class="container position-relative">
-          <div class="row align-items-center">
-              <div class="col-12 hero-text">
-                  <h1>YOUR DIGITAL</h1>
-                  <div class="hero-image-container noise-effect">
-                    <img class="hero-image hero-first-image" src="https://images.squarespace-cdn.com/content/v1/6718b30b131cc651070af13a/1730071929301-KELQVPTR4W4LENS4UC3U/unsplash-image-uq5RMAZdZG4.jpg">
-                  </div>
-                  <h1>FUTURE STARTS</h1>
-                  <div class="hero-image-container noise-effect">
-                    <img class="hero-image hero-second-image" src="https://images.squarespace-cdn.com/content/v1/6718b30b131cc651070af13a/1730071862007-KQ3CQZDTYHOO8HUMAOTG/unsplash-image-dC6Pb2JdAqs.jpg">
-                  </div>
-                  <h1>HERE</h1>
-                  <p class="hero-summary">
-                    We help businesses transform their digital presence with custom solutions that drive real growth.
-                </p>
-                <div class="buttons hero-buttons">
-                    <button 
-                      onclick="window.open('https://calendly.com/kaleblub/30min', '_blank')"
-                      type="button" 
-                      class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
-                      Get a Free Consultation
-                    </button>
-                    <button 
-                      onclick="location.href='{% url 'portfolio' %}'" 
-                      type="button" 
-                      class="button button--quidel button--inverted">
-                      View Our Portfolio
-                    </button>
-                </div>
-              </div>
-          </div>
-      </div>
-      <div class="services-banner">
-        <div class="scrolling-text">
-          <div class="scrolling-content">
-            <span>Web Development</span>
-            <span>SEO Improvement</span>
-            <span>Graphic Design</span>
-            <span>Website Hosting</span>
-            <span>Website Migration</span>
-            <!-- Duplicate content -->
-            <span>Web Development</span>
-            <span>SEO Improvement</span>
-            <span>Graphic Design</span>
-            <span>Website Hosting</span>
-            <span>Website Migration</span>
-          </div>
+<section class="hero-section text-center text-white">
+  <div class="container position-relative">
+    <div class="row align-items-center">
+      <div class="col-12 hero-text">
+        <h1>YOUR DIGITAL</h1>
+        <!-- <div class="frame"> -->
+        <div class="hero-image-container noise-effect">
+          <img class="hero-image hero-first-image"
+            src="https://images.squarespace-cdn.com/content/v1/6718b30b131cc651070af13a/1730071929301-KELQVPTR4W4LENS4UC3U/unsplash-image-uq5RMAZdZG4.jpg">
         </div>
-      </div>
-  </section>
-  
-  <!-- About Us Section -->
-  <section class="about-section">
-    <div class="container">
-      <h2 class="about-title">Your Partner in Web Development and Digital Solutions</h2>
-      <div class="row">
-        <div class="col-12 col-md-6 about-text">
-          <p>404 Studio LLC is a web development agency committed to delivering modern, user-centric websites that elevate your business. With years of experience in the industry, we are passionate about bringing your vision to life through cutting-edge design, development, and ongoing support.</p>
-          <button 
-            onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-web-development-package-basic', '_blank')" 
-            type="button" 
+        <!-- </div> -->
+        <h1>FUTURE STARTS</h1>
+        <!-- <div class="frame"> -->
+        <div class="hero-image-container noise-effect">
+          <img class="hero-image hero-second-image"
+            src="https://images.squarespace-cdn.com/content/v1/6718b30b131cc651070af13a/1730071862007-KQ3CQZDTYHOO8HUMAOTG/unsplash-image-dC6Pb2JdAqs.jpg">
+        </div>
+        <!-- </div> -->
+        <h1>HERE</h1>
+        <p class="hero-summary">
+          We help businesses transform their digital presence with custom solutions that drive real growth.
+        </p>
+        <div class="buttons hero-buttons">
+          <button onclick="window.open('https://calendly.com/kaleblub/30min', '_blank')" type="button"
             class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
-            View Our Services
+            Get a Free Consultation
           </button>
-        </div>  
-        <div class="col-12 col-md-6">
+          <button onclick="location.href='{% url 'portfolio' %}'" type="button"
+            class="button button--quidel button--inverted">
+            View Our Portfolio
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="services-banner">
+    <div class="scrolling-text">
+      <div class="scrolling-content">
+        <span>Web Development</span>
+        <span>SEO Improvement</span>
+        <span>Graphic Design</span>
+        <span>Website Hosting</span>
+        <span>Website Migration</span>
+        <!-- Duplicate content -->
+        <span>Web Development</span>
+        <span>SEO Improvement</span>
+        <span>Graphic Design</span>
+        <span>Website Hosting</span>
+        <span>Website Migration</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Us Section -->
+<section class="about-section">
+  <div class="container">
+    <h2 class="about-title">Your Partner in Web Development and Digital Solutions</h2>
+    <div class="row">
+      <div class="col-12 col-md-6 about-text">
+        <p>404 Studio LLC is a web development agency committed to delivering modern, user-centric websites that elevate
+          your business. With years of experience in the industry, we are passionate about bringing your vision to life
+          through cutting-edge design, development, and ongoing support.</p>
+        <button
+          onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-web-development-package-basic', '_blank')"
+          type="button"
+          class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
+          View Our Services
+        </button>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="frame">
           <div class="about-section-image-container noise-effect">
-            <img src="{% static 'img/images/home-about-us-partnership-image.jpg' %}" class="about-section-image img-fluid w-100" alt="About Us Image">
-          </div>
-        </div>
-      </div>  
-    </div>
-  </section>
-  
-  <!-- Client Reviews Section -->
-  <section class="reviews-section py-5">
-      <div class="container-fluid text-white">
-          <h2>Client Reviews</h2>
-          <div class="row reviews">
-              <div class="col-md-4 review">
-                  <p>"404 Studio LLC is a web development agency committed to delivering modern, user-centric websites that elevate your business. With years of experience in the industry, we are passionate about bringing your vision to life through cutting-edge design, development, and ongoing support."</p>
-                  <img src="{% static 'img/images/profile-photo-1.jpg' %}" alt="client-review-1-profile-image" class="client-review-image">
-                  <small>Ruth Boyd - <a href="wovendignity.com">Woven Dignity</a></small>
-              </div>
-              <div class="col-md-4 review">
-                  <p>"404 Studio LLC is a web development agency committed to delivering modern, user-centric websites that elevate your business. With years of experience in the industry, we are passionate about bringing your vision to life through cutting-edge design, development, and ongoing support. asdf adsf asdf asdf adsf asdf asdf asdf adsf asdf wfadutr sftgjusrat aWSFGSJKXYFHA SEFR  Ashtsregasdtgahd rasdfasdfaj yaaewrta"</p>
-                  <img src="{% static 'img/images/profile-photo-2.jpg' %}" alt="client-review-2-profile-image" class="client-review-image">
-                  <small>Tina Bralley - <a src="balancedaccountant.com">Balanced Accountant</a></small>
-              </div>
-              <div class="col-md-4 review">
-                  <p>"404 Studio LLC is a web development agency committed to delivering modern, user-centric websites that elevate your business. With years of experience in the industry, we are passionate about bringing your vision to life through cutting-edge design, development, and ongoing support. asdf adsf asdf asdf adsf asdf asdf asdf adsf asdf wfadutr sftgjusrat aWSFGS JKXYFHA SEFR  Asht sre gasdtg ahd rasd fasd fajyaae wrta.
-                    404 Studio LLC is a web development agency committed to delivering modern, user-centric websites that elevate your business. With years of experience in the industry, we are passionate about bringing your vision to life through cutting-edge design, development, and ongoing support. asdf adsf asdf asdf adsf asdf asdf asdf adsf asdf wfadutr sftgjusrat aWSFG SJKXY FHA SEFR  Ashtsreg asdtgah drasdfa sdfajya aewrta"</p>
-                  <img src="{% static 'img/images/profile-photo-3.jpg' %}" alt="client-review-3-profile-image" class="client-review-image">
-                  <small>Nassima Amari - <a src="ilcabejaia.com">ILCA Bejaia</a></small>
-              </div>
-          </div>
-      </div>
-  </section>
-  
-  <!-- Website Development Packages Section -->
-  <section class="packages-section py-5">
-    <div class="container text-center">
-      <h2>Website Development Packages</h2>
-      <div class="row mx-0">
-        <div class="col-sm-12 col-md-4 mb-4">
-          <div class="package-card">
-            <h4>Basic</h4>
-            <p class="cost-subtitle">$500-$1,000</p>
-            <br/>
-            <p>Services Included:</p>
-            <ul>
-              <li>Pre-designed layout selection and customization</li>
-              <li>Up to 5 pages</li>
-              <li>Basic SEO setup</li>
-              <li>Mobile-responsive design</li>
-              <li>1 round of revisions</li>
-              <li>Content formatting</li>
-            </ul>
-            <br/>
-            <p>Ideal For:</p>
-            <ul>
-              <li>Small businesses or personal sites needing a professional web presence with minimal customization</li>
-            </ul>
-            <button 
-              onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-web-development-package-basic', '_blank')" 
-              type="button" 
-              class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
-              Request this Package
-            </button>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-4 mb-4">
-          <div class="package-card">
-            <h4>Standard</h4>
-            <p class="cost-subtitle">$1,500-$2,500</p>
-            <br/>
-            <p>Services Included:</p>
-            <ul>
-              <li>Semi-custom design with unique styling</li>
-              <li>Up to 10 pages</li>
-              <li>Advanced SEO setup</li>
-              <li>Speed optimization</li>
-              <li>Basic E-commerce capability (up to 10 products)</li>
-              <li>2 rounds of revisions</li>
-              <li>Contact form integration</li>
-            </ul>
-            <br/>
-            <p>Ideal For:</p>
-            <ul>
-              <li>Growing businesses needing more customization and basic e-commerce functionality
-              </li>
-            </ul>
-            <button 
-              onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-web-development-package-standard', '_blank')" 
-              type="button" 
-              class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
-              Request this Package
-            </button>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-4 mb-4">
-          <div class="package-card">
-            <h4>Premium</h4>
-            <p class="cost-subtitle">$5,000+</p>
-            <br/>
-            <p>Services Include:</p>
-            <ul>
-              <li>Fully custom design from scratch</li>
-              <li>Unlimited pages</li>
-              <li>E-commerce with unlimited products</li>
-              <li>Custom features (user profiles, booking systems, etc.)</li>
-              <li>4 rounds of revisions</li>
-              <li>Third-party integrations (CRM, marketing platforms)</li>
-            </ul>
-            <br/>
-            <p>Ideal For:</p>
-            <ul>
-              <li>Businesses needing complex functionality or unique custom features</li>
-            </ul>
-            <button 
-              onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-web-development-package-premium', '_blank')" 
-              type="button" 
-              class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
-              Request this Package
-            </button>
+            <img src="{% static 'img/images/home-about-us-partnership-image.jpg' %}"
+              class="about-section-image img-fluid w-100" alt="About Us Image">
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Web Hosting Plans Section -->
-  <section class="hosting-section py-5">
-    <div class="container text-center text-white">
-      <h2 class="hosting-title">Web Hosting Plans</h2>
-      <div class="row mx-0">
-        <div class="col-sm-12 col-md-4 mb-4">
-          <div class="hosting-card">
-            <h4>Basic Hosting</h4>
-            <p class="cost-subtitle">$20/month</p>
-            <br/>
-            <p>Service Includes:</p>
-            <ul>
-              <li>2GB Storage </li>
-              <li>Basic SSL certificate</li>
-              <li>10GB monthly bandwidth</li>
-              <li>1 email account</li>
-              <li>99.9% uptime guarantee</li>
-            </ul>
-            <br/>
-            <p>Ideal For:</p>
-            <ul>
-              <li>Simple websites or blogs that don't need a lot of storage or bandwidth</li>
-            </ul>
-            <button 
-              onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-hosting-plan-basic', '_blank')" 
-              type="button" 
-              class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
-              Request this Plan
-            </button>
-          </div>
+<!-- Client Reviews Section -->
+<section class="reviews-section py-5">
+  <div class="container-fluid text-white">
+    <h2>Client Reviews</h2>
+    <div class="row reviews">
+      <div class="col-md-4 review">
+        <p>"404 Studio LLC has revamped our website and online store that was previously crashing. With patience,
+          diligence, and professionalism the team at 404 has taken care of our needs. Weekly, we continue to have
+          updates in the shop with sales and new items and 404 Studio is eager to take care of these items. Working with
+          our diverse team, 404 Studio strives to meet deadlines, offer advice to improve our services, and unifies team
+          work. With competitive pricing and polite customer service, I would recommend 404 Studio to others."</p>
+        <img src="{% static 'img/images/profile-photo-1.jpg' %}" alt="client-review-1-profile-image"
+          class="client-review-image">
+        <small>Ruth Boyd, Founder of <a href="wovendignity.com">Woven Dignity</a></small>
+      </div>
+      <div class="col-md-4 review">
+        <p>"404 Studio LLC is a web development agency committed to delivering modern, user-centric websites that
+          elevate your business. With years of experience in the industry, we are passionate about bringing your vision
+          to life through cutting-edge design, development, and ongoing support. asdf adsf asdf asdf adsf asdf asdf asdf
+          adsf asdf wfadutr sftgjusrat aWSFGSJKXYFHA SEFR Ashtsregasdtgahd rasdfasdfaj yaaewrta"</p>
+        <img src="{% static 'img/images/profile-photo-2.jpg' %}" alt="client-review-2-profile-image"
+          class="client-review-image">
+        <small>Tina Bralley - <a src="balancedaccountant.com">Balanced Accountant</a></small>
+      </div>
+      <div class="col-md-4 review">
+        <p>"404 Studio LLC is a web development agency committed to delivering modern, user-centric websites that
+          elevate your business. With years of experience in the industry, we are passionate about bringing your vision
+          to life through cutting-edge design, development, and ongoing support. asdf adsf asdf asdf adsf asdf asdf asdf
+          adsf asdf wfadutr sftgjusrat aWSFGS JKXYFHA SEFR Asht sre gasdtg ahd rasd fasd fajyaae wrta.
+          404 Studio LLC is a web development agency committed to delivering modern, user-centric websites that elevate
+          your business. With years of experience in the industry, we are passionate about bringing your vision to life
+          through cutting-edge design, development, and ongoing support. asdf adsf asdf asdf adsf asdf asdf asdf adsf
+          asdf wfadutr sftgjusrat aWSFG SJKXY FHA SEFR Ashtsreg asdtgah drasdfa sdfajya aewrta"</p>
+        <img src="{% static 'img/images/profile-photo-3.jpg' %}" alt="client-review-3-profile-image"
+          class="client-review-image">
+        <small>Nassima Amari - <a src="ilcabejaia.com">ILCA Bejaia</a></small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Website Development Packages Section -->
+<section class="packages-section py-5">
+  <div class="container text-center">
+    <h2>Website Development Packages</h2>
+    <div class="row mx-0">
+      <div class="col-sm-12 col-md-4 mb-4">
+        <div class="package-card">
+          <h4>Basic</h4>
+          <p class="cost-subtitle">$500-$1,000</p>
+          <br />
+          <p>Services Included:</p>
+          <ul>
+            <li>Pre-designed layout selection and customization</li>
+            <li>Up to 5 pages</li>
+            <li>Basic SEO setup</li>
+            <li>Mobile-responsive design</li>
+            <li>1 round of revisions</li>
+            <li>Content formatting</li>
+          </ul>
+          <br />
+          <p>Ideal For:</p>
+          <ul>
+            <li>Small businesses or personal sites needing a professional web presence with minimal customization</li>
+          </ul>
+          <button
+            onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-web-development-package-basic', '_blank')"
+            type="button"
+            class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
+            Request this Package
+          </button>
         </div>
-        <div class="col-sm-12 col-md-4 mb-4">
-          <div class="hosting-card">
-            <h4>Standard Hosting</h4>
-            <p class="cost-subtitle">$40/month</p>
-            <br/>
-            <p>Service Includes:</p>
-            <ul>
-              <li>10GB storage</li>
-              <li>Free SSL certificate</li>
-              <li>99.9% uptime guarantee</li>
-              <li>50GB monthly bandwidth</li>
-              <li>3 email accounts</li>
-              <li>Priority support</li>
-            </ul>
-            <br/>
-            <p>Ideal For:</p>
-            <ul>
-              <li>Small business websites or blogs with moderate traffic and extra features</li>
-            </ul>
-            <button 
-              onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-hosting-plan-standard', '_blank')" 
-              type="button" 
-              class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
-              Request this Plan
-            </button>
-          </div>
+      </div>
+      <div class="col-sm-12 col-md-4 mb-4">
+        <div class="package-card">
+          <h4>Standard</h4>
+          <p class="cost-subtitle">$1,500-$2,500</p>
+          <br />
+          <p>Services Included:</p>
+          <ul>
+            <li>Semi-custom design with unique styling</li>
+            <li>Up to 10 pages</li>
+            <li>Advanced SEO setup</li>
+            <li>Speed optimization</li>
+            <li>Basic E-commerce capability (up to 10 products)</li>
+            <li>2 rounds of revisions</li>
+            <li>Contact form integration</li>
+          </ul>
+          <br />
+          <p>Ideal For:</p>
+          <ul>
+            <li>Growing businesses needing more customization and basic e-commerce functionality
+            </li>
+          </ul>
+          <button
+            onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-web-development-package-standard', '_blank')"
+            type="button"
+            class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
+            Request this Package
+          </button>
         </div>
-        <div class="col-sm-12 col-md-4 mb-4">
-          <div class="hosting-card">
-            <h4>Premium Hosting</h4>
-            <p class="cost-subtitle">$80/month</p>
-            <br/>
-            <p>Service Includes:</p>
-            <ul>
-              <li>30GB storage</li>
-              <li>Premium SSL certificate</li>
-              <li>Unlimited bandwidth</li>
-              <li>10+ email accounts</li>
-              <li>Nightly backups</li>
-              <li>Advanced security features</li>
-              <li>Priority support with custom setup assistance</li>
-            </ul>
-            <br/>
-            <p>Ideal For:</p>
-            <ul>
-              <li>High-traffic sites or businesses with custom needs that require a high-performance hosting environment</li>
-            </ul>
-            <button 
-              onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-hosting-plan-premium', '_blank')" 
-              type="button" 
-              class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
-              Request this Plan
-            </button>
-          </div>
+      </div>
+      <div class="col-sm-12 col-md-4 mb-4">
+        <div class="package-card">
+          <h4>Premium</h4>
+          <p class="cost-subtitle">$5,000+</p>
+          <br />
+          <p>Services Include:</p>
+          <ul>
+            <li>Fully custom design from scratch</li>
+            <li>Unlimited pages</li>
+            <li>E-commerce with unlimited products</li>
+            <li>Custom features (user profiles, booking systems, etc.)</li>
+            <li>4 rounds of revisions</li>
+            <li>Third-party integrations (CRM, marketing platforms)</li>
+          </ul>
+          <br />
+          <p>Ideal For:</p>
+          <ul>
+            <li>Businesses needing complex functionality or unique custom features</li>
+          </ul>
+          <button
+            onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-web-development-package-premium', '_blank')"
+            type="button"
+            class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
+            Request this Package
+          </button>
         </div>
       </div>
     </div>
-  </section>
-  
-  <!-- Consultation Prompt Section -->
-  <section class="consultation-section py-5">
-    <div class="container-fluid d-flex justify-content-center align-items-center">
-        <div class="consultation-image-container noise-effect">
-            <img src="{% static '/img/images/consultation-image.jpg' %}" alt="Consultation">
-        </div>
-        <div class="consultation-text">
-            <h2>Need Help Choosing?</h2>
-            <p>Schedule a free consultation now, and we will figure out which package and/or plan is right for your situation!</p>
-            <button 
-              onclick="window.open('https://calendly.com/kaleblub/30min', '_blank')" 
-              type="button" 
-              class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
-              Schedule Consultation
-            </button>
-        </div>
-    </div>
-  </section>
+  </div>
+</section>
 
-  
-  <!-- Contact Section -->
-  <section class="contact-section py-5 text-white">
-    <div class="container-fluid">
-        <h2>Still have questions? Let's Chat.</h2>
-        <div class="row align-items-center">
-            <!-- Form Column -->
-            <div class="col-md-6">
-                <form class="contact-form">
-                    <div class="mb-3">
-                        <label>First Name</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label>Last Name</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label>Email</label>
-                        <input type="email" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label>Subject</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label>Message</label>
-                        <textarea class="form-control"></textarea>
-                    </div>
-                    <button class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Submit</button>
-                </form>
-            </div>
-            <!-- Image Column -->
-            <div class="col-md-6 noise-effect">
-                <img src="{% static '/img/images/contact-image.jpg' %}" alt="Contact Us" class="img-fluid noise-effect">
-            </div>
+<!-- Web Hosting Plans Section -->
+<section class="hosting-section py-5">
+  <div class="container text-center text-white">
+    <h2 class="hosting-title">Web Hosting Plans</h2>
+    <div class="row mx-0">
+      <div class="col-sm-12 col-md-4 mb-4">
+        <div class="hosting-card">
+          <h4>Basic Hosting</h4>
+          <p class="cost-subtitle">$20/month</p>
+          <br />
+          <p>Service Includes:</p>
+          <ul>
+            <li>2GB Storage </li>
+            <li>Basic SSL certificate</li>
+            <li>10GB monthly bandwidth</li>
+            <li>1 email account</li>
+            <li>99.9% uptime guarantee</li>
+          </ul>
+          <br />
+          <p>Ideal For:</p>
+          <ul>
+            <li>Simple websites or blogs that don't need a lot of storage or bandwidth</li>
+          </ul>
+          <button onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-hosting-plan-basic', '_blank')"
+            type="button"
+            class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
+            Request this Plan
+          </button>
         </div>
+      </div>
+      <div class="col-sm-12 col-md-4 mb-4">
+        <div class="hosting-card">
+          <h4>Standard Hosting</h4>
+          <p class="cost-subtitle">$40/month</p>
+          <br />
+          <p>Service Includes:</p>
+          <ul>
+            <li>10GB storage</li>
+            <li>Free SSL certificate</li>
+            <li>99.9% uptime guarantee</li>
+            <li>50GB monthly bandwidth</li>
+            <li>3 email accounts</li>
+            <li>Priority support</li>
+          </ul>
+          <br />
+          <p>Ideal For:</p>
+          <ul>
+            <li>Small business websites or blogs with moderate traffic and extra features</li>
+          </ul>
+          <button
+            onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-hosting-plan-standard', '_blank')"
+            type="button"
+            class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
+            Request this Plan
+          </button>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-4 mb-4">
+        <div class="hosting-card">
+          <h4>Premium Hosting</h4>
+          <p class="cost-subtitle">$80/month</p>
+          <br />
+          <p>Service Includes:</p>
+          <ul>
+            <li>30GB storage</li>
+            <li>Premium SSL certificate</li>
+            <li>Unlimited bandwidth</li>
+            <li>10+ email accounts</li>
+            <li>Nightly backups</li>
+            <li>Advanced security features</li>
+            <li>Priority support with custom setup assistance</li>
+          </ul>
+          <br />
+          <p>Ideal For:</p>
+          <ul>
+            <li>High-traffic sites or businesses with custom needs that require a high-performance hosting environment
+            </li>
+          </ul>
+          <button
+            onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-hosting-plan-premium', '_blank')"
+            type="button"
+            class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
+            Request this Plan
+          </button>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Consultation Prompt Section -->
+<section class="consultation-section py-5">
+  <div class="container-fluid d-flex justify-content-center align-items-center">
+    <!-- <div class="frame"> -->
+      <div class="consultation-image-container noise-effect">
+        <img src="{% static '/img/images/consultation-image.jpg' %}" alt="Consultation">
+      </div>
+    <!-- </div> -->
+    <div class="consultation-text">
+      <h2>Need Help Choosing?</h2>
+      <p>Schedule a free consultation now, and we will figure out which package and/or plan is right for your situation!
+      </p>
+      <button onclick="window.open('https://calendly.com/kaleblub/30min', '_blank')" type="button"
+        class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
+        Schedule Consultation
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section class="contact-section py-5 text-white">
+  <div class="container-fluid">
+    <h2>Still have questions? Let's Chat.</h2>
+    <div class="row align-items-center">
+      <!-- Form Column -->
+      <div class="col-md-6">
+        <form class="contact-form">
+          <div class="mb-3">
+            <label>First Name</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label>Last Name</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label>Email</label>
+            <input type="email" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label>Subject</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="mb-3">
+            <label>Message</label>
+            <textarea class="form-control"></textarea>
+          </div>
+          <button
+            class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Submit</button>
+        </form>
+      </div>
+      <!-- Image Column -->
+      <div class="col-md-6 noise-effect">
+        <img src="{% static '/img/images/contact-image.jpg' %}" alt="Contact Us" class="img-fluid noise-effect">
+      </div>
+    </div>
+  </div>
+</section>
 {% endblock content %}
