@@ -37,6 +37,8 @@ else:
     SECURE_PROXY_SSL_HEADER = ('HTTP_XFORWARDED_PROTO', 'https')
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
+    SESSION_ENGINE = "django.contrib.sessions.backends.file"
+    SESSION_FILE_PATH = "/tmp"
 
 # Application definition
 
