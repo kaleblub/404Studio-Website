@@ -2,6 +2,8 @@ from django.conf import settings
 from django.utils import translation
 from django.contrib.gis.geoip2 import GeoIP2
 
+import requests
+
 class LocationBasedLanguageMiddleware:
     def __init__(self, get_response):
         self.get_response = get_response
@@ -35,8 +37,9 @@ class LocationBasedLanguageMiddleware:
     def get_user_country(self, ip_address):
         """Uses Django's GeoIP2 to determine the country of the given IP"""
         try:
-            g = GeoIP2()
-            return g.country(ip_address)['country_name']
+            response = requests.get(f"http://ip-api.com/json/{ip_address}")
+            data = response.json()
+            return data.get("country", "Unknown")
         except Exception as e:
             print(f"GeoIP lookup failed: {e}")
             return "Unknown"
