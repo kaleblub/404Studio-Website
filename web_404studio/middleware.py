@@ -18,12 +18,13 @@ class LocationBasedLanguageMiddleware:
         else:
             country = self.get_user_country(ip_address)
 
-        print(f"Detected Country: {country}")
-
         if country in ['Ecuador', 'Mexico', 'Spain']:
             translation.activate('es')
         else:
             translation.activate('en')
+
+        print(f"Detected Country: {country}")
+        print(f"Active Language: {translation.get_language()}")
 
         request.session[settings.LANGUAGE_SESSION_KEY] = translation.get_language()
 
