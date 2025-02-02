@@ -1,18 +1,24 @@
 from django.conf import settings
 from django.utils import translation
-from django.contrib.gis.geoip2 import GeoIP2
-
-import requests
+import urllib.request
+import json
 
 class LocationBasedLanguageMiddleware:
     def __init__(self, get_response):
-        self.get_response = get_response
+        """Initialize middleware with the next response handler"""
+        self.get_response = get_response  # Store get_response to call it later
 
     def __call__(self, request):
-        ip_address = self.get_client_ip(request)
-        country = self.get_user_country(ip_address)
+        """Process the request and set language based on user IP"""
+        ip_address = self.get_client_ip(request)  # Extract IP address
 
-        print(f"Detected IP: {ip_address}, Country: {country}")
+        if not ip_address or ip_address == "127.0.0.1":
+            print("Using default language for localhost.")
+            country = "Unknown"
+        else:
+            country = self.get_user_country(ip_address)
+
+        print(f"Detected Country: {country}")
 
         if country in ['Ecuador', 'Mexico', 'Spain']:
             translation.activate('es')
@@ -26,20 +32,23 @@ class LocationBasedLanguageMiddleware:
         return response
 
     def get_client_ip(self, request):
-        """Extracts the client IP address from the request"""
+        """Extracts the client IP address from request headers"""
         x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
         if x_forwarded_for:
             ip = x_forwarded_for.split(',')[0]
         else:
             ip = request.META.get('REMOTE_ADDR')
+        
+        print(f"Extracted IP: {ip}")  # Debugging output
         return ip
 
     def get_user_country(self, ip_address):
-        """Uses Django's GeoIP2 to determine the country of the given IP"""
+        """Fetches the user's country based on IP"""
         try:
-            response = requests.get(f"http://ip-api.com/json/{ip_address}")
-            data = response.json()
-            return data.get("country", "Unknown")
+            print(f"Fetching country for IP: {ip_address}")
+            with urllib.request.urlopen(f"http://ip-api.com/json/{ip_address}") as url:
+                data = json.loads(url.read().decode())
+                return data.get("country", "Unknown")
         except Exception as e:
             print(f"GeoIP lookup failed: {e}")
             return "Unknown"
