@@ -80,19 +80,19 @@
             <nav class="navigation overline">
               <ul class="nav list-unstyled d-flex">
                 <li class="nav-item {% if request.path == '/' %}active{% endif %}">
-                  <a class="nav-link" href="{% url 'home' %}">{% trans "HOME" %}</a>
+                  <a class="nav-link" href="{% url 'home' %}">{% translate "HOME" %}</a>
                 </li>
                 <li class="nav-item {% if request.path == '/contact/' %}active{% endif %}">
-                  <a class="nav-link" href="{% url 'contact' %}">{% trans "CONTACT" %}</a>
+                  <a class="nav-link" href="{% url 'contact' %}">{% translate "CONTACT" %}</a>
                 </li>
                 <li class="nav-item {% if request.path == '/development_packages/' %}active{% endif %}">
-                  <a class="nav-link" href="{% url 'development_packages' %}">{% trans "DEVELOPMENT" %}</a>
+                  <a class="nav-link" href="{% url 'development_packages' %}">{% translate "DEVELOPMENT" %}</a>
                 </li>
                 <li class="nav-item {% if request.path == '/hosting_plans/' %}active{% endif %}">
-                  <a class="nav-link" href="{% url 'hosting_plans' %}">{% trans "HOSTING" %}</a>
+                  <a class="nav-link" href="{% url 'hosting_plans' %}">{% translate "HOSTING" %}</a>
                 </li>
                 <li class="nav-item {% if request.path == '/portfolio/' %}active{% endif %}">
-                  <a class="nav-link" href="{% url 'portfolio' %}">{% trans "PORTFOLIO" %}</a>
+                  <a class="nav-link" href="{% url 'portfolio' %}">{% translate "PORTFOLIO" %}</a>
                 </li>
                 <!-- <li>
                   <a href="#" class="nav-link account-link">Login / Account</a>
@@ -137,19 +137,19 @@
           <nav class="mobile-nav-list">
             <ul>
               <li class="nav-item {% if request.path == '/' %}active{% endif %}">
-                <a class="nav-link" href="{% url 'home' %}">{% trans "HOME" %}</a>
+                <a class="nav-link" href="{% url 'home' %}">{% translate "HOME" %}</a>
               </li>
               <li class="nav-item {% if request.path == '/contact/' %}active{% endif %}">
-                <a class="nav-link" href="{% url 'contact' %}">{% trans "CONTACT" %}</a>
+                <a class="nav-link" href="{% url 'contact' %}">{% translate "CONTACT" %}</a>
               </li>
               <li class="nav-item {% if request.path == '/development_packages/' %}active{% endif %}">
-                <a class="nav-link" href="{% url 'development_packages' %}">{% trans "DEVELOPMENT" %}</a>
+                <a class="nav-link" href="{% url 'development_packages' %}">{% translate "DEVELOPMENT" %}</a>
               </li>
               <li class="nav-item {% if request.path == '/hosting_plans' %}active{% endif %}">
-                <a class="nav-link" href="{% url 'hosting_plans' %}">{% trans "HOSTING" %}</a>
+                <a class="nav-link" href="{% url 'hosting_plans' %}">{% translate "HOSTING" %}</a>
               </li>
               <li class="nav-item {% if request.path == '/portfolio/' %}active{% endif %}">
-                <a class="nav-link" href="{% url 'portfolio' %}">{% trans "PORTFOLIO" %}</a>
+                <a class="nav-link" href="{% url 'portfolio' %}">{% translate "PORTFOLIO" %}</a>
               </li>
             </ul>
           </nav>

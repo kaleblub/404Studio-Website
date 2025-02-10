@@ -1,10 +1,12 @@
 {% load static %}
+{% load i18n %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}404 Studio - Quick Navigation{% endblock %}</title>
+    <title>{% block title %}{% translate '404 Studio - Quick Navigation' %}{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/links-page.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Anton:wght@400&family=Anton+SC&family=Poppins:wght@500"
     rel="stylesheet" type="text/css" />
@@ -29,26 +31,26 @@
                         alt="404Studio" />
                     </a>
                 </div>
-                <h3><span>Web Development Agency</span></h3>
+                <h3><span>{% translate 'Web Development Agency' %}</span></h3>
             </div>
         </header>
         <main>
             <div class="flex-column">
             <a href="{% url 'home' %}" target="_blank" class="link-button">
                 <span class="icon"><img src="{% static 'img/icons/laptop.svg' %}" alt="Website Icon"></span>
-                <span class="button-text">Go to our <strong>Website</strong></span>
+                <span class="button-text">{% translate 'Go to our <strong>Website</strong>' %}</span>
             </a>
             <a href="mailto:kaleb.humpal@404studio.net" class="link-button">
                 <span class="icon"><img src="{% static 'img/icons/gmail.svg' %}" alt="Email Icon"></span>
-                <span class="button-text">Send us an <strong>Email</strong></span>
+                <span class="button-text">{% translate 'Send us an <strong>Email</strong>' %}</span>
             </a>
             <a href="{% url 'portfolio' %}" target="_blank" class="link-button">
                 <span class="icon"><img src="{% static 'img/icons/briefcase.svg' %}" alt="Portfolio/Briefcase Icon"></span>
-                <span class="button-text">See our <strong>Portfolio</strong></span>
+                <span class="button-text">{% translate 'See our <strong>Portfolio</strong>' %}</span>
             </a>
             <a href="https://wa.me/+593991862613" target="_blank" class="link-button">
                 <span class="icon"><img src="{% static 'img/icons/whatsapp.svg' %}" alt="Whatsapp Icon"></span> 
-                <span class="button-text">Message us on <strong>Whatsapp</strong></span>
+                <span class="button-text">{% translate 'Message us on <strong>Whatsapp</strong>' %}</span>
             </a>
             </div>
         </main>

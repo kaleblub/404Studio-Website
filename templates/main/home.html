@@ -1,41 +1,40 @@
 {% extends "main/base.html" %}
 {% load i18n %}
-{% get_current_language as LANGUAGE_CODE %}
 {% load static %}
-{% block title %}{% trans "404 Studio | Professional Web Development and Hosting Services" %}{% endblock title %}
-{% block meta_description %}{% trans "Build your online presence with 404 Studio. We offer expert web development, hosting, and
+{% block title %}{% translate "404 Studio | Professional Web Development and Hosting Services" %}{% endblock title %}
+{% block meta_description %}{% translate "Build your online presence with 404 Studio. We offer expert web development, hosting, and
 design services to help your business grow." %}{% endblock meta_description %}
 {% block content %}
 <section class="hero-section text-center text-white">
   <div class="container position-relative">
     <div class="row align-items-center">
       <div class="col-12 hero-text">
-        <h1>{% trans "YOUR DIGITAL" %}</h1>
+        <h1>{% translate "YOUR DIGITAL" %}</h1>
         <!-- <div class="frame"> -->
         <div class="hero-image-container noise-effect">
           <img class="hero-image hero-first-image"
             src="https://images.squarespace-cdn.com/content/v1/6718b30b131cc651070af13a/1730071929301-KELQVPTR4W4LENS4UC3U/unsplash-image-uq5RMAZdZG4.jpg">
         </div>
         <!-- </div> -->
-        <h1>{% trans "FUTURE STARTS" %}</h1>
+        <h1>{% translate "FUTURE STARTS" %}</h1>
         <!-- <div class="frame"> -->
         <div class="hero-image-container noise-effect">
           <img class="hero-image hero-second-image"
             src="https://images.squarespace-cdn.com/content/v1/6718b30b131cc651070af13a/1730071862007-KQ3CQZDTYHOO8HUMAOTG/unsplash-image-dC6Pb2JdAqs.jpg">
         </div>
         <!-- </div> -->
-        <h1>{% trans "HERE" %}</h1>
+        <h1>{% translate "HERE" %}</h1>
         <p class="hero-summary">
-          {% trans "We help businesses transform their digital presence with custom solutions that drive real growth." %}
+          {% translate "We help businesses transform their digital presence with custom solutions that drive real growth." %}
         </p>
         <div class="buttons hero-buttons">
           <button onclick="window.open('https://calendly.com/kaleblub/30min', '_blank')" type="button"
             class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
-            {% trans "Get a Free Consultation" %}
+            {% translate "Get a Free Consultation" %}
           </button>
           <button onclick="location.href='{% url 'portfolio' %}'" type="button"
             class="button button--quidel button--inverted">
-            {% trans "View Our Portfolio" %}
+            {% translate "View Our Portfolio" %}
           </button>
         </div>
       </div>
@@ -44,17 +43,20 @@ design services to help your business grow." %}{% endblock meta_description %}
   <div class="services-banner">
     <div class="scrolling-text">
       <div class="scrolling-content">
-        <span>{% trans "Web Development" %}</span>
-        <span>{% trans "SEO Improvement" %}</span>
-        <span>{% trans "Graphic Design" %}</span>
-        <span>{% trans "Website Hosting" %}</span>
-        <span>{% trans "Website Migration" %}</span>
+        <span>{% translate "Web Development" %}</span>
+        <span>{% translate "SEO Improvement" %}</span>
+        <span>{% translate "Front-End Improvement" %}</span>
+        <span>{% translate "Website Hosting" %}</span>
+        <span>{% translate "Website Migration" %}</span>
+        <span>{% translate "Website Maintanence" %}</span>
+
         <!-- Duplicate content -->
-        <span>{% trans "Web Development" %}</span>
-        <span>{% trans "SEO Improvement" %}</span>
-        <span>{% trans "Graphic Design" %}</span>
-        <span>{% trans "Website Hosting" %}</span>
-        <span>{% trans "Website Migration" %}</span>
+        <span>{% translate "Web Development" %}</span>
+        <span>{% translate "SEO Improvement" %}</span>
+        <span>{% translate "Front-End Improvement" %}</span>
+        <span>{% translate "Website Hosting" %}</span>
+        <span>{% translate "Website Migration" %}</span>
+        <span>{% translate "Website Maintanence" %}</span>
       </div>
     </div>
   </div>
@@ -63,7 +65,7 @@ design services to help your business grow." %}{% endblock meta_description %}
 <!-- About Us Section -->
 <section class="about-section">
   <div class="container">
-    <h2 class="about-title">{% trans "Your Partner in Web Development and Digital Solutions" %}</h2>
+    <h2 class="about-title">{% translate "Your Partner in Web Development and Digital Solutions" %}</h2>
     <div class="row">
       <div class="col-12 col-md-6 about-text">
         <p>404 Studio LLC is a web development agency committed to delivering modern, user-centric websites that elevate
@@ -73,7 +75,7 @@ design services to help your business grow." %}{% endblock meta_description %}
           onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-web-development-package-basic', '_blank')"
           type="button"
           class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
-          {% trans "View Our Services" %}
+          {% translate "View Our Services" %}
         </button>
       </div>
       <div class="col-12 col-md-6">
@@ -91,7 +93,7 @@ design services to help your business grow." %}{% endblock meta_description %}
 <!-- Client Reviews Section -->
 <section class="reviews-section py-5">
   <div class="container-fluid text-white">
-    <h2>{% trans "Client Reviews" %}</h2>
+    <h2>{% translate "Client Reviews" %}</h2>
     <div class="row reviews">
       <div class="col-md-4 review">
         <p>"404 Studio LLC has revamped our website and online store that was previously crashing. With patience,
@@ -101,7 +103,7 @@ design services to help your business grow." %}{% endblock meta_description %}
           work. With competitive pricing and polite customer service, I would recommend 404 Studio to others."</p>
         <img src="{% static 'img/images/profile-photo-1.jpg' %}" alt="client-review-1-profile-image"
           class="client-review-image">
-        <small>Ruth Boyd, {% trans "Founder of" %} <a href="wovendignity.com">Woven Dignity</a></small>
+        <small>Ruth Boyd, {% translate "Founder of" %} <a href="wovendignity.com">Woven Dignity</a></small>
       </div>
       <div class="col-md-4 review">
         <p>"404 Studio LLC is a web development agency committed to delivering modern, user-centric websites that
@@ -132,88 +134,88 @@ design services to help your business grow." %}{% endblock meta_description %}
 <!-- Website Development Packages Section -->
 <section class="packages-section py-5">
   <div class="container text-center">
-    <h2>{% trans "Website Development Packages" %}</h2>
+    <h2>{% translate "Website Development Packages" %}</h2>
     <div class="row mx-0">
       <div class="col-sm-12 col-md-4 mb-4">
         <div class="package-card">
-          <h4>{% trans "Basic" %}</h4>
+          <h4>{% translate "Basic" %}</h4>
           <p class="cost-subtitle">$500-$1,000</p>
           <br />
-          <p>{% trans "Services Included:" %}</p>
+          <p>{% translate "Services Included:" %}</p>
           <ul>
-            <li>{% trans "Pre-designed layout selection and customization" %}</li>
-            <li>{% trans "Up to 5 pages" %}</li>
-            <li>{% trans "Basic SEO setup" %}</li>
-            <li>{% trans "Mobile-responsive design" %}</li>
-            <li>{% trans "1 round of revisions" %}</li>
-            <li>{% trans "Content formatting" %}</li>
+            <li>{% translate "Pre-designed layout selection and customization" %}</li>
+            <li>{% translate "Up to 5 pages" %}</li>
+            <li>{% translate "Basic SEO setup" %}</li>
+            <li>{% translate "Mobile-responsive design" %}</li>
+            <li>{% translate "1 round of revisions" %}</li>
+            <li>{% translate "Content formatting" %}</li>
           </ul>
           <br />
-          <p>{% trans "Ideal For:" %}</p>
+          <p>{% translate "Ideal For:" %}</p>
           <ul>
-            <li>{% trans "Small businesses or personal sites needing a professional web presence with minimal customization" %}</li>
+            <li>{% translate "Small businesses or personal sites needing a professional web presence with minimal customization" %}</li>
           </ul>
           <button
-            onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-web-development-package-basic', '_blank')"
+            onclick="window.open('{{ dev_basic }}', '_blank')"
             type="button"
             class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
-            {% trans "Request this Package" %}
+            {% translate "Request this Package" %}
           </button>
         </div>
       </div>
       <div class="col-sm-12 col-md-4 mb-4">
         <div class="package-card">
-          <h4>{% trans "Standard" %}</h4>
+          <h4>{% translate "Standard" %}</h4>
           <p class="cost-subtitle">$1,500-$2,500</p>
           <br />
-          <p>{% trans "Services Included:" %}</p>
+          <p>{% translate "Services Included:" %}</p>
           <ul>
-            <li>{% trans "Semi-custom design with unique styling" %}</li>
-            <li>{% trans "Up to 10 pages" %}</li>
-            <li>{% trans "Advanced SEO setup" %}</li>
-            <li>{% trans "Speed optimization" %}</li>
-            <li>{% trans "Basic E-commerce capability (up to 10 products)" %}</li>
-            <li>{% trans "2 rounds of revisions" %}</li>
-            <li>{% trans "Contact form integration" %}</li>
+            <li>{% translate "Semi-custom design with unique styling" %}</li>
+            <li>{% translate "Up to 10 pages" %}</li>
+            <li>{% translate "Advanced SEO setup" %}</li>
+            <li>{% translate "Speed optimization" %}</li>
+            <li>{% translate "Basic E-commerce capability (up to 10 products)" %}</li>
+            <li>{% translate "2 rounds of revisions" %}</li>
+            <li>{% translate "Contact form integration" %}</li>
           </ul>
           <br />
-          <p>{% trans "Ideal For:" %}</p>
+          <p>{% translate "Ideal For:" %}</p>
           <ul>
-            <li>{% trans "Growing businesses needing more customization and basic e-commerce functionality" %}
+            <li>{% translate "Growing businesses needing more customization and basic e-commerce functionality" %}
             </li>
           </ul>
           <button
-            onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-web-development-package-standard', '_blank')"
+            onclick="window.open('{{ dev_standard }}', '_blank')"
             type="button"
             class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
-            {% trans "Request this Package" %}
+            {% translate "Request this Package" %}
           </button>
         </div>
       </div>
       <div class="col-sm-12 col-md-4 mb-4">
         <div class="package-card">
-          <h4>{% trans "Premium" %}</h4>
+          <h4>{% translate "Premium" %}</h4>
           <p class="cost-subtitle">$5,000+</p>
           <br />
-          <p>{% trans "Services Include:" %}</p>
+          <p>{% translate "Services Include:" %}</p>
           <ul>
-            <li>{% trans "Fully custom design from scratch" %}</li>
-            <li>{% trans "Unlimited pages" %}</li>
-            <li>{% trans "E-commerce with unlimited products" %}</li>
-            <li>{% trans "Custom features (user profiles, booking systems, etc.)" %}</li>
-            <li>{% trans "4 rounds of revisions" %}</li>
-            <li>{% trans "Third-party integrations (CRM, marketing platforms)" %}</li>
+            <li>{% translate "Fully custom design from scratch" %}</li>
+            <li>{% translate "Unlimited pages" %}</li>
+            <li>{% translate "E-commerce with unlimited products" %}</li>
+            <li>{% translate "Custom features (user profiles, booking systems, etc.)" %}</li>
+            <li>{% translate "4 rounds of revisions" %}</li>
+            <li>{% translate "Third-party integrations (CRM, marketing platforms)" %}</li>
           </ul>
           <br />
-          <p>{% trans "Ideal For:" %}</p>
+          <p>{% translate "Ideal For:" %}</p>
           <ul>
-            <li>{% trans "Businesses needing complex functionality or unique custom features" %}</li>
+            <li>{% translate "Businesses needing complex functionality or unique custom features" %}</li>
           </ul>
           <button
-            onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-web-development-package-premium', '_blank')"
+            onclick="window.open('{{ dev_premium }}', '_blank')"
             type="button"
             class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
-            {% trans "Request this Package" %}
+            {% translate "Request this Package" %}
           </button>
         </div>
       </div>
@@ -224,86 +226,86 @@ design services to help your business grow." %}{% endblock meta_description %}
 <!-- Web Hosting Plans Section -->
 <section class="hosting-section py-5">
   <div class="container text-center text-white">
-    <h2 class="hosting-title">{% trans "Web Hosting Plans" %}</h2>
+    <h2 class="hosting-title">{% translate "Web Hosting Plans" %}</h2>
     <div class="row mx-0">
       <div class="col-sm-12 col-md-4 mb-4">
         <div class="hosting-card">
-          <h4>{% trans "Basic Hosting" %}</h4>
-          <p class="cost-subtitle">{% trans "$20/month" %}</p>
+          <h4>{% translate "Basic Hosting" %}</h4>
+          <p class="cost-subtitle">{% translate "$20/month" %}</p>
           <br />
-          <p>{% trans "Service Includes:" %}</p>
+          <p>{% translate "Service Includes:" %}</p>
           <ul>
-            <li>{% trans "2GB Storage" %}</li>
-            <li>{% trans "Basic SSL certificate" %}</li>
-            <li>{% trans "10GB monthly bandwidth" %}</li>
-            <li>{% trans "1 email account" %}</li>
-            <li>{% trans "99.9% uptime guarantee" %}</li>
+            <li>{% translate "2GB Storage" %}</li>
+            <li>{% translate "Basic SSL certificate" %}</li>
+            <li>{% translate "10GB monthly bandwidth" %}</li>
+            <li>{% translate "1 email account" %}</li>
+            <li>{% translate "99.9% uptime guarantee" %}</li>
           </ul>
           <br />
-          <p>{% trans "Ideal For:" %}</p>
+          <p>{% translate "Ideal For:" %}</p>
           <ul>
-            <li>{% trans "Simple websites or blogs that don't need a lot of storage or bandwidth" %}</li>
+            <li>{% translate "Simple websites or blogs that don't need a lot of storage or bandwidth" %}</li>
           </ul>
-          <button onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-hosting-plan-basic', '_blank')"
+          <button onclick="window.open('{{ host_basic }}', '_blank')"
             type="button"
             class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
-            {% trans "Request this Plan" %}
+            {% translate "Request this Plan" %}
           </button>
         </div>
       </div>
       <div class="col-sm-12 col-md-4 mb-4">
         <div class="hosting-card">
-          <h4>{% trans "Standard Hosting" %}</h4>
-          <p class="cost-subtitle">{% trans "$40/month" %}</p>
+          <h4>{% translate "Standard Hosting" %}</h4>
+          <p class="cost-subtitle">{% translate "$40/month" %}</p>
           <br />
-          <p>{% trans "Service Includes:" %}</p>
+          <p>{% translate "Service Includes:" %}</p>
           <ul>
-            <li>{% trans "10GB storage" %}</li>
-            <li>{% trans "Free SSL certificate" %}</li>
-            <li>{% trans "99.9% uptime guarantee" %}</li>
-            <li>{% trans "50GB monthly bandwidth" %}</li>
-            <li>{% trans "3 email accounts" %}</li>
-            <li>{% trans "Priority support" %}</li>
+            <li>{% translate "10GB storage" %}</li>
+            <li>{% translate "Free SSL certificate" %}</li>
+            <li>{% translate "99.9% uptime guarantee" %}</li>
+            <li>{% translate "50GB monthly bandwidth" %}</li>
+            <li>{% translate "3 email accounts" %}</li>
+            <li>{% translate "Priority support" %}</li>
           </ul>
           <br />
-          <p>{% trans "Ideal For:" %}</p>
+          <p>{% translate "Ideal For:" %}</p>
           <ul>
-            <li>{% trans "Small business websites or blogs with moderate traffic and extra features" %}</li>
+            <li>{% translate "Small business websites or blogs with moderate traffic and extra features" %}</li>
           </ul>
           <button
-            onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-hosting-plan-standard', '_blank')"
+            onclick="window.open('{{ host_standard }}', '_blank')"
             type="button"
             class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
-            {% trans "Request this Plan" %}
+            {% translate "Request this Plan" %}
           </button>
         </div>
       </div>
       <div class="col-sm-12 col-md-4 mb-4">
         <div class="hosting-card">
-          <h4>{% trans "Premium Hosting" %}</h4>
-          <p class="cost-subtitle">{% trans "$80/month" %}</p>
+          <h4>{% translate "Premium Hosting" %}</h4>
+          <p class="cost-subtitle">{% translate "$80/month" %}</p>
           <br />
-          <p>{% trans "Service Includes:" %}</p>
+          <p>{% translate "Service Includes:" %}</p>
           <ul>
-            <li>{% trans "30GB storage" %}</li>
-            <li>{% trans "Premium SSL certificate" %}</li>
-            <li>{% trans "Unlimited bandwidth" %}</li>
-            <li>{% trans "10+ email accounts" %}</li>
-            <li>{% trans "Nightly backups" %}</li>
-            <li>{% trans "Advanced security features" %}</li>
-            <li>{% trans "Priority support with custom setup assistance" %}</li>
+            <li>{% translate "30GB storage" %}</li>
+            <li>{% translate "Premium SSL certificate" %}</li>
+            <li>{% translate "Unlimited bandwidth" %}</li>
+            <li>{% translate "10+ email accounts" %}</li>
+            <li>{% translate "Nightly backups" %}</li>
+            <li>{% translate "Advanced security features" %}</li>
+            <li>{% translate "Priority support with custom setup assistance" %}</li>
           </ul>
           <br />
-          <p>{% trans "Ideal For:" %}</p>
+          <p>{% translate "Ideal For:" %}</p>
           <ul>
-            <li>{% trans "High-traffic sites or businesses with custom needs that require a high-performance hosting environment" %}
+            <li>{% translate "High-traffic sites or businesses with custom needs that require a high-performance hosting environment" %}
             </li>
           </ul>
           <button
-            onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-hosting-plan-premium', '_blank')"
+            onclick="window.open('{{ host_premium }}', '_blank')"
             type="button"
             class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
-            {% trans "Request this Plan" %}
+            {% translate "Request this Plan" %}
           </button>
         </div>
       </div>
@@ -320,12 +322,12 @@ design services to help your business grow." %}{% endblock meta_description %}
       </div>
     <!-- </div> -->
     <div class="consultation-text">
-      <h2>{% trans "Need Help Choosing?" %}</h2>
-      <p>{% trans "Schedule a free consultation now, and we will figure out which package and/or plan is right for your situation!" %}
+      <h2>{% translate "Need Help Choosing?" %}</h2>
+      <p>{% translate "Schedule a free consultation now, and we will figure out which package and/or plan is right for your situation!" %}
       </p>
       <button onclick="window.open('https://calendly.com/kaleblub/30min', '_blank')" type="button"
         class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
-        {% trans "Schedule Consultation" %}
+        {% translate "Schedule Consultation" %}
       </button>
     </div>
   </div>
@@ -335,37 +337,37 @@ design services to help your business grow." %}{% endblock meta_description %}
 <!-- Contact Section -->
 <section class="contact-section py-5 text-white">
   <div class="container-fluid">
-    <h2>{% trans "Still have questions? Let's Chat." %}</h2>
+    <h2>{% translate "Still have questions? Let's Chat." %}</h2>
     <div class="row align-items-center">
       <!-- Form Column -->
       <div class="col-md-6">
         <form class="contact-form">
           <div class="mb-3">
-            <label>{% trans "First Name" %}</label>
+            <label>{% translate "First Name" %}</label>
             <input type="text" class="form-control">
           </div>
           <div class="mb-3">
-            <label>{% trans "Last Name" %}</label>
+            <label>{% translate "Last Name" %}</label>
             <input type="text" class="form-control">
           </div>
           <div class="mb-3">
-            <label>{% trans "Email" %}</label>
+            <label>{% translate "Email" %}</label>
             <input type="email" class="form-control">
           </div>
           <div class="mb-3">
-            <label>{% trans "Subject" %}</label>
+            <label>{% translate "Subject" %}</label>
             <input type="text" class="form-control">
           </div>
           <div class="mb-3">
-            <label>{% trans "Message" %}</label>
+            <label>{% translate "Message" %}</label>
             <textarea class="form-control"></textarea>
           </div>
           <button
-            class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">{% trans "Submit" %}</button>
+            class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">{% translate "Submit" %}</button>
         </form>
       </div>
       <!-- Image Column -->
-      <div class="col-md-6 noise-effect">
+      <div class="contact-image-container noise-effect">
         <img src="{% static '/img/images/contact-image.jpg' %}" alt="Contact Us" class="img-fluid noise-effect">
       </div>
     </div>

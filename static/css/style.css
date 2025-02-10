@@ -927,9 +927,28 @@ section {
   margin: 0 0 2rem 0;
 }
 
+.contact-image-container {
+  width: 47%;
+  margin-left: 2rem;
+  margin-bottom: 5rem;
+}
+
+.contact-section .container-fluid .row {
+  flex-wrap: nowrap;
+}
+
 @media (min-width: 768px) {
   .contact-section {
     padding: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section .container-fluid .row {
+    flex-wrap: wrap;
+  }
+  .contact-image-container {
+    width: 90%;
   }
 }
 
