@@ -11,78 +11,109 @@
   <div class="portfolio-container">
     <h2>Project Showcase</h2>
     <p>Below is a list of our top projects for clients of various purposes and goals.</p>
+    
     <div class="portfolio">
+      
       <!-- Portfolio Item 1 -->
       <div class="portfolio-item text-white"> <!-- data-modal="modal-1"> -->
         <button class="close-btn">Close</button>
-        <h3>ILCA Bejaia</h3>
-        <p>International Learning Center in Algeria</p>
-        <div class="mockup">
+        <h3 class="project-title">ILCA Bejaia</h3>
+        <p class="project-subtitle">International Learning Center in Algeria</p>
+        
+        <div class="mockup" id="preview-section">
           <img src="{% static 'img/portfolio-images/macbook-white.png' %}">
           <div class="artwork">
             <img src="{% static 'img/portfolio-images/ilca-bejaia-home-page-mockup.png' %}">
           </div>
         </div>
+        
         <ul>
-          <li><b>Platform:</b> Square Online</li>
-          <li><b>Site Type:</b> Store & Blog</li>
+          <li><b>Industry:</b> Education</li>
+          <!-- <li><b>Platform:</b> </li> -->
+          <li><b>Site Type:</b> Education, Information, Student Dashboard</li>
+          <li><b>Technologies Used:</b> Django, Python, HTML, CSS, JavaScript</li>
         </ul>
+
         <div class="portfolio-info">
-          <h3>ILCA Bejaia</h3>
-          <p>International Learning Center in Algeria</p>
-          <span class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora pariatur laudantium magnam. Veritatis quibusdam quasi dolor earum, quaerat tempora pariatur fuga ipsam repudiandae, dicta recusandae, voluptatem mollitia corporis dolorem voluptas.</span>
+          <h4><a href="https://ilcabejaia.com" target="_blank">ILCA Bejaia 🔗</a></h4>
+          <h4>About the Project</h4>
+          <p>ILCA Bejaia is an International Learning Center in Algeria offering language courses and learning resources.</p>
+
+          <h4>🚀 Client's Challenges</h4>
+          <p>The client opened the learning center and had no online presence or central student/teacher platform.</p>
+
+          <h4>🛠️ What We Did</h4>
           <ul>
-            <li>example</li>
-            <li>example 2</li>
-            <li>example</li>
+            <li>Designed and Developed the necessary pages for the center.</li>
+            <li>Created a seamless **course registration system**.</li>
+            <li>Implimented a Student Management System backend.</li>
+            <li>Optimized UI/UX for mobile responsiveness.</li>
           </ul>
+
+          <h4>📈 Results</h4>
+          <ul>
+            <li>💡 **50% increase** in online student registrations.</li>
+            <li>📊 Improved website speed and SEO ranking.</li>
+          </ul>
+        
+          <!-- Mobile-Only Image Preview -->
+          <div class="mobile-mockup">
+            <img src="{% static 'img/portfolio-images/ilca-bejaia-home-page-mockup.png' %}" alt="Mobile Preview">
+          </div>
         </div>
       </div>
 
-      <!-- Modal -->
-      <!-- <div class="modal" id="modal-1">
-        <div class="modal-content">
-          <button class="modal-close">&times;</button>
-          <h3>ILCA Bejaia</h3>
-          <p>More details about the project will go here...</p>
-        </div>
-      </div> -->
-
-      <!-- Portfolio Item 2 -->
-      <div class="portfolio-item text-white"> <!--data-modal="modal-2"> -->
+      <!-- Portfolio Item 2: Woven Dignity -->
+      <div class="portfolio-item text-white">
         <button class="close-btn">Close</button>
-        <h3>Woven Dignity</h3>
-        <p>Hand-sewn craft business</p>
+        <h3 class="project-title">Woven Dignity</h3>
+        <p class="project-subtitle">Hand-sewn card business</p>
+        
         <div class="mockup">
           <img src="{% static 'img/portfolio-images/macbook-white.png' %}">
           <div class="artwork">
             <img src="{% static 'img/portfolio-images/woven-dignity-home-page-mockup.png' %}">
           </div>
         </div>
+        
         <ul>
-          <li><b>Platform:</b> Square Online</li>
-          <li><b>Site Type:</b> Store & Blog</li>
+          <li><b>Industry:</b> Handmade Crafts & Gifts, Non-Profit</li>
+          <!-- <li><b>Platform:</b> Square Online</li> -->
+          <li><b>Site Type:</b> E-commerce & Blog</li>
+          <li><b>Technologies Used:</b> Square Online, Custom CSS</li>
         </ul>
+
         <div class="portfolio-info">
-          <h3>Woven Dignity</h3>
-          <p>Hand-sewn gift card business</p>
-          <span class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora pariatur laudantium magnam. Veritatis quibusdam quasi dolor earum, quaerat tempora pariatur fuga ipsam repudiandae, dicta recusandae, voluptatem mollitia corporis dolorem voluptas.</span>
+          <h4><a href="https://wovendignity.com" target="_blank">Woven Dignity 🔗</a></h4>
+          <h4>About the Project</h4>
+          <p>Woven Dignity is a non-profit organization specializing in handmade cards, with the main focus being to provide refugee women with hope and empowerment through sustainable work.</p>
+
+          <h4>Client's Challenges</h4>
+          <p>The business was struggling with wordpress issues and the store not working correctly.</p>
+
+          <h4>🛠️ What We Did</h4>
           <ul>
-            <li>example</li>
-            <li>example 2</li>
-            <li>example</li>
+            <li>Migrated site from Wordpress to Square Online.</li>
+            <li>Redesigned the **UI/UX** within the Square Website Builder for a smoother shopping experience.</li>
+            <li>Implemented **SEO best practices** to improve rankings.</li>
+            <li>Consolodated the different services that were running on Wordpress into their platform of choice, Square.</li>
+            <li>ONGOING store support and minor website updates each month.</li>
           </ul>
+
+          <h4>📈 Results</h4>
+          <ul>
+            <li>Higher engagement from mobile and desktop visitors.</li>
+          </ul>
+
+          <h4>💬 Client Testimonial</h4>
+          <blockquote>"404 Studio LLC has revamped our website and online store that was previously crashing. With patience, diligence, and professionalism the team at 404 has taken care of our needs. Weekly, we continue to have updates in the shop with sales and new items and 404 Studio is eager to take care of these items. Working with our diverse team, 404 Studio strives to meet deadlines, offer advice to improve our services, and unifies team work. With competitive pricing and polite customer service, I would recommend 404 Studio to others."</blockquote>
+          
+          <!-- Mobile-Only Image Preview -->
+          <div class="mobile-mockup">
+            <img src="{% static 'img/portfolio-images/woven-dignity-home-page-mockup.png' %}" alt="Mobile Preview">
+          </div>
         </div>
       </div>
-
-      <!-- Modal -->
-      <!-- <div class="modal" id="modal-2">
-        <div class="modal-content">
-          <button class="modal-close">&times;</button>
-          <h2>Woven Dignity</h2>
-          <p>More details about the project will go here...</p>
-        </div>
-      </div> -->
     </div>
   </div>
 </section>
