@@ -549,7 +549,7 @@ section {
   position: relative;
   z-index: 1;
   display: block;
-  width: 100%; /* Ensures responsiveness */
+  /* width: 100%; Ensures responsiveness */
 }
 
 .frame::before,
@@ -577,22 +577,27 @@ section {
 
 .noise-effect {
   position: relative;
-  display: inline-block;
+  display: block; /* inline-block;*/
   overflow: hidden;
 }
 
 .noise-effect img {
+  display: block;
+  height: auto;
+  object-fit: cover;
   position: relative;
   z-index: 1;
 }
 
 .noise-effect:after {
+  content: "";
+  position: absolute;
+  inset: 0;
   animation: grain 8s steps(10) infinite;
   background-image: url(https://img.freepik.com/free-photo/white-striped-wallpaper-texture_1194-5674.jpg?t=st=1736535102~exp=1736538702~hmac=84be75980ddf951d3d3c72d2bd87ead20ee9b6dad6ecea0d7d2e259a29523c26&w=826);  content: "";
   height: 200%;
   width: 200%;
   opacity: 0.12;
-  position: absolute;
   top: -250px;
   left: -200px;
   z-index: 3;
@@ -600,16 +605,16 @@ section {
 
 /* Static Animation Keyframes */
 @keyframes grain {
-  0%, 100% { transform: translate(0, 15%); }
-  10% { transform: translate(-10%, 20%); }
-  20% { transform: translate(20%, 10%); }
-  30% { transform: translate(0%, 35%); }
-  40% { transform: translate(10%, 10%); }
-  50% { transform: translate(-10%, 20%); }
-  60% { transform: translate(20%, 35%); }
-  70% { transform: translate(10%, 10%); }
-  80% { transform: translate(-10%, 20%); }
-  90% { transform: translate(10%, 45%); }
+  0%, 100% { transform: translate(0, 10%); }
+  10% { transform: translate(-5%, 15%); }
+  20% { transform: translate(15%, 5%); }
+  30% { transform: translate(0%, 25%); }
+  40% { transform: translate(5%, 5%); }
+  50% { transform: translate(-5%, 15%); }
+  60% { transform: translate(15%, 25%); }
+  70% { transform: translate(5%, 5%); }
+  80% { transform: translate(-5%, 15%); }
+  90% { transform: translate(5%, 30%); }
 }
 
 /* @keyframes grain {
@@ -626,7 +631,7 @@ section {
 } */
 
 /* Hero Image Container */
-.hero-image-container {
+.hero-section-image-container {
   position: absolute;
   display: block;
   overflow: hidden; /* Ensure overlay doesn't exceed bounds */
@@ -634,7 +639,7 @@ section {
 }
 
 /* Hero Image */
-.hero-image {
+.hero-section-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -654,17 +659,6 @@ section {
   height: auto;
 }
 
-/* Example Positioning for Hero Images */
-.hero-image-container:nth-of-type(1) {
-  left: 0%;
-  top: 0%;
-}
-
-.hero-image-container:nth-of-type(2) {
-  right: -5%;
-  top: 28%;
-}
-
 @media (min-width:768px) and (max-width:992px) {
   .hero-first-image {
     width: 160px;
@@ -676,11 +670,11 @@ section {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .hero-image-container:nth-of-type(1) {
+  .hero-section-image-container:nth-of-type(1) {
     left: 5%;
     top: 5%;
   }
-  .hero-image-container:nth-of-type(2) {
+  .hero-section-image-container:nth-of-type(2) {
     right: 5%;
     top: 25%;
   }
@@ -711,18 +705,65 @@ section {
   margin: 0 0 2rem 0;
 }
 
-.about-section-image-container {
+/* .about-section-image-container {
+} */
+.about-section-image-frame {
   top: -50px;
 }
 /* .about-section-image {
 } */
 
+/* HERO FRAME 1 */
+.frame.hero-section-image-frame-1::before {
+  top: -0.7rem;
+  left: -0.7rem;
+}
+.frame.hero-section-image-frame-1::after {
+  bottom: -0.7rem;
+  right: -0.7rem;
+}
+
+.frame.hero-section-image-frame-1 {
+  left: 0%;
+  top: 0%;
+  position: absolute;
+}
+
+/* HERO FRAME 2 */
+.frame.hero-section-image-frame-2::before {
+  bottom: -0.7rem;
+  left: -0.7rem;
+  transform: rotate(180deg);
+}
+.frame.hero-section-image-frame-2::after {
+  top: -0.7rem;
+  right: -0.7rem;
+  transform: none;
+}
+
+.frame.hero-section-image-frame-2 {
+  right: -5%;
+  top: 28%;
+  position: absolute;
+}
+
+/* CONTACT FRAME */
+.frame:has(.contact-section-image-container)::before {
+  top: -0.7rem;
+  left: 1.4rem;
+}
+.frame:has(.contact-section-image-container)::after {
+  bottom: 4.3rem;
+  right: -0.6rem;
+}
+
+/* ABOUT FRAME */
 .frame:has(.about-section-image-container)::before {
-  top: -3.85rem;
+  top: -0.6rem;
   left: -0.6rem;
 }
 .frame:has(.about-section-image-container)::after {
-  bottom: 3rem;
+  bottom: -0.6rem;
   right: -0.6rem;
 }
 
@@ -888,7 +929,11 @@ section {
 
 /* Consultation Section */
 .consultation-section {
-  background-color: var(--main-orange);
+  /* background-color: var(--main-orange); */
+  background-image: linear-gradient(0deg, rgba(239, 176, 113, 32%), rgba(239, 176, 113, 65%)), url("../img/images/charlesdeluvio-Lks7vei-eAg-unsplash.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .consultation-text {
@@ -927,8 +972,8 @@ section {
   margin: 0 0 2rem 0;
 }
 
-.contact-image-container {
-  width: 47%;
+.contact-section-image-container {
+  /* width: 47%; */
   margin-left: 2rem;
   margin-bottom: 5rem;
 }

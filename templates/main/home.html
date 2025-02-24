@@ -10,25 +10,25 @@ design services to help your business grow." %}{% endblock meta_description %}
     <div class="row align-items-center">
       <div class="col-12 hero-text">
         <h1>{% translate "YOUR DIGITAL" %}</h1>
-        <!-- <div class="frame"> -->
-        <div class="hero-image-container noise-effect">
-          <img class="hero-image hero-first-image"
-            src="https://images.squarespace-cdn.com/content/v1/6718b30b131cc651070af13a/1730071929301-KELQVPTR4W4LENS4UC3U/unsplash-image-uq5RMAZdZG4.jpg">
+        <div class="frame hero-section-image-frame-1">
+          <div class="hero-section-image-container-1 noise-effect">
+            <img class="hero-section-image hero-first-image"
+              src="https://images.squarespace-cdn.com/content/v1/6718b30b131cc651070af13a/1730071929301-KELQVPTR4W4LENS4UC3U/unsplash-image-uq5RMAZdZG4.jpg">
+          </div>
         </div>
-        <!-- </div> -->
         <h1>{% translate "FUTURE STARTS" %}</h1>
-        <!-- <div class="frame"> -->
-        <div class="hero-image-container noise-effect">
-          <img class="hero-image hero-second-image"
+        <div class="frame hero-section-image-frame-2">
+        <div class="hero-section-image-container-2 noise-effect">
+          <img class="hero-section-image hero-second-image"
             src="https://images.squarespace-cdn.com/content/v1/6718b30b131cc651070af13a/1730071862007-KQ3CQZDTYHOO8HUMAOTG/unsplash-image-dC6Pb2JdAqs.jpg">
         </div>
-        <!-- </div> -->
+        </div>
         <h1>{% translate "HERE" %}</h1>
         <p class="hero-summary">
           {% translate "We help businesses transform their digital presence with custom solutions that drive real growth." %}
         </p>
         <div class="buttons hero-buttons">
-          <button onclick="window.open('https://calendly.com/kaleblub/30min', '_blank')" type="button"
+          <button onclick="window.open('{{ 30_min }}', '_blank')" type="button"
             class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
             {% translate "Get a Free Consultation" %}
           </button>
@@ -72,14 +72,14 @@ design services to help your business grow." %}{% endblock meta_description %}
           your business. With years of experience in the industry, we are passionate about bringing your vision to life
           through cutting-edge design, development, and ongoing support.</p>
         <button
-          onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-web-development-package-basic', '_blank')"
+          onclick="window.open('{{ 30_min }}, '_blank')"
           type="button"
           class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
-          {% translate "View Our Services" %}
+          {% translate "Setup a meeting" %}
         </button>
       </div>
       <div class="col-12 col-md-6">
-        <div class="frame">
+        <div class="frame about-section-image-frame">
           <div class="about-section-image-container noise-effect">
             <img src="{% static 'img/images/home-about-us-partnership-image.jpg' %}"
               class="about-section-image img-fluid w-100" alt="About Us Image">
@@ -317,15 +317,15 @@ design services to help your business grow." %}{% endblock meta_description %}
 <section class="consultation-section py-5">
   <div class="container-fluid d-flex justify-content-center align-items-center">
     <!-- <div class="frame"> -->
-      <div class="consultation-image-container noise-effect">
-        <img src="{% static '/img/images/consultation-image.jpg' %}" alt="Consultation">
-      </div>
+      <!-- <div class="consultation-image-container noise-effect">
+        <img src="{% static '/img/images/consultation-section-full-image.jpg' %}" alt="Consultation">
+      </div> -->
     <!-- </div> -->
     <div class="consultation-text">
       <h2>{% translate "Need Help Choosing?" %}</h2>
       <p>{% translate "Schedule a free consultation now, and we will figure out which package and/or plan is right for your situation!" %}
       </p>
-      <button onclick="window.open('https://calendly.com/kaleblub/30min', '_blank')" type="button"
+      <button onclick="window.open('{{ 30_min }}', '_blank')" type="button"
         class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
         {% translate "Schedule Consultation" %}
       </button>
@@ -367,8 +367,10 @@ design services to help your business grow." %}{% endblock meta_description %}
         </form>
       </div>
       <!-- Image Column -->
-      <div class="contact-image-container noise-effect">
-        <img src="{% static '/img/images/contact-image.jpg' %}" alt="Contact Us" class="img-fluid noise-effect">
+      <div class="frame contact-section-image-frame">
+        <div class="contact-section-image-container noise-effect">
+          <img src="{% static '/img/images/contact-image.jpg' %}" alt="Contact Us" class="img-fluid noise-effect">
+        </div>
       </div>
     </div>
   </div>
