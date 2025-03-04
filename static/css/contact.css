@@ -1,0 +1,14 @@
+.hero-section {
+    padding: 4rem 0 0 0;
+    min-height: 0;
+}
+
+.contact-banner {
+    background-color: var(--contrast-blue);
+    /* padding-top: 6rem; */
+}
+
+.contact-banner > .row > .col {
+    padding-top: 6rem;
+    border: 1px solid white;
+}

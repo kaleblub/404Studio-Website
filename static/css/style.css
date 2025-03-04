@@ -1005,6 +1005,96 @@ section {
   flex-wrap: nowrap;
 }
 
+.floating-label {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.floating-label input,
+.floating-label textarea {
+  width: 100%;
+  padding: 0.5rem 0;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  color: white;
+  font-size: 1rem;
+  border-radius: 0;
+  caret-color: white;
+  transition: border-color 0.4s ease;
+}
+
+.floating-label input:focus,
+.floating-label textarea:focus {
+  outline: none;
+  border-bottom: 3px solid var(--main-orange);
+  background-color: transparent;
+}
+
+.floating-label label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #ccc;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+.floating-label input:focus + label,
+.floating-label textarea:focus + label,
+.floating-label input:not(:placeholder-shown) + label,
+.floating-label textarea:not(:placeholder-shown) + label {
+  top: 0;
+  color: var(--main-orange);
+}
+
+/* Border animation */
+.floating-label input:focus::after,
+.floating-label textarea:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: orange;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+  z-index: 0;
+}
+
+.floating-label input::after,
+.floating-label textarea::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: orange;
+  transform-origin: left;
+  transition: width 0.4s ease;
+  z-index: 0;
+}
+
+input,
+textarea {
+  background: none;
+  caret-color: white;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
 /* @media (min-width: 768px) {
   .contact-section {
     padding: 150px;

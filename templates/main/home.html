@@ -344,25 +344,25 @@ design services to help your business grow." %}{% endblock meta_description %}
       <!-- Form Column -->
       <div class="col-md-6">
         <form class="contact-form">
-          <div class="mb-3">
-            <label>{% translate "First Name" %}</label>
-            <input type="text" class="form-control">
+          <div class="mb-4 floating-label">
+              <input type="text" class="form-control" placeholder=" " required>
+              <label>{% translate "First Name" %}</label>
           </div>
-          <div class="mb-3">
+          <div class="mb-4 floating-label">
+            <input type="text" class="form-control" placeholder=" " required>
             <label>{% translate "Last Name" %}</label>
-            <input type="text" class="form-control">
           </div>
-          <div class="mb-3">
+          <div class="mb-4 floating-label">
+            <input type="email" class="form-control" placeholder=" " required>
             <label>{% translate "Email" %}</label>
-            <input type="email" class="form-control">
           </div>
-          <div class="mb-3">
+          <div class="mb-4 floating-label">
+            <input type="text" class="form-control" placeholder=" " required>
             <label>{% translate "Subject" %}</label>
-            <input type="text" class="form-control">
           </div>
-          <div class="mb-3">
+          <div class="mb-4 floating-label">
+            <textarea class="form-control" placeholder=" " required></textarea>
             <label>{% translate "Message" %}</label>
-            <textarea class="form-control"></textarea>
           </div>
           <button
             class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">{% translate "Submit" %}</button>

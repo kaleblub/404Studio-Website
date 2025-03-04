@@ -4,42 +4,86 @@
 {% get_current_language as LANGUAGE_CODE %}
 {% block title %}Contact Us | 404 Studio{% endblock title %}
 {% block meta_description %}Get in touch with us for web design, development, and hosting inquiries. We're here to help!{% endblock meta_description %}
+{% block extra_head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
+{% endblock extra_head %}
 {% block content %}
-<section class="contact-section py-5 text-white">
-    <div class="container-fluid">
-        <h2>Still have questions? Let's Chat.</h2>
-        <div class="row align-items-center">
-            <!-- Form Column -->
-            <div class="col-md-6">
-                <form class="contact-form">
-                    <div class="mb-3">
-                        <label>First Name</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label>Last Name</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label>Email</label>
-                        <input type="email" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label>Subject</label>
-                        <input type="text" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label>Message</label>
-                        <textarea class="form-control"></textarea>
-                    </div>
-                    <button class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">Submit</button>
-                </form>
+<section class="hero-section text-center text-white">
+    <div class="container position-relative">
+      <div class="row align-items-center">
+        <div class="col-12 hero-text">
+            <h1>GET IN TOUCH</h1>
+            <p class="hero-summary">
+            {% translate "We help businesses transform their digital presence with custom solutions that drive real growth." %}
+          </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-banner">
+        <div class="row">
+            <div class="col">
+                <h3>Whatsapp Us Today</h3>
+                <p>+123456789</p>
+                <a>Send Message Now</a>
             </div>
-            <!-- Image Column -->
-            <div class="col-md-6 noise-effect">
-                <img src="{% static '/img/images/contact-image.jpg' %}" alt="Contact Us" class="img-fluid noise-effect">
+            <div class="col">
+                <h3>Location</h3>
+                <p>We work with you remotely. Have access to the internet, then you have access to 404 Studio.</p>
+            </div>
+            <div class="col">
+                <h3>Email Us</h3>
+                <p></p>
+            </div>
+            <div class="col">
+                <h3>Hours of Availability</h3>
+                <p>Sun - Thu</p>
+                <p>10:00 - 22:00 EST</p>
             </div>
         </div>
     </div>
 </section>
+<section class="contact-section py-5 text-white">
+    <div class="container-fluid">
+      <h2>{% translate "Send a message" %}</h2>
+      <div class="row align-items-center">
+        <!-- Form Column -->
+        <div class="col-md-6">
+          <form class="contact-form">
+            {% csrf %}
+            <div class="mb-4 floating-label">
+                <input type="text" class="form-control" placeholder=" " required>
+                <label>{% translate "First Name" %}</label>
+            </div>
+            <div class="mb-4 floating-label">
+              <input type="text" class="form-control" placeholder=" " required>
+              <label>{% translate "Last Name" %}</label>
+            </div>
+            <div class="mb-4 floating-label">
+              <input type="email" class="form-control" placeholder=" " required>
+              <label>{% translate "Email" %}</label>
+            </div>
+            <div class="mb-4 floating-label">
+              <input type="text" class="form-control" placeholder=" " required>
+              <label>{% translate "Subject" %}</label>
+            </div>
+            <div class="mb-4 floating-label">
+              <textarea class="form-control" placeholder=" " required></textarea>
+              <label>{% translate "Message" %}</label>
+            </div>
+            <button
+              class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">{% translate "Submit" %}</button>
+          </form>
+        </div>
+        <!-- Image Column -->
+        <div class="col-12 col-md-6">
+        <div class="frame contact-section-image-frame">
+          <div class="contact-section-image-container noise-effect">
+            <img src="{% static '/img/images/contact-image.jpg' %}" alt="Contact Us" class="img-fluid noise-effect">
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
 {% endblock content %}
