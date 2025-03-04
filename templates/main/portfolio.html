@@ -2,8 +2,8 @@
 {% load static %}
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
-{% block title %}Our Work | Portfolio of 404 Studio{% endblock title %}
-{% block meta_description %}See our portfolio of innovative web designs and development projects. Discover how we've helped businesses like yours achieve success online.{% endblock meta_description %}
+{% block title %}{% translate "Our Work | Portfolio of 404 Studio" %}{% endblock title %}
+{% block meta_description %}{% translate "See our portfolio of innovative web designs and development projects. Discover how we've helped businesses like yours achieve success online." %}{% endblock meta_description %}
 {% block extra_head %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/portfolio.css' %}">
 {% endblock extra_head %}
@@ -11,8 +11,8 @@
 {% block content %}
 <section class="portfolio-section">
   <div class="portfolio-container">
-    <h1>404 Studio Project Showcase</h1>
-    <p>Below is a list of our top projects for clients of various purposes and goals.</p>
+    <h1>{% translate "404 Studio Project Showcase" %}</h1>
+    <p>{% translate "Below is a list of our top projects for clients of various purposes and goals." %}</p>
     </br>
     </br>
 
@@ -20,9 +20,9 @@
       
       <!-- Portfolio Item 1 -->
       <div class="portfolio-item text-white">
-        <button class="close-btn">Close</button>
+        <button class="close-btn">{% translate "Close" %}</button>
         <h2 class="project-title">ILCA Bejaia</h2>
-        <p class="project-subtitle">International Learning Center in Algeria</p>
+        <p class="project-subtitle">{% translate "International Learning Center in Algeria" %}</p>
         
         <div class="mockup">
           <img src="{% static 'img/portfolio-images/macbook-white.png' %}">
@@ -32,33 +32,33 @@
         </div>
         
         <ul>
-          <li><b>Industry:</b> Education</li>
+          <li><b>{% translate "Industry" %}:</b> {% translate "Education" %}</li>
           <!-- <li><b>Platform:</b> </li> -->
-          <li><b>Site Type:</b> Education, Information, Student Dashboard</li>
-          <li><b>Technologies Used:</b> Django, Python, HTML, CSS, JavaScript</li>
+          <li><b>{% translate "Site Type" %}:</b> {% translate "Education, Information, Student Dashboard" %}</li>
+          <li><b>{% translate "Technologies Used" %}:</b> {% translate "Django, Python, HTML, CSS, JavaScript" %}</li>
         </ul>
-        <button class="details-btn">View Project Details</button>
+        <button class="details-btn">{% translate "View Project Details" %}</button>
 
         <div class="portfolio-info">
           <h2><a href="https://ilcabejaia.com" target="_blank">ILCA Bejaia 🔗</a></h2>
-          <h4>About the Project</h4>
-          <p>ILCA Bejaia is an International Learning Center in Algeria offering language courses and learning resources.</p>
+          <h4>{% translate "About the Project" %}</h4>
+          <p>{% translate "ILCA Bejaia is an International Learning Center in Algeria offering language courses and learning resources." %}</p>
 
-          <h4>🚀 Client's Challenges</h4>
-          <p>The client opened the learning center and had no online presence or central student/teacher platform.</p>
+          <h4>🚀 {% translate "Client's Challenges" %}</h4>
+          <p>{% translate "The client opened the learning center and had no online presence or central student/teacher platform." %}</p>
 
-          <h4>🛠️ What We Did</h4>
+          <h4>🛠️ {% translate "What We Did" %}</h4>
           <ul>
-            <li>Designed and Developed the necessary pages for the center.</li>
-            <li>Created a seamless **course registration system**.</li>
-            <li>Implimented a Student Management System backend.</li>
-            <li>Optimized UI/UX for mobile responsiveness.</li>
+            <li>{% translate "Designed and Developed the necessary pages for the center." %}</li>
+            <li>{% translate "Created a seamless **course registration system**." %}</li>
+            <li>{% translate "Implimented a Student Management System backend." %}</li>
+            <li>{% translate "Optimized UI/UX for mobile responsiveness." %}</li>
           </ul>
 
-          <h4>📈 Results</h4>
+          <h4>📈 {% translate "Results" %}</h4>
           <ul>
-            <li>💡 **50% increase** in online student registrations.</li>
-            <li>📊 Improved website speed and SEO ranking.</li>
+            <li>💡 {% translate "**50% increase** in online student registrations." %}</li>
+            <li>📊 {% translate "Improved website speed and SEO ranking." %}</li>
           </ul>
         
           <!-- Mobile-Only Image Preview -->
@@ -70,9 +70,9 @@
 
       <!-- Portfolio Item 2: Woven Dignity -->
       <div class="portfolio-item text-white">
-        <button class="close-btn">Close</button>
+        <button class="close-btn">{% translate "Close" %}</button>
         <h2 class="project-title">Woven Dignity</h2>
-        <p class="project-subtitle">Hand-sewn card business</p>
+        <p class="project-subtitle">{% translate "Hand-sewn card business" %}</p>
         
         <div class="mockup">
           <img src="{% static 'img/portfolio-images/macbook-white.png' %}">
@@ -82,37 +82,37 @@
         </div>
         
         <ul>
-          <li><b>Industry:</b> Handmade Crafts & Gifts, Non-Profit</li>
+          <li><b>{% translate "Industry" %}:</b> {% translate "Handmade Crafts & Gifts, Non-Profit" %}</li>
           <!-- <li><b>Platform:</b> Square Online</li> -->
-          <li><b>Site Type:</b> E-commerce & Blog</li>
-          <li><b>Technologies Used:</b> Square Online, Custom CSS</li>
+          <li><b>{% translate "Site Type" %}:</b> {% translate "E-commerce & Blog" %}</li>
+          <li><b>{% translate "Technologies Used" %}:</b> {% translate "Square Online, Custom CSS" %}</li>
         </ul>
-        <button class="details-btn">View Project Details</button>
+        <button class="details-btn">{% translate "View Project Details" %}</button>
 
         <div class="portfolio-info">
           <h2><a href="https://wovendignity.com" target="_blank">Woven Dignity 🔗</a></h2>
-          <h4>About the Project</h4>
-          <p>Woven Dignity is a non-profit organization specializing in handmade cards, with the main focus being to provide refugee women with hope and empowerment through sustainable work.</p>
+          <h4>{% translate "About the Project" %}</h4>
+          <p>{% translate "Woven Dignity is a non-profit organization specializing in handmade cards, with the main focus being to provide refugee women with hope and empowerment through sustainable work." %}</p>
 
-          <h4>Client's Challenges</h4>
-          <p>The business was struggling with wordpress issues and the store not working correctly.</p>
+          <h4>{% translate "Client's Challenges" %}</h4>
+          <p>{% translate "The business was struggling with wordpress issues and the store not working correctly." %}</p>
 
-          <h4>🛠️ What We Did</h4>
+          <h4>🛠️ {% translate "What We Did" %}</h4>
           <ul>
-            <li>Migrated site from Wordpress to Square Online.</li>
-            <li>Redesigned the **UI/UX** within the Square Website Builder for a smoother shopping experience.</li>
-            <li>Implemented **SEO best practices** to improve rankings.</li>
-            <li>Consolodated the different services that were running on Wordpress into their platform of choice, Square.</li>
-            <li>ONGOING store support and minor website updates each month.</li>
+            <li>{% translate "Migrated site from Wordpress to Square Online." %}</li>
+            <li>{% translate "Redesigned the **UI/UX** within the Square Website Builder for a smoother shopping experience." %}</li>
+            <li>{% translate "Implemented **SEO best practices** to improve rankings." %}</li>
+            <li>{% translate "Consolodated the different services that were running on Wordpress into their platform of choice, Square." %}</li>
+            <li>{% translate "ONGOING store support and minor website updates each month." %}</li>
           </ul>
 
-          <h4>📈 Results</h4>
+          <h4>📈 {% translate "Results" %}</h4>
           <ul>
-            <li>Higher engagement from mobile and desktop visitors.</li>
+            <li>{% translate "Higher engagement from mobile and desktop visitors." %}</li>
           </ul>
 
-          <h4>💬 Client Testimonial</h4>
-          <blockquote>"404 Studio LLC has revamped our website and online store that was previously crashing. With patience, diligence, and professionalism the team at 404 has taken care of our needs. Weekly, we continue to have updates in the shop with sales and new items and 404 Studio is eager to take care of these items. Working with our diverse team, 404 Studio strives to meet deadlines, offer advice to improve our services, and unifies team work. With competitive pricing and polite customer service, I would recommend 404 Studio to others."</blockquote>
+          <h4>💬 {% translate "Client Testimonial" %}</h4>
+          <blockquote>{% translate "\"404 Studio LLC has revamped our website and online store that was previously crashing. With patience, diligence, and professionalism the team at 404 has taken care of our needs. Weekly, we continue to have updates in the shop with sales and new items and 404 Studio is eager to take care of these items. Working with our diverse team, 404 Studio strives to meet deadlines, offer advice to improve our services, and unifies team work. With competitive pricing and polite customer service, I would recommend 404 Studio to others.\"" %}</blockquote>
           
           <!-- Mobile-Only Image Preview -->
           <div class="mobile-mockup">

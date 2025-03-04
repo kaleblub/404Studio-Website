@@ -8,86 +8,86 @@
   <!-- Web Hosting Plans Section -->
   <section class="hosting-section py-5">
     <div class="container text-center text-white">
-      <h2 class="hosting-title">{% translate 'Web Hosting Plans' %}</h2>
+      <h2 class="hosting-title">{% translate "Web Hosting Plans" %}</h2>
       <div class="row mx-0">
         <div class="col-sm-12 col-md-4 mb-4">
           <div class="hosting-card">
-            <h4>Basic Hosting</h4>
-            <p class="cost-subtitle">$20/month</p>
-            <br/>
-            <p>Service Includes:</p>
+            <h4>{% translate "Basic Hosting" %}</h4>
+            <p class="cost-subtitle">{% translate "$20/month" %}</p>
+            <br />
+            <p>{% translate "Service Includes:" %}</p>
             <ul>
-              <li>2GB Storage </li>
-              <li>Basic SSL certificate</li>
-              <li>10GB monthly bandwidth</li>
-              <li>1 email account</li>
-              <li>99.9% uptime guarantee</li>
+              <li>{% translate "2GB Storage" %}</li>
+              <li>{% translate "Basic SSL certificate" %}</li>
+              <li>{% translate "10GB monthly bandwidth" %}</li>
+              <li>{% translate "1 email account" %}</li>
+              <li>{% translate "99.9% uptime guarantee" %}</li>
             </ul>
-            <br/>
-            <p>Ideal For:</p>
+            <br />
+            <p>{% translate "Ideal For:" %}</p>
             <ul>
-              <li>Simple websites or blogs that don't need a lot of storage or bandwidth</li>
+              <li>{% translate "Simple websites or blogs that don't need a lot of storage or bandwidth" %}</li>
             </ul>
-            <button 
-              onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-hosting-plan-basic', '_blank')" 
-              type="button" 
+            <button onclick="window.open('{{ host_basic }}', '_blank')"
+              type="button"
               class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
-              Request this Plan
+              {% translate "Request this Plan" %}
             </button>
           </div>
         </div>
         <div class="col-sm-12 col-md-4 mb-4">
           <div class="hosting-card">
-            <h4>Standard Hosting</h4>
-            <p class="cost-subtitle">$40/month</p>
-            <br/>
-            <p>Service Includes:</p>
+            <h4>{% translate "Standard Hosting" %}</h4>
+            <p class="cost-subtitle">{% translate "$40/month" %}</p>
+            <br />
+            <p>{% translate "Service Includes:" %}</p>
             <ul>
-              <li>10GB storage</li>
-              <li>Free SSL certificate</li>
-              <li>99.9% uptime guarantee</li>
-              <li>50GB monthly bandwidth</li>
-              <li>3 email accounts</li>
-              <li>Priority support</li>
+              <li>{% translate "10GB storage" %}</li>
+              <li>{% translate "Free SSL certificate" %}</li>
+              <li>{% translate "99.9% uptime guarantee" %}</li>
+              <li>{% translate "50GB monthly bandwidth" %}</li>
+              <li>{% translate "3 email accounts" %}</li>
+              <li>{% translate "Priority support" %}</li>
             </ul>
-            <br/>
-            <p>Ideal For:</p>
+            <br />
+            <p>{% translate "Ideal For:" %}</p>
             <ul>
-              <li>Small business websites or blogs with moderate traffic and extra features</li>
+              <li>{% translate "Small business websites or blogs with moderate traffic and extra features" %}</li>
             </ul>
-            <button 
-              onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-hosting-plan-standard', '_blank')" 
-              type="button" 
+            <button
+              onclick="window.open('{{ host_standard }}', '_blank')"
+              type="button"
               class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
-              Request this Plan
+              {% translate "Request this Plan" %}
             </button>
           </div>
         </div>
         <div class="col-sm-12 col-md-4 mb-4">
           <div class="hosting-card">
-            <h4>Premium Hosting</h4>
-            <p class="cost-subtitle">$80/month</p>
-            <br/>
-            <p>Service Includes:</p>
+            <h4>{% translate "Premium Hosting" %}</h4>
+            <p class="cost-subtitle">{% translate "$80/month" %}</p>
+            <br />
+            <p>{% translate "Service Includes:" %}</p>
             <ul>
-              <li>30GB storage</li>
-              <li>Premium SSL certificate</li>
-              <li>Unlimited bandwidth</li>
-              <li>10+ email accounts</li>
-              <li>Nightly backups</li>
-              <li>Advanced security features</li>
-              <li>Priority support with custom setup assistance</li>
+              <li>{% translate "30GB storage" %}</li>
+              <li>{% translate "Premium SSL certificate" %}</li>
+              <li>{% translate "Unlimited bandwidth" %}</li>
+              <li>{% translate "10+ email accounts" %}</li>
+              <li>{% translate "Nightly backups" %}</li>
+              <li>{% translate "Advanced security features" %}</li>
+              <li>{% translate "Priority support with custom setup assistance" %}</li>
             </ul>
-            <br/>
-            <p>Ideal For:</p>
+            <br />
+            <p>{% translate "Ideal For:" %}</p>
             <ul>
-              <li>High-traffic sites or businesses with custom needs that require a high-performance hosting environment</li>
+              <li>{% translate "High-traffic sites or businesses with custom needs that require a high-performance hosting environment" %}
+              </li>
             </ul>
-            <button 
-              onclick="window.open('https://calendly.com/kaleblub/meeting-to-discuss-hosting-plan-premium', '_blank')" 
-              type="button" 
+            <button
+              onclick="window.open('{{ host_premium }}', '_blank')"
+              type="button"
               class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
-              Request this Plan
+              {% translate "Request this Plan" %}
             </button>
           </div>
         </div>

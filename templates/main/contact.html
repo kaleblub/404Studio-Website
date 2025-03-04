@@ -2,8 +2,8 @@
 {% load static %}
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
-{% block title %}Contact Us | 404 Studio{% endblock title %}
-{% block meta_description %}Get in touch with us for web design, development, and hosting inquiries. We're here to help!{% endblock meta_description %}
+{% block title %}{% translate "Contact Us | 404 Studio" %}{% endblock title %}
+{% block meta_description %}{% translate "Get in touch with us for web design, development, and hosting inquiries. We're here to help!" %}{% endblock meta_description %}
 {% block extra_head %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/contact.css' %}">
 {% endblock extra_head %}
@@ -12,7 +12,7 @@
     <div class="container position-relative">
       <div class="row align-items-center">
         <div class="col-12 hero-text">
-            <h1>GET IN TOUCH</h1>
+            <h1>{% translate "GET IN TOUCH" %}</h1>
             <p class="hero-summary">
             {% translate "We help businesses transform their digital presence with custom solutions that drive real growth." %}
           </p>
@@ -23,21 +23,21 @@
     <div class="contact-banner">
         <div class="row">
             <div class="col">
-                <h3>Whatsapp Us Today</h3>
+                <h3>{% translate "Whatsapp Us Today" %}</h3>
                 <p>+123456789</p>
-                <a>Send Message Now</a>
+                <a>{% translate "Send Message Now" %}</a>
             </div>
             <div class="col">
-                <h3>Location</h3>
-                <p>We work with you remotely. Have access to the internet, then you have access to 404 Studio.</p>
+                <h3>{% translate "Location" %}</h3>
+                <p>{% translate "We work with you remotely. Have access to the internet, then you have access to 404 Studio." %}</p>
             </div>
             <div class="col">
-                <h3>Email Us</h3>
+                <h3>{% translate "Email Us" %}</h3>
                 <p></p>
             </div>
             <div class="col">
-                <h3>Hours of Availability</h3>
-                <p>Sun - Thu</p>
+                <h3>{% translate "Hours of Availability" %}</h3>
+                <p>{% translate "Sun - Thu" %}</p>
                 <p>10:00 - 22:00 EST</p>
             </div>
         </div>
@@ -79,7 +79,7 @@
         <div class="col-12 col-md-6">
         <div class="frame contact-section-image-frame">
           <div class="contact-section-image-container noise-effect">
-            <img src="{% static '/img/images/contact-image.jpg' %}" alt="Contact Us" class="img-fluid noise-effect">
+            <img src="{% static '/img/images/contact-image.jpg' %}" alt="{% translate 'Contact Us' %}" class="img-fluid noise-effect">
           </div>
         </div>
       </div>
