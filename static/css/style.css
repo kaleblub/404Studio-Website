@@ -146,7 +146,7 @@ p {
 
 @media (max-width: 768px) {
   h1 {
-    font-size: 3.2rem;
+    font-size: 3.75rem;
   }
 }
 
@@ -725,8 +725,24 @@ section {
 
 .frame.hero-section-image-frame-1 {
   left: 0%;
-  top: 0%;
+  top: -5%;
   position: absolute;
+}
+
+@media (max-width: 768px) {
+  .frame.hero-section-image-frame-1 {
+    top: 0%;
+    margin-left: 0.75rem;
+    z-index: 0;
+  }
+  .frame.hero-section-image-frame-2 {
+    margin-right: 0.75rem;
+    z-index: 0;
+  }
+
+  .about-section-image-frame {
+    top: 0;
+  }
 }
 
 /* HERO FRAME 2 */
@@ -742,7 +758,7 @@ section {
 }
 
 .frame.hero-section-image-frame-2 {
-  right: -5%;
+  right: 0%;
   top: 28%;
   position: absolute;
 }
@@ -750,7 +766,7 @@ section {
 /* CONTACT FRAME */
 .frame:has(.contact-section-image-container)::before {
   top: -0.7rem;
-  left: 1.4rem;
+  left: -0.6rem;
 }
 .frame:has(.contact-section-image-container)::after {
   bottom: 4.3rem;
@@ -774,15 +790,12 @@ section {
   .about-section-image-container {
     top: 60px;
   }
-  .about-section-image {
-    margin-bottom: 2rem;
-  }
   .frame:has(.about-section-image-container)::before {
     top: 3rem;
     left: -0.7rem;
   }
   .frame:has(.about-section-image-container)::after {
-    bottom: -2rem;
+    bottom: -4.4rem;
     right: -0.65rem;
   }
 
@@ -930,8 +943,8 @@ section {
 /* Consultation Section */
 .consultation-section {
   /* background-color: var(--main-orange); */
-  background-image: linear-gradient(0deg, rgba(239, 176, 113, 32%), rgba(239, 176, 113, 65%)), url("../img/images/charlesdeluvio-Lks7vei-eAg-unsplash.jpg");
-  background-position: center;
+  background-image: linear-gradient(0deg, rgba(239, 176, 113, 32%), rgba(239, 176, 113, 65%)), url("../img/images/consultation-section-full-image.jpg");
+  background-position: center 20%;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -962,7 +975,7 @@ section {
 /* Contact Section */
 .contact-section {
   background-color: var(--contrast-blue);
-  padding: 20px;
+  padding: 6rem;
 }
 .contact-section h2, .contact-form label {
   color: var(--main-orange);
@@ -973,8 +986,7 @@ section {
 }
 
 .contact-section-image-container {
-  /* width: 47%; */
-  margin-left: 2rem;
+  width: 100%;
   margin-bottom: 5rem;
 }
 
@@ -982,11 +994,11 @@ section {
   flex-wrap: nowrap;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .contact-section {
     padding: 150px;
   }
-}
+} */
 
 @media (max-width: 768px) {
   .contact-section .container-fluid .row {
@@ -994,6 +1006,11 @@ section {
   }
   .contact-image-container {
     width: 90%;
+  }
+}
+@media (max-width: 992px) {
+  .contact-section {
+    padding: 20px;
   }
 }
 
