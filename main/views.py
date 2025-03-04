@@ -1,9 +1,15 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.urls import reverse
+
+from django.utils import translation
 
 def home(request):
     # Define US and Ecuador prices
     us_price = 100
     ec_price = 80
+    language = request.COOKIES.get('django_language', 'en')
+    translation.activate(language)
+    print(translation.get_language())
 
     # Select price based on the location set in the session
     # if request.session.get('country') == 'US':
@@ -31,3 +37,13 @@ def hosting_plans(request):
 
 def links(request):
     return render(request, 'main/links-page.html')
+
+def set_language(request, language):
+    print(f"Language selected: {language}")
+
+    redirect_url = reverse('home')
+	# print(f"Redirect to: {response.url}")
+
+    response = redirect(redirect_url)
+    response.set_cookie('django_language', language)
+    return response

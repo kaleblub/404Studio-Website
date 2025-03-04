@@ -1,5 +1,7 @@
 {% extends "main/base.html" %}
 {% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 {% block title %}{% translate 'Reliable Web Hosting Packages | 404 Studio' %}{% endblock title %}
 {% block meta_description %}{% translate 'Discover our secure and scalable hosting packages. From small businesses to growing enterprises, 404 Studio has the perfect hosting solution for you.' %}{% endblock meta_description %}
 {% block content %}

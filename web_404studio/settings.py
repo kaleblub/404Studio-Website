@@ -27,6 +27,8 @@ SECRET_KEY = 'django-insecure-ap9$h39dl@*+eo3$_00^e9ai_462ae7e+*dd6%b1#w754*4w4=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+LANGUAGE_COOKIE_NAME = 'django_language'
+LANGUAGE_COOKIE_PATH = '/'
 if DEBUG:
     ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
     SECURE_SSL_REDIRECT = False
@@ -57,8 +59,8 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.locale.LocaleMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'web_404studio.middleware.LocationBasedLanguageMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',

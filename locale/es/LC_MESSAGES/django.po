@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-01-30 04:09-0500\n"
+"POT-Creation-Date: 2025-03-04 05:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1517,368 +1517,463 @@ msgstr ""
 msgid "Connect, get help, or contribute"
 msgstr ""
 
-#: templates/main/base.html:80 templates/main/base.html:137
+#: templates/main/base.html:83 templates/main/base.html:157
 msgid "HOME"
 msgstr "INICIO"
 
-#: templates/main/base.html:83 templates/main/base.html:140
+#: templates/main/base.html:86 templates/main/base.html:160
 msgid "CONTACT"
 msgstr "CONTACTO"
 
-#: templates/main/base.html:86 templates/main/base.html:143
+#: templates/main/base.html:89 templates/main/base.html:163
 msgid "DEVELOPMENT"
 msgstr "DESARROLLO"
 
-#: templates/main/base.html:89 templates/main/base.html:146
+#: templates/main/base.html:92 templates/main/base.html:166
 msgid "HOSTING"
 msgstr "HOSPEDAJE"
 
-#: templates/main/base.html:92 templates/main/base.html:149
+#: templates/main/base.html:95 templates/main/base.html:169
 msgid "PORTFOLIO"
 msgstr "PORTAFOLIO"
 
-#: templates/main/home.html:13
+#: templates/main/development_packages.html:4
+#, fuzzy
+#| msgid "Website Development Packages"
+msgid "Web Development Packages | 404 Studio"
+msgstr "Paquetes de Desarrollo de Sitios Web"
+
+#: templates/main/home.html:4
+msgid "404 Studio | Professional Web Development and Hosting Services"
+msgstr ""
+
+#: templates/main/home.html:12
 msgid "YOUR DIGITAL"
 msgstr "TU FUTURO"
 
-#: templates/main/home.html:20
+#: templates/main/home.html:19
 msgid "FUTURE STARTS"
 msgstr "DIGITAL EMPIEZA"
 
-#: templates/main/home.html:27
+#: templates/main/home.html:26
 msgid "HERE"
 msgstr "AQUI"
 
-#: templates/main/home.html:29
-msgid "We help businesses transform their digital presence with custom solutions that drive real growth."
-msgstr "Ayudamos a las empresas a transformar su presencia digital con soluciones personalizadas que impulsan un verdadero crecimiento."
+#: templates/main/home.html:28
+msgid ""
+"We help businesses transform their digital presence with custom solutions "
+"that drive real growth."
+msgstr ""
+"Ayudamos a las empresas a transformar su presencia digital con soluciones "
+"personalizadas que impulsan un verdadero crecimiento."
 
-#: templates/main/home.html:34
+#: templates/main/home.html:33
 msgid "Get a Free Consultation"
 msgstr "Obtén una Consulta Gratuita"
 
-#: templates/main/home.html:38
+#: templates/main/home.html:37
 msgid "View Our Portfolio"
 msgstr "Ver Nuestro Portafolio"
 
-#: templates/main/home.html:47 templates/main/home.html:53
+#: templates/main/home.html:46 templates/main/home.html:54
 msgid "Web Development"
 msgstr "Desarrollo Web"
 
-#: templates/main/home.html:48 templates/main/home.html:54
+#: templates/main/home.html:47 templates/main/home.html:55
 msgid "SEO Improvement"
 msgstr "Mejora de SEO"
 
-#: templates/main/home.html:49 templates/main/home.html:55
-msgid "Graphic Design"
-msgstr "Diseño Gráfico"
+#: templates/main/home.html:48 templates/main/home.html:56
+#, fuzzy
+#| msgid "SEO Improvement"
+msgid "Front-End Improvement"
+msgstr "Mejora de SEO"
 
-#: templates/main/home.html:50 templates/main/home.html:56
+#: templates/main/home.html:49 templates/main/home.html:57
 msgid "Website Hosting"
 msgstr "Alojamiento Web"
 
-#: templates/main/home.html:51 templates/main/home.html:57
+#: templates/main/home.html:50 templates/main/home.html:58
 msgid "Website Migration"
 msgstr "Migración de Sitio Web"
 
-#: templates/main/home.html:66
+#: templates/main/home.html:51 templates/main/home.html:59
+#, fuzzy
+#| msgid "Website Migration"
+msgid "Website Maintanence"
+msgstr "Migración de Sitio Web"
+
+#: templates/main/home.html:68
 msgid "Your Partner in Web Development and Digital Solutions"
 msgstr "Tu Socio en Desarrollo Web y Soluciones Digitales"
 
-#: templates/main/home.html:76
-msgid "View Our Services"
-msgstr "Ver Nuestros Servicios"
+#: templates/main/home.html:78
+msgid "Setup a meeting"
+msgstr ""
 
-#: templates/main/home.html:94
+#: templates/main/home.html:96
 msgid "Client Reviews"
 msgstr "Opiniones de Clientes"
 
-#: templates/main/home.html:104
+#: templates/main/home.html:106
 msgid "Founder of"
 msgstr "Fundador de"
 
-#: templates/main/home.html:135
+#: templates/main/home.html:137
 msgid "Website Development Packages"
 msgstr "Paquetes de Desarrollo de Sitios Web"
 
-#: templates/main/home.html:139
+#: templates/main/home.html:141
 msgid "Basic"
 msgstr "Básico"
 
-#: templates/main/home.html:142 templates/main/home.html:169
+#: templates/main/home.html:144 templates/main/home.html:171
 msgid "Services Included:"
 msgstr "Servicios Incluidos:"
 
-#: templates/main/home.html:144
+#: templates/main/home.html:146
 msgid "Pre-designed layout selection and customization"
 msgstr "Selección y personalización de diseño pre-diseñado"
 
-#: templates/main/home.html:145
+#: templates/main/home.html:147
 msgid "Up to 5 pages"
 msgstr "Hasta 5 páginas"
 
-#: templates/main/home.html:146
+#: templates/main/home.html:148
 msgid "Basic SEO setup"
 msgstr "Configuración básica de SEO"
 
-#: templates/main/home.html:147
+#: templates/main/home.html:149
 msgid "Mobile-responsive design"
 msgstr "Diseño adaptable a dispositivos móviles"
 
-#: templates/main/home.html:148
+#: templates/main/home.html:150
 msgid "1 round of revisions"
 msgstr "1 ronda de revisiones"
 
-#: templates/main/home.html:149
+#: templates/main/home.html:151
 msgid "Content formatting"
 msgstr "Formateo de contenido"
 
-#: templates/main/home.html:152 templates/main/home.html:180
-#: templates/main/home.html:208 templates/main/home.html:243
-#: templates/main/home.html:269 templates/main/home.html:297
+#: templates/main/home.html:154 templates/main/home.html:182
+#: templates/main/home.html:210 templates/main/home.html:245
+#: templates/main/home.html:271 templates/main/home.html:299
 msgid "Ideal For:"
 msgstr "Ideal Para:"
 
-#: templates/main/home.html:154
-msgid "Small businesses or personal sites needing a professional web presence with minimal customization"
-msgstr "Pequeñas empresas o sitios personales que necesiten una presencia web profesional con mínima personalización"
+#: templates/main/home.html:156
+msgid ""
+"Small businesses or personal sites needing a professional web presence with "
+"minimal customization"
+msgstr ""
+"Pequeñas empresas o sitios personales que necesiten una presencia web "
+"profesional con mínima personalización"
 
-#: templates/main/home.html:160 templates/main/home.html:189
-#: templates/main/home.html:216
+#: templates/main/home.html:162 templates/main/home.html:191
+#: templates/main/home.html:218
 msgid "Request this Package"
 msgstr "Solicitar este Paquete"
 
-#: templates/main/home.html:166
+#: templates/main/home.html:168
 msgid "Standard"
 msgstr "Estándar"
 
-#: templates/main/home.html:171
+#: templates/main/home.html:173
 msgid "Semi-custom design with unique styling"
 msgstr "Diseño semi-personalizado con estilo único"
 
-#: templates/main/home.html:172
+#: templates/main/home.html:174
 msgid "Up to 10 pages"
 msgstr "Hasta 10 páginas"
 
-#: templates/main/home.html:173
+#: templates/main/home.html:175
 msgid "Advanced SEO setup"
 msgstr "Configuración avanzada de SEO"
 
-#: templates/main/home.html:174
+#: templates/main/home.html:176
 msgid "Speed optimization"
 msgstr "Optimización de velocidad"
 
-#: templates/main/home.html:175
+#: templates/main/home.html:177
 msgid "Basic E-commerce capability (up to 10 products)"
 msgstr "Capacidad básica de comercio electrónico (hasta 10 productos)"
 
-#: templates/main/home.html:176
+#: templates/main/home.html:178
 msgid "2 rounds of revisions"
 msgstr "2 rondas de revisiones"
 
-#: templates/main/home.html:177
+#: templates/main/home.html:179
 msgid "Contact form integration"
 msgstr "Integración de formulario de contacto"
 
-#: templates/main/home.html:182
-msgid "Growing businesses needing more customization and basic e-commerce functionality"
-msgstr "Empresas en crecimiento que necesitan más personalización y funcionalidad básica de comercio electrónico"
+#: templates/main/home.html:184
+msgid ""
+"Growing businesses needing more customization and basic e-commerce "
+"functionality"
+msgstr ""
+"Empresas en crecimiento que necesitan más personalización y funcionalidad "
+"básica de comercio electrónico"
 
-#: templates/main/home.html:195
+#: templates/main/home.html:197
 msgid "Premium"
 msgstr "Premium"
 
-#: templates/main/home.html:198
+#: templates/main/home.html:200
 msgid "Services Include:"
 msgstr "Los Servicios Incluyen:"
 
-#: templates/main/home.html:200
+#: templates/main/home.html:202
 msgid "Fully custom design from scratch"
 msgstr "Diseño totalmente personalizado desde cero"
 
-#: templates/main/home.html:201
+#: templates/main/home.html:203
 msgid "Unlimited pages"
 msgstr "Páginas ilimitadas"
 
-#: templates/main/home.html:202
+#: templates/main/home.html:204
 msgid "E-commerce with unlimited products"
 msgstr "Comercio electrónico con productos ilimitados"
 
-#: templates/main/home.html:203
+#: templates/main/home.html:205
 msgid "Custom features (user profiles, booking systems, etc.)"
-msgstr "Funciones personalizadas (perfiles de usuario, sistemas de reserva, etc.)"
+msgstr ""
+"Funciones personalizadas (perfiles de usuario, sistemas de reserva, etc.)"
 
-#: templates/main/home.html:204
+#: templates/main/home.html:206
 msgid "4 rounds of revisions"
 msgstr "4 rondas de revisiones"
 
-#: templates/main/home.html:205
+#: templates/main/home.html:207
 msgid "Third-party integrations (CRM, marketing platforms)"
 msgstr "Integraciones de terceros (CRM, plataformas de marketing)"
 
-#: templates/main/home.html:210
+#: templates/main/home.html:212
 msgid "Businesses needing complex functionality or unique custom features"
-msgstr "Empresas que necesitan funcionalidad compleja o características personalizadas únicas"
+msgstr ""
+"Empresas que necesitan funcionalidad compleja o características "
+"personalizadas únicas"
 
-#: templates/main/home.html:227
+#: templates/main/home.html:229 templates/main/hosting_plans.html:10
 msgid "Web Hosting Plans"
 msgstr "Planes de Alojamiento Web"
 
-#: templates/main/home.html:231
+#: templates/main/home.html:233
 msgid "Basic Hosting"
 msgstr "Alojamiento Básico"
 
-#: templates/main/home.html:232
+#: templates/main/home.html:234
 msgid "$20/month"
 msgstr "$20/mes"
 
-#: templates/main/home.html:234 templates/main/home.html:259
-#: templates/main/home.html:286
+#: templates/main/home.html:236 templates/main/home.html:261
+#: templates/main/home.html:288
 msgid "Service Includes:"
 msgstr "El Servicio Incluye:"
 
-#: templates/main/home.html:236
+#: templates/main/home.html:238
 msgid "2GB Storage"
 msgstr "2GB de Almacenamiento"
 
-#: templates/main/home.html:237
+#: templates/main/home.html:239
 msgid "Basic SSL certificate"
 msgstr "Certificado SSL básico"
 
-#: templates/main/home.html:238
+#: templates/main/home.html:240
 msgid "10GB monthly bandwidth"
 msgstr "10GB de ancho de banda mensual"
 
-#: templates/main/home.html:239
+#: templates/main/home.html:241
 msgid "1 email account"
 msgstr "1 cuenta de correo electrónico"
 
-#: templates/main/home.html:240 templates/main/home.html:263
-#, python-format
-msgid "99.9% uptime guarantee"
+#: templates/main/home.html:242 templates/main/home.html:265
+#, fuzzy, python-format
+#| msgid "99.9% uptime guarantee"
+msgid "99.9%% uptime guarantee"
 msgstr "Garantía de tiempo de actividad del 99.9%"
 
-#: templates/main/home.html:245
+#: templates/main/home.html:247
 msgid "Simple websites or blogs that don't need a lot of storage or bandwidth"
-msgstr "Sitios web o blogs sencillos que no necesitan mucho almacenamiento o ancho de banda"
+msgstr ""
+"Sitios web o blogs sencillos que no necesitan mucho almacenamiento o ancho "
+"de banda"
 
-#: templates/main/home.html:250 templates/main/home.html:277
-#: templates/main/home.html:306
+#: templates/main/home.html:252 templates/main/home.html:279
+#: templates/main/home.html:308
 msgid "Request this Plan"
 msgstr "Solicitar este Plan"
 
-#: templates/main/home.html:256
+#: templates/main/home.html:258
 msgid "Standard Hosting"
 msgstr "Alojamiento Estándar"
 
-#: templates/main/home.html:257
+#: templates/main/home.html:259
 msgid "$40/month"
 msgstr "$40/mes"
 
-#: templates/main/home.html:261
+#: templates/main/home.html:263
 msgid "10GB storage"
 msgstr "10GB de almacenamiento"
 
-#: templates/main/home.html:262
+#: templates/main/home.html:264
 msgid "Free SSL certificate"
 msgstr "Certificado SSL gratuito"
 
-#: templates/main/home.html:264
+#: templates/main/home.html:266
 msgid "50GB monthly bandwidth"
 msgstr "50GB de ancho de banda mensual"
 
-#: templates/main/home.html:265
+#: templates/main/home.html:267
 msgid "3 email accounts"
 msgstr "3 cuentas de correo electrónico"
 
-#: templates/main/home.html:266
+#: templates/main/home.html:268
 msgid "Priority support"
 msgstr "Soporte prioritario"
 
-#: templates/main/home.html:271
-msgid "Small business websites or blogs with moderate traffic and extra features"
-msgstr "Sitios web de pequeñas empresas o blogs con tráfico moderado y características adicionales"
+#: templates/main/home.html:273
+msgid ""
+"Small business websites or blogs with moderate traffic and extra features"
+msgstr ""
+"Sitios web de pequeñas empresas o blogs con tráfico moderado y "
+"características adicionales"
 
-#: templates/main/home.html:284
+#: templates/main/home.html:285
+#, fuzzy
+#| msgid "Website Hosting"
+msgid "Premium Hosting"
+msgstr "Alojamiento Web"
+
+#: templates/main/home.html:286
 msgid "$80/month"
 msgstr "$80/mes"
 
-#: templates/main/home.html:288
+#: templates/main/home.html:290
 msgid "30GB storage"
 msgstr "30GB de almacenamiento"
 
-#: templates/main/home.html:289
+#: templates/main/home.html:291
 msgid "Premium SSL certificate"
 msgstr "Certificado SSL Premium"
 
-#: templates/main/home.html:290
+#: templates/main/home.html:292
 msgid "Unlimited bandwidth"
 msgstr "Ancho de banda ilimitado"
 
-#: templates/main/home.html:291
+#: templates/main/home.html:293
 msgid "10+ email accounts"
 msgstr "Más de 10 cuentas de correo electrónico"
 
-#: templates/main/home.html:292
+#: templates/main/home.html:294
 msgid "Nightly backups"
 msgstr "Copias de seguridad nocturnas"
 
-#: templates/main/home.html:293
+#: templates/main/home.html:295
 msgid "Advanced security features"
 msgstr "Características avanzadas de seguridad"
 
-#: templates/main/home.html:294
+#: templates/main/home.html:296
 msgid "Priority support with custom setup assistance"
 msgstr "Soporte prioritario con asistencia para configuración personalizada"
 
-#: templates/main/home.html:299
-msgid "High-traffic sites or businesses with custom needs that require a high-performance hosting environment"
-msgstr "Sitios de alto tráfico o empresas con necesidades personalizadas que requieren un entorno de alojamiento de alto rendimiento"
+#: templates/main/home.html:301
+msgid ""
+"High-traffic sites or businesses with custom needs that require a high-"
+"performance hosting environment"
+msgstr ""
+"Sitios de alto tráfico o empresas con necesidades personalizadas que "
+"requieren un entorno de alojamiento de alto rendimiento"
 
-#: templates/main/home.html:323
+#: templates/main/home.html:325
 msgid "Need Help Choosing?"
 msgstr "¿Necesitas ayuda para elegir?"
 
-#: templates/main/home.html:324
-msgid "Schedule a free consultation now, and we will figure out which package and/or plan is right for your situation!"
-msgstr "¡Programa una consulta gratuita ahora, y descubriremos qué paquete y/o plan es el adecuado para tu situación!"
+#: templates/main/home.html:326
+msgid ""
+"Schedule a free consultation now, and we will figure out which package and/"
+"or plan is right for your situation!"
+msgstr ""
+"¡Programa una consulta gratuita ahora, y descubriremos qué paquete y/o plan "
+"es el adecuado para tu situación!"
 
-#: templates/main/home.html:328
+#: templates/main/home.html:330
 msgid "Schedule Consultation"
 msgstr "Programar Consulta"
 
-#: templates/main/home.html:338
+#: templates/main/home.html:340
 msgid "Still have questions? Let's Chat."
 msgstr "¿Aún tienes preguntas? Hablemos."
 
-#: templates/main/home.html:344
+#: templates/main/home.html:346
 msgid "First Name"
 msgstr "Nombre"
 
-#: templates/main/home.html:348
+#: templates/main/home.html:350
 msgid "Last Name"
 msgstr "Apellido"
 
-#: templates/main/home.html:352
+#: templates/main/home.html:354
 msgid "Email"
 msgstr "Correo Electrónico"
 
-#: templates/main/home.html:356
+#: templates/main/home.html:358
 msgid "Subject"
 msgstr "Asunto"
 
-#: templates/main/home.html:360
+#: templates/main/home.html:362
 msgid "Message"
 msgstr "Mensaje"
 
-#: templates/main/home.html:364
+#: templates/main/home.html:366
 msgid "Submit"
 msgstr "Enviar"
 
-#: web_404studio/settings.py:131
+#: templates/main/hosting_plans.html:4
+msgid "Reliable Web Hosting Packages | 404 Studio"
+msgstr ""
+
+#: templates/main/hosting_plans.html:5
+msgid ""
+"Discover our secure and scalable hosting packages. From small businesses to "
+"growing enterprises, 404 Studio has the perfect hosting solution for you."
+msgstr ""
+
+#: templates/main/links-page.html:9
+msgid "404 Studio - Quick Navigation"
+msgstr ""
+
+#: templates/main/links-page.html:34
+#, fuzzy
+#| msgid "Web Development"
+msgid "Web Development Agency"
+msgstr "Desarrollo Web"
+
+#: templates/main/links-page.html:41
+msgid "Go to our <strong>Website</strong>"
+msgstr ""
+
+#: templates/main/links-page.html:45
+msgid "Send us an <strong>Email</strong>"
+msgstr ""
+
+#: templates/main/links-page.html:49
+msgid "See our <strong>Portfolio</strong>"
+msgstr ""
+
+#: templates/main/links-page.html:53
+msgid "Message us on <strong>Whatsapp</strong>"
+msgstr ""
+
+#: web_404studio/settings.py:139
 msgid "English"
 msgstr "Inglés"
 
-#: web_404studio/settings.py:132
+#: web_404studio/settings.py:140
 msgid "Español"
 msgstr "Español"
+
+#~ msgid "Graphic Design"
+#~ msgstr "Diseño Gráfico"
+
+#~ msgid "View Our Services"
+#~ msgstr "Ver Nuestros Servicios"

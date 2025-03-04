@@ -30,7 +30,7 @@
         $this.find('ul').append("<li class='slippery'></li>");
         $active = $('.nav-item.active');
         $slippery = $this.find('.slippery');
-        $actionElement = $this.find('a');
+        $actionElement = $this.find('> ul > li > a');
         // $this.css({
         //   'position': 'relative',
         //   'display': 'table'

@@ -1,5 +1,6 @@
 {% extends "main/base.html" %}
 {% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
 {% load static %}
 {% block title %}{% translate "404 Studio | Professional Web Development and Hosting Services" %}{% endblock title %}
 {% block meta_description %}{% translate "Build your online presence with 404 Studio. We offer expert web development, hosting, and
@@ -27,6 +28,7 @@ design services to help your business grow." %}{% endblock meta_description %}
         <p class="hero-summary">
           {% translate "We help businesses transform their digital presence with custom solutions that drive real growth." %}
         </p>
+        
         <div class="buttons hero-buttons">
           <button onclick="window.open('{{ 30_min }}', '_blank')" type="button"
             class="button button--quidel button--inverted button--text-thick button--text-upper button--size-s">
