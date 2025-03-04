@@ -344,6 +344,7 @@ design services to help your business grow." %}{% endblock meta_description %}
       <!-- Form Column -->
       <div class="col-md-6">
         <form class="contact-form">
+          {% csrf_token %} 
           <div class="mb-4 floating-label">
               <input type="text" class="form-control" placeholder=" " required>
               <label>{% translate "First Name" %}</label>
