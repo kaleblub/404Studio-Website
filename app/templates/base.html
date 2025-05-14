@@ -111,12 +111,12 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-black shadow-md p-4 w-full font-poppins">
       <ul class="space-y-4 text-white">
-        <li><a href="{{ url_for('main.home') }}" class="block hover:text-primaryorange">Home</a></li>
-        <li><a href="{{ url_for('main.about') }}" class="block hover:text-primaryorange">About</a></li>
+        <li><a href="{{ url_for('main.home') }}" class="block">Home</a></li>
+        <li><a href="{{ url_for('main.about') }}" class="block">About</a></li>
 
         <!-- Mobile Services Dropdown -->
         <li class="relative">
-          <a href="javascript:void(0)" onclick="toggleDropdownMobile()" class="flex justify-between w-full text-left hover:text-primaryorange">
+          <a href="javascript:void(0)" onclick="toggleDropdownMobile()" class="flex justify-between w-full text-left">
             Services
             <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
@@ -126,9 +126,9 @@
           </ul>
         </li>
         
-
-        <!-- <li><a href="#" class="block hover:text-primaryorange">Pricing</a></li> -->
-        <li><a href="{{ url_for('main.contact') }}" class="block hover:text-primaryorange">Contact</a></li>
+        <li><a href="{{ url_for('main.portfolio') }}">Portfolio</a></li>
+        <li><a href="#" class="block">Pricing</a></li>
+        <li><a href="{{ url_for('main.contact') }}" class="block">Contact</a></li>
         <!-- <li><a href="#" class="block hover:text-primaryorange">Blog</a></li> -->
         <!-- <li>
           <button href="#" class="quidel-button inverted block">
