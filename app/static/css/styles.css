@@ -1,0 +1,273 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts */
+@font-face {
+  font-family: 'EurostileExtendedBlack';
+  src: url('/static/fonts/EurostileExtendedBlack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@theme {
+    /* Colors */
+    --color-primaryorange: #EFB071;
+    --color-accentpurple: #7F60F9;
+
+    /* Fonts */
+    --font-montserrat: "Montserrat", sans-serif;
+    --font-inter: "Inter", sans-serif;
+    --font-lexend: "Lexend", sans-serif;
+    --font-roboto: "Roboto", sans-serif;
+
+
+    /* Animations
+    --animation-infinite-scroll: infinite-scroll 25s linear infinite; */
+  }
+
+  @layer utilities {
+    @keyframes infinite-scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+  
+    .animate-infinite-scroll {
+      animation: infinite-scroll 25s linear infinite;
+    }
+
+    .image-shadow-container {
+      position: relative;
+      z-index: 1;
+    }
+    .image-shadow {
+      position: relative;
+      z-index: 1;
+    }
+    .image-shadow::after {
+      content: '';
+      position: absolute;
+      top: 70%; /* Position slightly lower */
+      left: 70%; /* Position slightly to the right */
+      width: 120%; /* Larger size */
+      height: 120%; /* Larger size */
+      transform: translate(-50%, -50%);
+      background-color: #88B04B; /* Green color */
+      border-radius: 50%; /* Full circle */
+      z-index: -1; /* Behind the image */
+      filter: blur(60px);
+      opacity: 0.7; /* Increase opacity for visibility */
+    }
+  }
+
+/* Quidel-style Button */
+.quidel-button {
+  float: left;
+  min-width: 150px;
+  max-width: 250px;
+  display: block;
+  margin: 1em;
+  padding: 1em 2em;
+  border: none;
+  background: none;
+  color: inherit;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: color 0.3s cubic-bezier(0.75, 0, 0.125, 1);
+  cursor: pointer;
+  color: black;
+}
+
+.quidel-button:focus {
+  outline: none;
+}
+
+.quidel-button > span {
+  vertical-align: middle;
+  padding-left: 0.35em;
+}
+
+/* Hover and pseudo-elements */
+.quidel-button::before,
+.quidel-button::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.quidel-button::after {
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #efb071;
+}
+
+.quidel-button::before {
+  background: var(--contrast-blue, white); /* fallback blue */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0, 100%, 0);
+  transition: transform 0.3s cubic-bezier(0.75, 0, 0.125, 1);
+}
+
+.quidel-button:hover::before {
+  transform: translate3d(0, 0, 0);
+}
+
+.quidel-button:hover {
+  color: white;
+}
+
+/* Inverted variant */
+.quidel-button.inverted::after {
+  background: var(--contrast-blue, #14213d);
+}
+.quidel-button.inverted::before {
+  background: var(--main-orange, #efb071);
+}
+.quidel-button.inverted:hover {
+  color: var(--main-orange, #efb071);
+}
+
+/* Rounded variants */
+.quidel-button.round-s::after {
+  border-radius: 3px;
+}
+.quidel-button.round-m::after {
+  border-radius: 13px;
+}
+.quidel-button.round-l::after {
+  border-radius: 40px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .quidel-button {
+    padding: 0.9rem 1.75rem;
+    font-size: 1rem;
+  }
+}
+
+
+/* ------ Image Frames ------ */
+.corner-frame {
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+}
+
+.corner-frame::before,
+.corner-frame::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-style: solid;
+  border-width: 4px 4px 0 0;
+  z-index: 3;
+}
+/* Frame Positioning */
+.corner-frame-tl::before {
+  top: -10px;
+  left: -10px;
+  transform: rotate(-90deg);
+}
+
+.corner-frame-tr::before {
+  top: -10px;
+  right: -10px;
+  transform: rotate(0deg);
+}
+
+.corner-frame-br::after {
+  bottom: -10px;
+  right: -10px;
+  transform: rotate(90deg);
+}
+
+.corner-frame-bl::after {
+  bottom: -10px;
+  left: -10px;
+  transform: rotate(180deg);
+}
+
+/* Frame Color Variants */
+.corner-frame-white::before,
+.corner-frame-white::after {
+  border-color: #fff;
+}
+
+.corner-frame-orange::before,
+.corner-frame-orange::after {
+  border-color: #efb071;
+}
+
+
+
+/* Blob behind section */
+.blob-svg {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.8;
+  filter: blur(40px);
+  pointer-events: none;
+  /* animation: blobRotate 30s linear infinite; */
+}
+
+@keyframes blobRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.blob-about {
+  transform: rotate(-163deg);
+  top: -465px;
+  right: -404px;
+}
+
+.blob-services {
+  top: -500px;
+  left: 0;
+}
+
+.blob-contact {
+  transform: rotate(-90deg);
+  top: -400px;
+  left: 250px;
+}
+
+/* Make sure the section title stays on top */
+.section-title {
+  position: relative;
+  font-weight: bold;
+  z-index: 1; /* Text stays above the blob */
+  margin-bottom: 1rem;
+  color: white;
+}
+
+/* Section container */
+section {
+  position: relative;
+  overflow: visible; /* Ensures the blob doesn't spill out of the section */
+}
+
+.frame {
+  position: relative;
+  z-index: 1; /* Keeps the image on top of the blob */
+}
+
+button {
+  z-index: 1; /* Button stays on top of the blob */
+}

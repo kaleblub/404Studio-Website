@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="bg-white p-8 shadow-lg rounded-lg w-full max-w-lg">
+    <h2 class="text-2xl font-bold text-center mb-4">Unlock Your Business’s Financial Potential</h2>
+    <p class="text-center text-gray-600">Fill out the form to see which package fits your needs.</p>
+
+    <div id="pricingResult" class="hidden mt-4 p-4 bg-blue-100 text-center rounded">
+        <h3 class="text-xl font-bold">Recommended Plan: <span id="packageName">-</span></h3>
+        <p class="text-lg">Estimated Price: <span id="estimatedPrice">$0</span> per month</p>
+    </div>
+
+    <form id="pricingForm" class="mt-6 space-y-4">
+        <input type="number" id="tax_savings" placeholder="Estimated Tax Savings ($)" class="w-full p-2 border rounded">
+        <input type="number" id="admin_reduction" placeholder="Reduction in Admin Costs (%)" class="w-full p-2 border rounded">
+        <input type="number" id="admin_costs" placeholder="Current Annual Admin Costs ($)" class="w-full p-2 border rounded">
+        <input type="number" id="revenue_growth" placeholder="Revenue Growth Potential (%)" class="w-full p-2 border rounded">
+        <input type="number" id="current_revenue" placeholder="Current Annual Revenue ($)" class="w-full p-2 border rounded">
+        <input type="number" id="hours_saved" placeholder="Hours Saved Per Month" class="w-full p-2 border rounded">
+        <input type="number" id="hourly_rate" placeholder="Value of Your Time Per Hour ($)" class="w-full p-2 border rounded">
+        <input type="number" id="compliance_risk" placeholder="Potential Cost of Errors ($)" class="w-full p-2 border rounded">
+        
+        <button type="submit"
+            class="cursor-pointer bg-secondarygreen text-white text-[10px] md:text-[16px] text-white px-5 py-2 rounded-full shadow-md hover:bg-primarygreen hover:text-black transition">
+            Get Your Estimate
+        </button>
+        <button  class="w-full bg-blue-500 text-white py-2 rounded">Get Your Estimate</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('pricingForm').addEventListener('submit', async function(event) {
+        event.preventDefault();
+
+        let data = {
+            tax_savings: parseFloat(document.getElementById('tax_savings').value) || 0,
+            admin_reduction: parseFloat(document.getElementById('admin_reduction').value) / 100 || 0,
+            admin_costs: parseFloat(document.getElementById('admin_costs').value) || 0,
+            revenue_growth: parseFloat(document.getElementById('revenue_growth').value) / 100 || 0,
+            current_revenue: parseFloat(document.getElementById('current_revenue').value) || 0,
+            hours_saved: parseFloat(document.getElementById('hours_saved').value) || 0,
+            hourly_rate: parseFloat(document.getElementById('hourly_rate').value) || 0,
+            compliance_risk: parseFloat(document.getElementById('compliance_risk').value) || 0,
+        };
+
+        let response = await fetch('/calculate', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
+
+        let result = await response.json();
+        document.getElementById('packageName').innerText = result.package;
+        document.getElementById('estimatedPrice').innerText = `$${result.price}`;
+        document.getElementById('pricingResult').classList.remove('hidden');
+    });
+</script>
+
+{% endblock %}

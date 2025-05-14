@@ -1,2 +1,2 @@
 # 404Studio-Website
-The Django Website for 404 Studio
+The Flask Website for 404 Studio

@@ -1,0 +1,1522 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+    .swiper {
+        display: grid;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-rtl .swiper-button-next:after {
+        content: '' !important;
+    }
+
+    .swiper-button-next:after,
+    .swiper-rtl .swiper-button-prev:after {
+        content: '' !important;
+    }
+
+    .swiper-button-next svg,
+    .swiper-button-prev svg {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        position: relative !important;
+        width: 50px;
+        height: 50px;
+    }
+
+    .swiper-slide.swiper-slide-active {
+        --tw-border-opacity: 1 !important;
+        border-color: rgb(239 176 113 / var(--tw-border-opacity)) !important;
+    }
+
+    .swiper-slide.swiper-slide-active>.swiper-slide-active\:text-secondarygreen {
+        --tw-text-opacity: 1;
+        color: rgb(139 191 136 / var(--tw-text-opacity));
+    }
+
+    .swiper-slide.swiper-slide-active>.flex .grid .swiper-slide-active\:text-secondarygreen {
+        --tw-text-opacity: 1;
+        color: rgb(139 191 136 / var(--tw-text-opacity));
+    }
+
+    .title {
+        background: linear-gradient(180deg,
+                rgba(239, 176, 113, 1) 0%,
+                rgba(74, 108, 247, 0) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        opacity: 0.2;
+        position: absolute;
+        /* adjust as needed to hover above */
+        /* left: 0; */
+        font-size: 40px;
+        line-height: 1 !important;
+        font-weight: 700;
+        font-family: 'Inter', sans-serif;
+    }
+
+    /* Responsive font sizes */
+    @media (min-width: 540px) {
+        .title {
+            font-size: 60px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .title {
+            font-size: 95px;
+        }
+    }
+
+    #tesseract-container {
+        margin: 0;
+        background-color: #0a0c19;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .tesseract {
+        position: relative;
+        transform: rotateX(15deg) rotateY(15deg);
+        transform-style: preserve-3d;
+        animation: spin 30s infinite linear;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0);
+        }
+
+        to {
+            transform: rotateX(360deg) rotateY(360deg);
+        }
+    }
+
+    .cube-1,
+    .cube-2 {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        transform-style: preserve-3d;
+    }
+
+    .cube-1 {
+        /*   animation: animateCube-1 10s infinite linear; */
+    }
+
+    @keyframes animateCube-1 {
+        0% {
+            width: 100px;
+            height: 100px;
+        }
+
+        25% {
+            width: 100px;
+            height: 100px;
+        }
+
+        50% {
+            width: 200px;
+            height: 200px;
+        }
+
+        75% {
+            width: 200px;
+            height: 200px;
+        }
+
+        100% {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+    .sides {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        color: #fff;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        animation: edgePulse 10s infinite ease-in-out, pulseGlow 10s infinite ease-in-out;
+
+    }
+
+    .front {
+        /*   background-color: rgba(90,90,90,.7); */
+        transform: translateZ(50px);
+    }
+
+    .top {
+        /*   background-color: rgba(210,210,0,.7); */
+        transform: rotateX(-90deg) translateY(-50%);
+        transform-origin: top center;
+    }
+
+    .back {
+        /*   background-color: rgba(0, 210, 0, 0.7); */
+        transform: translateZ(-50px) rotateX(-180deg);
+        transform-origin: center;
+    }
+
+    .bottom {
+        /*   background-color: rgba(210, 0, 210, 0.7); */
+        transform: rotateX(90deg) translateY(50%);
+        transform-origin: bottom center;
+    }
+
+    .left {
+        /*   background-color: rgba(0, 0, 210, 0.7); */
+        transform: rotateY(270deg) translateX(-50%);
+        transform-origin: center left;
+    }
+
+    .right {
+        /*   background-color: rgba(210, 0, 0, 0.7); */
+        transform: rotateY(-270deg) translateX(50%);
+        transform-origin: top right;
+    }
+
+    .cube-2 {
+        top: calc(50% - 100px);
+        left: calc(50% - 100px);
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        transform-origin: center;
+    }
+
+    .cube-2 .front {
+        /*   background-color: rgba(90, 90, 90, 0.7); */
+        transform: translateZ(100px);
+    }
+
+    .cube-2 .back {
+        /*   background-color: rgba(0, 210, 0, 0.7); */
+        transform: translateZ(-100px) rotateX(-180deg);
+        transform-origin: center;
+    }
+
+    .joins {
+        width: 100px;
+        height: 100px;
+        top: calc(50% - 50px);
+        left: calc(50% - 50px);
+        position: absolute;
+    }
+
+    .line {
+        height: 2px;
+        position: absolute;
+        background-color: #ccc;
+    }
+
+    .line-1 {
+        width: 85px;
+        transform: translateZ(-50px) translateX(0px) translateY(0px) rotateX(90deg) rotateY(45deg) rotateZ(-145deg);
+        transform-origin: top left;
+    }
+
+    .line-2 {
+        width: 85px;
+        transform: translateZ(50px) translateX(0px) translateY(0px) rotateX(90deg) rotateY(45deg) rotateZ(145deg);
+        transform-origin: top left;
+    }
+
+    .line-3 {
+        width: 85px;
+        transform: translateZ(50px) translateX(0px) translateY(100px) rotateX(-90deg) rotateY(45deg) rotateZ(-145deg);
+        transform-origin: top left;
+    }
+
+    .line-4 {
+        width: 85px;
+        transform: translateZ(-50px) translateX(0px) translateY(100px) rotateX(-90deg) rotateY(45deg) rotateZ(145deg);
+        transform-origin: top left;
+    }
+
+    .line-5 {
+        width: 85px;
+        transform: translateZ(50px) translateX(100px) translateY(0px) rotateX(-90deg) rotateY(45deg) rotateZ(-35deg);
+        transform-origin: top left;
+    }
+
+    .line-6 {
+        width: 85px;
+        transform: translateZ(-50px) translateX(100px) translateY(0px) rotateX(-90deg) rotateY(45deg) rotateZ(35deg);
+        transform-origin: top left;
+    }
+
+    .line-7 {
+        width: 85px;
+        transform: translateZ(-50px) translateX(100px) translateY(100px) rotateX(90deg) rotateY(45deg) rotateZ(-35deg);
+        transform-origin: top left;
+    }
+
+    .line-8 {
+        width: 85px;
+        transform: translateZ(50px) translateX(100px) translateY(100px) rotateX(90deg) rotateY(45deg) rotateZ(35deg);
+        transform-origin: top left;
+    }
+
+    /* @keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 20px #EFB071, 0 0 40px #EFB071, 0 0 60px #7F60F9;
+    background-color: rgba(127, 96, 249, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 40px #7F60F9, 0 0 80px #EFB071, 0 0 100px #EFB071;
+    background-color: rgba(239, 176, 113, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 20px #EFB071, 0 0 40px #EFB071, 0 0 60px #7F60F9;
+    background-color: rgba(127, 96, 249, 0.2);
+  }
+} */
+    @keyframes edgePulse {
+        0% {
+            border-color: #EFB071;
+            box-shadow: 0 0 8px #EFB071;
+        }
+
+        50% {
+            border-color: #7F60F9;
+            box-shadow: 0 0 12px #7F60F9;
+        }
+
+        100% {
+            border-color: #EFB071;
+            box-shadow: 0 0 8px #EFB071;
+        }
+    }
+</style>
+<!-- Hero Section -->
+<section class="bg-white dark:bg-[#0a0c19] relative flex flex-col items-center md:items-center max-w-screen min-h-screen pt-10 px-3">
+
+    <!-- Hero Content -->
+    <div class="relative flex flex-col md:flex-row-reverse items-center w-full">
+        <!-- Right Side: Hero Image -->
+        <div id="tesseract-container"
+            class="relative flex justify-evenly w-full md:w-3/6 min-h-[500px] md:h-5/6 max-h-[700px]">
+            <div
+                class="tesseract-wrapper absolute md:relative w-[200px] h-[200px] md:w-[375px] lg:w-[500px] md:h-[375px] lg:h-[500px] object-cover left-0 sm:left-[50px] bottom-[100px] md:bottom-0 flex items-center justify-center">
+                <div class="tesseract scale-[0.7] md:scale-[1.5] lg:scale-[2] xl:scale-[2.4]">
+                    <div class="cube-1">
+                        <div class="sides front"></div>
+                        <div class="sides top"></div>
+                        <div class="sides back"></div>
+                        <div class="sides bottom"></div>
+                        <div class="sides left"></div>
+                        <div class="sides right"></div>
+                    </div>
+                    <div class="cube-2">
+                        <div class="sides front"></div>
+                        <div class="sides top"></div>
+                        <div class="sides back"></div>
+                        <div class="sides bottom"></div>
+                        <div class="sides left"></div>
+                        <div class="sides right"></div>
+                    </div>
+                    <div class="joins">
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                        <div class="line line-3"></div>
+                        <div class="line line-4"></div>
+                        <div class="line line-5"></div>
+                        <div class="line line-6"></div>
+                        <div class="line line-7"></div>
+                        <div class="line line-8"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Left Side: Text Content -->
+        <div
+            class="absolute top-[32vh] md:top-0 md:left-0 lg:left-8 z-10 w-full md:w-3/6 sm:max-lg:max-w-[480px] pr-2 pl-2 md:px-12 py-12 text-center md:text-left sm:content-center bg-transparent">
+            <h1
+                class="font-montserrat text-[56px] md:text-[65px] lg:text-[72px] xl:text-[85px] font-bold leading-tight top-[-225px] absolute md:relative md:top-0 text-right md:text-left">
+                Your Guide Through The</h1>
+            <h1
+                class="font-montserrat text-[56px] md:text-[65px] lg:text-[72px] xl:text-[85px] font-bold leading-tight text-right md:text-left">
+                Digital Unknown</h1>
+            <p
+                class="font-inter text-gray-400 text-[14px] md:text-[16px] lg:text-[18px] leading-[18px] md:leading-normal mt-4">
+                Whether you're starting from scratch, stuck in the middle, or scaling something big—I'm here to build,
+                guide, and solve. Design, development, automation, or something weird? Let’s make it real.</p>
+            <div class="flex gap-4 justify-center md:justify-start mt-6">
+                <button class="quidel-button">
+                    <span>Quidel Button</span>
+                </button>
+
+                <!-- Inverted version -->
+                <button class="quidel-button inverted">
+                    <span>Inverted Button</span>
+                </button>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Horizontal Scrolling Text -->
+    <!-- <div class="absolute bottom-0 w-full overflow-hidden z-2 bg-secondarygreen">
+        <div class="flex w-[200%] animate-infinite-scroll">
+            <ul class="flex gap-16 items-center w-full font-marcellus text-white text-[16px] md:text-[30px] whitespace-nowrap">
+            <li class="whitespace-nowrap text-white text-[16px] md:text-[30px]">
+                We take care of the books, so you can take care of your business.
+            </li>
+            <li class="whitespace-nowrap text-white text-[16px] md:text-[30px]">
+                You run the business, we’ll run the numbers.
+            </li>
+          </ul> -->
+    <!-- Second duplicate for looping effect -->
+    <!-- <ul class="flex gap-16 items-center w-full font-marcellus text-white text-[16px] md:text-[30px] whitespace-nowrap">
+            <li class="whitespace-nowrap text-white text-[16px] md:text-[30px]">
+                We take care of the books, so you can take care of your business.
+            </li>
+            <li class="whitespace-nowrap text-white text-[16px] md:text-[30px]">
+                You run the business, we’ll run the numbers.
+            </li>
+          </ul>
+        </div>
+    </div> -->
+</section>
+
+<!-- Services Section -->
+<section class="bg-white dark:bg-[#0a0c19]">
+    <div class="container px-6 py-10 mx-auto">
+        <!-- <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">explore our <br> awesome <span class="underline decoration-primabg-primaryorange">Components</span></h1> -->
+        <span class="title left-[50%] lg:left-[3%] top-[0.5rem]">SERVICES</span>
+        <h2
+            class="relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-center lg:text-left text-white">
+            Explore Our Areas of Expertise
+        </h2>
+        <p class="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quam voluptatibus
+        </p>
+
+        <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3">
+            <div class="space-y-3 group">
+                <span
+                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full dark:text-white dark:bg-primaryorange">
+                    <video muted loop playsinline class="w-6 h-6 hidden group-hover:block">
+                        <source src="{{ url_for('static', filename='images/animated-icons/development.mp4') }}"
+                            type="video/mp4" />
+                    </video>
+                </span>
+
+                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Development</h1>
+
+                <p class="text-gray-500 dark:text-gray-300">
+                    Delivering insightful management and reporting to support informed decision-making and drive your
+                    business growth.
+                </p>
+
+                <a href="#"
+                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform dark:text-primaryorange hover:underline hover:text-blue-600 dark:hover:text-accentpurple">
+                    <span class="mx-1">read more</span>
+                    <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="space-y-3 group">
+                <span
+                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full dark:text-white dark:bg-primaryorange">
+                    <img src="{{ url_for('static', filename='images/animated-icons/development.gif') }}"
+                        data-animated="/icons/dev-animated.gif" data-static="/icons/dev-static.png"
+                        class="w-6 h-6 transition-all duration-300 group-hover:play-gif" />
+                </span>
+
+                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Hosting</h1>
+
+                <p class="text-gray-500 dark:text-gray-300">
+                    Ensuring accurate and timely payments to your employees and contract labor, streamlining your
+                    payroll process.
+                </p>
+
+                <a href="#"
+                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform dark:text-primaryorange hover:underline hover:text-blue-600 dark:hover:text-accentpurple">
+                    <span class="mx-1">read more</span>
+                    <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="space-y-3 group">
+                <span
+                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full dark:text-white dark:bg-primaryorange">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                </span>
+
+                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Design
+                </h1>
+
+                <p class="text-gray-500 dark:text-gray-300">
+                    Empowering you to efficiently manage your finances with comprehensive training on various accounting
+                    software platforms.
+                </p>
+
+                <a href="#"
+                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform dark:text-primaryorange hover:underline hover:text-blue-600 dark:hover:text-accentpurple">
+                    <span class="mx-1">read more</span>
+                    <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="space-y-3 group">
+                <span
+                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full dark:text-white dark:bg-primaryorange">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+                    </svg>
+                </span>
+
+                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Management</h1>
+
+                <p class="text-gray-500 dark:text-gray-300">
+                    Providing meticulous daily, weekly, and monthly transaction management to keep your finances
+                    organized and up-to-date.
+                </p>
+
+                <a href="#"
+                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform dark:text-primaryorange hover:underline hover:text-blue-600 dark:hover:text-accentpurple">
+                    <span class="mx-1">read more</span>
+                    <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="space-y-3 group">
+                <span
+                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full dark:text-white dark:bg-primaryorange">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                    </svg>
+                </span>
+
+                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Troubleshooting</h1>
+
+                <p class="text-gray-500 dark:text-gray-300">
+                    Providing meticulous daily, weekly, and monthly transaction management to keep your finances
+                    organized and up-to-date.
+                </p>
+
+                <a href="#"
+                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform dark:text-primaryorange hover:underline hover:text-blue-600 dark:hover:text-accentpurple">
+                    <span class="mx-1">read more</span>
+                    <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="space-y-3 group">
+                <span
+                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full dark:text-white dark:bg-primaryorange">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                    </svg>
+                </span>
+
+                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Other</h1>
+
+                <p class="text-gray-500 dark:text-gray-300">
+                    Providing meticulous daily, weekly, and monthly transaction management to keep your finances
+                    organized and up-to-date.
+                </p>
+
+                <a href="#"
+                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform dark:text-primaryorange hover:underline hover:text-blue-600 dark:hover:text-accentpurple">
+                    <span class="mx-1">read more</span>
+                    <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="bg-white dark:bg-[#0a0c19] gap-16 overflow-x-hidden">
+    <div class="container px-6 py-10 mx-auto flex flex-col lg:flex-row-reverse ">
+        <!-- <svg class="blob-svg blob-about" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="blobGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#7F60F9" />
+                    <stop offset="100%" stop-color="#efb071" />
+                </linearGradient>
+            </defs>
+            <path fill="url(#blobGradient)"
+                d="M56.7,-12.8C62.8,0.4,49.7,25.4,27.7,42.4C5.6,59.5,-25.4,68.6,-33.6,59.6C-41.7,50.5,-26.9,23.3,-17.5,5.6C-8.1,-12.1,-4,-20.2,10.6,-23.6C25.3,-27.1,50.6,-25.9,56.7,-12.8Z"
+                transform="translate(100 100)" />
+        </svg> -->
+        <div class="relative w-full lg:w-1/2 corner-frame corner-frame-tl corner-frame-br corner-frame-orange z-1">
+            <img src="{{ url_for('static', filename='images/home-about-us-partnership-image.jpg') }}" alt="Hero Image"
+                class="relative w-full h-full object-cover">
+        </div>
+        <div class="lg:w-1/2">
+            <div class="relative">
+                <span class="title left-[50%] lg:left-[-5%] top-[-2rem]">ABOUT</span>
+                <h2
+                    class="relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-center lg:text-left text-white">
+                    Your Partner in Web Development and Digital Solutions
+                </h2>
+                <p
+                    class="font-inter text-gray-400 text-[14px] md:text-[16px] lg:text-[18px] leading-[18px] md:leading-normal mt-4 z-1">
+                    404 Studio LLC is a web development agency committed to delivering modern, user-centric websites
+                    that
+                    elevate your business.
+                    With years of experience in the industry, we are passionate about bringing your vision to life
+                    through
+                    cutting-edge design, development, and ongoing support.
+                </p>
+                <div class="flex gap-4 justify-center lg:justify-start mt-6">
+                    <button class="quidel-button inverted cursor-pointer" onclick="{{ url_for('main.about') }}">
+                        <span>Inverted Button</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Reviews Section -->
+<section class="relative min-h-screen">
+    <!-- Background layer -->
+    <div class="absolute inset-0 flex">
+        <div class="w-3/4 bg-white dark:bg-[#0a0c19]"></div>
+        <div class="w-1/5 md:w-2/5 bg-primaryorange"></div>
+    </div>
+
+    <!-- Foreground content -->
+    <div class="relative z-10 flex flex-col justify-center w-full min-h-screen px-4 py-10 md:mx-24 z-1">
+        <span class="title left-[50%] lg:left-[-1%] top-[11rem]">REVIEWS</span>
+        <h2 class="relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">
+            What our <span class="text-primaryorange">customers</span> <br> are saying
+        </h2>
+
+        <div class="grid w-full grid-cols-1 gap-8 mt-8 2xl:grid-cols-4 lg:mt-16 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Testimonials (example) -->
+            <div class="w-full p-8 bg-white rounded-md shadow-lg dark:bg-gray-800">
+                <p class="leading-loose text-gray-500 dark:text-gray-400">
+                    “ Lorem ipsum dolor sit amet consectetur adipisicing elit... ”
+                </p>
+                <div class="flex items-center mt-6 -mx-2">
+                    <img class="object-cover mx-2 rounded-full w-14 h-14"
+                        src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
+                        alt="">
+                    <div class="mx-2">
+                        <h1 class="font-semibold text-gray-800 dark:text-white">Robbert</h1>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">CTO, Robert Consultency</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full p-8 bg-white rounded-md shadow-lg dark:bg-gray-800">
+                <p class="leading-loose text-gray-500 dark:text-gray-400">
+                    “ Lorem ipsum dolor sit amet consectetur adipisicing elit... ”
+                </p>
+                <div class="flex items-center mt-6 -mx-2">
+                    <img class="object-cover mx-2 rounded-full w-14 h-14"
+                        src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
+                        alt="">
+                    <div class="mx-2">
+                        <h1 class="font-semibold text-gray-800 dark:text-white">Robbert</h1>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">CTO, Robert Consultency</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="w-full p-8 bg-white rounded-md shadow-lg dark:bg-gray-800">
+                <p class="leading-loose text-gray-500 dark:text-gray-400">
+                    “ Lorem ipsum dolor sit amet consectetur adipisicing elit... ”
+                </p>
+                <div class="flex items-center mt-6 -mx-2">
+                    <img class="object-cover mx-2 rounded-full w-14 h-14"
+                        src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
+                        alt="">
+                    <div class="mx-2">
+                        <h1 class="font-semibold text-gray-800 dark:text-white">Robbert</h1>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">CTO, Robert Consultency</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="w-full p-8 bg-white rounded-md shadow-lg dark:bg-gray-800">
+                <p class="leading-loose text-gray-500 dark:text-gray-400">
+                    “ Lorem ipsum dolor sit amet consectetur adipisicing elit... ”
+                </p>
+                <div class="flex items-center mt-6 -mx-2">
+                    <img class="object-cover mx-2 rounded-full w-14 h-14"
+                        src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
+                        alt="">
+                    <div class="mx-2">
+                        <h1 class="font-semibold text-gray-800 dark:text-white">Robbert</h1>
+                        <span class="text-sm text-gray-500 dark:text-gray-400">CTO, Robert Consultency</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="items-center hidden mt-12 md:flex">
+            <button title="left arrow"
+                class="p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 hover:bg-gray-100">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+
+            <button title="right arrow"
+                class="p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 lg:mx-6 hover:bg-gray-100">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Options -->
+<section class="bg-white dark:bg-[#0a0c19] py-16 px-4 md:px-12">
+        <div class="container px-6 py-8 mx-auto">
+            <div class="xl:items-center xl:-mx-8 xl:flex">
+                <div class="flex flex-col items-center xl:items-start xl:mx-8 lg:w-2/5">
+                    <span class="title left-[50%] lg:left-[3%] top-[14rem]">PRICING</span>
+                    <h2
+                        class="relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-center lg:text-left text-white">
+                        Our Pricing Packages & Plans</h2>
+
+                    <div class="mt-4">
+                        <span class="inline-block w-40 h-1 bg-primaryorange rounded-full"></span>
+                        <span class="inline-block w-3 h-1 mx-1 bg-primaryorange rounded-full"></span>
+                        <span class="inline-block w-1 h-1 bg-primaryorange rounded-full"></span>
+                    </div>
+
+                    <p class="mt-4 font-medium text-gray-500 dark:text-gray-300">
+                        Need help with building a website? Or want to let us handle hosting your website?
+                    </p>
+
+                    <a href="#"
+                        class="flex items-center mt-4 -mx-1 text-sm text-gray-700 capitalize dark:text-primaryorange hover:underline hover:text-accentpurple dark:hover:text-primabg-primaryorange">
+                        <span class="mx-1">Need a different service</span>
+                        <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                <div class="flex-1 xl:mx-8">
+                    <div class="mt-8 space-y-8 md:-mx-4 md:flex md:items-center md:justify-center md:space-y-0 xl:mt-0">
+                        <div class="max-w-sm mx-auto border rounded-lg md:mx-4 dark:border-gray-700">
+                            <div class="p-6">
+                                <h1 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl dark:text-white">Web
+                                    Development Packages</h1>
+
+                                <p class="mt-4 text-gray-500 dark:text-gray-300">
+                                    Custom site builds, redesigns, and ecommerce integration.
+                                </p>
+
+                                <h2 class="mt-4 text-2xl font-semibold text-gray-700 sm:text-3xl dark:text-gray-300">
+                                    <span class="text-base font-medium">Starting from</span> $1,000</span></h2>
+
+                                <!-- <p class="mt-1 text-gray-500 dark:text-gray-300">
+                                Yearly payment
+                            </p> -->
+
+                                <button
+                                    class="w-full px-4 py-2 mt-6 tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-primaryorange focus:outline-none focus:bg-primaryorange focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                                    View Packages
+                                </button>
+                            </div>
+
+                            <hr class="border-gray-200 dark:border-gray-700">
+
+                            <div class="p-6">
+                                <h1 class="text-lg font-medium text-gray-700 capitalize lg:text-xl dark:text-white">
+                                    What’s included:</h1>
+
+                                <div class="mt-8 space-y-4">
+                                    <div class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="w-5 h-5 text-primabg-primaryorange" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+                                        <span class="mx-4 text-gray-700 dark:text-gray-300">Fully responsive
+                                            design</span>
+                                    </div>
+
+                                    <div class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="w-5 h-5 text-primabg-primaryorange" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+                                        <span class="mx-4 text-gray-700 dark:text-gray-300">CMS or static site
+                                            options</span>
+                                    </div>
+
+                                    <div class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="w-5 h-5 text-primabg-primaryorange" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+                                        <span class="mx-4 text-gray-700 dark:text-gray-300">SEO Setup</span>
+                                    </div>
+
+                                    <div class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="w-5 h-5 text-primabg-primaryorange" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+                                        <span class="mx-4 text-gray-700 dark:text-gray-300">Launch Support &
+                                            Revisions</span>
+                                    </div>
+
+                                    <!-- <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
+                                    </svg>
+
+                                    <span class="mx-4 text-gray-700 dark:text-gray-300">Mobile app</span>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
+                                    </svg>
+
+                                    <span class="mx-4 text-gray-700 dark:text-gray-300">Unlimited users</span>
+                                </div> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="max-w-sm mx-auto border rounded-lg md:mx-4 dark:border-gray-700">
+                            <div class="p-6">
+                                <h1 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl dark:text-white">Web
+                                    Hosting Packages</h1>
+
+                                <p class="mt-4 text-gray-500 dark:text-gray-300">
+                                    Fast, secure hosting managed by 404 Studio.
+                                </p>
+
+                                <h2 class="mt-4 text-2xl font-semibold text-gray-700 sm:text-3xl dark:text-gray-300">
+                                    <span class="text-base font-medium">Starting from</span> $20.00 <span
+                                        class="text-base font-medium">/Month</span></h2>
+
+                                <p class="mt-1 text-gray-500 dark:text-gray-300">
+                                    12 Payments Yearly
+                                </p>
+
+                                <button
+                                    class="w-full px-4 py-2 mt-6 tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-primaryorange focus:outline-none focus:bg-primaryorange focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                                    View Plans
+                                </button>
+                            </div>
+
+                            <hr class="border-gray-200 dark:border-gray-700">
+
+                            <div class="p-6">
+                                <h1 class="text-lg font-medium text-gray-700 capitalize lg:text-xl dark:text-white">
+                                    What’s included:</h1>
+
+                                <div class="mt-8 space-y-4">
+                                    <div class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="w-5 h-5 text-primabg-primaryorange" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+                                        <span class="mx-4 text-gray-700 dark:text-gray-300">SSL + security
+                                            updates</span>
+                                    </div>
+
+                                    <div class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="w-5 h-5 text-primabg-primaryorange" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+                                        <span class="mx-4 text-gray-700 dark:text-gray-300">Weekly backups</span>
+                                    </div>
+
+                                    <div class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="w-5 h-5 text-primabg-primaryorange" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+                                        <span class="mx-4 text-gray-700 dark:text-gray-300">Up to 5 email
+                                            addresses</span>
+                                    </div>
+
+                                    <div class="flex items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="w-5 h-5 text-primabg-primaryorange" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+
+                                        <span class="mx-4 text-gray-700 dark:text-gray-300">Priority Support</span>
+                                    </div>
+
+                                    <!-- <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primabg-primaryorange" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+
+                                    <span class="mx-4 text-gray-700 dark:text-gray-300">Mobile app</span>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primabg-primaryorange" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+
+                                    <span class="mx-4 text-gray-700 dark:text-gray-300">Unlimited users</span>
+                                </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+
+<!-- Web Development Packages Section -->
+<!-- <section class="pt-[5rem] pb-[5rem] bg-black">
+    <div class="px-4 mx-auto max-w-screen-xl lg:px-6">
+        <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+            <div class="blob"></div>
+            <h2 class="font-eurostile text-[30px] lg:text-[48px] font-semibold text-center">Flexible Options Designed for Your Business Success</span></h2>
+            <p class="font-inter text-gray-500 text-[14px] md:text-[16px] lg:text-[18px] leading-[18px] md:leading-normal mt-4">Investing in clear financial management shouldn't break the bank. We offer a range of service packages tailored to suit businesses of all sizes and complexities. Review our options to find the ideal level of support that aligns with your goals and budget. Please contact us to receive a personalized quote tailored to your specific business needs.</p>
+        </div>
+    </div>
+    <div class="flex flex-col justify-between items-center lg:flex-row lg:items-start">
+    
+        <div class="w-full flex-1 mt-8 p-8 order-2 bg-[#1A1A1A] shadow-xl rounded-3xl sm:w-96 lg:w-full lg:order-1 lg:rounded-r-none">
+          <div class="mb-7 pb-7 flex items-center border-b border-gray-300">
+            <img src="https://res.cloudinary.com/williamsondesign/abstract-1.jpg"  alt="" class="rounded-3xl w-20 h-20" />
+            <div class="ml-5">
+              <span class="block text-2xl font-semibold">Basic</span>
+              <span><span class="font-medium text-gray-500 text-xl align-top">$&thinsp;</span><span class="text-3xl font-bold">10 </span></span><span class="text-gray-500 font-medium">/ user</span>
+            </div>
+          </div>
+          <ul class="mb-7 font-medium text-gray-500">
+            <li class="flex text-lg mb-2">
+              <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+              <span class="ml-3">Get started with <span class="text-black">messaging</span></span>
+            </li>
+            <li class="flex text-lg mb-2">
+              <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+              <span class="ml-3">Flexible <span class="text-black">team meetings</span></span>
+            </li>
+            <li class="flex text-lg">
+              <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+              <span class="ml-3"><span class="text-black">5 TB</span> cloud storage</span>
+            </li>
+          </ul>
+          <a href="#/" class="flex justify-center items-center bg-indigo-600 rounded-xl py-5 px-4 text-center text-white text-xl">
+            Choose Plan
+            <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
+          </a>
+        </div>
+        
+        <div class="w-full flex-1 p-8 order-1 shadow-xl rounded-3xl bg-gray-900 text-gray-400 sm:w-96 lg:w-full lg:order-2 lg:mt-0">
+          <div class="mb-8 pb-8 flex items-center border-b border-gray-600">
+            <img src="https://res.cloudinary.com/williamsondesign/abstract-2.jpg"  alt="" class="rounded-3xl w-20 h-20" />
+            <div class="ml-5">
+              <span class="block text-3xl font-semibold text-white">Startup</span>
+              <span><span class="font-medium text-xl align-top">$&thinsp;</span><span class="text-3xl font-bold text-white">24 </span></span><span class="font-medium">/ user</span>
+            </div>
+          </div>
+          <ul class="mb-10 font-medium text-xl">
+            <li class="flex mb-6">
+              <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" />
+              <span class="ml-3">All features in <span class="text-white">Basic</span></span>
+            </li>
+            <li class="flex mb-6">
+              <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" />
+              <span class="ml-3">Flexible <span class="text-white">call scheduling</span></span>
+            </li>
+            <li class="flex">
+              <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" />
+              <span class="ml-3"><span class="text-white">15 TB</span> cloud storage</span>
+            </li>
+          </ul>
+          <a href="#/" class="flex justify-center items-center bg-indigo-600 rounded-xl py-6 px-4 text-center text-white text-2xl">
+            Choose Plan
+            <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
+          </a>
+        </div>
+        
+        <div class="w-full flex-1 mt-8 p-8 order-3 bg-white shadow-xl rounded-3xl sm:w-96 lg:w-full lg:order-3 lg:rounded-l-none">
+          <div class="mb-7 pb-7 flex items-center border-b border-gray-300">
+            <img src="https://res.cloudinary.com/williamsondesign/abstract-3.jpg"  alt="" class="rounded-3xl w-20 h-20" />
+            <div class="ml-5">
+              <span class="block text-2xl font-semibold">Enterprise</span>
+              <span><span class="font-medium text-gray-500 text-xl align-top">$&thinsp;</span><span class="text-3xl font-bold">35 </span></span><span class="text-gray-500 font-medium">/ user</span>
+            </div>
+          </div>
+          <ul class="mb-7 font-medium text-gray-500">
+            <li class="flex text-lg mb-2">
+              <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+              <span class="ml-3">All features in <span class="text-black">Startup</span></span>
+            </li>
+            <li class="flex text-lg mb-2">
+              <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+              <span class="ml-3">Growth <span class="text-black">oriented</span></span>
+            </li>
+            <li class="flex text-lg">
+              <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
+              <span class="ml-3"><span class="text-black">Unlimited</span> cloud storage</span>
+            </li>
+          </ul>
+          <a href="#/" class="flex justify-center items-center bg-indigo-600 rounded-xl py-5 px-4 text-center text-white text-xl">
+            Choose Plan
+            <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
+          </a>
+        </div>
+        
+      </div>
+</section> -->
+<!-- Web Hosting Plans Section -->
+<!-- <section class="pt-[5rem] pb-[5rem] bg-black">
+    <div class="px-4 mx-auto max-w-screen-xl lg:px-6">
+        <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
+            <h2 class="font-eurostile text-[30px] lg:text-[48px] font-semibold text-center">Flexible Options Designed for Your Business Success</span></h2>
+            <p class="font-inter text-gray-500 text-[14px] md:text-[16px] lg:text-[18px] leading-[18px] md:leading-normal mt-4">Investing in clear financial management shouldn't break the bank. We offer a range of service packages tailored to suit businesses of all sizes and complexities. Review our options to find the ideal level of support that aligns with your goals and budget. Please contact us to receive a personalized quote tailored to your specific business needs.</p>
+        </div>
+    </div>
+</section> -->
+<!-- Call to Action Section -->
+<section class="relative w-full h-[500px] bg-white dark:bg-[#0a0c19] overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+        <img src="{{ url_for('static', filename='images/consultation-section-full-image.jpg') }}" alt="Background"
+            class="w-full h-full object-cover grayscale" />
+        <!-- Orange Overlay -->
+        <div class="absolute inset-0 bg-primaryorange opacity-30"></div>
+    </div>
+
+    <!-- Centered Card -->
+    <div class="relative z-10 flex items-center justify-center h-full">
+        <div class="bg-black text-white p-8 rounded-xl w-full max-w-2xl md:w-2/6 shadow-xl text-center">
+            <h2 class="font-montserrat text-[30px] lg:text-[58px] font-semibold text-left lg:text-left text-white">Need
+                Help Choosing?</h2>
+            <p class="mb-6 font-inter text-gray-300 text-left">Schedule a free consultation now, and we will figure out
+                which package and/or plan is right for your situation!</p>
+            <button class="quidel-button">
+                <span>Schedule Free Consultation</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+<section class="bg-white dark:bg-[#0a0c19]">
+    <div class="container px-6 py-12 mx-auto">
+        <div class="lg:flex lg:items-center lg:-mx-6">
+            <div class="lg:w-1/2 lg:mx-6">
+
+
+                <!-- Left Side: Placeholder / Image -->
+                <div class="relative bg-orange-400 h-[400px] md:h-[500px] flex items-center justify-center z-1">
+                    <div
+                        class="relative h-[400px] md:h-[500px] flex items-center justify-center corner-frame corner-frame-tr corner-frame-bl corner-frame-white">
+                        <img src="{{ url_for('static', filename='images/home-about-us-partnership-image.jpg') }}"
+                            alt="Hero Image" class="relative w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 lg:w-1/2 lg:mx-6">
+                <div
+                    class="w-full px-8 py-10 mx-auto overflow-hidden bg-white rounded-lg shadow-2xl dark:bg-gray-900 lg:max-w-xl shadow-gray-300/50 dark:shadow-black/50">
+                    <h2 class="text-2xl font-semibold text-gray-800 capitalize dark:text-white lg:text-3xl">
+                        Contact us for <br> more info
+                    </h2>
+                    <h3 class="text-lg font-medium text-gray-700">What do you want to ask</h3>
+
+                    <form class="mt-6">
+                        <div class="flex-1">
+                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Full Name</label>
+                            <input type="text" placeholder="John Doe"
+                                class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-primtext-primaryorange dark:focus:border-primtext-primaryorange focus:ring-primtext-primaryorange focus:outline-none focus:ring focus:ring-opacity-40" />
+                        </div>
+
+                        <div class="flex-1 mt-6">
+                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email address</label>
+                            <input type="email" placeholder="johndoe@example.com"
+                                class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-primtext-primaryorange dark:focus:border-primtext-primaryorange focus:ring-primtext-primaryorange focus:outline-none focus:ring focus:ring-opacity-40" />
+                        </div>
+
+                        <div class="w-full mt-6">
+                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Message</label>
+                            <textarea
+                                class="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48 dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-primtext-primaryorange dark:focus:border-primtext-primaryorange focus:ring-primtext-primaryorange focus:outline-none focus:ring focus:ring-opacity-40"
+                                placeholder="Message"></textarea>
+                        </div>
+
+                        <button
+                            class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-primaryorange rounded-md hover:bg-primtext-primaryorange focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+                            get in touch
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="p-6 pt-[5rem] pb-[5rem] relative flex flex-col bg-black gap-16 items-center overflow-hidden">
+    <!-- FAQ Title -->
+    <div class="mx-auto max-w-screen-md text-center mb-5 z-2">
+        <!-- <div class="blob"></div> -->
+        <h2 class="font-eurostile text-[30px] lg:text-[48px] font-semibold text-center">Common Questions About Our
+            Services</h2>
+    </div>
+    <div class='accordion-group w-full md:w-4/5 lg:w-3/5 z-2' data-accordion="default-accordion">
+        <!-- FAQ Question 1 -->
+        <div class='accordion pb-4 border-b border-solid border-gray-200' id='basic-heading-one-default'>
+            <button
+                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
+                aria-controls='basic-collapse-one-default'>
+                <h5 class="text-left">What types of businesses do you typically work with?</h5>
+                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen accordion-active:rotate-180'
+                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <path
+                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
+                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
+                </svg>
+            </button>
+            <div id='basic-collapse-one-default'
+                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
+                aria-labelledby='basic-heading-one-default'>
+                <p class='text-base text-black leading-6'>We partner with a diverse range of small to medium-sized
+                    businesses across various industries. Our services are adaptable to meet the unique needs of each
+                    client, whether you're a startup, a growing enterprise, or an established company.</p>
+            </div>
+        </div>
+        <!-- FAQ Question 2 -->
+        <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-two-default'>
+            <button
+                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
+                aria-controls='basic-collapse-two-default'>
+                <h5 class="text-left">What bookkeeping services do you offer?</h5>
+                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen  accordion-active:rotate-180'
+                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <path
+                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
+                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
+                </svg>
+            </button>
+            <div id='basic-collapse-two-default'
+                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
+                aria-labelledby='basic-heading-two-default'>
+                <p class='text-sm text-black leading-6'>Our bookkeeping services are comprehensive and can be tailored
+                    to your needs. They typically include managing daily transactions, reconciling bank and credit card
+                    accounts, generating financial statements (such as profit and loss statements and balance sheets),
+                    and providing clear and organized financial records. We can handle this on a daily, weekly, or
+                    monthly basis.</p>
+            </div>
+        </div>
+        <!-- FAQ Question 3 -->
+        <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-three-default'>
+            <button
+                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
+                aria-controls='basic-collapse-three-default'>
+                <h5 class="text-left">How often will I receive financial reports?</h5>
+                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen  accordion-active:rotate-180'
+                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <path
+                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
+                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
+                </svg>
+            </button>
+            <div id='basic-collapse-three-default'
+                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
+                aria-labelledby='basic-heading-three-default'>
+                <p class='text-sm text-black leading-6'>The frequency of your financial reports depends on your
+                    preferences and business needs. We can provide reports on a monthly, quarterly, or custom schedule
+                    that works best for you, keeping you informed about your financial performance.</p>
+            </div>
+        </div>
+        <!-- FAQ Question 4 -->
+        <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-three-default'>
+            <button
+                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
+                aria-controls='basic-collapse-three-default'>
+                <h5 class="text-left">What accounting software do you work with?</h5>
+                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen  accordion-active:rotate-180'
+                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <path
+                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
+                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
+                </svg>
+            </button>
+            <div id='basic-collapse-three-default'
+                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
+                aria-labelledby='basic-heading-three-default'>
+                <p class='text-sm text-black leading-6'>We are proficient in a variety of popular accounting software
+                    platforms, including QuickBooks Online, Xero, and others. We can also adapt to other software you
+                    may already be using. Our goal is to integrate seamlessly with your existing systems.</p>
+            </div>
+        </div>
+        <!-- FAQ Question 5 -->
+        <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-three-default'>
+            <button
+                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
+                aria-controls='basic-collapse-three-default'>
+                <h5 class="text-left">What is the process for getting started with Balanced Accountant?</h5>
+                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen  accordion-active:rotate-180'
+                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <path
+                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
+                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
+                </svg>
+            </button>
+            <div id='basic-collapse-three-default'
+                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
+                aria-labelledby='basic-heading-three-default'>
+                <p class='text-sm text-black leading-6'>Getting started is easy! We typically begin with a complimentary
+                    consultation to understand your business needs and objectives. From there, we'll outline a
+                    customized plan and discuss the next steps for onboarding.</p>
+            </div>
+        </div>
+        <!-- FAQ Question 6 -->
+        <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-three-default'>
+            <button
+                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
+                aria-controls='basic-collapse-three-default'>
+                <h5 class="text-left">How does your payroll service work?</h5>
+                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen  accordion-active:rotate-180'
+                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <path
+                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
+                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
+                </svg>
+            </button>
+            <div id='basic-collapse-three-default'
+                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
+                aria-labelledby='basic-heading-three-default'>
+                <p class='text-sm text-black leading-6'>Our payroll services streamline the process of paying your
+                    employees and contractors accurately and on time. This includes calculating wages, withholding
+                    deductions, generating pay stubs, and managing payroll reporting. We ensure compliance with relevant
+                    regulations.</p>
+            </div>
+        </div>
+        <!-- FAQ Question 7 -->
+        <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-three-default'>
+            <button
+                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
+                aria-controls='basic-collapse-three-default'>
+                <h5 class="text-left">What are the benefits of outsourcing my bookkeeping and accounting?</h5>
+                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen  accordion-active:rotate-180'
+                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <path
+                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
+                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
+                </svg>
+            </button>
+            <div id='basic-collapse-three-default'
+                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
+                aria-labelledby='basic-heading-three-default'>
+                <p class='text-sm text-black leading-6'>Outsourcing these tasks can save you time and money, reduce
+                    errors, and provide you with valuable insights into your business's financial health. It enables you
+                    to focus on your core business activities while ensuring your finances are in the hands of experts.
+                    It also provides access to expertise and ensures accuracy, consistency, and compliance without the
+                    overhead of hiring an in-house team.</p>
+            </div>
+        </div>
+        <!-- FAQ Question 8 -->
+        <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-three-default'>
+            <button
+                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
+                aria-controls='basic-collapse-three-default'>
+                <h5 class="text-left">How do you communicate with your clients?</h5>
+                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen  accordion-active:rotate-180'
+                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <path
+                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
+                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
+                </svg>
+            </button>
+            <div id='basic-collapse-three-default'
+                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
+                aria-labelledby='basic-heading-three-default'>
+                <p class='text-sm text-black leading-6'>We believe in transparent and consistent communication. We are
+                    available via email and phone, and we can also schedule regular meetings or video conferences to
+                    discuss your financial reports and any questions you may have.</p>
+            </div>
+        </div>
+        <!-- FAQ Question 9 -->
+        <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-three-default'>
+            <button
+                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
+                aria-controls='basic-collapse-three-default'>
+                <h5 class="text-left">What are the benefits of having well-maintained bookkeeping records?</h5>
+                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen  accordion-active:rotate-180'
+                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <path
+                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
+                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
+                </svg>
+            </button>
+            <div id='basic-collapse-three-default'
+                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
+                aria-labelledby='basic-heading-three-default'>
+                <p class='text-sm text-black leading-6'>Accurate and up-to-date bookkeeping provides a clear picture of
+                    your business's financial health. This enables you to make informed decisions, track profitability,
+                    manage cash flow effectively, and secure funding if needed. It also simplifies year-end processes.
+                </p>
+            </div>
+        </div>
+        <!-- FAQ Question 10 -->
+        <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-three-default'>
+            <button
+                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
+                aria-controls='basic-collapse-three-default'>
+                <h5 class="text-left">Can you help me understand my financial reports?</h5>
+                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen  accordion-active:rotate-180'
+                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <path
+                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
+                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
+                </svg>
+            </button>
+            <div id='basic-collapse-three-default'
+                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
+                aria-labelledby='basic-heading-three-default'>
+                <p class='text-sm text-black leading-6'>Absolutely. We believe in empowering our clients with financial
+                    literacy and education. We will not only provide you with regular reports but also take the time to
+                    explain them clearly, ensuring you understand the key insights and their impact on your business.
+                </p>
+            </div>
+        </div>
+        <!-- FAQ Question 11 -->
+        <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-three-default'>
+            <button
+                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
+                aria-controls='basic-collapse-three-default'>
+                <h5 class="text-left">Do you offer customized bookkeeping packages?</h5>
+                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen  accordion-active:rotate-180'
+                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <path
+                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
+                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
+                </svg>
+            </button>
+            <div id='basic-collapse-three-default'
+                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
+                aria-labelledby='basic-heading-three-default'>
+                <p class='text-sm text-black leading-6'>Yes, we understand that every business has unique needs. We can
+                    tailor our bookkeeping services to create a package that aligns perfectly with your specific
+                    requirements and budget. Let's discuss your needs during our consultation.</p>
+            </div>
+        </div>
+        <!-- FAQ Question 12 -->
+        <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-three-default'>
+            <button
+                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
+                aria-controls='basic-collapse-three-default'>
+                <h5 class="text-left">What is the difference between bookkeeping and accounting?</h5>
+                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen  accordion-active:rotate-180'
+                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <path
+                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
+                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
+                </svg>
+            </button>
+            <div id='basic-collapse-three-default'
+                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
+                aria-labelledby='basic-heading-three-default'>
+                <p class='text-sm text-black leading-6'>Bookkeeping is the day-to-day process of recording financial
+                    transactions. Accounting involves summarizing, interpreting, and analyzing financial data to provide
+                    insights and reports for decision-making. We offer both services to provide a comprehensive
+                    financial overview.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 28,
+        centeredSlides: true,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                centeredSlides: false,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 28,
+                centeredSlides: true,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 32,
+            },
+        },
+    });
+</script>
+<script>
+    function toggleReadMore(button) {
+        const reviewCard = button.closest('.review-card');
+        const reviewText = reviewCard.querySelector('.review-text');
+
+        if (reviewText.classList.contains('h-24')) {
+            reviewText.classList.remove('h-24', 'overflow-hidden');
+            button.textContent = 'Read less';
+            reviewCard.style.height = 'auto';
+        } else {
+            reviewText.classList.add('h-24', 'overflow-hidden');
+            button.textContent = 'Read more';
+            reviewCard.style.height = '';
+        }
+    }
+</script>
+<script>
+    document.querySelectorAll('.accordion-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.nextElementSibling;
+            const isOpen = content.style.maxHeight; // store current state
+
+            // Close all other accordion contents
+            document.querySelectorAll('.accordion-content').forEach(c => {
+                if (c !== content) {
+                    c.style.maxHeight = null;
+                }
+            });
+
+            // Collapse all other SVGs
+            document.querySelectorAll('.accordion-toggle svg').forEach(svg => {
+                svg.classList.remove('rotate-180');
+            });
+
+            // Toggle current accordion
+            if (isOpen) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                const svg = button.querySelector('svg');
+                svg.classList.add('rotate-180');
+            }
+        });
+    });
+
+
+</script>
+<script>
+    document.querySelectorAll('.group').forEach(card => {
+        const video = card.querySelector('video');
+        card.addEventListener('mouseenter', () => {
+            if (video) {
+                video.currentTime = 0;
+                video.play();
+            }
+        });
+        card.addEventListener('mouseleave', () => {
+            if (video) video.pause();
+        });
+    });
+</script>
+
+{% endblock %}
