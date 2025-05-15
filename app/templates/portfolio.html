@@ -1,994 +1,404 @@
-
-    <!-- <meta name="color-scheme" content="dark light">Canonical URLPrimary Meta Tags -->
+<!-- <meta name="color-scheme" content="dark light">Canonical URLPrimary Meta Tags -->
 <!-- <body class="bg-gray-50 dark:bg-gray-950"> -->
-    {% extends 'base.html' %}
+{% extends 'base.html' %}
+{% block extra_head %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/portfolio.css') }}">
+{% endblock extra_head %}
 {% block content %}
-    <section class="bg-white pb-16 pt-28 sm:pt-32 md:pb-20 md:pt-32 dark:bg-transparent">
-        <div class="absolute inset-0 isolate contain-strict">
-            <div
-                class="absolute left-0 top-0 h-[1280px] w-[560px] -translate-y-[350px] -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,hsla(0,0%,85%,.08)_0,hsla(0,0%,55%,.02)_50%,hsla(0,0%,45%,0)_80%)]">
-            </div>
-            <div
-                class="absolute left-0 top-0 h-[1280px] w-[240px] -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.06)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)] [translate:5%_-50%]">
-            </div>
-            <div
-                class="absolute left-0 top-0 h-[1280px] w-[240px] -translate-y-[350px] -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]">
-            </div>
+<section class="bg-white pb-16 pt-28 sm:pt-32 md:pb-20 md:pt-32 dark:bg-transparent">
+    <div class="absolute inset-0 isolate contain-strict">
+        <div
+            class="absolute left-0 top-0 h-[1280px] w-[560px] -translate-y-[350px] -rotate-45 rounded-full bg-[radial-gradient(68.54%_68.72%_at_55.02%_31.46%,hsla(0,0%,85%,.08)_0,hsla(0,0%,55%,.02)_50%,hsla(0,0%,45%,0)_80%)]">
         </div>
-        <div class="mx-auto max-w-5xl px-6 lg:px-4">
-            <div class="relative mx-auto max-w-3xl text-center"> <a
-                    href="https://tailus.lemonsqueezy.com/buy/c5ae32bd-2455-4f0c-9ed2-c01ded19a4c2"
-                    data-rounded="xlarge" data-theme="dark"
-                    class="rounded-btn mx-auto mb-12 block w-fit border bg-gray-950 p-0.5 text-left shadow-xl duration-200 hover:scale-[1.025]">
-                    <div class="grid gap-4 [grid-template-columns:auto_1fr]"> <img
-                            src="/_astro/tls-bundle-thumb.BmZ0LYYR_ZHVei2.webp"
-                            class="h-fit rounded-[calc(var(--btn-radius)-2.5px)] w-24" alt="Tailus UI templates bundle"
-                            width="756" height="512" loading="lazy" decoding="async">
-                        <div class="pr-4 pt-2.5">
-                            <div class="text-title text-sm font-medium">Tailus UI Templates Bundle</div>
-                            <p class="text-body mt-0.5 text-sm">All our modern templates for <span
-                                    class="line-through opacity-50">$537</span> $97.99</p>
-                        </div>
-                    </div>
-                </a>
-                <h1 class="text-title text-balance text-4xl font-bold sm:text-6xl">Build converting websites in minutes
-                </h1>
-                <p class="text-[--body-text-color] text-lg font-normal my-6 mx-auto max-w-xl">Ready-to-use templates
-                    powered by TailwindCSS and modern tools, enabling fast, scalable, and beautiful web design.</p>
-            </div>
+        <div
+            class="absolute left-0 top-0 h-[1280px] w-[240px] -rotate-45 rounded-full bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.06)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)] [translate:5%_-50%]">
         </div>
-    </section>
-    <section class="relative z-10 border-y border-t-gray-950/5 bg-white dark:border-gray-800 dark:bg-transparent">
-        <div class="mx-auto max-w-5xl px-6 lg:px-4">
-            <h2 class="sr-only">Features</h2>
-            <div class="grid gap-x-4 gap-y-6 py-16 sm:grid-cols-2 md:mx-0 md:grid-cols-3 lg:-mx-4 lg:gap-x-12 lg:px-4">
-                <div>
-                    <div class="flex items-center gap-2"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                            fill="currentColor" class="size-4">
-                            <path fill-rule="evenodd"
-                                d="M9.58 1.077a.75.75 0 0 1 .405.82L9.165 6h4.085a.75.75 0 0 1 .567 1.241l-6.5 7.5a.75.75 0 0 1-1.302-.638L6.835 10H2.75a.75.75 0 0 1-.567-1.241l6.5-7.5a.75.75 0 0 1 .897-.182Z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <h3 class="text-title text-sm font-medium">Easy To Use</h3>
-                    </div>
-                    <p class="mt-4 text-sm">Download your template and start building your website effortlessly.</p>
-                </div>
-                <div>
-                    <div class="flex items-center gap-2"> <svg class="size-4" xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 16 16" fill="currentColor">
-                            <path fill-rule="evenodd"
-                                d="M11.013 2.513a1.75 1.75 0 0 1 2.475 2.474L6.226 12.25a2.751 2.751 0 0 1-.892.596l-2.047.848a.75.75 0 0 1-.98-.98l.848-2.047a2.75 2.75 0 0 1 .596-.892l7.262-7.261Z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <h3 class="text-title text-sm font-medium">Customizable</h3>
-                    </div>
-                    <p class="mt-4 text-sm">Easily adjust components with utilities or use built-in attributes to modify
-                        your theme.</p>
-                </div>
-                <div>
-                    <div class="flex items-center gap-2"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                            fill="currentColor" class="size-4">
-                            <path fill-rule="evenodd"
-                                d="M5 4a.75.75 0 0 1 .738.616l.252 1.388A1.25 1.25 0 0 0 6.996 7.01l1.388.252a.75.75 0 0 1 0 1.476l-1.388.252A1.25 1.25 0 0 0 5.99 9.996l-.252 1.388a.75.75 0 0 1-1.476 0L4.01 9.996A1.25 1.25 0 0 0 3.004 8.99l-1.388-.252a.75.75 0 0 1 0-1.476l1.388-.252A1.25 1.25 0 0 0 4.01 6.004l.252-1.388A.75.75 0 0 1 5 4ZM12 1a.75.75 0 0 1 .721.544l.195.682c.118.415.443.74.858.858l.682.195a.75.75 0 0 1 0 1.442l-.682.195a1.25 1.25 0 0 0-.858.858l-.195.682a.75.75 0 0 1-1.442 0l-.195-.682a1.25 1.25 0 0 0-.858-.858l-.682-.195a.75.75 0 0 1 0-1.442l.682-.195a1.25 1.25 0 0 0 .858-.858l.195-.682A.75.75 0 0 1 12 1ZM10 11a.75.75 0 0 1 .728.568.968.968 0 0 0 .704.704.75.75 0 0 1 0 1.456.968.968 0 0 0-.704.704.75.75 0 0 1-1.456 0 .968.968 0 0 0-.704-.704.75.75 0 0 1 0-1.456.968.968 0 0 0 .704-.704A.75.75 0 0 1 10 11Z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <h3 class="text-title text-sm font-medium">Modern Design</h3>
-                    </div>
-                    <p class="mt-4 text-sm">Follows modern design principles to create usable, accessible and stunning
-                        websites.</p>
-                </div>
-            </div>
+        <div
+            class="absolute left-0 top-0 h-[1280px] w-[240px] -translate-y-[350px] -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]">
         </div>
-    </section>
-    <section class="dark:bg-gray-950">
-        <div class="mx-auto max-w-5xl px-6 lg:px-4">
-            <div class="relative">
-                <script>(() => { var l = (s, i, o) => { let r = async () => { await (await s())() }, t = typeof i.value == "object" ? i.value : void 0, c = { rootMargin: t == null ? void 0 : t.rootMargin }, n = new IntersectionObserver(e => { for (let a of e) if (a.isIntersecting) { n.disconnect(), r(); break } }, c); for (let e of o.children) n.observe(e) }; (self.Astro || (self.Astro = {})).visible = l; window.dispatchEvent(new Event("astro:visible")); })();</script>
-                <astro-island uid="1tM9LM" prefix="r0" component-url="/_astro/TemplateBlock.BehvWR5m.js"
-                    component-export="default" renderer-url="/_astro/client.BfozEI4p.js"
-                    props="{&quot;template&quot;:[0,{&quot;priority&quot;:[0,1],&quot;name&quot;:[0,&quot;ampire&quot;],&quot;title&quot;:[0,&quot;Modern Sass website&quot;],&quot;screenshots&quot;:[1,[[0,&quot;/templates/ampire/ampire-cover.webp&quot;],[0,&quot;/templates/ampire/ampire-cover-9.webp&quot;],[0,&quot;/templates/ampire/ampire-cover-3.webp&quot;]]],&quot;shortDescription&quot;:[0,&quot;Ampire is a modern and complete Tailwind CSS template ideal for any SaaS business or startup.&quot;],&quot;purchaseLink&quot;:[0,&quot;https://tailus.lemonsqueezy.com/buy/d9d74f3f-9378-497a-9698-fbdacc93f0e0&quot;],&quot;previewLink&quot;:[0,&quot;https://ampire.tailus.io/&quot;],&quot;price&quot;:[0,&quot;From $19.99&quot;],&quot;rating&quot;:[0,{&quot;rate&quot;:[0,5],&quot;count&quot;:[0,32]}],&quot;stack&quot;:[1,[[0,&quot;html&quot;]]]}],&quot;slug&quot;:[0,&quot;ampire&quot;]}"
-                    ssr="" client="visible" opts="{&quot;name&quot;:&quot;TemplateGallery&quot;,&quot;value&quot;:true}"
-                    await-children="">
-                    <div
-                        class="border-y border-t-white pb-6 [grid-template-columns:auto_1fr] *:py-12 md:grid md:pb-0 md:*:py-8 lg:*:py-16 dark:border-t-transparent">
-                        <div
-                            class="border-r-none flex flex-col gap-6 divide-y py-2 md:w-[18rem] md:border-r md:pr-6 lg:gap-12 lg:py-12 lg:pr-12">
-                            <div class="lg:pt-6">
-                                <div class="flex items-end justify-between">
-                                    <h1
-                                        class="block text-[--title-text-color] text-lg font-medium my-0 capitalize group-hover:text-primary-600 dark:group-hover:text-primary-400">
-                                        ampire</h1>
-                                    <p class="text-[--body-text-color] text-sm font-normal my-0">From $19.99</p>
-                                </div>
-                                <div class="mt-6">
-                                    <div class="flex items-center gap-1 text-warning-500"><span><svg class="size-4"
-                                                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                                viewBox="0 0 24 24">
-                                                <g fill="none">
-                                                    <path
-                                                        d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z">
-                                                    </path>
-                                                    <path fill="currentColor"
-                                                        d="M10.92 2.868a1.25 1.25 0 0 1 2.16 0l2.795 4.798l5.428 1.176a1.25 1.25 0 0 1 .667 2.054l-3.7 4.141l.56 5.525a1.25 1.25 0 0 1-1.748 1.27L12 19.592l-5.082 2.24a1.25 1.25 0 0 1-1.748-1.27l.56-5.525l-3.7-4.14a1.25 1.25 0 0 1 .667-2.055l5.428-1.176z">
-                                                    </path>
-                                                </g>
-                                            </svg></span><span><svg class="size-4" xmlns="http://www.w3.org/2000/svg"
-                                                width="1em" height="1em" viewBox="0 0 24 24">
-                                                <g fill="none">
-                                                    <path
-                                                        d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z">
-                                                    </path>
-                                                    <path fill="currentColor"
-                                                        d="M10.92 2.868a1.25 1.25 0 0 1 2.16 0l2.795 4.798l5.428 1.176a1.25 1.25 0 0 1 .667 2.054l-3.7 4.141l.56 5.525a1.25 1.25 0 0 1-1.748 1.27L12 19.592l-5.082 2.24a1.25 1.25 0 0 1-1.748-1.27l.56-5.525l-3.7-4.14a1.25 1.25 0 0 1 .667-2.055l5.428-1.176z">
-                                                    </path>
-                                                </g>
-                                            </svg></span><span><svg class="size-4" xmlns="http://www.w3.org/2000/svg"
-                                                width="1em" height="1em" viewBox="0 0 24 24">
-                                                <g fill="none">
-                                                    <path
-                                                        d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z">
-                                                    </path>
-                                                    <path fill="currentColor"
-                                                        d="M10.92 2.868a1.25 1.25 0 0 1 2.16 0l2.795 4.798l5.428 1.176a1.25 1.25 0 0 1 .667 2.054l-3.7 4.141l.56 5.525a1.25 1.25 0 0 1-1.748 1.27L12 19.592l-5.082 2.24a1.25 1.25 0 0 1-1.748-1.27l.56-5.525l-3.7-4.14a1.25 1.25 0 0 1 .667-2.055l5.428-1.176z">
-                                                    </path>
-                                                </g>
-                                            </svg></span><span><svg class="size-4" xmlns="http://www.w3.org/2000/svg"
-                                                width="1em" height="1em" viewBox="0 0 24 24">
-                                                <g fill="none">
-                                                    <path
-                                                        d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z">
-                                                    </path>
-                                                    <path fill="currentColor"
-                                                        d="M10.92 2.868a1.25 1.25 0 0 1 2.16 0l2.795 4.798l5.428 1.176a1.25 1.25 0 0 1 .667 2.054l-3.7 4.141l.56 5.525a1.25 1.25 0 0 1-1.748 1.27L12 19.592l-5.082 2.24a1.25 1.25 0 0 1-1.748-1.27l.56-5.525l-3.7-4.14a1.25 1.25 0 0 1 .667-2.055l5.428-1.176z">
-                                                    </path>
-                                                </g>
-                                            </svg></span><span><svg class="size-4" xmlns="http://www.w3.org/2000/svg"
-                                                width="1em" height="1em" viewBox="0 0 24 24">
-                                                <g fill="none">
-                                                    <path
-                                                        d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z">
-                                                    </path>
-                                                    <path fill="currentColor"
-                                                        d="M10.92 2.868a1.25 1.25 0 0 1 2.16 0l2.795 4.798l5.428 1.176a1.25 1.25 0 0 1 .667 2.054l-3.7 4.141l.56 5.525a1.25 1.25 0 0 1-1.748 1.27L12 19.592l-5.082 2.24a1.25 1.25 0 0 1-1.748-1.27l.56-5.525l-3.7-4.14a1.25 1.25 0 0 1 .667-2.055l5.428-1.176z">
-                                                    </path>
-                                                </g>
-                                            </svg></span><span
-                                            class="mx-1 size-1 rounded-full bg-[--ui-border-color]"></span>
-                                        <p class="text-[--caption-text-color] text-sm font-normal">32<!-- --> ratings
-                                        </p>
-                                    </div><span class="mx-1 size-1 rounded-full bg-[--ui-border-color]"></span>
-                                </div>
-                                <p class="text-[--body-text-color] text-sm font-normal nb my-0">Ampire is a modern and
-                                    complete Tailwind CSS template ideal for any SaaS business or startup.</p>
-                                <div class="my-6 flex gap-1">
-                                    <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"><svg
-                                            class="size-5 transition duration-200 h-4 w-4 -mb-0.5"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                                            <path fill="#e44d26"
-                                                d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198l-45.019 12.48z">
-                                            </path>
-                                            <path fill="#f16529" d="m64 116.8l36.378-10.086l8.559-95.878H64z"></path>
-                                            <path fill="#ebebeb"
-                                                d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692l3.382 37.927H64zm0 35.743l-.061.017l-15.327-4.14l-.979-10.975H33.816l1.928 21.609l28.193 7.826l.063-.017z">
-                                            </path>
-                                            <path fill="#fff"
-                                                d="M63.952 52.455v13.763h16.947l-1.597 17.849l-15.35 4.143v14.319l28.215-7.82l.207-2.325l3.234-36.233l.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092l.628-6.978l.329-3.692z">
-                                            </path>
-                                        </svg></div>
-                                </div>
-                                <div class="mt-6 grid grid-cols-2 gap-3"><a
-                                        href="https://tailus.lemonsqueezy.com/buy/d9d74f3f-9378-497a-9698-fbdacc93f0e0"
-                                        class="btn sz-sm variant-primary"><span class="btn-label">Buy Now</span></a><a
-                                        href="/preview/ampire" target="_blank"
-                                        class="btn sz-sm variant-outlined"><span>Live Preview</span></a></div>
-                            </div>
-                            <div class="hidden md:grid md:grid-cols-3 md:gap-3 md:pt-6 lg:pt-12"><button
-                                    aria-label="ampire screenshot" data-state="active"
-                                    class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                        class="size-full" src="/templates/ampire/ampire-cover.webp"
-                                        alt="ampire screenshot 0" loading="lazy" width="560"
-                                        height="560" /></button><button aria-label="ampire screenshot"
-                                    data-state="false"
-                                    class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                        class="size-full" src="/templates/ampire/ampire-cover-9.webp"
-                                        alt="ampire screenshot 1" loading="lazy" width="560"
-                                        height="560" /></button><button aria-label="ampire screenshot"
-                                    data-state="false"
-                                    class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                        class="size-full" src="/templates/ampire/ampire-cover-3.webp"
-                                        alt="ampire screenshot 2" loading="lazy" width="560" height="560" /></button>
-                            </div>
-                        </div><a href="/templates/ampire"
-                            class="relative border-white md:border-l md:pl-6 lg:pl-12 dark:border-transparent"><img
-                                class="bg-ui tls-shadow rounded-card h-full object-cover object-top shadow-gray-950/[0.03] [--ui-shadow-border:var(--ui-border-color)]"
-                                src="/templates/ampire/ampire-cover.webp" alt="tailus ampire template screenshot"
-                                width="3200" height="2400" style="opacity:0;will-change:opacity" /></a>
-                    </div><!--astro:end-->
-                </astro-island><astro-island uid="1nf5rV" prefix="r1" component-url="/_astro/TemplateBlock.BehvWR5m.js"
-                    component-export="default" renderer-url="/_astro/client.BfozEI4p.js"
-                    props="{&quot;template&quot;:[0,{&quot;priority&quot;:[0,2],&quot;name&quot;:[0,&quot;oxymor-ns&quot;],&quot;title&quot;:[0,&quot;Sleek landing page&quot;],&quot;screenshots&quot;:[1,[[0,&quot;/templates/oxymor/ns-home.webp&quot;],[0,&quot;/templates/oxymor/ns-bento.webp&quot;],[0,&quot;/templates/oxymor/ns-pricing-faqs.webp&quot;]]],&quot;shortDescription&quot;:[0,&quot;Sleek SaaS landing page template designed to showcase your product, app, or service.&quot;],&quot;purchaseLink&quot;:[0,&quot;https://tailus.lemonsqueezy.com/buy/c42595d2-42f3-4a55-84d3-ea5cda979bc5&quot;],&quot;previewLink&quot;:[0,&quot;https://oxymor-ns.tailus.io/&quot;],&quot;price&quot;:[0,&quot;$39.99&quot;],&quot;stack&quot;:[1,[[0,&quot;html&quot;],[0,&quot;astro&quot;]]]}],&quot;slug&quot;:[0,&quot;oxymor-ns&quot;]}"
-                    ssr="" client="visible" opts="{&quot;name&quot;:&quot;TemplateGallery&quot;,&quot;value&quot;:true}"
-                    await-children="">
-                    <div
-                        class="border-y border-t-white pb-6 [grid-template-columns:auto_1fr] *:py-12 md:grid md:pb-0 md:*:py-8 lg:*:py-16 dark:border-t-transparent">
-                        <div
-                            class="border-r-none flex flex-col gap-6 divide-y py-2 md:w-[18rem] md:border-r md:pr-6 lg:gap-12 lg:py-12 lg:pr-12">
-                            <div class="lg:pt-6">
-                                <div class="flex items-end justify-between">
-                                    <h1
-                                        class="block text-[--title-text-color] text-lg font-medium my-0 capitalize group-hover:text-primary-600 dark:group-hover:text-primary-400">
-                                        oxymor-ns</h1>
-                                    <p class="text-[--body-text-color] text-sm font-normal my-0">$39.99</p>
-                                </div>
-                                <div class="mt-6"></div>
-                                <p class="text-[--body-text-color] text-sm font-normal nb my-0">Sleek SaaS landing page
-                                    template designed to showcase your product, app, or service.</p>
-                                <div class="my-6 flex gap-1">
-                                    <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"><svg
-                                            class="size-5 transition duration-200 h-4 w-4 -mb-0.5"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                                            <path fill="#e44d26"
-                                                d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198l-45.019 12.48z">
-                                            </path>
-                                            <path fill="#f16529" d="m64 116.8l36.378-10.086l8.559-95.878H64z"></path>
-                                            <path fill="#ebebeb"
-                                                d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692l3.382 37.927H64zm0 35.743l-.061.017l-15.327-4.14l-.979-10.975H33.816l1.928 21.609l28.193 7.826l.063-.017z">
-                                            </path>
-                                            <path fill="#fff"
-                                                d="M63.952 52.455v13.763h16.947l-1.597 17.849l-15.35 4.143v14.319l28.215-7.82l.207-2.325l3.234-36.233l.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092l.628-6.978l.329-3.692z">
-                                            </path>
-                                        </svg></div>
-                                    <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"><svg
-                                            class="relative size-[1.125rem] !text-gray-950 dark:!text-white h-4 w-4 -mb-0.5"
-                                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="85"
-                                            height="107" viewBox="0 0 85 107" fill="none">
-                                            <path
-                                                d="M27.5894 91.1365C22.7555 86.7178 21.3444 77.4335 23.3583 70.7072C26.8503 74.948 31.6888 76.2914 36.7005 77.0497C44.4375 78.2199 52.0359 77.7822 59.2232 74.2459C60.0454 73.841 60.8052 73.3027 61.7036 72.7574C62.378 74.714 62.5535 76.6892 62.318 78.6996C61.7452 83.5957 59.3086 87.3778 55.4332 90.2448C53.8835 91.3916 52.2437 92.4167 50.6432 93.4979C45.7262 96.8213 44.3959 100.718 46.2435 106.386C46.2874 106.525 46.3267 106.663 46.426 107C43.9155 105.876 42.0817 104.24 40.6845 102.089C39.2087 99.8193 38.5066 97.3081 38.4696 94.5909C38.4511 93.2686 38.4511 91.9345 38.2733 90.6309C37.8391 87.4527 36.3471 86.0297 33.5364 85.9478C30.6518 85.8636 28.37 87.6469 27.7649 90.4554C27.7187 90.6707 27.6517 90.8837 27.5847 91.1341L27.5894 91.1365Z"
-                                                fill="currentColor"></path>
-                                            <path
-                                                d="M27.5894 91.1365C22.7555 86.7178 21.3444 77.4335 23.3583 70.7072C26.8503 74.948 31.6888 76.2914 36.7005 77.0497C44.4375 78.2199 52.0359 77.7822 59.2232 74.2459C60.0454 73.841 60.8052 73.3027 61.7036 72.7574C62.378 74.714 62.5535 76.6892 62.318 78.6996C61.7452 83.5957 59.3086 87.3778 55.4332 90.2448C53.8835 91.3916 52.2437 92.4167 50.6432 93.4979C45.7262 96.8213 44.3959 100.718 46.2435 106.386C46.2874 106.525 46.3267 106.663 46.426 107C43.9155 105.876 42.0817 104.24 40.6845 102.089C39.2087 99.8193 38.5066 97.3081 38.4696 94.5909C38.4511 93.2686 38.4511 91.9345 38.2733 90.6309C37.8391 87.4527 36.3471 86.0297 33.5364 85.9478C30.6518 85.8636 28.37 87.6469 27.7649 90.4554C27.7187 90.6707 27.6517 90.8837 27.5847 91.1341L27.5894 91.1365Z"
-                                                fill="url(#paint0_linear_1_59)"></path>
-                                            <path
-                                                d="M0 69.5866C0 69.5866 14.3139 62.6137 28.6678 62.6137L39.4901 29.1204C39.8953 27.5007 41.0783 26.3999 42.4139 26.3999C43.7495 26.3999 44.9325 27.5007 45.3377 29.1204L56.1601 62.6137C73.1601 62.6137 84.8278 69.5866 84.8278 69.5866C84.8278 69.5866 60.5145 3.35233 60.467 3.21944C59.7692 1.2612 58.5911 0 57.0029 0H27.8274C26.2392 0 25.1087 1.2612 24.3634 3.21944C24.3108 3.34983 0 69.5866 0 69.5866Z"
-                                                fill="currentColor"></path>
-                                            <defs>
-                                                <linearGradient id="paint0_linear_1_59" x1="22.4702" y1="107"
-                                                    x2="69.1451" y2="84.9468" gradientUnits="userSpaceOnUse">
-                                                    <stop stop-color="#D83333"></stop>
-                                                    <stop offset="1" stop-color="#F041FF"></stop>
-                                                </linearGradient>
-                                            </defs>
-                                        </svg></div>
-                                </div>
-                                <div class="mt-6 grid grid-cols-2 gap-3"><a
-                                        href="https://tailus.lemonsqueezy.com/buy/c42595d2-42f3-4a55-84d3-ea5cda979bc5"
-                                        class="btn sz-sm variant-primary"><span class="btn-label">Buy Now</span></a><a
-                                        href="/preview/oxymor-ns" target="_blank"
-                                        class="btn sz-sm variant-outlined"><span>Live Preview</span></a></div>
-                            </div>
-                            <div class="hidden md:grid md:grid-cols-3 md:gap-3 md:pt-6 lg:pt-12"><button
-                                    aria-label="oxymor-ns screenshot" data-state="active"
-                                    class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                        class="size-full" src="/templates/oxymor/ns-home.webp"
-                                        alt="oxymor-ns screenshot 0" loading="lazy" width="560"
-                                        height="560" /></button><button aria-label="oxymor-ns screenshot"
-                                    data-state="false"
-                                    class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                        class="size-full" src="/templates/oxymor/ns-bento.webp"
-                                        alt="oxymor-ns screenshot 1" loading="lazy" width="560"
-                                        height="560" /></button><button aria-label="oxymor-ns screenshot"
-                                    data-state="false"
-                                    class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                        class="size-full" src="/templates/oxymor/ns-pricing-faqs.webp"
-                                        alt="oxymor-ns screenshot 2" loading="lazy" width="560" height="560" /></button>
-                            </div>
-                        </div><a href="/templates/oxymor-ns"
-                            class="relative border-white md:border-l md:pl-6 lg:pl-12 dark:border-transparent"><img
-                                class="bg-ui tls-shadow rounded-card h-full object-cover object-top shadow-gray-950/[0.03] [--ui-shadow-border:var(--ui-border-color)]"
-                                src="/templates/oxymor/ns-home.webp" alt="tailus oxymor-ns template screenshot"
-                                width="3200" height="2400" style="opacity:0;will-change:opacity" /></a>
-                    </div><!--astro:end-->
-                </astro-island><astro-island uid="Zb8Bx7" prefix="r2" component-url="/_astro/TemplateBlock.BehvWR5m.js"
-                    component-export="default" renderer-url="/_astro/client.BfozEI4p.js"
-                    props="{&quot;template&quot;:[0,{&quot;priority&quot;:[0,2],&quot;name&quot;:[0,&quot;oxymor-st&quot;],&quot;title&quot;:[0,&quot;Polished landing page&quot;],&quot;screenshots&quot;:[1,[[0,&quot;/templates/oxymor/st-home.webp&quot;],[0,&quot;/templates/oxymor/st-bento.webp&quot;],[0,&quot;/templates/oxymor/st-reviews.webp&quot;]]],&quot;shortDescription&quot;:[0,&quot;Polished landing page template for showcasing products, apps, or services.&quot;],&quot;purchaseLink&quot;:[0,&quot;https://tailus.lemonsqueezy.com/buy/11c51a87-67aa-4aac-a641-5112ec511362&quot;],&quot;previewLink&quot;:[0,&quot;https://oxymor-st.tailus.io/&quot;],&quot;price&quot;:[0,&quot;$39.99&quot;],&quot;stack&quot;:[1,[[0,&quot;html&quot;],[0,&quot;astro&quot;]]]}],&quot;slug&quot;:[0,&quot;oxymor-st&quot;]}"
-                    ssr="" client="visible" opts="{&quot;name&quot;:&quot;TemplateGallery&quot;,&quot;value&quot;:true}"
-                    await-children="">
-                    <div
-                        class="border-y border-t-white pb-6 [grid-template-columns:auto_1fr] *:py-12 md:grid md:pb-0 md:*:py-8 lg:*:py-16 dark:border-t-transparent">
-                        <div
-                            class="border-r-none flex flex-col gap-6 divide-y py-2 md:w-[18rem] md:border-r md:pr-6 lg:gap-12 lg:py-12 lg:pr-12">
-                            <div class="lg:pt-6">
-                                <div class="flex items-end justify-between">
-                                    <h1
-                                        class="block text-[--title-text-color] text-lg font-medium my-0 capitalize group-hover:text-primary-600 dark:group-hover:text-primary-400">
-                                        oxymor-st</h1>
-                                    <p class="text-[--body-text-color] text-sm font-normal my-0">$39.99</p>
-                                </div>
-                                <div class="mt-6"></div>
-                                <p class="text-[--body-text-color] text-sm font-normal nb my-0">Polished landing page
-                                    template for showcasing products, apps, or services.</p>
-                                <div class="my-6 flex gap-1">
-                                    <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"><svg
-                                            class="size-5 transition duration-200 h-4 w-4 -mb-0.5"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                                            <path fill="#e44d26"
-                                                d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198l-45.019 12.48z">
-                                            </path>
-                                            <path fill="#f16529" d="m64 116.8l36.378-10.086l8.559-95.878H64z"></path>
-                                            <path fill="#ebebeb"
-                                                d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692l3.382 37.927H64zm0 35.743l-.061.017l-15.327-4.14l-.979-10.975H33.816l1.928 21.609l28.193 7.826l.063-.017z">
-                                            </path>
-                                            <path fill="#fff"
-                                                d="M63.952 52.455v13.763h16.947l-1.597 17.849l-15.35 4.143v14.319l28.215-7.82l.207-2.325l3.234-36.233l.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092l.628-6.978l.329-3.692z">
-                                            </path>
-                                        </svg></div>
-                                    <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"><svg
-                                            class="relative size-[1.125rem] !text-gray-950 dark:!text-white h-4 w-4 -mb-0.5"
-                                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="85"
-                                            height="107" viewBox="0 0 85 107" fill="none">
-                                            <path
-                                                d="M27.5894 91.1365C22.7555 86.7178 21.3444 77.4335 23.3583 70.7072C26.8503 74.948 31.6888 76.2914 36.7005 77.0497C44.4375 78.2199 52.0359 77.7822 59.2232 74.2459C60.0454 73.841 60.8052 73.3027 61.7036 72.7574C62.378 74.714 62.5535 76.6892 62.318 78.6996C61.7452 83.5957 59.3086 87.3778 55.4332 90.2448C53.8835 91.3916 52.2437 92.4167 50.6432 93.4979C45.7262 96.8213 44.3959 100.718 46.2435 106.386C46.2874 106.525 46.3267 106.663 46.426 107C43.9155 105.876 42.0817 104.24 40.6845 102.089C39.2087 99.8193 38.5066 97.3081 38.4696 94.5909C38.4511 93.2686 38.4511 91.9345 38.2733 90.6309C37.8391 87.4527 36.3471 86.0297 33.5364 85.9478C30.6518 85.8636 28.37 87.6469 27.7649 90.4554C27.7187 90.6707 27.6517 90.8837 27.5847 91.1341L27.5894 91.1365Z"
-                                                fill="currentColor"></path>
-                                            <path
-                                                d="M27.5894 91.1365C22.7555 86.7178 21.3444 77.4335 23.3583 70.7072C26.8503 74.948 31.6888 76.2914 36.7005 77.0497C44.4375 78.2199 52.0359 77.7822 59.2232 74.2459C60.0454 73.841 60.8052 73.3027 61.7036 72.7574C62.378 74.714 62.5535 76.6892 62.318 78.6996C61.7452 83.5957 59.3086 87.3778 55.4332 90.2448C53.8835 91.3916 52.2437 92.4167 50.6432 93.4979C45.7262 96.8213 44.3959 100.718 46.2435 106.386C46.2874 106.525 46.3267 106.663 46.426 107C43.9155 105.876 42.0817 104.24 40.6845 102.089C39.2087 99.8193 38.5066 97.3081 38.4696 94.5909C38.4511 93.2686 38.4511 91.9345 38.2733 90.6309C37.8391 87.4527 36.3471 86.0297 33.5364 85.9478C30.6518 85.8636 28.37 87.6469 27.7649 90.4554C27.7187 90.6707 27.6517 90.8837 27.5847 91.1341L27.5894 91.1365Z"
-                                                fill="url(#paint0_linear_1_59)"></path>
-                                            <path
-                                                d="M0 69.5866C0 69.5866 14.3139 62.6137 28.6678 62.6137L39.4901 29.1204C39.8953 27.5007 41.0783 26.3999 42.4139 26.3999C43.7495 26.3999 44.9325 27.5007 45.3377 29.1204L56.1601 62.6137C73.1601 62.6137 84.8278 69.5866 84.8278 69.5866C84.8278 69.5866 60.5145 3.35233 60.467 3.21944C59.7692 1.2612 58.5911 0 57.0029 0H27.8274C26.2392 0 25.1087 1.2612 24.3634 3.21944C24.3108 3.34983 0 69.5866 0 69.5866Z"
-                                                fill="currentColor"></path>
-                                            <defs>
-                                                <linearGradient id="paint0_linear_1_59" x1="22.4702" y1="107"
-                                                    x2="69.1451" y2="84.9468" gradientUnits="userSpaceOnUse">
-                                                    <stop stop-color="#D83333"></stop>
-                                                    <stop offset="1" stop-color="#F041FF"></stop>
-                                                </linearGradient>
-                                            </defs>
-                                        </svg></div>
-                                </div>
-                                <div class="mt-6 grid grid-cols-2 gap-3"><a
-                                        href="https://tailus.lemonsqueezy.com/buy/11c51a87-67aa-4aac-a641-5112ec511362"
-                                        class="btn sz-sm variant-primary"><span class="btn-label">Buy Now</span></a><a
-                                        href="/preview/oxymor-st" target="_blank"
-                                        class="btn sz-sm variant-outlined"><span>Live Preview</span></a></div>
-                            </div>
-                            <div class="hidden md:grid md:grid-cols-3 md:gap-3 md:pt-6 lg:pt-12"><button
-                                    aria-label="oxymor-st screenshot" data-state="active"
-                                    class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                        class="size-full" src="/templates/oxymor/st-home.webp"
-                                        alt="oxymor-st screenshot 0" loading="lazy" width="560"
-                                        height="560" /></button><button aria-label="oxymor-st screenshot"
-                                    data-state="false"
-                                    class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                        class="size-full" src="/templates/oxymor/st-bento.webp"
-                                        alt="oxymor-st screenshot 1" loading="lazy" width="560"
-                                        height="560" /></button><button aria-label="oxymor-st screenshot"
-                                    data-state="false"
-                                    class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                        class="size-full" src="/templates/oxymor/st-reviews.webp"
-                                        alt="oxymor-st screenshot 2" loading="lazy" width="560" height="560" /></button>
-                            </div>
-                        </div><a href="/templates/oxymor-st"
-                            class="relative border-white md:border-l md:pl-6 lg:pl-12 dark:border-transparent"><img
-                                class="bg-ui tls-shadow rounded-card h-full object-cover object-top shadow-gray-950/[0.03] [--ui-shadow-border:var(--ui-border-color)]"
-                                src="/templates/oxymor/st-home.webp" alt="tailus oxymor-st template screenshot"
-                                width="3200" height="2400" style="opacity:0;will-change:opacity" /></a>
-                    </div><!--astro:end-->
-                </astro-island><astro-island uid="Z11Gfeo" prefix="r3" component-url="/_astro/TemplateBlock.BehvWR5m.js"
-                    component-export="default" renderer-url="/_astro/client.BfozEI4p.js"
-                    props="{&quot;template&quot;:[0,{&quot;priority&quot;:[0,2],&quot;name&quot;:[0,&quot;oxymor-yv&quot;],&quot;title&quot;:[0,&quot;Mobile app landing page&quot;],&quot;screenshots&quot;:[1,[[0,&quot;/templates/oxymor/yv.webp&quot;],[0,&quot;/templates/oxymor/yv-bento.webp&quot;],[0,&quot;/templates/oxymor/yv-login.webp&quot;]]],&quot;shortDescription&quot;:[0,&quot;Mobile app landing page template, features a clean, polished design.&quot;],&quot;purchaseLink&quot;:[0,&quot;https://tailus.lemonsqueezy.com/buy/2d2277b3-56fa-4831-ac1c-e864780accdc&quot;],&quot;previewLink&quot;:[0,&quot;https://oxymor-yv.tailus.io/&quot;],&quot;price&quot;:[0,&quot;$39.99&quot;],&quot;stack&quot;:[1,[[0,&quot;html&quot;],[0,&quot;astro&quot;]]]}],&quot;slug&quot;:[0,&quot;oxymor-yv&quot;]}"
-                    ssr="" client="visible" opts="{&quot;name&quot;:&quot;TemplateGallery&quot;,&quot;value&quot;:true}"
-                    await-children="">
-                    <div
-                        class="border-y border-t-white pb-6 [grid-template-columns:auto_1fr] *:py-12 md:grid md:pb-0 md:*:py-8 lg:*:py-16 dark:border-t-transparent">
-                        <div
-                            class="border-r-none flex flex-col gap-6 divide-y py-2 md:w-[18rem] md:border-r md:pr-6 lg:gap-12 lg:py-12 lg:pr-12">
-                            <div class="lg:pt-6">
-                                <div class="flex items-end justify-between">
-                                    <h1
-                                        class="block text-[--title-text-color] text-lg font-medium my-0 capitalize group-hover:text-primary-600 dark:group-hover:text-primary-400">
-                                        oxymor-yv</h1>
-                                    <p class="text-[--body-text-color] text-sm font-normal my-0">$39.99</p>
-                                </div>
-                                <div class="mt-6"></div>
-                                <p class="text-[--body-text-color] text-sm font-normal nb my-0">Mobile app landing page
-                                    template, features a clean, polished design.</p>
-                                <div class="my-6 flex gap-1">
-                                    <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"><svg
-                                            class="size-5 transition duration-200 h-4 w-4 -mb-0.5"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                                            <path fill="#e44d26"
-                                                d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198l-45.019 12.48z">
-                                            </path>
-                                            <path fill="#f16529" d="m64 116.8l36.378-10.086l8.559-95.878H64z"></path>
-                                            <path fill="#ebebeb"
-                                                d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692l3.382 37.927H64zm0 35.743l-.061.017l-15.327-4.14l-.979-10.975H33.816l1.928 21.609l28.193 7.826l.063-.017z">
-                                            </path>
-                                            <path fill="#fff"
-                                                d="M63.952 52.455v13.763h16.947l-1.597 17.849l-15.35 4.143v14.319l28.215-7.82l.207-2.325l3.234-36.233l.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092l.628-6.978l.329-3.692z">
-                                            </path>
-                                        </svg></div>
-                                    <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"><svg
-                                            class="relative size-[1.125rem] !text-gray-950 dark:!text-white h-4 w-4 -mb-0.5"
-                                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="85"
-                                            height="107" viewBox="0 0 85 107" fill="none">
-                                            <path
-                                                d="M27.5894 91.1365C22.7555 86.7178 21.3444 77.4335 23.3583 70.7072C26.8503 74.948 31.6888 76.2914 36.7005 77.0497C44.4375 78.2199 52.0359 77.7822 59.2232 74.2459C60.0454 73.841 60.8052 73.3027 61.7036 72.7574C62.378 74.714 62.5535 76.6892 62.318 78.6996C61.7452 83.5957 59.3086 87.3778 55.4332 90.2448C53.8835 91.3916 52.2437 92.4167 50.6432 93.4979C45.7262 96.8213 44.3959 100.718 46.2435 106.386C46.2874 106.525 46.3267 106.663 46.426 107C43.9155 105.876 42.0817 104.24 40.6845 102.089C39.2087 99.8193 38.5066 97.3081 38.4696 94.5909C38.4511 93.2686 38.4511 91.9345 38.2733 90.6309C37.8391 87.4527 36.3471 86.0297 33.5364 85.9478C30.6518 85.8636 28.37 87.6469 27.7649 90.4554C27.7187 90.6707 27.6517 90.8837 27.5847 91.1341L27.5894 91.1365Z"
-                                                fill="currentColor"></path>
-                                            <path
-                                                d="M27.5894 91.1365C22.7555 86.7178 21.3444 77.4335 23.3583 70.7072C26.8503 74.948 31.6888 76.2914 36.7005 77.0497C44.4375 78.2199 52.0359 77.7822 59.2232 74.2459C60.0454 73.841 60.8052 73.3027 61.7036 72.7574C62.378 74.714 62.5535 76.6892 62.318 78.6996C61.7452 83.5957 59.3086 87.3778 55.4332 90.2448C53.8835 91.3916 52.2437 92.4167 50.6432 93.4979C45.7262 96.8213 44.3959 100.718 46.2435 106.386C46.2874 106.525 46.3267 106.663 46.426 107C43.9155 105.876 42.0817 104.24 40.6845 102.089C39.2087 99.8193 38.5066 97.3081 38.4696 94.5909C38.4511 93.2686 38.4511 91.9345 38.2733 90.6309C37.8391 87.4527 36.3471 86.0297 33.5364 85.9478C30.6518 85.8636 28.37 87.6469 27.7649 90.4554C27.7187 90.6707 27.6517 90.8837 27.5847 91.1341L27.5894 91.1365Z"
-                                                fill="url(#paint0_linear_1_59)"></path>
-                                            <path
-                                                d="M0 69.5866C0 69.5866 14.3139 62.6137 28.6678 62.6137L39.4901 29.1204C39.8953 27.5007 41.0783 26.3999 42.4139 26.3999C43.7495 26.3999 44.9325 27.5007 45.3377 29.1204L56.1601 62.6137C73.1601 62.6137 84.8278 69.5866 84.8278 69.5866C84.8278 69.5866 60.5145 3.35233 60.467 3.21944C59.7692 1.2612 58.5911 0 57.0029 0H27.8274C26.2392 0 25.1087 1.2612 24.3634 3.21944C24.3108 3.34983 0 69.5866 0 69.5866Z"
-                                                fill="currentColor"></path>
-                                            <defs>
-                                                <linearGradient id="paint0_linear_1_59" x1="22.4702" y1="107"
-                                                    x2="69.1451" y2="84.9468" gradientUnits="userSpaceOnUse">
-                                                    <stop stop-color="#D83333"></stop>
-                                                    <stop offset="1" stop-color="#F041FF"></stop>
-                                                </linearGradient>
-                                            </defs>
-                                        </svg></div>
-                                </div>
-                                <div class="mt-6 grid grid-cols-2 gap-3"><a
-                                        href="https://tailus.lemonsqueezy.com/buy/2d2277b3-56fa-4831-ac1c-e864780accdc"
-                                        class="btn sz-sm variant-primary"><span class="btn-label">Buy Now</span></a><a
-                                        href="/preview/oxymor-yv" target="_blank"
-                                        class="btn sz-sm variant-outlined"><span>Live Preview</span></a></div>
-                            </div>
-                            <div class="hidden md:grid md:grid-cols-3 md:gap-3 md:pt-6 lg:pt-12"><button
-                                    aria-label="oxymor-yv screenshot" data-state="active"
-                                    class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                        class="size-full" src="/templates/oxymor/yv.webp" alt="oxymor-yv screenshot 0"
-                                        loading="lazy" width="560" height="560" /></button><button
-                                    aria-label="oxymor-yv screenshot" data-state="false"
-                                    class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                        class="size-full" src="/templates/oxymor/yv-bento.webp"
-                                        alt="oxymor-yv screenshot 1" loading="lazy" width="560"
-                                        height="560" /></button><button aria-label="oxymor-yv screenshot"
-                                    data-state="false"
-                                    class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                        class="size-full" src="/templates/oxymor/yv-login.webp"
-                                        alt="oxymor-yv screenshot 2" loading="lazy" width="560" height="560" /></button>
-                            </div>
-                        </div><a href="/templates/oxymor-yv"
-                            class="relative border-white md:border-l md:pl-6 lg:pl-12 dark:border-transparent"><img
-                                class="bg-ui tls-shadow rounded-card h-full object-cover object-top shadow-gray-950/[0.03] [--ui-shadow-border:var(--ui-border-color)]"
-                                src="/templates/oxymor/yv.webp" alt="tailus oxymor-yv template screenshot" width="3200"
-                                height="2400" style="opacity:0;will-change:opacity" /></a>
-                    </div><!--astro:end-->
-                </astro-island><astro-island uid="ZUgG3P" prefix="r4" component-url="/_astro/TemplateBlock.BehvWR5m.js"
-                    component-export="default" renderer-url="/_astro/client.BfozEI4p.js"
-                    props="{&quot;template&quot;:[0,{&quot;priority&quot;:[0,2],&quot;name&quot;:[0,&quot;radiant&quot;],&quot;title&quot;:[0,&quot;Captivating agency portfolio&quot;],&quot;screenshots&quot;:[1,[[0,&quot;/templates/radiant/radiant-cover.webp&quot;],[0,&quot;/templates/radiant/4.webp&quot;],[0,&quot;/templates/radiant/7.webp&quot;]]],&quot;shortDescription&quot;:[0,&quot;A minimalist agency portfolio website with a captivating dark theme&quot;],&quot;purchaseLink&quot;:[0,&quot;https://tailus.lemonsqueezy.com/buy/a6d594b2-03ea-4588-88ab-ab0ec2a6070c&quot;],&quot;previewLink&quot;:[0,&quot;https://radiant.tailus.io/&quot;],&quot;price&quot;:[0,&quot;$29.99&quot;],&quot;stack&quot;:[1,[[0,&quot;html&quot;]]]}],&quot;slug&quot;:[0,&quot;radiant&quot;]}"
-                    ssr="" client="visible" opts="{&quot;name&quot;:&quot;TemplateGallery&quot;,&quot;value&quot;:true}"
-                    await-children="">
-                    <div
-                        class="border-y border-t-white pb-6 [grid-template-columns:auto_1fr] *:py-12 md:grid md:pb-0 md:*:py-8 lg:*:py-16 dark:border-t-transparent">
-                        <div
-                            class="border-r-none flex flex-col gap-6 divide-y py-2 md:w-[18rem] md:border-r md:pr-6 lg:gap-12 lg:py-12 lg:pr-12">
-                            <div class="lg:pt-6">
-                                <div class="flex items-end justify-between">
-                                    <h1
-                                        class="block text-[--title-text-color] text-lg font-medium my-0 capitalize group-hover:text-primary-600 dark:group-hover:text-primary-400">
-                                        radiant</h1>
-                                    <p class="text-[--body-text-color] text-sm font-normal my-0">$29.99</p>
-                                </div>
-                                <div class="mt-6"></div>
-                                <p class="text-[--body-text-color] text-sm font-normal nb my-0">A minimalist agency
-                                    portfolio website with a captivating dark theme</p>
-                                <div class="my-6 flex gap-1">
-                                    <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"><svg
-                                            class="size-5 transition duration-200 h-4 w-4 -mb-0.5"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                                            <path fill="#e44d26"
-                                                d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198l-45.019 12.48z">
-                                            </path>
-                                            <path fill="#f16529" d="m64 116.8l36.378-10.086l8.559-95.878H64z"></path>
-                                            <path fill="#ebebeb"
-                                                d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692l3.382 37.927H64zm0 35.743l-.061.017l-15.327-4.14l-.979-10.975H33.816l1.928 21.609l28.193 7.826l.063-.017z">
-                                            </path>
-                                            <path fill="#fff"
-                                                d="M63.952 52.455v13.763h16.947l-1.597 17.849l-15.35 4.143v14.319l28.215-7.82l.207-2.325l3.234-36.233l.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092l.628-6.978l.329-3.692z">
-                                            </path>
-                                        </svg></div>
-                                </div>
-                                <div class="mt-6 grid grid-cols-2 gap-3"><a
-                                        href="https://tailus.lemonsqueezy.com/buy/a6d594b2-03ea-4588-88ab-ab0ec2a6070c"
-                                        class="btn sz-sm variant-primary"><span class="btn-label">Buy Now</span></a><a
-                                        href="/preview/radiant" target="_blank"
-                                        class="btn sz-sm variant-outlined"><span>Live Preview</span></a></div>
-                            </div>
-                            <div class="hidden md:grid md:grid-cols-3 md:gap-3 md:pt-6 lg:pt-12"><button
-                                    aria-label="radiant screenshot" data-state="active"
-                                    class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                        class="size-full" src="/templates/radiant/radiant-cover.webp"
-                                        alt="radiant screenshot 0" loading="lazy" width="560"
-                                        height="560" /></button><button aria-label="radiant screenshot"
-                                    data-state="false"
-                                    class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                        class="size-full" src="/templates/radiant/4.webp" alt="radiant screenshot 1"
-                                        loading="lazy" width="560" height="560" /></button><button
-                                    aria-label="radiant screenshot" data-state="false"
-                                    class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                        class="size-full" src="/templates/radiant/7.webp" alt="radiant screenshot 2"
-                                        loading="lazy" width="560" height="560" /></button></div>
-                        </div><a href="/templates/radiant"
-                            class="relative border-white md:border-l md:pl-6 lg:pl-12 dark:border-transparent"><img
-                                class="bg-ui tls-shadow rounded-card h-full object-cover object-top shadow-gray-950/[0.03] [--ui-shadow-border:var(--ui-border-color)]"
-                                src="/templates/radiant/radiant-cover.webp" alt="tailus radiant template screenshot"
-                                width="3200" height="2400" style="opacity:0;will-change:opacity" /></a>
-                    </div><!--astro:end-->
-                </astro-island><astro-island uid="Zz8FH8" prefix="r5" component-url="/_astro/TemplateBlock.BehvWR5m.js"
-                    component-export="default" renderer-url="/_astro/client.BfozEI4p.js"
-                    props="{&quot;template&quot;:[0,{&quot;priority&quot;:[0,3],&quot;name&quot;:[0,&quot;astrolus&quot;],&quot;title&quot;:[0,&quot;Modern tech landing page&quot;],&quot;screenshots&quot;:[1,[[0,&quot;/templates/astrolus/1.webp&quot;],[0,&quot;/templates/astrolus/2.webp&quot;],[0,&quot;/templates/astrolus/6.webp&quot;]]],&quot;shortDescription&quot;:[0,&quot;Modern landing page&quot;],&quot;purchaseLink&quot;:[0,&quot;https://tailus.lemonsqueezy.com/buy/ed22873b-956a-4c2a-8762-42703a08293e&quot;],&quot;previewLink&quot;:[0,&quot;https://astrolus.tailus.io/&quot;],&quot;price&quot;:[0,&quot;From $19.99&quot;],&quot;rating&quot;:[0,{&quot;rate&quot;:[0,4],&quot;count&quot;:[0,2]}],&quot;stack&quot;:[1,[[0,&quot;html&quot;],[0,&quot;astro&quot;],[0,&quot;nuxt&quot;],[0,&quot;next&quot;]]]}],&quot;slug&quot;:[0,&quot;astrolus&quot;]}"
-                    ssr="" client="visible" opts="{&quot;name&quot;:&quot;TemplateGallery&quot;,&quot;value&quot;:true}"
-                    await-children="">
-                    <div
-                        class="border-y border-t-white pb-6 [grid-template-columns:auto_1fr] *:py-12 md:grid md:pb-0 md:*:py-8 lg:*:py-16 dark:border-t-transparent">
-                        <div
-                            class="border-r-none flex flex-col gap-6 divide-y py-2 md:w-[18rem] md:border-r md:pr-6 lg:gap-12 lg:py-12 lg:pr-12">
-                            <div class="lg:pt-6">
-                                <div class="flex items-end justify-between">
-                                    <h1
-                                        class="block text-[--title-text-color] text-lg font-medium my-0 capitalize group-hover:text-primary-600 dark:group-hover:text-primary-400">
-                                        astrolus</h1>
-                                    <p class="text-[--body-text-color] text-sm font-normal my-0">From $19.99</p>
-                                </div>
-                                <div class="mt-6">
-                                    <div class="flex items-center gap-1 text-warning-500"><span><svg class="size-4"
-                                                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                                viewBox="0 0 24 24">
-                                                <g fill="none">
-                                                    <path
-                                                        d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z">
-                                                    </path>
-                                                    <path fill="currentColor"
-                                                        d="M10.92 2.868a1.25 1.25 0 0 1 2.16 0l2.795 4.798l5.428 1.176a1.25 1.25 0 0 1 .667 2.054l-3.7 4.141l.56 5.525a1.25 1.25 0 0 1-1.748 1.27L12 19.592l-5.082 2.24a1.25 1.25 0 0 1-1.748-1.27l.56-5.525l-3.7-4.14a1.25 1.25 0 0 1 .667-2.055l5.428-1.176z">
-                                                    </path>
-                                                </g>
-                                            </svg></span><span><svg class="size-4" xmlns="http://www.w3.org/2000/svg"
-                                                width="1em" height="1em" viewBox="0 0 24 24">
-                                                <g fill="none">
-                                                    <path
-                                                        d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z">
-                                                    </path>
-                                                    <path fill="currentColor"
-                                                        d="M10.92 2.868a1.25 1.25 0 0 1 2.16 0l2.795 4.798l5.428 1.176a1.25 1.25 0 0 1 .667 2.054l-3.7 4.141l.56 5.525a1.25 1.25 0 0 1-1.748 1.27L12 19.592l-5.082 2.24a1.25 1.25 0 0 1-1.748-1.27l.56-5.525l-3.7-4.14a1.25 1.25 0 0 1 .667-2.055l5.428-1.176z">
-                                                    </path>
-                                                </g>
-                                            </svg></span><span><svg class="size-4" xmlns="http://www.w3.org/2000/svg"
-                                                width="1em" height="1em" viewBox="0 0 24 24">
-                                                <g fill="none">
-                                                    <path
-                                                        d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z">
-                                                    </path>
-                                                    <path fill="currentColor"
-                                                        d="M10.92 2.868a1.25 1.25 0 0 1 2.16 0l2.795 4.798l5.428 1.176a1.25 1.25 0 0 1 .667 2.054l-3.7 4.141l.56 5.525a1.25 1.25 0 0 1-1.748 1.27L12 19.592l-5.082 2.24a1.25 1.25 0 0 1-1.748-1.27l.56-5.525l-3.7-4.14a1.25 1.25 0 0 1 .667-2.055l5.428-1.176z">
-                                                    </path>
-                                                </g>
-                                            </svg></span><span><svg class="size-4" xmlns="http://www.w3.org/2000/svg"
-                                                width="1em" height="1em" viewBox="0 0 24 24">
-                                                <g fill="none">
-                                                    <path
-                                                        d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z">
-                                                    </path>
-                                                    <path fill="currentColor"
-                                                        d="M10.92 2.868a1.25 1.25 0 0 1 2.16 0l2.795 4.798l5.428 1.176a1.25 1.25 0 0 1 .667 2.054l-3.7 4.141l.56 5.525a1.25 1.25 0 0 1-1.748 1.27L12 19.592l-5.082 2.24a1.25 1.25 0 0 1-1.748-1.27l.56-5.525l-3.7-4.14a1.25 1.25 0 0 1 .667-2.055l5.428-1.176z">
-                                                    </path>
-                                                </g>
-                                            </svg></span><span><svg
-                                                class="size-4 text-gray-950 opacity-25 dark:text-white"
-                                                xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
-                                                viewBox="0 0 24 24">
-                                                <g fill="none">
-                                                    <path
-                                                        d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z">
-                                                    </path>
-                                                    <path fill="currentColor"
-                                                        d="M10.92 2.868a1.25 1.25 0 0 1 2.16 0l2.795 4.798l5.428 1.176a1.25 1.25 0 0 1 .667 2.054l-3.7 4.141l.56 5.525a1.25 1.25 0 0 1-1.748 1.27L12 19.592l-5.082 2.24a1.25 1.25 0 0 1-1.748-1.27l.56-5.525l-3.7-4.14a1.25 1.25 0 0 1 .667-2.055l5.428-1.176z">
-                                                    </path>
-                                                </g>
-                                            </svg></span><span
-                                            class="mx-1 size-1 rounded-full bg-[--ui-border-color]"></span>
-                                        <p class="text-[--caption-text-color] text-sm font-normal">2<!-- --> ratings</p>
-                                    </div><span class="mx-1 size-1 rounded-full bg-[--ui-border-color]"></span>
-                                </div>
-                                <p class="text-[--body-text-color] text-sm font-normal nb my-0">Modern landing page</p>
-                                <div class="my-6 flex gap-1">
-                                    <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"><svg
-                                            class="size-5 transition duration-200 h-4 w-4 -mb-0.5"
-                                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                                            <path fill="#e44d26"
-                                                d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198l-45.019 12.48z">
-                                            </path>
-                                            <path fill="#f16529" d="m64 116.8l36.378-10.086l8.559-95.878H64z"></path>
-                                            <path fill="#ebebeb"
-                                                d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692l3.382 37.927H64zm0 35.743l-.061.017l-15.327-4.14l-.979-10.975H33.816l1.928 21.609l28.193 7.826l.063-.017z">
-                                            </path>
-                                            <path fill="#fff"
-                                                d="M63.952 52.455v13.763h16.947l-1.597 17.849l-15.35 4.143v14.319l28.215-7.82l.207-2.325l3.234-36.233l.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092l.628-6.978l.329-3.692z">
-                                            </path>
-                                        </svg></div>
-                                    <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"><svg
-                                            class="relative size-[1.125rem] !text-gray-950 dark:!text-white h-4 w-4 -mb-0.5"
-                                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="85"
-                                            height="107" viewBox="0 0 85 107" fill="none">
-                                            <path
-                                                d="M27.5894 91.1365C22.7555 86.7178 21.3444 77.4335 23.3583 70.7072C26.8503 74.948 31.6888 76.2914 36.7005 77.0497C44.4375 78.2199 52.0359 77.7822 59.2232 74.2459C60.0454 73.841 60.8052 73.3027 61.7036 72.7574C62.378 74.714 62.5535 76.6892 62.318 78.6996C61.7452 83.5957 59.3086 87.3778 55.4332 90.2448C53.8835 91.3916 52.2437 92.4167 50.6432 93.4979C45.7262 96.8213 44.3959 100.718 46.2435 106.386C46.2874 106.525 46.3267 106.663 46.426 107C43.9155 105.876 42.0817 104.24 40.6845 102.089C39.2087 99.8193 38.5066 97.3081 38.4696 94.5909C38.4511 93.2686 38.4511 91.9345 38.2733 90.6309C37.8391 87.4527 36.3471 86.0297 33.5364 85.9478C30.6518 85.8636 28.37 87.6469 27.7649 90.4554C27.7187 90.6707 27.6517 90.8837 27.5847 91.1341L27.5894 91.1365Z"
-                                                fill="currentColor"></path>
-                                            <path
-                                                d="M27.5894 91.1365C22.7555 86.7178 21.3444 77.4335 23.3583 70.7072C26.8503 74.948 31.6888 76.2914 36.7005 77.0497C44.4375 78.2199 52.0359 77.7822 59.2232 74.2459C60.0454 73.841 60.8052 73.3027 61.7036 72.7574C62.378 74.714 62.5535 76.6892 62.318 78.6996C61.7452 83.5957 59.3086 87.3778 55.4332 90.2448C53.8835 91.3916 52.2437 92.4167 50.6432 93.4979C45.7262 96.8213 44.3959 100.718 46.2435 106.386C46.2874 106.525 46.3267 106.663 46.426 107C43.9155 105.876 42.0817 104.24 40.6845 102.089C39.2087 99.8193 38.5066 97.3081 38.4696 94.5909C38.4511 93.2686 38.4511 91.9345 38.2733 90.6309C37.8391 87.4527 36.3471 86.0297 33.5364 85.9478C30.6518 85.8636 28.37 87.6469 27.7649 90.4554C27.7187 90.6707 27.6517 90.8837 27.5847 91.1341L27.5894 91.1365Z"
-                                                fill="url(#paint0_linear_1_59)"></path>
-                                            <path
-                                                d="M0 69.5866C0 69.5866 14.3139 62.6137 28.6678 62.6137L39.4901 29.1204C39.8953 27.5007 41.0783 26.3999 42.4139 26.3999C43.7495 26.3999 44.9325 27.5007 45.3377 29.1204L56.1601 62.6137C73.1601 62.6137 84.8278 69.5866 84.8278 69.5866C84.8278 69.5866 60.5145 3.35233 60.467 3.21944C59.7692 1.2612 58.5911 0 57.0029 0H27.8274C26.2392 0 25.1087 1.2612 24.3634 3.21944C24.3108 3.34983 0 69.5866 0 69.5866Z"
-                                                fill="currentColor"></path>
-                                            <defs>
-                                                <linearGradient id="paint0_linear_1_59" x1="22.4702" y1="107"
-                                                    x2="69.1451" y2="84.9468" gradientUnits="userSpaceOnUse">
-                                                    <stop stop-color="#D83333"></stop>
-                                                    <stop offset="1" stop-color="#F041FF"></stop>
-                                                </linearGradient>
-                                            </defs>
-                                        </svg></div>
-                                    <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"><svg
-                                            class="relative size-[1.125rem] h-4 w-4" aria-hidden="true"
-                                            viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M8.84273 9.79172H14.2155C14.3862 9.7918 14.5538 9.74727 14.7016 9.66266C14.8492 9.57839 14.9719 9.45673 15.0574 9.30993C15.1427 9.16368 15.1875 8.99742 15.1874 8.82815C15.1874 8.65887 15.1423 8.49266 15.057 8.34649L11.4487 2.15227C11.3632 2.00554 11.2405 1.88392 11.093 1.79962C10.9451 1.71497 10.7775 1.67044 10.607 1.67044C10.4365 1.67044 10.269 1.71497 10.121 1.79962C9.97356 1.88392 9.85088 2.00554 9.76531 2.15227L8.84273 3.73719L7.03883 0.637975C6.95321 0.49125 6.83048 0.369649 6.68297 0.285397C6.53494 0.200767 6.36739 0.15625 6.19687 0.15625C6.02636 0.15625 5.85881 0.200767 5.71078 0.285397C5.56328 0.369663 5.44055 0.491261 5.35492 0.637975L0.864844 8.34649C0.779511 8.49267 0.73449 8.65887 0.734375 8.82813C0.734375 8.99727 0.779141 9.16344 0.864453 9.30993C0.94999 9.45673 1.0727 9.57839 1.22023 9.66266C1.36824 9.74734 1.53581 9.79183 1.70633 9.79172H5.07898C6.41523 9.79172 7.4007 9.21001 8.07875 8.07508L9.725 5.24938L10.6068 3.73719L13.2531 8.27954H9.725L8.84273 9.79172ZM5.02398 8.27797L2.67031 8.27743L6.19844 2.22133L7.95883 5.24938L6.78016 7.27329C6.32984 8.00969 5.81836 8.27797 5.02398 8.27797Z"
-                                                fill="#00DC82"></path>
-                                        </svg></div>
-                                    <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"><svg
-                                            class="relative size-[1.125rem] dark:hidden h-4 w-4" aria-hidden="true"
-                                            viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_399_186)">
-                                                <mask id="mask0_399_186" maskUnits="userSpaceOnUse" x="0" y="0"
-                                                    width="20" height="20">
-                                                    <path
-                                                        d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z"
-                                                        fill="white"></path>
-                                                </mask>
-                                                <g mask="url(#mask0_399_186)">
-                                                    <path
-                                                        d="M10 20C15.5228 20 20 15.5228 20 10C20 4.47715 15.5228 0 10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20Z"
-                                                        fill="black"></path>
-                                                    <path
-                                                        d="M16.612 17.5022L7.68242 6H6V13.9966H7.34594V7.70937L15.5555 18.3161C15.9253 18.0685 16.2783 17.7966 16.612 17.5022Z"
-                                                        fill="url(#paint0_linear_399_186)"></path>
-                                                    <path d="M12.7778 6H14.1112V14H12.7778V6Z"
-                                                        fill="url(#paint1_linear_399_186)"></path>
-                                                </g>
-                                            </g>
-                                            <defs>
-                                                <linearGradient id="paint0_linear_399_186" x1="10.5" y1="11"
-                                                    x2="15.7378" y2="16.2661" gradientUnits="userSpaceOnUse">
-                                                    <stop stop-color="white"></stop>
-                                                    <stop offset="1" stop-color="white" stop-opacity="0"></stop>
-                                                </linearGradient>
-                                                <linearGradient id="paint1_linear_399_186" x1="13.5" y1="9.5" x2="13.5"
-                                                    y2="14.5" gradientUnits="userSpaceOnUse">
-                                                    <stop stop-color="white"></stop>
-                                                    <stop offset="0.0001" stop-color="white"></stop>
-                                                    <stop offset="1" stop-opacity="0"></stop>
-                                                </linearGradient>
-                                                <clipPath id="clip0_399_186">
-                                                    <rect width="20" height="20" fill="white"></rect>
-                                                </clipPath>
-                                            </defs>
-                                        </svg><svg class="relative hidden size-[1.125rem] dark:block h-4 w-4"
-                                            aria-hidden="true" viewBox="0 0 20 20" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M6 6L6.54 5.60933C6.4574 5.49524 6.34078 5.41024 6.20688 5.36653C6.07297 5.32282 5.92867 5.32265 5.79466 5.36603C5.66065 5.40942 5.54382 5.49414 5.46095 5.60803C5.37807 5.72192 5.33339 5.85914 5.33333 6H6ZM10 18.6667C7.70146 18.6667 5.49706 17.7536 3.87174 16.1283C2.24643 14.5029 1.33333 12.2985 1.33333 10H0C0 12.6522 1.05357 15.1957 2.92893 17.0711C4.8043 18.9464 7.34784 20 10 20V18.6667ZM18.6667 10C18.6667 11.1381 18.4425 12.2651 18.007 13.3166C17.5714 14.3681 16.933 15.3235 16.1283 16.1283C15.3235 16.933 14.3681 17.5714 13.3166 18.007C12.2651 18.4425 11.1381 18.6667 10 18.6667V20C12.6522 20 15.1957 18.9464 17.0711 17.0711C18.9464 15.1957 20 12.6522 20 10H18.6667ZM10 1.33333C11.1381 1.33333 12.2651 1.5575 13.3166 1.99304C14.3681 2.42858 15.3235 3.06697 16.1283 3.87174C16.933 4.67652 17.5714 5.63192 18.007 6.68341C18.4425 7.7349 18.6667 8.86188 18.6667 10H20C20 7.34784 18.9464 4.8043 17.0711 2.92893C15.1957 1.05357 12.6522 0 10 0V1.33333ZM10 0C7.34784 0 4.8043 1.05357 2.92893 2.92893C1.05357 4.8043 0 7.34784 0 10H1.33333C1.33333 7.70146 2.24643 5.49706 3.87174 3.87174C5.49706 2.24643 7.70146 1.33333 10 1.33333V0ZM6.66667 16V6H5.33333V16H6.66667ZM5.46 6.39067L14.1267 18.3907L15.2067 17.6093L6.54 5.60933L5.46 6.39067ZM13.3333 5.33333V13.3333H14.6667V5.33333H13.3333Z"
-                                                fill="white"></path>
-                                        </svg></div>
-                                </div>
-                                <div class="mt-6 grid grid-cols-2 gap-3"><a
-                                        href="https://tailus.lemonsqueezy.com/buy/ed22873b-956a-4c2a-8762-42703a08293e"
-                                        class="btn sz-sm variant-primary"><span class="btn-label">Buy Now</span></a><a
-                                        href="/preview/astrolus" target="_blank"
-                                        class="btn sz-sm variant-outlined"><span>Live Preview</span></a></div>
-                            </div>
-                            <div class="hidden md:grid md:grid-cols-3 md:gap-3 md:pt-6 lg:pt-12"><button
-                                    aria-label="astrolus screenshot" data-state="active"
-                                    class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                        class="size-full" src="/templates/astrolus/1.webp" alt="astrolus screenshot 0"
-                                        loading="lazy" width="560" height="560" /></button><button
-                                    aria-label="astrolus screenshot" data-state="false"
-                                    class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                        class="size-full" src="/templates/astrolus/2.webp" alt="astrolus screenshot 1"
-                                        loading="lazy" width="560" height="560" /></button><button
-                                    aria-label="astrolus screenshot" data-state="false"
-                                    class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                        class="size-full" src="/templates/astrolus/6.webp" alt="astrolus screenshot 2"
-                                        loading="lazy" width="560" height="560" /></button></div>
-                        </div><a href="/templates/astrolus"
-                            class="relative border-white md:border-l md:pl-6 lg:pl-12 dark:border-transparent"><img
-                                class="bg-ui tls-shadow rounded-card h-full object-cover object-top shadow-gray-950/[0.03] [--ui-shadow-border:var(--ui-border-color)]"
-                                src="/templates/astrolus/1.webp" alt="tailus astrolus template screenshot" width="3200"
-                                height="2400" style="opacity:0;will-change:opacity" /></a>
-                    </div><!--astro:end-->
-                </astro-island>
-            </div>
+    </div>
+    <div class="mx-auto max-w-5xl px-6 lg:px-4">
+        <div class="relative mx-auto max-w-3xl text-center">
+            <h1 class="text-title text-balance text-4xl font-bold sm:text-6xl">We build beautiful, custom, high-performing websites</h1>
+            <p class="text-[--body-text-color] text-lg font-normal my-6 mx-auto max-w-xl">Combining clean design, modern frameworks, and thoughtful UX to bring ideas to life on the web.</p>
         </div>
-    </section>
-    <section class="bg-white dark:bg-gray-950">
-        <div class="mx-auto max-w-5xl px-6 lg:px-4">
-            <div class="border-t border-white py-20 dark:border-transparent">
-                <h2 class="block text-[--title-text-color] text-xl font-medium">More templates</h2>
-                <div class="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:gap-6">
-                    <div> <a href="/templates/aria" class="rounded-card" aria-label="Go to aria template page"> <img
-                                class="bg-ui tls-shadow rounded-card object-cover object-top shadow-gray-950/[0.03] [--ui-shadow-border:var(--ui-border-color)] md:max-h-64 lg:max-h-96"
-                                src="/templates/aria/aria-2.webp" alt="tailus aria template screenshot" width="3200"
-                                height="2400"> </a>
-                        <div class="flex flex-col justify-between px-1 py-2">
-                            <div>
-                                <div class="flex items-end justify-between">
-                                    <h3
-                                        class="block text-[--title-text-color] font-medium my-0 text-sm group-hover:text-primary-600 dark:group-hover:text-primary-400 capitalize">
-                                        aria</h3>
-                                    <p class="text-[--body-text-color] text-sm font-normal my-0">$9.99</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div> <a href="/templates/alt" class="rounded-card" aria-label="Go to alt template page"> <img
-                                class="bg-ui tls-shadow rounded-card object-cover object-top shadow-gray-950/[0.03] [--ui-shadow-border:var(--ui-border-color)] md:max-h-64 lg:max-h-96"
-                                src="/templates/alt/alt-1.webp" alt="tailus alt template screenshot" width="3200"
-                                height="2400"> </a>
-                        <div class="flex flex-col justify-between px-1 py-2">
-                            <div>
-                                <div class="flex items-end justify-between">
-                                    <h3
-                                        class="block text-[--title-text-color] font-medium my-0 text-sm group-hover:text-primary-600 dark:group-hover:text-primary-400 capitalize">
-                                        alt</h3>
-                                    <p class="text-[--body-text-color] text-sm font-normal my-0">From $43.99</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div> <a href="/templates/tailfolio" class="rounded-card"
-                            aria-label="Go to tailfolio template page"> <img
-                                class="bg-ui tls-shadow rounded-card object-cover object-top shadow-gray-950/[0.03] [--ui-shadow-border:var(--ui-border-color)] md:max-h-64 lg:max-h-96"
-                                src="/templates/tailfolio/9.webp" alt="tailus tailfolio template screenshot"
-                                width="3200" height="2400"> </a>
-                        <div class="flex flex-col justify-between px-1 py-2">
-                            <div>
-                                <div class="flex items-end justify-between">
-                                    <h3
-                                        class="block text-[--title-text-color] font-medium my-0 text-sm group-hover:text-primary-600 dark:group-hover:text-primary-400 capitalize">
-                                        tailfolio</h3>
-                                    <p class="text-[--body-text-color] text-sm font-normal my-0">$29.99</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    </div>
+</section>
+<section class="relative z-10 border-y border-t-gray-950/5 bg-white dark:border-gray-800 dark:bg-transparent">
+    <div class="mx-auto max-w-5xl px-6 lg:px-4">
+        <h2 class="sr-only">Features</h2>
+        <div class="grid gap-x-4 gap-y-6 py-16 sm:grid-cols-2 md:mx-0 md:grid-cols-3 lg:-mx-4 lg:gap-x-12 lg:px-4">
+      
+      <div>
+        <div class="flex items-center gap-2">
+          <!-- Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+            <path fill-rule="evenodd" d="...your-icon-path..." clip-rule="evenodd"></path>
+          </svg>
+          <h3 class="text-title text-sm font-medium">Custom Development</h3>
         </div>
-    </section>
-    <section class="border-y py-20 dark:bg-gray-950">
-        <div class="mx-auto max-w-5xl px-6 lg:px-4">
-            <h2 class="block text-[--title-text-color] text-xl font-medium">Free templates</h2>
-            <div class="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:gap-6">
-                <div> <a href="/templates/atom" class="rounded-card" aria-label="Go to atom template page"> <img
-                            class="bg-ui tls-shadow rounded-card object-cover object-top shadow-gray-950/[0.03] [--ui-shadow-border:var(--ui-border-color)] md:max-h-64 lg:max-h-96"
-                            src="/templates/atom/hero.webp" alt="tailus atom template screenshot" width="3200"
-                            height="2400"> </a>
-                    <div class="flex flex-col justify-between px-1 py-2">
-                        <div>
-                            <div class="flex items-end justify-between">
-                                <h3
-                                    class="block text-[--title-text-color] font-medium my-0 text-sm group-hover:text-primary-600 dark:group-hover:text-primary-400 capitalize">
-                                    atom</h3>
-                                <p class="text-[--body-text-color] text-sm font-normal my-0">astro</p>
-                            </div>
-                            <div class="hidden grid-cols-2 gap-4"> <a
-                                    href="https://github.com/Tailus-UI/atom-astro/archive/refs/tags/0.1.0.zip"
-                                    class="btn sz-sm variant-primary"> <span class="btn-label">Purchase</span> </a> <a
-                                    href="https://atom.tailus.io" class="btn sz-sm variant-outlined"> <span>Live
-                                        Preview</span> </a> </div>
-                        </div>
-                    </div>
-                </div>
-                <div> <a href="/templates/ada" class="rounded-card" aria-label="Go to ada template page"> <img
-                            class="bg-ui tls-shadow rounded-card object-cover object-top shadow-gray-950/[0.03] [--ui-shadow-border:var(--ui-border-color)] md:max-h-64 lg:max-h-96"
-                            src="/templates/ada/home.webp" alt="tailus ada template screenshot" width="3200"
-                            height="2400"> </a>
-                    <div class="flex flex-col justify-between px-1 py-2">
-                        <div>
-                            <div class="flex items-end justify-between">
-                                <h3
-                                    class="block text-[--title-text-color] font-medium my-0 text-sm group-hover:text-primary-600 dark:group-hover:text-primary-400 capitalize">
-                                    ada</h3>
-                                <p class="text-[--body-text-color] text-sm font-normal my-0">html</p>
-                            </div>
-                            <div class="hidden grid-cols-2 gap-4"> <a
-                                    href="https://github.com/Tailus-UI/ada-html/archive/refs/tags/0.2.0.zip"
-                                    class="btn sz-sm variant-primary"> <span class="btn-label">Purchase</span> </a> <a
-                                    href="https://ada.tailus.io/" class="btn sz-sm variant-outlined"> <span>Live
-                                        Preview</span> </a> </div>
-                        </div>
-                    </div>
-                </div>
-                <div> <a href="/templates/astrolus-free" class="rounded-card"
-                        aria-label="Go to astrolus-free template page"> <img
-                            class="bg-ui tls-shadow rounded-card object-cover object-top shadow-gray-950/[0.03] [--ui-shadow-border:var(--ui-border-color)] md:max-h-64 lg:max-h-96"
-                            src="/templates/astrolus-free/1.webp" alt="tailus astrolus-free template screenshot"
-                            width="3200" height="2400"> </a>
-                    <div class="flex flex-col justify-between px-1 py-2">
-                        <div>
-                            <div class="flex items-end justify-between">
-                                <h3
-                                    class="block text-[--title-text-color] font-medium my-0 text-sm group-hover:text-primary-600 dark:group-hover:text-primary-400 capitalize">
-                                    astrolus-free</h3>
-                                <p class="text-[--body-text-color] text-sm font-normal my-0">html</p>
-                            </div>
-                            <div class="hidden grid-cols-2 gap-4"> <a
-                                    href="https://github.com/Tailus-UI/astro-theme/archive/refs/heads/main.zip"
-                                    class="btn sz-sm variant-primary"> <span class="btn-label">Purchase</span> </a> <a
-                                    href="https://astrolus-free.tailus.io/" class="btn sz-sm variant-outlined">
-                                    <span>Live Preview</span> </a> </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <p class="mt-4 text-sm">From landing pages to complex platforms, I tailor every build to your specific needs.</p>
+      </div>
+
+      <div>
+        <div class="flex items-center gap-2">
+          <!-- Icon -->
+          <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+            <path fill-rule="evenodd" d="...your-icon-path..." clip-rule="evenodd"></path>
+          </svg>
+          <h3 class="text-title text-sm font-medium">Responsive & Accessible</h3>
         </div>
-    </section>
-    <footer>
-        <div class="mx-auto max-w-5xl space-y-16 px-6 lg:px-4 py-8 lg:py-32">
-            <div class="space-y-6 lg:grid lg:grid-cols-3 lg:space-y-0">
-                <div><a href="/" aria-label="go home"><svg class="h-8 text-title" viewBox="0 0 298 84" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M107 30.7857H113.6V16.3429H122.686V30.7857H131.386V38.5H122.686V53.5429C122.686 55.4286 123 56.8429 123.629 57.7857C124.286 58.7286 125.214 59.2 126.414 59.2C127.414 59.2 128.2 59.0143 128.771 58.6429C129.371 58.2714 129.729 58.0143 129.843 57.8714L133.229 64.5143C133.057 64.6857 132.557 64.9714 131.729 65.3714C130.9 65.7714 129.829 66.1429 128.514 66.4857C127.2 66.8286 125.7 67 124.014 67C121.043 67 118.557 66.1143 116.557 64.3429C114.586 62.5714 113.6 59.8 113.6 56.0286V38.5H107V30.7857ZM167.156 65.9714V59.4571C166.928 60.1429 166.27 61.0857 165.185 62.2857C164.128 63.4857 162.67 64.5714 160.813 65.5429C158.985 66.5143 156.813 67 154.299 67C151.013 67 148.056 66.2143 145.428 64.6429C142.799 63.0714 140.728 60.8857 139.213 58.0857C137.699 55.2857 136.942 52.0571 136.942 48.4C136.942 44.7429 137.699 41.5143 139.213 38.7143C140.728 35.9143 142.799 33.7286 145.428 32.1571C148.056 30.5571 151.013 29.7571 154.299 29.7571C156.756 29.7571 158.885 30.1857 160.685 31.0429C162.485 31.9 163.928 32.8857 165.013 34C166.128 35.1143 166.813 36.0857 167.07 36.9143V30.7857H176.156V65.9714H167.156ZM145.985 48.4C145.985 50.6571 146.485 52.6286 147.485 54.3143C148.485 56 149.785 57.3 151.385 58.2143C153.013 59.1286 154.756 59.5857 156.613 59.5857C158.613 59.5857 160.385 59.1143 161.928 58.1714C163.499 57.2286 164.728 55.9286 165.613 54.2714C166.528 52.5857 166.985 50.6286 166.985 48.4C166.985 46.1714 166.528 44.2286 165.613 42.5714C164.728 40.8857 163.499 39.5714 161.928 38.6286C160.385 37.6571 158.613 37.1714 156.613 37.1714C154.756 37.1714 153.013 37.6429 151.385 38.5857C149.785 39.5 148.485 40.8 147.485 42.4857C146.485 44.1714 145.985 46.1429 145.985 48.4ZM186.271 65.9714V30.7857H195.4V65.9714H186.271ZM190.943 20.2429C189.4 20.2429 188.071 19.6857 186.957 18.5714C185.871 17.4571 185.329 16.1286 185.329 14.5857C185.329 13.0429 185.871 11.7143 186.957 10.6C188.071 9.45714 189.4 8.88571 190.943 8.88571C191.971 8.88571 192.914 9.15714 193.771 9.7C194.657 10.2143 195.357 10.9 195.871 11.7571C196.414 12.5857 196.686 13.5286 196.686 14.5857C196.686 16.1286 196.129 17.4571 195.014 18.5714C193.9 19.6857 192.543 20.2429 190.943 20.2429ZM215.437 65.9714H206.222V7H215.437V65.9714ZM234.044 48.0571C234.044 51.4857 234.744 54.2143 236.144 56.2429C237.572 58.2714 239.815 59.2857 242.872 59.2857C245.958 59.2857 248.201 58.2714 249.601 56.2429C251.001 54.2143 251.701 51.4857 251.701 48.0571V30.7857H260.787V49.2143C260.787 52.7571 260.087 55.8714 258.687 58.5571C257.287 61.2143 255.258 63.2857 252.601 64.7714C249.944 66.2571 246.701 67 242.872 67C239.072 67 235.844 66.2571 233.187 64.7714C230.53 63.2857 228.501 61.2143 227.101 58.5571C225.701 55.8714 225.001 52.7571 225.001 49.2143V30.7857H234.044V48.0571ZM284.016 29.7571C285.988 29.7571 287.816 29.9429 289.502 30.3143C291.188 30.6857 292.631 31.1286 293.831 31.6429C295.031 32.1571 295.859 32.5857 296.316 32.9286L292.973 38.5857C292.402 38.1 291.373 37.5429 289.888 36.9143C288.431 36.2857 286.788 35.9714 284.959 35.9714C283.131 35.9714 281.588 36.3 280.331 36.9571C279.073 37.6143 278.445 38.6 278.445 39.9143C278.445 41.2 279.102 42.2286 280.416 43C281.759 43.7714 283.573 44.4143 285.859 44.9286C287.745 45.3571 289.545 45.9571 291.259 46.7286C292.973 47.4714 294.373 48.5429 295.459 49.9429C296.573 51.3143 297.131 53.1571 297.131 55.4714C297.131 57.6714 296.659 59.5143 295.716 61C294.802 62.4571 293.573 63.6286 292.031 64.5143C290.488 65.4 288.773 66.0286 286.888 66.4C285.031 66.8 283.159 67 281.273 67C278.959 67 276.888 66.7714 275.059 66.3143C273.259 65.8571 271.759 65.3286 270.559 64.7286C269.359 64.1 268.502 63.5714 267.988 63.1429L271.331 56.8C272.073 57.5143 273.288 58.2714 274.973 59.0714C276.659 59.8429 278.545 60.2286 280.631 60.2286C282.859 60.2286 284.645 59.8 285.988 58.9429C287.331 58.0857 288.002 56.9429 288.002 55.5143C288.002 54.4571 287.673 53.6 287.016 52.9429C286.388 52.2857 285.516 51.7571 284.402 51.3571C283.288 50.9571 282.045 50.6 280.673 50.2857C279.388 49.9714 278.088 49.5714 276.773 49.0857C275.488 48.5714 274.302 47.9143 273.216 47.1143C272.131 46.2857 271.259 45.2571 270.602 44.0286C269.945 42.8 269.616 41.3571 269.616 39.7C269.616 37.5857 270.288 35.7857 271.631 34.3C272.973 32.8143 274.745 31.6857 276.945 30.9143C279.145 30.1429 281.502 29.7571 284.016 29.7571Z"
-                                fill="currentColor"></path>
-                            <path
-                                d="M53.6523 31.5142C53.6523 28.5967 51.2872 26.2316 48.3697 26.2316C45.4522 26.2316 43.0871 28.5967 43.0871 31.5142C43.0871 34.4317 45.4522 36.7968 48.3697 36.7968C51.2872 36.7968 53.6523 34.4317 53.6523 31.5142Z"
-                                fill="currentColor"></path>
-                            <path
-                                d="M42.6502 36.769C42.5195 36.7593 42.3875 36.7543 42.2543 36.7543C39.3572 36.7543 37.0087 39.1029 37.0087 42C37.0087 44.8971 39.3572 47.2457 42.2543 47.2457C45.1514 47.2457 47.5 44.8971 47.5 42C47.5 40.92 47.1736 39.9162 46.6141 39.0819C45.0637 38.7237 43.691 37.9013 42.6502 36.769Z"
-                                fill="currentColor"></path>
-                            <path
-                                d="M34.8047 39.7898C34.5971 40.4904 34.4857 41.2322 34.4857 42C34.4857 42.7679 34.5971 43.5097 34.8047 44.2102C33.969 46.0163 32.1408 47.2693 30.02 47.2693C27.1098 47.2693 24.7507 44.9102 24.7507 42C24.7507 39.0899 27.1098 36.7308 30.02 36.7308C32.1408 36.7308 33.969 37.9837 34.8047 39.7898Z"
-                                fill="currentColor"></path>
-                            <path
-                                d="M48.3708 47.2122C51.2834 47.2122 53.6445 49.5733 53.6445 52.4859C53.6445 55.3984 51.2834 57.7595 48.3708 57.7595C45.4583 57.7595 43.0971 55.3984 43.0971 52.4859C43.0971 51.4104 43.4191 50.4101 43.9718 49.5761C45.5507 49.2193 46.9472 48.3816 47.9994 47.225C48.1221 47.2165 48.246 47.2122 48.3708 47.2122Z"
-                                fill="currentColor"></path>
-                            <path
-                                d="M59.7461 42C59.7461 39.0938 57.3901 36.7378 54.4838 36.7378C54.3567 36.7378 54.2306 36.7423 54.1057 36.7512C53.0573 37.8988 51.6691 38.7307 50.1003 39.0877C49.9504 39.3129 49.8173 39.5503 49.703 39.7982C49.909 40.4962 50.0195 41.2352 50.0195 42C50.0195 42.7648 49.909 43.5038 49.703 44.2019C49.8173 44.4497 49.9504 44.6872 50.1003 44.9124C51.6691 45.2694 53.0573 46.1013 54.1057 47.2489C54.2306 47.2578 54.3567 47.2623 54.4838 47.2623C57.3901 47.2623 59.7461 44.9063 59.7461 42Z"
-                                fill="currentColor"></path>
-                            <path
-                                d="M40.6028 52.4859C40.6028 51.718 40.7143 50.9761 40.9219 50.2755C40.809 50.0315 40.678 49.7976 40.5306 49.5755C38.9544 49.2187 37.56 48.3825 36.5088 47.2283C36.3856 47.2197 36.2612 47.2153 36.1358 47.2153C36.0102 47.2153 35.8855 47.2197 35.7621 47.2284C34.7111 48.3823 33.317 49.2184 31.7411 49.5753C31.1877 50.4093 30.8653 51.4099 30.8653 52.4859C30.8653 55.3967 33.225 57.7564 36.1358 57.7564C38.2573 57.7564 40.0861 56.503 40.9219 54.6962C40.7143 53.9957 40.6028 53.2538 40.6028 52.4859Z"
-                                fill="currentColor"></path>
-                            <path
-                                d="M40.5094 34.4263C40.6608 34.1992 40.795 33.9595 40.9102 33.7094C40.705 33.0126 40.595 32.2752 40.595 31.512C40.595 30.7489 40.705 30.0115 40.9102 29.3147C40.0777 27.5058 38.2492 26.25 36.1274 26.25C33.2213 26.25 30.8654 28.6059 30.8654 31.512C30.8654 32.5894 31.1892 33.5912 31.7448 34.4253C33.3117 34.7828 34.6983 35.6141 35.7457 36.7605C35.8718 36.7695 35.9991 36.7741 36.1274 36.7741C36.2572 36.7741 36.3858 36.7694 36.5132 36.7602C37.5596 35.615 38.9445 34.7843 40.5094 34.4263Z"
-                                fill="currentColor"></path>
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M42 84C65.196 84 84 65.196 84 42C84 18.804 65.196 0 42 0C18.804 0 0 18.804 0 42C0 65.196 18.804 84 42 84ZM42 74.518C24.0408 74.518 9.48201 59.9592 9.48201 42C9.48201 24.0408 24.0408 9.48201 42 9.48201C59.9592 9.48201 74.518 24.0408 74.518 42C74.518 59.9592 59.9592 74.518 42 74.518Z"
-                                fill="currentColor"></path>
-                        </svg></a></div>
-                <div class="grid grid-cols-2 gap-6 sm:grid-cols-4 lg:col-span-2">
-                    <div>
-                        <h3 class="block text-[--title-text-color] font-medium text-sm">Ressources</h3>
-                        <ul class="mt-4 list-inside space-y-2">
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://dev.to/tailus/" target="_blank">Blog</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://tailus.lemonsqueezy.com/" target="_blank">Store</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://tailus.gumroad.com/" target="_blank">Gumroad</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://preview.tailus.io/" target="_blank">Preview</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://tailus.lemonsqueezy.com/" target="_blank">VS Code extension</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://tailtips.dev" target="_blank">Tailtips</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://spectr.irung.me" target="_blank">Spectr</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://aspect.irung.me" target="_blank">Aspect</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="block text-[--title-text-color] font-medium text-sm">UI Kits</h3>
-                        <ul class="mt-4 list-inside space-y-2">
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://ui.tailus.io" target="_self">React</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://html.tailus.io" target="_self">HTML</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://ui.tailus.io/themer/get-started/introduction/"
-                                    target="_self">Themer</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://github.com/tailus-ui/html.tailus.io" target="_self">Symfony</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="block text-[--title-text-color] font-medium text-sm">Templates</h3>
-                        <ul class="mt-4 list-inside space-y-2">
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://preview.tailus.io/ampire/" target="_self">Ampire</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://preview.tailus.io/radiant/" target="_self">Radiant</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://preview.tailus.io/astrolus/" target="_self">Astrolus Premium</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://preview.tailus.io/oxymor-ns/" target="_self">Oxymor NS</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://preview.tailus.io/oxymor-st/" target="_self">Oxymor ST</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://preview.tailus.io/oxymor-yv/" target="_self">Oxymor YV</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://preview.tailus.io/alt/" target="_self">Alt</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://preview.tailus.io/aria/" target="_self">Aria</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://preview.tailus.io/tailfolio/" target="_self">Tailfolio</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://preview.tailus.io/ada/" target="_self">Ada</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://preview.tailus.io/alt/" target="_self">Alt</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://preview.tailus.io/astrolus-free/" target="_self">Astrolus</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="/templates" target="_self">All templates</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="block text-[--title-text-color] font-medium text-sm">Community</h3>
-                        <ul class="mt-4 list-inside space-y-2">
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://github.com/tailus-ui/html.tailus.io" target="_blank">GitHub</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://www.youtube.com/@tailus-ui" target="_blank">Youtube</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://twitter.com/tailus_ui" target="_blank">X / Twitter</a></li>
-                            <li><a class="transition text-sm text-[--body-text-color] font-normal hover:text-gray-950 dark:hover:text-white"
-                                    href="https://www.linkedin.com/company/95954582" target="_blank">LinkedIn</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div>
+        <p class="mt-4 text-sm">Every website works beautifully across all devices and meets accessibility standards.</p>
+      </div>
+
+      <div>
+        <div class="flex items-center gap-2">
+          <!-- Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
+            <path fill-rule="evenodd" d="...your-icon-path..." clip-rule="evenodd"></path>
+          </svg>
+          <h3 class="text-title text-sm font-medium">Scalable Tech Stack</h3>
+        </div>
+        <p class="mt-4 text-sm">Built with tools like TailwindCSS, Python, JavaScript, and more—ready to scale as your business grows.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="dark:bg-gray-950">
+    <div class="mx-auto max-w-5xl px-6 lg:px-4">
+        <div class="relative">
+            <script>(() => { var l = (s, i, o) => { let r = async () => { await (await s())() }, t = typeof i.value == "object" ? i.value : void 0, c = { rootMargin: t == null ? void 0 : t.rootMargin }, n = new IntersectionObserver(e => { for (let a of e) if (a.isIntersecting) { n.disconnect(), r(); break } }, c); for (let e of o.children) n.observe(e) }; (self.Astro || (self.Astro = {})).visible = l; window.dispatchEvent(new Event("astro:visible")); })();</script>
+            <!-- Portfolio Item -->
+            <astro-island uid="1tM9LM" prefix="r0" component-url="/_astro/TemplateBlock.BehvWR5m.js"
+                component-export="default" renderer-url="/_astro/client.BfozEI4p.js"
+                props="{&quot;template&quot;:[0,{&quot;priority&quot;:[0,1],&quot;name&quot;:[0,&quot;ampire&quot;],&quot;title&quot;:[0,&quot;Modern Sass website&quot;],&quot;screenshots&quot;:[1,[[0,&quot;/templates/ampire/ampire-cover.webp&quot;],[0,&quot;/templates/ampire/ampire-cover-9.webp&quot;],[0,&quot;/templates/ampire/ampire-cover-3.webp&quot;]]],&quot;shortDescription&quot;:[0,&quot;Ampire is a modern and complete Tailwind CSS template ideal for any SaaS business or startup.&quot;],&quot;purchaseLink&quot;:[0,&quot;https://tailus.lemonsqueezy.com/buy/d9d74f3f-9378-497a-9698-fbdacc93f0e0&quot;],&quot;previewLink&quot;:[0,&quot;https://ampire.tailus.io/&quot;],&quot;price&quot;:[0,&quot;From $19.99&quot;],&quot;rating&quot;:[0,{&quot;rate&quot;:[0,5],&quot;count&quot;:[0,32]}],&quot;stack&quot;:[1,[[0,&quot;html&quot;]]]}],&quot;slug&quot;:[0,&quot;ampire&quot;]}"
+                ssr="" client="visible" opts="{&quot;name&quot;:&quot;TemplateGallery&quot;,&quot;value&quot;:true}"
+                await-children="">
                 <div
-                    class="-mb-2 flex flex-wrap gap-1 overflow-hidden text-sm font-medium text-gray-700 dark:text-gray-300">
-                    Designed by Tailus UI in<div
-                        class="flex items-start justify-center gap-2 text-center font-semibold text-gray-950 sm:gap-1 dark:text-white">
-                        <div class="block">
-                            <div class="block pb-2">DR Congo</div>
-                            <div class="-mt-5 grow overflow-hidden"><svg aria-hidden="true" class="w-16" height="22"
-                                    viewBox="0 0 283 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1.24715 19.3744C72.4051 10.3594 228.122 -4.71194 281.724 7.12332"
-                                        stroke="url(#paint0_linear_pl)" stroke-width="4"></path>
-                                    <defs>
-                                        <linearGradient id="paint0_linear_pl" x1="282" y1="5.49999" x2="40" y2="13"
-                                            gradientUnits="userSpaceOnUse">
-                                            <stop stop-color="#facc15"></stop>
-                                            <stop offset="1" stop-color="#a855f7"></stop>
-                                        </linearGradient>
-                                    </defs>
-                                </svg></div>
+                    class="border-y border-t-white pb-6 [grid-template-columns:auto_1fr] *:py-12 md:grid md:pb-0 md:*:py-8 lg:*:py-16 dark:border-t-transparent">
+                    <div
+                        class="border-r-none flex flex-col gap-6 divide-y py-2 md:w-[18rem] md:border-r md:pr-6 lg:gap-12 lg:py-12 lg:pr-12">
+                        <div class="lg:pt-6">
+                            <div class="flex items-end justify-between">
+                                <h1
+                                    class="block text-[--title-text-color] text-lg font-medium my-0 capitalize group-hover:text-primary-600 dark:group-hover:text-primary-400">
+                                    ILCA Bejaia</h1>
+                                <!-- <p class="text-[--body-text-color] text-sm font-normal my-0">From $19.99</p> -->
+                            </div>
+                            <p class="text-[--body-text-color] text-sm font-normal nb my-0">ILCA Bejaia is an
+                                International Learning Center in Algeria offering language courses and learning
+                                resources.</p>
+                            <div class="my-6 flex gap-1">
+                                <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"><svg
+                                        class="size-5 transition duration-200 h-4 w-4 -mb-0.5"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+                                        <path fill="#e44d26"
+                                            d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198l-45.019 12.48z">
+                                        </path>
+                                        <path fill="#f16529" d="m64 116.8l36.378-10.086l8.559-95.878H64z"></path>
+                                        <path fill="#ebebeb"
+                                            d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692l3.382 37.927H64zm0 35.743l-.061.017l-15.327-4.14l-.979-10.975H33.816l1.928 21.609l28.193 7.826l.063-.017z">
+                                        </path>
+                                        <path fill="#fff"
+                                            d="M63.952 52.455v13.763h16.947l-1.597 17.849l-15.35 4.143v14.319l28.215-7.82l.207-2.325l3.234-36.233l.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092l.628-6.978l.329-3.692z">
+                                        </path>
+                                    </svg></div>
+                            </div>
+                            <div class="mt-6 grid grid-cols-1 gap-3">
+                                <a href="https://ilcabejaia.com/" target="_blank" class="btn sz-sm variant-outlined">
+                                    <span>Live Site</span>
+                                </a>
+                            </div>
                         </div>
+                        <!-- <div class="hidden md:grid md:grid-cols-3 md:gap-3 md:pt-6 lg:pt-12"><button
+                                aria-label="ampire screenshot" data-state="active"
+                                class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
+                                    class="size-full" src="/templates/ampire/ampire-cover.webp"
+                                    alt="ampire screenshot 0" loading="lazy" width="560" height="560" /></button><button
+                                aria-label="ampire screenshot" data-state="false"
+                                class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
+                                    class="size-full" src="/templates/ampire/ampire-cover-9.webp"
+                                    alt="ampire screenshot 1" loading="lazy" width="560" height="560" /></button><button
+                                aria-label="ampire screenshot" data-state="false"
+                                class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
+                                    class="size-full" src="/templates/ampire/ampire-cover-3.webp"
+                                    alt="ampire screenshot 2" loading="lazy" width="560" height="560" /></button>
+                        </div> -->
+                    </div><a href="#"
+                        class="relative border-white md:border-l md:pl-6 lg:pl-12 dark:border-transparent">
+                        <div class="mockup">
+                            <img src="{{ url_for('static', filename='images/portfolio-images/macbook-white.png') }}">
+                            <div class="artwork">
+                                <img
+                                    src="{{ url_for('static', filename='images/portfolio-images/ilca-bejaia-home-page-mockup.png') }}">
+                            </div>
+                        </div>
+                    </a>
+                </div><!--astro:end-->
+            </astro-island><astro-island uid="1nf5rV" prefix="r1" component-url="/_astro/TemplateBlock.BehvWR5m.js"
+                component-export="default" renderer-url="/_astro/client.BfozEI4p.js"
+                props="{&quot;template&quot;:[0,{&quot;priority&quot;:[0,2],&quot;name&quot;:[0,&quot;oxymor-ns&quot;],&quot;title&quot;:[0,&quot;Sleek landing page&quot;],&quot;screenshots&quot;:[1,[[0,&quot;/templates/oxymor/ns-home.webp&quot;],[0,&quot;/templates/oxymor/ns-bento.webp&quot;],[0,&quot;/templates/oxymor/ns-pricing-faqs.webp&quot;]]],&quot;shortDescription&quot;:[0,&quot;Sleek SaaS landing page template designed to showcase your product, app, or service.&quot;],&quot;purchaseLink&quot;:[0,&quot;https://tailus.lemonsqueezy.com/buy/c42595d2-42f3-4a55-84d3-ea5cda979bc5&quot;],&quot;previewLink&quot;:[0,&quot;https://oxymor-ns.tailus.io/&quot;],&quot;price&quot;:[0,&quot;$39.99&quot;],&quot;stack&quot;:[1,[[0,&quot;html&quot;],[0,&quot;astro&quot;]]]}],&quot;slug&quot;:[0,&quot;oxymor-ns&quot;]}"
+                ssr="" client="visible" opts="{&quot;name&quot;:&quot;TemplateGallery&quot;,&quot;value&quot;:true}"
+                await-children="">
+                <div
+                    class="border-y border-t-white pb-6 [grid-template-columns:auto_1fr] *:py-12 md:grid md:pb-0 md:*:py-8 lg:*:py-16 dark:border-t-transparent">
+                    <div
+                        class="border-r-none flex flex-col gap-6 divide-y py-2 md:w-[18rem] md:border-r md:pr-6 lg:gap-12 lg:py-12 lg:pr-12">
+                        <div class="lg:pt-6">
+                            <div class="flex items-end justify-between">
+                                <h1
+                                    class="block text-[--title-text-color] text-lg font-medium my-0 capitalize group-hover:text-primary-600 dark:group-hover:text-primary-400">
+                                    Woven Dignity</h1>
+                                <!-- <p class="text-[--body-text-color] text-sm font-normal my-0">$39.99</p> -->
+                            </div>
+                            <div class="mt-6"></div>
+                            <p class="text-[--body-text-color] text-sm font-normal nb my-0">Woven Dignity is a
+                                non-profit organization specializing in handmade cards, with the main focus being to
+                                provide refugee women with hope and empowerment through sustainable work.</p>
+                            <div class="my-6 flex gap-1">
+                                <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"><svg
+                                        class="size-5 transition duration-200 h-4 w-4 -mb-0.5"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+                                        <path fill="#e44d26"
+                                            d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198l-45.019 12.48z">
+                                        </path>
+                                        <path fill="#f16529" d="m64 116.8l36.378-10.086l8.559-95.878H64z"></path>
+                                        <path fill="#ebebeb"
+                                            d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692l3.382 37.927H64zm0 35.743l-.061.017l-15.327-4.14l-.979-10.975H33.816l1.928 21.609l28.193 7.826l.063-.017z">
+                                        </path>
+                                        <path fill="#fff"
+                                            d="M63.952 52.455v13.763h16.947l-1.597 17.849l-15.35 4.143v14.319l28.215-7.82l.207-2.325l3.234-36.233l.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092l.628-6.978l.329-3.692z">
+                                        </path>
+                                    </svg></div>
+                                <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"><svg
+                                        class="relative size-[1.125rem] !text-gray-950 dark:!text-white h-4 w-4 -mb-0.5"
+                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="85" height="107"
+                                        viewBox="0 0 85 107" fill="none">
+                                        <path
+                                            d="M27.5894 91.1365C22.7555 86.7178 21.3444 77.4335 23.3583 70.7072C26.8503 74.948 31.6888 76.2914 36.7005 77.0497C44.4375 78.2199 52.0359 77.7822 59.2232 74.2459C60.0454 73.841 60.8052 73.3027 61.7036 72.7574C62.378 74.714 62.5535 76.6892 62.318 78.6996C61.7452 83.5957 59.3086 87.3778 55.4332 90.2448C53.8835 91.3916 52.2437 92.4167 50.6432 93.4979C45.7262 96.8213 44.3959 100.718 46.2435 106.386C46.2874 106.525 46.3267 106.663 46.426 107C43.9155 105.876 42.0817 104.24 40.6845 102.089C39.2087 99.8193 38.5066 97.3081 38.4696 94.5909C38.4511 93.2686 38.4511 91.9345 38.2733 90.6309C37.8391 87.4527 36.3471 86.0297 33.5364 85.9478C30.6518 85.8636 28.37 87.6469 27.7649 90.4554C27.7187 90.6707 27.6517 90.8837 27.5847 91.1341L27.5894 91.1365Z"
+                                            fill="currentColor"></path>
+                                        <path
+                                            d="M27.5894 91.1365C22.7555 86.7178 21.3444 77.4335 23.3583 70.7072C26.8503 74.948 31.6888 76.2914 36.7005 77.0497C44.4375 78.2199 52.0359 77.7822 59.2232 74.2459C60.0454 73.841 60.8052 73.3027 61.7036 72.7574C62.378 74.714 62.5535 76.6892 62.318 78.6996C61.7452 83.5957 59.3086 87.3778 55.4332 90.2448C53.8835 91.3916 52.2437 92.4167 50.6432 93.4979C45.7262 96.8213 44.3959 100.718 46.2435 106.386C46.2874 106.525 46.3267 106.663 46.426 107C43.9155 105.876 42.0817 104.24 40.6845 102.089C39.2087 99.8193 38.5066 97.3081 38.4696 94.5909C38.4511 93.2686 38.4511 91.9345 38.2733 90.6309C37.8391 87.4527 36.3471 86.0297 33.5364 85.9478C30.6518 85.8636 28.37 87.6469 27.7649 90.4554C27.7187 90.6707 27.6517 90.8837 27.5847 91.1341L27.5894 91.1365Z"
+                                            fill="url(#paint0_linear_1_59)"></path>
+                                        <path
+                                            d="M0 69.5866C0 69.5866 14.3139 62.6137 28.6678 62.6137L39.4901 29.1204C39.8953 27.5007 41.0783 26.3999 42.4139 26.3999C43.7495 26.3999 44.9325 27.5007 45.3377 29.1204L56.1601 62.6137C73.1601 62.6137 84.8278 69.5866 84.8278 69.5866C84.8278 69.5866 60.5145 3.35233 60.467 3.21944C59.7692 1.2612 58.5911 0 57.0029 0H27.8274C26.2392 0 25.1087 1.2612 24.3634 3.21944C24.3108 3.34983 0 69.5866 0 69.5866Z"
+                                            fill="currentColor"></path>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_1_59" x1="22.4702" y1="107" x2="69.1451"
+                                                y2="84.9468" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#D83333"></stop>
+                                                <stop offset="1" stop-color="#F041FF"></stop>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg></div>
+                            </div>
+                            <div class="mt-6 grid grid-cols-1 gap-3">
+                                <a href="https://wovendignity.com/" target="_blank" class="btn sz-sm variant-outlined">
+                                    <span>View Live Site</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- <div class="hidden md:grid md:grid-cols-3 md:gap-3 md:pt-6 lg:pt-12"><button
+                                aria-label="oxymor-ns screenshot" data-state="active"
+                                class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
+                                    class="size-full" src="/templates/oxymor/ns-home.webp" alt="oxymor-ns screenshot 0"
+                                    loading="lazy" width="560" height="560" /></button><button
+                                aria-label="oxymor-ns screenshot" data-state="false"
+                                class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
+                                    class="size-full" src="/templates/oxymor/ns-bento.webp" alt="oxymor-ns screenshot 1"
+                                    loading="lazy" width="560" height="560" /></button><button
+                                aria-label="oxymor-ns screenshot" data-state="false"
+                                class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
+                                    class="size-full" src="/templates/oxymor/ns-pricing-faqs.webp"
+                                    alt="oxymor-ns screenshot 2" loading="lazy" width="560" height="560" /></button>
+                        </div> -->
+                    </div><a href="#"
+                        class="relative border-white md:border-l md:pl-6 lg:pl-12 dark:border-transparent">
+                        <div class="mockup">
+                            <img src="{{ url_for('static', filename='images/portfolio-images/macbook-white.png') }}">
+                            <div class="artwork">
+                                <img
+                                    src="{{ url_for('static', filename='images/portfolio-images/woven-dignity-home-page-mockup.png') }}">
+                            </div>
+                        </div>
+                    </a>
+                </div><!--astro:end-->
+            </astro-island><astro-island uid="Zb8Bx7" prefix="r2" component-url="/_astro/TemplateBlock.BehvWR5m.js"
+                component-export="default" renderer-url="/_astro/client.BfozEI4p.js"
+                props="{&quot;template&quot;:[0,{&quot;priority&quot;:[0,2],&quot;name&quot;:[0,&quot;oxymor-st&quot;],&quot;title&quot;:[0,&quot;Polished landing page&quot;],&quot;screenshots&quot;:[1,[[0,&quot;/templates/oxymor/st-home.webp&quot;],[0,&quot;/templates/oxymor/st-bento.webp&quot;],[0,&quot;/templates/oxymor/st-reviews.webp&quot;]]],&quot;shortDescription&quot;:[0,&quot;Polished landing page template for showcasing products, apps, or services.&quot;],&quot;purchaseLink&quot;:[0,&quot;https://tailus.lemonsqueezy.com/buy/11c51a87-67aa-4aac-a641-5112ec511362&quot;],&quot;previewLink&quot;:[0,&quot;https://oxymor-st.tailus.io/&quot;],&quot;price&quot;:[0,&quot;$39.99&quot;],&quot;stack&quot;:[1,[[0,&quot;html&quot;],[0,&quot;astro&quot;]]]}],&quot;slug&quot;:[0,&quot;oxymor-st&quot;]}"
+                ssr="" client="visible" opts="{&quot;name&quot;:&quot;TemplateGallery&quot;,&quot;value&quot;:true}"
+                await-children="">
+                <div
+                    class="border-y border-t-white pb-6 [grid-template-columns:auto_1fr] *:py-12 md:grid md:pb-0 md:*:py-8 lg:*:py-16 dark:border-t-transparent">
+                    <div
+                        class="border-r-none flex flex-col gap-6 divide-y py-2 md:w-[18rem] md:border-r md:pr-6 lg:gap-12 lg:py-12 lg:pr-12">
+                        <div class="lg:pt-6">
+                            <div class="flex items-end justify-between">
+                                <h1
+                                    class="block text-[--title-text-color] text-lg font-medium my-0 capitalize group-hover:text-primary-600 dark:group-hover:text-primary-400">
+                                    Balanced Accountant</h1>
+                                <!-- <p class="text-[--body-text-color] text-sm font-normal my-0">$39.99</p> -->
+                            </div>
+                            <div class="mt-6"></div>
+                            <p class="text-[--body-text-color] text-sm font-normal nb my-0">Polished landing page
+                                template for showcasing products, apps, or services.</p>
+                            <div class="my-6 flex gap-1">
+                                <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"><svg
+                                        class="size-5 transition duration-200 h-4 w-4 -mb-0.5"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+                                        <path fill="#e44d26"
+                                            d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198l-45.019 12.48z">
+                                        </path>
+                                        <path fill="#f16529" d="m64 116.8l36.378-10.086l8.559-95.878H64z"></path>
+                                        <path fill="#ebebeb"
+                                            d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692l3.382 37.927H64zm0 35.743l-.061.017l-15.327-4.14l-.979-10.975H33.816l1.928 21.609l28.193 7.826l.063-.017z">
+                                        </path>
+                                        <path fill="#fff"
+                                            d="M63.952 52.455v13.763h16.947l-1.597 17.849l-15.35 4.143v14.319l28.215-7.82l.207-2.325l3.234-36.233l.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092l.628-6.978l.329-3.692z">
+                                        </path>
+                                    </svg></div>
+                                <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"><svg
+                                        class="relative size-[1.125rem] !text-gray-950 dark:!text-white h-4 w-4 -mb-0.5"
+                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="85" height="107"
+                                        viewBox="0 0 85 107" fill="none">
+                                        <path
+                                            d="M27.5894 91.1365C22.7555 86.7178 21.3444 77.4335 23.3583 70.7072C26.8503 74.948 31.6888 76.2914 36.7005 77.0497C44.4375 78.2199 52.0359 77.7822 59.2232 74.2459C60.0454 73.841 60.8052 73.3027 61.7036 72.7574C62.378 74.714 62.5535 76.6892 62.318 78.6996C61.7452 83.5957 59.3086 87.3778 55.4332 90.2448C53.8835 91.3916 52.2437 92.4167 50.6432 93.4979C45.7262 96.8213 44.3959 100.718 46.2435 106.386C46.2874 106.525 46.3267 106.663 46.426 107C43.9155 105.876 42.0817 104.24 40.6845 102.089C39.2087 99.8193 38.5066 97.3081 38.4696 94.5909C38.4511 93.2686 38.4511 91.9345 38.2733 90.6309C37.8391 87.4527 36.3471 86.0297 33.5364 85.9478C30.6518 85.8636 28.37 87.6469 27.7649 90.4554C27.7187 90.6707 27.6517 90.8837 27.5847 91.1341L27.5894 91.1365Z"
+                                            fill="currentColor"></path>
+                                        <path
+                                            d="M27.5894 91.1365C22.7555 86.7178 21.3444 77.4335 23.3583 70.7072C26.8503 74.948 31.6888 76.2914 36.7005 77.0497C44.4375 78.2199 52.0359 77.7822 59.2232 74.2459C60.0454 73.841 60.8052 73.3027 61.7036 72.7574C62.378 74.714 62.5535 76.6892 62.318 78.6996C61.7452 83.5957 59.3086 87.3778 55.4332 90.2448C53.8835 91.3916 52.2437 92.4167 50.6432 93.4979C45.7262 96.8213 44.3959 100.718 46.2435 106.386C46.2874 106.525 46.3267 106.663 46.426 107C43.9155 105.876 42.0817 104.24 40.6845 102.089C39.2087 99.8193 38.5066 97.3081 38.4696 94.5909C38.4511 93.2686 38.4511 91.9345 38.2733 90.6309C37.8391 87.4527 36.3471 86.0297 33.5364 85.9478C30.6518 85.8636 28.37 87.6469 27.7649 90.4554C27.7187 90.6707 27.6517 90.8837 27.5847 91.1341L27.5894 91.1365Z"
+                                            fill="url(#paint0_linear_1_59)"></path>
+                                        <path
+                                            d="M0 69.5866C0 69.5866 14.3139 62.6137 28.6678 62.6137L39.4901 29.1204C39.8953 27.5007 41.0783 26.3999 42.4139 26.3999C43.7495 26.3999 44.9325 27.5007 45.3377 29.1204L56.1601 62.6137C73.1601 62.6137 84.8278 69.5866 84.8278 69.5866C84.8278 69.5866 60.5145 3.35233 60.467 3.21944C59.7692 1.2612 58.5911 0 57.0029 0H27.8274C26.2392 0 25.1087 1.2612 24.3634 3.21944C24.3108 3.34983 0 69.5866 0 69.5866Z"
+                                            fill="currentColor"></path>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_1_59" x1="22.4702" y1="107" x2="69.1451"
+                                                y2="84.9468" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#D83333"></stop>
+                                                <stop offset="1" stop-color="#F041FF"></stop>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg></div>
+                            </div>
+                            <div class="mt-6 grid grid-cols-1 gap-3">
+                                <a
+                                    href="https://balancedaccountant.com/" target="_blank"
+                                    class="btn sz-sm variant-outlined">
+                                    <span>View Live Site</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- <div class="hidden md:grid md:grid-cols-3 md:gap-3 md:pt-6 lg:pt-12"><button
+                                aria-label="oxymor-st screenshot" data-state="active"
+                                class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
+                                    class="size-full" src="#" alt="oxymor-st screenshot 0"
+                                    loading="lazy" width="560" height="560" /></button><button
+                                aria-label="oxymor-st screenshot" data-state="false"
+                                class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
+                                    class="size-full" src="#" alt="oxymor-st screenshot 1"
+                                    loading="lazy" width="560" height="560" /></button><button
+                                aria-label="oxymor-st screenshot" data-state="false"
+                                class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
+                                    class="size-full" src="#"
+                                    alt="oxymor-st screenshot 2" loading="lazy" width="560" height="560" /></button>
+                        </div> -->
+                    </div><a href="#"
+                        class="relative border-white md:border-l md:pl-6 lg:pl-12 dark:border-transparent"><div class="mockup">
+                            <img src="{{ url_for('static', filename='images/portfolio-images/macbook-white.png') }}">
+                            <div class="artwork">
+                                <img
+                                    src="{{ url_for('static', filename='images/portfolio-images/woven-dignity-home-page-mockup.png') }}">
+                            </div>
+                        </div></a>
+                </div><!--astro:end-->
+        </div>
+    </div>
+</section>
+<!-- <section class="border-y py-20 dark:bg-gray-950">
+    <div class="mx-auto max-w-5xl px-6 lg:px-4">
+        <h2 class="block text-[--title-text-color] text-xl font-medium">Free templates</h2>
+        <div class="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:gap-6">
+            <div> <a href="#" class="rounded-card" aria-label="Go to atom template page"> <img
+                        class="bg-ui tls-shadow rounded-card object-cover object-top shadow-gray-950/[0.03] [--ui-shadow-border:var(--ui-border-color)] md:max-h-64 lg:max-h-96"
+                        src="#" alt="tailus atom template screenshot" width="3200"
+                        height="2400"> </a>
+                <div class="flex flex-col justify-between px-1 py-2">
+                    <div>
+                        <div class="flex items-end justify-between">
+                            <h3
+                                class="block text-[--title-text-color] font-medium my-0 text-sm group-hover:text-primary-600 dark:group-hover:text-primary-400 capitalize">
+                                atom</h3>
+                            <p class="text-[--body-text-color] text-sm font-normal my-0">astro</p>
+                        </div>
+                        <div class="hidden grid-cols-2 gap-4"> <a
+                                href="#"
+                                class="btn sz-sm variant-primary"> <span class="btn-label">Purchase</span> </a> <a
+                                href="#" class="btn sz-sm variant-outlined"> <span>Live
+                                    Preview</span> </a> </div>
+                    </div>
+                </div>
+            </div>
+            <div> <a href="#" class="rounded-card" aria-label="Go to ada template page"> <img
+                        class="bg-ui tls-shadow rounded-card object-cover object-top shadow-gray-950/[0.03] [--ui-shadow-border:var(--ui-border-color)] md:max-h-64 lg:max-h-96"
+                        src="/templates/ada/home.webp" alt="tailus ada template screenshot" width="3200" height="2400">
+                </a>
+                <div class="flex flex-col justify-between px-1 py-2">
+                    <div>
+                        <div class="flex items-end justify-between">
+                            <h3
+                                class="block text-[--title-text-color] font-medium my-0 text-sm group-hover:text-primary-600 dark:group-hover:text-primary-400 capitalize">
+                                ada</h3>
+                            <p class="text-[--body-text-color] text-sm font-normal my-0">html</p>
+                        </div>
+                        <div class="hidden grid-cols-2 gap-4"> <a
+                                href="#"
+                                class="btn sz-sm variant-primary"> <span class="btn-label">Purchase</span> </a> <a
+                                href="#" class="btn sz-sm variant-outlined"> <span>Live
+                                    Preview</span> </a> </div>
+                    </div>
+                </div>
+            </div>
+            <div> <a href="#" class="rounded-card"
+                    aria-label="Go to astrolus-free template page"> <img
+                        class="bg-ui tls-shadow rounded-card object-cover object-top shadow-gray-950/[0.03] [--ui-shadow-border:var(--ui-border-color)] md:max-h-64 lg:max-h-96"
+                        src="#" alt="tailus astrolus-free template screenshot"
+                        width="3200" height="2400"> </a>
+                <div class="flex flex-col justify-between px-1 py-2">
+                    <div>
+                        <div class="flex items-end justify-between">
+                            <h3
+                                class="block text-[--title-text-color] font-medium my-0 text-sm group-hover:text-primary-600 dark:group-hover:text-primary-400 capitalize">
+                                astrolus-free</h3>
+                            <p class="text-[--body-text-color] text-sm font-normal my-0">html</p>
+                        </div>
+                        <div class="hidden grid-cols-2 gap-4"> <a
+                                href="#"
+                                class="btn sz-sm variant-primary"> <span class="btn-label">Purchase</span> </a> <a
+                                href="#">
+                                <span>Live Preview</span> </a> </div>
                     </div>
                 </div>
             </div>
         </div>
-    </footer>
-    <script>
-        function setCustomization(document) {
-            const theme = localStorage.getItem('theme') || 'dark'
+    </div>
+</section> -->
+<script>
+    function setCustomization(document) {
+        const theme = localStorage.getItem('theme') || 'dark'
 
-            const root = document.documentElement.classList
+        const root = document.documentElement.classList
 
-            if (theme == 'dark') {
-                root.add('dark')
-            } else {
-                root.remove('dark')
-            }
+        if (theme == 'dark') {
+            root.add('dark')
+        } else {
+            root.remove('dark')
         }
+    }
 
-        setCustomization(document)
+    setCustomization(document)
 
-        document.addEventListener('astro:before-swap', (event) => {
-            setCustomization(event.newDocument)
-        })
-    </script>
+    document.addEventListener('astro:before-swap', (event) => {
+        setCustomization(event.newDocument)
+    })
+</script>
 {% endblock %}

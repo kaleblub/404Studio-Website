@@ -3,6 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="robots" content="index, follow" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>404 Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,6 +12,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/tailwind-styles.css') }}">
   <link href="/app/static/css/tailwind-styles.css" rel="stylesheet">
+  
+  <!-- Page Specific Styles -->
+  {% block extra_head %}
+  {% endblock extra_head %}
   <script>
     function toggleMenu() {
       document.getElementById("mobile-menu").classList.toggle("hidden");
@@ -75,16 +81,16 @@
         <li class="relative group">
           <a href="{{ url_for('main.services') }}" class="hover:text-primaryorange flex items-center">
             Services
-            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <!-- <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
-            </svg>
+            </svg> -->
           </a>
-          <ul id="services-dropdown" class="absolute hidden group-hover:block bg-white shadow-lg py-2 w-48 border rounded-lg z-10">
+          <!-- <ul id="services-dropdown" class="absolute hidden group-hover:block bg-white shadow-lg py-2 w-48 border rounded-lg z-10">
             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">1</a></li>
             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">2</a></li>
             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">3</a></li>
             <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">4</a></li>
-          </ul>
+          </ul> -->
         </li>
         <li><a href="{{ url_for('main.portfolio') }}">Portfolio</a></li>
 
@@ -118,12 +124,12 @@
         <li class="relative">
           <a href="javascript:void(0)" onclick="toggleDropdownMobile()" class="flex justify-between w-full text-left">
             Services
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <!-- <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
-            </svg>
+            </svg> -->
           </a>
-          <ul id="mobile-services-dropdown" class="hidden bg-black mt-2 py-2 w-48 rounded-lg z-10">
-          </ul>
+          <!-- <ul id="mobile-services-dropdown" class="hidden bg-black mt-2 py-2 w-48 rounded-lg z-10">
+          </ul> -->
         </li>
         
         <li><a href="{{ url_for('main.portfolio') }}">Portfolio</a></li>

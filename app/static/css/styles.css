@@ -66,6 +66,37 @@
     }
   }
 
+.title {
+        background: linear-gradient(180deg,
+                rgba(239, 176, 113, 1) 0%,
+                rgba(74, 108, 247, 0) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        opacity: 0.2;
+        position: absolute;
+        /* adjust as needed to hover above */
+        /* left: 0; */
+        font-size: 40px;
+        line-height: 1 !important;
+        font-weight: 700;
+        font-family: 'Inter', sans-serif;
+    }
+
+    /* Responsive font sizes */
+    @media (min-width: 540px) {
+        .title {
+            font-size: 60px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .title {
+            font-size: 95px;
+        }
+    }
+
 /* Quidel-style Button */
 .quidel-button {
   float: left;

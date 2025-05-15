@@ -1,0 +1,345 @@
+.portfolio-section {
+  background-color: #EFB071;
+}
+
+.portfolio-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.portfolio-container h1 {
+  font-size: 4.5rem;
+  -webkit-text-stroke: 0.75px #ffe2c6;
+}
+
+.portfolio-container h2 {
+  font-size: 2.5rem;
+  color: var(--main-orange);
+}
+
+.portfolio-container p {
+  font-size: 1rem;
+  color: white;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  min-height: 500px;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  width: 80%;
+  height: auto;
+  background-color: var(--contrast-blue);
+  justify-self: center;
+  padding-top: 2rem;
+  border-radius: 0.5rem;
+  transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
+  transform-origin: bottom right;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+}
+
+.portfolio-item.portfolio-item.active:hover {
+  transform: none;
+}
+
+.portfolio-item.active {
+  position: fixed;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  border-radius: 0;
+  /* transition: all 0.5s ease-in-out; */
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95s);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.portfolio-item.active h2 {
+  color: white;
+}
+
+/* .portfolio-item.active h3,
+.portfolio-item.active p {
+  transition: transform 5s ease-in-out, left 5s ease-in-out;
+} */
+
+.portfolio-item.active h3 {
+  font-size: 2rem;
+  color: var(--main-orange);
+}
+.portfolio-item.active h3,
+.portfolio-item.active p,
+.portfolio-item.active ul {
+  display: none;
+}
+
+/* .portfolio-item.active p {
+
+} */
+
+/* .portfolio-item.active .mockup {
+  width: 60%;
+  height: 100%;
+  transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+} */
+
+.portfolio-item .mockup {
+  transition: all 0.3s ease-in-out;
+}
+
+/* .modal-content {
+  transform-origin: center;
+  transition: transform 0.3s ease-in-out;
+} */
+
+.portfolio-item h3,
+.portfolio-item h4 {
+  font-weight: 600;
+  color: var(--main-orange);
+}
+
+.portfolio-item ul {
+  text-align: left;
+  padding-left: 5rem;
+  padding-top: 2rem;
+}
+
+.portfolio-item .close-btn {
+  display: none;
+}
+
+.portfolio-item.active .close-btn {
+  display: block;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
+
+.mockup {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.mobile-mockup {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.mobile-mockup img {
+  width: 100%;
+  max-width: 600px;
+}
+
+.portfolio-item.active .mockup > img {
+  display: none;
+}
+
+.artwork {
+  position: absolute;
+  width: 70%;
+  height: 83%;
+  top: 6%;
+  left: 15%;
+  overflow: scroll;
+  transition: transform 0.5s ease-in-out;
+  transform-origin: bottom right;
+}
+
+.portfolio-item.active .artwork {
+  position: fixed;
+  width: 70%;
+  height: 100vh;
+  right: 0;
+  transition: transform 0.5s ease-in-out;
+  top: 0;
+  left: inherit;
+}
+
+.portfolio-info {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  max-width: 30vw;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  overflow-y: auto;
+}
+
+.portfolio-item.active .portfolio-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 1;
+  text-align: left;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  transform: translateX(0);
+  transform: translateY(0);
+  /* transition: opacity 0.5s ease, transform 0.5s ease; */
+  border-right: 5px solid var(--main-orange);
+}
+
+.portfolio-item.active .portfolio-info h3,
+.portfolio-item.active .portfolio-info p,
+.portfolio-item.active .portfolio-info ul {
+  display: block;
+}
+
+.portfolio-info ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  padding-top: 0;
+}
+
+/* Optional: Styling the description text */
+.portfolio-info .description {
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+/* Ensure h3 and p elements are block-level */
+.portfolio-info h3, 
+.portfolio-info p {
+  display: block; /* Ensure block-level elements */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Optional: Adjust the spacing between the elements */
+.portfolio-info h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.portfolio-info p {
+  font-size: 1.1em;
+}
+
+/* .modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.modal.open {
+  display: flex;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 800px;
+  transform-origin: center;
+  transform: scale(0.5);
+  animation: scaleUp 0.3s forwards;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #555;
+} */
+
+@keyframes fadeIn {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  to {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.5);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@media (max-width:992px) {
+  .portfolio-item ul {
+    padding-left: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-info {
+    max-width: 100%;
+  }
+
+  .portfolio-item.active .mockup {
+    display: none;
+  }
+  .mobile-mockup {
+    display: block;
+  }
+
+  .close-btn {
+    padding: 0.5rem 0.75rem;
+    min-width: 0.5rem;
+  }
+}
+
+@media (max-width: 623px) {
+  .portfolio-container {
+    padding: 0;
+  }
+  .portfolio-container h2,
+  .portfolio-container p {
+    padding: 0 2rem 0 2rem;
+  }
+  .portfolio-item {
+    max-width: 100%;
+    padding-top: 2rem;
+  }
+}

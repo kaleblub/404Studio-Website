@@ -39,6 +39,10 @@ reviews = [
 def home():
     return render_template('home.html', reviews=reviews)
 
+@main.route('/links')
+def links_page():
+    return render_template('links-page.html')
+
 @main.route('/about')
 def about():
     return render_template('about.html', reviews=reviews)

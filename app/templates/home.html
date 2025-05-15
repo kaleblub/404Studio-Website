@@ -44,36 +44,7 @@
         color: rgb(139 191 136 / var(--tw-text-opacity));
     }
 
-    .title {
-        background: linear-gradient(180deg,
-                rgba(239, 176, 113, 1) 0%,
-                rgba(74, 108, 247, 0) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent;
-        opacity: 0.2;
-        position: absolute;
-        /* adjust as needed to hover above */
-        /* left: 0; */
-        font-size: 40px;
-        line-height: 1 !important;
-        font-weight: 700;
-        font-family: 'Inter', sans-serif;
-    }
-
-    /* Responsive font sizes */
-    @media (min-width: 540px) {
-        .title {
-            font-size: 60px;
-        }
-    }
-
-    @media (min-width: 992px) {
-        .title {
-            font-size: 95px;
-        }
-    }
+    
 
     #tesseract-container {
         margin: 0;
@@ -301,6 +272,7 @@
             box-shadow: 0 0 8px #EFB071;
         }
     }
+    
 </style>
 <!-- Hero Section -->
 <section class="bg-white dark:bg-[#0a0c19] relative flex flex-col items-center md:items-center max-w-screen min-h-screen pt-10 px-3">
@@ -350,7 +322,7 @@
                 class="font-montserrat text-[56px] md:text-[65px] lg:text-[72px] xl:text-[85px] font-bold leading-tight top-[-225px] absolute md:relative md:top-0 text-right md:text-left">
                 Your Guide Through The</h1>
             <h1
-                class="font-montserrat text-[56px] md:text-[65px] lg:text-[72px] xl:text-[85px] font-bold leading-tight text-right md:text-left">
+                class="font-montserrat text-[56px] md:text-[65px] lg:text-[72px] xl:text-[85px] font-bold leading-tight text-right md:text-left glitch" data-text="Digital Unknown">
                 Digital Unknown</h1>
             <p
                 class="font-inter text-gray-400 text-[14px] md:text-[16px] lg:text-[18px] leading-[18px] md:leading-normal mt-4">
@@ -398,14 +370,16 @@
 <section class="bg-white dark:bg-[#0a0c19]">
     <div class="container px-6 py-10 mx-auto">
         <!-- <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">explore our <br> awesome <span class="underline decoration-primabg-primaryorange">Components</span></h1> -->
-        <span class="title left-[50%] lg:left-[3%] top-[0.5rem]">SERVICES</span>
-        <h2
-            class="relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-center lg:text-left text-white">
-            Explore Our Areas of Expertise
-        </h2>
-        <p class="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quam voluptatibus
-        </p>
+        <div class="relative">
+            <span class="title left-[25%] lg:left-[-3%] top-[-2rem]">SERVICES</span>
+            <h2
+                class="relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-center lg:text-left text-white">
+                Explore Our Areas of Expertise
+            </h2>
+            <p class="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quam voluptatibus
+            </p>
+        </div>
 
         <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3">
             <div class="space-y-3 group">
@@ -603,9 +577,9 @@
             <img src="{{ url_for('static', filename='images/home-about-us-partnership-image.jpg') }}" alt="Hero Image"
                 class="relative w-full h-full object-cover">
         </div>
-        <div class="lg:w-1/2">
+        <div class="pt-10 lg:pt-0 lg:w-1/2">
             <div class="relative">
-                <span class="title left-[50%] lg:left-[-5%] top-[-2rem]">ABOUT</span>
+                <span class="title left-[25%] lg:left-[-5%] top-[-2rem]">ABOUT</span>
                 <h2
                     class="relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-center lg:text-left text-white">
                     Your Partner in Web Development and Digital Solutions
@@ -639,9 +613,9 @@
 
     <!-- Foreground content -->
     <div class="relative z-10 flex flex-col justify-center w-full min-h-screen px-4 py-10 md:mx-24 z-1">
-        <span class="title left-[50%] lg:left-[-1%] top-[11rem]">REVIEWS</span>
+        <span class="title left-[0%] lg:left-[-2%] top-[2%] lg:top-[11rem]">REVIEWS</span>
         <h2 class="relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">
-            What our <span class="text-primaryorange">customers</span> <br> are saying
+            What our <span class="text-primaryorange text-white">customers</span> <br> are saying
         </h2>
 
         <div class="grid w-full grid-cols-1 gap-8 mt-8 2xl:grid-cols-4 lg:mt-16 md:grid-cols-2 lg:grid-cols-3">
@@ -1149,278 +1123,6 @@
                         </button>
                     </form>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ Section -->
-<section class="p-6 pt-[5rem] pb-[5rem] relative flex flex-col bg-black gap-16 items-center overflow-hidden">
-    <!-- FAQ Title -->
-    <div class="mx-auto max-w-screen-md text-center mb-5 z-2">
-        <!-- <div class="blob"></div> -->
-        <h2 class="font-eurostile text-[30px] lg:text-[48px] font-semibold text-center">Common Questions About Our
-            Services</h2>
-    </div>
-    <div class='accordion-group w-full md:w-4/5 lg:w-3/5 z-2' data-accordion="default-accordion">
-        <!-- FAQ Question 1 -->
-        <div class='accordion pb-4 border-b border-solid border-gray-200' id='basic-heading-one-default'>
-            <button
-                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
-                aria-controls='basic-collapse-one-default'>
-                <h5 class="text-left">What types of businesses do you typically work with?</h5>
-                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen accordion-active:rotate-180'
-                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                    <path
-                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
-                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
-                </svg>
-            </button>
-            <div id='basic-collapse-one-default'
-                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
-                aria-labelledby='basic-heading-one-default'>
-                <p class='text-base text-black leading-6'>We partner with a diverse range of small to medium-sized
-                    businesses across various industries. Our services are adaptable to meet the unique needs of each
-                    client, whether you're a startup, a growing enterprise, or an established company.</p>
-            </div>
-        </div>
-        <!-- FAQ Question 2 -->
-        <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-two-default'>
-            <button
-                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
-                aria-controls='basic-collapse-two-default'>
-                <h5 class="text-left">What bookkeeping services do you offer?</h5>
-                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen  accordion-active:rotate-180'
-                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                    <path
-                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
-                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
-                </svg>
-            </button>
-            <div id='basic-collapse-two-default'
-                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
-                aria-labelledby='basic-heading-two-default'>
-                <p class='text-sm text-black leading-6'>Our bookkeeping services are comprehensive and can be tailored
-                    to your needs. They typically include managing daily transactions, reconciling bank and credit card
-                    accounts, generating financial statements (such as profit and loss statements and balance sheets),
-                    and providing clear and organized financial records. We can handle this on a daily, weekly, or
-                    monthly basis.</p>
-            </div>
-        </div>
-        <!-- FAQ Question 3 -->
-        <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-three-default'>
-            <button
-                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
-                aria-controls='basic-collapse-three-default'>
-                <h5 class="text-left">How often will I receive financial reports?</h5>
-                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen  accordion-active:rotate-180'
-                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                    <path
-                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
-                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
-                </svg>
-            </button>
-            <div id='basic-collapse-three-default'
-                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
-                aria-labelledby='basic-heading-three-default'>
-                <p class='text-sm text-black leading-6'>The frequency of your financial reports depends on your
-                    preferences and business needs. We can provide reports on a monthly, quarterly, or custom schedule
-                    that works best for you, keeping you informed about your financial performance.</p>
-            </div>
-        </div>
-        <!-- FAQ Question 4 -->
-        <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-three-default'>
-            <button
-                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
-                aria-controls='basic-collapse-three-default'>
-                <h5 class="text-left">What accounting software do you work with?</h5>
-                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen  accordion-active:rotate-180'
-                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                    <path
-                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
-                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
-                </svg>
-            </button>
-            <div id='basic-collapse-three-default'
-                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
-                aria-labelledby='basic-heading-three-default'>
-                <p class='text-sm text-black leading-6'>We are proficient in a variety of popular accounting software
-                    platforms, including QuickBooks Online, Xero, and others. We can also adapt to other software you
-                    may already be using. Our goal is to integrate seamlessly with your existing systems.</p>
-            </div>
-        </div>
-        <!-- FAQ Question 5 -->
-        <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-three-default'>
-            <button
-                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
-                aria-controls='basic-collapse-three-default'>
-                <h5 class="text-left">What is the process for getting started with Balanced Accountant?</h5>
-                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen  accordion-active:rotate-180'
-                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                    <path
-                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
-                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
-                </svg>
-            </button>
-            <div id='basic-collapse-three-default'
-                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
-                aria-labelledby='basic-heading-three-default'>
-                <p class='text-sm text-black leading-6'>Getting started is easy! We typically begin with a complimentary
-                    consultation to understand your business needs and objectives. From there, we'll outline a
-                    customized plan and discuss the next steps for onboarding.</p>
-            </div>
-        </div>
-        <!-- FAQ Question 6 -->
-        <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-three-default'>
-            <button
-                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
-                aria-controls='basic-collapse-three-default'>
-                <h5 class="text-left">How does your payroll service work?</h5>
-                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen  accordion-active:rotate-180'
-                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                    <path
-                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
-                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
-                </svg>
-            </button>
-            <div id='basic-collapse-three-default'
-                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
-                aria-labelledby='basic-heading-three-default'>
-                <p class='text-sm text-black leading-6'>Our payroll services streamline the process of paying your
-                    employees and contractors accurately and on time. This includes calculating wages, withholding
-                    deductions, generating pay stubs, and managing payroll reporting. We ensure compliance with relevant
-                    regulations.</p>
-            </div>
-        </div>
-        <!-- FAQ Question 7 -->
-        <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-three-default'>
-            <button
-                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
-                aria-controls='basic-collapse-three-default'>
-                <h5 class="text-left">What are the benefits of outsourcing my bookkeeping and accounting?</h5>
-                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen  accordion-active:rotate-180'
-                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                    <path
-                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
-                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
-                </svg>
-            </button>
-            <div id='basic-collapse-three-default'
-                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
-                aria-labelledby='basic-heading-three-default'>
-                <p class='text-sm text-black leading-6'>Outsourcing these tasks can save you time and money, reduce
-                    errors, and provide you with valuable insights into your business's financial health. It enables you
-                    to focus on your core business activities while ensuring your finances are in the hands of experts.
-                    It also provides access to expertise and ensures accuracy, consistency, and compliance without the
-                    overhead of hiring an in-house team.</p>
-            </div>
-        </div>
-        <!-- FAQ Question 8 -->
-        <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-three-default'>
-            <button
-                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
-                aria-controls='basic-collapse-three-default'>
-                <h5 class="text-left">How do you communicate with your clients?</h5>
-                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen  accordion-active:rotate-180'
-                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                    <path
-                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
-                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
-                </svg>
-            </button>
-            <div id='basic-collapse-three-default'
-                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
-                aria-labelledby='basic-heading-three-default'>
-                <p class='text-sm text-black leading-6'>We believe in transparent and consistent communication. We are
-                    available via email and phone, and we can also schedule regular meetings or video conferences to
-                    discuss your financial reports and any questions you may have.</p>
-            </div>
-        </div>
-        <!-- FAQ Question 9 -->
-        <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-three-default'>
-            <button
-                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
-                aria-controls='basic-collapse-three-default'>
-                <h5 class="text-left">What are the benefits of having well-maintained bookkeeping records?</h5>
-                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen  accordion-active:rotate-180'
-                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                    <path
-                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
-                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
-                </svg>
-            </button>
-            <div id='basic-collapse-three-default'
-                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
-                aria-labelledby='basic-heading-three-default'>
-                <p class='text-sm text-black leading-6'>Accurate and up-to-date bookkeeping provides a clear picture of
-                    your business's financial health. This enables you to make informed decisions, track profitability,
-                    manage cash flow effectively, and secure funding if needed. It also simplifies year-end processes.
-                </p>
-            </div>
-        </div>
-        <!-- FAQ Question 10 -->
-        <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-three-default'>
-            <button
-                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
-                aria-controls='basic-collapse-three-default'>
-                <h5 class="text-left">Can you help me understand my financial reports?</h5>
-                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen  accordion-active:rotate-180'
-                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                    <path
-                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
-                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
-                </svg>
-            </button>
-            <div id='basic-collapse-three-default'
-                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
-                aria-labelledby='basic-heading-three-default'>
-                <p class='text-sm text-black leading-6'>Absolutely. We believe in empowering our clients with financial
-                    literacy and education. We will not only provide you with regular reports but also take the time to
-                    explain them clearly, ensuring you understand the key insights and their impact on your business.
-                </p>
-            </div>
-        </div>
-        <!-- FAQ Question 11 -->
-        <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-three-default'>
-            <button
-                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
-                aria-controls='basic-collapse-three-default'>
-                <h5 class="text-left">Do you offer customized bookkeeping packages?</h5>
-                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen  accordion-active:rotate-180'
-                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                    <path
-                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
-                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
-                </svg>
-            </button>
-            <div id='basic-collapse-three-default'
-                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
-                aria-labelledby='basic-heading-three-default'>
-                <p class='text-sm text-black leading-6'>Yes, we understand that every business has unique needs. We can
-                    tailor our bookkeeping services to create a package that aligns perfectly with your specific
-                    requirements and budget. Let's discuss your needs during our consultation.</p>
-            </div>
-        </div>
-        <!-- FAQ Question 12 -->
-        <div class='accordion py-4 border-b border-solid border-gray-200' id='basic-heading-three-default'>
-            <button
-                class='accordion-toggle cursor-pointer group inline-flex items-center justify-between leading-8 text-gray-600 w-full transition duration-500 hover:text-secondarygreen accordion-active:text-secondarygreen'
-                aria-controls='basic-collapse-three-default'>
-                <h5 class="text-left">What is the difference between bookkeeping and accounting?</h5>
-                <svg class='text-gray-900 transition duration-500 group-hover:text-secondarygreen accordion-active:text-secondarygreen  accordion-active:rotate-180'
-                    width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                    <path
-                        d='M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25'
-                        stroke='currentColor' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'></path>
-                </svg>
-            </button>
-            <div id='basic-collapse-three-default'
-                class='accordion-content transition-all duration-500 ease-in-out overflow-hidden max-h-0'
-                aria-labelledby='basic-heading-three-default'>
-                <p class='text-sm text-black leading-6'>Bookkeeping is the day-to-day process of recording financial
-                    transactions. Accounting involves summarizing, interpreting, and analyzing financial data to provide
-                    insights and reports for decision-making. We offer both services to provide a comprehensive
-                    financial overview.</p>
             </div>
         </div>
     </div>
