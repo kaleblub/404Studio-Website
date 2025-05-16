@@ -1,4 +1,8 @@
 {% extends 'base.html' %}
+{% block extra_head %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/tesseract.css') }}">
+{% endblock extra_head %}
+
 {% block content %}
 
 <style>
@@ -44,238 +48,162 @@
         color: rgb(139 191 136 / var(--tw-text-opacity));
     }
 
-    
-
-    #tesseract-container {
-        margin: 0;
-        background-color: #0a0c19;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-    }
-
-    .tesseract {
-        position: relative;
-        transform: rotateX(15deg) rotateY(15deg);
-        transform-style: preserve-3d;
-        animation: spin 30s infinite linear;
-    }
-
-    @keyframes spin {
-        from {
-            transform: rotate(0);
-        }
-
-        to {
-            transform: rotateX(360deg) rotateY(360deg);
-        }
-    }
-
-    .cube-1,
-    .cube-2 {
-        width: 100px;
-        height: 100px;
-        position: relative;
-        transform-style: preserve-3d;
-    }
-
-    .cube-1 {
-        /*   animation: animateCube-1 10s infinite linear; */
-    }
-
-    @keyframes animateCube-1 {
-        0% {
-            width: 100px;
-            height: 100px;
-        }
-
-        25% {
-            width: 100px;
-            height: 100px;
-        }
-
-        50% {
-            width: 200px;
-            height: 200px;
-        }
-
-        75% {
-            width: 200px;
-            height: 200px;
-        }
-
-        100% {
-            width: 100px;
-            height: 100px;
-        }
-    }
-
-    .sides {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        color: #fff;
-        justify-content: center;
-        align-items: center;
+    .section-services::before {
+        content: "SERVICES";
+        background: linear-gradient(180deg,
+                rgba(239, 176, 113, 1) 0%,
+                rgba(74, 108, 247, 0) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        opacity: 0.2;
         position: absolute;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
-        animation: edgePulse 10s infinite ease-in-out, pulseGlow 10s infinite ease-in-out;
-
+        /* adjust as needed to hover above */
+        left: -5%;
+        top: -15%;
+        font-size: 40px;
+        line-height: 1 !important;
+        font-weight: 700;
+        font-family: 'Inter', sans-serif;
     }
 
-    .front {
-        /*   background-color: rgba(90,90,90,.7); */
-        transform: translateZ(50px);
-    }
-
-    .top {
-        /*   background-color: rgba(210,210,0,.7); */
-        transform: rotateX(-90deg) translateY(-50%);
-        transform-origin: top center;
-    }
-
-    .back {
-        /*   background-color: rgba(0, 210, 0, 0.7); */
-        transform: translateZ(-50px) rotateX(-180deg);
-        transform-origin: center;
-    }
-
-    .bottom {
-        /*   background-color: rgba(210, 0, 210, 0.7); */
-        transform: rotateX(90deg) translateY(50%);
-        transform-origin: bottom center;
-    }
-
-    .left {
-        /*   background-color: rgba(0, 0, 210, 0.7); */
-        transform: rotateY(270deg) translateX(-50%);
-        transform-origin: center left;
-    }
-
-    .right {
-        /*   background-color: rgba(210, 0, 0, 0.7); */
-        transform: rotateY(-270deg) translateX(50%);
-        transform-origin: top right;
-    }
-
-    .cube-2 {
-        top: calc(50% - 100px);
-        left: calc(50% - 100px);
-        width: 200px;
-        height: 200px;
-        position: absolute;
-        transform-origin: center;
-    }
-
-    .cube-2 .front {
-        /*   background-color: rgba(90, 90, 90, 0.7); */
-        transform: translateZ(100px);
-    }
-
-    .cube-2 .back {
-        /*   background-color: rgba(0, 210, 0, 0.7); */
-        transform: translateZ(-100px) rotateX(-180deg);
-        transform-origin: center;
-    }
-
-    .joins {
-        width: 100px;
-        height: 100px;
-        top: calc(50% - 50px);
-        left: calc(50% - 50px);
-        position: absolute;
-    }
-
-    .line {
-        height: 2px;
-        position: absolute;
-        background-color: #ccc;
-    }
-
-    .line-1 {
-        width: 85px;
-        transform: translateZ(-50px) translateX(0px) translateY(0px) rotateX(90deg) rotateY(45deg) rotateZ(-145deg);
-        transform-origin: top left;
-    }
-
-    .line-2 {
-        width: 85px;
-        transform: translateZ(50px) translateX(0px) translateY(0px) rotateX(90deg) rotateY(45deg) rotateZ(145deg);
-        transform-origin: top left;
-    }
-
-    .line-3 {
-        width: 85px;
-        transform: translateZ(50px) translateX(0px) translateY(100px) rotateX(-90deg) rotateY(45deg) rotateZ(-145deg);
-        transform-origin: top left;
-    }
-
-    .line-4 {
-        width: 85px;
-        transform: translateZ(-50px) translateX(0px) translateY(100px) rotateX(-90deg) rotateY(45deg) rotateZ(145deg);
-        transform-origin: top left;
-    }
-
-    .line-5 {
-        width: 85px;
-        transform: translateZ(50px) translateX(100px) translateY(0px) rotateX(-90deg) rotateY(45deg) rotateZ(-35deg);
-        transform-origin: top left;
-    }
-
-    .line-6 {
-        width: 85px;
-        transform: translateZ(-50px) translateX(100px) translateY(0px) rotateX(-90deg) rotateY(45deg) rotateZ(35deg);
-        transform-origin: top left;
-    }
-
-    .line-7 {
-        width: 85px;
-        transform: translateZ(-50px) translateX(100px) translateY(100px) rotateX(90deg) rotateY(45deg) rotateZ(-35deg);
-        transform-origin: top left;
-    }
-
-    .line-8 {
-        width: 85px;
-        transform: translateZ(50px) translateX(100px) translateY(100px) rotateX(90deg) rotateY(45deg) rotateZ(35deg);
-        transform-origin: top left;
-    }
-
-    /* @keyframes pulseGlow {
-  0% {
-    box-shadow: 0 0 20px #EFB071, 0 0 40px #EFB071, 0 0 60px #7F60F9;
-    background-color: rgba(127, 96, 249, 0.2);
-  }
-  50% {
-    box-shadow: 0 0 40px #7F60F9, 0 0 80px #EFB071, 0 0 100px #EFB071;
-    background-color: rgba(239, 176, 113, 0.2);
-  }
-  100% {
-    box-shadow: 0 0 20px #EFB071, 0 0 40px #EFB071, 0 0 60px #7F60F9;
-    background-color: rgba(127, 96, 249, 0.2);
-  }
-} */
-    @keyframes edgePulse {
-        0% {
-            border-color: #EFB071;
-            box-shadow: 0 0 8px #EFB071;
-        }
-
-        50% {
-            border-color: #7F60F9;
-            box-shadow: 0 0 12px #7F60F9;
-        }
-
-        100% {
-            border-color: #EFB071;
-            box-shadow: 0 0 8px #EFB071;
+    /* Responsive font sizes */
+    @media (min-width: 540px) {
+        .section-services::before {
+            font-size: 60px;
+            left: -3%;
+            top: -50%;
         }
     }
-    
+
+    @media (min-width: 1024px) {
+        .section-services::before {
+            font-size: 95px;
+            left: -3%;
+            top: -25%;
+        }
+    }
+
+    .section-about::before {
+        content: "ABOUT";
+        background: linear-gradient(180deg,
+                rgba(239, 176, 113, 1) 0%,
+                rgba(74, 108, 247, 0) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        opacity: 0.2;
+        position: absolute;
+        /* adjust as needed to hover above */
+        left: -5%;
+        top: -15%;
+        font-size: 40px;
+        line-height: 1 !important;
+        font-weight: 700;
+        font-family: 'Inter', sans-serif;
+    }
+
+    /* Responsive font sizes */
+    @media (min-width: 540px) {
+        .section-about::before {
+            font-size: 60px;
+            left: -3%;
+            top: -30%;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .section-about::before {
+            font-size: 95px;
+            left: -6%;
+            top: -8%;
+        }
+    }
+
+    .section-reviews::before {
+        content: "REVIEWS";
+        background: linear-gradient(180deg,
+                rgba(239, 176, 113, 1) 0%,
+                rgba(74, 108, 247, 0) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        opacity: 0.2;
+        position: absolute;
+        /* adjust as needed to hover above */
+        left: -3%;
+        top: -15%;
+        font-size: 40px;
+        line-height: 1 !important;
+        font-weight: 700;
+        font-family: 'Inter', sans-serif;
+    }
+
+    /* Responsive font sizes */
+    @media (min-width: 540px) {
+        .section-reviews::before {
+            font-size: 60px;
+            left: -3%;
+            top: -30%;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .section-reviews::before {
+            font-size: 95px;
+            left: -3%;
+            top: -15%;
+        }
+    }
+
+    .section-pricing::before {
+        content: "PRICING";
+        background: linear-gradient(180deg,
+                rgba(239, 176, 113, 1) 0%,
+                rgba(74, 108, 247, 0) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        opacity: 0.2;
+        position: absolute;
+        /* adjust as needed to hover above */
+        left: -5%;
+        top: -15%;
+        font-size: 40px;
+        line-height: 1 !important;
+        font-weight: 700;
+        font-family: 'Inter', sans-serif;
+    }
+
+    /* Responsive font sizes */
+    @media (min-width: 540px) {
+        .section-pricing::before {
+            font-size: 60px;
+            left: -6%;
+            top: -60%;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .section-pricing::before {
+            font-size: 95px;
+            left: -8%;
+            top: -10%;
+        }
+    @media (min-width: 1536px) {
+        .section-pricing::before {
+            top: -15%;
+        }
+    }
+    }
 </style>
 <!-- Hero Section -->
-<section class="bg-white dark:bg-[#0a0c19] relative flex flex-col items-center md:items-center max-w-screen min-h-screen pt-10 px-3">
+<section
+    class="bg-white dark:bg-[#0a0c19] relative flex flex-col items-center md:items-center max-w-screen min-h-screen pt-10 px-3">
 
     <!-- Hero Content -->
     <div class="relative flex flex-col md:flex-row-reverse items-center w-full">
@@ -283,7 +211,7 @@
         <div id="tesseract-container"
             class="relative flex justify-evenly w-full md:w-3/6 min-h-[500px] md:h-5/6 max-h-[700px]">
             <div
-                class="tesseract-wrapper absolute md:relative w-[200px] h-[200px] md:w-[375px] lg:w-[500px] md:h-[375px] lg:h-[500px] object-cover left-0 sm:left-[50px] bottom-[100px] md:bottom-0 flex items-center justify-center">
+                class="tesseract-wrapper absolute md:relative w-[200px] h-[200px] md:w-[375px] lg:w-[500px] md:h-[375px] lg:h-[500px] object-cover left-0 sm:left-[50px] bottom-[50%] md:bottom-0 flex items-center justify-center">
                 <div class="tesseract scale-[0.7] md:scale-[1.5] lg:scale-[2] xl:scale-[2.4]">
                     <div class="cube-1">
                         <div class="sides front"></div>
@@ -321,8 +249,8 @@
             <h1
                 class="font-montserrat text-[56px] md:text-[65px] lg:text-[72px] xl:text-[85px] font-bold leading-tight top-[-225px] absolute md:relative md:top-0 text-right md:text-left">
                 Your Guide Through The</h1>
-            <h1
-                class="font-montserrat text-[56px] md:text-[65px] lg:text-[72px] xl:text-[85px] font-bold leading-tight text-right md:text-left glitch" data-text="Digital Unknown">
+            <h1 class="font-montserrat text-[56px] md:text-[65px] lg:text-[72px] xl:text-[85px] font-bold leading-tight text-right md:text-left glitch"
+                data-text="Digital Unknown">
                 Digital Unknown</h1>
             <p
                 class="font-inter text-gray-400 text-[14px] md:text-[16px] lg:text-[18px] leading-[18px] md:leading-normal mt-4">
@@ -371,9 +299,9 @@
     <div class="container px-6 py-10 mx-auto">
         <!-- <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">explore our <br> awesome <span class="underline decoration-primabg-primaryorange">Components</span></h1> -->
         <div class="relative">
-            <span class="title left-[25%] lg:left-[-3%] top-[-2rem]">SERVICES</span>
+            <!-- <span class="title left-[25%] lg:left-[-3%] top-[-2rem]">SERVICES</span> -->
             <h2
-                class="relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-center lg:text-left text-white">
+                class="section-services relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">
                 Explore Our Areas of Expertise
             </h2>
             <p class="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">
@@ -579,9 +507,9 @@
         </div>
         <div class="pt-10 lg:pt-0 lg:w-1/2">
             <div class="relative">
-                <span class="title left-[25%] lg:left-[-5%] top-[-2rem]">ABOUT</span>
+                <!-- <span class="title left-[25%] lg:left-[-5%] top-[-2rem]">ABOUT</span> -->
                 <h2
-                    class="relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-center lg:text-left text-white">
+                    class="section-about relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">
                     Your Partner in Web Development and Digital Solutions
                 </h2>
                 <p
@@ -604,7 +532,7 @@
 </section>
 
 <!-- Reviews Section -->
-<section class="relative min-h-screen">
+<section class="relative min-h-screen overflow-x-hidden">
     <!-- Background layer -->
     <div class="absolute inset-0 flex">
         <div class="w-3/4 bg-white dark:bg-[#0a0c19]"></div>
@@ -613,8 +541,9 @@
 
     <!-- Foreground content -->
     <div class="relative z-10 flex flex-col justify-center w-full min-h-screen px-4 py-10 md:mx-24 z-1">
-        <span class="title left-[0%] lg:left-[-2%] top-[2%] lg:top-[11rem]">REVIEWS</span>
-        <h2 class="relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">
+        <!-- <span class="title left-[0%] lg:left-[-2%] top-[2%] lg:top-[11rem]">REVIEWS</span> -->
+        <h2
+            class="section-reviews relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">
             What our <span class="text-primaryorange text-white">customers</span> <br> are saying
         </h2>
 
@@ -686,7 +615,7 @@
 
         <div class="items-center hidden mt-12 md:flex">
             <button title="left arrow"
-                class="p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 hover:bg-gray-100">
+                class="cursor-pointer p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-primaryorange hover:bg-gray-100">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
@@ -694,7 +623,7 @@
             </button>
 
             <button title="right arrow"
-                class="p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-gray-800 lg:mx-6 hover:bg-gray-100">
+                class="cursor-pointer p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-primaryorange lg:mx-6 hover:bg-gray-100">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
@@ -706,218 +635,212 @@
 
 <!-- Pricing Options -->
 <section class="bg-white dark:bg-[#0a0c19] py-16 px-4 md:px-12">
-        <div class="container px-6 py-8 mx-auto">
-            <div class="xl:items-center xl:-mx-8 xl:flex">
-                <div class="flex flex-col items-center xl:items-start xl:mx-8 lg:w-2/5">
-                    <span class="title left-[50%] lg:left-[3%] top-[14rem]">PRICING</span>
-                    <h2
-                        class="relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-center lg:text-left text-white">
-                        Our Pricing Packages & Plans</h2>
+    <div class="container px-6 py-8 mx-auto">
+        <div class="xl:items-center xl:-mx-8 xl:flex">
+            <div class="flex flex-col items-center xl:items-start xl:mx-8 lg:w-2/5">
+                <!-- <span class="title left-[50%] lg:left-[3%] top-[14rem]">PRICING</span> -->
+                <h2
+                    class="section-pricing relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-center lg:text-left text-white">
+                    Our Pricing Packages & Plans</h2>
 
-                    <div class="mt-4">
-                        <span class="inline-block w-40 h-1 bg-primaryorange rounded-full"></span>
-                        <span class="inline-block w-3 h-1 mx-1 bg-primaryorange rounded-full"></span>
-                        <span class="inline-block w-1 h-1 bg-primaryorange rounded-full"></span>
-                    </div>
-
-                    <p class="mt-4 font-medium text-gray-500 dark:text-gray-300">
-                        Need help with building a website? Or want to let us handle hosting your website?
-                    </p>
-
-                    <a href="#"
-                        class="flex items-center mt-4 -mx-1 text-sm text-gray-700 capitalize dark:text-primaryorange hover:underline hover:text-accentpurple dark:hover:text-primabg-primaryorange">
-                        <span class="mx-1">Need a different service</span>
-                        <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                    </a>
+                <div class="mt-4">
+                    <span class="inline-block w-40 h-1 bg-primaryorange rounded-full"></span>
+                    <span class="inline-block w-3 h-1 mx-1 bg-primaryorange rounded-full"></span>
+                    <span class="inline-block w-1 h-1 bg-primaryorange rounded-full"></span>
                 </div>
 
-                <div class="flex-1 xl:mx-8">
-                    <div class="mt-8 space-y-8 md:-mx-4 md:flex md:items-center md:justify-center md:space-y-0 xl:mt-0">
-                        <div class="max-w-sm mx-auto border rounded-lg md:mx-4 dark:border-gray-700">
-                            <div class="p-6">
-                                <h1 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl dark:text-white">Web
-                                    Development Packages</h1>
+                <p class="mt-4 font-medium text-gray-500 dark:text-gray-300">
+                    Need help with building a website? Or want to let us handle hosting your website?
+                </p>
 
-                                <p class="mt-4 text-gray-500 dark:text-gray-300">
-                                    Custom site builds, redesigns, and ecommerce integration.
-                                </p>
+                <a href="#"
+                    class="flex items-center mt-4 -mx-1 text-sm text-gray-700 capitalize dark:text-primaryorange hover:underline hover:text-accentpurple dark:hover:text-primabg-primaryorange">
+                    <span class="mx-1">Need a different service</span>
+                    <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+            </div>
 
-                                <h2 class="mt-4 text-2xl font-semibold text-gray-700 sm:text-3xl dark:text-gray-300">
-                                    <span class="text-base font-medium">Starting from</span> $1,000</span></h2>
+            <div class="flex-1 xl:mx-8">
+                <div class="mt-8 space-y-8 md:-mx-4 md:flex md:items-center md:justify-center md:space-y-0 xl:mt-0">
+                    <div class="max-w-sm mx-auto border rounded-lg md:mx-4 dark:border-gray-700">
+                        <div class="p-6 flex flex-col">
+                            <h1 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl dark:text-white">Web
+                                Development Packages</h1>
 
-                                <!-- <p class="mt-1 text-gray-500 dark:text-gray-300">
+                            <p class="mt-4 text-gray-500 dark:text-gray-300">
+                                Custom site builds, redesigns, and ecommerce integration.
+                            </p>
+
+                            <h2 class="mt-4 text-2xl font-semibold text-gray-700 sm:text-3xl dark:text-gray-300">
+                                <span class="text-base font-medium">Starting from</span> $1,000</span>
+                            </h2>
+
+                            <!-- <p class="mt-1 text-gray-500 dark:text-gray-300">
                                 Yearly payment
                             </p> -->
 
-                                <button
-                                    class="w-full px-4 py-2 mt-6 tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-primaryorange focus:outline-none focus:bg-primaryorange focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-                                    View Packages
-                                </button>
-                            </div>
-
-                            <hr class="border-gray-200 dark:border-gray-700">
-
-                            <div class="p-6">
-                                <h1 class="text-lg font-medium text-gray-700 capitalize lg:text-xl dark:text-white">
-                                    What’s included:</h1>
-
-                                <div class="mt-8 space-y-4">
-                                    <div class="flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="w-5 h-5 text-primabg-primaryorange" viewBox="0 0 20 20"
-                                            fill="currentColor">
-                                            <path fill-rule="evenodd"
-                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                                clip-rule="evenodd" />
-                                        </svg>
-
-                                        <span class="mx-4 text-gray-700 dark:text-gray-300">Fully responsive
-                                            design</span>
-                                    </div>
-
-                                    <div class="flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="w-5 h-5 text-primabg-primaryorange" viewBox="0 0 20 20"
-                                            fill="currentColor">
-                                            <path fill-rule="evenodd"
-                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                                clip-rule="evenodd" />
-                                        </svg>
-
-                                        <span class="mx-4 text-gray-700 dark:text-gray-300">CMS or static site
-                                            options</span>
-                                    </div>
-
-                                    <div class="flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="w-5 h-5 text-primabg-primaryorange" viewBox="0 0 20 20"
-                                            fill="currentColor">
-                                            <path fill-rule="evenodd"
-                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                                clip-rule="evenodd" />
-                                        </svg>
-
-                                        <span class="mx-4 text-gray-700 dark:text-gray-300">SEO Setup</span>
-                                    </div>
-
-                                    <div class="flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="w-5 h-5 text-primabg-primaryorange" viewBox="0 0 20 20"
-                                            fill="currentColor">
-                                            <path fill-rule="evenodd"
-                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                                clip-rule="evenodd" />
-                                        </svg>
-
-                                        <span class="mx-4 text-gray-700 dark:text-gray-300">Launch Support &
-                                            Revisions</span>
-                                    </div>
-
-                                    <!-- <div class="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
-                                    </svg>
-
-                                    <span class="mx-4 text-gray-700 dark:text-gray-300">Mobile app</span>
-                                </div>
-
-                                <div class="flex items-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
-                                    </svg>
-
-                                    <span class="mx-4 text-gray-700 dark:text-gray-300">Unlimited users</span>
-                                </div> -->
-                                </div>
-                            </div>
+                            <button
+                                class="quidel-button quidel-full">
+                                View Packages
+                            </button>
                         </div>
 
-                        <div class="max-w-sm mx-auto border rounded-lg md:mx-4 dark:border-gray-700">
-                            <div class="p-6">
-                                <h1 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl dark:text-white">Web
-                                    Hosting Packages</h1>
+                        <hr class="border-gray-200 dark:border-gray-700">
 
-                                <p class="mt-4 text-gray-500 dark:text-gray-300">
-                                    Fast, secure hosting managed by 404 Studio.
-                                </p>
+                        <div class="p-6">
+                            <h1 class="text-lg font-medium text-gray-700 capitalize lg:text-xl dark:text-white">
+                                What’s included:</h1>
 
-                                <h2 class="mt-4 text-2xl font-semibold text-gray-700 sm:text-3xl dark:text-gray-300">
-                                    <span class="text-base font-medium">Starting from</span> $20.00 <span
-                                        class="text-base font-medium">/Month</span></h2>
+                            <div class="mt-8 space-y-4">
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primabg-primaryorange"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
+                                    </svg>
 
-                                <p class="mt-1 text-gray-500 dark:text-gray-300">
-                                    12 Payments Yearly
-                                </p>
+                                    <span class="mx-4 text-gray-700 dark:text-gray-300">Fully responsive
+                                        design</span>
+                                </div>
 
-                                <button
-                                    class="w-full px-4 py-2 mt-6 tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-primaryorange focus:outline-none focus:bg-primaryorange focus:ring focus:ring-blue-300 focus:ring-opacity-80">
-                                    View Plans
-                                </button>
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primabg-primaryorange"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+
+                                    <span class="mx-4 text-gray-700 dark:text-gray-300">CMS or static site
+                                        options</span>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primabg-primaryorange"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+
+                                    <span class="mx-4 text-gray-700 dark:text-gray-300">SEO Setup</span>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primabg-primaryorange"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+
+                                    <span class="mx-4 text-gray-700 dark:text-gray-300">Launch Support &
+                                        Revisions</span>
+                                </div>
+
+                                <!-- <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
+                                    </svg>
+
+                                    <span class="mx-4 text-gray-700 dark:text-gray-300">Mobile app</span>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-red-400" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
+                                    </svg>
+
+                                    <span class="mx-4 text-gray-700 dark:text-gray-300">Unlimited users</span>
+                                </div> -->
                             </div>
+                        </div>
+                    </div>
 
-                            <hr class="border-gray-200 dark:border-gray-700">
+                    <div class="max-w-sm mx-auto border rounded-lg md:mx-4 dark:border-gray-700">
+                        <div class="p-6 flex flex-col">
+                            <h1 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl dark:text-white">Web
+                                Hosting Packages</h1>
 
-                            <div class="p-6">
-                                <h1 class="text-lg font-medium text-gray-700 capitalize lg:text-xl dark:text-white">
-                                    What’s included:</h1>
+                            <p class="mt-4 text-gray-500 dark:text-gray-300">
+                                Fast, secure hosting managed by 404 Studio.
+                            </p>
 
-                                <div class="mt-8 space-y-4">
-                                    <div class="flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="w-5 h-5 text-primabg-primaryorange" viewBox="0 0 20 20"
-                                            fill="currentColor">
-                                            <path fill-rule="evenodd"
-                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                                clip-rule="evenodd" />
-                                        </svg>
+                            <h2 class="mt-4 text-2xl font-semibold text-gray-700 sm:text-3xl dark:text-gray-300">
+                                <span class="text-base font-medium">Starting from</span> $20.00 <span
+                                    class="text-base font-medium">/Month</span>
+                            </h2>
 
-                                        <span class="mx-4 text-gray-700 dark:text-gray-300">SSL + security
-                                            updates</span>
-                                    </div>
+                            <p class="mt-1 text-gray-500 dark:text-gray-300">
+                                12 Payments Yearly
+                            </p>
 
-                                    <div class="flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="w-5 h-5 text-primabg-primaryorange" viewBox="0 0 20 20"
-                                            fill="currentColor">
-                                            <path fill-rule="evenodd"
-                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                                clip-rule="evenodd" />
-                                        </svg>
+                            <button
+                                class="quidel-button quidel-full">
+                                View Plans
+                            </button>
+                        </div>
 
-                                        <span class="mx-4 text-gray-700 dark:text-gray-300">Weekly backups</span>
-                                    </div>
+                        <hr class="border-gray-200 dark:border-gray-700">
 
-                                    <div class="flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="w-5 h-5 text-primabg-primaryorange" viewBox="0 0 20 20"
-                                            fill="currentColor">
-                                            <path fill-rule="evenodd"
-                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                                clip-rule="evenodd" />
-                                        </svg>
+                        <div class="p-6">
+                            <h1 class="text-lg font-medium text-gray-700 capitalize lg:text-xl dark:text-white">
+                                What’s included:</h1>
 
-                                        <span class="mx-4 text-gray-700 dark:text-gray-300">Up to 5 email
-                                            addresses</span>
-                                    </div>
+                            <div class="mt-8 space-y-4">
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primabg-primaryorange"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
+                                    </svg>
 
-                                    <div class="flex items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg"
-                                            class="w-5 h-5 text-primabg-primaryorange" viewBox="0 0 20 20"
-                                            fill="currentColor">
-                                            <path fill-rule="evenodd"
-                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                                clip-rule="evenodd" />
-                                        </svg>
+                                    <span class="mx-4 text-gray-700 dark:text-gray-300">SSL + security
+                                        updates</span>
+                                </div>
 
-                                        <span class="mx-4 text-gray-700 dark:text-gray-300">Priority Support</span>
-                                    </div>
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primabg-primaryorange"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
+                                    </svg>
 
-                                    <!-- <div class="flex items-center">
+                                    <span class="mx-4 text-gray-700 dark:text-gray-300">Weekly backups</span>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primabg-primaryorange"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+
+                                    <span class="mx-4 text-gray-700 dark:text-gray-300">Up to 5 email
+                                        addresses</span>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primabg-primaryorange"
+                                        viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+
+                                    <span class="mx-4 text-gray-700 dark:text-gray-300">Priority Support</span>
+                                </div>
+
+                                <!-- <div class="flex items-center">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-primabg-primaryorange" viewBox="0 0 20 20" fill="currentColor">
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
@@ -932,12 +855,12 @@
 
                                     <span class="mx-4 text-gray-700 dark:text-gray-300">Unlimited users</span>
                                 </div> -->
-                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </div>
 </section>
 
@@ -1059,10 +982,11 @@
 
     <!-- Centered Card -->
     <div class="relative z-10 flex items-center justify-center h-full">
-        <div class="bg-black text-white p-8 rounded-xl w-full max-w-2xl md:w-2/6 shadow-xl text-center">
-            <h2 class="font-montserrat text-[30px] lg:text-[58px] font-semibold text-left lg:text-left text-white">Need
+        <div
+            class="flex flex-col bg-[#0a0c19] text-white p-8 rounded-xl w-full max-w-2xl md:w-2/6 shadow-xl text-center items-center">
+            <h2 class="font-montserrat text-[30px] lg:text-[58px] font-semibold text-white">Need
                 Help Choosing?</h2>
-            <p class="mb-6 font-inter text-gray-300 text-left">Schedule a free consultation now, and we will figure out
+            <p class="mb-6 font-inter text-gray-300">Schedule a free consultation now, and we will figure out
                 which package and/or plan is right for your situation!</p>
             <button class="quidel-button">
                 <span>Schedule Free Consultation</span>
@@ -1091,86 +1015,93 @@
 
             <div class="mt-8 lg:w-3/5 lg:mx-6">
                 <div
-                    class="w-full px-8 py-10 mx-auto overflow-hidden bg-white rounded-lg shadow-2xl dark:bg-gray-900 lg:max-w-xl shadow-gray-300/50 dark:shadow-black/50">
+                    class="w-full px-8 py-10 overflow-hidden bg-white rounded-lg shadow-2xl dark:bg-gray-900 shadow-gray-300/50 dark:shadow-black/50">
                     <h2 class="text-2xl font-semibold text-gray-800 capitalize dark:text-white lg:text-3xl">
-                        Contact us for <br> more info
+                        Contact us for more info
                     </h2>
                     <h3 class="text-lg font-medium text-gray-700">What do you want to ask</h3>
                     {% with messages = get_flashed_messages(with_categories=true) %}
-  {% if messages %}
-    {% for category, message in messages %}
-      <div class="alert alert-{{ category }}">
-        {{ message }}
-      </div>
-    {% endfor %}
-  {% endif %}
-{% endwith %}
+                    {% if messages %}
+                    {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        {{ message }}
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                    {% endwith %}
 
                     <form action="{{ url_for('main.home') }}" method="POST">
-                    <div class="-mx-2 md:items-center md:flex">
-                        <div class="flex-1 px-2">
-                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">First Name</label>
-                            <input name="first_name" type="text" placeholder="John"
+                        <div class="-mx-2 md:items-center md:flex">
+                            <div class="flex-1 px-2 mt-4">
+                                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">First Name</label>
+                                <input name="first_name" type="text" placeholder="John"
+                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            </div>
+
+                            <div class="flex-1 px-2 mt-4">
+                                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Last Name</label>
+                                <input name="last_name" type="text" placeholder="Doe"
+                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            </div>
+                        </div>
+
+                        <div class="-mx-2 md:items-center md:flex">
+                            <div class="flex-1 px-2 mt-4">
+                                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email address</label>
+                                <input name="email" type="email" placeholder="johndoe@example.com"
+                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            </div>
+
+                            <div class="flex-1 px-2 mt-4">
+                                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Company Name</label>
+                                <input name="company" type="text" placeholder="Acme Inc."
+                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            </div>
+                        </div>
+
+                        <div class="-mx-2 md:items-center md:flex">
+                            <div class="flex-1 px-2 mt-4">
+                                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Business Type /
+                                    Area</label>
+                                <input name="business_type" type="text"
+                                    placeholder="e.g. Accounting, Retail, Real Estate..."
+                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            </div>
+
+                            <div class="flex-1 px-2 mt-4">
+                                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Service Interested
+                                    In</label>
+                                <select name="service"
+                                    class="block w-full px-5 py-2.5 mt-2 bg-white text-gray-700 border border-gray-200 rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40">
+                                    <option disabled selected>Select a service</option>
+                                    <option>Website Design</option>
+                                    <option>Website Development</option>
+                                    <option>Website Hosting</option>
+                                    <option>Website Migration</option>
+                                    <option>Website Maintenance</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Subject</label>
+                            <input name="subject" type="text" placeholder="e.g. Website Redesign Inquiry"
                                 class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                         </div>
 
-                        <div class="flex-1 px-2 mt-4 md:mt-0">
-                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Last Name</label>
-                            <input name="last_name" type="text" placeholder="Doe"
-                                class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <div class="w-full mt-4">
+                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Message</label>
+                            <textarea name="message"
+                                class="block w-full h-32 px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg md:h-56 dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                                placeholder="Message"></textarea>
                         </div>
-                    </div>
 
-                    <div class="mt-4">
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email address</label>
-                        <input name="email" type="email" placeholder="johndoe@example.com"
-                            class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                    </div>
-
-                    <div class="mt-4">
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Company Name</label>
-                        <input name="company" type="text" placeholder="Acme Inc."
-                            class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                    </div>
-
-                    <div class="mt-4">
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Business Type / Area</label>
-                        <input name="business_type" type="text" placeholder="e.g. Accounting, Retail, Real Estate..."
-                            class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                    </div>
-
-                    <div class="mt-4">
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Subject</label>
-                        <input name="subject" type="text" placeholder="e.g. Website Redesign Inquiry"
-                            class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                    </div>
-
-                    <div class="mt-4">
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Service Interested In</label>
-                        <select name="service"
-                            class="block w-full px-5 py-2.5 mt-2 bg-white text-gray-700 border border-gray-200 rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40">
-                            <option disabled selected>Select a service</option>
-                            <option>Website Design</option>
-                            <option>Website Development</option>
-                            <option>Website Hosting</option>
-                            <option>Website Migration</option>
-                            <option>Website Maintenance</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-
-                    <div class="w-full mt-4">
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Message</label>
-                        <textarea name="message"
-                            class="block w-full h-32 px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg md:h-56 dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
-                            placeholder="Message"></textarea>
-                    </div>
-
-                    <button
-                        class="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-primaryorange text-primaryorange rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
-                        Send message
-                    </button>
-                </form>
+                        <button
+                            class="quidel-button quidel-full">
+                            Send message
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>

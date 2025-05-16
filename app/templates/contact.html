@@ -1,11 +1,58 @@
 {% extends 'base.html' %}
+{% block extra_head %}
+<style>
+.section-heading::before {
+  content: "CONTACT US";
+  background: linear-gradient(180deg,
+                rgba(239, 176, 113, 1) 0%,
+                rgba(74, 108, 247, 0) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        opacity: 0.2;
+        position: absolute;
+        /* adjust as needed to hover above */
+        left: -5%;
+        top: -5%;
+        font-size: 40px;
+        line-height: 1 !important;
+        font-weight: 700;
+        font-family: 'Inter', sans-serif;
+    }
+
+    /* Responsive font sizes */
+    @media (min-width: 540px) {
+        .section-heading::before {
+            font-size: 60px;
+            left: -3%;
+            top: -15%;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .section-heading::before {
+            font-size: 95px;
+            left: -3%;
+            top: -22%;
+        }
+    }
+}
+
+.section-heading {
+  position: relative;
+}
+
+</style>
+{% endblock extra_head %}
 {% block content %}
+
 <section class="bg-white dark:bg-gray-900">
     <div class="container px-6 py-12 mx-auto">
         <div>
-            <span class="title left-[50%] lg:left-[3%] top-[0.5rem]">CONTACT US</span>
+            <!-- <span class="title left-[50%] lg:left-[3%] top-[0.5rem]">CONTACT US</span> -->
             <h1
-                class="font-montserrat text-[56px] md:text-[65px] lg:text-[72px] xl:text-[85px] font-bold leading-tight top-[-225px] absolute md:relative md:top-0 text-right md:text-left">
+                class="section-heading font-montserrat text-[56px] md:text-[65px] lg:text-[72px] xl:text-[85px] font-bold leading-tight relative md:top-0">
                 Chat to our friendly team</h1>
             <!-- <h1 class="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl dark:text-white">Chat to our friendly team</h1> -->
 
@@ -94,68 +141,75 @@
                 {% endwith %}
                 <form action="{{ url_for('main.contact') }}" method="POST">
                     <div class="-mx-2 md:items-center md:flex">
-                        <div class="flex-1 px-2">
-                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">First Name</label>
-                            <input name="first_name" type="text" placeholder="John"
+                            <div class="flex-1 px-2 mt-4">
+                                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">First Name</label>
+                                <input name="first_name" type="text" placeholder="John"
+                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            </div>
+
+                            <div class="flex-1 px-2 mt-4">
+                                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Last Name</label>
+                                <input name="last_name" type="text" placeholder="Doe"
+                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            </div>
+                        </div>
+
+                        <div class="-mx-2 md:items-center md:flex">
+                            <div class="flex-1 px-2 mt-4">
+                                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email address</label>
+                                <input name="email" type="email" placeholder="johndoe@example.com"
+                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            </div>
+
+                            <div class="flex-1 px-2 mt-4">
+                                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Company Name</label>
+                                <input name="company" type="text" placeholder="Acme Inc."
+                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            </div>
+                        </div>
+
+                        <div class="-mx-2 md:items-center md:flex">
+                            <div class="flex-1 px-2 mt-4">
+                                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Business Type /
+                                    Area</label>
+                                <input name="business_type" type="text"
+                                    placeholder="e.g. Accounting, Retail, Real Estate..."
+                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            </div>
+
+                            <div class="flex-1 px-2 mt-4">
+                                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Service Interested
+                                    In</label>
+                                <select name="service"
+                                    class="block w-full px-5 py-2.5 mt-2 bg-white text-gray-700 border border-gray-200 rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40">
+                                    <option disabled selected>Select a service</option>
+                                    <option>Website Design</option>
+                                    <option>Website Development</option>
+                                    <option>Website Hosting</option>
+                                    <option>Website Migration</option>
+                                    <option>Website Maintenance</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Subject</label>
+                            <input name="subject" type="text" placeholder="e.g. Website Redesign Inquiry"
                                 class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                         </div>
 
-                        <div class="flex-1 px-2 mt-4 md:mt-0">
-                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Last Name</label>
-                            <input name="last_name" type="text" placeholder="Doe"
-                                class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <div class="w-full mt-4">
+                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Message</label>
+                            <textarea name="message"
+                                class="block w-full h-32 px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg md:h-56 dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                                placeholder="Message"></textarea>
                         </div>
-                    </div>
 
-                    <div class="mt-4">
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email address</label>
-                        <input name="email" type="email" placeholder="johndoe@example.com"
-                            class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                    </div>
-
-                    <div class="mt-4">
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Company Name</label>
-                        <input name="company" type="text" placeholder="Acme Inc."
-                            class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                    </div>
-
-                    <div class="mt-4">
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Business Type / Area</label>
-                        <input name="business_type" type="text" placeholder="e.g. Accounting, Retail, Real Estate..."
-                            class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                    </div>
-
-                    <div class="mt-4">
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Subject</label>
-                        <input name="subject" type="text" placeholder="e.g. Website Redesign Inquiry"
-                            class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                    </div>
-
-                    <div class="mt-4">
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Service Interested In</label>
-                        <select name="service"
-                            class="block w-full px-5 py-2.5 mt-2 bg-white text-gray-700 border border-gray-200 rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40">
-                            <option disabled selected>Select a service</option>
-                            <option>Website Design</option>
-                            <option>Website Development</option>
-                            <option>Website Hosting</option>
-                            <option>Website Migration</option>
-                            <option>Website Maintenance</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-
-                    <div class="w-full mt-4">
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Message</label>
-                        <textarea name="message"
-                            class="block w-full h-32 px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg md:h-56 dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
-                            placeholder="Message"></textarea>
-                    </div>
-
-                    <button
-                        class="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-primaryorange text-primaryorange rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
-                        Send message
-                    </button>
+                        <button
+                            class="quidel-button quidel-full">
+                            Send message
+                        </button>
                 </form>
             </div>
         </div>

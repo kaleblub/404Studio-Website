@@ -117,6 +117,18 @@
   color: black;
 }
 
+/* Extend quidel-button for full width */
+.quidel-button.quidel-full {
+  width: 100%;
+  float: none;
+  min-width: unset;
+  max-width: unset;
+  margin: 1em 0;
+  display: block;
+  text-align: center;
+}
+
+
 .quidel-button:focus {
   outline: none;
 }
@@ -162,6 +174,9 @@
 }
 
 /* Inverted variant */
+.quidel-button.inverted {
+  color: white;
+}
 .quidel-button.inverted::after {
   background: var(--contrast-blue, #14213d);
 }
