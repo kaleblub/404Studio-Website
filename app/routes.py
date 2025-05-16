@@ -1,4 +1,16 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, redirect, flash, url_for
+import smtplib
+from email.message import EmailMessage
+from dotenv import load_dotenv
+import os
+
+
+load_dotenv()
+
+ZOHO_EMAIL = os.getenv('ZOHO_EMAIL')
+ZOHO_PASSWORD = os.getenv('ZOHO_PASSWORD')
+
+
 
 main = Blueprint('main', __name__)
 
@@ -35,8 +47,30 @@ reviews = [
     }    
 ]
 
-@main.route('/')
+@main.route('/', methods=['GET', 'POST'])
 def home():
+    if request.method == 'POST':
+        try:
+            # Extract form data
+            first_name = request.form.get('first_name')
+            last_name = request.form.get('last_name')
+            email = request.form.get('email')
+            company = request.form.get('company')
+            business_type = request.form.get('business_type')
+            subject = request.form.get('subject')
+            service = request.form.get('service')
+            message = request.form.get('message')
+
+            # Do something with the data (e.g., send email, store in DB, etc.)
+            # Assuming success:
+            flash("Thanks! Your message has been sent.", "success")
+            return redirect(url_for('main.home'))
+
+        except Exception as e:
+            print(f"Form submission failed: {e}")
+            flash("Oops! Something went wrong. Please try again.", "error")
+            return redirect(url_for('main.home'))
+
     return render_template('home.html', reviews=reviews)
 
 @main.route('/links')
@@ -100,8 +134,52 @@ def services():
     selected_tab = request.args.get('tab', 'accounting')
     return render_template('services.html', all_services=all_services, selected_tab=selected_tab)
 
-@main.route('/contact')
+@main.route('/contact', methods=['GET', 'POST'])
 def contact():
+    if request.method == 'POST':
+        # Get form data
+        first_name = request.form.get('first_name')
+        last_name = request.form.get('last_name')
+        email = request.form.get('email')
+        company = request.form.get('company', '')
+        business_type = request.form.get('business_type', '')
+        subject = request.form.get('subject')
+        service = request.form.get('service', 'Other')
+        message = request.form.get('message')
+
+        # Compose email
+        email_message = EmailMessage()
+        email_message['Subject'] = f"Contact Form Submission: {subject}"
+        email_message['From'] = ZOHO_EMAIL
+        email_message['To'] = ZOHO_EMAIL  # Can add more recipients
+
+        email_message.set_content(f"""
+        New Contact Submission:
+
+        Name: {first_name} {last_name}
+        Email: {email}
+        Company: {company}
+        Business Type: {business_type}
+        Service Interested: {service}
+        Subject: {subject}
+
+        Message:
+        {message}
+        """)
+
+        try:
+            # Send email via Zoho SMTP
+            with smtplib.SMTP_SSL('smtp.zoho.com', 465) as smtp:
+                smtp.login(ZOHO_EMAIL, ZOHO_PASSWORD)
+                smtp.send_message(email_message)
+
+            flash('Message sent successfully!', 'success')
+        except Exception as e:
+            print("Email sending failed:", e)
+            flash('Failed to send message. Please try again later.', 'danger')
+
+        return redirect(url_for('main.contact'))
+
     return render_template('contact.html')
 
 @main.route('/pricing')

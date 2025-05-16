@@ -1076,7 +1076,7 @@
 <section class="bg-white dark:bg-[#0a0c19]">
     <div class="container px-6 py-12 mx-auto">
         <div class="lg:flex lg:items-center lg:-mx-6">
-            <div class="lg:w-1/2 lg:mx-6">
+            <div class="lg:w-2/5 lg:mx-6">
 
 
                 <!-- Left Side: Placeholder / Image -->
@@ -1089,39 +1089,88 @@
                 </div>
             </div>
 
-            <div class="mt-8 lg:w-1/2 lg:mx-6">
+            <div class="mt-8 lg:w-3/5 lg:mx-6">
                 <div
                     class="w-full px-8 py-10 mx-auto overflow-hidden bg-white rounded-lg shadow-2xl dark:bg-gray-900 lg:max-w-xl shadow-gray-300/50 dark:shadow-black/50">
                     <h2 class="text-2xl font-semibold text-gray-800 capitalize dark:text-white lg:text-3xl">
                         Contact us for <br> more info
                     </h2>
                     <h3 class="text-lg font-medium text-gray-700">What do you want to ask</h3>
+                    {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="alert alert-{{ category }}">
+        {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
 
-                    <form class="mt-6">
-                        <div class="flex-1">
-                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Full Name</label>
-                            <input type="text" placeholder="John Doe"
-                                class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-primtext-primaryorange dark:focus:border-primtext-primaryorange focus:ring-primtext-primaryorange focus:outline-none focus:ring focus:ring-opacity-40" />
+                    <form action="{{ url_for('main.home') }}" method="POST">
+                    <div class="-mx-2 md:items-center md:flex">
+                        <div class="flex-1 px-2">
+                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">First Name</label>
+                            <input name="first_name" type="text" placeholder="John"
+                                class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                         </div>
 
-                        <div class="flex-1 mt-6">
-                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email address</label>
-                            <input type="email" placeholder="johndoe@example.com"
-                                class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-primtext-primaryorange dark:focus:border-primtext-primaryorange focus:ring-primtext-primaryorange focus:outline-none focus:ring focus:ring-opacity-40" />
+                        <div class="flex-1 px-2 mt-4 md:mt-0">
+                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Last Name</label>
+                            <input name="last_name" type="text" placeholder="Doe"
+                                class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                         </div>
+                    </div>
 
-                        <div class="w-full mt-6">
-                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Message</label>
-                            <textarea
-                                class="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48 dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-primtext-primaryorange dark:focus:border-primtext-primaryorange focus:ring-primtext-primaryorange focus:outline-none focus:ring focus:ring-opacity-40"
-                                placeholder="Message"></textarea>
-                        </div>
+                    <div class="mt-4">
+                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email address</label>
+                        <input name="email" type="email" placeholder="johndoe@example.com"
+                            class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                    </div>
 
-                        <button
-                            class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-primaryorange rounded-md hover:bg-primtext-primaryorange focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
-                            get in touch
-                        </button>
-                    </form>
+                    <div class="mt-4">
+                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Company Name</label>
+                        <input name="company" type="text" placeholder="Acme Inc."
+                            class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                    </div>
+
+                    <div class="mt-4">
+                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Business Type / Area</label>
+                        <input name="business_type" type="text" placeholder="e.g. Accounting, Retail, Real Estate..."
+                            class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                    </div>
+
+                    <div class="mt-4">
+                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Subject</label>
+                        <input name="subject" type="text" placeholder="e.g. Website Redesign Inquiry"
+                            class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                    </div>
+
+                    <div class="mt-4">
+                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Service Interested In</label>
+                        <select name="service"
+                            class="block w-full px-5 py-2.5 mt-2 bg-white text-gray-700 border border-gray-200 rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40">
+                            <option disabled selected>Select a service</option>
+                            <option>Website Design</option>
+                            <option>Website Development</option>
+                            <option>Website Hosting</option>
+                            <option>Website Migration</option>
+                            <option>Website Maintenance</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="w-full mt-4">
+                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Message</label>
+                        <textarea name="message"
+                            class="block w-full h-32 px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg md:h-56 dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                            placeholder="Message"></textarea>
+                    </div>
+
+                    <button
+                        class="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-primaryorange text-primaryorange rounded-lg hover:bg-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-50">
+                        Send message
+                    </button>
+                </form>
                 </div>
             </div>
         </div>
