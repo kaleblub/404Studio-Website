@@ -203,7 +203,7 @@
 </style>
 <!-- Hero Section -->
 <section
-    class="bg-white dark:bg-[#0a0c19] relative flex flex-col items-center md:items-center max-w-screen min-h-screen pt-10 px-3">
+    class="bg-[#0a0c19] relative flex flex-col items-center md:items-center max-w-screen min-h-screen pt-10 px-3">
 
     <!-- Hero Content -->
     <div class="relative flex flex-col md:flex-row-reverse items-center w-full">
@@ -257,14 +257,14 @@
                 Whether you're starting from scratch, stuck in the middle, or scaling something big—I'm here to build,
                 guide, and solve. Design, development, automation, or something weird? Let’s make it real.</p>
             <div class="flex gap-4 justify-center md:justify-start mt-6">
-                <button class="quidel-button">
-                    <span>Quidel Button</span>
-                </button>
+                <a class="quidel-button">
+                    <span>Discuss Services</span>
+                </a>
 
                 <!-- Inverted version -->
-                <button class="quidel-button inverted">
-                    <span>Inverted Button</span>
-                </button>
+                <a href="{{ url_for('main.portfolio') }}" class="quidel-button inverted">
+                    <span>See Our Work</span>
+                </a>
 
             </div>
         </div>
@@ -295,16 +295,16 @@
 </section>
 
 <!-- Services Section -->
-<section class="bg-white dark:bg-[#0a0c19]">
+<section class="bg-[#0a0c19]">
     <div class="container px-6 py-10 mx-auto">
-        <!-- <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl dark:text-white">explore our <br> awesome <span class="underline decoration-primabg-primaryorange">Components</span></h1> -->
+        <!-- <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl text-white">explore our <br> awesome <span class="underline decoration-primabg-primaryorange">Components</span></h1> -->
         <div class="relative">
             <!-- <span class="title left-[25%] lg:left-[-3%] top-[-2rem]">SERVICES</span> -->
             <h2
                 class="section-services relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">
                 Explore Our Areas of Expertise
             </h2>
-            <p class="mt-4 text-gray-500 xl:mt-6 dark:text-gray-300">
+            <p class="mt-4 text-gray-500 xl:mt-6 text-gray-300">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quam voluptatibus
             </p>
         </div>
@@ -312,22 +312,22 @@
         <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3">
             <div class="space-y-3 group">
                 <span
-                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full dark:text-white dark:bg-primaryorange">
+                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full text-white bg-primaryorange">
                     <video muted loop playsinline class="w-6 h-6 hidden group-hover:block">
                         <source src="{{ url_for('static', filename='images/animated-icons/development.mp4') }}"
                             type="video/mp4" />
                     </video>
                 </span>
 
-                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Development</h1>
+                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">Development</h1>
 
-                <p class="text-gray-500 dark:text-gray-300">
+                <p class="text-gray-500 text-gray-300">
                     Delivering insightful management and reporting to support informed decision-making and drive your
                     business growth.
                 </p>
 
                 <a href="#"
-                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform dark:text-primaryorange hover:underline hover:text-blue-600 dark:hover:text-accentpurple">
+                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-blue-600 hover:text-accentpurple">
                     <span class="mx-1">read more</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -340,21 +340,21 @@
 
             <div class="space-y-3 group">
                 <span
-                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full dark:text-white dark:bg-primaryorange">
+                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full text-white bg-primaryorange">
                     <img src="{{ url_for('static', filename='images/animated-icons/development.gif') }}"
                         data-animated="/icons/dev-animated.gif" data-static="/icons/dev-static.png"
                         class="w-6 h-6 transition-all duration-300 group-hover:play-gif" />
                 </span>
 
-                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Hosting</h1>
+                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">Hosting</h1>
 
-                <p class="text-gray-500 dark:text-gray-300">
+                <p class="text-gray-500 text-gray-300">
                     Ensuring accurate and timely payments to your employees and contract labor, streamlining your
                     payroll process.
                 </p>
 
                 <a href="#"
-                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform dark:text-primaryorange hover:underline hover:text-blue-600 dark:hover:text-accentpurple">
+                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-blue-600 hover:text-accentpurple">
                     <span class="mx-1">read more</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -367,7 +367,7 @@
 
             <div class="space-y-3 group">
                 <span
-                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full dark:text-white dark:bg-primaryorange">
+                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full text-white bg-primaryorange">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -375,16 +375,16 @@
                     </svg>
                 </span>
 
-                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Design
+                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">Design
                 </h1>
 
-                <p class="text-gray-500 dark:text-gray-300">
+                <p class="text-gray-500 text-gray-300">
                     Empowering you to efficiently manage your finances with comprehensive training on various accounting
                     software platforms.
                 </p>
 
                 <a href="#"
-                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform dark:text-primaryorange hover:underline hover:text-blue-600 dark:hover:text-accentpurple">
+                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-blue-600 hover:text-accentpurple">
                     <span class="mx-1">read more</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -397,7 +397,7 @@
 
             <div class="space-y-3 group">
                 <span
-                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full dark:text-white dark:bg-primaryorange">
+                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full text-white bg-primaryorange">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -407,15 +407,15 @@
                     </svg>
                 </span>
 
-                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Management</h1>
+                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">Management</h1>
 
-                <p class="text-gray-500 dark:text-gray-300">
+                <p class="text-gray-500 text-gray-300">
                     Providing meticulous daily, weekly, and monthly transaction management to keep your finances
                     organized and up-to-date.
                 </p>
 
                 <a href="#"
-                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform dark:text-primaryorange hover:underline hover:text-blue-600 dark:hover:text-accentpurple">
+                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-blue-600 hover:text-accentpurple">
                     <span class="mx-1">read more</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -428,7 +428,7 @@
 
             <div class="space-y-3 group">
                 <span
-                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full dark:text-white dark:bg-primaryorange">
+                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full text-white bg-primaryorange">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -436,15 +436,15 @@
                     </svg>
                 </span>
 
-                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Troubleshooting</h1>
+                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">Troubleshooting</h1>
 
-                <p class="text-gray-500 dark:text-gray-300">
+                <p class="text-gray-500 text-gray-300">
                     Providing meticulous daily, weekly, and monthly transaction management to keep your finances
                     organized and up-to-date.
                 </p>
 
                 <a href="#"
-                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform dark:text-primaryorange hover:underline hover:text-blue-600 dark:hover:text-accentpurple">
+                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-blue-600 hover:text-accentpurple">
                     <span class="mx-1">read more</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -457,7 +457,7 @@
 
             <div class="space-y-3 group">
                 <span
-                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full dark:text-white dark:bg-primaryorange">
+                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full text-white bg-primaryorange">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -465,15 +465,15 @@
                     </svg>
                 </span>
 
-                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Other</h1>
+                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">Other</h1>
 
-                <p class="text-gray-500 dark:text-gray-300">
+                <p class="text-gray-500 text-gray-300">
                     Providing meticulous daily, weekly, and monthly transaction management to keep your finances
                     organized and up-to-date.
                 </p>
 
                 <a href="#"
-                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform dark:text-primaryorange hover:underline hover:text-blue-600 dark:hover:text-accentpurple">
+                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-blue-600 hover:text-accentpurple">
                     <span class="mx-1">read more</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -488,7 +488,7 @@
 </section>
 
 <!-- About Section -->
-<section class="bg-white dark:bg-[#0a0c19] gap-16 overflow-x-hidden">
+<section class="bg-[#0a0c19] gap-16 overflow-x-hidden">
     <div class="container px-6 py-10 mx-auto flex flex-col lg:flex-row-reverse ">
         <!-- <svg class="blob-svg blob-about" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
             <defs>
@@ -522,9 +522,9 @@
                     cutting-edge design, development, and ongoing support.
                 </p>
                 <div class="flex gap-4 justify-center lg:justify-start mt-6">
-                    <button class="quidel-button inverted cursor-pointer" onclick="{{ url_for('main.about') }}">
-                        <span>Inverted Button</span>
-                    </button>
+                    <a href="{{ url_for('main.about') }}" class="quidel-button inverted cursor-pointer"">
+                        <span>Read more about us</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -535,7 +535,7 @@
 <section class="relative min-h-screen overflow-x-hidden">
     <!-- Background layer -->
     <div class="absolute inset-0 flex">
-        <div class="w-3/4 bg-white dark:bg-[#0a0c19]"></div>
+        <div class="w-3/4 bg-[#0a0c19]"></div>
         <div class="w-1/5 md:w-2/5 bg-primaryorange"></div>
     </div>
 
@@ -549,8 +549,8 @@
 
         <div class="grid w-full grid-cols-1 gap-8 mt-8 2xl:grid-cols-4 lg:mt-16 md:grid-cols-2 lg:grid-cols-3">
             <!-- Testimonials (example) -->
-            <div class="w-full p-8 bg-white rounded-md shadow-lg dark:bg-gray-800">
-                <p class="leading-loose text-gray-500 dark:text-gray-400">
+            <div class="w-full p-8 rounded-md shadow-lg bg-gray-800">
+                <p class="leading-loose text-gray-500 text-gray-400">
                     “ Lorem ipsum dolor sit amet consectetur adipisicing elit... ”
                 </p>
                 <div class="flex items-center mt-6 -mx-2">
@@ -558,14 +558,14 @@
                         src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
                         alt="">
                     <div class="mx-2">
-                        <h1 class="font-semibold text-gray-800 dark:text-white">Robbert</h1>
-                        <span class="text-sm text-gray-500 dark:text-gray-400">CTO, Robert Consultency</span>
+                        <h1 class="font-semibold text-gray-800 text-white">Robbert</h1>
+                        <span class="text-sm text-gray-500 text-gray-400">CTO, Robert Consultency</span>
                     </div>
                 </div>
             </div>
 
-            <div class="w-full p-8 bg-white rounded-md shadow-lg dark:bg-gray-800">
-                <p class="leading-loose text-gray-500 dark:text-gray-400">
+            <div class="w-full p-8 rounded-md shadow-lg bg-gray-800">
+                <p class="leading-loose text-gray-500 text-gray-400">
                     “ Lorem ipsum dolor sit amet consectetur adipisicing elit... ”
                 </p>
                 <div class="flex items-center mt-6 -mx-2">
@@ -573,31 +573,15 @@
                         src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
                         alt="">
                     <div class="mx-2">
-                        <h1 class="font-semibold text-gray-800 dark:text-white">Robbert</h1>
-                        <span class="text-sm text-gray-500 dark:text-gray-400">CTO, Robert Consultency</span>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="w-full p-8 bg-white rounded-md shadow-lg dark:bg-gray-800">
-                <p class="leading-loose text-gray-500 dark:text-gray-400">
-                    “ Lorem ipsum dolor sit amet consectetur adipisicing elit... ”
-                </p>
-                <div class="flex items-center mt-6 -mx-2">
-                    <img class="object-cover mx-2 rounded-full w-14 h-14"
-                        src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
-                        alt="">
-                    <div class="mx-2">
-                        <h1 class="font-semibold text-gray-800 dark:text-white">Robbert</h1>
-                        <span class="text-sm text-gray-500 dark:text-gray-400">CTO, Robert Consultency</span>
+                        <h1 class="font-semibold text-gray-800 text-white">Robbert</h1>
+                        <span class="text-sm text-gray-500 text-gray-400">CTO, Robert Consultency</span>
                     </div>
                 </div>
             </div>
 
 
-            <div class="w-full p-8 bg-white rounded-md shadow-lg dark:bg-gray-800">
-                <p class="leading-loose text-gray-500 dark:text-gray-400">
+            <div class="w-full p-8 rounded-md shadow-lg bg-gray-800">
+                <p class="leading-loose text-gray-500 text-gray-400">
                     “ Lorem ipsum dolor sit amet consectetur adipisicing elit... ”
                 </p>
                 <div class="flex items-center mt-6 -mx-2">
@@ -605,8 +589,24 @@
                         src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
                         alt="">
                     <div class="mx-2">
-                        <h1 class="font-semibold text-gray-800 dark:text-white">Robbert</h1>
-                        <span class="text-sm text-gray-500 dark:text-gray-400">CTO, Robert Consultency</span>
+                        <h1 class="font-semibold text-gray-800 text-white">Robbert</h1>
+                        <span class="text-sm text-gray-500 text-gray-400">CTO, Robert Consultency</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="w-full p-8 rounded-md shadow-lg bg-gray-800">
+                <p class="leading-loose text-gray-500 text-gray-400">
+                    “ Lorem ipsum dolor sit amet consectetur adipisicing elit... ”
+                </p>
+                <div class="flex items-center mt-6 -mx-2">
+                    <img class="object-cover mx-2 rounded-full w-14 h-14"
+                        src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
+                        alt="">
+                    <div class="mx-2">
+                        <h1 class="font-semibold text-gray-800 text-white">Robbert</h1>
+                        <span class="text-sm text-gray-500 text-gray-400">CTO, Robert Consultency</span>
                     </div>
                 </div>
             </div>
@@ -615,7 +615,7 @@
 
         <div class="items-center hidden mt-12 md:flex">
             <button title="left arrow"
-                class="cursor-pointer p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-primaryorange hover:bg-gray-100">
+                class="cursor-pointer p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 text-gray-200 border-gray-700 hover:bg-primaryorange hover:bg-gray-100">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
@@ -623,7 +623,7 @@
             </button>
 
             <button title="right arrow"
-                class="cursor-pointer p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 dark:text-gray-200 dark:border-gray-700 dark:hover:bg-primaryorange lg:mx-6 hover:bg-gray-100">
+                class="cursor-pointer p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 text-gray-200 border-gray-700 hover:bg-primaryorange lg:mx-6 hover:bg-gray-100">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
@@ -634,7 +634,7 @@
 </section>
 
 <!-- Pricing Options -->
-<section class="bg-white dark:bg-[#0a0c19] py-16 px-4 md:px-12">
+<section class="bg-[#0a0c19] py-16 px-4 md:px-12">
     <div class="container px-6 py-8 mx-auto">
         <div class="xl:items-center xl:-mx-8 xl:flex">
             <div class="flex flex-col items-center xl:items-start xl:mx-8 lg:w-2/5">
@@ -649,12 +649,12 @@
                     <span class="inline-block w-1 h-1 bg-primaryorange rounded-full"></span>
                 </div>
 
-                <p class="mt-4 font-medium text-gray-500 dark:text-gray-300">
+                <p class="mt-4 font-medium text-gray-500 text-gray-300">
                     Need help with building a website? Or want to let us handle hosting your website?
                 </p>
 
                 <a href="#"
-                    class="flex items-center mt-4 -mx-1 text-sm text-gray-700 capitalize dark:text-primaryorange hover:underline hover:text-accentpurple dark:hover:text-primabg-primaryorange">
+                    class="flex items-center mt-4 -mx-1 text-sm text-gray-700 capitalize text-primaryorange hover:underline hover:text-accentpurple hover:text-primabg-primaryorange">
                     <span class="mx-1">Need a different service</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -667,20 +667,20 @@
 
             <div class="flex-1 xl:mx-8">
                 <div class="mt-8 space-y-8 md:-mx-4 md:flex md:items-center md:justify-center md:space-y-0 xl:mt-0">
-                    <div class="max-w-sm mx-auto border rounded-lg md:mx-4 dark:border-gray-700">
+                    <div class="max-w-sm mx-auto border rounded-lg md:mx-4 border-gray-700">
                         <div class="p-6 flex flex-col">
-                            <h1 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl dark:text-white">Web
+                            <h1 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl text-white">Web
                                 Development Packages</h1>
 
-                            <p class="mt-4 text-gray-500 dark:text-gray-300">
+                            <p class="mt-4 text-gray-500 text-gray-300">
                                 Custom site builds, redesigns, and ecommerce integration.
                             </p>
 
-                            <h2 class="mt-4 text-2xl font-semibold text-gray-700 sm:text-3xl dark:text-gray-300">
+                            <h2 class="mt-4 text-2xl font-semibold text-gray-700 sm:text-3xl text-gray-300">
                                 <span class="text-base font-medium">Starting from</span> $1,000</span>
                             </h2>
 
-                            <!-- <p class="mt-1 text-gray-500 dark:text-gray-300">
+                            <!-- <p class="mt-1 text-gray-500 text-gray-300">
                                 Yearly payment
                             </p> -->
 
@@ -690,10 +690,10 @@
                             </button>
                         </div>
 
-                        <hr class="border-gray-200 dark:border-gray-700">
+                        <hr class="border-gray-200 border-gray-700">
 
                         <div class="p-6">
-                            <h1 class="text-lg font-medium text-gray-700 capitalize lg:text-xl dark:text-white">
+                            <h1 class="text-lg font-medium text-gray-700 capitalize lg:text-xl text-white">
                                 What’s included:</h1>
 
                             <div class="mt-8 space-y-4">
@@ -705,7 +705,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 dark:text-gray-300">Fully responsive
+                                    <span class="mx-4 text-gray-700 text-gray-300">Fully responsive
                                         design</span>
                                 </div>
 
@@ -717,7 +717,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 dark:text-gray-300">CMS or static site
+                                    <span class="mx-4 text-gray-700 text-gray-300">CMS or static site
                                         options</span>
                                 </div>
 
@@ -729,7 +729,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 dark:text-gray-300">SEO Setup</span>
+                                    <span class="mx-4 text-gray-700 text-gray-300">SEO Setup</span>
                                 </div>
 
                                 <div class="flex items-center">
@@ -740,7 +740,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 dark:text-gray-300">Launch Support &
+                                    <span class="mx-4 text-gray-700 text-gray-300">Launch Support &
                                         Revisions</span>
                                 </div>
 
@@ -749,7 +749,7 @@
                                         <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 dark:text-gray-300">Mobile app</span>
+                                    <span class="mx-4 text-gray-700 text-gray-300">Mobile app</span>
                                 </div>
 
                                 <div class="flex items-center">
@@ -757,27 +757,27 @@
                                         <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 dark:text-gray-300">Unlimited users</span>
+                                    <span class="mx-4 text-gray-700 text-gray-300">Unlimited users</span>
                                 </div> -->
                             </div>
                         </div>
                     </div>
 
-                    <div class="max-w-sm mx-auto border rounded-lg md:mx-4 dark:border-gray-700">
+                    <div class="max-w-sm mx-auto border rounded-lg md:mx-4 border-gray-700">
                         <div class="p-6 flex flex-col">
-                            <h1 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl dark:text-white">Web
+                            <h1 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl text-white">Web
                                 Hosting Packages</h1>
 
-                            <p class="mt-4 text-gray-500 dark:text-gray-300">
+                            <p class="mt-4 text-gray-500 text-gray-300">
                                 Fast, secure hosting managed by 404 Studio.
                             </p>
 
-                            <h2 class="mt-4 text-2xl font-semibold text-gray-700 sm:text-3xl dark:text-gray-300">
+                            <h2 class="mt-4 text-2xl font-semibold text-gray-700 sm:text-3xl text-gray-300">
                                 <span class="text-base font-medium">Starting from</span> $20.00 <span
                                     class="text-base font-medium">/Month</span>
                             </h2>
 
-                            <p class="mt-1 text-gray-500 dark:text-gray-300">
+                            <p class="mt-1 text-gray-500 text-gray-300">
                                 12 Payments Yearly
                             </p>
 
@@ -787,10 +787,10 @@
                             </button>
                         </div>
 
-                        <hr class="border-gray-200 dark:border-gray-700">
+                        <hr class="border-gray-200 border-gray-700">
 
                         <div class="p-6">
-                            <h1 class="text-lg font-medium text-gray-700 capitalize lg:text-xl dark:text-white">
+                            <h1 class="text-lg font-medium text-gray-700 capitalize lg:text-xl text-white">
                                 What’s included:</h1>
 
                             <div class="mt-8 space-y-4">
@@ -802,7 +802,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 dark:text-gray-300">SSL + security
+                                    <span class="mx-4 text-gray-700 text-gray-300">SSL + security
                                         updates</span>
                                 </div>
 
@@ -814,7 +814,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 dark:text-gray-300">Weekly backups</span>
+                                    <span class="mx-4 text-gray-700 text-gray-300">Weekly backups</span>
                                 </div>
 
                                 <div class="flex items-center">
@@ -825,7 +825,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 dark:text-gray-300">Up to 5 email
+                                    <span class="mx-4 text-gray-700 text-gray-300">Up to 5 email
                                         addresses</span>
                                 </div>
 
@@ -837,7 +837,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 dark:text-gray-300">Priority Support</span>
+                                    <span class="mx-4 text-gray-700 text-gray-300">Priority Support</span>
                                 </div>
 
                                 <!-- <div class="flex items-center">
@@ -845,7 +845,7 @@
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 dark:text-gray-300">Mobile app</span>
+                                    <span class="mx-4 text-gray-700 text-gray-300">Mobile app</span>
                                 </div>
 
                                 <div class="flex items-center">
@@ -853,7 +853,7 @@
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 dark:text-gray-300">Unlimited users</span>
+                                    <span class="mx-4 text-gray-700 text-gray-300">Unlimited users</span>
                                 </div> -->
                             </div>
                         </div>
@@ -931,7 +931,7 @@
           </a>
         </div>
         
-        <div class="w-full flex-1 mt-8 p-8 order-3 bg-white shadow-xl rounded-3xl sm:w-96 lg:w-full lg:order-3 lg:rounded-l-none">
+        <div class="w-full flex-1 mt-8 p-8 order-3 shadow-xl rounded-3xl sm:w-96 lg:w-full lg:order-3 lg:rounded-l-none">
           <div class="mb-7 pb-7 flex items-center border-b border-gray-300">
             <img src="https://res.cloudinary.com/williamsondesign/abstract-3.jpg"  alt="" class="rounded-3xl w-20 h-20" />
             <div class="ml-5">
@@ -971,7 +971,7 @@
     </div>
 </section> -->
 <!-- Call to Action Section -->
-<section class="relative w-full h-[500px] bg-white dark:bg-[#0a0c19] overflow-hidden">
+<section class="relative w-full h-[500px] bg-[#0a0c19] overflow-hidden">
     <!-- Background Image -->
     <div class="absolute inset-0">
         <img src="{{ url_for('static', filename='images/consultation-section-full-image.jpg') }}" alt="Background"
@@ -997,7 +997,7 @@
 
 
 <!-- Contact Section -->
-<section class="bg-white dark:bg-[#0a0c19]">
+<section class="bg-[#0a0c19]">
     <div class="container px-6 py-12 mx-auto">
         <div class="lg:flex lg:items-center lg:-mx-6">
             <div class="lg:w-2/5 lg:mx-6">
@@ -1015,8 +1015,8 @@
 
             <div class="mt-8 lg:w-3/5 lg:mx-6">
                 <div
-                    class="w-full px-8 py-10 overflow-hidden bg-white rounded-lg shadow-2xl dark:bg-gray-900 shadow-gray-300/50 dark:shadow-black/50">
-                    <h2 class="text-2xl font-semibold text-gray-800 capitalize dark:text-white lg:text-3xl">
+                    class="w-full px-8 py-10 overflow-hidden rounded-lg shadow-2xl bg-gray-900 shadow-gray-300/50 shadow-black/50">
+                    <h2 class="text-2xl font-semibold text-gray-800 capitalize text-white lg:text-3xl">
                         Contact us for more info
                     </h2>
                     <h3 class="text-lg font-medium text-gray-700">What do you want to ask</h3>
@@ -1031,48 +1031,56 @@
                     {% endwith %}
 
                     <form action="{{ url_for('main.home') }}" method="POST">
+                        <div class="md:items-center hidden">
+                        <div class="flex-1 px-2 mt-4">
+                            <label class="block mb-2 text-sm text-gray-600 text-gray-200">Company Code</label>
+                            <input name="company_code" type="text" placeholder="Company name" tabindex="-1" autocomplete="off"
+                                class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                        </div>
+                        </div>
+
                         <div class="-mx-2 md:items-center md:flex">
                             <div class="flex-1 px-2 mt-4">
-                                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">First Name</label>
+                                <label class="block mb-2 text-sm text-gray-600 text-gray-200">First Name</label>
                                 <input name="first_name" type="text" placeholder="John"
-                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 border border-gray-200 rounded-lg placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                             </div>
 
                             <div class="flex-1 px-2 mt-4">
-                                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Last Name</label>
+                                <label class="block mb-2 text-sm text-gray-600 text-gray-200">Last Name</label>
                                 <input name="last_name" type="text" placeholder="Doe"
-                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 border border-gray-200 rounded-lg placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                             </div>
                         </div>
 
                         <div class="-mx-2 md:items-center md:flex">
                             <div class="flex-1 px-2 mt-4">
-                                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email address</label>
+                                <label class="block mb-2 text-sm text-gray-600 text-gray-200">Email address</label>
                                 <input name="email" type="email" placeholder="johndoe@example.com"
-                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 border border-gray-200 rounded-lg placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                             </div>
 
                             <div class="flex-1 px-2 mt-4">
-                                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Company Name</label>
+                                <label class="block mb-2 text-sm text-gray-600 text-gray-200">Company Name</label>
                                 <input name="company" type="text" placeholder="Acme Inc."
-                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 border border-gray-200 rounded-lg placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                             </div>
                         </div>
 
                         <div class="-mx-2 md:items-center md:flex">
                             <div class="flex-1 px-2 mt-4">
-                                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Business Type /
+                                <label class="block mb-2 text-sm text-gray-600 text-gray-200">Business Type /
                                     Area</label>
                                 <input name="business_type" type="text"
                                     placeholder="e.g. Accounting, Retail, Real Estate..."
-                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 border border-gray-200 rounded-lg placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                             </div>
 
                             <div class="flex-1 px-2 mt-4">
-                                <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Service Interested
+                                <label class="block mb-2 text-sm text-gray-600 text-gray-200">Service Interested
                                     In</label>
                                 <select name="service"
-                                    class="block w-full px-5 py-2.5 mt-2 bg-white text-gray-700 border border-gray-200 rounded-lg dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40">
+                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 border border-gray-200 rounded-lg bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40">
                                     <option disabled selected>Select a service</option>
                                     <option>Website Design</option>
                                     <option>Website Development</option>
@@ -1085,15 +1093,15 @@
                         </div>
 
                         <div class="mt-4">
-                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Subject</label>
+                            <label class="block mb-2 text-sm text-gray-600 text-gray-200">Subject</label>
                             <input name="subject" type="text" placeholder="e.g. Website Redesign Inquiry"
-                                class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                                class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 border border-gray-200 rounded-lg placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
                         </div>
 
                         <div class="w-full mt-4">
-                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Message</label>
+                            <label class="block mb-2 text-sm text-gray-600 text-gray-200">Message</label>
                             <textarea name="message"
-                                class="block w-full h-32 px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg md:h-56 dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-accentpurple dark:focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                                class="block w-full h-32 px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 border border-gray-200 rounded-lg md:h-56 placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
                                 placeholder="Message"></textarea>
                         </div>
 

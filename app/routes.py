@@ -51,27 +51,56 @@ reviews = [
 def home():
     if request.method == 'POST':
         try:
+            # Honeypot field (bot filter)
+            if request.form.get('company_code'):
+                # Silently redirect bots
+                return redirect(url_for('main.home'))
+
             # Extract form data
             first_name = request.form.get('first_name')
             last_name = request.form.get('last_name')
             email = request.form.get('email')
-            company = request.form.get('company')
-            business_type = request.form.get('business_type')
+            company = request.form.get('company', '')
+            business_type = request.form.get('business_type', '')
             subject = request.form.get('subject')
-            service = request.form.get('service')
+            service = request.form.get('service', 'Other')
             message = request.form.get('message')
 
-            # Do something with the data (e.g., send email, store in DB, etc.)
-            # Assuming success:
-            flash("Thanks! Your message has been sent.", "success")
-            return redirect(url_for('main.home'))
+            # Compose email
+            email_message = EmailMessage()
+            email_message['Subject'] = f"Contact Form Submission: {subject}"
+            email_message['From'] = ZOHO_EMAIL
+            email_message['To'] = ZOHO_EMAIL
+
+            email_message.set_content(f"""
+            New Contact Submission:
+
+            Name: {first_name} {last_name}
+            Email: {email}
+            Company: {company}
+            Business Type: {business_type}
+            Service Interested: {service}
+            Subject: {subject}
+
+            Message:
+            {message}
+            """)
+
+            # Send email via Zoho SMTP
+            with smtplib.SMTP_SSL('smtp.zoho.com', 465) as smtp:
+                smtp.login(ZOHO_EMAIL, ZOHO_PASSWORD)
+                smtp.send_message(email_message)
+
+            flash('Message sent successfully!', 'success')
 
         except Exception as e:
-            print(f"Form submission failed: {e}")
-            flash("Oops! Something went wrong. Please try again.", "error")
-            return redirect(url_for('main.home'))
+            print("Email sending failed:", e)
+            flash('Failed to send message. Please try again later.', 'danger')
+
+        return redirect(url_for('main.home'))
 
     return render_template('home.html', reviews=reviews)
+
 
 @main.route('/links')
 def links_page():
@@ -124,11 +153,6 @@ all_services = {
     },
 }
 
-@main.route('/alt-home')
-def home2():
-    return render_template('alt-home.html')
-
-
 @main.route('/services')
 def services():
     selected_tab = request.args.get('tab', 'accounting')
@@ -138,6 +162,9 @@ def services():
 def contact():
     if request.method == 'POST':
         # Get form data
+        if (request.form.get('company_code')):
+            flash('Message sent successfully!', 'success')
+            return redirect(url_for('main.contact'))
         first_name = request.form.get('first_name')
         last_name = request.form.get('last_name')
         email = request.form.get('email')
