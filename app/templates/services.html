@@ -1,11 +1,117 @@
 {% extends 'base.html' %}
+
 {% block content %}
-<div class="min-h-screen bg-gray-900 flex flex-col items-center justify-center">
-    <h1 class="text-5xl text-white font-bold mb-8 animate-pulse">
-        Coming Soon
+<section class="bg-white dark:bg-[#0a0c19] min-h-screen py-20 px-6">
+  <div class="container mx-auto max-w-screen-xl">
+    <h1 class="font-montserrat text-[30px] lg:text-[58px] font-semibold text-center text-white mb-10">
+      Services Built for Impact
     </h1>
-    <p class="text-white text-lg mb-8">
-        We're working hard to bring this page to life. Stay tuned!
+    <p class="text-gray-400 text-center max-w-2xl mx-auto text-sm mb-16">
+      Whether you're starting a business or scaling an idea, these are the tools to help you launch smarter, grow faster, and run leaner.
     </p>
-</div>
+
+    <!-- Service: Development -->
+    <div id="development" class="grid lg:grid-cols-2 gap-12 mb-24 items-center">
+      <div class="text-white">
+        <h2 class="text-3xl font-bold text-primaryorange mb-2">Custom Web Development</h2>
+        <p class="text-gray-400 text-sm mb-4">
+          We build fast, mobile-first websites using HTML5, TailwindCSS, JavaScript, and Flask — optimized for performance, accessibility, and scalability.
+        </p>
+        <ul class="text-gray-400 text-sm list-disc pl-5 space-y-2">
+          <li>Fully responsive and SEO-friendly</li>
+          <li>Jinja templating for dynamic content</li>
+          <li>Backend-ready with Flask routes & forms</li>
+        </ul>
+      </div>
+      <img src="{{ url_for('static', filename='images/services/web-dev.jpg') }}" alt="Web Development" class="rounded-lg shadow-lg w-full">
+    </div>
+
+    <!-- Service: Hosting -->
+    <div id="hosting" class="grid lg:grid-cols-2 gap-12 mb-24 items-center flex-col-reverse lg:flex-row">
+      <img src="{{ url_for('static', filename='images/services/hosting.jpg') }}" alt="Hosting" class="rounded-lg shadow-lg w-full order-2 lg:order-1">
+      <div class="text-white order-1 lg:order-2">
+        <h2 class="text-3xl font-bold text-primaryorange mb-2">Managed Hosting</h2>
+        <p class="text-gray-400 text-sm mb-4">
+          Reliable hosting with security, backups, and uptime you don’t have to think about. Includes monitoring, updates, and monthly performance reviews.
+        </p>
+        <ul class="text-gray-400 text-sm list-disc pl-5 space-y-2">
+          <li>Free SSL, domain integration & CDN</li>
+          <li>Daily/weekly backups</li>
+          <li>Priority support & issue resolution</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Service: Design -->
+    <div id="design" class="grid lg:grid-cols-2 gap-12 mb-24 items-center">
+      <div class="text-white">
+        <h2 class="text-3xl font-bold text-primaryorange mb-2">UI/UX & Visual Design</h2>
+        <p class="text-gray-400 text-sm mb-4">
+          From wireframes to final pixels, we design clear, functional, and beautiful user interfaces that convert — using Figma and custom Tailwind styling.
+        </p>
+        <ul class="text-gray-400 text-sm list-disc pl-5 space-y-2">
+          <li>Style guides & component libraries</li>
+          <li>Brand-integrated design systems</li>
+          <li>Mobile-first design with feedback loops</li>
+        </ul>
+      </div>
+      <img src="{{ url_for('static', filename='images/services/design.jpg') }}" alt="Design" class="rounded-lg shadow-lg w-full">
+    </div>
+
+    <!-- Service: Automation & Integrations -->
+    <div id="automation" class="grid lg:grid-cols-2 gap-12 mb-24 items-center flex-col-reverse lg:flex-row">
+      <img src="{{ url_for('static', filename='images/services/integrations.jpg') }}" alt="Automations" class="rounded-lg shadow-lg w-full order-2 lg:order-1">
+      <div class="text-white order-1 lg:order-2">
+        <h2 class="text-3xl font-bold text-primaryorange mb-2">Automations & Integrations</h2>
+        <p class="text-gray-400 text-sm mb-4">
+          Need to connect your website with Mailchimp, Supabase, Stripe, or Notion? We streamline your stack and reduce manual work through smart automations.
+        </p>
+        <ul class="text-gray-400 text-sm list-disc pl-5 space-y-2">
+          <li>Form to CRM/email automations</li>
+          <li>Custom backend APIs with Flask</li>
+          <li>Payment gateways & webhook support</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Optional: Other / Troubleshooting -->
+    <div id="other" class="grid lg:grid-cols-2 gap-12 mb-24 items-center">
+      <div class="text-white">
+        <h2 class="text-3xl font-bold text-primaryorange mb-2">Site Fixes & Weird Stuff</h2>
+        <p class="text-gray-400 text-sm mb-4">
+          Broken forms? Hosting glitches? A client site that needs help fast? We take on one-off troubleshooting tasks and legacy site cleanups with fast turnaround.
+        </p>
+        <ul class="text-gray-400 text-sm list-disc pl-5 space-y-2">
+          <li>Bug fixes & legacy cleanup</li>
+          <li>Emergency performance optimizations</li>
+          <li>Migration support (Squarespace, WordPress → Flask)</li>
+        </ul>
+      </div>
+      <img src="{{ url_for('static', filename='images/services/troubleshooting.jpg') }}" alt="Fixes" class="rounded-lg shadow-lg w-full">
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="relative w-full h-[500px] bg-[#0a0c19] overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+        <img src="{{ url_for('static', filename='images/consultation-section-full-image.jpg') }}" alt="Background"
+            class="w-full h-full object-cover grayscale" />
+        <!-- Orange Overlay -->
+        <div class="absolute inset-0 bg-primaryorange opacity-30"></div>
+    </div>
+
+    <!-- Centered Card -->
+    <div class="relative z-10 flex items-center justify-center h-full">
+        <div
+            class="flex flex-col bg-[#0a0c19] text-white p-8 rounded-xl w-full max-w-2xl md:w-2/6 shadow-xl text-center items-center">
+            <h2 class="font-montserrat text-[30px] lg:text-[58px] font-semibold text-white">Not sure what you need?</h2>
+            <p class="mb-6 font-inter text-gray-300">We’ll help you figure it out in a free 20-minute consult. No pressure, just solutions.</p>
+            <button class="quidel-button">
+                <span>Schedule Free Consultation</span>
+            </button>
+        </div>
+    </div>
+</section>
 {% endblock %}

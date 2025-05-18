@@ -1,11 +1,111 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="min-h-screen bg-gray-900 flex flex-col items-center justify-center">
-    <h1 class="text-5xl text-white font-bold mb-8 animate-pulse">
-        Coming Soon
+<section class="bg-[#0a0c19] min-h-screen py-20 px-6">
+  <div class="container mx-auto max-w-screen-xl">
+    <h1 class="font-montserrat text-[30px] lg:text-[58px] font-semibold text-white text-center mb-6">
+      Pricing Packages
     </h1>
-    <p class="text-white text-lg mb-8">
-        We're working hard to bring this page to life. Stay tuned!
+    <p class="text-center text-gray-400 max-w-xl mx-auto mb-12 text-sm">
+      Choose your focus: Development, Hosting, or Both.
     </p>
-</div>
+
+    <!-- Toggle Tabs -->
+    <div class="flex justify-center mb-12">
+      <button onclick="showPricing('development')" class="toggle-btn" id="btn-development">Development</button>
+      <button onclick="showPricing('hosting')" class="toggle-btn" id="btn-hosting">Hosting</button>
+      <button onclick="showPricing('both')" class="toggle-btn" id="btn-both">Both</button>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div id="pricing-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Cards will be injected via JS -->
+    </div>
+
+    <!-- Custom Work CTA -->
+    <div class="text-center mt-16">
+      <p class="text-gray-300 mb-4">Need something outside of hosting or development?</p>
+      <a href="{{ url_for('main.contact') }}" class="quidel-button">
+        <span>Request a Custom Quote</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+const pricingOptions = {
+  development: [
+    {
+      title: 'Starter Site',
+      price: '$1,000+',
+      desc: 'A simple but professional one-pager or brochure site.',
+      features: ['Responsive design', 'Up to 5 sections/pages', 'Basic SEO', '1 Revision Round']
+    },
+    {
+      title: 'Growth Website',
+      price: '$2,000+',
+      desc: 'Ideal for businesses ready to scale with more content and structure.',
+      features: ['Multi-page layout', 'CMS integration', 'Contact forms', '2 Revision Rounds']
+    },
+    {
+      title: 'Pro Custom Build',
+      price: '$3,500+',
+      desc: 'Full custom development, animations, and advanced features.',
+      features: ['Full-stack Flask setup', 'Custom APIs', 'Advanced UI/UX', '3 Revision Rounds']
+    }
+  ],
+  hosting: [
+    {
+      title: 'Basic Hosting',
+      price: '$20/mo',
+      desc: 'Great for small websites and portfolios.',
+      features: ['Free SSL', 'Weekly Backups', '1 Email Address', 'Basic Support']
+    },
+    {
+      title: 'Business Hosting',
+      price: '$35/mo',
+      desc: 'Optimized for growing businesses.',
+      features: ['Priority Support', 'Daily Backups', 'Up to 3 Emails', 'Performance Monitoring']
+    },
+    {
+      title: 'Pro Hosting & Care',
+      price: '$60/mo',
+      desc: 'All-in-one care plan for serious businesses.',
+      features: ['All Business Features', 'Monthly Reports', '5+ Emails', 'Uptime Alerts']
+    }
+  ],
+  both: []
+};
+
+pricingOptions.both = [...pricingOptions.development, ...pricingOptions.hosting];
+
+function showPricing(type) {
+  const container = document.getElementById('pricing-container');
+  container.innerHTML = '';
+  document.querySelectorAll('.toggle-btn').forEach(btn => btn.classList.remove('bg-primaryorange'));
+  document.getElementById(`btn-${type}`).classList.add('bg-primaryorange');
+
+  pricingOptions[type].forEach(pkg => {
+    const card = document.createElement('div');
+    card.className = 'bg-[#141726] p-6 rounded-lg shadow border border-gray-700';
+    card.innerHTML = `
+      <h2 class="text-white text-xl font-bold mb-2">${pkg.title}</h2>
+      <p class="text-gray-400 text-sm mb-2">${pkg.desc}</p>
+      <h3 class="text-gray-200 text-lg mb-4">Starting from <strong>${pkg.price}</strong></h3>
+      <ul class="text-sm text-gray-400 list-disc pl-5 space-y-1">
+        ${pkg.features.map(f => `<li>${f}</li>`).join('')}
+      </ul>
+      <a href="{{ url_for('main.contact') }}" class="block mt-6 quidel-button text-center">Choose Package</a>
+    `;
+    container.appendChild(card);
+  });
+}
+
+window.onload = () => showPricing('development');
+</script>
+
+<style>
+  .toggle-btn {
+    @apply text-white border border-primaryorange px-4 py-2 mx-2 rounded hover:bg-primaryorange transition;
+  }
+</style>
 {% endblock %}
