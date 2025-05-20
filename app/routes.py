@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request, redirect, flash, url_for
 import smtplib
 from email.message import EmailMessage
+import time
 from dotenv import load_dotenv
 import os
 
@@ -56,6 +57,15 @@ def home():
                 # Silently redirect bots
                 return redirect(url_for('main.home'))
 
+            # Time-based spam protection
+            try:
+                form_loaded_at = int(request.form.get('form_loaded_at', 0))
+                time_elapsed = time.time() - form_loaded_at
+                if time_elapsed < 3:
+                    return redirect(url_for('main.home'))  # too fast = suspicious
+            except (ValueError, TypeError):
+                return redirect(url_for('main.home'))  # invalid or missing timestamp
+
             # Extract form data
             first_name = request.form.get('first_name')
             last_name = request.form.get('last_name')
@@ -99,7 +109,7 @@ def home():
 
         return redirect(url_for('main.home'))
 
-    return render_template('home.html', reviews=reviews)
+    return render_template('home.html', reviews=reviews, form_loaded_at=int(time.time()))
 
 
 @main.route('/links')
@@ -161,53 +171,65 @@ def services():
 @main.route('/contact', methods=['GET', 'POST'])
 def contact():
     if request.method == 'POST':
-        # Get form data
-        if (request.form.get('company_code')):
-            flash('Message sent successfully!', 'success')
-            return redirect(url_for('main.contact'))
-        first_name = request.form.get('first_name')
-        last_name = request.form.get('last_name')
-        email = request.form.get('email')
-        company = request.form.get('company', '')
-        business_type = request.form.get('business_type', '')
-        subject = request.form.get('subject')
-        service = request.form.get('service', 'Other')
-        message = request.form.get('message')
-
-        # Compose email
-        email_message = EmailMessage()
-        email_message['Subject'] = f"Contact Form Submission: {subject}"
-        email_message['From'] = ZOHO_EMAIL
-        email_message['To'] = ZOHO_EMAIL  # Can add more recipients
-
-        email_message.set_content(f"""
-        New Contact Submission:
-
-        Name: {first_name} {last_name}
-        Email: {email}
-        Company: {company}
-        Business Type: {business_type}
-        Service Interested: {service}
-        Subject: {subject}
-
-        Message:
-        {message}
-        """)
-
         try:
+            # Honeypot field (bot filter)
+            if request.form.get('company_code'):
+                # Silently redirect bots
+                return redirect(url_for('main.home'))
+
+            # Time-based spam protection
+            try:
+                form_loaded_at = int(request.form.get('form_loaded_at', 0))
+                time_elapsed = time.time() - form_loaded_at
+                if time_elapsed < 3:
+                    return redirect(url_for('main.home'))  # too fast = suspicious
+            except (ValueError, TypeError):
+                return redirect(url_for('main.home'))  # invalid or missing timestamp
+
+            # Extract form data
+            first_name = request.form.get('first_name')
+            last_name = request.form.get('last_name')
+            email = request.form.get('email')
+            company = request.form.get('company', '')
+            business_type = request.form.get('business_type', '')
+            subject = request.form.get('subject')
+            service = request.form.get('service', 'Other')
+            message = request.form.get('message')
+
+            # Compose email
+            email_message = EmailMessage()
+            email_message['Subject'] = f"Contact Form Submission: {subject}"
+            email_message['From'] = ZOHO_EMAIL
+            email_message['To'] = ZOHO_EMAIL
+
+            email_message.set_content(f"""
+            New Contact Submission:
+
+            Name: {first_name} {last_name}
+            Email: {email}
+            Company: {company}
+            Business Type: {business_type}
+            Service Interested: {service}
+            Subject: {subject}
+
+            Message:
+            {message}
+            """)
+
             # Send email via Zoho SMTP
             with smtplib.SMTP_SSL('smtp.zoho.com', 465) as smtp:
                 smtp.login(ZOHO_EMAIL, ZOHO_PASSWORD)
                 smtp.send_message(email_message)
 
             flash('Message sent successfully!', 'success')
+        
         except Exception as e:
             print("Email sending failed:", e)
             flash('Failed to send message. Please try again later.', 'danger')
 
         return redirect(url_for('main.contact'))
-
-    return render_template('contact.html')
+    
+    return render_template('contact.html', form_loaded_at=int(time.time()))
 
 @main.route('/pricing')
 def pricing():

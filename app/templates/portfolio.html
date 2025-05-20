@@ -3,6 +3,127 @@
 {% extends 'base.html' %}
 {% block extra_head %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/portfolio.css') }}">
+
+<style>
+    .section-heading::before {
+        content: "PORTFOLIO";
+        background: linear-gradient(180deg,
+                rgba(239, 176, 113, 1) 0%,
+                rgba(74, 108, 247, 0) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        opacity: 0.2;
+        position: absolute;
+        /* adjust as needed to hover above */
+        left: -5%;
+        top: -5%;
+        font-size: 40px;
+        line-height: 1 !important;
+        font-weight: 700;
+        font-family: 'Inter', sans-serif;
+    }
+
+    /* Responsive font sizes */
+    @media (min-width: 540px) {
+        .section-heading::before {
+            font-size: 60px;
+            left: -3%;
+            top: -15%;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .section-heading::before {
+            font-size: 95px;
+            left: -3%;
+            top: -22%;
+        }
+    }
+
+    .section-heading {
+        position: relative;
+    }
+
+    /* Mouse icon animation */
+    .mouse-icon {
+        width: 24px;
+        height: 40px;
+        border: 2px solid white;
+        border-radius: 14px;
+        position: relative;
+    }
+
+    .mouse-icon::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 6px;
+        background: white;
+        border-radius: 2px;
+        animation: scrollWheel 1.5s infinite;
+    }
+
+    @keyframes scrollWheel {
+        0% {
+            opacity: 0;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        50% {
+            opacity: 1;
+            transform: translateX(-50%) translateY(6px);
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateX(-50%) translateY(12px);
+        }
+    }
+
+    /* Swipe icon animation */
+    .swipe-icon {
+        width: 24px;
+        height: 24px;
+        border: 2px solid white;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    .swipe-icon::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 12px;
+        background: white;
+        border-radius: 2px;
+        animation: swipeUp 1.5s infinite;
+    }
+
+    @keyframes swipeUp {
+        0% {
+            opacity: 0;
+            transform: translateX(-50%) translateY(10px);
+        }
+
+        50% {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateX(-50%) translateY(-10px);
+        }
+    }
+</style>
 {% endblock extra_head %}
 {% block content %}
 <section class="pb-16 pt-28 sm:pt-32 md:pb-20 md:pt-32 bg-transparent">
@@ -17,13 +138,24 @@
             class="absolute left-0 top-0 h-[1280px] w-[240px] -translate-y-[350px] -rotate-45 bg-[radial-gradient(50%_50%_at_50%_50%,hsla(0,0%,85%,.04)_0,hsla(0,0%,45%,.02)_80%,transparent_100%)]">
         </div>
     </div>
-    <div class="mx-auto max-w-5xl px-6 lg:px-4">
+    <div class="container px-6 py-12 mx-auto">
+        <!-- <div class="mx-auto max-w-5xl px-6 lg:px-4">
         <div class="relative mx-auto max-w-3xl text-center">
             <h1 class="text-title text-balance text-4xl font-bold sm:text-6xl">We build beautiful, custom,
                 high-performing websites</h1>
             <p class="text-[--body-text-color] text-lg font-normal my-6 mx-auto max-w-xl">Combining clean design, modern
                 frameworks, and thoughtful UX to bring ideas to life on the web.</p>
+        </div> -->
+        <div>
+            <!-- <span class="title left-[50%] lg:left-[3%] top-[0.5rem]">CONTACT US</span> -->
+            <h1 class="section-heading font-montserrat text-[40px] lg:text-[58px] font-semibold leading-tight">
+                We build beautiful, custom, high-performing websites</h1>
+            <!-- <h1 class="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl text-white">Chat to our friendly team</h1> -->
+
+            <p class="mt-3 text-gray-500 text-gray-400">Combining clean design, modern frameworks, and thoughtful UX to
+                bring ideas to life on the web.</p>
         </div>
+    </div>
     </div>
 </section>
 <section class="relative z-10 border-y border-t-gray-950/5 border-gray-800 bg-transparent">
@@ -34,36 +166,42 @@
             <div>
                 <div class="flex items-center gap-2">
                     <!-- Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
-                        <path fill-rule="evenodd" d="...your-icon-path..." clip-rule="evenodd"></path>
-                    </svg>
+                    <span class="inline-block p-3 rounded-full text-white">
+                        <img src="{{ url_for('static', filename='images/icons/customization.png') }}"
+                            alt="scalable-tech-stack" class="w-15 h-15" />
+                    </span>
                     <h3 class="text-title text-sm font-medium">Custom Development</h3>
                 </div>
-                <p class="mt-4 text-sm">From landing pages to complex platforms, I tailor every build to your specific
+                <p class="mt-4 text-sm text-gray-300">From landing pages to complex platforms, I tailor every build to
+                    your specific
                     needs.</p>
             </div>
 
             <div>
                 <div class="flex items-center gap-2">
                     <!-- Icon -->
-                    <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
-                        <path fill-rule="evenodd" d="...your-icon-path..." clip-rule="evenodd"></path>
-                    </svg>
+                    <span class="inline-block p-3 rounded-full text-white">
+                        <img src="{{ url_for('static', filename='images/icons/responsive.png') }}"
+                            alt="scalable-tech-stack" class="w-15 h-15" />
+                    </span>
                     <h3 class="text-title text-sm font-medium">Responsive & Accessible</h3>
                 </div>
-                <p class="mt-4 text-sm">Every website works beautifully across all devices and meets accessibility
+                <p class="mt-4 text-sm text-gray-300">Every website works beautifully across all devices and meets
+                    accessibility
                     standards.</p>
             </div>
 
             <div>
                 <div class="flex items-center gap-2">
                     <!-- Icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4">
-                        <path fill-rule="evenodd" d="...your-icon-path..." clip-rule="evenodd"></path>
-                    </svg>
+                    <span class="inline-block p-3 rounded-full text-white">
+                        <img src="{{ url_for('static', filename='images/icons/scalable-tech-stack.png') }}"
+                            alt="scalable-tech-stack" class="w-15 h-15" />
+                    </span>
                     <h3 class="text-title text-sm font-medium">Scalable Tech Stack</h3>
                 </div>
-                <p class="mt-4 text-sm">Built with tools like TailwindCSS, Python, JavaScript, and more—ready to scale
+                <p class="mt-4 text-sm text-gray-300">Built with tools like TailwindCSS, Python, JavaScript, and
+                    more—ready to scale
                     as your business grows.</p>
             </div>
 
@@ -86,12 +224,13 @@
                         class="border-r-none flex flex-col gap-6 divide-y py-2 md:w-[18rem] md:border-r md:pr-6 lg:gap-12 lg:py-12 lg:pr-12">
                         <div class="lg:pt-6">
                             <div class="flex items-end justify-between">
-                                <h1
+                                <h2
                                     class="block text-[--title-text-color] text-lg font-medium my-0 capitalize group-hover:text-primary-600 group-hover:text-primary-400">
-                                    ILCA Bejaia</h1>
+                                    ILCA Bejaia</h2>
                                 <!-- <p class="text-[--body-text-color] text-sm font-normal my-0">From $19.99</p> -->
                             </div>
-                            <p class="text-[--body-text-color] text-sm font-normal nb my-0">ILCA Bejaia is an
+                            <p class="text-[--body-text-color] text-sm font-normal nb my-0 text-gray-300">ILCA Bejaia is
+                                an
                                 International Learning Center in Algeria offering language courses and learning
                                 resources.</p>
                             <div class="my-6 flex gap-1">
@@ -142,7 +281,7 @@
                             </div>
                             <div class="mt-6 grid grid-cols-1 gap-3">
                                 <a href="https://ilcabejaia.com/" target="_blank"
-                                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-blue-600 hover:text-accentpurple">
+                                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
                                     <span class="mx-1">View Live Site</span>
                                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -153,32 +292,33 @@
                                 </a>
                             </div>
                         </div>
-                        <!-- <div class="hidden md:grid md:grid-cols-3 md:gap-3 md:pt-6 lg:pt-12"><button
-                                aria-label="ampire screenshot" data-state="active"
-                                class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                    class="size-full" src="/templates/ampire/ampire-cover.webp"
-                                    alt="ampire screenshot 0" loading="lazy" width="560" height="560" /></button><button
-                                aria-label="ampire screenshot" data-state="false"
-                                class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                    class="size-full" src="/templates/ampire/ampire-cover-9.webp"
-                                    alt="ampire screenshot 1" loading="lazy" width="560" height="560" /></button><button
-                                aria-label="ampire screenshot" data-state="false"
-                                class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                    class="size-full" src="/templates/ampire/ampire-cover-3.webp"
-                                    alt="ampire screenshot 2" loading="lazy" width="560" height="560" /></button>
-                        </div> -->
-                    </div><a href="#"
-                        class="relative border-white md:border-l md:pl-6 lg:pl-12 border-transparent">
+                    </div>
+                    <div class="relative border-white md:border-l border-transparent">
                         <div class="mockup">
                             <img src="{{ url_for('static', filename='images/portfolio-images/macbook-white.png') }}">
-                            <div class="artwork">
+
+                            <div class="artwork relative overflow-hidden">
                                 <img
                                     src="{{ url_for('static', filename='images/portfolio-images/ilca-bejaia-home-page-mockup.png') }}">
+
+                                <!-- Overlay moved inside artwork -->
+                                <div
+                                    class="scroll-overlay absolute inset-0 bg-black/50 flex items-end justify-center opacity-0 transition-opacity duration-500 pointer-events-none z-10">
+                                    <!-- Desktop mouse scroll animation -->
+                                    <div class="hidden md:block mb-6 z-10">
+                                        <div class="mouse-icon"></div>
+                                    </div>
+                                    <!-- Mobile swipe animation -->
+                                    <div class="block md:hidden mb-6 z-10">
+                                        <div class="swipe-icon"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                </div><!--astro:end-->
-            </astro-island><astro-island uid="1nf5rV" prefix="r1" component-url="/_astro/TemplateBlock.BehvWR5m.js"
+                    </div>
+                </div>
+            </astro-island><!--astro:end-->
+            <astro-island uid="1nf5rV" prefix="r1" component-url="/_astro/TemplateBlock.BehvWR5m.js"
                 component-export="default" renderer-url="/_astro/client.BfozEI4p.js"
                 props="{&quot;template&quot;:[0,{&quot;priority&quot;:[0,2],&quot;name&quot;:[0,&quot;oxymor-ns&quot;],&quot;title&quot;:[0,&quot;Sleek landing page&quot;],&quot;screenshots&quot;:[1,[[0,&quot;/templates/oxymor/ns-home.webp&quot;],[0,&quot;/templates/oxymor/ns-bento.webp&quot;],[0,&quot;/templates/oxymor/ns-pricing-faqs.webp&quot;]]],&quot;shortDescription&quot;:[0,&quot;Sleek SaaS landing page template designed to showcase your product, app, or service.&quot;],&quot;purchaseLink&quot;:[0,&quot;https://tailus.lemonsqueezy.com/buy/c42595d2-42f3-4a55-84d3-ea5cda979bc5&quot;],&quot;previewLink&quot;:[0,&quot;https://oxymor-ns.tailus.io/&quot;],&quot;price&quot;:[0,&quot;$39.99&quot;],&quot;stack&quot;:[1,[[0,&quot;html&quot;],[0,&quot;astro&quot;]]]}],&quot;slug&quot;:[0,&quot;oxymor-ns&quot;]}"
                 ssr="" client="visible" opts="{&quot;name&quot;:&quot;TemplateGallery&quot;,&quot;value&quot;:true}"
@@ -189,55 +329,27 @@
                         class="border-r-none flex flex-col gap-6 divide-y py-2 md:w-[18rem] md:border-r md:pr-6 lg:gap-12 lg:py-12 lg:pr-12">
                         <div class="lg:pt-6">
                             <div class="flex items-end justify-between">
-                                <h1
+                                <h2
                                     class="block text-[--title-text-color] text-lg font-medium my-0 capitalize group-hover:text-primary-600 group-hover:text-primary-400">
-                                    Woven Dignity</h1>
+                                    Woven Dignity</h2>
                                 <!-- <p class="text-[--body-text-color] text-sm font-normal my-0">$39.99</p> -->
                             </div>
                             <div class="mt-6"></div>
-                            <p class="text-[--body-text-color] text-sm font-normal nb my-0">Woven Dignity is a
+                            <p class="text-[--body-text-color] text-sm font-normal nb my-0 text-gray-300">Woven Dignity
+                                is a
                                 non-profit organization specializing in handmade cards, with the main focus being to
                                 provide refugee women with hope and empowerment through sustainable work.</p>
                             <div class="my-6 flex gap-1">
-                                <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"><svg
-                                        class="size-5 transition duration-200 h-4 w-4 -mb-0.5"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                                        <path fill="#e44d26"
-                                            d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198l-45.019 12.48z">
-                                        </path>
-                                        <path fill="#f16529" d="m64 116.8l36.378-10.086l8.559-95.878H64z"></path>
-                                        <path fill="#ebebeb"
-                                            d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692l3.382 37.927H64zm0 35.743l-.061.017l-15.327-4.14l-.979-10.975H33.816l1.928 21.609l28.193 7.826l.063-.017z">
-                                        </path>
-                                        <path fill="#fff"
-                                            d="M63.952 52.455v13.763h16.947l-1.597 17.849l-15.35 4.143v14.319l28.215-7.82l.207-2.325l3.234-36.233l.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092l.628-6.978l.329-3.692z">
-                                        </path>
-                                    </svg></div>
-                                <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"><svg
-                                        class="relative size-[1.125rem] !text-gray-950 !text-white h-4 w-4 -mb-0.5"
-                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="85" height="107"
-                                        viewBox="0 0 85 107" fill="none">
-                                        <path
-                                            d="M27.5894 91.1365C22.7555 86.7178 21.3444 77.4335 23.3583 70.7072C26.8503 74.948 31.6888 76.2914 36.7005 77.0497C44.4375 78.2199 52.0359 77.7822 59.2232 74.2459C60.0454 73.841 60.8052 73.3027 61.7036 72.7574C62.378 74.714 62.5535 76.6892 62.318 78.6996C61.7452 83.5957 59.3086 87.3778 55.4332 90.2448C53.8835 91.3916 52.2437 92.4167 50.6432 93.4979C45.7262 96.8213 44.3959 100.718 46.2435 106.386C46.2874 106.525 46.3267 106.663 46.426 107C43.9155 105.876 42.0817 104.24 40.6845 102.089C39.2087 99.8193 38.5066 97.3081 38.4696 94.5909C38.4511 93.2686 38.4511 91.9345 38.2733 90.6309C37.8391 87.4527 36.3471 86.0297 33.5364 85.9478C30.6518 85.8636 28.37 87.6469 27.7649 90.4554C27.7187 90.6707 27.6517 90.8837 27.5847 91.1341L27.5894 91.1365Z"
-                                            fill="currentColor"></path>
-                                        <path
-                                            d="M27.5894 91.1365C22.7555 86.7178 21.3444 77.4335 23.3583 70.7072C26.8503 74.948 31.6888 76.2914 36.7005 77.0497C44.4375 78.2199 52.0359 77.7822 59.2232 74.2459C60.0454 73.841 60.8052 73.3027 61.7036 72.7574C62.378 74.714 62.5535 76.6892 62.318 78.6996C61.7452 83.5957 59.3086 87.3778 55.4332 90.2448C53.8835 91.3916 52.2437 92.4167 50.6432 93.4979C45.7262 96.8213 44.3959 100.718 46.2435 106.386C46.2874 106.525 46.3267 106.663 46.426 107C43.9155 105.876 42.0817 104.24 40.6845 102.089C39.2087 99.8193 38.5066 97.3081 38.4696 94.5909C38.4511 93.2686 38.4511 91.9345 38.2733 90.6309C37.8391 87.4527 36.3471 86.0297 33.5364 85.9478C30.6518 85.8636 28.37 87.6469 27.7649 90.4554C27.7187 90.6707 27.6517 90.8837 27.5847 91.1341L27.5894 91.1365Z"
-                                            fill="url(#paint0_linear_1_59)"></path>
-                                        <path
-                                            d="M0 69.5866C0 69.5866 14.3139 62.6137 28.6678 62.6137L39.4901 29.1204C39.8953 27.5007 41.0783 26.3999 42.4139 26.3999C43.7495 26.3999 44.9325 27.5007 45.3377 29.1204L56.1601 62.6137C73.1601 62.6137 84.8278 69.5866 84.8278 69.5866C84.8278 69.5866 60.5145 3.35233 60.467 3.21944C59.7692 1.2612 58.5911 0 57.0029 0H27.8274C26.2392 0 25.1087 1.2612 24.3634 3.21944C24.3108 3.34983 0 69.5866 0 69.5866Z"
-                                            fill="currentColor"></path>
-                                        <defs>
-                                            <linearGradient id="paint0_linear_1_59" x1="22.4702" y1="107" x2="69.1451"
-                                                y2="84.9468" gradientUnits="userSpaceOnUse">
-                                                <stop stop-color="#D83333"></stop>
-                                                <stop offset="1" stop-color="#F041FF"></stop>
-                                            </linearGradient>
-                                        </defs>
-                                    </svg></div>
+                                <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"
+                                    title="Square Online">
+                                    <img class="size-5 transition duration-200 h-4 w-4 -mb-0.5"
+                                        src="{{ url_for('static', filename='images/icons/Square_Jewel_White.svg')}}">
+                                    </img>
+                                </div>
                             </div>
                             <div class="mt-6 grid grid-cols-1 gap-3">
                                 <a href="https://wovendignity.com/" target="_blank"
-                                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-blue-600 hover:text-accentpurple">
+                                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
                                     <span class="mx-1">View Live Site</span>
                                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -248,32 +360,33 @@
                                 </a>
                             </div>
                         </div>
-                        <!-- <div class="hidden md:grid md:grid-cols-3 md:gap-3 md:pt-6 lg:pt-12"><button
-                                aria-label="oxymor-ns screenshot" data-state="active"
-                                class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                    class="size-full" src="/templates/oxymor/ns-home.webp" alt="oxymor-ns screenshot 0"
-                                    loading="lazy" width="560" height="560" /></button><button
-                                aria-label="oxymor-ns screenshot" data-state="false"
-                                class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                    class="size-full" src="/templates/oxymor/ns-bento.webp" alt="oxymor-ns screenshot 1"
-                                    loading="lazy" width="560" height="560" /></button><button
-                                aria-label="oxymor-ns screenshot" data-state="false"
-                                class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                    class="size-full" src="/templates/oxymor/ns-pricing-faqs.webp"
-                                    alt="oxymor-ns screenshot 2" loading="lazy" width="560" height="560" /></button>
-                        </div> -->
-                    </div><a href="#"
-                        class="relative border-white md:border-l md:pl-6 lg:pl-12 border-transparent">
+                    </div>
+                    <div class="relative border-white md:border-l border-transparent">
                         <div class="mockup">
                             <img src="{{ url_for('static', filename='images/portfolio-images/macbook-white.png') }}">
-                            <div class="artwork">
+
+                            <div class="artwork relative overflow-hidden">
                                 <img
                                     src="{{ url_for('static', filename='images/portfolio-images/woven-dignity-home-page-mockup.png') }}">
+
+                                <!-- Overlay moved inside artwork -->
+                                <div
+                                    class="scroll-overlay absolute inset-0 bg-black/50 flex items-end justify-center opacity-0 transition-opacity duration-500 pointer-events-none z-10">
+                                    <!-- Desktop mouse scroll animation -->
+                                    <div class="hidden md:block mb-6">
+                                        <div class="mouse-icon"></div>
+                                    </div>
+                                    <!-- Mobile swipe animation -->
+                                    <div class="block md:hidden mb-6">
+                                        <div class="swipe-icon"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 </div><!--astro:end-->
-            </astro-island><astro-island uid="Zb8Bx7" prefix="r2" component-url="/_astro/TemplateBlock.BehvWR5m.js"
+            </astro-island>
+            <astro-island uid="Zb8Bx7" prefix="r2" component-url="/_astro/TemplateBlock.BehvWR5m.js"
                 component-export="default" renderer-url="/_astro/client.BfozEI4p.js"
                 props="{&quot;template&quot;:[0,{&quot;priority&quot;:[0,2],&quot;name&quot;:[0,&quot;oxymor-st&quot;],&quot;title&quot;:[0,&quot;Polished landing page&quot;],&quot;screenshots&quot;:[1,[[0,&quot;/templates/oxymor/st-home.webp&quot;],[0,&quot;/templates/oxymor/st-bento.webp&quot;],[0,&quot;/templates/oxymor/st-reviews.webp&quot;]]],&quot;shortDescription&quot;:[0,&quot;Polished landing page template for showcasing products, apps, or services.&quot;],&quot;purchaseLink&quot;:[0,&quot;https://tailus.lemonsqueezy.com/buy/11c51a87-67aa-4aac-a641-5112ec511362&quot;],&quot;previewLink&quot;:[0,&quot;https://oxymor-st.tailus.io/&quot;],&quot;price&quot;:[0,&quot;$39.99&quot;],&quot;stack&quot;:[1,[[0,&quot;html&quot;],[0,&quot;astro&quot;]]]}],&quot;slug&quot;:[0,&quot;oxymor-st&quot;]}"
                 ssr="" client="visible" opts="{&quot;name&quot;:&quot;TemplateGallery&quot;,&quot;value&quot;:true}"
@@ -284,29 +397,20 @@
                         class="border-r-none flex flex-col gap-6 divide-y py-2 md:w-[18rem] md:border-r md:pr-6 lg:gap-12 lg:py-12 lg:pr-12">
                         <div class="lg:pt-6">
                             <div class="flex items-end justify-between">
-                                <h1
+                                <h2
                                     class="block text-[--title-text-color] text-lg font-medium my-0 capitalize group-hover:text-primary-600 group-hover:text-primary-400">
-                                    Balanced Accountant</h1>
+                                    Balanced Accountant</h2>
                                 <!-- <p class="text-[--body-text-color] text-sm font-normal my-0">$39.99</p> -->
                             </div>
                             <div class="mt-6"></div>
-                            <p class="text-[--body-text-color] text-sm font-normal nb my-0">Polished landing page
+                            <p class="text-[--body-text-color] text-sm font-normal nb my-0 text-gray-300">Polished
+                                landing page
                                 template for showcasing products, apps, or services.</p>
                             <div class="my-6 flex gap-1">
-                                <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"><svg
-                                        class="size-5 transition duration-200 h-4 w-4 -mb-0.5"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                                        <path fill="#e44d26"
-                                            d="M19.037 113.876L9.032 1.661h109.936l-10.016 112.198l-45.019 12.48z">
-                                        </path>
-                                        <path fill="#f16529" d="m64 116.8l36.378-10.086l8.559-95.878H64z"></path>
-                                        <path fill="#ebebeb"
-                                            d="M64 52.455H45.788L44.53 38.361H64V24.599H29.489l.33 3.692l3.382 37.927H64zm0 35.743l-.061.017l-15.327-4.14l-.979-10.975H33.816l1.928 21.609l28.193 7.826l.063-.017z">
-                                        </path>
-                                        <path fill="#fff"
-                                            d="M63.952 52.455v13.763h16.947l-1.597 17.849l-15.35 4.143v14.319l28.215-7.82l.207-2.325l3.234-36.233l.335-3.696h-3.708zm0-27.856v13.762h33.244l.276-3.092l.628-6.978l.329-3.692z">
-                                        </path>
-                                    </svg></div>
+                                <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"
+                                    title="HTML5">
+                                    <img src="{{ url_for('static', filename='images/icons/html-5-2.png') }}">
+                                </div>
                                 <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"><svg
                                         class="relative size-[1.125rem] !text-gray-950 !text-white h-4 w-4 -mb-0.5"
                                         aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="85" height="107"
@@ -375,11 +479,10 @@
                                         </g>
                                     </svg>
                                 </div>
-
                             </div>
                             <div class="mt-6 grid grid-cols-1 gap-3">
                                 <a href="https://balancedaccountant.com/" target="_blank"
-                                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-blue-600 hover:text-accentpurple">
+                                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
                                     <span class="mx-1">View Live Site</span>
                                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -390,102 +493,35 @@
                                 </a>
                             </div>
                         </div>
-                        <!-- <div class="hidden md:grid md:grid-cols-3 md:gap-3 md:pt-6 lg:pt-12"><button
-                                aria-label="oxymor-st screenshot" data-state="active"
-                                class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                    class="size-full" src="#" alt="oxymor-st screenshot 0"
-                                    loading="lazy" width="560" height="560" /></button><button
-                                aria-label="oxymor-st screenshot" data-state="false"
-                                class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                    class="size-full" src="#" alt="oxymor-st screenshot 1"
-                                    loading="lazy" width="560" height="560" /></button><button
-                                aria-label="oxymor-st screenshot" data-state="false"
-                                class="bg-ui rounded-btn aspect-auto overflow-hidden border outline-2 outline-offset-2 outline-primary-600 transition-transform duration-200 active:scale-95 data-[state=active]:outline"><img
-                                    class="size-full" src="#"
-                                    alt="oxymor-st screenshot 2" loading="lazy" width="560" height="560" /></button>
-                        </div> -->
-                    </div><a href="#"
-                        class="relative border-white md:border-l md:pl-6 lg:pl-12 border-transparent">
+                    </div>
+                    <div class="relative border-white md:border-l border-transparent">
                         <div class="mockup">
                             <img src="{{ url_for('static', filename='images/portfolio-images/macbook-white.png') }}">
-                            <div class="artwork">
+
+                            <div class="artwork relative overflow-hidden">
                                 <img
-                                    src="{{ url_for('static', filename='images/portfolio-images/woven-dignity-home-page-mockup.png') }}">
+                                    src="{{ url_for('static', filename='images/portfolio-images/balanced-accountant-home-page-mockup.png') }}">
+
+                                <!-- Overlay moved inside artwork -->
+                                <div
+                                    class="scroll-overlay absolute inset-0 bg-black/50 flex items-end justify-center opacity-0 transition-opacity duration-500 pointer-events-none z-10">
+                                    <!-- Desktop mouse scroll animation -->
+                                    <div class="hidden md:block mb-6">
+                                        <div class="mouse-icon"></div>
+                                    </div>
+                                    <!-- Mobile swipe animation -->
+                                    <div class="block md:hidden mb-6">
+                                        <div class="swipe-icon"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                </div><!--astro:end-->
+                    </div>
+                </div>
+            </astro-island><!--astro:end-->
         </div>
     </div>
 </section>
-<!-- <section class="border-y py-20 bg-gray-950">
-    <div class="mx-auto max-w-5xl px-6 lg:px-4">
-        <h2 class="block text-[--title-text-color] text-xl font-medium">Free templates</h2>
-        <div class="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:gap-6">
-            <div> <a href="#" class="rounded-card" aria-label="Go to atom template page"> <img
-                        class="bg-ui tls-shadow rounded-card object-cover object-top shadow-gray-950/[0.03] [--ui-shadow-border:var(--ui-border-color)] md:max-h-64 lg:max-h-96"
-                        src="#" alt="tailus atom template screenshot" width="3200"
-                        height="2400"> </a>
-                <div class="flex flex-col justify-between px-1 py-2">
-                    <div>
-                        <div class="flex items-end justify-between">
-                            <h3
-                                class="block text-[--title-text-color] font-medium my-0 text-sm group-hover:text-primary-600 group-hover:text-primary-400 capitalize">
-                                atom</h3>
-                            <p class="text-[--body-text-color] text-sm font-normal my-0">astro</p>
-                        </div>
-                        <div class="hidden grid-cols-2 gap-4"> <a
-                                href="#"
-                                class="btn sz-sm variant-primary"> <span class="btn-label">Purchase</span> </a> <a
-                                href="#" class="btn sz-sm variant-outlined"> <span>Live
-                                    Preview</span> </a> </div>
-                    </div>
-                </div>
-            </div>
-            <div> <a href="#" class="rounded-card" aria-label="Go to ada template page"> <img
-                        class="bg-ui tls-shadow rounded-card object-cover object-top shadow-gray-950/[0.03] [--ui-shadow-border:var(--ui-border-color)] md:max-h-64 lg:max-h-96"
-                        src="/templates/ada/home.webp" alt="tailus ada template screenshot" width="3200" height="2400">
-                </a>
-                <div class="flex flex-col justify-between px-1 py-2">
-                    <div>
-                        <div class="flex items-end justify-between">
-                            <h3
-                                class="block text-[--title-text-color] font-medium my-0 text-sm group-hover:text-primary-600 group-hover:text-primary-400 capitalize">
-                                ada</h3>
-                            <p class="text-[--body-text-color] text-sm font-normal my-0">html</p>
-                        </div>
-                        <div class="hidden grid-cols-2 gap-4"> <a
-                                href="#"
-                                class="btn sz-sm variant-primary"> <span class="btn-label">Purchase</span> </a> <a
-                                href="#" class="btn sz-sm variant-outlined"> <span>Live
-                                    Preview</span> </a> </div>
-                    </div>
-                </div>
-            </div>
-            <div> <a href="#" class="rounded-card"
-                    aria-label="Go to astrolus-free template page"> <img
-                        class="bg-ui tls-shadow rounded-card object-cover object-top shadow-gray-950/[0.03] [--ui-shadow-border:var(--ui-border-color)] md:max-h-64 lg:max-h-96"
-                        src="#" alt="tailus astrolus-free template screenshot"
-                        width="3200" height="2400"> </a>
-                <div class="flex flex-col justify-between px-1 py-2">
-                    <div>
-                        <div class="flex items-end justify-between">
-                            <h3
-                                class="block text-[--title-text-color] font-medium my-0 text-sm group-hover:text-primary-600 group-hover:text-primary-400 capitalize">
-                                astrolus-free</h3>
-                            <p class="text-[--body-text-color] text-sm font-normal my-0">html</p>
-                        </div>
-                        <div class="hidden grid-cols-2 gap-4"> <a
-                                href="#"
-                                class="btn sz-sm variant-primary"> <span class="btn-label">Purchase</span> </a> <a
-                                href="#">
-                                <span>Live Preview</span> </a> </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
 <script>
     function setCustomization(document) {
         const theme = localStorage.getItem('theme') || 'dark'
@@ -505,4 +541,33 @@
         setCustomization(event.newDocument)
     })
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const artworks = document.querySelectorAll('.artwork');
+
+        artworks.forEach(artwork => {
+            const overlay = artwork.querySelector('#scroll-overlay');
+            let timer = null;
+            let shown = false;
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !shown) {
+                        timer = setTimeout(() => {
+                            overlay.classList.add('opacity-100');
+                            shown = true;
+                            setTimeout(() => overlay.classList.remove('opacity-100'), 4000);
+                        }, 1000);
+                    } else {
+                        clearTimeout(timer);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            observer.observe(artwork);
+        });
+    });
+
+</script>
+
 {% endblock %}

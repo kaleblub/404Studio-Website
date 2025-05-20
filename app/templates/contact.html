@@ -37,7 +37,6 @@
             top: -22%;
         }
     }
-    }
 
     .section-heading {
         position: relative;
@@ -51,7 +50,7 @@
         <div>
             <!-- <span class="title left-[50%] lg:left-[3%] top-[0.5rem]">CONTACT US</span> -->
             <h1
-                class="section-heading font-montserrat text-[56px] md:text-[65px] lg:text-[72px] xl:text-[85px] font-bold leading-tight relative md:top-0">
+                class="section-heading font-montserrat text-[40px] lg:text-[58px] font-semibold leading-tight">
                 Chat to our friendly team</h1>
             <!-- <h1 class="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl text-white">Chat to our friendly team</h1> -->
 
@@ -141,6 +140,7 @@
                 <form action="{{ url_for('main.contact') }}" method="POST">
                     <div class="md:items-center hidden">
                         <div class="flex-1 px-2 mt-4">
+                            <input type="hidden" name="form_loaded_at" value="{{ form_loaded_at }}">
                             <label class="block mb-2 text-sm text-gray-200">Company Code</label>
                             <input name="company_code" type="text" placeholder="Company name" tabindex="-1" autocomplete="off"
                                 class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 border border-gray-200 rounded-lg placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />

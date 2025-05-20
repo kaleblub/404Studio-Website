@@ -1,9 +1,54 @@
 {% extends 'base.html' %}
 
+{% block extra_head %}
+
+<style>
+    .section-heading::before {
+        content: "SERVICES";
+        background: linear-gradient(180deg,
+                rgba(239, 176, 113, 1) 0%,
+                rgba(74, 108, 247, 0) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        opacity: 0.2;
+        position: absolute;
+        /* adjust as needed to hover above */
+        left: -5%;
+        top: -5%;
+        font-size: 40px;
+        line-height: 1 !important;
+        font-weight: 700;
+        font-family: 'Inter', sans-serif;
+    }
+
+    /* Responsive font sizes */
+    @media (min-width: 540px) {
+        .section-heading::before {
+            font-size: 60px;
+            left: -3%;
+            top: -15%;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .section-heading::before {
+            font-size: 95px;
+            left: -3%;
+            top: -22%;
+        }
+    }
+
+    .section-heading {
+        position: relative;
+    }
+</style>
+{% endblock extra_head %}
 {% block content %}
 <section class="bg-white dark:bg-[#0a0c19] min-h-screen py-20 px-6">
   <div class="container mx-auto max-w-screen-xl">
-    <h1 class="font-montserrat text-[30px] lg:text-[58px] font-semibold text-center text-white mb-10">
+    <h1 class="section-heading font-montserrat text-[40px] lg:text-[58px] font-semibold text-center text-white mb-10">
       Services Built for Impact
     </h1>
     <p class="text-gray-400 text-center max-w-2xl mx-auto text-sm mb-16">
@@ -23,13 +68,17 @@
           <li>Backend-ready with Flask routes & forms</li>
         </ul>
       </div>
-      <img src="{{ url_for('static', filename='images/services/web-dev.jpg') }}" alt="Web Development" class="rounded-lg shadow-lg w-full">
-    </div>
+      <div class="w-full relative corner-frame corner-frame-tl corner-frame-br corner-frame-white">
+        <img src="{{ url_for('static', filename='images/web-development-service-image.jpg') }}" alt="Web Development" class="rounded-lg shadow-lg w-full">
+      </div>
+      </div>
 
     <!-- Service: Hosting -->
     <div id="hosting" class="grid lg:grid-cols-2 gap-12 mb-24 items-center flex-col-reverse lg:flex-row">
-      <img src="{{ url_for('static', filename='images/services/hosting.jpg') }}" alt="Hosting" class="rounded-lg shadow-lg w-full order-2 lg:order-1">
-      <div class="text-white order-1 lg:order-2">
+      <div class="w-full relative corner-frame corner-frame-tr corner-frame-bl corner-frame-white">
+        <img src="{{ url_for('static', filename='images/hosting-service-image.jpg') }}" alt="Hosting" class="rounded-lg shadow-lg w-full order-2 lg:order-1">
+      </div>
+        <div class="text-white order-1 lg:order-2">
         <h2 class="text-3xl font-bold text-primaryorange mb-2">Managed Hosting</h2>
         <p class="text-gray-400 text-sm mb-4">
           Reliable hosting with security, backups, and uptime you don’t have to think about. Includes monitoring, updates, and monthly performance reviews.
@@ -55,12 +104,16 @@
           <li>Mobile-first design with feedback loops</li>
         </ul>
       </div>
-      <img src="{{ url_for('static', filename='images/services/design.jpg') }}" alt="Design" class="rounded-lg shadow-lg w-full">
-    </div>
+      <div class="w-full relative corner-frame corner-frame-tl corner-frame-br corner-frame-white">
+        <img src="{{ url_for('static', filename='images/web-design-service-image.jpg') }}" alt="Design" class="rounded-lg shadow-lg w-full">
+      </div>
+      </div>
 
     <!-- Service: Automation & Integrations -->
     <div id="automation" class="grid lg:grid-cols-2 gap-12 mb-24 items-center flex-col-reverse lg:flex-row">
-      <img src="{{ url_for('static', filename='images/services/integrations.jpg') }}" alt="Automations" class="rounded-lg shadow-lg w-full order-2 lg:order-1">
+      <div class="w-full relative corner-frame corner-frame-tr corner-frame-bl corner-frame-white">
+        <img src="{{ url_for('static', filename='images/automations-service-image.jpg') }}" alt="Automations" class="rounded-lg shadow-lg w-full order-2 lg:order-1">
+      </div>
       <div class="text-white order-1 lg:order-2">
         <h2 class="text-3xl font-bold text-primaryorange mb-2">Automations & Integrations</h2>
         <p class="text-gray-400 text-sm mb-4">
@@ -87,7 +140,9 @@
           <li>Migration support (Squarespace, WordPress → Flask)</li>
         </ul>
       </div>
-      <img src="{{ url_for('static', filename='images/services/troubleshooting.jpg') }}" alt="Fixes" class="rounded-lg shadow-lg w-full">
+      <div class="w-full relative corner-frame corner-frame-tl corner-frame-br corner-frame-white">
+        <img src="{{ url_for('static', filename='images/bug-fixes-service-image.jpg') }}" alt="Fixes" class="rounded-lg shadow-lg w-full">
+      </div>
     </div>
   </div>
 </section>
