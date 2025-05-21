@@ -569,9 +569,6 @@
   .mt-auto {
     margin-top: auto;
   }
-  .mr-2 {
-    margin-right: calc(var(--spacing) * 2);
-  }
   .-mb-0\.5 {
     margin-bottom: calc(var(--spacing) * -0.5);
   }
@@ -2563,11 +2560,6 @@
     -webkit-font-smoothing: auto;
     -moz-osx-font-smoothing: auto;
   }
-  .placeholder-gray-400 {
-    &::placeholder {
-      color: var(--color-gray-400);
-    }
-  }
   .placeholder-gray-600 {
     &::placeholder {
       color: var(--color-gray-600);
@@ -3010,13 +3002,6 @@
       color: var(--color-white);
     }
   }
-  .hover\:bg-accentpurple {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-accentpurple);
-      }
-    }
-  }
   .hover\:bg-gray-100 {
     &:hover {
       @media (hover: hover) {
@@ -3221,11 +3206,6 @@
       height: calc(5/6 * 100%);
     }
   }
-  .md\:h-56 {
-    @media (width >= 48rem) {
-      height: calc(var(--spacing) * 56);
-    }
-  }
   .md\:h-\[90px\] {
     @media (width >= 48rem) {
       height: 90px;
@@ -3254,6 +3234,11 @@
   .md\:w-3\/6 {
     @media (width >= 48rem) {
       width: calc(3/6 * 100%);
+    }
+  }
+  .md\:w-4\/6 {
+    @media (width >= 48rem) {
+      width: calc(4/6 * 100%);
     }
   }
   .md\:w-\[18rem\] {

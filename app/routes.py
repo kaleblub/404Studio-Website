@@ -1,12 +1,12 @@
-from flask import Blueprint, render_template, request, redirect, flash, url_for
+from flask import Blueprint, render_template, request, redirect, flash, url_for, make_response
+from .utils import get_country_from_ip, get_user_lang
+from .forms import ContactForm
+import os
 import smtplib
 from email.message import EmailMessage
-import time
 from dotenv import load_dotenv
-import os
 
-from .forms import ContactForm
-
+main = Blueprint('main', __name__)
 
 load_dotenv()
 
@@ -29,9 +29,6 @@ def send_email(subject, body):
     except Exception as e:
         print("SMTP error:", e)
         return False
-
-
-main = Blueprint('main', __name__)
 
 reviews = [
     {
@@ -66,8 +63,42 @@ reviews = [
     }    
 ]
 
-@main.route('/', methods=['GET', 'POST'])
-def home():
+@main.route('/set-lang/<lang_code>')
+def set_language(lang_code):
+    if lang_code not in ['en', 'es']:
+        lang_code = 'en'
+    resp = make_response(redirect(url_for('main.home', lang=lang_code)))
+    resp.set_cookie('lang', lang_code, max_age=60*60*24*30, path='/')
+    return resp
+
+
+@main.route('/')
+def root_redirect():
+    lang = request.cookies.get('lang')
+    if lang not in ['en', 'es']:
+        lang = get_user_lang()
+        response = make_response(redirect(url_for('main.home', lang=lang)))
+        response.set_cookie('lang', lang, max_age=60*60*24*30, path='/')
+        return response
+    else:
+        # If cookie is valid, just redirect without setting cookie again
+        return redirect(url_for('main.home', lang=lang))
+
+
+@main.route('/<lang>/', methods=['GET', 'POST'])
+def home(lang):
+    if lang not in ['en', 'es']:
+        # Fallback: redirect to default language URL
+        return redirect(url_for('main.home', lang='en'))
+
+    cookie_lang = request.cookies.get('lang')
+    if cookie_lang != lang:
+        # Cookie doesn't match URL, so set cookie and redirect once
+        response = make_response(redirect(url_for('main.home', lang=lang)))
+        response.set_cookie('lang', lang, max_age=60*60*24*30, path='/')
+        return response
+
+    # Now the cookie and URL lang are in sync — proceed with form etc.
     form = ContactForm()
     if form.validate_on_submit():
         subject = f"New message from {form.first_name.data} {form.last_name.data}"
@@ -86,69 +117,34 @@ def home():
         else:
             flash('Error sending message. Please try again later.', 'danger')
 
-        return redirect(url_for('main.home'))
+        return redirect(url_for('main.home', lang=lang))
 
     return render_template('home.html', reviews=reviews, form=form)
 
 
-@main.route('/links')
-def links_page():
+@main.route('/<lang>/links')
+def links_page(lang):
+    if lang not in ['en', 'es']:
+        return redirect(url_for('main.links', lang='en'))
     return render_template('links-page.html')
 
-@main.route('/about')
-def about():
+@main.route('/<lang>/about')
+def about(lang):
+    if lang not in ['en', 'es']:
+        return redirect(url_for('main.about', lang='en'))
     return render_template('about.html', reviews=reviews)
 
-all_services = {
-    'accounting': {
-        'image': 'static/images/services-accounting-image.jpg',  # Replace with actual image paths
-        'title': 'Accounting & Financial Statements',
-        'content': [
-            ('<svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>', 'We help you create financial statements and reports tailored to your business. Tracking financial trends monthly helps you make informed decisions for the future.'),
-            ('<svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>', 'We guide you in analyzing assets and liabilities to improve financial health and optimize business operations.'),
-            ('<svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.293a1 1 0 01.707.293l.707.707a1 1 0 001.414 0l.707-.707A1 1 0 0111.707 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path></svg>','We help develop and monitor budgets to keep expenses low and maximize profitability.'),
-            ('<svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>','From data collection to tax reporting, we streamline the process, making tax season stress-free and efficient.')
-            ],
-    },
-    'payroll': {
-        'image': 'static/images/services-payroll-image.jpg',  # Replace with actual image paths
-        'title': 'Payroll Management',
-        'content': [
-            ('<svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>', 'We help you set up payroll systems and manage employee work hours efficiently.'),
-            ('<svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>', 'We assist in choosing and configuring the best payroll software for your business needs.'),
-            ('<svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.293a1 1 0 01.707.293l.707.707a1 1 0 001.414 0l.707-.707A1 1 0 0111.707 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path></svg>','We create paychecks, set up direct deposits, and ensure employees are paid on time.'),
-            ('<svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>','We file payroll tax forms and handle tax payments to keep your business compliant.')
-            ],
-    },
-    'software': {
-        'image': 'static/images/services-software-training-image.jpg',  # Replace with actual image
-        'title': 'Software Training & Setup',
-        'content': [
-            ('<svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>', 'We provide hands-on training so you can confidently manage your financial records. Want to manage your own books?'),
-            ('<svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.128m-1.457 1.281a2.25 2.25 0 02.25-2.25A2.25 2.25 0 0110.743 16.05c.463-.885.723-1.976.723-3.128zm-11.48 2.1c.36-.566.781-1.033 1.258-1.39l4.808-3.202a1.25 1.25 0 011.562 2.08l-4.807 3.202c-.477.318-.898.776-1.258 1.39z"></path></svg>', 'Learn Accounting Terminology. Understand financial concepts in simple terms.'),
-            ('<svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.128m-1.457 1.281a2.25 2.25 0 02.25-2.25A2.25 2.25 0 0110.743 16.05c.463-.885.723-1.976.723-3.128zm-11.48 2.1c.36-.566.781-1.033 1.258-1.39l4.808-3.202a1.25 1.25 0 011.562 2.08l-4.807 3.202c-.477.318-.898.776-1.258 1.39z"></path></svg>', 'Compare Software Options. We help you choose the best accounting software for your needs.'),
-            ('<svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.128m-1.457 1.281a2.25 2.25 0 02.25-2.25A2.25 2.25 0 0110.743 16.05c.463-.885.723-1.976.723-3.128zm-11.48 2.1c.36-.566.781-1.033 1.258-1.39l4.808-3.202a1.25 1.25 0 011.562 2.08l-4.807 3.202c-.477.318-.898.776-1.258 1.39z"></path></svg>', 'Certified Quickbooks & Xero Experts. As ProAdvisors, we provide in-depth training tailored to your business.')
-        ],
-    },
-    'bookkeeping': {
-        'image': 'static/images/services-bookkeeping-image.jpg',  # Replace with actual image
-        'title': 'Bookkeeping & Record Keeping',
-        'content': [
-            ('<svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>', 'One-Time Assistance. Software Training - We train you on Quickbooks, Xero, and other software so you can manage finances confidently. Record Review - Need help correcting transactions? We review your records and ensure accuracy. General Ledger Cleanup - Get your books in order for better financial tracking. Software Setup - We configure your accounting software for easy and efficient use.'),
-            ('<svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.128m-1.457 1.281a2.25 2.25 0 02.25-2.25A2.25 2.25 0 0110.743 16.05c.463-.885.723-1.976.723-3.128zm-11.48 2.1c.36-.566.781-1.033 1.258-1.39l4.808-3.202a1.25 1.25 0 011.562 2.08l-4.807 3.202c-.477.318-.898.776-1.258 1.39z"></path></svg>', 'Daily Assistance. Transaction Data Entry - We record all checks, deposits, and credit card transactions. Accounts Receivable - We manage invoicing, payments, and deposits. Accounts Payable - We track and process your business expenses.'),
-            ('<svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.128m-1.457 1.281a2.25 2.25 0 02.25-2.25A2.25 0 0110.743 16.05c.463-.885.723-1.976.723-3.128zm-11.48 2.1c.36-.566.781-1.033 1.258-1.39l4.808-3.202a1.25 1.25 0 011.562 2.08l-4.807 3.202c-.477.318-.898.776-1.258 1.39z"></path></svg>', 'Monthly Assistance. Record Review & Reconciliation - We review your general ledger, reconcile accounts, and generate management reports.'),
-            ('<svg class="w-8 h-8 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.128m-1.457 1.281a2.25 2.25 0 02.25-2.25A2.25 0 0110.743 16.05c.463-.885.723-1.976.723-3.128zm-11.48 2.1c.36-.566.781-1.033 1.258-1.39l4.808-3.202a1.25 1.25 0 011.562 2.08l-4.807 3.202c-.477.318-.898.776-1.258 1.39z"></path></svg>', 'Yearly Assistance. Catch-Up Bookkeeping - Need help preparing records for tax filing? We\'ll get everything in order. Financial Review - Before handing records to your CPA, we ensure everything is in check.')
-        ],
-    },
-}
+@main.route('/<lang>/services')
+def services(lang):
+    if lang not in ['en', 'es']:
+        return redirect(url_for('main.services', lang='en'))
+    return render_template('services.html')
 
-@main.route('/services')
-def services():
-    selected_tab = request.args.get('tab', 'accounting')
-    return render_template('services.html', all_services=all_services, selected_tab=selected_tab)
-
-@main.route('/contact', methods=['GET', 'POST'])
-def contact():
+@main.route('/<lang>/contact', methods=['GET', 'POST'])
+def contact(lang):
+    if lang not in ['en', 'es']:
+        return redirect(url_for('main.contact', lang='en'))
+    
     form = ContactForm()
     if form.validate_on_submit():
         subject = f"New message from {form.first_name.data} {form.last_name.data}"
@@ -167,31 +163,18 @@ def contact():
         else:
             flash('Error sending message. Please try again later.', 'danger')
 
-        return redirect(url_for('main.contact'))
+        return redirect(url_for('main.contact', lang=lang))
 
     return render_template('contact.html', form=form)
 
-@main.route('/pricing')
-def pricing():
+@main.route('/<lang>/pricing')
+def pricing(lang):
+    if lang not in ['en', 'es']:
+        return redirect(url_for('main.pricing', lang='en'))
     return render_template('pricing.html')
 
-@main.route('/blog')
-def blog():
-    return render_template('blog.html')
-
-@main.route('/portfolio')
-def portfolio():
+@main.route('/<lang>/portfolio')
+def portfolio(lang):
+    if lang not in ['en', 'es']:
+        return redirect(url_for('main.portfolio', lang='en'))
     return render_template('portfolio.html')
-
-
-
-
-# Pricing Calculation Logic
-# def calculate_price(data):
-#     return {"package": "Custom Quote", "price": round(estimated_savings, 2)}
-
-# @main.route('/calculate', methods=['POST'])
-# def calculate():
-#     data = request.json
-#     result = calculate_price(data)
-#     return jsonify(result)
