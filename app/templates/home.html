@@ -1042,41 +1042,35 @@
                     {% endif %}
                     {% endwith %}
 
-                    <form action="{{ url_for('main.home') }}" method="POST">
-                        <div class="md:items-center hidden">
-                        <div class="flex-1 px-2 mt-4">
-                            <input type="hidden" name="form_loaded_at" value="{{ form_loaded_at }}">
+                    <form method="POST" action="{{ url_for('main.home') }}">
+                        {{ form.hidden_tag() }}
+
+                        <div class="hidden">
                             <label class="block mb-2 text-sm text-gray-200">Company Code</label>
-                            <input name="company_code" type="text" placeholder="Company name" tabindex="-1" autocomplete="off"
-                                class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
-                        </div>
+                            {{ form.company_code(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 focus:ring focus:border-accentpurple") }}
                         </div>
 
                         <div class="-mx-2 md:items-center md:flex">
                             <div class="flex-1 px-2 mt-4">
-                                <label class="block mb-2 text-sm text-gray-200">First Name</label>
-                                <input name="first_name" type="text" placeholder="John"
-                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 border border-gray-200 rounded-lg placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            <label class="block mb-2 text-sm text-gray-200">First Name</label>
+                            {{ form.first_name(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
                             </div>
 
                             <div class="flex-1 px-2 mt-4">
-                                <label class="block mb-2 text-sm text-gray-200">Last Name</label>
-                                <input name="last_name" type="text" placeholder="Doe"
-                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 border border-gray-200 rounded-lg placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            <label class="block mb-2 text-sm text-gray-200">Last Name</label>
+                            {{ form.last_name(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
                             </div>
                         </div>
 
                         <div class="-mx-2 md:items-center md:flex">
                             <div class="flex-1 px-2 mt-4">
                                 <label class="block mb-2 text-sm text-gray-200">Email address</label>
-                                <input name="email" type="email" placeholder="johndoe@example.com"
-                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 border border-gray-200 rounded-lg placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                                {{ form.email(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
                             </div>
 
                             <div class="flex-1 px-2 mt-4">
                                 <label class="block mb-2 text-sm text-gray-200">Company Name</label>
-                                <input name="company" type="text" placeholder="Acme Inc."
-                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 border border-gray-200 rounded-lg placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                                {{ form.company(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
                             </div>
                         </div>
 
@@ -1084,42 +1078,29 @@
                             <div class="flex-1 px-2 mt-4">
                                 <label class="block mb-2 text-sm text-gray-200">Business Type /
                                     Area</label>
-                                <input name="business_type" type="text"
-                                    placeholder="e.g. Accounting, Retail, Real Estate..."
-                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 border border-gray-200 rounded-lg placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                                {{ form.business_type(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
+
                             </div>
 
                             <div class="flex-1 px-2 mt-4">
                                 <label class="block mb-2 text-sm text-gray-200">Service Interested
                                     In</label>
-                                <select name="service"
-                                    class="block w-full px-5 py-2.5 mt-2 text-gray-700 border border-gray-200 rounded-lg bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40">
-                                    <option disabled selected>Select a service</option>
-                                    <option class="hover:bg-accentpurple">Website Design</option>
-                                    <option>Website Development</option>
-                                    <option>Website Hosting</option>
-                                    <option>Website Migration</option>
-                                    <option>Website Maintenance</option>
-                                    <option>Other</option>
-                                </select>
+                                {{ form.service(class="block w-full px-5 py-2.5 mt-2 text-gray-700 border border-gray-200 rounded-lg bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40")}}
                             </div>
                         </div>
 
                         <div class="mt-4">
                             <label class="block mb-2 text-sm text-gray-200">Subject</label>
-                            <input name="subject" type="text" placeholder="e.g. Website Redesign Inquiry"
-                                class="block w-full px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 border border-gray-200 rounded-lg placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            {{ form.subject(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
                         </div>
 
                         <div class="w-full mt-4">
                             <label class="block mb-2 text-sm text-gray-200">Message</label>
-                            <textarea name="message"
-                                class="block w-full h-32 px-5 py-2.5 mt-2 text-gray-700 placeholder-gray-400 border border-gray-200 rounded-lg md:h-56 placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
-                                placeholder="Message"></textarea>
+                            {{ form.message(class="block w-full h-32 px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
                         </div>
 
                         <button
-                            class="quidel-button quidel-full">
+                            class="quidel-button quidel-full" type="submit">
                             Send message
                         </button>
                     </form>
