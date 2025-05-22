@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:css": "npx tailwindcss -i ./app/static/css/styles.css -o ./app/static/css/tailwind-styles.css"
+    "build:css": "npx tailwindcss -i ./app/static/css/styles.css -o ./app/static/css/tailwind-styles.css",
+    "build:translations": "pybabel compile -d translations",
+    "build": "npm run build:css && npm run build:translations"
   },
   "keywords": [],
   "author": "",

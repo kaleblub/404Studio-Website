@@ -7,5 +7,6 @@
     ],
     "routes": [
         { "src": "/(.*)", "dest": "index.py" }
-    ]
+    ],
+    "buildCommand": "npm run build"
 }
