@@ -1,0 +1,3542 @@
+# Spanish translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-05-21 22:53-0500\n"
+"PO-Revision-Date: 2025-05-21 01:41-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/templates/about.html:7
+msgid "WHO WE ARE"
+msgstr "QUIÉNES SOMOS"
+
+#: app/templates/about.html:61
+msgid "More Than a Studio — A Digital Ally"
+msgstr "Más que un estudio: Un Aliado Digital"
+
+#: app/templates/about.html:64
+msgid ""
+"At 404 Studio, we don’t just build websites — we build digital "
+"experiences. Born from a passion for design, development, and meaningful "
+"technology, we exist to simplify the complicated and illuminate the "
+"digital path forward for individuals and small businesses."
+msgstr ""
+"En 404 Studio, no solo creamos sitios web, sino que creamos experiencias digitales. Nacidos de la pasión por el diseño, el desarrollo y la tecnología significativa, existimos para simplificar lo complicado e iluminar el camino digital para individuos y pequeñas empresas."
+
+#: app/templates/about.html:75
+msgid "Built for Visionaries"
+msgstr "Creado para Visionarios"
+
+#: app/templates/about.html:76
+msgid ""
+"We love working with people who dare to imagine differently — whether "
+"you're a founder, artist, or side-hustler."
+msgstr ""
+"Nos encanta trabajar con personas que se atreven a imaginar de forma diferente"
+", ya seas fundador, artista o emprendedor."
+
+#: app/templates/about.html:86
+msgid "Transparent & Collaborative"
+msgstr "Transparente y Colaborativo"
+
+#: app/templates/about.html:87
+msgid ""
+"You’ll always know where we’re at in the process, and you’ll be invited "
+"to shape the outcome."
+msgstr ""
+"Siempre sabrás en qué punto del proceso nos encontramos y te invitaremos "
+"a contribuir al resultado."
+
+#: app/templates/about.html:94
+msgid "Let’s Connect"
+msgstr "Conectemos"
+
+#: app/templates/about.html:105
+msgid "Our Core Values"
+msgstr "Nuestros valores fundamentales"
+
+#: app/templates/about.html:112
+msgid "Clarity Over Complexity"
+msgstr "Claridad Sobre Complejidad"
+
+#: app/templates/about.html:114
+msgid ""
+"We don’t build for confusion. We build clean, intuitive experiences with "
+"structure and intention."
+msgstr ""
+"No creamos para la confusión. Creamos experiencias claras e intuitivas con estructura e intención."
+
+#: app/templates/about.html:121
+msgid "Function Meets Design"
+msgstr "Función y Diseño"
+
+#: app/templates/about.html:123
+msgid ""
+"Design isn't decoration—it's part of the build. We believe form and "
+"function should elevate each other."
+msgstr ""
+"El diseño no es decoración, es parte de la construcción. Creemos que la forma y la función deben complementarse mutuamente."
+
+#: app/templates/about.html:130
+msgid "People First"
+msgstr "Las Personas Primero"
+
+#: app/templates/about.html:132
+msgid ""
+"Clients are collaborators, not just customers. Your goals, your voice, "
+"your wins matter most."
+msgstr ""
+"Los clientes son colaboradores, no solo consumidores. Tus objetivos, tu voz, tus logros son lo más importante."
+
+#: app/templates/about.html:143
+msgid "Technologies We Use"
+msgstr "Tecnologías Que Usamos"
+
+#: app/templates/about.html:146
+msgid ""
+"We use powerful, reliable tools to create web solutions that are "
+"flexible, scalable, and fast."
+msgstr ""
+"Utilizamos herramientas potentes y confiables para crear soluciones web flexibles, escalables y rápidas."
+
+#: app/templates/about.html:178
+msgid "El Camino Recorrido"
+msgstr ""
+
+#: app/templates/about.html:182
+msgid "2020 — The Beginning"
+msgstr ""
+
+#: app/templates/about.html:183
+msgid ""
+"What began as freelance work for local businesses evolved into something "
+"bigger: a creative digital studio with a mission."
+msgstr ""
+
+#: app/templates/about.html:186
+msgid "2022 — 404 Studio LLC"
+msgstr ""
+
+#: app/templates/about.html:187
+msgid ""
+"Officially formed in Texas, we refined our services, expanded hosting "
+"options, and onboarded our first major clients."
+msgstr ""
+
+#: app/templates/about.html:190
+msgid "2024 — Going Global"
+msgstr ""
+
+#: app/templates/about.html:191
+msgid ""
+"With remote work as the norm, we now collaborate internationally — while "
+"staying laser-focused on small-biz success."
+msgstr ""
+
+#: app/templates/about.html:206
+msgid "Let’s Build Something Brilliant"
+msgstr "Construyamos Algo Brillante"
+
+#: app/templates/about.html:207
+msgid "Whether you’re ready now or just exploring, reach out and say hi."
+msgstr "Ya sea que estés listo ahora o simplemente estés explorando, contáctanos y dinos hola."
+
+#: app/templates/about.html:209
+#, fuzzy
+msgid "Contact Us"
+msgstr "Contáctenos"
+
+#: app/templates/base.html:78 app/templates/base.html:133
+#: app/templates/base.html:184
+msgid "Home"
+msgstr "Inicio"
+
+#: app/templates/base.html:79 app/templates/base.html:134
+msgid "About"
+msgstr "Acerca de"
+
+#: app/templates/base.html:84 app/templates/base.html:139
+msgid "Services"
+msgstr "Servicios"
+
+#: app/templates/base.html:96 app/templates/base.html:148
+#: app/templates/links-page.html:116
+msgid "Portfolio"
+msgstr "Portafolio"
+
+#: app/templates/base.html:98 app/templates/base.html:149
+#: app/templates/base.html:190
+msgid "Pricing"
+msgstr "Precios"
+
+#: app/templates/base.html:99 app/templates/base.html:150
+#: app/templates/base.html:193 app/templates/base.html:223
+msgid "Contact"
+msgstr "Contacto"
+
+#: app/templates/base.html:115
+msgid "Schedule Consultation"
+msgstr "Agendar consulta"
+
+#: app/templates/base.html:176
+#, fuzzy
+msgid ""
+"Helping businesses transform their digital presence \n"
+"Custom web solutions that drive real growth and lasting impact."
+msgstr ""
+"Ayudamos a las empresas a transformar su presencia digital. Soluciones web personalizadas que impulsan un crecimiento real y un impacto duradero."
+
+#: app/templates/base.html:181
+#, fuzzy
+msgid "Quick Links"
+msgstr "Enlaces"
+
+#: app/templates/base.html:187
+msgid "About Us"
+msgstr "Sobre nosotros"
+
+#: app/templates/base.html:199
+msgid "Latest Work"
+msgstr "Últimos trabajos"
+
+#: app/templates/base.html:214
+msgid "Resources"
+msgstr "Recursos"
+
+#: app/templates/base.html:217
+msgid "FAQs"
+msgstr "Preguntas frecuentes"
+
+#: app/templates/base.html:220
+msgid "Schedule Appointment"
+msgstr "Agendar cita"
+
+#: app/templates/base.html:229
+msgid "Ready to build?"
+msgstr "¿Listo para construir?"
+
+#: app/templates/base.html:232
+msgid ""
+"Let's start with a discovery call — We'll map your vision and bring your "
+"website to life!"
+msgstr ""
+"Comencemos con una llamada de descubrimiento: ¡asignaremos su visión y "
+"daremos vida a su sitio web!"
+
+#: app/templates/base.html:236
+msgid "Meet With Our Team"
+msgstr "Reúnete con nuestro equipo"
+
+#: app/templates/base.html:246
+msgid "2025, All rights reserved."
+msgstr "2025, Todos los derechos reservados."
+
+#: app/templates/base.html:248
+msgid "Icons created by "
+msgstr "Iconos creados por "
+
+#: app/templates/base.html:253
+msgid "from "
+msgstr "de "
+
+#: app/templates/contact.html:5
+#, fuzzy
+msgid "CONTACT US"
+msgstr "CONTÁCTENOS"
+
+#: app/templates/contact.html:54
+msgid "Chat to our friendly team"
+msgstr "Chatea con nuestro amable equipo"
+
+#: app/templates/contact.html:57
+msgid ""
+"We’d love to hear from you. Please fill out this form or shoot us an "
+"email or message."
+msgstr ""
+"Nos encantaría saber de usted. Complete este formulario o envíenos un correo electrónico o mensaje."
+
+#: app/templates/contact.html:71 app/templates/links-page.html:108
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: app/templates/contact.html:72 app/templates/contact.html:89
+msgid "Our friendly team is here to help."
+msgstr "Nuestro amable equipo está aquí para ayudar."
+
+#: app/templates/contact.html:88
+msgid "Live chat"
+msgstr "Chat en vivo"
+
+#: app/templates/contact.html:91
+#, fuzzy
+msgid "Schedule new chat"
+msgstr "Programar un nuevo chat"
+
+#: app/templates/contact.html:105
+msgid "Office"
+msgstr "Oficina"
+
+#: app/templates/contact.html:106
+msgid "Currently Located in "
+msgstr "Actualmente ubicado en "
+
+#: app/templates/contact.html:107
+msgid "Quito, Ecuador"
+msgstr "Quito, Ecuador"
+
+#: app/templates/contact.html:108
+msgid "If you are nearby, let's schedule an in-person meeting!"
+msgstr "Si estás cerca, ¡programemos una reunión en persona!"
+
+#: app/templates/contact.html:120
+msgid "Phone/Whatsapp"
+msgstr "Teléfono/Whatsapp"
+
+#: app/templates/contact.html:121
+msgid "Mon-Fri from 8am to 5pm."
+msgstr "Lunes a viernes de 8h a 17h."
+
+#: app/templates/contact.html:123
+msgid "Message Us On Whatsapp"
+msgstr "Envíanos un mensaje en WhatsApp"
+
+#: app/templates/contact.html:142
+msgid "Company Code"
+msgstr "Código de la empresa"
+
+#: app/templates/contact.html:148 app/templates/home.html:892
+msgid "First Name"
+msgstr "Nombre de pila"
+
+#: app/templates/contact.html:153 app/templates/home.html:897
+msgid "Last Name"
+msgstr "Apellido"
+
+#: app/templates/contact.html:160 app/templates/home.html:904
+msgid "Email address"
+msgstr "Dirección de correo electrónico"
+
+#: app/templates/contact.html:165 app/templates/home.html:909
+msgid "Company Name"
+msgstr "Nombre de Empresa"
+
+#: app/templates/contact.html:172 app/templates/home.html:916
+msgid "Business Type / Area"
+msgstr "Tipo de Negocio / Área"
+
+#: app/templates/contact.html:178
+#, fuzzy
+msgid "Service Interested In"
+msgstr "Servicio de interés"
+
+#: app/templates/contact.html:185 app/templates/home.html:928
+msgid "Subject"
+msgstr "Sujeto"
+
+#: app/templates/contact.html:190 app/templates/home.html:933
+msgid "Message"
+msgstr "Mensaje"
+
+#: app/templates/contact.html:196 app/templates/home.html:939
+msgid "Send message"
+msgstr "Enviar mensaje"
+
+#: app/templates/home.html:52 app/templates/services.html:7
+#, fuzzy
+msgid "SERVICES"
+msgstr "SERVICIOS"
+
+#: app/templates/home.html:89
+#, fuzzy
+msgid "ABOUT"
+msgstr "ACERCA DE"
+
+#: app/templates/home.html:126
+#, fuzzy
+msgid "REVIEWS"
+msgstr "RESEÑAS"
+
+#: app/templates/home.html:163 app/templates/pricing.html:7
+msgid "PRICING"
+msgstr "PRECIOS"
+
+#: app/templates/home.html:251
+msgid "Your Guide Through The"
+msgstr "Su guía a través de lo"
+
+#: app/templates/home.html:254
+msgid "Digital Unknown"
+msgstr "Desconocido Digital"
+
+#: app/templates/home.html:257
+msgid ""
+"Whether you're starting from scratch, stuck in the middle, or scaling "
+"something big—I'm here to build, guide, and solve. Design, development, "
+"automation, or something weird? Let’s make it real."
+msgstr ""
+"Ya sea que estés empezando desde cero, atascado en el proceso o escalando algo grande, estoy aquí para construir, guiar y resolver. ¿Diseño, desarrollo, automatización o algo inusual? Hagámoslo realidad."
+
+#: app/templates/home.html:260
+#, fuzzy
+msgid "Discuss Services"
+msgstr "Discutir Servicios"
+
+#: app/templates/home.html:265
+msgid "See Our Work"
+msgstr "Vea Nuestro Trabajo"
+
+#: app/templates/home.html:281
+msgid "Explore Our Areas of Expertise"
+msgstr "Explora Nuestras Áreas de Especialización"
+
+#: app/templates/home.html:284
+msgid ""
+"From building beautiful, functional websites to keeping them secure and "
+"running smoothly, we offer full-spectrum services to help your online "
+"presence thrive."
+msgstr ""
+"Desde la creación de sitios web atractivos y funcionales hasta su seguridad y correcto funcionamiento, ofrecemos servicios integrales para que su presencia en línea prospere."
+
+#: app/templates/home.html:298 app/templates/pricing.html:68
+msgid "Development"
+msgstr "Desarrollo"
+
+#: app/templates/home.html:301
+msgid ""
+"We build fast, modern, and scalable websites and web applications "
+"tailored to your brand, using the latest technologies to ensure "
+"performance and functionality."
+msgstr ""
+"Creamos sitios web y aplicaciones web rápidos, modernos y escalables, adaptados a su marca, utilizando las últimas tecnologías para garantizar rendimiento y funcionalidad."
+
+#: app/templates/home.html:306 app/templates/home.html:332
+#: app/templates/home.html:361 app/templates/home.html:391
+#: app/templates/home.html:419 app/templates/home.html:446
+#, fuzzy
+msgid "read more"
+msgstr "leer más"
+
+#: app/templates/home.html:324 app/templates/pricing.html:76
+msgid "Hosting"
+msgstr "Alojamiento"
+
+#: app/templates/home.html:327
+msgid ""
+"Enjoy reliable, secure, and fast website hosting solutions. We handle "
+"uptime, backups, and server management so you can focus on your business."
+msgstr ""
+"Disfrute de soluciones de alojamiento web confiables, seguras y rápidas. Nos encargamos del tiempo de actividad, las copias de seguridad y la administración del servidor para que usted pueda concentrarse en su negocio."
+
+#: app/templates/home.html:352
+msgid "Design"
+msgstr "Diseño"
+
+#: app/templates/home.html:356
+msgid ""
+"From wireframes to final visuals, our design process ensures your website"
+" not only looks stunning but also delivers an intuitive user experience "
+"that converts."
+msgstr ""
+"Desde los wireframes hasta las imágenes finales, nuestro proceso de diseño garantiza que su sitio web no solo tenga un aspecto impresionante, sino que también ofrezca una experiencia de usuario intuitiva que convierta."
+
+#: app/templates/home.html:383
+msgid "Management"
+msgstr "Gestión"
+
+#: app/templates/home.html:386
+msgid ""
+"We manage everything from content updates to performance monitoring, so "
+"your website stays fresh, functional, and aligned with your business "
+"goals."
+msgstr ""
+"Nos encargamos de todo, desde las actualizaciones de contenido hasta la supervisión del rendimiento, para que su sitio web se mantenga actualizado, funcional y alineado con los objetivos de su negocio."
+
+#: app/templates/home.html:411
+msgid "Troubleshooting"
+msgstr "Solución de Problemas"
+
+#: app/templates/home.html:414
+msgid ""
+"Got bugs or technical issues? We diagnose and resolve website errors, "
+"broken features, or performance slowdowns quickly and efficiently."
+msgstr ""
+"¿Tiene errores o problemas técnicos? Diagnosticamos y solucionamos errores del sitio web, funciones defectuosas o ralentizaciones del rendimiento de forma rápida y eficiente."
+
+#: app/templates/home.html:439
+#, fuzzy
+msgid "Other Services"
+msgstr "Otros servicios"
+
+#: app/templates/home.html:442
+msgid ""
+"Need something custom? From SEO and analytics setup to email "
+"configuration or third-party integrations—we’ve got you covered."
+msgstr ""
+"¿Necesitas algo personalizado? Desde la configuración de SEO y analítica hasta la configuración del correo electrónico o integraciones con terceros, lo tenemos cubierto."
+
+#: app/templates/home.html:482
+msgid "Your Partner in Web Development and Digital Solutions"
+msgstr "Su socio en desarrollo web y soluciones digitales"
+
+#: app/templates/home.html:486
+msgid ""
+"404 Studio LLC is a web development agency committed to delivering "
+"modern, user-centric websites that elevate your business. With years of "
+"experience in the industry, we are passionate about bringing your vision "
+"to life through cutting-edge design, development, and ongoing support."
+msgstr ""
+"404 Studio LLC es una agencia de desarrollo web comprometida con la creación de sitios web modernos y centrados en el usuario que impulsen su negocio. Con años de experiencia en el sector, nos apasiona hacer realidad su visión mediante diseño, desarrollo y soporte continuo de vanguardia."
+
+#: app/templates/home.html:490
+msgid "Read more about us"
+msgstr "Lea más sobre nosotros"
+
+#: app/templates/home.html:518 app/templates/home.html:533
+#: app/templates/home.html:549
+msgid ""
+"“404 Studio LLC has revamped our website and online store that was "
+"previously crashing. With patience, diligence, and professionalism the "
+"team at 404 has taken care of our needs. Weekly, we continue to have "
+"updates in the shop with sales and new items and 404 Studio is eager to "
+"take care of these items. Working with our diverse team, 404 Studio "
+"strives to meet deadlines, offer advice to improve our services, and "
+"unifies team work. With competitive pricing and polite customer service, "
+"I would recommend 404 Studio to others.”"
+msgstr ""
+"“404 Studio LLC ha renovado nuestro sitio web y tienda en línea, que anteriormente fallaban. Con paciencia, diligencia y profesionalismo, el equipo de 404 ha atendido nuestras necesidades. Semanalmente, continuamos actualizando la tienda con ofertas y nuevos artículos, y en 404 Studio estamos ansiosos por encargarnos de estos asuntos. Trabajando con nuestro diverso equipo, 404 Studio se esfuerza por cumplir con los plazos, ofrecer consejos para mejorar nuestros servicios y unificar el trabajo en equipo. Con precios competitivos y un servicio al cliente amable, recomendaría 404 Studio a otros.”"
+
+#: app/templates/home.html:526
+msgid "Founder of Woven Dignity"
+msgstr "Fundador de Woven Dignity"
+
+#: app/templates/home.html:541
+msgid "ILCA Bejaia"
+msgstr "ILCA Bejaia"
+
+#: app/templates/home.html:557
+msgid "Balanced Accountant"
+msgstr "Balanced Accountant"
+
+#: app/templates/home.html:565
+msgid "“ Lorem ipsum dolor sit amet consectetur adipisicing elit... ”"
+msgstr "\"Lorem ipsum dolor sit amet consectetur adipising elit ...\""
+
+#: app/templates/home.html:573
+msgid "CTO, Robert Consultency"
+msgstr ""
+
+#: app/templates/home.html:608
+msgid "Our Pricing Packages & Plans"
+msgstr "Nuestros Paquetes de Precios"
+
+#: app/templates/home.html:617
+msgid ""
+"Need help with building a website? Or want to let us handle hosting your "
+"website?"
+msgstr ""
+"¿Necesitas ayuda para crear un sitio web? ¿O prefieres que nos encarguemos del alojamiento de tu sitio web?"
+
+#: app/templates/home.html:622
+msgid "Need a different service"
+msgstr "¿Necesita un servicio diferente?"
+
+#: app/templates/home.html:636
+#, fuzzy
+msgid "Web Development Packages"
+msgstr "Paquetes de desarrollo web"
+
+#: app/templates/home.html:639
+msgid "Custom site builds, redesigns, and ecommerce integration."
+msgstr "Creación de sitios personalizados, rediseños e integración de comercio electrónico."
+
+#: app/templates/home.html:643 app/templates/home.html:735
+msgid "Starting from"
+msgstr "A partir de"
+
+#: app/templates/home.html:652
+#, fuzzy
+msgid "View Packages"
+msgstr "Ver Paquetes"
+
+#: app/templates/home.html:660 app/templates/home.html:753
+msgid "What’s included:"
+msgstr "Qué incluye:"
+
+#: app/templates/home.html:671
+#, fuzzy
+msgid "Fully responsive design"
+msgstr "Diseño totalmente responsivo"
+
+#: app/templates/home.html:682
+msgid "CMS or static site options"
+msgstr "Opciones de CMS o sitio estático"
+
+#: app/templates/home.html:693
+msgid "SEO Setup"
+msgstr "Configuración de SEO"
+
+#: app/templates/home.html:704
+msgid "Launch Support & Revisions"
+msgstr "Soporte de Lanzamiento y Revisiones"
+
+#: app/templates/home.html:728
+#, fuzzy
+msgid "Web Hosting Packages"
+msgstr "Paquetes de Alojamiento Web"
+
+#: app/templates/home.html:731
+msgid "Fast, secure hosting managed by 404 Studio."
+msgstr "Alojamiento rápido y seguro administrado por 404 Studio."
+
+#: app/templates/home.html:736
+#, fuzzy
+msgid "/Month"
+msgstr "/Mes"
+
+#: app/templates/home.html:740
+msgid "12 Payments Yearly"
+msgstr "12 Pagos Anuales"
+
+#: app/templates/home.html:745
+msgid "View Plans"
+msgstr "Ver Planes"
+
+#: app/templates/home.html:764
+msgid "SSL + security updates"
+msgstr "SSL + actualizaciones de seguridad"
+
+#: app/templates/home.html:775
+#, fuzzy
+msgid "Weekly backups"
+msgstr "Copias de seguridad semanales"
+
+#: app/templates/home.html:786
+#, fuzzy
+msgid "Up to 5 email addresses"
+msgstr "Hasta 3 correos electrónicos"
+
+#: app/templates/home.html:797 app/templates/pricing.html:146
+msgid "Priority Support"
+msgstr "Soporte prioritario"
+
+#: app/templates/home.html:838
+msgid "Need Help Choosing?"
+msgstr "¿Necesitas ayuda para elegir?"
+
+#: app/templates/home.html:839
+msgid ""
+"Schedule a free consultation now, and we will figure out which package "
+"and/or plan is right for your situation!"
+msgstr ""
+"¡Programe una consulta gratuita ahora y determinaremos qué paquete o plan es el más adecuado para su situación!"
+
+#: app/templates/home.html:841 app/templates/services.html:168
+#, fuzzy
+msgid "Schedule Free Consultation"
+msgstr "Programe una Consulta Gratuita"
+
+#: app/templates/home.html:869
+#, fuzzy
+msgid "Contact us for more info"
+msgstr "Contacta con nosotros para más información"
+
+#: app/templates/home.html:871
+msgid "What do you want to ask"
+msgstr "¿Qué quieres preguntar?"
+
+#: app/templates/home.html:922
+msgid "Service Interested In"
+msgstr "Servicio de interés"
+
+#: app/templates/links-page.html:81
+msgid ""
+"We build professional websites, provide hosting, offer ongoing support, "
+"and digital solutions. Reach out to us anytime!"
+msgstr ""
+"Creamos sitios web profesionales, proporcionamos alojamiento, ofrecemos "
+"soporte continuo y soluciones digitales. "
+
+#: app/templates/links-page.html:83
+msgid "Join our email list</a> for updates and offers."
+msgstr ""
+"Únase a nuestra lista de correo electrónico </a> Para actualizaciones y "
+"ofertas."
+
+#: app/templates/links-page.html:99
+msgid "Website Home Page"
+msgstr "página de inicio del sitio web"
+
+#: app/templates/links-page.html:100
+msgid "Visit our website and become familiar with what we do!"
+msgstr "¡Visite nuestro sitio web y familiarícese con lo que hacemos!"
+
+#: app/templates/links-page.html:109
+msgid "Send us an Email."
+msgstr "Envíanos un correo electrónico."
+
+#: app/templates/links-page.html:117
+msgid "Take a look at our past works."
+msgstr "Eche un vistazo a nuestros trabajos pasados."
+
+#: app/templates/links-page.html:125
+msgid "Whatsapp"
+msgstr "Whatsapp"
+
+#: app/templates/links-page.html:126
+msgid "Reach out to us through Whatsapp."
+msgstr "Comuníquese con nosotros a través de WhatsApp."
+
+#: app/templates/portfolio.html:9
+#, fuzzy
+msgid "PORTFOLIO"
+msgstr "PORTAFOLIO"
+
+#: app/templates/portfolio.html:152
+msgid "We build beautiful, custom, high-performing websites"
+msgstr "Creamos sitios web hermosos, personalizados y de alto rendimiento"
+
+#: app/templates/portfolio.html:155
+msgid ""
+"Combining clean design, modern frameworks, and thoughtful UX to bring "
+"ideas to life on the web."
+msgstr ""
+"Combinando diseño limpio, marcos modernos y UX reflexivo para dar vida a "
+"las ideas en la web."
+
+#: app/templates/portfolio.html:172
+#, fuzzy
+msgid "Custom Development"
+msgstr "Desarrollo Personalizado"
+
+#: app/templates/portfolio.html:174
+msgid ""
+"From landing pages to complex platforms, we tailor every build to your "
+"specific needs."
+msgstr ""
+"Desde páginas de destino hasta plataformas complejas, adaptamos cada "
+"compilación a sus necesidades específicas."
+
+#: app/templates/portfolio.html:184
+msgid "Responsive & Accessible"
+msgstr "Responsivo y Accesible"
+
+#: app/templates/portfolio.html:186
+msgid ""
+"Every website works beautifully across all devices and meets "
+"accessibility standards."
+msgstr ""
+"Todos los sitios web funcionan a la perfección en todos los dispositivos y cumplen con los estándares de accesibilidad."
+
+#: app/templates/portfolio.html:196
+msgid "Scalable Tech Stack"
+msgstr "Pila tecnológica escalable"
+
+#: app/templates/portfolio.html:198
+msgid ""
+"Built with tools like TailwindCSS, Python, JavaScript, and more—ready to "
+"scale as your business grows."
+msgstr ""
+"Desarrollado con herramientas como TailwindCSS, Python, JavaScript y más, listo para escalar a medida que crece su negocio."
+
+#: app/templates/portfolio.html:225
+msgid ""
+"ILCA Bejaia is an International Learning Center in Algeria offering "
+"language courses and learning resources."
+msgstr ""
+"ILCA Bejaia es un Centro Internacional de Aprendizaje en Argelia que ofrece cursos de idiomas y recursos de aprendizaje."
+
+#: app/templates/portfolio.html:246 app/templates/portfolio.html:420
+msgid "View Live Site"
+msgstr "Ver sitio en vivo"
+
+#: app/templates/portfolio.html:299
+msgid ""
+"Woven Dignity is a non-profit organization specializing in handmade "
+"cards, with the main focus being to provide refugee women with hope and "
+"empowerment through sustainable work."
+msgstr ""
+"Woven Dignity es una organización sin fines de lucro especializada en tarjetas hechas a mano, cuyo principal objetivo es brindar esperanza y empoderamiento a las mujeres refugiadas a través del trabajo sostenible."
+
+#: app/templates/portfolio.html:364
+msgid ""
+"Migrated from Squarespace to a modern custom design and built from "
+"scratch with Flask, HTML5, Tailwindcss, and JavaScript."
+msgstr ""
+"Migra de Squarespace a un diseño moderno y personalizado, creado desde cero con Flask, HTML5, Tailwind CSS y JavaScript."
+
+#: app/templates/pricing.html:52
+#, fuzzy
+msgid "Pricing Packages"
+msgstr "Paquetes de Precios"
+
+#: app/templates/pricing.html:55
+msgid "Choose your focus: Development, Hosting, or Both."
+msgstr "Elige tu enfoque: Desarrollo, Hosting o Ambos."
+
+#: app/templates/pricing.html:84
+#, fuzzy
+msgid "Both"
+msgstr "Ambos"
+
+#: app/templates/pricing.html:105
+msgid "Need something outside of hosting or development?"
+msgstr "¿Necesita algo más que alojamiento o desarrollo?"
+
+#: app/templates/pricing.html:107
+msgid "Request a Custom Quote"
+msgstr "Solicitar una cotización personalizada"
+
+#: app/templates/pricing.html:117
+msgid "Starter Site"
+msgstr "Sitio de inicio"
+
+#: app/templates/pricing.html:119
+msgid "A simple but professional one-pager or brochure site."
+msgstr "Un sitio web de una sola página o folleto simple pero profesional."
+
+#: app/templates/pricing.html:120
+msgid "Responsive design"
+msgstr "Diseño responsivo"
+
+#: app/templates/pricing.html:120
+msgid "Up to 5 sections/pages"
+msgstr "Hasta 5 secciones/páginas"
+
+#: app/templates/pricing.html:120
+msgid "Basic SEO"
+msgstr "SEO básico"
+
+#: app/templates/pricing.html:120
+msgid "1 Revision Round"
+msgstr "1 Ronda de revisión"
+
+#: app/templates/pricing.html:123
+msgid "Growth Website"
+msgstr "Sitio web de crecimiento"
+
+#: app/templates/pricing.html:125
+msgid "Ideal for businesses ready to scale with more content and structure."
+msgstr "Ideal para empresas listas para escalar con más contenido y estructura."
+
+#: app/templates/pricing.html:126
+msgid "Multi-page layout"
+msgstr "Diseño de varias páginas"
+
+#: app/templates/pricing.html:126
+msgid "CMS integration"
+msgstr "Integración de CMS"
+
+#: app/templates/pricing.html:126
+#, fuzzy
+msgid "Contact forms"
+msgstr "Formularios de contacto"
+
+#: app/templates/pricing.html:126
+msgid "2 Revision Rounds"
+msgstr "2 rondas de revisión"
+
+#: app/templates/pricing.html:129
+msgid "Pro Custom Build"
+msgstr "Construcción Personalizada Profesional"
+
+#: app/templates/pricing.html:131
+msgid "Full custom development, animations, and advanced features."
+msgstr "Desarrollo personalizado completo, animaciones y funciones avanzadas."
+
+#: app/templates/pricing.html:132
+msgid "Full-stack Flask setup"
+msgstr "Configuración completa de Flask"
+
+#: app/templates/pricing.html:132
+msgid "Custom APIs"
+msgstr "API personalizadas"
+
+#: app/templates/pricing.html:132
+msgid "Advanced UI/UX"
+msgstr "Interfaz de usuario/experiencia de usuario avanzada"
+
+#: app/templates/pricing.html:132
+msgid "3 Revision Rounds"
+msgstr "3 rondas de revisión"
+
+#: app/templates/pricing.html:137
+#, fuzzy
+msgid "Basic Hosting"
+msgstr "Alojamiento Web Básico"
+
+#: app/templates/pricing.html:138
+msgid "$20/mo"
+msgstr "$20/mes"
+
+#: app/templates/pricing.html:139
+msgid "Great for small websites and portfolios."
+msgstr "Ideal para sitios web pequeños y portafolios."
+
+#: app/templates/pricing.html:140
+msgid "Free SSL"
+msgstr "SSL gratis"
+
+#: app/templates/pricing.html:140
+msgid "Weekly Backups"
+msgstr "Copias de seguridad semanales"
+
+#: app/templates/pricing.html:140
+msgid "1 Email Address"
+msgstr "1 dirección de correo electrónico"
+
+#: app/templates/pricing.html:140
+msgid "Basic Support"
+msgstr "Soporte básico"
+
+#: app/templates/pricing.html:143
+#, fuzzy
+msgid "Business Hosting"
+msgstr "Alojamiento Web para Empresas or Alojamiento Web Empresarial"
+
+#: app/templates/pricing.html:144
+msgid "$35/mo"
+msgstr "$35/mes"
+
+#: app/templates/pricing.html:145
+msgid "Optimized for growing businesses."
+msgstr "Optimizado para empresas en crecimiento."
+
+#: app/templates/pricing.html:146
+msgid "Daily Backups"
+msgstr "Copias de seguridad diarias"
+
+#: app/templates/pricing.html:146
+msgid "Up to 3 Emails"
+msgstr "Hasta 3 correos electrónicos"
+
+#: app/templates/pricing.html:146
+msgid "Performance Monitoring"
+msgstr "Monitoreo del rendimiento"
+
+#: app/templates/pricing.html:149
+msgid "Pro Hosting & Care"
+msgstr "Alojamiento Pro y Soporte or Alojamiento Pro y Mantenimiento"
+
+#: app/templates/pricing.html:150
+msgid "$60/mo"
+msgstr "$60/mes"
+
+#: app/templates/pricing.html:151
+msgid "All-in-one care plan for serious businesses."
+msgstr "Plan de atención todo en uno para empresas serias."
+
+#: app/templates/pricing.html:152
+msgid "All Business Features"
+msgstr "Todas las funciones comerciales"
+
+#: app/templates/pricing.html:152
+msgid "Monthly Reports"
+msgstr "Informes mensuales"
+
+#: app/templates/pricing.html:152
+msgid "5+ Emails"
+msgstr "5+ correos electrónicos"
+
+#: app/templates/pricing.html:152
+msgid "Uptime Alerts"
+msgstr "Alertas de tiempo de actividad"
+
+#: app/templates/services.html:52
+msgid "Services Built for Impact"
+msgstr "Servicios creados para generar impacto"
+
+#: app/templates/services.html:55
+msgid ""
+"Whether you're starting a business or scaling an idea, these are the "
+"tools to help you launch smarter, grow faster, and run leaner."
+msgstr ""
+"Ya sea que estés iniciando un negocio o expandiendo una idea, estas son las herramientas que te ayudarán a lanzarte de forma más inteligente, crecer más rápido y operar de forma más eficiente."
+
+#: app/templates/services.html:61
+#, fuzzy
+msgid "Custom Web Development"
+msgstr "Desarrollo Web Personalizado"
+
+#: app/templates/services.html:63
+msgid ""
+"We build fast, mobile-first websites using HTML5, TailwindCSS, "
+"JavaScript, Python(Django or Flask), and SQL — optimized for performance,"
+" accessibility, and scalability. Curated for your specific needs."
+msgstr ""
+"Creamos sitios web rápidos y optimizados para dispositivos móviles con HTML5, TailwindCSS, JavaScript, Python (Django o Flask) y SQL, optimizados para un rendimiento óptimo, accesibilidad y escalabilidad. Diseñados para satisfacer tus necesidades específicas."
+
+#: app/templates/services.html:66
+#, fuzzy
+msgid "Fully responsive and SEO-friendly"
+msgstr "Totalmente responsivo y optimizado para SEO"
+
+#: app/templates/services.html:67
+msgid "Jinja templating for dynamic content"
+msgstr "Plantillas Jinja para contenido dinámico"
+
+#: app/templates/services.html:68
+msgid "Backend-ready with connections for any database with Flask or Django"
+msgstr "Listo para backend con conexiones para cualquier base de datos con Flask o Django"
+
+#: app/templates/services.html:82
+#, fuzzy
+msgid "Managed Hosting"
+msgstr "Alojamiento Administrado"
+
+#: app/templates/services.html:84
+msgid ""
+"Reliable hosting with security, backups, and uptime you don’t have to "
+"think about. Includes monitoring, updates, and monthly performance "
+"reviews."
+msgstr ""
+"Alojamiento confiable con seguridad, copias de seguridad y disponibilidad ilimitada. Incluye monitoreo, actualizaciones y revisiones mensuales de rendimiento."
+
+#: app/templates/services.html:87
+msgid "Free SSL, domain integration & CDN"
+msgstr "SSL gratuito, integración de dominios y CDN"
+
+#: app/templates/services.html:88
+#, fuzzy
+msgid "Daily/weekly backups"
+msgstr "Copias de seguridad diarias/semanales"
+
+#: app/templates/services.html:89
+#, fuzzy
+msgid "Priority support & issue resolution"
+msgstr "Soporte prioritario y resolución de problemas"
+
+#: app/templates/services.html:97
+msgid "UI/UX & Visual Design"
+msgstr "Diseño UI/UX y visual"
+
+#: app/templates/services.html:99
+msgid ""
+"From wireframes to final pixels, we design clear, functional, and "
+"beautiful user interfaces that convert — using Figma and custom Tailwind "
+"styling."
+msgstr ""
+"Desde los wireframes hasta los píxeles finales, diseñamos interfaces de usuario claras, funcionales y atractivas que convierten, utilizando Figma y el estilo personalizado de Tailwind."
+
+#: app/templates/services.html:102
+msgid "Style guides & component libraries"
+msgstr "Guías de estilo y bibliotecas de componentes"
+
+#: app/templates/services.html:103
+msgid "Brand-integrated design systems"
+msgstr "Sistemas de diseño integrados de marca"
+
+#: app/templates/services.html:104
+msgid "Mobile-first design with feedback loops"
+msgstr "Diseño móvil con bucles de retroalimentación"
+
+#: app/templates/services.html:118
+#, fuzzy
+msgid "Automations & Integrations"
+msgstr "Automatizaciones e integraciones"
+
+#: app/templates/services.html:120
+msgid ""
+"Need to connect your website with Mailchimp, Supabase, Stripe, or Notion?"
+" We streamline your stack and reduce manual work through smart "
+"automations."
+msgstr ""
+"¿Necesitas conectar tu sitio web con Mailchimp, Supabase, Stripe o Notion? Optimizamos tu infraestructura y reducimos el trabajo manual mediante automatizaciones inteligentes."
+
+#: app/templates/services.html:123
+msgid "Form to CRM/email automations"
+msgstr "Automatizaciones de formularios a CRM/correo electrónico"
+
+#: app/templates/services.html:124
+#, fuzzy
+msgid "Custom backend APIs"
+msgstr "API de backend personalizadas"
+
+#: app/templates/services.html:125
+msgid "Payment gateways & webhook support"
+msgstr "Pasarelas de pago y compatibilidad con webhooks"
+
+#: app/templates/services.html:126
+msgid ""
+"Other automation ideas that can help make things more effectient for your"
+" business"
+msgstr ""
+"Otras ideas de automatización que pueden ayudar a mejorar la eficiencia de su negocio."
+
+#: app/templates/services.html:134
+msgid "Site Fixes & Weird Stuff"
+msgstr "Correcciones del sitio y cosas raras"
+
+#: app/templates/services.html:136
+msgid ""
+"Broken forms? Hosting glitches? A client site that needs help fast? We "
+"take on one-off troubleshooting tasks and legacy site cleanups with fast "
+"turnaround."
+msgstr ""
+"¿Formularios rotos? ¿Problemas de alojamiento? ¿El sitio de un cliente necesita ayuda urgente? Nos encargamos de tareas puntuales de resolución de problemas y limpieza de sitios antiguos con una rápida respuesta."
+
+#: app/templates/services.html:139
+msgid "Bug fixes & legacy cleanup"
+msgstr "Corrección de errores y limpieza de elementos heredados"
+
+#: app/templates/services.html:140
+msgid "Emergency performance optimizations"
+msgstr "Optimizaciones del rendimiento en situaciones de emergencia"
+
+#: app/templates/services.html:141
+msgid "Migration support (Squarespace, WordPress → Flask/Django)"
+msgstr "Soporte de migración (Squarespace, WordPress → Flask/Django)"
+
+#: app/templates/services.html:165
+msgid "Not sure what you need?"
+msgstr "¿No estás seguro de lo que necesitas?"
+
+#: app/templates/services.html:166
+msgid ""
+"We’ll help you figure it out in a free 20-minute consult. No pressure, "
+"just solutions."
+msgstr ""
+"Te ayudaremos a resolverlo en una consulta gratuita de 20 minutos. Sin presiones, solo soluciones."
+
+#: env/lib/python3.13/site-packages/click/_termui_impl.py:556
+#, python-brace-format
+msgid "{editor}: Editing failed"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/_termui_impl.py:560
+#, python-brace-format
+msgid "{editor}: Editing failed: {e}"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/core.py:1124
+msgid "Aborted!"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/core.py:1349
+#: env/lib/python3.13/site-packages/click/core.py:1379
+#, python-brace-format
+msgid "(Deprecated) {text}"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/core.py:1396
+msgid "Options"
+msgstr "Opciones"
+
+#: env/lib/python3.13/site-packages/click/core.py:1422
+#, python-brace-format
+msgid "Got unexpected extra argument ({args})"
+msgid_plural "Got unexpected extra arguments ({args})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/lib/python3.13/site-packages/click/core.py:1438
+#, python-brace-format
+msgid "DeprecationWarning: The command {name!r} is deprecated."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/core.py:1645
+msgid "Commands"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/core.py:1677
+msgid "Missing command."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/core.py:1755
+#, python-brace-format
+msgid "No such command {name!r}."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/core.py:2313
+msgid "Value must be an iterable."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/core.py:2334
+#, python-brace-format
+msgid "Takes {nargs} values but 1 was given."
+msgid_plural "Takes {nargs} values but {len} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/lib/python3.13/site-packages/click/core.py:2783
+#, python-brace-format
+msgid "env var: {var}"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/core.py:2813
+msgid "(dynamic)"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/core.py:2828
+#, python-brace-format
+msgid "default: {default}"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/core.py:2841
+msgid "required"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/decorators.py:457
+#, python-format
+msgid "%(prog)s, version %(version)s"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/decorators.py:520
+msgid "Show the version and exit."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/decorators.py:541
+msgid "Show this message and exit."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/exceptions.py:49
+#: env/lib/python3.13/site-packages/click/exceptions.py:88
+#, python-brace-format
+msgid "Error: {message}"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/exceptions.py:80
+#, python-brace-format
+msgid "Try '{command} {option}' for help."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/exceptions.py:129
+#, python-brace-format
+msgid "Invalid value: {message}"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/exceptions.py:131
+#, python-brace-format
+msgid "Invalid value for {param_hint}: {message}"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/exceptions.py:187
+msgid "Missing argument"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/exceptions.py:189
+msgid "Missing option"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/exceptions.py:191
+msgid "Missing parameter"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/exceptions.py:193
+#, python-brace-format
+msgid "Missing {param_type}"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/exceptions.py:200
+#, python-brace-format
+msgid "Missing parameter: {param_name}"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/exceptions.py:220
+#, python-brace-format
+msgid "No such option: {name}"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/exceptions.py:232
+#, python-brace-format
+msgid "Did you mean {possibility}?"
+msgid_plural "(Possible options: {possibilities})"
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/lib/python3.13/site-packages/click/exceptions.py:270
+msgid "unknown error"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/exceptions.py:277
+#, python-brace-format
+msgid "Could not open file {filename!r}: {message}"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/formatting.py:156
+msgid "Usage:"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/parser.py:233
+#, python-brace-format
+msgid "Argument {name!r} takes {nargs} values."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/parser.py:415
+#, python-brace-format
+msgid "Option {name!r} does not take a value."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/parser.py:476
+#, python-brace-format
+msgid "Option {name!r} requires an argument."
+msgid_plural "Option {name!r} requires {nargs} arguments."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/lib/python3.13/site-packages/click/shell_completion.py:326
+msgid "Shell completion is not supported for Bash versions older than 4.4."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/shell_completion.py:333
+msgid "Couldn't detect Bash version, shell completion is not supported."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/termui.py:158
+msgid "Repeat for confirmation"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/termui.py:174
+msgid "Error: The value you entered was invalid."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/termui.py:176
+#, python-brace-format
+msgid "Error: {e.message}"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/termui.py:187
+msgid "Error: The two entered values do not match."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/termui.py:243
+msgid "Error: invalid input"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/termui.py:773
+msgid "Press any key to continue..."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/types.py:267
+#, python-brace-format
+msgid ""
+"Choose from:\n"
+"\t{choices}"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/types.py:299
+#, python-brace-format
+msgid "{value!r} is not {choice}."
+msgid_plural "{value!r} is not one of {choices}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/lib/python3.13/site-packages/click/types.py:393
+#, python-brace-format
+msgid "{value!r} does not match the format {format}."
+msgid_plural "{value!r} does not match the formats {formats}."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/lib/python3.13/site-packages/click/types.py:415
+#, python-brace-format
+msgid "{value!r} is not a valid {number_type}."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/types.py:471
+#, python-brace-format
+msgid "{value} is not in the range {range}."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/types.py:612
+#, python-brace-format
+msgid "{value!r} is not a valid boolean."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/types.py:636
+#, python-brace-format
+msgid "{value!r} is not a valid UUID."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/types.py:826
+msgid "file"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/types.py:828
+msgid "directory"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/types.py:830
+msgid "path"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/types.py:881
+#, python-brace-format
+msgid "{name} {filename!r} does not exist."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/types.py:890
+#, python-brace-format
+msgid "{name} {filename!r} is a file."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/types.py:898
+#, python-brace-format
+msgid "{name} {filename!r} is a directory."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/types.py:907
+#, python-brace-format
+msgid "{name} {filename!r} is not readable."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/types.py:916
+#, python-brace-format
+msgid "{name} {filename!r} is not writable."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/types.py:925
+#, python-brace-format
+msgid "{name} {filename!r} is not executable."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/click/types.py:992
+#, python-brace-format
+msgid "{len_type} values are required, but {len_value} was given."
+msgid_plural "{len_type} values are required, but {len_value} were given."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/lib/python3.13/site-packages/flask_wtf/file.py:55
+#: env/lib/python3.13/site-packages/wtforms/validators.py:293
+#: env/lib/python3.13/site-packages/wtforms/validators.py:323
+msgid "This field is required."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/flask_wtf/file.py:94
+#, python-brace-format
+msgid "File does not have an approved extension: {extensions}"
+msgstr ""
+
+#: env/lib/python3.13/site-packages/flask_wtf/file.py:101
+msgid "File does not have an approved extension."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/wtforms/validators.py:86
+#, python-format
+msgid "Invalid field name '%s'."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/wtforms/validators.py:99
+#, python-format
+msgid "Field must be equal to %(other_name)s."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/wtforms/validators.py:146
+#, python-format
+msgid "Field must be at least %(min)d character long."
+msgid_plural "Field must be at least %(min)d characters long."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/lib/python3.13/site-packages/wtforms/validators.py:152
+#, python-format
+msgid "Field cannot be longer than %(max)d character."
+msgid_plural "Field cannot be longer than %(max)d characters."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/lib/python3.13/site-packages/wtforms/validators.py:158
+#, python-format
+msgid "Field must be exactly %(max)d character long."
+msgid_plural "Field must be exactly %(max)d characters long."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/lib/python3.13/site-packages/wtforms/validators.py:164
+#, python-format
+msgid "Field must be between %(min)d and %(max)d characters long."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/wtforms/validators.py:216
+#, python-format
+msgid "Number must be at least %(min)s."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/wtforms/validators.py:219
+#, python-format
+msgid "Number must be at most %(max)s."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/wtforms/validators.py:222
+#, python-format
+msgid "Number must be between %(min)s and %(max)s."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/wtforms/validators.py:358
+msgid "Invalid input."
+msgstr "Entrada no válida."
+
+#: env/lib/python3.13/site-packages/wtforms/validators.py:422
+msgid "Invalid email address."
+msgstr "Dirección de correo electrónico no válida."
+
+#: env/lib/python3.13/site-packages/wtforms/validators.py:460
+msgid "Invalid IP address."
+msgstr ""
+
+#: env/lib/python3.13/site-packages/wtforms/validators.py:503
+msgid "Invalid Mac address."
+msgstr "Dirección Mac no válida."
+
+#: env/lib/python3.13/site-packages/wtforms/validators.py:540
+msgid "Invalid URL."
+msgstr "URL inválida."
+
+#: env/lib/python3.13/site-packages/wtforms/validators.py:561
+msgid "Invalid UUID."
+msgstr "UUID no válido."
+
+#: env/lib/python3.13/site-packages/wtforms/validators.py:595
+#, python-format
+msgid "Invalid value, must be one of: %(values)s."
+msgstr "Valor no válido, debe ser uno de: %(values)s."
+
+#: env/lib/python3.13/site-packages/wtforms/validators.py:631
+#, python-format
+msgid "Invalid value, can't be any of: %(values)s."
+msgstr "Valor no válido, no puede ser ninguno de: %(values)s."
+
+#: env/lib/python3.13/site-packages/wtforms/validators.py:700
+msgid "This field cannot be edited."
+msgstr "Este campo no se puede editar."
+
+#: env/lib/python3.13/site-packages/wtforms/validators.py:716
+msgid "This field is disabled and cannot have a value."
+msgstr "Este campo está deshabilitado y no puede tener un valor."
+
+#: env/lib/python3.13/site-packages/wtforms/csrf/core.py:96
+msgid "Invalid CSRF Token."
+msgstr "Token CSRF no válido."
+
+#: env/lib/python3.13/site-packages/wtforms/csrf/session.py:64
+msgid "CSRF token missing."
+msgstr "Falta el token CSRF."
+
+#: env/lib/python3.13/site-packages/wtforms/csrf/session.py:72
+msgid "CSRF failed."
+msgstr "CSRF falló."
+
+#: env/lib/python3.13/site-packages/wtforms/csrf/session.py:77
+msgid "CSRF token expired."
+msgstr "El token CSRF expiró."
+
+#: env/lib/python3.13/site-packages/wtforms/fields/choices.py:142
+msgid "Invalid Choice: could not coerce."
+msgstr "Opción no válida: no se pudo coaccionar."
+
+#: env/lib/python3.13/site-packages/wtforms/fields/choices.py:149
+#: env/lib/python3.13/site-packages/wtforms/fields/choices.py:203
+msgid "Choices cannot be None."
+msgstr "Las opciones no pueden ser Ninguno."
+
+#: env/lib/python3.13/site-packages/wtforms/fields/choices.py:155
+msgid "Not a valid choice."
+msgstr "No es una elección válida"
+
+#: env/lib/python3.13/site-packages/wtforms/fields/choices.py:194
+msgid "Invalid choice(s): one or more data inputs could not be coerced."
+msgstr "Elecciones no válidas: no se pudieron forzar una o más entradas de datos."
+
+#: env/lib/python3.13/site-packages/wtforms/fields/choices.py:212
+#, python-format
+msgid "'%(value)s' is not a valid choice for this field."
+msgid_plural "'%(value)s' are not valid choices for this field."
+msgstr[0] ""
+msgstr[1] ""
+
+#: env/lib/python3.13/site-packages/wtforms/fields/datetime.py:52
+msgid "Not a valid datetime value."
+msgstr "No es un valor de fecha y hora válido."
+
+#: env/lib/python3.13/site-packages/wtforms/fields/datetime.py:78
+msgid "Not a valid date value."
+msgstr "No es un valor de fecha válido."
+
+#: env/lib/python3.13/site-packages/wtforms/fields/datetime.py:104
+msgid "Not a valid time value."
+msgstr "No es un valor de tiempo válido."
+
+#: env/lib/python3.13/site-packages/wtforms/fields/datetime.py:149
+msgid "Not a valid week value."
+msgstr "No es un valor de semana válido."
+
+#: env/lib/python3.13/site-packages/wtforms/fields/numeric.py:82
+#: env/lib/python3.13/site-packages/wtforms/fields/numeric.py:92
+msgid "Not a valid integer value."
+msgstr "No es un valor entero válido."
+
+#: env/lib/python3.13/site-packages/wtforms/fields/numeric.py:168
+msgid "Not a valid decimal value."
+msgstr "No es un valor decimal válido."
+
+#: env/lib/python3.13/site-packages/wtforms/fields/numeric.py:197
+msgid "Not a valid float value."
+msgstr "No es un valor flotante válido."
+
+#~ msgid ""
+#~ "What our <span class=\"text-primaryorange "
+#~ "text-white\">customers</span> <br> are saying"
+#~ msgstr ""
+
+#~ msgid "SERVICES"
+#~ msgstr "SERVICIOS"
+
+#~ msgid "ABOUT"
+#~ msgstr "ACERCA DE"
+
+#~ msgid "REVIEWS"
+#~ msgstr "RESEÑAS"
+
+#~ msgid "Your Guide Through The"
+#~ msgstr "Tu guía a través de la"
+
+#~ msgid "Digital Unknown"
+#~ msgstr "Desconocido digital"
+
+#~ msgid ""
+#~ "Whether you're starting from scratch, "
+#~ "stuck in the middle, or scaling "
+#~ "something big—I'm here to build,\n"
+#~ "                guide, and solve. Design, "
+#~ "development, automation, or something weird?"
+#~ " Let’s make it real."
+#~ msgstr ""
+#~ "Ya sea que estés comenzando desde "
+#~ "cero, atrapado en el medio o "
+#~ "escalando algo grande—estoy aquí para "
+#~ "construir,\n"
+#~ "                guiar y resolver. ¿Diseño, "
+#~ "desarrollo, automatización o algo raro? "
+#~ "Hagámoslo realidad."
+
+#~ msgid "Discuss Services"
+#~ msgstr "Discutir servicios"
+
+#~ msgid "See Our Work"
+#~ msgstr "Ver nuestro trabajo"
+
+#~ msgid "Explore Our Areas of Expertise"
+#~ msgstr "Explora nuestras áreas de especialización"
+
+#~ msgid ""
+#~ "From building beautiful, functional websites"
+#~ " to keeping them secure and running"
+#~ " smoothly, we offer full-spectrum "
+#~ "services to help your online presence"
+#~ " thrive."
+#~ msgstr ""
+#~ "Desde la creación de sitios web atractivos"
+#~ "y funcionales hasta su seguridad y correcto funcionamiento,"
+#~ "ofrecemos una gama completa de"
+#~ "servicios para que su presencia en línea"
+#~ " prospere."
+
+#~ msgid ""
+#~ "We build fast, modern, and scalable "
+#~ "websites and web applications tailored "
+#~ "to your brand, using the latest "
+#~ "technologies to ensure performance and "
+#~ "functionality."
+#~ msgstr ""
+#~ "Creamos sitios web y aplicaciones web rápidos, modernos y escalables"
+#~ "adaptados"
+#~ "a su marca, utilizando las últimas "
+#~ "tecnologías para garantizar el rendimiento y "
+#~ "funcionalidad."
+
+#~ msgid "read more"
+#~ msgstr "leer más"
+
+#~ msgid ""
+#~ "Enjoy reliable, secure, and fast website"
+#~ " hosting solutions. We handle uptime, "
+#~ "backups, and server management so you"
+#~ " can focus on your business."
+#~ msgstr ""
+#~ "Disfruta de soluciones de alojamiento web confiables, seguras y rápidas."
+#~ " Nos encargamos del tiempo de actividad, las copias de seguridad y la administración del servidor para que puedas concentrarte en tu negocio."
+
+#~ msgid "Design"
+#~ msgstr "Diseño"
+
+#~ msgid ""
+#~ "From wireframes to final visuals, our"
+#~ " design process ensures your website "
+#~ "not only looks stunning but also "
+#~ "delivers an intuitive user experience "
+#~ "that converts."
+#~ msgstr ""
+#~ "Desde los wireframes hasta las imágenes finales, nuestro"
+#~ "proceso de diseño garantiza que su sitio web"
+#~ " no solo tenga un aspecto impresionante, sino que también "
+#~ "ofrezca una experiencia de usuario intuitiva "
+#~ "que convierta."
+
+#~ msgid "Management"
+#~ msgstr "Gestión"
+
+#~ msgid ""
+#~ "We manage everything from content "
+#~ "updates to performance monitoring, so "
+#~ "your website stays fresh, functional, "
+#~ "and aligned with your business goals."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Got bugs or technical issues? We "
+#~ "diagnose and resolve website errors, "
+#~ "broken features, or performance slowdowns "
+#~ "quickly and efficiently."
+#~ msgstr ""
+
+#~ msgid "Other Services"
+#~ msgstr "Otros servicios"
+
+#~ msgid ""
+#~ "Need something custom? From SEO and "
+#~ "analytics setup to email configuration "
+#~ "or third-party integrations—we’ve got "
+#~ "you covered."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "404 Studio LLC is a web "
+#~ "development agency committed to delivering "
+#~ "modern, user-centric websites\n"
+#~ "                    that\n"
+#~ "                    elevate your business.\n"
+#~ "                    With years of experience"
+#~ " in the industry, we are passionate"
+#~ " about bringing your vision to life"
+#~ "\n"
+#~ "                    through\n"
+#~ "                    cutting-edge design, "
+#~ "development, and ongoing support."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "“404 Studio LLC has revamped our "
+#~ "website and online store that was "
+#~ "previously crashing. With patience,\n"
+#~ "          diligence, and professionalism the"
+#~ " team at 404 has taken care of"
+#~ " our needs. Weekly, we continue to"
+#~ " have\n"
+#~ "          updates in the shop with "
+#~ "sales and new items and 404 Studio"
+#~ " is eager to take care of these"
+#~ " items. Working with\n"
+#~ "          our diverse team, 404 Studio"
+#~ " strives to meet deadlines, offer "
+#~ "advice to improve our services, and "
+#~ "unifies team\n"
+#~ "          work. With competitive pricing "
+#~ "and polite customer service, I would "
+#~ "recommend 404 Studio to others.”"
+#~ msgstr ""
+
+#~ msgid "CTO, Robert Consultency"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Need help with building a website? "
+#~ "Or want to let us handle hosting"
+#~ " your website?"
+#~ msgstr ""
+
+#~ msgid "Need a different service"
+#~ msgstr ""
+
+#~ msgid "Web Development Packages"
+#~ msgstr "Paquetes de desarrollo web"
+
+#~ msgid "Custom site builds, redesigns, and ecommerce integration."
+#~ msgstr "Creación de sitios personalizados, rediseños e integración de comercio electrónico."
+
+#~ msgid "Starting from"
+#~ msgstr "A partir de"
+
+#~ msgid "View Packages"
+#~ msgstr "Ver paquetes"
+
+#~ msgid "What’s included:"
+#~ msgstr "Qué incluye:"
+
+#~ msgid ""
+#~ "Fully responsive\n"
+#~ "                                        design"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "CMS or static site\n"
+#~ "                                        options"
+#~ msgstr ""
+
+#~ msgid "SEO Setup"
+#~ msgstr "Configuración de SEO"
+
+#~ msgid ""
+#~ "Launch Support &\n"
+#~ "                                        Revisions"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Web\n"
+#~ "                                Hosting Packages"
+#~ msgstr ""
+
+#~ msgid "Fast, secure hosting managed by 404 Studio."
+#~ msgstr ""
+
+#~ msgid "/Month"
+#~ msgstr "/Mes"
+
+#~ msgid "12 Payments Yearly"
+#~ msgstr "12 pagos anuales"
+
+#~ msgid "View Plans"
+#~ msgstr "Ver planes"
+
+#~ msgid ""
+#~ "SSL + security\n"
+#~ "                                        updates"
+#~ msgstr ""
+
+#~ msgid "Weekly backups"
+#~ msgstr "Copias de seguridad semanales"
+
+#~ msgid ""
+#~ "Up to 5 email\n"
+#~ "                                        addresses"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Need\n"
+#~ "                Help Choosing?"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Schedule a free consultation now, and we will figure out\n"
+#~ "                which package and/or plan is right for your situation!"
+#~ msgstr ""
+
+#~ msgid "Schedule Free Consultation"
+#~ msgstr ""
+
+#~ msgid "Contact us for more info"
+#~ msgstr ""
+
+#~ msgid "What do you want to ask"
+#~ msgstr ""
+
+#~ msgid "First Name"
+#~ msgstr ""
+
+#~ msgid "Last Name"
+#~ msgstr ""
+
+#~ msgid "Company Name"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Business Type /\n"
+#~ "                                    Area"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Service Interested\n"
+#~ "                                    In"
+#~ msgstr ""
+
+#~ msgid "Subject"
+#~ msgstr ""
+
+#~ msgid "Contact Us Today"
+#~ msgstr "Contacta con nosotros hoy"
+
+#~ msgid "Successfully deleted %(count)d %(items)s."
+#~ msgstr ""
+
+#~ msgid "Cannot delete %(name)s"
+#~ msgstr ""
+
+#~ msgid "Are you sure?"
+#~ msgstr ""
+
+#~ msgid "Administration"
+#~ msgstr ""
+
+#~ msgid "All"
+#~ msgstr ""
+
+#~ msgid "Yes"
+#~ msgstr ""
+
+#~ msgid "No"
+#~ msgstr ""
+
+#~ msgid "Unknown"
+#~ msgstr ""
+
+#~ msgid "Any date"
+#~ msgstr ""
+
+#~ msgid "Today"
+#~ msgstr ""
+
+#~ msgid "Past 7 days"
+#~ msgstr ""
+
+#~ msgid "This month"
+#~ msgstr ""
+
+#~ msgid "This year"
+#~ msgstr ""
+
+#~ msgid "No date"
+#~ msgstr ""
+
+#~ msgid "Has date"
+#~ msgstr ""
+
+#~ msgid "Empty"
+#~ msgstr ""
+
+#~ msgid "Not empty"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Please enter the correct %(username)s "
+#~ "and password for a staff account. "
+#~ "Note that both fields may be "
+#~ "case-sensitive."
+#~ msgstr ""
+
+#~ msgid "Action:"
+#~ msgstr ""
+
+#~ msgid "Add another %(verbose_name)s"
+#~ msgstr ""
+
+#~ msgid "Remove"
+#~ msgstr ""
+
+#~ msgid "Addition"
+#~ msgstr ""
+
+#~ msgid "Change"
+#~ msgstr ""
+
+#~ msgid "Deletion"
+#~ msgstr ""
+
+#~ msgid "action time"
+#~ msgstr ""
+
+#~ msgid "user"
+#~ msgstr ""
+
+#~ msgid "content type"
+#~ msgstr ""
+
+#~ msgid "object id"
+#~ msgstr ""
+
+#~ msgid "object repr"
+#~ msgstr ""
+
+#~ msgid "action flag"
+#~ msgstr ""
+
+#~ msgid "change message"
+#~ msgstr ""
+
+#~ msgid "log entry"
+#~ msgstr ""
+
+#~ msgid "log entries"
+#~ msgstr ""
+
+#~ msgid "Added “%(object)s”."
+#~ msgstr ""
+
+#~ msgid "Changed “%(object)s” — %(changes)s"
+#~ msgstr ""
+
+#~ msgid "Deleted “%(object)s.”"
+#~ msgstr ""
+
+#~ msgid "LogEntry Object"
+#~ msgstr ""
+
+#~ msgid "addedname"
+#~ msgstr ""
+
+#~ msgid "Added {name} “{object}”."
+#~ msgstr ""
+
+#~ msgid "Added."
+#~ msgstr ""
+
+#~ msgid "and"
+#~ msgstr ""
+
+#~ msgid "changedname"
+#~ msgstr ""
+
+#~ msgid "Changed {fields} for {name} “{object}”."
+#~ msgstr ""
+
+#~ msgid "Changed {fields}."
+#~ msgstr ""
+
+#~ msgid "deletedname"
+#~ msgstr ""
+
+#~ msgid "Deleted {name} “{object}”."
+#~ msgstr ""
+
+#~ msgid "No fields changed."
+#~ msgstr ""
+
+#~ msgid "None"
+#~ msgstr ""
+
+#~ msgid "Hold down “Control”, or “Command” on a Mac, to select more than one."
+#~ msgstr ""
+
+#~ msgid "Select this object for an action - {}"
+#~ msgstr ""
+
+#~ msgid "The {name} “{obj}” was added successfully."
+#~ msgstr ""
+
+#~ msgid "You may edit it again below."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The {name} “{obj}” was added "
+#~ "successfully. You may add another {name}"
+#~ " below."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The {name} “{obj}” was changed "
+#~ "successfully. You may edit it again "
+#~ "below."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The {name} “{obj}” was changed "
+#~ "successfully. You may add another {name}"
+#~ " below."
+#~ msgstr ""
+
+#~ msgid "The {name} “{obj}” was changed successfully."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Items must be selected in order to"
+#~ " perform actions on them. No items"
+#~ " have been changed."
+#~ msgstr ""
+
+#~ msgid "No action selected."
+#~ msgstr ""
+
+#~ msgid "The %(name)s “%(obj)s” was deleted successfully."
+#~ msgstr ""
+
+#~ msgid "%(name)s with ID “%(key)s” doesn’t exist. Perhaps it was deleted?"
+#~ msgstr ""
+
+#~ msgid "Add %s"
+#~ msgstr ""
+
+#~ msgid "Change %s"
+#~ msgstr ""
+
+#~ msgid "View %s"
+#~ msgstr ""
+
+#~ msgid "Database error"
+#~ msgstr ""
+
+#~ msgid "%(count)s %(name)s was changed successfully."
+#~ msgid_plural "%(count)s %(name)s were changed successfully."
+#~ msgstr[0] ""
+#~ msgstr[1] ""
+
+#~ msgid "%(total_count)s selected"
+#~ msgid_plural "All %(total_count)s selected"
+#~ msgstr[0] ""
+#~ msgstr[1] ""
+
+#~ msgid "0 of %(cnt)s selected"
+#~ msgstr ""
+
+#~ msgid "Change history: %s"
+#~ msgstr ""
+
+#~ msgid "%(class_name)s %(instance)s"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Deleting %(class_name)s %(instance)s would "
+#~ "require deleting the following protected "
+#~ "related objects: %(related_objects)s"
+#~ msgstr ""
+
+#~ msgid "Log in"
+#~ msgstr ""
+
+#~ msgid "%(app)s administration"
+#~ msgstr ""
+
+#~ msgid "Date:"
+#~ msgstr ""
+
+#~ msgid "Time:"
+#~ msgstr ""
+
+#~ msgid "Lookup"
+#~ msgstr ""
+
+#~ msgid "Currently:"
+#~ msgstr ""
+
+#~ msgid "Change:"
+#~ msgstr ""
+
+#~ msgid "Select all objects on this page for an action"
+#~ msgstr ""
+
+#~ msgid "All dates"
+#~ msgstr ""
+
+#~ msgid "Select %s"
+#~ msgstr ""
+
+#~ msgid "Select %s to change"
+#~ msgstr ""
+
+#~ msgid "Select %s to view"
+#~ msgstr ""
+
+#~ msgid "Administrative Documentation"
+#~ msgstr ""
+
+#~ msgid "tag:"
+#~ msgstr ""
+
+#~ msgid "filter:"
+#~ msgstr ""
+
+#~ msgid "view:"
+#~ msgstr ""
+
+#~ msgid "App %(app_label)r not found"
+#~ msgstr ""
+
+#~ msgid "Model %(model_name)r not found in app %(app_label)r"
+#~ msgstr ""
+
+#~ msgid "model:"
+#~ msgstr ""
+
+#~ msgid "the related `%(app_label)s.%(data_type)s` object"
+#~ msgstr ""
+
+#~ msgid "related `%(app_label)s.%(object_name)s` objects"
+#~ msgstr ""
+
+#~ msgid "all %s"
+#~ msgstr ""
+
+#~ msgid "number of %s"
+#~ msgstr ""
+
+#~ msgid "%s does not appear to be a urlpattern object"
+#~ msgstr ""
+
+#~ msgid "Personal info"
+#~ msgstr ""
+
+#~ msgid "Permissions"
+#~ msgstr ""
+
+#~ msgid "Important dates"
+#~ msgstr ""
+
+#~ msgid "%(name)s object with primary key %(key)r does not exist."
+#~ msgstr ""
+
+#~ msgid "Conflicting form data submitted. Please try again."
+#~ msgstr ""
+
+#~ msgid "Password changed successfully."
+#~ msgstr ""
+
+#~ msgid "Password-based authentication was disabled."
+#~ msgstr ""
+
+#~ msgid "Change password: %s"
+#~ msgstr ""
+
+#~ msgid "Set password: %s"
+#~ msgstr ""
+
+#~ msgid "Authentication and Authorization"
+#~ msgstr ""
+
+#~ msgid "password"
+#~ msgstr ""
+
+#~ msgid "last login"
+#~ msgstr ""
+
+#~ msgid "Invalid password format or unknown hashing algorithm."
+#~ msgstr ""
+
+#~ msgid "No password set."
+#~ msgstr ""
+
+#~ msgid "Reset password"
+#~ msgstr ""
+
+#~ msgid "Set password"
+#~ msgstr ""
+
+#~ msgid "The two password fields didn’t match."
+#~ msgstr ""
+
+#~ msgid "Password"
+#~ msgstr ""
+
+#~ msgid "Password confirmation"
+#~ msgstr ""
+
+#~ msgid "Enter the same password as before, for verification."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Whether the user will be able to"
+#~ " authenticate using a password or "
+#~ "not. If disabled, they may still "
+#~ "be able to authenticate using other "
+#~ "backends, such as Single Sign-On "
+#~ "or LDAP."
+#~ msgstr ""
+
+#~ msgid "Password-based authentication"
+#~ msgstr ""
+
+#~ msgid "Enabled"
+#~ msgstr ""
+
+#~ msgid "Disabled"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Raw passwords are not stored, so "
+#~ "there is no way to see the "
+#~ "user’s password."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Enable password-based authentication for "
+#~ "this user by setting a password."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Please enter a correct %(username)s and"
+#~ " password. Note that both fields may"
+#~ " be case-sensitive."
+#~ msgstr ""
+
+#~ msgid "This account is inactive."
+#~ msgstr ""
+
+#~ msgid "New password"
+#~ msgstr ""
+
+#~ msgid "New password confirmation"
+#~ msgstr ""
+
+#~ msgid "Your old password was entered incorrectly. Please enter it again."
+#~ msgstr ""
+
+#~ msgid "Old password"
+#~ msgstr ""
+
+#~ msgid "algorithm"
+#~ msgstr ""
+
+#~ msgid "iterations"
+#~ msgstr ""
+
+#~ msgid "salt"
+#~ msgstr ""
+
+#~ msgid "hash"
+#~ msgstr ""
+
+#~ msgid "variety"
+#~ msgstr ""
+
+#~ msgid "version"
+#~ msgstr ""
+
+#~ msgid "memory cost"
+#~ msgstr ""
+
+#~ msgid "time cost"
+#~ msgstr ""
+
+#~ msgid "parallelism"
+#~ msgstr ""
+
+#~ msgid "work factor"
+#~ msgstr ""
+
+#~ msgid "checksum"
+#~ msgstr ""
+
+#~ msgid "block size"
+#~ msgstr ""
+
+#~ msgid "name"
+#~ msgstr ""
+
+#~ msgid "codename"
+#~ msgstr ""
+
+#~ msgid "permission"
+#~ msgstr ""
+
+#~ msgid "permissions"
+#~ msgstr ""
+
+#~ msgid "group"
+#~ msgstr ""
+
+#~ msgid "groups"
+#~ msgstr ""
+
+#~ msgid "superuser status"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Designates that this user has all "
+#~ "permissions without explicitly assigning them."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The groups this user belongs to. A"
+#~ " user will get all permissions "
+#~ "granted to each of their groups."
+#~ msgstr ""
+
+#~ msgid "user permissions"
+#~ msgstr ""
+
+#~ msgid "Specific permissions for this user."
+#~ msgstr ""
+
+#~ msgid "username"
+#~ msgstr ""
+
+#~ msgid "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only."
+#~ msgstr ""
+
+#~ msgid "A user with that username already exists."
+#~ msgstr ""
+
+#~ msgid "first name"
+#~ msgstr ""
+
+#~ msgid "last name"
+#~ msgstr ""
+
+#~ msgid "email address"
+#~ msgstr ""
+
+#~ msgid "staff status"
+#~ msgstr ""
+
+#~ msgid "Designates whether the user can log into this admin site."
+#~ msgstr ""
+
+#~ msgid "active"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Designates whether this user should be"
+#~ " treated as active. Unselect this "
+#~ "instead of deleting accounts."
+#~ msgstr ""
+
+#~ msgid "date joined"
+#~ msgstr ""
+
+#~ msgid "users"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This password is too short. It "
+#~ "must contain at least %(min_length)d "
+#~ "character."
+#~ msgid_plural ""
+#~ "This password is too short. It "
+#~ "must contain at least %(min_length)d "
+#~ "characters."
+#~ msgstr[0] ""
+#~ msgstr[1] ""
+
+#~ msgid "Your password must contain at least %(min_length)d character."
+#~ msgid_plural "Your password must contain at least %(min_length)d characters."
+#~ msgstr[0] ""
+#~ msgstr[1] ""
+
+#~ msgid "The password is too similar to the %(verbose_name)s."
+#~ msgstr ""
+
+#~ msgid "Your password can’t be too similar to your other personal information."
+#~ msgstr ""
+
+#~ msgid "This password is too common."
+#~ msgstr ""
+
+#~ msgid "Your password can’t be a commonly used password."
+#~ msgstr ""
+
+#~ msgid "This password is entirely numeric."
+#~ msgstr ""
+
+#~ msgid "Your password can’t be entirely numeric."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Enter a valid username. This value "
+#~ "may contain only unaccented lowercase "
+#~ "a-z and uppercase A-Z letters, numbers,"
+#~ " and @/./+/-/_ characters."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Enter a valid username. This value "
+#~ "may contain only letters, numbers, and"
+#~ " @/./+/-/_ characters."
+#~ msgstr ""
+
+#~ msgid "Logged out"
+#~ msgstr ""
+
+#~ msgid "Password reset"
+#~ msgstr ""
+
+#~ msgid "Password reset sent"
+#~ msgstr ""
+
+#~ msgid "Enter new password"
+#~ msgstr ""
+
+#~ msgid "Password reset unsuccessful"
+#~ msgstr ""
+
+#~ msgid "Password reset complete"
+#~ msgstr ""
+
+#~ msgid "Password change"
+#~ msgstr ""
+
+#~ msgid "Password change successful"
+#~ msgstr ""
+
+#~ msgid "Content Types"
+#~ msgstr ""
+
+#~ msgid "python model class name"
+#~ msgstr ""
+
+#~ msgid "content types"
+#~ msgstr ""
+
+#~ msgid "Content type %(ct_id)s object has no associated model"
+#~ msgstr ""
+
+#~ msgid "Content type %(ct_id)s object %(obj_id)s doesn’t exist"
+#~ msgstr ""
+
+#~ msgid "%(ct_name)s objects don’t have a get_absolute_url() method"
+#~ msgstr ""
+
+#~ msgid "Advanced options"
+#~ msgstr ""
+
+#~ msgid "Flat Pages"
+#~ msgstr ""
+
+#~ msgid "URL"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Example: “/about/contact/”. Make sure to "
+#~ "have leading and trailing slashes."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This value must contain only letters,"
+#~ " numbers, dots, underscores, dashes, "
+#~ "slashes or tildes."
+#~ msgstr ""
+
+#~ msgid "Example: “/about/contact”. Make sure to have a leading slash."
+#~ msgstr ""
+
+#~ msgid "URL is missing a leading slash."
+#~ msgstr ""
+
+#~ msgid "URL is missing a trailing slash."
+#~ msgstr ""
+
+#~ msgid "Flatpage with url %(url)s already exists for site %(site)s"
+#~ msgstr ""
+
+#~ msgid "title"
+#~ msgstr ""
+
+#~ msgid "content"
+#~ msgstr ""
+
+#~ msgid "enable comments"
+#~ msgstr ""
+
+#~ msgid "template name"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Example: “flatpages/contact_page.html”. If this "
+#~ "isn’t provided, the system will use "
+#~ "“flatpages/default.html”."
+#~ msgstr ""
+
+#~ msgid "registration required"
+#~ msgstr ""
+
+#~ msgid "If this is checked, only logged-in users will be able to view the page."
+#~ msgstr ""
+
+#~ msgid "sites"
+#~ msgstr ""
+
+#~ msgid "flat page"
+#~ msgstr ""
+
+#~ msgid "flat pages"
+#~ msgstr ""
+
+#~ msgid "GIS"
+#~ msgstr ""
+
+#~ msgid "No feeds are registered."
+#~ msgstr ""
+
+#~ msgid "Slug %r isn’t registered."
+#~ msgstr ""
+
+#~ msgid "The base GIS field."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "The base Geometry field — maps to"
+#~ " the OpenGIS Specification Geometry type."
+#~ msgstr ""
+
+#~ msgid "Point"
+#~ msgstr ""
+
+#~ msgid "Line string"
+#~ msgstr ""
+
+#~ msgid "Polygon"
+#~ msgstr ""
+
+#~ msgid "Multi-point"
+#~ msgstr ""
+
+#~ msgid "Multi-line string"
+#~ msgstr ""
+
+#~ msgid "Multi polygon"
+#~ msgstr ""
+
+#~ msgid "Geometry collection"
+#~ msgstr ""
+
+#~ msgid "Extent Aggregate Field"
+#~ msgstr ""
+
+#~ msgid "Raster Field"
+#~ msgstr ""
+
+#~ msgid "No geometry value provided."
+#~ msgstr ""
+
+#~ msgid "Invalid geometry value."
+#~ msgstr ""
+
+#~ msgid "Invalid geometry type."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "An error occurred when transforming the"
+#~ " geometry to the SRID of the "
+#~ "geometry form field."
+#~ msgstr ""
+
+#~ msgid "Humanize"
+#~ msgstr ""
+
+#~ msgctxt "ordinal 11, 12, 13"
+#~ msgid "{}th"
+#~ msgstr ""
+
+#~ msgctxt "ordinal 0"
+#~ msgid "{}th"
+#~ msgstr ""
+
+#~ msgctxt "ordinal 1"
+#~ msgid "{}st"
+#~ msgstr ""
+
+#~ msgctxt "ordinal 2"
+#~ msgid "{}nd"
+#~ msgstr ""
+
+#~ msgctxt "ordinal 3"
+#~ msgid "{}rd"
+#~ msgstr ""
+
+#~ msgctxt "ordinal 4"
+#~ msgid "{}th"
+#~ msgstr ""
+
+#~ msgctxt "ordinal 5"
+#~ msgid "{}th"
+#~ msgstr ""
+
+#~ msgctxt "ordinal 6"
+#~ msgid "{}th"
+#~ msgstr ""
+
+#~ msgctxt "ordinal 7"
+#~ msgid "{}th"
+#~ msgstr ""
+
+#~ msgctxt "ordinal 8"
+#~ msgid "{}th"
+#~ msgstr ""
+
+#~ msgctxt "ordinal 9"
+#~ msgid "{}th"
+#~ msgstr ""
+
+#~ msgid "%(value)s million"
+#~ msgid_plural "%(value)s million"
+#~ msgstr[0] ""
+#~ msgstr[1] ""
+
+#~ msgid "%(value)s billion"
+#~ msgid_plural "%(value)s billion"
+#~ msgstr[0] ""
+#~ msgstr[1] ""
+
+#~ msgid "%(value)s trillion"
+#~ msgid_plural "%(value)s trillion"
+#~ msgstr[0] ""
+#~ msgstr[1] ""
+
+#~ msgid "%(value)s quadrillion"
+#~ msgid_plural "%(value)s quadrillion"
+#~ msgstr[0] ""
+#~ msgstr[1] ""
+
+#~ msgid "%(value)s quintillion"
+#~ msgid_plural "%(value)s quintillion"
+#~ msgstr[0] ""
+#~ msgstr[1] ""
+
+#~ msgid "%(value)s sextillion"
+#~ msgid_plural "%(value)s sextillion"
+#~ msgstr[0] ""
+#~ msgstr[1] ""
+
+#~ msgid "%(value)s septillion"
+#~ msgid_plural "%(value)s septillion"
+#~ msgstr[0] ""
+#~ msgstr[1] ""
+
+#~ msgid "%(value)s octillion"
+#~ msgid_plural "%(value)s octillion"
+#~ msgstr[0] ""
+#~ msgstr[1] ""
+
+#~ msgid "%(value)s nonillion"
+#~ msgid_plural "%(value)s nonillion"
+#~ msgstr[0] ""
+#~ msgstr[1] ""
+
+#~ msgid "%(value)s decillion"
+#~ msgid_plural "%(value)s decillion"
+#~ msgstr[0] ""
+#~ msgstr[1] ""
+
+#~ msgid "%(value)s googol"
+#~ msgid_plural "%(value)s googol"
+#~ msgstr[0] ""
+#~ msgstr[1] ""
+
+#~ msgid "one"
+#~ msgstr ""
+
+#~ msgid "two"
+#~ msgstr ""
+
+#~ msgid "three"
+#~ msgstr ""
+
+#~ msgid "four"
+#~ msgstr ""
+
+#~ msgid "five"
+#~ msgstr ""
+
+#~ msgid "six"
+#~ msgstr ""
+
+#~ msgid "seven"
+#~ msgstr ""
+
+#~ msgid "eight"
+#~ msgstr ""
+
+#~ msgid "nine"
+#~ msgstr ""
+
+#~ msgid "today"
+#~ msgstr ""
+
+#~ msgid "tomorrow"
+#~ msgstr ""
+
+#~ msgid "yesterday"
+#~ msgstr ""
+
+#~ msgid "Messages"
+#~ msgstr ""
+
+#~ msgid "PostgreSQL extensions"
+#~ msgstr ""
+
+#~ msgid "Some keys were missing: %(keys)s"
+#~ msgstr ""
+
+#~ msgid "Some unknown keys were provided: %(keys)s"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Ensure that the upper bound of the"
+#~ " range is not greater than "
+#~ "%(limit_value)s."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Ensure that the lower bound of the"
+#~ " range is not less than "
+#~ "%(limit_value)s."
+#~ msgstr ""
+
+#~ msgid "Item %(nth)s in the array did not validate:"
+#~ msgstr ""
+
+#~ msgid "Nested arrays must have the same length."
+#~ msgstr ""
+
+#~ msgid "Map of strings to strings/nulls"
+#~ msgstr ""
+
+#~ msgid "The value of “%(key)s” is not a string or null."
+#~ msgstr ""
+
+#~ msgid "Could not load JSON data."
+#~ msgstr ""
+
+#~ msgid "Input must be a JSON dictionary."
+#~ msgstr ""
+
+#~ msgid "Enter two valid values."
+#~ msgstr ""
+
+#~ msgid "The start of the range must not exceed the end of the range."
+#~ msgstr ""
+
+#~ msgid "Enter two whole numbers."
+#~ msgstr ""
+
+#~ msgid "Enter two numbers."
+#~ msgstr ""
+
+#~ msgid "Enter two valid date/times."
+#~ msgstr ""
+
+#~ msgid "Enter two valid dates."
+#~ msgstr ""
+
+#~ msgid "Redirects"
+#~ msgstr ""
+
+#~ msgid "site"
+#~ msgstr ""
+
+#~ msgid "redirect from"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This should be an absolute path, "
+#~ "excluding the domain name. Example: "
+#~ "“/events/search/”."
+#~ msgstr ""
+
+#~ msgid "redirect to"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This can be either an absolute "
+#~ "path (as above) or a full URL "
+#~ "starting with a scheme such as "
+#~ "“https://”."
+#~ msgstr ""
+
+#~ msgid "redirect"
+#~ msgstr ""
+
+#~ msgid "redirects"
+#~ msgstr ""
+
+#~ msgid "Sessions"
+#~ msgstr ""
+
+#~ msgid "session key"
+#~ msgstr ""
+
+#~ msgid "session data"
+#~ msgstr ""
+
+#~ msgid "expire date"
+#~ msgstr ""
+
+#~ msgid "session"
+#~ msgstr ""
+
+#~ msgid "sessions"
+#~ msgstr ""
+
+#~ msgid "Site Maps"
+#~ msgstr ""
+
+#~ msgid "Sites"
+#~ msgstr ""
+
+#~ msgid "The domain name cannot contain any spaces or tabs."
+#~ msgstr ""
+
+#~ msgid "domain name"
+#~ msgstr ""
+
+#~ msgid "display name"
+#~ msgstr ""
+
+#~ msgid "Static Files"
+#~ msgstr ""
+
+#~ msgid "Syndication"
+#~ msgstr ""
+
+#~ msgid "…"
+#~ msgstr ""
+
+#~ msgid "That page number is not an integer"
+#~ msgstr ""
+
+#~ msgid "That page number is less than 1"
+#~ msgstr ""
+
+#~ msgid "That page contains no results"
+#~ msgstr ""
+
+#~ msgid "Enter a valid value."
+#~ msgstr ""
+
+#~ msgid "Enter a valid domain name."
+#~ msgstr ""
+
+#~ msgid "Enter a valid URL."
+#~ msgstr ""
+
+#~ msgid "Enter a valid integer."
+#~ msgstr ""
+
+#~ msgid "Enter a valid email address."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Enter a valid “slug” consisting of "
+#~ "letters, numbers, underscores or hyphens."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Enter a valid “slug” consisting of "
+#~ "Unicode letters, numbers, underscores, or "
+#~ "hyphens."
+#~ msgstr ""
+
+#~ msgid "Enter a valid %(protocol)s address."
+#~ msgstr ""
+
+#~ msgid "IPv4"
+#~ msgstr ""
+
+#~ msgid "IPv6"
+#~ msgstr ""
+
+#~ msgid "IPv4 or IPv6"
+#~ msgstr ""
+
+#~ msgid "Enter only digits separated by commas."
+#~ msgstr ""
+
+#~ msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+#~ msgstr ""
+
+#~ msgid "Ensure this value is less than or equal to %(limit_value)s."
+#~ msgstr ""
+
+#~ msgid "Ensure this value is greater than or equal to %(limit_value)s."
+#~ msgstr ""
+
+#~ msgid "Ensure this value is a multiple of step size %(limit_value)s."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Ensure this value is a multiple of"
+#~ " step size %(limit_value)s, starting from"
+#~ " %(offset)s, e.g. %(offset)s, %(valid_value1)s,"
+#~ " %(valid_value2)s, and so on."
+#~ msgstr ""
+
+#~ msgid "Enter a number."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "File extension “%(extension)s” is not "
+#~ "allowed. Allowed extensions are: "
+#~ "%(allowed_extensions)s."
+#~ msgstr ""
+
+#~ msgid "Null characters are not allowed."
+#~ msgstr ""
+
+#~ msgid "%(model_name)s with this %(field_labels)s already exists."
+#~ msgstr ""
+
+#~ msgid "Constraint “%(name)s” is violated."
+#~ msgstr ""
+
+#~ msgid "Value %(value)r is not a valid choice."
+#~ msgstr ""
+
+#~ msgid "This field cannot be null."
+#~ msgstr ""
+
+#~ msgid "This field cannot be blank."
+#~ msgstr ""
+
+#~ msgid "%(model_name)s with this %(field_label)s already exists."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "%(field_label)s must be unique for "
+#~ "%(date_field_label)s %(lookup_type)s."
+#~ msgstr ""
+
+#~ msgid "Field of type: %(field_type)s"
+#~ msgstr ""
+
+#~ msgid "“%(value)s” value must be either True or False."
+#~ msgstr ""
+
+#~ msgid "“%(value)s” value must be either True, False, or None."
+#~ msgstr ""
+
+#~ msgid "Boolean (Either True or False)"
+#~ msgstr ""
+
+#~ msgid "String (up to %(max_length)s)"
+#~ msgstr ""
+
+#~ msgid "String (unlimited)"
+#~ msgstr ""
+
+#~ msgid "Comma-separated integers"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "“%(value)s” value has an invalid date"
+#~ " format. It must be in YYYY-"
+#~ "MM-DD format."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "“%(value)s” value has the correct format"
+#~ " (YYYY-MM-DD) but it is an "
+#~ "invalid date."
+#~ msgstr ""
+
+#~ msgid "Date (without time)"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "“%(value)s” value has an invalid format."
+#~ " It must be in YYYY-MM-DD "
+#~ "HH:MM[:ss[.uuuuuu]][TZ] format."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "“%(value)s” value has the correct format"
+#~ " (YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]) but"
+#~ " it is an invalid date/time."
+#~ msgstr ""
+
+#~ msgid "Date (with time)"
+#~ msgstr ""
+
+#~ msgid "“%(value)s” value must be a decimal number."
+#~ msgstr ""
+
+#~ msgid "Decimal number"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "“%(value)s” value has an invalid format."
+#~ " It must be in [DD] "
+#~ "[[HH:]MM:]ss[.uuuuuu] format."
+#~ msgstr ""
+
+#~ msgid "Duration"
+#~ msgstr ""
+
+#~ msgid "File path"
+#~ msgstr ""
+
+#~ msgid "“%(value)s” value must be a float."
+#~ msgstr ""
+
+#~ msgid "Floating point number"
+#~ msgstr ""
+
+#~ msgid "“%(value)s” value must be an integer."
+#~ msgstr ""
+
+#~ msgid "Integer"
+#~ msgstr ""
+
+#~ msgid "Big (8 byte) integer"
+#~ msgstr ""
+
+#~ msgid "Small integer"
+#~ msgstr ""
+
+#~ msgid "IPv4 address"
+#~ msgstr ""
+
+#~ msgid "IP address"
+#~ msgstr ""
+
+#~ msgid "“%(value)s” value must be either None, True or False."
+#~ msgstr ""
+
+#~ msgid "Boolean (Either True, False or None)"
+#~ msgstr ""
+
+#~ msgid "Positive big integer"
+#~ msgstr ""
+
+#~ msgid "Positive integer"
+#~ msgstr ""
+
+#~ msgid "Positive small integer"
+#~ msgstr ""
+
+#~ msgid "Slug (up to %(max_length)s)"
+#~ msgstr ""
+
+#~ msgid "Text"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "“%(value)s” value has an invalid format."
+#~ " It must be in HH:MM[:ss[.uuuuuu]] "
+#~ "format."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "“%(value)s” value has the correct format"
+#~ " (HH:MM[:ss[.uuuuuu]]) but it is an "
+#~ "invalid time."
+#~ msgstr ""
+
+#~ msgid "Time"
+#~ msgstr ""
+
+#~ msgid "Raw binary data"
+#~ msgstr ""
+
+#~ msgid "“%(value)s” is not a valid UUID."
+#~ msgstr ""
+
+#~ msgid "Universally unique identifier"
+#~ msgstr ""
+
+#~ msgid "File"
+#~ msgstr ""
+
+#~ msgid "Image"
+#~ msgstr ""
+
+#~ msgid "A JSON object"
+#~ msgstr ""
+
+#~ msgid "Value must be valid JSON."
+#~ msgstr ""
+
+#~ msgid "%(model)s instance with %(field)s %(value)r does not exist."
+#~ msgstr ""
+
+#~ msgid "Foreign Key (type determined by related field)"
+#~ msgstr ""
+
+#~ msgid "One-to-one relationship"
+#~ msgstr ""
+
+#~ msgid "%(from)s-%(to)s relationship"
+#~ msgstr ""
+
+#~ msgid "%(from)s-%(to)s relationships"
+#~ msgstr ""
+
+#~ msgid "Many-to-many relationship"
+#~ msgstr ""
+
+#~ msgid ":?.!"
+#~ msgstr ""
+
+#~ msgid "Enter a whole number."
+#~ msgstr ""
+
+#~ msgid "Enter a valid date."
+#~ msgstr ""
+
+#~ msgid "Enter a valid time."
+#~ msgstr ""
+
+#~ msgid "Enter a valid date/time."
+#~ msgstr ""
+
+#~ msgid "Enter a valid duration."
+#~ msgstr ""
+
+#~ msgid "The number of days must be between {min_days} and {max_days}."
+#~ msgstr ""
+
+#~ msgid "No file was submitted. Check the encoding type on the form."
+#~ msgstr ""
+
+#~ msgid "No file was submitted."
+#~ msgstr ""
+
+#~ msgid "The submitted file is empty."
+#~ msgstr ""
+
+#~ msgid "Please either submit a file or check the clear checkbox, not both."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Upload a valid image. The file you"
+#~ " uploaded was either not an image "
+#~ "or a corrupted image."
+#~ msgstr ""
+
+#~ msgid "Select a valid choice. %(value)s is not one of the available choices."
+#~ msgstr ""
+
+#~ msgid "Enter a list of values."
+#~ msgstr ""
+
+#~ msgid "Enter a complete value."
+#~ msgstr ""
+
+#~ msgid "Enter a valid UUID."
+#~ msgstr ""
+
+#~ msgid "Enter a valid JSON."
+#~ msgstr ""
+
+#~ msgid ":"
+#~ msgstr ""
+
+#~ msgid "(Hidden field %(name)s) %(error)s"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "ManagementForm data is missing or has"
+#~ " been tampered with. Missing fields: "
+#~ "%(field_names)s. You may need to file"
+#~ " a bug report if the issue "
+#~ "persists."
+#~ msgstr ""
+
+#~ msgid "Order"
+#~ msgstr ""
+
+#~ msgid "Delete"
+#~ msgstr ""
+
+#~ msgid "Please correct the duplicate data for %(field)s."
+#~ msgstr ""
+
+#~ msgid "Please correct the duplicate data for %(field)s, which must be unique."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Please correct the duplicate data for"
+#~ " %(field_name)s which must be unique "
+#~ "for the %(lookup)s in %(date_field)s."
+#~ msgstr ""
+
+#~ msgid "Please correct the duplicate values below."
+#~ msgstr ""
+
+#~ msgid "The inline value did not match the parent instance."
+#~ msgstr ""
+
+#~ msgid "Select a valid choice. That choice is not one of the available choices."
+#~ msgstr ""
+
+#~ msgid "“%(pk)s” is not a valid value."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "%(datetime)s couldn’t be interpreted in "
+#~ "time zone %(current_timezone)s; it may "
+#~ "be ambiguous or it may not exist."
+#~ msgstr ""
+
+#~ msgid "Clear"
+#~ msgstr ""
+
+#~ msgid "Currently"
+#~ msgstr ""
+
+#~ msgid "yes,no,maybe"
+#~ msgstr ""
+
+#~ msgid "%(size)d byte"
+#~ msgid_plural "%(size)d bytes"
+#~ msgstr[0] ""
+#~ msgstr[1] ""
+
+#~ msgid "%s KB"
+#~ msgstr ""
+
+#~ msgid "%s MB"
+#~ msgstr ""
+
+#~ msgid "%s GB"
+#~ msgstr ""
+
+#~ msgid "%s TB"
+#~ msgstr ""
+
+#~ msgid "%s PB"
+#~ msgstr ""
+
+#~ msgid "p.m."
+#~ msgstr ""
+
+#~ msgid "a.m."
+#~ msgstr ""
+
+#~ msgid "PM"
+#~ msgstr ""
+
+#~ msgid "AM"
+#~ msgstr ""
+
+#~ msgid "midnight"
+#~ msgstr ""
+
+#~ msgid "noon"
+#~ msgstr ""
+
+#~ msgid "Monday"
+#~ msgstr ""
+
+#~ msgid "Tuesday"
+#~ msgstr ""
+
+#~ msgid "Wednesday"
+#~ msgstr ""
+
+#~ msgid "Thursday"
+#~ msgstr ""
+
+#~ msgid "Friday"
+#~ msgstr ""
+
+#~ msgid "Saturday"
+#~ msgstr ""
+
+#~ msgid "Sunday"
+#~ msgstr ""
+
+#~ msgid "Mon"
+#~ msgstr ""
+
+#~ msgid "Tue"
+#~ msgstr ""
+
+#~ msgid "Wed"
+#~ msgstr ""
+
+#~ msgid "Thu"
+#~ msgstr ""
+
+#~ msgid "Fri"
+#~ msgstr ""
+
+#~ msgid "Sat"
+#~ msgstr ""
+
+#~ msgid "Sun"
+#~ msgstr ""
+
+#~ msgid "January"
+#~ msgstr ""
+
+#~ msgid "February"
+#~ msgstr ""
+
+#~ msgid "March"
+#~ msgstr ""
+
+#~ msgid "April"
+#~ msgstr ""
+
+#~ msgid "May"
+#~ msgstr ""
+
+#~ msgid "June"
+#~ msgstr ""
+
+#~ msgid "July"
+#~ msgstr ""
+
+#~ msgid "August"
+#~ msgstr ""
+
+#~ msgid "September"
+#~ msgstr ""
+
+#~ msgid "October"
+#~ msgstr ""
+
+#~ msgid "November"
+#~ msgstr ""
+
+#~ msgid "December"
+#~ msgstr ""
+
+#~ msgid "jan"
+#~ msgstr ""
+
+#~ msgid "feb"
+#~ msgstr ""
+
+#~ msgid "mar"
+#~ msgstr ""
+
+#~ msgid "apr"
+#~ msgstr ""
+
+#~ msgid "may"
+#~ msgstr ""
+
+#~ msgid "jun"
+#~ msgstr ""
+
+#~ msgid "jul"
+#~ msgstr ""
+
+#~ msgid "aug"
+#~ msgstr ""
+
+#~ msgid "sep"
+#~ msgstr ""
+
+#~ msgid "oct"
+#~ msgstr ""
+
+#~ msgid "nov"
+#~ msgstr ""
+
+#~ msgid "dec"
+#~ msgstr ""
+
+#~ msgid "This is not a valid IPv6 address."
+#~ msgstr ""
+
+#~ msgctxt "String to return when truncating text"
+#~ msgid "%(truncated_text)s…"
+#~ msgstr ""
+
+#~ msgid ", "
+#~ msgstr ""
+
+#~ msgid "Forbidden"
+#~ msgstr ""
+
+#~ msgid "CSRF verification failed. Request aborted."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You are seeing this message because "
+#~ "this HTTPS site requires a “Referer "
+#~ "header” to be sent by your web "
+#~ "browser, but none was sent. This "
+#~ "header is required for security reasons,"
+#~ " to ensure that your browser is "
+#~ "not being hijacked by third parties."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you have configured your browser "
+#~ "to disable “Referer” headers, please "
+#~ "re-enable them, at least for this "
+#~ "site, or for HTTPS connections, or "
+#~ "for “same-origin” requests."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you are using the <meta "
+#~ "name=\"referrer\" content=\"no-referrer\"> tag "
+#~ "or including the “Referrer-Policy: "
+#~ "no-referrer” header, please remove them."
+#~ " The CSRF protection requires the "
+#~ "“Referer” header to do strict referer"
+#~ " checking. If you’re concerned about "
+#~ "privacy, use alternatives like <a "
+#~ "rel=\"noreferrer\" …> for links to "
+#~ "third-party sites."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "You are seeing this message because "
+#~ "this site requires a CSRF cookie "
+#~ "when submitting forms. This cookie is"
+#~ " required for security reasons, to "
+#~ "ensure that your browser is not "
+#~ "being hijacked by third parties."
+#~ msgstr ""
+
+#~ msgid ""
+#~ "If you have configured your browser "
+#~ "to disable cookies, please re-enable "
+#~ "them, at least for this site, or"
+#~ " for “same-origin” requests."
+#~ msgstr ""
+
+#~ msgid "More information is available with DEBUG=True."
+#~ msgstr ""
+
+#~ msgid "Directory indexes are not allowed here."
+#~ msgstr ""
+
+#~ msgid "“%(path)s” does not exist"
+#~ msgstr ""
+
+#~ msgid "No year specified"
+#~ msgstr ""
+
+#~ msgid "Date out of range"
+#~ msgstr ""
+
+#~ msgid "No month specified"
+#~ msgstr ""
+
+#~ msgid "No day specified"
+#~ msgstr ""
+
+#~ msgid "No week specified"
+#~ msgstr ""
+
+#~ msgid "No %(verbose_name_plural)s available"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Future %(verbose_name_plural)s not available "
+#~ "because %(class_name)s.allow_future is False."
+#~ msgstr ""
+
+#~ msgid "Invalid date string “%(datestr)s” given format “%(format)s”"
+#~ msgstr ""
+
+#~ msgid "No %(verbose_name)s found matching the query"
+#~ msgstr ""
+
+#~ msgid "Page is not “last”, nor can it be converted to an int."
+#~ msgstr ""
+
+#~ msgid "Invalid page (%(page_number)s): %(message)s"
+#~ msgstr ""
+
+#~ msgid "Empty list and “%(class_name)s.allow_empty” is False."
+#~ msgstr ""
+
+#~ msgid "English"
+#~ msgstr "Inglés"
+
+#~ msgid "Español"
+#~ msgstr "Español"
+
+#~ msgid "Other"
+#~ msgstr "otro"
+
+#~ msgid "Get started for free. Add your whole team as your needs grow."
+#~ msgstr ""
+#~ "Comience gratis. Comienza gratis.\n"
+#~ "                Agrega a todo tu equipo"
+#~ " a medida que crecen tus necesidades."
+
