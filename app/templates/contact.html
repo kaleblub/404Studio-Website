@@ -2,7 +2,7 @@
 {% block extra_head %}
 <style>
     .section-heading::before {
-        content: "CONTACT US";
+        content: "{{ _('CONTACT US') }}";
         background: linear-gradient(180deg,
                 rgba(239, 176, 113, 1) 0%,
                 rgba(74, 108, 247, 0) 100%);
@@ -51,11 +51,10 @@
             <!-- <span class="title left-[50%] lg:left-[3%] top-[0.5rem]">CONTACT US</span> -->
             <h1
                 class="section-heading font-montserrat text-[40px] lg:text-[58px] font-semibold leading-tight">
-                Chat to our friendly team</h1>
+                {{ _('Chat to our friendly team') }}</h1>
             <!-- <h1 class="mt-2 text-2xl font-semibold text-gray-800 md:text-3xl text-white">Chat to our friendly team</h1> -->
 
-            <p class="mt-3 text-gray-500 text-gray-400">We’d love to hear from you. Please fill out this form or
-                shoot us an email or message.</p>
+            <p class="mt-3 text-gray-500 text-gray-400">{{ _("We’d love to hear from you. Please fill out this form or shoot us an email or message.") }}</p>
         </div>
 
         <div class="grid grid-cols-1 gap-12 mt-10 lg:grid-cols-2">
@@ -69,8 +68,8 @@
                         </svg>
                     </span>
 
-                    <h2 class="mt-4 text-base font-medium text-gray-800 text-white">Email</h2>
-                    <p class="mt-2 text-sm text-gray-500 text-gray-400">Our friendly team is here to help.</p>
+                    <h2 class="mt-4 text-base font-medium text-gray-800 text-white">{{ _('Email') }}</h2>
+                    <p class="mt-2 text-sm text-gray-500 text-gray-400">{{ _('Our friendly team is here to help.') }}</p>
                     <a href="mailto:kaleb.humpal@404studio.net"
                         class="mt-2 text-sm text-primaryorange text-primaryorange">kaleb.humpal@404studio.net</a>
                 </div>
@@ -86,10 +85,10 @@
                         </svg>
                     </span>
 
-                    <h2 class="mt-4 text-base font-medium text-gray-800 text-white">Live chat</h2>
-                    <p class="mt-2 text-sm text-gray-500 text-gray-400">Our friendly team is here to help.</p>
+                    <h2 class="mt-4 text-base font-medium text-gray-800 text-white">{{ _('Live chat') }}</h2>
+                    <p class="mt-2 text-sm text-gray-500 text-gray-400">{{ _('Our friendly team is here to help.') }}</p>
                     <a href="https://cal.com/404-studio-kaleb-humpal/30-minute-consultation-meeting" target="_blank"
-                        class="mt-2 text-sm text-primaryorange text-primaryorange">Schedule new chat</a>
+                        class="mt-2 text-sm text-primaryorange text-primaryorange">{{ _('Schedule new chat') }}</a>
                 </div>
 
                 <div>
@@ -103,11 +102,10 @@
                         </svg>
                     </span>
 
-                    <h2 class="mt-4 text-base font-medium text-gray-800 text-white">Office</h2>
-                    <p class="mt-2 text-sm text-gray-500 text-gray-400">Currently Located in <a
-                            href="https://maps.app.goo.gl/rawwHARzGQv4rpdy5" target="_blank">Quito, Ecuador</a></p>
-                    <p class="mt-2 text-sm text-primaryorange text-primaryorange">If you are nearby, let's schedule
-                        an in-person meeting!</p>
+                    <h2 class="mt-4 text-base font-medium text-gray-800 text-white">{{ _('Office') }}</h2>
+                    <p class="mt-2 text-sm text-gray-500 text-gray-400">{{ _('Currently Located in ') }}<a
+                            href="https://maps.app.goo.gl/rawwHARzGQv4rpdy5" target="_blank">{{ _('Quito, Ecuador') }}</a></p>
+                    <p class="mt-2 text-sm text-primaryorange text-primaryorange">{{ _("If you are nearby, let's schedule an in-person meeting!") }}</p>
                 </div>
 
                 <div>
@@ -119,10 +117,10 @@
                         </svg>
                     </span>
 
-                    <h2 class="mt-4 text-base font-medium text-gray-800 text-white">Phone/Whatsapp</h2>
-                    <p class="mt-2 text-sm text-gray-500 text-gray-400">Mon-Fri from 8am to 5pm.</p>
+                    <h2 class="mt-4 text-base font-medium text-gray-800 text-white">{{ _('Phone/Whatsapp') }}</h2>
+                    <p class="mt-2 text-sm text-gray-500 text-gray-400">{{ _('Mon-Fri from 8am to 5pm.') }}</p>
                     <a href="https://wa.me/+593991862613" target="_blank"
-                        class="mt-2 text-sm text-primaryorange text-primaryorange">Message Us On Whatsapp</a>
+                        class="mt-2 text-sm text-primaryorange text-primaryorange">{{ _('Message Us On Whatsapp') }}</a>
                 </div>
             </div>
 
@@ -137,66 +135,64 @@
                 {% endfor %}
                 {% endif %}
                 {% endwith %}
-                <form method="POST" action="{{ url_for('main.contact') }}">
+                <form method="POST" action="{{ url_for('main.contact', lang=lang) }}">
                         {{ form.hidden_tag() }}
 
                         <div class="hidden">
-                            <label class="block mb-2 text-sm text-gray-200">Company Code</label>
+                            <label class="block mb-2 text-sm text-gray-200">{{ _('Company Code') }}</label>
                             {{ form.company_code(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 focus:ring focus:border-accentpurple") }}
                         </div>
 
                         <div class="-mx-2 md:items-center md:flex">
                             <div class="flex-1 px-2 mt-4">
-                            <label class="block mb-2 text-sm text-gray-200">First Name</label>
+                            <label class="block mb-2 text-sm text-gray-200">{{ _('First Name') }}</label>
                             {{ form.first_name(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
                             </div>
 
                             <div class="flex-1 px-2 mt-4">
-                            <label class="block mb-2 text-sm text-gray-200">Last Name</label>
+                            <label class="block mb-2 text-sm text-gray-200">{{ _('Last Name') }}</label>
                             {{ form.last_name(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
                             </div>
                         </div>
 
                         <div class="-mx-2 md:items-center md:flex">
                             <div class="flex-1 px-2 mt-4">
-                                <label class="block mb-2 text-sm text-gray-200">Email address</label>
+                                <label class="block mb-2 text-sm text-gray-200">{{ _('Email address') }}</label>
                                 {{ form.email(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
                             </div>
 
                             <div class="flex-1 px-2 mt-4">
-                                <label class="block mb-2 text-sm text-gray-200">Company Name</label>
+                                <label class="block mb-2 text-sm text-gray-200">{{ _('Company Name') }}</label>
                                 {{ form.company(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
                             </div>
                         </div>
 
                         <div class="-mx-2 md:items-center md:flex">
                             <div class="flex-1 px-2 mt-4">
-                                <label class="block mb-2 text-sm text-gray-200">Business Type /
-                                    Area</label>
+                                <label class="block mb-2 text-sm text-gray-200">{{ _('Business Type / Area') }}</label>
                                 {{ form.business_type(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
 
                             </div>
 
                             <div class="flex-1 px-2 mt-4">
-                                <label class="block mb-2 text-sm text-gray-200">Service Interested
-                                    In</label>
+                                <label class="block mb-2 text-sm text-gray-200">{{ _('Service Interested In') }}</label>
                                 {{ form.service(class="block w-full px-5 py-2.5 mt-2 text-gray-700 border border-gray-200 rounded-lg bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40")}}
                             </div>
                         </div>
 
                         <div class="mt-4">
-                            <label class="block mb-2 text-sm text-gray-200">Subject</label>
+                            <label class="block mb-2 text-sm text-gray-200">{{ _('Subject') }}</label>
                             {{ form.subject(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
                         </div>
 
                         <div class="w-full mt-4">
-                            <label class="block mb-2 text-sm text-gray-200">Message</label>
+                            <label class="block mb-2 text-sm text-gray-200">{{ _('Message') }}</label>
                             {{ form.message(class="block w-full h-32 px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
                         </div>
 
                         <button
                             class="quidel-button quidel-full" type="submit">
-                            Send message
+                            {{ _('Send message') }}
                         </button>
                     </form>
             </div>

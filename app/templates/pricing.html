@@ -4,7 +4,7 @@
 
 <style>
   .section-heading::before {
-    content: "PRICING";
+    content: "{{ _('PRICING') }}";
     background: linear-gradient(180deg,
         rgba(239, 176, 113, 1) 0%,
         rgba(74, 108, 247, 0) 100%);
@@ -49,10 +49,10 @@
 <section class="bg-[#0a0c19] min-h-screen py-20 px-6">
   <div class="container mx-auto max-w-screen-xl">
     <h1 class="section-heading font-montserrat text-[40px] lg:text-[58px] font-semibold text-white text-center mb-6">
-      Pricing Packages
+      {{ _('Pricing Packages') }}
     </h1>
     <p class="text-center text-gray-400 max-w-xl mx-auto mb-4 text-sm">
-      Choose your focus: Development, Hosting, or Both.
+      {{ _('Choose your focus: Development, Hosting, or Both.') }}
     </p>
 
   <div class="w-[400px] pb-10 text-gray-900 mx-auto mt-8 rounded-lg shadow-lg">
@@ -65,7 +65,7 @@
              class="peer/dev hidden" onclick="showPricing('development')" />
       <label for="btn-development"
              class="w-1/3 text-center leading-10 cursor-pointer z-10 peer-checked/dev:text-white">
-        Development
+        {{ _('Development') }}
       </label>
 
       <!-- Option: Hosting -->
@@ -73,7 +73,7 @@
              class="peer/host hidden" onclick="showPricing('hosting')" checked />
       <label for="btn-hosting"
              class="w-1/3 text-center leading-10 cursor-pointer z-10 peer-checked/host:text-white">
-        Hosting
+        {{ _('Hosting') }}
       </label>
 
       <!-- Option: Both -->
@@ -81,7 +81,7 @@
              class="peer/both hidden" onclick="showPricing('both')" />
       <label for="btn-both"
              class="w-1/3 text-center leading-10 cursor-pointer z-10 peer-checked/both:text-white">
-        Both
+        {{ _('Both') }}
       </label>
 
       <!-- Selector -->
@@ -102,9 +102,9 @@
 
     <!-- Custom Work CTA -->
     <div class="text-center mt-16">
-      <p class="text-gray-300 mb-4">Need something outside of hosting or development?</p>
-      <a href="{{ url_for('main.contact') }}" class="quidel-button">
-        <span>Request a Custom Quote</span>
+      <p class="text-gray-300 mb-4">{{ _('Need something outside of hosting or development?') }}</p>
+      <a href="{{ url_for('main.contact', lang=lang) }}" class="quidel-button">
+        <span>{{ _('Request a Custom Quote') }}</span>
       </a>
     </div>
   </div>
@@ -114,42 +114,42 @@
   const pricingOptions = {
     development: [
       {
-        title: 'Starter Site',
+        title: "{{ _('Starter Site') }}",
         price: '$1,000+',
-        desc: 'A simple but professional one-pager or brochure site.',
-        features: ['Responsive design', 'Up to 5 sections/pages', 'Basic SEO', '1 Revision Round']
+        desc: "{{ _('A simple but professional one-pager or brochure site.') }}",
+        features: ["{{ _('Responsive design') }}", "{{ _('Up to 5 sections/pages') }}", "{{ _('Basic SEO') }}", "{{ _('1 Revision Round') }}"]
       },
       {
-        title: 'Growth Website',
+        title: "{{ _('Growth Website') }}",
         price: '$2,000+',
-        desc: 'Ideal for businesses ready to scale with more content and structure.',
-        features: ['Multi-page layout', 'CMS integration', 'Contact forms', '2 Revision Rounds']
+        desc: "{{ _('Ideal for businesses ready to scale with more content and structure.') }}",
+        features: ["{{ _('Multi-page layout') }}", "{{ _('CMS integration') }}", "{{ _('Contact forms') }}", "{{ _('2 Revision Rounds') }}"]
       },
       {
-        title: 'Pro Custom Build',
+        title: "{{ _('Pro Custom Build') }}",
         price: '$3,500+',
-        desc: 'Full custom development, animations, and advanced features.',
-        features: ['Full-stack Flask setup', 'Custom APIs', 'Advanced UI/UX', '3 Revision Rounds']
+        desc: "{{ _('Full custom development, animations, and advanced features.') }}",
+        features: ["{{ _('Full-stack Flask setup') }}", "{{ _('Custom APIs') }}", "{{ _('Advanced UI/UX') }}", "{{ _('3 Revision Rounds') }}"]
       }
     ],
     hosting: [
       {
-        title: 'Basic Hosting',
-        price: '$20/mo',
-        desc: 'Great for small websites and portfolios.',
-        features: ['Free SSL', 'Weekly Backups', '1 Email Address', 'Basic Support']
+        title: "{{ _('Basic Hosting') }}",
+        price: "{{ _('$20/mo') }}",
+        desc: "{{ _('Great for small websites and portfolios.') }}",
+        features: ["{{ _('Free SSL') }}", "{{ _('Weekly Backups') }}", "{{ _('1 Email Address') }}", "{{ _('Basic Support') }}"]
       },
       {
-        title: 'Business Hosting',
-        price: '$35/mo',
-        desc: 'Optimized for growing businesses.',
-        features: ['Priority Support', 'Daily Backups', 'Up to 3 Emails', 'Performance Monitoring']
+        title: "{{ _('Business Hosting') }}",
+        price: "{{ _('$35/mo') }}",
+        desc: "{{ _('Optimized for growing businesses.') }}",
+        features: ["{{ _('Priority Support') }}", "{{ _('Daily Backups') }}", "{{ _('Up to 3 Emails') }}", "{{ _('Performance Monitoring') }}"]
       },
       {
-        title: 'Pro Hosting & Care',
-        price: '$60/mo',
-        desc: 'All-in-one care plan for serious businesses.',
-        features: ['All Business Features', 'Monthly Reports', '5+ Emails', 'Uptime Alerts']
+        title: "{{ _('Pro Hosting & Care') }}",
+        price: "{{ _('$60/mo') }}",
+        desc: "{{ _('All-in-one care plan for serious businesses.') }}",
+        features: ["{{ _('All Business Features') }}", "{{ _('Monthly Reports') }}", "{{ _('5+ Emails') }}", "{{ _('Uptime Alerts') }}"]
       }
     ],
     both: []
@@ -173,7 +173,7 @@
       <ul class="text-sm text-gray-400 list-disc pl-5 space-y-1">
         ${pkg.features.map(f => `<li>${f}</li>`).join('')}
       </ul>
-      <a href="{{ url_for('main.contact') }}" class="block mt-6 quidel-button text-center">Choose Package</a>
+      <a href="{{ url_for('main.contact', lang=lang) }}" class="block mt-6 quidel-button text-center">{{ _('Choose Package') }}</a>
     `;
       container.appendChild(card);
     });

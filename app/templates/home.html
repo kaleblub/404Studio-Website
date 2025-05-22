@@ -49,7 +49,7 @@
     }
 
     .section-services::before {
-        content: "SERVICES";
+        content: {{ _('SERVICES')|tojson }};
         background: linear-gradient(180deg,
                 rgba(239, 176, 113, 1) 0%,
                 rgba(74, 108, 247, 0) 100%);
@@ -86,7 +86,7 @@
     }
 
     .section-about::before {
-        content: "ABOUT";
+        content: "{{ _('ABOUT') }}";
         background: linear-gradient(180deg,
                 rgba(239, 176, 113, 1) 0%,
                 rgba(74, 108, 247, 0) 100%);
@@ -123,7 +123,7 @@
     }
 
     .section-reviews::before {
-        content: "REVIEWS";
+        content: "{{ _('REVIEWS') }}";
         background: linear-gradient(180deg,
                 rgba(239, 176, 113, 1) 0%,
                 rgba(74, 108, 247, 0) 100%);
@@ -160,7 +160,7 @@
     }
 
     .section-pricing::before {
-        content: "PRICING";
+        content: "{{ _('PRICING') }}";
         background: linear-gradient(180deg,
                 rgba(239, 176, 113, 1) 0%,
                 rgba(74, 108, 247, 0) 100%);
@@ -194,11 +194,11 @@
             left: -8%;
             top: -10%;
         }
+    }
     @media (min-width: 1536px) {
         .section-pricing::before {
             top: -15%;
         }
-    }
     }
 </style>
 <!-- Hero Section -->
@@ -248,64 +248,40 @@
             class="absolute top-[32vh] md:top-0 md:left-0 lg:left-8 z-10 w-full md:w-3/6 sm:max-lg:max-w-[480px] pr-2 pl-2 md:px-12 py-12 text-center md:text-left sm:content-center bg-transparent">
             <h1
                 class="font-montserrat text-[56px] md:text-[65px] lg:text-[72px] xl:text-[85px] font-bold leading-tight top-[-225px] absolute md:relative md:top-0 text-right md:text-left">
-                Your Guide Through The</h1>
+                {{ _('Your Guide Through The') }}</h1>
             <h1 class="font-montserrat text-[56px] md:text-[65px] lg:text-[72px] xl:text-[85px] font-bold leading-tight text-right md:text-left glitch"
                 data-text="Digital Unknown">
-                Digital Unknown</h1>
+                {{ _('Digital Unknown') }}</h1>
             <p
                 class="font-inter text-gray-400 text-[14px] md:text-[16px] lg:text-[18px] leading-[18px] md:leading-normal mt-4">
-                Whether you're starting from scratch, stuck in the middle, or scaling something big—I'm here to build,
-                guide, and solve. Design, development, automation, or something weird? Let’s make it real.</p>
+                {{ _("Whether you're starting from scratch, stuck in the middle, or scaling something big—I'm here to build, guide, and solve. Design, development, automation, or something weird? Let’s make it real.") }}</p>
             <div class="flex gap-4 justify-center md:justify-start mt-6">
                 <a class="quidel-button">
-                    <span>Discuss Services</span>
+                    <span>{{ _("Discuss Services") }}</span>
                 </a>
 
                 <!-- Inverted version -->
-                <a href="{{ url_for('main.portfolio') }}" class="quidel-button inverted">
-                    <span>See Our Work</span>
+                <a href="{{ url_for('main.portfolio', lang=lang) }}" class="quidel-button inverted">
+                    <span>{{ _('See Our Work') }}</span>
                 </a>
 
             </div>
         </div>
     </div>
-
-    <!-- Horizontal Scrolling Text -->
-    <!-- <div class="absolute bottom-0 w-full overflow-hidden z-2 bg-secondarygreen">
-        <div class="flex w-[200%] animate-infinite-scroll">
-            <ul class="flex gap-16 items-center w-full font-marcellus text-white text-[16px] md:text-[30px] whitespace-nowrap">
-            <li class="whitespace-nowrap text-white text-[16px] md:text-[30px]">
-                We take care of the books, so you can take care of your business.
-            </li>
-            <li class="whitespace-nowrap text-white text-[16px] md:text-[30px]">
-                You run the business, we’ll run the numbers.
-            </li>
-          </ul> -->
-    <!-- Second duplicate for looping effect -->
-    <!-- <ul class="flex gap-16 items-center w-full font-marcellus text-white text-[16px] md:text-[30px] whitespace-nowrap">
-            <li class="whitespace-nowrap text-white text-[16px] md:text-[30px]">
-                We take care of the books, so you can take care of your business.
-            </li>
-            <li class="whitespace-nowrap text-white text-[16px] md:text-[30px]">
-                You run the business, we’ll run the numbers.
-            </li>
-          </ul>
-        </div>
-    </div> -->
 </section>
 
 <!-- Services Section -->
 <section class="bg-[#0a0c19]">
     <div class="container px-6 py-10 mx-auto">
-        <!-- <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl text-white">explore our <br> awesome <span class="underline decoration-primabg-primaryorange">Components</span></h1> -->
+        <!-- <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl text-white">explore our <br> awesome Components</h1> -->
         <div class="relative">
             <!-- <span class="title left-[25%] lg:left-[-3%] top-[-2rem]">SERVICES</span> -->
             <h2
                 class="section-services relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">
-                Explore Our Areas of Expertise
+                {{ _('Explore Our Areas of Expertise') }}
             </h2>
             <p class="mt-4 text-gray-500 xl:mt-6 text-gray-300">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quam voluptatibus
+                {{ _('From building beautiful, functional websites to keeping them secure and running smoothly, we offer full-spectrum services to help your online presence thrive.') }}
             </p>
         </div>
 
@@ -313,22 +289,20 @@
             <div class="space-y-3 group">
                 <span
                     class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full text-white bg-primaryorange">
-                    <video muted loop playsinline class="w-6 h-6 hidden group-hover:block">
-                        <source src="{{ url_for('static', filename='images/icons/development.mp4') }}"
-                            type="video/mp4" />
-                    </video>
+                    <img src="{{ url_for('static', filename='images/icons/development.gif') }}"
+                        data-animated="/icons/dev-animated.gif" data-static="/icons/dev-static.png"
+                        class="w-6 h-6 transition-all duration-300 group-hover:play-gif" />
                 </span>
 
-                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">Development</h1>
+                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">{{ _('Development') }}</h1>
 
                 <p class="text-gray-500 text-gray-300">
-                    Delivering insightful management and reporting to support informed decision-making and drive your
-                    business growth.
+                    {{ _('We build fast, modern, and scalable websites and web applications tailored to your brand, using the latest technologies to ensure performance and functionality.') }}
                 </p>
 
                 <a href="#"
                     class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
-                    <span class="mx-1">read more</span>
+                    <span class="mx-1">{{ _('read more') }}</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
@@ -346,16 +320,15 @@
                         class="w-6 h-6 transition-all duration-300 group-hover:play-gif" />
                 </span>
 
-                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">Hosting</h1>
+                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">{{ _('Hosting') }}</h1>
 
                 <p class="text-gray-500 text-gray-300">
-                    Ensuring accurate and timely payments to your employees and contract labor, streamlining your
-                    payroll process.
+                    {{ _('Enjoy reliable, secure, and fast website hosting solutions. We handle uptime, backups, and server management so you can focus on your business.') }}
                 </p>
 
                 <a href="#"
                     class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
-                    <span class="mx-1">read more</span>
+                    <span class="mx-1">{{ _('read more') }}</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
@@ -375,17 +348,16 @@
                     </svg>
                 </span>
 
-                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">Design
+                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">{{ _('Design') }}
                 </h1>
 
                 <p class="text-gray-500 text-gray-300">
-                    Empowering you to efficiently manage your finances with comprehensive training on various accounting
-                    software platforms.
+                    {{ _('From wireframes to final visuals, our design process ensures your website not only looks stunning but also delivers an intuitive user experience that converts.') }}
                 </p>
 
                 <a href="#"
                     class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
-                    <span class="mx-1">read more</span>
+                    <span class="mx-1">{{ _('read more') }}</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
@@ -407,16 +379,15 @@
                     </svg>
                 </span>
 
-                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">Management</h1>
+                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">{{ _('Management') }}</h1>
 
                 <p class="text-gray-500 text-gray-300">
-                    Providing meticulous daily, weekly, and monthly transaction management to keep your finances
-                    organized and up-to-date.
+                    {{ _('We manage everything from content updates to performance monitoring, so your website stays fresh, functional, and aligned with your business goals.') }}
                 </p>
 
                 <a href="#"
                     class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
-                    <span class="mx-1">read more</span>
+                    <span class="mx-1">{{ _('read more') }}</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
@@ -436,16 +407,15 @@
                     </svg>
                 </span>
 
-                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">Troubleshooting</h1>
+                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">{{ _('Troubleshooting') }}</h1>
 
                 <p class="text-gray-500 text-gray-300">
-                    Providing meticulous daily, weekly, and monthly transaction management to keep your finances
-                    organized and up-to-date.
+                    {{ _('Got bugs or technical issues? We diagnose and resolve website errors, broken features, or performance slowdowns quickly and efficiently.') }}
                 </p>
 
                 <a href="#"
                     class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
-                    <span class="mx-1">read more</span>
+                    <span class="mx-1">{{ _('read more') }}</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
@@ -465,16 +435,14 @@
                     </svg>
                 </span>
 
-                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">Other</h1>
+                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">{{ _('Other Services') }}</h1>
 
                 <p class="text-gray-500 text-gray-300">
-                    Providing meticulous daily, weekly, and monthly transaction management to keep your finances
-                    organized and up-to-date.
+                    {{ _("Need something custom? From SEO and analytics setup to email configuration or third-party integrations—we’ve got you covered.") }}
                 </p>
 
-                <a href="#"
-                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
-                    <span class="mx-1">read more</span>
+                <a href="{{ url_for('main.services', lang=lang) }}" class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
+                    <span class="mx-1">{{ _('read more') }}</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
@@ -510,20 +478,15 @@
                 <!-- <span class="title left-[25%] lg:left-[-5%] top-[-2rem]">ABOUT</span> -->
                 <h2
                     class="section-about relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">
-                    Your Partner in Web Development and Digital Solutions
+                    {{ _('Your Partner in Web Development and Digital Solutions') }}
                 </h2>
                 <p
                     class="font-inter text-gray-400 text-[14px] md:text-[16px] lg:text-[18px] leading-[18px] md:leading-normal mt-4 z-1">
-                    404 Studio LLC is a web development agency committed to delivering modern, user-centric websites
-                    that
-                    elevate your business.
-                    With years of experience in the industry, we are passionate about bringing your vision to life
-                    through
-                    cutting-edge design, development, and ongoing support.
+                    {{ _('404 Studio LLC is a web development agency committed to delivering modern, user-centric websites that elevate your business. With years of experience in the industry, we are passionate about bringing your vision to life through cutting-edge design, development, and ongoing support.') }}
                 </p>
                 <div class="flex gap-4 justify-center lg:justify-start mt-6">
-                    <a href="{{ url_for('main.about') }}" class="quidel-button inverted cursor-pointer"">
-                        <span>Read more about us</span>
+                    <a href="{{ url_for('main.about', lang=lang) }}" class="quidel-button inverted cursor-pointer"">
+                        <span>{{ _('Read more about us') }}</span>
                     </a>
                 </div>
             </div>
@@ -544,18 +507,14 @@
         <!-- <span class="title left-[0%] lg:left-[-2%] top-[2%] lg:top-[11rem]">REVIEWS</span> -->
         <h2
             class="section-reviews relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">
-            What our <span class="text-primaryorange text-white">customers</span> <br> are saying
+            {{ ('What our customers are saying') }}
         </h2>
 
         <div class="grid w-full grid-cols-1 gap-8 mt-8 2xl:grid-cols-4 lg:mt-16 md:grid-cols-2 lg:grid-cols-3">
             <!-- Testimonials (example) -->
             <div class="w-full p-8 rounded-md shadow-lg bg-gray-800">
                 <p class="leading-loose text-gray-500 text-gray-400">
-                    “404 Studio LLC has revamped our website and online store that was previously crashing. With patience,
-          diligence, and professionalism the team at 404 has taken care of our needs. Weekly, we continue to have
-          updates in the shop with sales and new items and 404 Studio is eager to take care of these items. Working with
-          our diverse team, 404 Studio strives to meet deadlines, offer advice to improve our services, and unifies team
-          work. With competitive pricing and polite customer service, I would recommend 404 Studio to others.”
+                    {{ _('“404 Studio LLC has revamped our website and online store that was previously crashing. With patience, diligence, and professionalism the team at 404 has taken care of our needs. Weekly, we continue to have updates in the shop with sales and new items and 404 Studio is eager to take care of these items. Working with our diverse team, 404 Studio strives to meet deadlines, offer advice to improve our services, and unifies team work. With competitive pricing and polite customer service, I would recommend 404 Studio to others.”') }}
                 </p>
                 <div class="flex items-center mt-6 -mx-2">
                     <img class="object-cover mx-2 rounded-full w-14 h-14"
@@ -563,18 +522,14 @@
                         alt="">
                     <div class="mx-2">
                         <h3 class="font-semibold text-gray-800 text-white">Ruth Boyd</h3>
-                        <span class="text-sm text-gray-500 text-gray-400">Founder of Woven Dignity</span>
+                        <span class="text-sm text-gray-500 text-gray-400">{{ _('Founder of Woven Dignity') }}</span>
                     </div>
                 </div>
             </div>
 
             <div class="w-full p-8 rounded-md shadow-lg bg-gray-800">
                 <p class="leading-loose text-gray-500 text-gray-400">
-                    “404 Studio LLC has revamped our website and online store that was previously crashing. With patience,
-          diligence, and professionalism the team at 404 has taken care of our needs. Weekly, we continue to have
-          updates in the shop with sales and new items and 404 Studio is eager to take care of these items. Working with
-          our diverse team, 404 Studio strives to meet deadlines, offer advice to improve our services, and unifies team
-          work. With competitive pricing and polite customer service, I would recommend 404 Studio to others.”
+                    {{ _('“404 Studio LLC has revamped our website and online store that was previously crashing. With patience, diligence, and professionalism the team at 404 has taken care of our needs. Weekly, we continue to have updates in the shop with sales and new items and 404 Studio is eager to take care of these items. Working with our diverse team, 404 Studio strives to meet deadlines, offer advice to improve our services, and unifies team work. With competitive pricing and polite customer service, I would recommend 404 Studio to others.”') }}
                 </p>
                 <div class="flex items-center mt-6 -mx-2">
                     <img class="object-cover mx-2 rounded-full w-14 h-14"
@@ -582,7 +537,7 @@
                         alt="">
                     <div class="mx-2">
                         <h3 class="font-semibold text-gray-800 text-white">Nassima Amari</h3>
-                        <span class="text-sm text-gray-500 text-gray-400">ILCA Bejaia</span>
+                        <span class="text-sm text-gray-500 text-gray-400">{{ _('ILCA Bejaia') }}</span>
                     </div>
                 </div>
             </div>
@@ -590,11 +545,7 @@
 
             <div class="w-full p-8 rounded-md shadow-lg bg-gray-800">
                 <p class="leading-loose text-gray-500 text-gray-400">
-                    “404 Studio LLC has revamped our website and online store that was previously crashing. With patience,
-          diligence, and professionalism the team at 404 has taken care of our needs. Weekly, we continue to have
-          updates in the shop with sales and new items and 404 Studio is eager to take care of these items. Working with
-          our diverse team, 404 Studio strives to meet deadlines, offer advice to improve our services, and unifies team
-          work. With competitive pricing and polite customer service, I would recommend 404 Studio to others.”
+                    {{ _('“404 Studio LLC has revamped our website and online store that was previously crashing. With patience, diligence, and professionalism the team at 404 has taken care of our needs. Weekly, we continue to have updates in the shop with sales and new items and 404 Studio is eager to take care of these items. Working with our diverse team, 404 Studio strives to meet deadlines, offer advice to improve our services, and unifies team work. With competitive pricing and polite customer service, I would recommend 404 Studio to others.”') }}
                 </p>
                 <div class="flex items-center mt-6 -mx-2">
                     <img class="object-cover mx-2 rounded-full w-14 h-14"
@@ -602,7 +553,7 @@
                         alt="">
                     <div class="mx-2">
                         <h3 class="font-semibold text-gray-800 text-white">Tina Bralley</h3>
-                        <span class="text-sm text-gray-500 text-gray-400">Balanced Accountant</span>
+                        <span class="text-sm text-gray-500 text-gray-400">{{ _('Balanced Accountant') }}</span>
                     </div>
                 </div>
             </div>
@@ -610,7 +561,7 @@
 
             <div class="w-full p-8 rounded-md shadow-lg bg-gray-800">
                 <p class="leading-loose text-gray-500 text-gray-400">
-                    “ Lorem ipsum dolor sit amet consectetur adipisicing elit... ”
+                    {{ _('“ Lorem ipsum dolor sit amet consectetur adipisicing elit... ”') }}
                 </p>
                 <div class="flex items-center mt-6 -mx-2">
                     <img class="object-cover mx-2 rounded-full w-14 h-14"
@@ -618,7 +569,7 @@
                         alt="">
                     <div class="mx-2">
                         <h3 class="font-semibold text-gray-800 text-white">Robbert</h3>
-                        <span class="text-sm text-gray-500 text-gray-400">CTO, Robert Consultency</span>
+                        <span class="text-sm text-gray-500 text-gray-400">{{ _('CTO, Robert Consultency') }}</span>
                     </div>
                 </div>
             </div>
@@ -653,7 +604,7 @@
                 <!-- <span class="title left-[50%] lg:left-[3%] top-[14rem]">PRICING</span> -->
                 <h2
                     class="section-pricing relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-center lg:text-left text-white">
-                    Our Pricing Packages & Plans</h2>
+                    {{ _('Our Pricing Packages & Plans') }}</h2>
 
                 <div class="mt-4">
                     <span class="inline-block w-40 h-1 bg-primaryorange rounded-full"></span>
@@ -662,12 +613,12 @@
                 </div>
 
                 <p class="mt-4 font-medium text-gray-500 text-gray-300">
-                    Need help with building a website? Or want to let us handle hosting your website?
+                    {{ _('Need help with building a website? Or want to let us handle hosting your website?') }}
                 </p>
 
                 <a href="#"
                     class="flex items-center mt-4 -mx-1 text-sm text-gray-700 capitalize text-primaryorange hover:underline hover:text-accentpurple hover:text-primabg-primaryorange">
-                    <span class="mx-1">Need a different service</span>
+                    <span class="mx-1">{{ _('Need a different service') }}</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
@@ -681,15 +632,14 @@
                 <div class="mt-8 space-y-8 md:-mx-4 md:flex md:items-center md:justify-center md:space-y-0 xl:mt-0">
                     <div class="max-w-sm mx-auto border rounded-lg md:mx-4 border-gray-700">
                         <div class="p-6 flex flex-col">
-                            <h1 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl text-white">Web
-                                Development Packages</h1>
+                            <h1 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl text-white">{{ _('Web Development Packages') }}</h1>
 
                             <p class="mt-4 text-gray-500 text-gray-300">
-                                Custom site builds, redesigns, and ecommerce integration.
+                                {{ _('Custom site builds, redesigns, and ecommerce integration.') }}
                             </p>
 
                             <h2 class="mt-4 text-2xl font-semibold text-gray-700 sm:text-3xl text-gray-300">
-                                <span class="text-base font-medium">Starting from</span> $1,000</span>
+                                <span class="text-base font-medium">{{ _('Starting from') }}</span> $1,000</span>
                             </h2>
 
                             <!-- <p class="mt-1 text-gray-500 text-gray-300">
@@ -698,7 +648,7 @@
 
                             <button
                                 class="quidel-button quidel-full">
-                                View Packages
+                                {{ _('View Packages') }}
                             </button>
                         </div>
 
@@ -706,7 +656,7 @@
 
                         <div class="p-6">
                             <h1 class="text-lg font-medium text-gray-700 capitalize lg:text-xl text-white">
-                                What’s included:</h1>
+                                {{ _('What’s included:') }}</h1>
 
                             <div class="mt-8 space-y-4">
                                 <div class="flex items-center">
@@ -717,8 +667,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 text-gray-300">Fully responsive
-                                        design</span>
+                                    <span class="mx-4 text-gray-700 text-gray-300">{{ _('Fully responsive design') }}</span>
                                 </div>
 
                                 <div class="flex items-center">
@@ -729,8 +678,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 text-gray-300">CMS or static site
-                                        options</span>
+                                    <span class="mx-4 text-gray-700 text-gray-300">{{ _('CMS or static site options') }}</span>
                                 </div>
 
                                 <div class="flex items-center">
@@ -741,7 +689,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 text-gray-300">SEO Setup</span>
+                                    <span class="mx-4 text-gray-700 text-gray-300">{{ _('SEO Setup') }}</span>
                                 </div>
 
                                 <div class="flex items-center">
@@ -752,8 +700,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 text-gray-300">Launch Support &
-                                        Revisions</span>
+                                    <span class="mx-4 text-gray-700 text-gray-300">{{ _('Launch Support & Revisions') }}</span>
                                 </div>
 
                                 <!-- <div class="flex items-center">
@@ -777,25 +724,24 @@
 
                     <div class="max-w-sm mx-auto border rounded-lg md:mx-4 border-gray-700">
                         <div class="p-6 flex flex-col">
-                            <h1 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl text-white">Web
-                                Hosting Packages</h1>
+                            <h1 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl text-white">{{ _('Web Hosting Packages') }}</h1>
 
                             <p class="mt-4 text-gray-500 text-gray-300">
-                                Fast, secure hosting managed by 404 Studio.
+                                {{ _('Fast, secure hosting managed by 404 Studio.') }}
                             </p>
 
                             <h2 class="mt-4 text-2xl font-semibold text-gray-700 sm:text-3xl text-gray-300">
-                                <span class="text-base font-medium">Starting from</span> $20.00 <span
-                                    class="text-base font-medium">/Month</span>
+                                <span class="text-base font-medium">{{ _('Starting from') }}</span> $20.00 <span
+                                    class="text-base font-medium">{{ _('/Month') }}</span>
                             </h2>
 
                             <p class="mt-1 text-gray-500 text-gray-300">
-                                12 Payments Yearly
+                                {{ _('12 Payments Yearly') }}
                             </p>
 
                             <button
                                 class="quidel-button quidel-full">
-                                View Plans
+                                {{ _('View Plans') }}
                             </button>
                         </div>
 
@@ -803,7 +749,7 @@
 
                         <div class="p-6">
                             <h1 class="text-lg font-medium text-gray-700 capitalize lg:text-xl text-white">
-                                What’s included:</h1>
+                                {{ _('What’s included:') }}</h1>
 
                             <div class="mt-8 space-y-4">
                                 <div class="flex items-center">
@@ -814,8 +760,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 text-gray-300">SSL + security
-                                        updates</span>
+                                    <span class="mx-4 text-gray-700 text-gray-300">{{ _('SSL + security updates') }}</span>
                                 </div>
 
                                 <div class="flex items-center">
@@ -826,7 +771,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 text-gray-300">Weekly backups</span>
+                                    <span class="mx-4 text-gray-700 text-gray-300">{{ _('Weekly backups') }}</span>
                                 </div>
 
                                 <div class="flex items-center">
@@ -837,8 +782,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 text-gray-300">Up to 5 email
-                                        addresses</span>
+                                    <span class="mx-4 text-gray-700 text-gray-300">{{ _('Up to 5 email addresses') }}</span>
                                 </div>
 
                                 <div class="flex items-center">
@@ -849,7 +793,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 text-gray-300">Priority Support</span>
+                                    <span class="mx-4 text-gray-700 text-gray-300">{{ _('Priority Support') }}</span>
                                 </div>
 
                                 <!-- <div class="flex items-center">
@@ -876,112 +820,6 @@
     </div>
 </section>
 
-<!-- Web Development Packages Section -->
-<!-- <section class="pt-[5rem] pb-[5rem] bg-black">
-    <div class="px-4 mx-auto max-w-screen-xl lg:px-6">
-        <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-            <div class="blob"></div>
-            <h2 class="font-eurostile text-[30px] lg:text-[48px] font-semibold text-center">Flexible Options Designed for Your Business Success</span></h2>
-            <p class="font-inter text-gray-500 text-[14px] md:text-[16px] lg:text-[18px] leading-[18px] md:leading-normal mt-4">Investing in clear financial management shouldn't break the bank. We offer a range of service packages tailored to suit businesses of all sizes and complexities. Review our options to find the ideal level of support that aligns with your goals and budget. Please contact us to receive a personalized quote tailored to your specific business needs.</p>
-        </div>
-    </div>
-    <div class="flex flex-col justify-between items-center lg:flex-row lg:items-start">
-    
-        <div class="w-full flex-1 mt-8 p-8 order-2 bg-[#1A1A1A] shadow-xl rounded-3xl sm:w-96 lg:w-full lg:order-1 lg:rounded-r-none">
-          <div class="mb-7 pb-7 flex items-center border-b border-gray-300">
-            <img src="https://res.cloudinary.com/williamsondesign/abstract-1.jpg"  alt="" class="rounded-3xl w-20 h-20" />
-            <div class="ml-5">
-              <span class="block text-2xl font-semibold">Basic</span>
-              <span><span class="font-medium text-gray-500 text-xl align-top">$&thinsp;</span><span class="text-3xl font-bold">10 </span></span><span class="text-gray-500 font-medium">/ user</span>
-            </div>
-          </div>
-          <ul class="mb-7 font-medium text-gray-500">
-            <li class="flex text-lg mb-2">
-              <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
-              <span class="ml-3">Get started with <span class="text-black">messaging</span></span>
-            </li>
-            <li class="flex text-lg mb-2">
-              <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
-              <span class="ml-3">Flexible <span class="text-black">team meetings</span></span>
-            </li>
-            <li class="flex text-lg">
-              <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
-              <span class="ml-3"><span class="text-black">5 TB</span> cloud storage</span>
-            </li>
-          </ul>
-          <a href="#/" class="flex justify-center items-center bg-indigo-600 rounded-xl py-5 px-4 text-center text-white text-xl">
-            Choose Plan
-            <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
-          </a>
-        </div>
-        
-        <div class="w-full flex-1 p-8 order-1 shadow-xl rounded-3xl bg-gray-900 text-gray-400 sm:w-96 lg:w-full lg:order-2 lg:mt-0">
-          <div class="mb-8 pb-8 flex items-center border-b border-gray-600">
-            <img src="https://res.cloudinary.com/williamsondesign/abstract-2.jpg"  alt="" class="rounded-3xl w-20 h-20" />
-            <div class="ml-5">
-              <span class="block text-3xl font-semibold text-white">Startup</span>
-              <span><span class="font-medium text-xl align-top">$&thinsp;</span><span class="text-3xl font-bold text-white">24 </span></span><span class="font-medium">/ user</span>
-            </div>
-          </div>
-          <ul class="mb-10 font-medium text-xl">
-            <li class="flex mb-6">
-              <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" />
-              <span class="ml-3">All features in <span class="text-white">Basic</span></span>
-            </li>
-            <li class="flex mb-6">
-              <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" />
-              <span class="ml-3">Flexible <span class="text-white">call scheduling</span></span>
-            </li>
-            <li class="flex">
-              <img src="https://res.cloudinary.com/williamsondesign/check-white.svg" />
-              <span class="ml-3"><span class="text-white">15 TB</span> cloud storage</span>
-            </li>
-          </ul>
-          <a href="#/" class="flex justify-center items-center bg-indigo-600 rounded-xl py-6 px-4 text-center text-white text-2xl">
-            Choose Plan
-            <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
-          </a>
-        </div>
-        
-        <div class="w-full flex-1 mt-8 p-8 order-3 shadow-xl rounded-3xl sm:w-96 lg:w-full lg:order-3 lg:rounded-l-none">
-          <div class="mb-7 pb-7 flex items-center border-b border-gray-300">
-            <img src="https://res.cloudinary.com/williamsondesign/abstract-3.jpg"  alt="" class="rounded-3xl w-20 h-20" />
-            <div class="ml-5">
-              <span class="block text-2xl font-semibold">Enterprise</span>
-              <span><span class="font-medium text-gray-500 text-xl align-top">$&thinsp;</span><span class="text-3xl font-bold">35 </span></span><span class="text-gray-500 font-medium">/ user</span>
-            </div>
-          </div>
-          <ul class="mb-7 font-medium text-gray-500">
-            <li class="flex text-lg mb-2">
-              <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
-              <span class="ml-3">All features in <span class="text-black">Startup</span></span>
-            </li>
-            <li class="flex text-lg mb-2">
-              <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
-              <span class="ml-3">Growth <span class="text-black">oriented</span></span>
-            </li>
-            <li class="flex text-lg">
-              <img src="https://res.cloudinary.com/williamsondesign/check-grey.svg" />
-              <span class="ml-3"><span class="text-black">Unlimited</span> cloud storage</span>
-            </li>
-          </ul>
-          <a href="#/" class="flex justify-center items-center bg-indigo-600 rounded-xl py-5 px-4 text-center text-white text-xl">
-            Choose Plan
-            <img src="https://res.cloudinary.com/williamsondesign/arrow-right.svg" class="ml-2" />
-          </a>
-        </div>
-        
-      </div>
-</section> -->
-<!-- Web Hosting Plans Section -->
-<!-- <section class="pt-[5rem] pb-[5rem] bg-black">
-    <div class="px-4 mx-auto max-w-screen-xl lg:px-6">
-        <div class="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
-            <h2 class="font-eurostile text-[30px] lg:text-[48px] font-semibold text-center">Flexible Options Designed for Your Business Success</span></h2>
-            <p class="font-inter text-gray-500 text-[14px] md:text-[16px] lg:text-[18px] leading-[18px] md:leading-normal mt-4">Investing in clear financial management shouldn't break the bank. We offer a range of service packages tailored to suit businesses of all sizes and complexities. Review our options to find the ideal level of support that aligns with your goals and budget. Please contact us to receive a personalized quote tailored to your specific business needs.</p>
-        </div>
-    </div>
-</section> -->
 <!-- Call to Action Section -->
 <section class="relative w-full h-[500px] bg-[#0a0c19] overflow-hidden">
     <!-- Background Image -->
@@ -996,12 +834,10 @@
     <div class="relative z-10 flex items-center justify-center h-full">
         <div
             class="flex flex-col bg-[#0a0c19] text-white p-8 rounded-xl w-full max-w-2xl md:w-2/6 shadow-xl text-center items-center">
-            <h2 class="font-montserrat text-[30px] lg:text-[58px] font-semibold text-white">Need
-                Help Choosing?</h2>
-            <p class="mb-6 font-inter text-gray-300">Schedule a free consultation now, and we will figure out
-                which package and/or plan is right for your situation!</p>
+            <h2 class="font-montserrat text-[30px] lg:text-[58px] font-semibold text-white">{{ _('Need Help Choosing?') }}</h2>
+            <p class="mb-6 font-inter text-gray-300">{{ _('Schedule a free consultation now, and we will figure out which package and/or plan is right for your situation!') }}</p>
             <button class="quidel-button">
-                <span>Schedule Free Consultation</span>
+                <span>{{ _('Schedule Free Consultation') }}</span>
             </button>
         </div>
     </div>
@@ -1029,9 +865,9 @@
                 <div
                     class="w-full px-8 py-10 overflow-hidden rounded-lg shadow-2xl bg-gray-900 shadow-gray-300/50 shadow-black/50">
                     <h2 class="text-2xl font-semibold text-gray-800 capitalize text-white lg:text-3xl">
-                        Contact us for more info
+                        {{ _('Contact us for more info') }}
                     </h2>
-                    <h3 class="text-lg font-medium text-gray-700">What do you want to ask</h3>
+                    <h3 class="text-lg font-medium text-gray-700">{{ _('What do you want to ask') }}</h3>
                     {% with messages = get_flashed_messages(with_categories=true) %}
                     {% if messages %}
                     {% for category, message in messages %}
@@ -1042,7 +878,7 @@
                     {% endif %}
                     {% endwith %}
 
-                    <form method="POST" action="{{ url_for('main.home') }}">
+                    <form method="POST" action="{{ url_for('main.home', lang=lang) }}">
                         {{ form.hidden_tag() }}
 
                         <div class="hidden">
@@ -1052,56 +888,54 @@
 
                         <div class="-mx-2 md:items-center md:flex">
                             <div class="flex-1 px-2 mt-4">
-                            <label class="block mb-2 text-sm text-gray-200">First Name</label>
+                            <label class="block mb-2 text-sm text-gray-200">{{ _('First Name') }}</label>
                             {{ form.first_name(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
                             </div>
 
                             <div class="flex-1 px-2 mt-4">
-                            <label class="block mb-2 text-sm text-gray-200">Last Name</label>
+                            <label class="block mb-2 text-sm text-gray-200">{{ _('Last Name') }}</label>
                             {{ form.last_name(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
                             </div>
                         </div>
 
                         <div class="-mx-2 md:items-center md:flex">
                             <div class="flex-1 px-2 mt-4">
-                                <label class="block mb-2 text-sm text-gray-200">Email address</label>
+                                <label class="block mb-2 text-sm text-gray-200">{{ _('Email address') }}</label>
                                 {{ form.email(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
                             </div>
 
                             <div class="flex-1 px-2 mt-4">
-                                <label class="block mb-2 text-sm text-gray-200">Company Name</label>
+                                <label class="block mb-2 text-sm text-gray-200">{{ _('Company Name') }}</label>
                                 {{ form.company(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
                             </div>
                         </div>
 
                         <div class="-mx-2 md:items-center md:flex">
                             <div class="flex-1 px-2 mt-4">
-                                <label class="block mb-2 text-sm text-gray-200">Business Type /
-                                    Area</label>
+                                <label class="block mb-2 text-sm text-gray-200">{{ _('Business Type / Area') }}</label>
                                 {{ form.business_type(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
 
                             </div>
 
                             <div class="flex-1 px-2 mt-4">
-                                <label class="block mb-2 text-sm text-gray-200">Service Interested
-                                    In</label>
+                                <label class="block mb-2 text-sm text-gray-200">{{ _('Service Interested In') }}</label>
                                 {{ form.service(class="block w-full px-5 py-2.5 mt-2 text-gray-700 border border-gray-200 rounded-lg bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40")}}
                             </div>
                         </div>
 
                         <div class="mt-4">
-                            <label class="block mb-2 text-sm text-gray-200">Subject</label>
+                            <label class="block mb-2 text-sm text-gray-200">{{ _('Subject') }}</label>
                             {{ form.subject(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
                         </div>
 
                         <div class="w-full mt-4">
-                            <label class="block mb-2 text-sm text-gray-200">Message</label>
+                            <label class="block mb-2 text-sm text-gray-200">{{ _('Message') }}</label>
                             {{ form.message(class="block w-full h-32 px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
                         </div>
 
                         <button
                             class="quidel-button quidel-full" type="submit">
-                            Send message
+                            {{ _('Send message') }}
                         </button>
                     </form>
                 </div>

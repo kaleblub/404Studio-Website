@@ -4,7 +4,7 @@
 
 <style>
     .section-heading::before {
-        content: "WHO WE ARE";
+        content: "{{ _('WHO WE ARE') }}";
         background: linear-gradient(180deg,
                 rgba(239, 176, 113, 1) 0%,
                 rgba(74, 108, 247, 0) 100%);
@@ -58,12 +58,10 @@
     <div class="w-full lg:w-1/2 text-white">
       <!-- <h2 class="text-primaryorange text-sm font-bold uppercase tracking-wide mb-2">Who We Are</h2> -->
       <h1 class="section-heading font-montserrat text-[40px] lg:text-[58px] font-semibold leading-tight">
-        More Than a Studio — A Digital Ally
+        {{ _("More Than a Studio — A Digital Ally") }}
       </h1>
       <p class="text-gray-400 mt-6 text-[16px] leading-loose">
-        At 404 Studio, we don’t just build websites — we build digital experiences. Born from a passion for design,
-        development, and meaningful technology, we exist to simplify the complicated and illuminate the digital path
-        forward for individuals and small businesses.
+        {{ _("At 404 Studio, we don’t just build websites — we build digital experiences. Born from a passion for design, development, and meaningful technology, we exist to simplify the complicated and illuminate the digital path forward for individuals and small businesses.") }}
       </p>
 
       <div class="mt-8 space-y-4">
@@ -74,8 +72,8 @@
               clip-rule="evenodd" />
           </svg>
           <div>
-            <h4 class="font-semibold text-white">Built for Visionaries</h4>
-            <p class="text-gray-400 text-sm">We love working with people who dare to imagine differently — whether you're a founder, artist, or side-hustler.</p>
+            <h4 class="font-semibold text-white">{{ _("Built for Visionaries") }}</h4>
+            <p class="text-gray-400 text-sm">{{ _("We love working with people who dare to imagine differently — whether you're a founder, artist, or side-hustler.") }}</p>
           </div>
         </div>
         <div class="flex items-start gap-4">
@@ -85,15 +83,15 @@
               clip-rule="evenodd" />
           </svg>
           <div>
-            <h4 class="font-semibold text-white">Transparent & Collaborative</h4>
-            <p class="text-gray-400 text-sm">You’ll always know where we’re at in the process, and you’ll be invited to shape the outcome.</p>
+            <h4 class="font-semibold text-white">{{ _("Transparent & Collaborative") }}</h4>
+            <p class="text-gray-400 text-sm">{{ _("You’ll always know where we’re at in the process, and you’ll be invited to shape the outcome.") }}</p>
           </div>
         </div>
       </div>
 
       <div class="mt-8">
-        <a href="{{ url_for('main.contact') }}" class="quidel-button">
-          <span>Let’s Connect</span>
+        <a href="{{ url_for('main.contact', lang=lang) }}" class="quidel-button">
+          <span>{{ _("Let’s Connect") }}</span>
         </a>
       </div>
     </div>
@@ -104,34 +102,34 @@
 <section class="bg-[#0a0c19] text-white py-20 px-6">
   <div class="container mx-auto max-w-screen-xl">
     <h2 class="text-center font-montserrat text-[30px] lg:text-[48px] font-semibold mb-12">
-      Our Core Values
+      {{ _("Our Core Values") }}
     </h2>
     <div class="grid md:grid-cols-3 gap-10 text-center">
       <div>
         <div class="mb-4 text-primaryorange text-4xl">
           💡
         </div>
-        <h3 class="text-xl font-semibold">Clarity Over Complexity</h3>
+        <h3 class="text-xl font-semibold">{{ _("Clarity Over Complexity") }}</h3>
         <p class="mt-2 text-gray-400 text-sm">
-          We don’t build for confusion. We build clean, intuitive experiences with structure and intention.
+          {{ _("We don’t build for confusion. We build clean, intuitive experiences with structure and intention.") }}
         </p>
       </div>
       <div>
         <div class="mb-4 text-primaryorange text-4xl">
           ⚙️
         </div>
-        <h3 class="text-xl font-semibold">Function Meets Design</h3>
+        <h3 class="text-xl font-semibold">{{ _("Function Meets Design") }}</h3>
         <p class="mt-2 text-gray-400 text-sm">
-          Design isn't decoration—it's part of the build. We believe form and function should elevate each other.
+          {{ _("Design isn't decoration—it's part of the build. We believe form and function should elevate each other.") }}
         </p>
       </div>
       <div>
         <div class="mb-4 text-primaryorange text-4xl">
           🤝
         </div>
-        <h3 class="text-xl font-semibold">People First</h3>
+        <h3 class="text-xl font-semibold">{{ _("People First") }}</h3>
         <p class="mt-2 text-gray-400 text-sm">
-          Clients are collaborators, not just customers. Your goals, your voice, your wins matter most.
+          {{ _("Clients are collaborators, not just customers. Your goals, your voice, your wins matter most.") }}
         </p>
       </div>
     </div>
@@ -142,10 +140,10 @@
 <section class="bg-[#101223] text-white py-20 px-6">
   <div class="container mx-auto max-w-screen-xl text-center">
     <h2 class="font-montserrat text-[30px] lg:text-[48px] font-semibold mb-12">
-      Technologies We Use
+      {{ _("Technologies We Use") }}
     </h2>
     <p class="text-gray-400 max-w-2xl mx-auto mb-10 text-sm">
-      We use powerful, reliable tools to create web solutions that are flexible, scalable, and fast.
+      {{ _("We use powerful, reliable tools to create web solutions that are flexible, scalable, and fast.") }}
     </p>
 
     <div class="flex flex-wrap justify-center items-center gap-8">
@@ -177,20 +175,20 @@
 <section class="bg-[#101223] py-20 px-6">
   <div class="container mx-auto max-w-screen-xl">
     <h2 class="text-center font-montserrat text-[30px] lg:text-[48px] font-semibold text-white mb-12">
-      The Journey So Far
+      {{ _("The Journey So Far") }}
     </h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-300">
       <div class="p-6 border-l-4 border-primaryorange">
-        <h3 class="text-white text-xl font-bold mb-2">2020 — The Beginning</h3>
-        <p>What began as freelance work for local businesses evolved into something bigger: a creative digital studio with a mission.</p>
+        <h3 class="text-white text-xl font-bold mb-2">{{ _("2020 — The Beginning") }}</h3>
+        <p>{{ _("What began as freelance work for local businesses evolved into something bigger: a creative digital studio with a mission.") }}</p>
       </div>
       <div class="p-6 border-l-4 border-primaryorange">
-        <h3 class="text-white text-xl font-bold mb-2">2022 — 404 Studio LLC</h3>
-        <p>Officially formed in Texas, we refined our services, expanded hosting options, and onboarded our first major clients.</p>
+        <h3 class="text-white text-xl font-bold mb-2">{{ _("2022 — 404 Studio LLC") }}</h3>
+        <p>{{ _("Officially formed in Texas, we refined our services, expanded hosting options, and onboarded our first major clients.") }}</p>
       </div>
       <div class="p-6 border-l-4 border-primaryorange">
-        <h3 class="text-white text-xl font-bold mb-2">2024 — Going Global</h3>
-        <p>With remote work as the norm, we now collaborate internationally — while staying laser-focused on small-biz success.</p>
+        <h3 class="text-white text-xl font-bold mb-2">{{ _("2024 — Going Global") }}</h3>
+        <p>{{ _("With remote work as the norm, we now collaborate internationally — while staying laser-focused on small-biz success.") }}</p>
       </div>
     </div>
   </div>
@@ -205,10 +203,10 @@
   </div>
   <div class="relative z-10 flex items-center justify-center h-full">
     <div class="bg-[#0a0c19] text-white p-8 rounded-xl shadow-xl w-full max-w-xl text-center">
-      <h2 class="font-montserrat text-[28px] lg:text-[48px] font-semibold mb-4">Let’s Build Something Brilliant</h2>
-      <p class="mb-6 font-inter text-gray-300">Whether you’re ready now or just exploring, reach out and say hi.</p>
-      <a href="{{ url_for('main.contact') }}" class="quidel-button">
-        <span>Contact Us</span>
+      <h2 class="font-montserrat text-[28px] lg:text-[48px] font-semibold mb-4">{{ _("Let’s Build Something Brilliant") }}</h2>
+      <p class="mb-6 font-inter text-gray-300">{{ _("Whether you’re ready now or just exploring, reach out and say hi.") }}</p>
+      <a href="{{ url_for('main.contact', lang=lang) }}" class="quidel-button">
+        <span>{{ _("Contact Us") }}</span>
       </a>
     </div>
   </div>
