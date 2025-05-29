@@ -280,23 +280,24 @@
                 class="section-services relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">
                 {{ _('Explore Our Areas of Expertise') }}
             </h2>
-            <p class="mt-4 text-gray-500 xl:mt-6 text-gray-300">
+            <p class="mt-4 xl:mt-6 text-gray-400">
                 {{ _('From building beautiful, functional websites to keeping them secure and running smoothly, we offer full-spectrum services to help your online presence thrive.') }}
             </p>
         </div>
 
         <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3">
-            <div class="space-y-3 group">
+            <div class="space-y-3 group bg-gray-900 p-5 rounded hover:bg-gray-950 duration-400 ease-in-out">
                 <span
-                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full text-white bg-primaryorange">
-                    <img src="{{ url_for('static', filename='images/icons/development.gif') }}"
-                        data-animated="/icons/dev-animated.gif" data-static="/icons/dev-static.png"
-                        class="w-6 h-6 transition-all duration-300 group-hover:play-gif" />
+                    class="inline-block rounded-full">
+                    <img src="{{ url_for('static', filename='images/icons/development-0.png') }}"
+                        data-animated="{{ url_for('static', filename='images/icons/development.gif') }}" 
+                        data-static="{{ url_for('static', filename='images/icons/development-0.png') }}"
+                        class="w-12 h-12 transition-all duration-300 group-hover:play-gif" />
                 </span>
 
-                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">{{ _('Development') }}</h1>
+                <h1 class="text-xl font-semibold capitalize text-white">{{ _('Development') }}</h1>
 
-                <p class="text-gray-500 text-gray-300">
+                <p class="text-gray-400">
                     {{ _('We build fast, modern, and scalable websites and web applications tailored to your brand, using the latest technologies to ensure performance and functionality.') }}
                 </p>
 
@@ -312,17 +313,18 @@
                 </a>
             </div>
 
-            <div class="space-y-3 group">
+            <div class="space-y-3 group bg-gray-900 p-5 rounded hover:bg-gray-950 duration-400 ease-in-out">
                 <span
-                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full text-white bg-primaryorange">
-                    <img src="{{ url_for('static', filename='images/icons/development.gif') }}"
-                        data-animated="/icons/dev-animated.gif" data-static="/icons/dev-static.png"
-                        class="w-6 h-6 transition-all duration-300 group-hover:play-gif" />
+                    class="inline-block rounded-full">
+                    <img src="{{ url_for('static', filename='images/icons/hosting-0.png') }}"
+                        data-animated="{{ url_for('static', filename='images/icons/hosting.gif') }}" 
+                        data-static="{{ url_for('static', filename='images/icons/hosting-0.png') }}"
+                        class="w-12 h-12 transition-all duration-300 group-hover:play-gif" />
                 </span>
 
-                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">{{ _('Hosting') }}</h1>
+                <h1 class="text-xl font-semibold capitalize text-white">{{ _('Hosting') }}</h1>
 
-                <p class="text-gray-500 text-gray-300">
+                <p class="text-gray-400">
                     {{ _('Enjoy reliable, secure, and fast website hosting solutions. We handle uptime, backups, and server management so you can focus on your business.') }}
                 </p>
 
@@ -338,20 +340,19 @@
                 </a>
             </div>
 
-            <div class="space-y-3 group">
+            <div class="space-y-3 group bg-gray-900 p-5 rounded hover:bg-gray-950 duration-400 ease-in-out">
                 <span
-                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full text-white bg-primaryorange">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
+                    class="inline-block rounded-full">
+                    <img src="{{ url_for('static', filename='images/icons/design-0.png') }}"
+                        data-animated="{{ url_for('static', filename='images/icons/design.gif') }}" 
+                        data-static="{{ url_for('static', filename='images/icons/design-0.png') }}"
+                        class="w-12 h-12 transition-all duration-300 group-hover:play-gif" />
                 </span>
 
-                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">{{ _('Design') }}
+                <h1 class="text-xl font-semibold capitalize text-white">{{ _('Design') }}
                 </h1>
 
-                <p class="text-gray-500 text-gray-300">
+                <p class="text-gray-400">
                     {{ _('From wireframes to final visuals, our design process ensures your website not only looks stunning but also delivers an intuitive user experience that converts.') }}
                 </p>
 
@@ -367,21 +368,18 @@
                 </a>
             </div>
 
-            <div class="space-y-3 group">
+            <div class="space-y-3 group bg-gray-900 p-5 rounded hover:bg-gray-950 duration-400 ease-in-out">
                 <span
-                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full text-white bg-primaryorange">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
-                    </svg>
+                    class="inline-block rounded-full">
+                    <img src="{{ url_for('static', filename='images/icons/teamwork-0.png') }}"
+                        data-animated="{{ url_for('static', filename='images/icons/teamwork.gif') }}" 
+                        data-static="{{ url_for('static', filename='images/icons/teamwork-0.png') }}"
+                        class="w-12 h-12 transition-all duration-300 group-hover:play-gif" />
                 </span>
 
-                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">{{ _('Management') }}</h1>
+                <h1 class="text-xl font-semibold capitalize text-white">{{ _('Management') }}</h1>
 
-                <p class="text-gray-500 text-gray-300">
+                <p class="text-gray-400">
                     {{ _('We manage everything from content updates to performance monitoring, so your website stays fresh, functional, and aligned with your business goals.') }}
                 </p>
 
@@ -397,19 +395,18 @@
                 </a>
             </div>
 
-            <div class="space-y-3 group">
+            <div class="space-y-3 group bg-gray-900 p-5 rounded hover:bg-gray-950 duration-400 ease-in-out">
                 <span
-                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full text-white bg-primaryorange">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
-                    </svg>
+                    class="inline-block rounded-full">
+                    <img src="{{ url_for('static', filename='images/icons/troubleshooting-0.png') }}"
+                        data-animated="{{ url_for('static', filename='images/icons/troubleshooting.gif') }}" 
+                        data-static="{{ url_for('static', filename='images/icons/troubleshooting-0.png') }}"
+                        class="w-12 h-12 transition-all duration-300 group-hover:play-gif" />
                 </span>
 
-                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">{{ _('Troubleshooting') }}</h1>
+                <h1 class="text-xl font-semibold capitalize text-white">{{ _('Troubleshooting') }}</h1>
 
-                <p class="text-gray-500 text-gray-300">
+                <p class="text-gray-400">
                     {{ _('Got bugs or technical issues? We diagnose and resolve website errors, broken features, or performance slowdowns quickly and efficiently.') }}
                 </p>
 
@@ -425,19 +422,18 @@
                 </a>
             </div>
 
-            <div class="space-y-3 group">
+            <div class="space-y-3 group bg-gray-900 p-5 rounded hover:bg-gray-950 duration-400 ease-in-out">
                 <span
-                    class="inline-block p-3 text-primaryorange bg-blue-100 rounded-full text-white bg-primaryorange">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                    </svg>
+                    class="inline-block rounded-full">
+                    <img src="{{ url_for('static', filename='images/icons/idea-0.png') }}"
+                        data-animated="{{ url_for('static', filename='images/icons/idea.gif') }}" 
+                        data-static="{{ url_for('static', filename='images/icons/idea-0.png') }}"
+                        class="w-12 h-12 transition-all duration-300 group-hover:play-gif" />
                 </span>
 
-                <h1 class="text-xl font-semibold text-gray-700 capitalize text-white">{{ _('Other Services') }}</h1>
+                <h1 class="text-xl font-semibold capitalize text-white">{{ _('Other Services') }}</h1>
 
-                <p class="text-gray-500 text-gray-300">
+                <p class="text-gray-400">
                     {{ _("Need something custom? From SEO and analytics setup to email configuration or third-party integrations—we’ve got you covered.") }}
                 </p>
 
@@ -512,8 +508,8 @@
 
         <div class="grid w-full grid-cols-1 gap-8 mt-8 2xl:grid-cols-4 lg:mt-16 md:grid-cols-2 lg:grid-cols-3">
             <!-- Testimonials (example) -->
-            <div class="w-full p-8 rounded-md shadow-lg bg-gray-800">
-                <p class="leading-loose text-gray-500 text-gray-400">
+            <div class="w-full p-8 rounded-md shadow-lg bg-gray-900">
+                <p class="leading-loose text-gray-400">
                     {{ _('“404 Studio LLC has revamped our website and online store that was previously crashing. With patience, diligence, and professionalism the team at 404 has taken care of our needs. Weekly, we continue to have updates in the shop with sales and new items and 404 Studio is eager to take care of these items. Working with our diverse team, 404 Studio strives to meet deadlines, offer advice to improve our services, and unifies team work. With competitive pricing and polite customer service, I would recommend 404 Studio to others.”') }}
                 </p>
                 <div class="flex items-center mt-6 -mx-2">
@@ -521,14 +517,14 @@
                         src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
                         alt="">
                     <div class="mx-2">
-                        <h3 class="font-semibold text-gray-800 text-white">Ruth Boyd</h3>
-                        <span class="text-sm text-gray-500 text-gray-400">{{ _('Founder of Woven Dignity') }}</span>
+                        <h3 class="font-semibold text-white">Ruth Boyd</h3>
+                        <span class="text-sm text-gray-400">{{ _('Founder of Woven Dignity') }}</span>
                     </div>
                 </div>
             </div>
 
-            <div class="w-full p-8 rounded-md shadow-lg bg-gray-800">
-                <p class="leading-loose text-gray-500 text-gray-400">
+            <div class="w-full p-8 rounded-md shadow-lg bg-gray-900">
+                <p class="leading-loose text-gray-400">
                     {{ _('“404 Studio LLC has revamped our website and online store that was previously crashing. With patience, diligence, and professionalism the team at 404 has taken care of our needs. Weekly, we continue to have updates in the shop with sales and new items and 404 Studio is eager to take care of these items. Working with our diverse team, 404 Studio strives to meet deadlines, offer advice to improve our services, and unifies team work. With competitive pricing and polite customer service, I would recommend 404 Studio to others.”') }}
                 </p>
                 <div class="flex items-center mt-6 -mx-2">
@@ -536,15 +532,15 @@
                         src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
                         alt="">
                     <div class="mx-2">
-                        <h3 class="font-semibold text-gray-800 text-white">Nassima Amari</h3>
-                        <span class="text-sm text-gray-500 text-gray-400">{{ _('ILCA Bejaia') }}</span>
+                        <h3 class="font-semibold text-white">Nassima Amari</h3>
+                        <span class="text-sm text-gray-400">{{ _('ILCA Bejaia') }}</span>
                     </div>
                 </div>
             </div>
 
 
-            <div class="w-full p-8 rounded-md shadow-lg bg-gray-800">
-                <p class="leading-loose text-gray-500 text-gray-400">
+            <div class="w-full p-8 rounded-md shadow-lg bg-gray-900">
+                <p class="leading-loose text-gray-400">
                     {{ _('“404 Studio LLC has revamped our website and online store that was previously crashing. With patience, diligence, and professionalism the team at 404 has taken care of our needs. Weekly, we continue to have updates in the shop with sales and new items and 404 Studio is eager to take care of these items. Working with our diverse team, 404 Studio strives to meet deadlines, offer advice to improve our services, and unifies team work. With competitive pricing and polite customer service, I would recommend 404 Studio to others.”') }}
                 </p>
                 <div class="flex items-center mt-6 -mx-2">
@@ -552,15 +548,15 @@
                         src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
                         alt="">
                     <div class="mx-2">
-                        <h3 class="font-semibold text-gray-800 text-white">Tina Bralley</h3>
-                        <span class="text-sm text-gray-500 text-gray-400">{{ _('Balanced Accountant') }}</span>
+                        <h3 class="font-semibold text-white">Tina Bralley</h3>
+                        <span class="text-sm text-gray-400">{{ _('Balanced Accountant') }}</span>
                     </div>
                 </div>
             </div>
 
 
-            <div class="w-full p-8 rounded-md shadow-lg bg-gray-800">
-                <p class="leading-loose text-gray-500 text-gray-400">
+            <div class="w-full p-8 rounded-md shadow-lg bg-gray-900">
+                <p class="leading-loose text-gray-400">
                     {{ _('“ Lorem ipsum dolor sit amet consectetur adipisicing elit... ”') }}
                 </p>
                 <div class="flex items-center mt-6 -mx-2">
@@ -568,8 +564,8 @@
                         src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
                         alt="">
                     <div class="mx-2">
-                        <h3 class="font-semibold text-gray-800 text-white">Robbert</h3>
-                        <span class="text-sm text-gray-500 text-gray-400">{{ _('CTO, Robert Consultency') }}</span>
+                        <h3 class="font-semibold text-white">Robbert</h3>
+                        <span class="text-sm text-gray-400">{{ _('CTO, Robert Consultency') }}</span>
                     </div>
                 </div>
             </div>
@@ -612,7 +608,7 @@
                     <span class="inline-block w-1 h-1 bg-primaryorange rounded-full"></span>
                 </div>
 
-                <p class="mt-4 font-medium text-gray-500 text-gray-300">
+                <p class="mt-4 font-medium text-gray-400">
                     {{ _('Need help with building a website? Or want to let us handle hosting your website?') }}
                 </p>
 
@@ -630,19 +626,19 @@
 
             <div class="flex-1 xl:mx-8">
                 <div class="mt-8 space-y-8 md:-mx-4 md:flex md:items-center md:justify-center md:space-y-0 xl:mt-0">
-                    <div class="max-w-sm mx-auto border rounded-lg md:mx-4 border-gray-700">
+                    <div class="max-w-sm mx-auto border rounded-lg md:mx-4 border-gray-700 bg-gray-900 hover:bg-gray-950 duration-400 ease-in-out">
                         <div class="p-6 flex flex-col">
                             <h1 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl text-white">{{ _('Web Development Packages') }}</h1>
 
-                            <p class="mt-4 text-gray-500 text-gray-300">
+                            <p class="mt-4 text-gray-400">
                                 {{ _('Custom site builds, redesigns, and ecommerce integration.') }}
                             </p>
 
-                            <h2 class="mt-4 text-2xl font-semibold text-gray-700 sm:text-3xl text-gray-300">
-                                <span class="text-base font-medium">{{ _('Starting from') }}</span> $1,000</span>
+                            <h2 class="mt-4 text-2xl font-semibold sm:text-3xl text-accentpurple">
+                                <span class="text-base font-medium text-gray-300">{{ _('Starting from') }}</span> $1,000</span>
                             </h2>
 
-                            <!-- <p class="mt-1 text-gray-500 text-gray-300">
+                            <!-- <p class="mt-1 text-gray-400">
                                 Yearly payment
                             </p> -->
 
@@ -667,7 +663,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 text-gray-300">{{ _('Fully responsive design') }}</span>
+                                    <span class="mx-4 text-gray-400">{{ _('Fully responsive design') }}</span>
                                 </div>
 
                                 <div class="flex items-center">
@@ -678,7 +674,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 text-gray-300">{{ _('CMS or static site options') }}</span>
+                                    <span class="mx-4 text-gray-400">{{ _('CMS or static site options') }}</span>
                                 </div>
 
                                 <div class="flex items-center">
@@ -689,7 +685,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 text-gray-300">{{ _('SEO Setup') }}</span>
+                                    <span class="mx-4 text-gray-400">{{ _('SEO Setup') }}</span>
                                 </div>
 
                                 <div class="flex items-center">
@@ -700,7 +696,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 text-gray-300">{{ _('Launch Support & Revisions') }}</span>
+                                    <span class="mx-4 text-gray-400">{{ _('Launch Support & Revisions') }}</span>
                                 </div>
 
                                 <!-- <div class="flex items-center">
@@ -708,7 +704,7 @@
                                         <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 text-gray-300">Mobile app</span>
+                                    <span class="mx-4 text-gray-400">Mobile app</span>
                                 </div>
 
                                 <div class="flex items-center">
@@ -716,26 +712,26 @@
                                         <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 text-gray-300">Unlimited users</span>
+                                    <span class="mx-4 text-gray-400">Unlimited users</span>
                                 </div> -->
                             </div>
                         </div>
                     </div>
 
-                    <div class="max-w-sm mx-auto border rounded-lg md:mx-4 border-gray-700">
+                    <div class="max-w-sm mx-auto border rounded-lg md:mx-4 border-gray-700 bg-gray-900 hover:bg-gray-950 duration-400 ease-in-out">
                         <div class="p-6 flex flex-col">
                             <h1 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl text-white">{{ _('Web Hosting Packages') }}</h1>
 
-                            <p class="mt-4 text-gray-500 text-gray-300">
+                            <p class="mt-4 text-gray-400">
                                 {{ _('Fast, secure hosting managed by 404 Studio.') }}
                             </p>
 
-                            <h2 class="mt-4 text-2xl font-semibold text-gray-700 sm:text-3xl text-gray-300">
-                                <span class="text-base font-medium">{{ _('Starting from') }}</span> $20.00 <span
-                                    class="text-base font-medium">{{ _('/Month') }}</span>
+                            <h2 class="mt-4 text-2xl font-semibold sm:text-3xl text-accentpurple">
+                                <span class="text-base font-medium text-gray-300">{{ _('Starting from') }}</span> $20.00 <span
+                                    class="text-base font-medium text-gray-300">{{ _('/Month') }}</span>
                             </h2>
 
-                            <p class="mt-1 text-gray-500 text-gray-300">
+                            <p class="mt-1 text-gray-400">
                                 {{ _('12 Payments Yearly') }}
                             </p>
 
@@ -760,7 +756,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 text-gray-300">{{ _('SSL + security updates') }}</span>
+                                    <span class="mx-4 text-gray-400">{{ _('SSL + security updates') }}</span>
                                 </div>
 
                                 <div class="flex items-center">
@@ -771,7 +767,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 text-gray-300">{{ _('Weekly backups') }}</span>
+                                    <span class="mx-4 text-gray-400">{{ _('Weekly backups') }}</span>
                                 </div>
 
                                 <div class="flex items-center">
@@ -782,7 +778,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 text-gray-300">{{ _('Up to 5 email addresses') }}</span>
+                                    <span class="mx-4 text-gray-400">{{ _('Up to 5 email addresses') }}</span>
                                 </div>
 
                                 <div class="flex items-center">
@@ -793,7 +789,7 @@
                                             clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 text-gray-300">{{ _('Priority Support') }}</span>
+                                    <span class="mx-4 text-gray-400">{{ _('Priority Support') }}</span>
                                 </div>
 
                                 <!-- <div class="flex items-center">
@@ -801,7 +797,7 @@
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 text-gray-300">Mobile app</span>
+                                    <span class="mx-4 text-gray-400">Mobile app</span>
                                 </div>
 
                                 <div class="flex items-center">
@@ -809,7 +805,7 @@
                                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                                     </svg>
 
-                                    <span class="mx-4 text-gray-700 text-gray-300">Unlimited users</span>
+                                    <span class="mx-4 text-gray-400">Unlimited users</span>
                                 </div> -->
                             </div>
                         </div>
@@ -883,54 +879,54 @@
 
                         <div class="hidden">
                             <label class="block mb-2 text-sm text-gray-200">Company Code</label>
-                            {{ form.company_code(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 focus:ring focus:border-accentpurple") }}
+                            {{ form.company_code(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 focus:border-accentpurple focus-visible:border-accentpurple") }}
                         </div>
 
                         <div class="-mx-2 md:items-center md:flex">
                             <div class="flex-1 px-2 mt-4">
                             <label class="block mb-2 text-sm text-gray-200">{{ _('First Name') }}</label>
-                            {{ form.first_name(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
+                            {{ form.first_name(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:border-accentpurple focus-visible:border-accentpurple") }}
                             </div>
 
                             <div class="flex-1 px-2 mt-4">
                             <label class="block mb-2 text-sm text-gray-200">{{ _('Last Name') }}</label>
-                            {{ form.last_name(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
+                            {{ form.last_name(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:border-accentpurple focus-visible:border-accentpurple") }}
                             </div>
                         </div>
 
                         <div class="-mx-2 md:items-center md:flex">
                             <div class="flex-1 px-2 mt-4">
                                 <label class="block mb-2 text-sm text-gray-200">{{ _('Email address') }}</label>
-                                {{ form.email(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
+                                {{ form.email(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:border-accentpurple focus-visible:border-accentpurple") }}
                             </div>
 
                             <div class="flex-1 px-2 mt-4">
                                 <label class="block mb-2 text-sm text-gray-200">{{ _('Company Name') }}</label>
-                                {{ form.company(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
+                                {{ form.company(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:border-accentpurple focus-visible:border-accentpurple") }}
                             </div>
                         </div>
 
                         <div class="-mx-2 md:items-center md:flex">
                             <div class="flex-1 px-2 mt-4">
                                 <label class="block mb-2 text-sm text-gray-200">{{ _('Business Type / Area') }}</label>
-                                {{ form.business_type(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
+                                {{ form.business_type(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:border-accentpurple focus-visible:border-accentpurple") }}
 
                             </div>
 
                             <div class="flex-1 px-2 mt-4">
                                 <label class="block mb-2 text-sm text-gray-200">{{ _('Service Interested In') }}</label>
-                                {{ form.service(class="block w-full px-5 py-2.5 mt-2 text-gray-700 border border-gray-200 rounded-lg bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus:border-accentpurple focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40")}}
+                                {{ form.service(class="block w-full px-5 py-2.5 mt-2 text-gray-700 border border-gray-200 rounded-lg bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus-visible:border-accentpurple")}}
                             </div>
                         </div>
 
                         <div class="mt-4">
                             <label class="block mb-2 text-sm text-gray-200">{{ _('Subject') }}</label>
-                            {{ form.subject(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
+                            {{ form.subject(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:border-accentpurple focus-visible:border-accentpurple") }}
                         </div>
 
                         <div class="w-full mt-4">
                             <label class="block mb-2 text-sm text-gray-200">{{ _('Message') }}</label>
-                            {{ form.message(class="block w-full h-32 px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:ring focus:border-accentpurple") }}
+                            {{ form.message(class="block w-full h-32 px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:border-accentpurple focus-visible:border-accentpurple") }}
                         </div>
 
                         <button
@@ -1024,17 +1020,21 @@
 </script>
 <script>
     document.querySelectorAll('.group').forEach(card => {
-        const video = card.querySelector('video');
-        card.addEventListener('mouseenter', () => {
-            if (video) {
-                video.currentTime = 0;
-                video.play();
-            }
-        });
-        card.addEventListener('mouseleave', () => {
-            if (video) video.pause();
-        });
+    const img = card.querySelector('img[data-animated]');
+
+    if (!img) return;
+
+    const staticSrc = img.getAttribute('data-static');
+    const animatedSrc = img.getAttribute('data-animated');
+
+    card.addEventListener('mouseenter', () => {
+      img.src = animatedSrc;
     });
+
+    card.addEventListener('mouseleave', () => {
+      img.src = staticSrc;
+    });
+  });
 </script>
 
 {% endblock %}
