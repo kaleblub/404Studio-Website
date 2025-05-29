@@ -587,6 +587,9 @@
   .w-1 {
     width: calc(var(--spacing) * 1);
   }
+  .w-1\/2 {
+    width: calc(1/2 * 100%);
+  }
   .w-1\/3 {
     width: calc(1/3 * 100%);
   }
@@ -625,6 +628,12 @@
   }
   .w-20 {
     width: calc(var(--spacing) * 20);
+  }
+  .w-25 {
+    width: calc(var(--spacing) * 25);
+  }
+  .w-28 {
+    width: calc(var(--spacing) * 28);
   }
   .w-32 {
     width: calc(var(--spacing) * 32);
@@ -990,6 +999,9 @@
   .bg-gray-50 {
     background-color: var(--color-gray-50);
   }
+  .bg-gray-300 {
+    background-color: var(--color-gray-300);
+  }
   .bg-gray-700 {
     background-color: var(--color-gray-700);
   }
@@ -1046,6 +1058,9 @@
   }
   .p-8 {
     padding: calc(var(--spacing) * 8);
+  }
+  .px-1 {
+    padding-inline: calc(var(--spacing) * 1);
   }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
@@ -1468,6 +1483,22 @@
       color: var(--color-white);
     }
   }
+  .peer-checked\/desktop\:translate-x-0 {
+    &:is(:where(.peer\/desktop):checked ~ *) {
+      --tw-translate-x: calc(var(--spacing) * 0);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .peer-checked\/desktop\:bg-accentpurple {
+    &:is(:where(.peer\/desktop):checked ~ *) {
+      background-color: var(--color-accentpurple);
+    }
+  }
+  .peer-checked\/desktop\:text-white {
+    &:is(:where(.peer\/desktop):checked ~ *) {
+      color: var(--color-white);
+    }
+  }
   .peer-checked\/dev\:translate-x-0 {
     &:is(:where(.peer\/dev):checked ~ *) {
       --tw-translate-x: calc(var(--spacing) * 0);
@@ -1497,6 +1528,22 @@
   }
   .peer-checked\/host\:text-white {
     &:is(:where(.peer\/host):checked ~ *) {
+      color: var(--color-white);
+    }
+  }
+  .peer-checked\/mobile\:translate-x-full {
+    &:is(:where(.peer\/mobile):checked ~ *) {
+      --tw-translate-x: 100%;
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .peer-checked\/mobile\:bg-accentpurple {
+    &:is(:where(.peer\/mobile):checked ~ *) {
+      background-color: var(--color-accentpurple);
+    }
+  }
+  .peer-checked\/mobile\:text-white {
+    &:is(:where(.peer\/mobile):checked ~ *) {
       color: var(--color-white);
     }
   }

@@ -1,22 +1,88 @@
+/* Standard wrapper shared between laptop and phone */
 .mockup {
   position: relative;
   width: 100%;
   margin: 0 auto;
 }
 
+@media (min-width: 767px) {
+  .mockup {
+    max-width: 90%;
+  }
+  .mobile-mockup .mockup {
+    max-width: 30%;
+  }
+  #mobileMockup {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* Optionally target the parent wrapper too */
+  .mobile-mockup {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+@media (max-width: 767px) {
+  .mobile-mockup .mockup {
+    max-width: 68%;
+  }
+}
+
+/* Artwork inside laptop (already defined) */
 .artwork {
   position: absolute;
   width: 70%;
   height: 83%;
   top: 6%;
   left: 15%;
-  overflow: scroll;
+  overflow-y: scroll;
   transition: transform 0.5s ease-in-out;
   transform-origin: bottom right;
 }
 
-@media (min-width: 767px) {
-  .mockup {
-    max-width: 90%;
-  }
+/* PHONE-specific overrides */
+.phone-artwork {
+  position: absolute;
+  width: 88%;
+  height: 94%;
+  top: 3%;
+  left: 5.5%;
+  overflow: scroll;
+  border-radius: 1rem;
+  transition: transform 0.5s ease-in-out;
+  transform-origin: bottom right;
+}
+
+.phone-artwork {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.phone-artwork::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.artwork::-webkit-scrollbar,
+.phone-artwork::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.artwork::-webkit-scrollbar-thumb,
+.phone-artwork::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4); /* Or a color that fits your design */
+  border-radius: 10px; /* This is what gives it the rounded ends */
+}
+
+.artwork::-webkit-scrollbar-track,
+.phone-artwork::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.mockup-wrapper {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }

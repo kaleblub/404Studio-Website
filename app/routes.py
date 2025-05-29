@@ -173,8 +173,42 @@ def pricing(lang):
         return redirect(url_for('main.pricing', lang='en'))
     return render_template('pricing.html')
 
+
+projects = [
+    {
+        "title": "Balanced Accountant",
+        "description": "Migrated from Squarespace to a modern custom design and built from scratch with Flask, HTML5, Tailwindcss, and JavaScript.",
+        "tech": [
+            ("HTML5", "html-5-2.png"),
+        ],
+        "link": "https://balancedaccountant.com/",
+        "desktop_mockup": "balanced-accountant-home-page-mockup.png",
+        "mobile_mockup": "balanced-accountant-home-page-mobile-mockup.png",
+    },
+    {
+        "title": "Woven Dignity",
+        "description": "Woven Dignity is a non-profit organization specializing in handmade cards, with the main focus being to provide refugee women with hope and empowerment through sustainable work.",
+        "tech": [
+            ("Square Online", "Square_Jewel_White.svg"),
+        ],
+        "link": "https://wovendignity.com/",
+        "desktop_mockup": "woven-dignity-home-page-mockup.png",
+        "mobile_mockup": "woven-dignity-home-page-mobile-mockup.png",
+    },
+    {
+        "title": "ILCA Bejaia",
+        "description": "ILCA Bejaia is an International Learning Center in Algeria offering language courses and learning resources.",
+        "tech": [
+            ("HTML5", "html-5-2.png"),
+        ],
+        "link": "https://ilcabejaia.com/",
+        "desktop_mockup": "ilca-bejaia-home-page-mockup.png",
+        "mobile_mockup": "woven-dignity-home-page-mobile-mockup.png",
+    }
+]
+
 @main.route('/<lang>/portfolio')
 def portfolio(lang):
     if lang not in ['en', 'es']:
         return redirect(url_for('main.portfolio', lang='en'))
-    return render_template('portfolio.html')
+    return render_template('portfolio.html', projects=projects)
