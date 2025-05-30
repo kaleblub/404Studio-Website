@@ -211,7 +211,7 @@
             <script>(() => { var l = (s, i, o) => { let r = async () => { await (await s())() }, t = typeof i.value == "object" ? i.value : void 0, c = { rootMargin: t == null ? void 0 : t.rootMargin }, n = new IntersectionObserver(e => { for (let a of e) if (a.isIntersecting) { n.disconnect(), r(); break } }, c); for (let e of o.children) n.observe(e) }; (self.Astro || (self.Astro = {})).visible = l; window.dispatchEvent(new Event("astro:visible")); })();</script>
             <!-- Portfolio Item -->
             {% for project in projects %}
-            <astro-island uid="1tM9LM" prefix="r0" component-url="/_astro/TemplateBlock.BehvWR5m.js"
+            <astro-island id="{{ project.id }}" uid="1tM9LM" prefix="r0" component-url="/_astro/TemplateBlock.BehvWR5m.js"
                 component-export="default" renderer-url="/_astro/client.BfozEI4p.js"
                 props="{&quot;template&quot;:[0,{&quot;priority&quot;:[0,1],&quot;name&quot;:[0,&quot;ampire&quot;],&quot;title&quot;:[0,&quot;Modern Sass website&quot;],&quot;screenshots&quot;:[1,[[0,&quot;/templates/ampire/ampire-cover.webp&quot;],[0,&quot;/templates/ampire/ampire-cover-9.webp&quot;],[0,&quot;/templates/ampire/ampire-cover-3.webp&quot;]]],&quot;shortDescription&quot;:[0,&quot;Ampire is a modern and complete Tailwind CSS template ideal for any SaaS business or startup.&quot;],&quot;purchaseLink&quot;:[0,&quot;https://tailus.lemonsqueezy.com/buy/d9d74f3f-9378-497a-9698-fbdacc93f0e0&quot;],&quot;previewLink&quot;:[0,&quot;https://ampire.tailus.io/&quot;],&quot;price&quot;:[0,&quot;From $19.99&quot;],&quot;rating&quot;:[0,{&quot;rate&quot;:[0,5],&quot;count&quot;:[0,32]}],&quot;stack&quot;:[1,[[0,&quot;html&quot;]]]}],&quot;slug&quot;:[0,&quot;ampire&quot;]}"
                 ssr="" client="visible" opts="{&quot;name&quot;:&quot;TemplateGallery&quot;,&quot;value&quot;:true}"
@@ -272,7 +272,7 @@
 
                                 <!-- Selector Background -->
                                 <span class="absolute top-0 left-0 h-full w-1/2 rounded-full transition-all duration-300 ease-[cubic-bezier(0.18,0.89,0.32,1.28)]
-                                peer-checked/desktop:bg-accentpurple peer-checked/desktop:translate-x-0
+                                peer-checked/desktop:bg-primaryorange peer-checked/desktop:translate-x-0
                                 peer-checked/mobile:bg-accentpurple peer-checked/mobile:translate-x-full z-0"></span>
                             </div>
 

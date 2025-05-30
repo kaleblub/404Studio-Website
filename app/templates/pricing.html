@@ -43,6 +43,64 @@
   .section-heading {
     position: relative;
   }
+
+  .selectable-card {
+    transition:
+      transform 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 0.15s cubic-bezier(0.4, 0, 0.2, 1),
+      border-color 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border: 1px solid #444;
+    box-shadow: none;
+  }
+
+  .selectable-card:hover {
+    transform: scale(1.03);
+    border-color: #7f60f957;
+    /* hover orange */
+    box-shadow: 0px 0px 10px #8062f95c;
+  }
+
+  /* On mousedown (click start), shrink slightly and brighten glow */
+  .selectable-card.active {
+    animation: clickBounce 0.3s forwards;
+    border-color: #EFB071;
+    /* brighter orange */
+    box-shadow: 0 0 15px 4px #efb0718a;
+    transform: scale(0.97);
+  }
+
+  .selectable-card.selected {
+    border-color: #EFB071;
+    /* brighter orange */
+    box-shadow: 0 0 15px 4px #efb0718a;
+    transform: scale(1.03);
+  }
+  /* Show on small screens only */
+.mobile-cta {
+  @apply fixed bottom-0 left-0 w-full bg-[#141726] p-4 z-50 sm:hidden;
+}
+
+/* Show on screens md and up */
+.desktop-cta {
+  @apply hidden md:block fixed top-20 right-10 w-48 bg-[#141726] p-4 rounded-lg shadow z-50;
+}
+
+
+
+  @keyframes clickBounce {
+    0% {
+      transform: scale(0.97);
+    }
+
+    60% {
+      transform: scale(1.05);
+    }
+
+    100% {
+      transform: scale(1.03);
+    }
+  }
 </style>
 {% endblock extra_head %}
 {% block content %}
@@ -55,98 +113,134 @@
       {{ _('Choose your focus: Development, Hosting, or Both.') }}
     </p>
 
-  <div class="w-[400px] pb-10 text-gray-900 mx-auto mt-8 rounded-lg shadow-lg">
-    
-    <!-- Switch Toggle -->
-    <div class="relative h-10 w-full max-w-[300px] mx-auto rounded-full bg-gray-900 flex text-sm font-semibold text-gray-300">
-      
-      <!-- Option: Development -->
-      <input id="btn-development" type="radio" name="pricing" value="development"
-             class="peer/dev hidden" onclick="showPricing('development')" />
-      <label for="btn-development"
-             class="w-1/3 text-center leading-10 cursor-pointer z-10 peer-checked/dev:text-white">
-        {{ _('Development') }}
-      </label>
+    <div class="w-[400px] pb-10 text-gray-900 mx-auto mt-8 rounded-lg shadow-lg">
 
-      <!-- Option: Hosting -->
-      <input id="btn-hosting" type="radio" name="pricing" value="hosting"
-             class="peer/host hidden" onclick="showPricing('hosting')" checked />
-      <label for="btn-hosting"
-             class="w-1/3 text-center leading-10 cursor-pointer z-10 peer-checked/host:text-white">
-        {{ _('Hosting') }}
-      </label>
+      <!-- Switch Toggle -->
+      <div
+        class="relative h-10 w-full max-w-[300px] mx-auto rounded-full bg-gray-900 flex text-sm font-semibold text-gray-300">
 
-      <!-- Option: Both -->
-      <input id="btn-both" type="radio" name="pricing" value="both"
-             class="peer/both hidden" onclick="showPricing('both')" />
-      <label for="btn-both"
-             class="w-1/3 text-center leading-10 cursor-pointer z-10 peer-checked/both:text-white">
-        {{ _('Both') }}
-      </label>
+        <!-- Option: Development -->
+        <input id="btn-development" type="radio" name="pricing" value="development" class="peer/dev hidden"
+          onclick="showPricing('development')" />
+        <label for="btn-development"
+          class="w-1/3 text-center leading-10 cursor-pointer z-10 peer-checked/dev:text-white">
+          {{ _('Development') }}
+        </label>
 
-      <!-- Selector -->
-      <span
-        class="absolute top-0 left-0 h-10 w-1/3 rounded-full transition-all duration-300 ease-[cubic-bezier(0.18,0.89,0.32,1.28)]
+        <!-- Option: Hosting -->
+        <input id="btn-hosting" type="radio" name="pricing" value="hosting" class="peer/host hidden"
+          onclick="showPricing('hosting')" checked />
+        <label for="btn-hosting" class="w-1/3 text-center leading-10 cursor-pointer z-10 peer-checked/host:text-white">
+          {{ _('Hosting') }}
+        </label>
+
+        <!-- Option: Both -->
+        <input id="btn-both" type="radio" name="pricing" value="both" class="peer/both hidden"
+          onclick="showPricing('both')" />
+        <label for="btn-both" class="w-1/3 text-center leading-10 cursor-pointer z-10 peer-checked/both:text-white">
+          {{ _('Both') }}
+        </label>
+
+        <!-- Selector -->
+        <span class="absolute top-0 left-0 h-10 w-1/3 rounded-full transition-all duration-300 ease-[cubic-bezier(0.18,0.89,0.32,1.28)]
         peer-checked/dev:bg-accentpurple peer-checked/dev:translate-x-0
         peer-checked/host:bg-accentpurple peer-checked/host:translate-x-full
-        peer-checked/both:bg-primaryorange peer-checked/both:translate-x-[200%] z-0"
-      ></span>
+        peer-checked/both:bg-primaryorange peer-checked/both:translate-x-[200%] z-0"></span>
+      </div>
     </div>
-  </div>
 
 
     <!-- Pricing Cards -->
-    <div id="pricing-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div id="pricing-container" class="flex flex-col gap-12">
       <!-- Cards will be injected via JS -->
+       <div id="cta-wrapper">
+  <div class="mobile-cta fixed bottom-0 left-0 w-full bg-[#141726] p-4 z-50 border-t border-gray-700 sm:hidden">
+    <button id="cta-button-mobile" class="w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg opacity-50 cursor-not-allowed transition duration-300">
+      Continue
+    </button>
+  </div>
+  <div class="desktop-cta hidden md:block fixed top-20 right-10 w-48 bg-[#141726] p-4 rounded-lg shadow z-50">
+    <button id="cta-button-desktop" class="w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg opacity-50 cursor-not-allowed transition duration-300">
+      Continue
+    </button>
+  </div>
+</div>
     </div>
 
-    <!-- Custom Work CTA -->
-    <div class="text-center mt-16">
-      <p class="text-gray-300 mb-4">{{ _('Need something outside of hosting or development?') }}</p>
-      <a href="{{ url_for('main.contact', lang=lang) }}" class="quidel-button">
-        <span>{{ _('Request a Custom Quote') }}</span>
-      </a>
-    </div>
+    <!-- CTA Button -->
+    <!-- <div class="text-center mt-10">
+  <button id="continue-btn" disabled
+    class="quidel-button opacity-50 cursor-not-allowed">
+    {{ _('Continue with Selected Packages') }}
+  </button>
+</div> -->
   </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="relative w-full h-[500px] bg-[#0a0c19] overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+        <img src="{{ url_for('static', filename='images/consultation-section-full-image.jpg') }}" alt="Background"
+            class="w-full h-full object-cover grayscale" />
+        <!-- Orange Overlay -->
+        <div class="absolute inset-0 bg-primaryorange opacity-30"></div>
+    </div>
+
+    <!-- Centered Card -->
+    <div class="relative z-10 flex items-center justify-center h-full">
+        <div
+            class="flex flex-col bg-[#0a0c19] text-white p-8 rounded-xl w-full max-w-2xl shadow-xl text-center items-center">
+            <h2 class="font-montserrat text-[30px] lg:text-[58px] font-semibold text-white">{{ _('Need help with a different type of digital project?') }}</h2>
+            <p class="mb-6 font-inter text-gray-300">{{ _('Schedule a free consultation now, and we will figure out a solution for you!') }}</p>
+            <a class="quidel-button" href="https://cal.com/404-studio-kaleb-humpal/30-minute-consultation-meeting?development_package=Other&hosting_plan=Other&project_details=Looking+for+a+different+service" target="_blank">
+                <span>{{ _('Discuss with Us Now') }}</span>
+            </a>
+        </div>
+    </div>
 </section>
 
 <script>
   const pricingOptions = {
-    development: [
-      {
+    development: [{
+        key: 'starter-site',
         title: "{{ _('Starter Site') }}",
         price: '$1,000+',
         desc: "{{ _('A simple but professional one-pager or brochure site.') }}",
         features: ["{{ _('Responsive design') }}", "{{ _('Up to 5 sections/pages') }}", "{{ _('Basic SEO') }}", "{{ _('1 Revision Round') }}"]
       },
       {
+        key: 'growth-website',
         title: "{{ _('Growth Website') }}",
         price: '$2,000+',
         desc: "{{ _('Ideal for businesses ready to scale with more content and structure.') }}",
         features: ["{{ _('Multi-page layout') }}", "{{ _('CMS integration') }}", "{{ _('Contact forms') }}", "{{ _('2 Revision Rounds') }}"]
       },
       {
+        key: 'pro-custom-build',
         title: "{{ _('Pro Custom Build') }}",
         price: '$3,500+',
         desc: "{{ _('Full custom development, animations, and advanced features.') }}",
         features: ["{{ _('Full-stack Flask setup') }}", "{{ _('Custom APIs') }}", "{{ _('Advanced UI/UX') }}", "{{ _('3 Revision Rounds') }}"]
       }
     ],
-    hosting: [
-      {
+    hosting: [{
+        key: 'basic-hosting',
         title: "{{ _('Basic Hosting') }}",
         price: "{{ _('$20/mo') }}",
         desc: "{{ _('Great for small websites and portfolios.') }}",
         features: ["{{ _('Free SSL') }}", "{{ _('Weekly Backups') }}", "{{ _('1 Email Address') }}", "{{ _('Basic Support') }}"]
       },
       {
+        key: 'business-hosting',
         title: "{{ _('Business Hosting') }}",
         price: "{{ _('$35/mo') }}",
         desc: "{{ _('Optimized for growing businesses.') }}",
         features: ["{{ _('Priority Support') }}", "{{ _('Daily Backups') }}", "{{ _('Up to 3 Emails') }}", "{{ _('Performance Monitoring') }}"]
       },
       {
-        title: "{{ _('Pro Hosting & Care') }}",
+        key: 'pro-hosting',
+        title: "{{ _('Pro Hosting') }}",
         price: "{{ _('$60/mo') }}",
         desc: "{{ _('All-in-one care plan for serious businesses.') }}",
         features: ["{{ _('All Business Features') }}", "{{ _('Monthly Reports') }}", "{{ _('5+ Emails') }}", "{{ _('Uptime Alerts') }}"]
@@ -155,36 +249,218 @@
     both: []
   };
 
-  pricingOptions.both = [...pricingOptions.development, ...pricingOptions.hosting];
+  let selectedDev = null;
+  let selectedHost = null;
+  let currentType = 'hosting'; // Default to hosting
 
   function showPricing(type) {
     const container = document.getElementById('pricing-container');
     container.innerHTML = '';
-    document.querySelectorAll('.toggle-btn').forEach(btn => btn.classList.remove('bg-primaryorange'));
-    document.getElementById(`btn-${type}`).classList.add('bg-primaryorange');
+    currentType = type;
+    selectedDev = null; // Reset selections when switching tabs
+    selectedHost = null;
 
-    pricingOptions[type].forEach(pkg => {
-      const card = document.createElement('div');
-      card.className = 'bg-[#141726] p-6 rounded-lg shadow border border-gray-700';
-      card.innerHTML = `
+    if (type === 'both') {
+      const devGroup = renderSelectionGroup('development', '{{ _("Development Package") }}');
+      const hostGroup = renderSelectionGroup('hosting', '{{ _("Hosting Package") }}');
+      container.appendChild(devGroup);
+      container.appendChild(hostGroup);
+    } else {
+      const groupWrapper = document.createElement('div');
+      groupWrapper.className = 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4';
+      pricingOptions[type].forEach(pkg => {
+        const card = createCardElement(pkg, type);
+        groupWrapper.appendChild(card);
+      });
+      container.appendChild(groupWrapper);
+    }
+    // Ensure CTA wrapper exists before potentially adding buttons again
+    let ctaWrapper = document.getElementById('cta-wrapper');
+    if (!ctaWrapper) {
+        ctaWrapper = document.createElement('div');
+        ctaWrapper.id = 'cta-wrapper';
+        document.getElementById('pricing-container').after(ctaWrapper); // Insert after pricing container
+    }
+    renderCTAButtons(ctaWrapper);
+    updateCTAButtonState();
+  }
+
+  function createCardElement(pkg, type) {
+    const card = document.createElement('div');
+    card.className = 'selectable-card bg-[#141726] p-6 rounded-lg shadow border border-gray-700 cursor-pointer';
+    card.dataset.type = type;
+    card.dataset.option = pkg.key;
+    card.innerHTML = `
       <h2 class="text-white text-xl font-bold mb-2">${pkg.title}</h2>
       <p class="text-gray-400 text-sm mb-2">${pkg.desc}</p>
       <h3 class="text-gray-200 text-lg mb-4">Starting from <strong>${pkg.price}</strong></h3>
       <ul class="text-sm text-gray-400 list-disc pl-5 space-y-1">
         ${pkg.features.map(f => `<li>${f}</li>`).join('')}
       </ul>
-      <a href="{{ url_for('main.contact', lang=lang) }}" class="block mt-6 quidel-button text-center">{{ _('Choose Package') }}</a>
     `;
-      container.appendChild(card);
+
+    card.addEventListener('click', () => {
+      handleCardSelection(card, type, pkg.key);
+    });
+    return card;
+  }
+
+  function handleCardSelection(card, type, option) {
+    const isSelected = card.classList.contains('selected');
+    const groupCards = document.querySelectorAll(`.selectable-card[data-type="${type}"]`);
+
+    if (isSelected) {
+      card.classList.remove('selected', 'ring-2', 'ring-primaryorange', 'active');
+      if (type === 'development') selectedDev = null;
+      else if (type === 'hosting') selectedHost = null;
+    } else {
+      groupCards.forEach(c => c.classList.remove('selected', 'ring-2', 'ring-primaryorange', 'active'));
+      card.classList.add('selected', 'ring-2', 'ring-primaryorange', 'active');
+      if (type === 'development') selectedDev = option;
+      else if (type === 'hosting') selectedHost = option;
+    }
+    updateCTAButtonState();
+  }
+
+  function renderSelectionGroup(group, heading) {
+    const section = document.createElement('div');
+    section.className = 'mb-12';
+
+    const title = document.createElement('h3');
+    title.className = 'text-white text-lg font-semibold mb-4';
+    title.innerText = heading;
+    section.appendChild(title);
+
+    const groupWrapper = document.createElement('div');
+    groupWrapper.className = 'grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4';
+    groupWrapper.id = `${group}-pricing`; // ✅ use group directly
+
+
+    pricingOptions[group].forEach(pkg => {
+      const card = document.createElement('div');
+      card.className = 'selectable-card bg-[#141726] p-4 rounded-lg shadow border border-gray-700 cursor-pointer';
+      card.dataset.type = group;
+      card.dataset.option = pkg.key;
+      card.innerHTML = `
+        <h2 class="text-white text-xl font-bold mb-2">${pkg.title}</h2>
+        <p class="text-gray-400 text-sm mb-2">${pkg.desc}</p>
+        <h3 class="text-gray-200 text-lg mb-4">Starting from <strong>${pkg.price}</strong></h3>
+        <ul class="text-sm text-gray-400 list-disc pl-5 space-y-1">
+          ${pkg.features.map(f => `<li>${f}</li>`).join('')}
+        </ul>
+      `;
+      card.addEventListener('click', () => {
+        handleCardSelection(card, group, pkg.key);
+      });
+      groupWrapper.appendChild(card);
+    });
+    section.appendChild(groupWrapper);
+    return section;
+  }
+
+  function updateCTAButtonState() {
+    const btnMobile = document.getElementById('cta-button-mobile');
+    const btnDesktop = document.getElementById('cta-button-desktop');
+    let isEnabled = false;
+
+    if (currentType === 'both') {
+      isEnabled = selectedDev !== null && selectedHost !== null;
+    } else {
+      isEnabled = selectedDev !== null || selectedHost !== null;
+    }
+
+    [btnMobile, btnDesktop].forEach(btn => {
+      if (btn) {
+        btn.disabled = !isEnabled;
+        btn.classList.toggle('opacity-50', !isEnabled);
+        btn.classList.toggle('cursor-not-allowed', !isEnabled);
+        btn.classList.toggle('bg-indigo-600', isEnabled);
+        btn.classList.toggle('cursor-pointer', isEnabled);
+      }
     });
   }
 
-  window.onload = () => showPricing('development');
-</script>
+  function generateCalUrl() {
+    const baseUrl = 'https://cal.com/404-studio-kaleb-humpal/30-minute-consultation-meeting';
+    const params = new URLSearchParams();
 
+    const developmentIdentifier = 'development_package';
+    const hostingIdentifier = 'hosting_plan';
+    const projectDetailsIdentifier = 'project_details';
+
+    if (selectedDev) {
+      const selectedDevTitle = pricingOptions.development.find(p => p.key === selectedDev)?.title || selectedDev;
+      console.log('Before appending development:', developmentIdentifier, selectedDevTitle);
+      params.append(developmentIdentifier, selectedDevTitle);
+      console.log('After appending development:', params.toString());
+    } else {
+      console.log('selectedDev is null or undefined, not appending development parameter.');
+    }
+
+    if (selectedHost) {
+      const selectedHostTitle = pricingOptions.hosting.find(p => p.key === selectedHost)?.title || selectedHost;
+      params.append(hostingIdentifier, selectedHostTitle);
+    }
+
+    const queryString = params.toString();
+    return queryString ? `${baseUrl}?${queryString}` : baseUrl;
+  }
+
+  function renderCTAButtons(container) {
+    container.innerHTML = `
+      <div class="mobile-cta fixed bottom-0 left-0 w-full bg-[#141726] p-4 z-50 border-t border-gray-700 sm:hidden">
+        <button id="cta-button-mobile" class="w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg opacity-50 cursor-not-allowed transition duration-300">Continue</button>
+      </div>
+      <div class="desktop-cta hidden md:block fixed bottom-20 right-10 w-48 bg-[#141726] p-4 rounded-lg shadow z-50">
+        <h4 class="text-white text-xl font-bold mb-2">Ready with your selection?</h4>
+        <button id="cta-button-desktop" class="w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg opacity-50 cursor-not-allowed transition duration-300">Continue</button>
+      </div>
+    `;
+
+    const btnMobile = document.getElementById('cta-button-mobile');
+    const btnDesktop = document.getElementById('cta-button-desktop');
+
+    if (btnMobile) {
+      btnMobile.addEventListener('click', () => {
+        if (!btnMobile.disabled) {
+          window.open(generateCalUrl(), '_blank');
+        }
+      });
+    }
+
+    if (btnDesktop) {
+      btnDesktop.addEventListener('click', () => {
+        if (!btnDesktop.disabled) {
+          window.open(generateCalUrl(), '_blank');
+        }
+      });
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const type = urlParams.get('type');
+
+    if (type === 'development' || type === 'hosting' || type === 'both') {
+      const btn = document.getElementById(`btn-${type}`);
+      if (btn) {
+        btn.checked = true;
+        showPricing(type);
+      }
+    } else {
+      // Default selected (fallback)
+      showPricing('hosting');
+    }
+  });
+
+</script>
+<style>
+  /* Existing styles remain the same */
+</style>
 <style>
   .toggle-btn {
     @apply text-white border border-primaryorange px-4 py-2 mx-2 rounded hover:bg-primaryorange transition;
   }
 </style>
+
 {% endblock %}

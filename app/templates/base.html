@@ -9,9 +9,11 @@
   <title>404 Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/tailwind-styles.css') }}">
-  
+
   <link rel="icon" href="{{ url_for('static', filename='images/icons/404.ico') }}">
   <!-- Page Specific Styles -->
   {% block extra_head %}
@@ -27,35 +29,101 @@
   </script>
   <style>
     .underlined-footer {
-        position: relative;
-        display: inline-block;
-        z-index: 1;
+      position: relative;
+      display: inline-block;
+      z-index: 1;
     }
+
     .underlined-footer::after {
-        content: "";
-        position: absolute;
-        bottom: -10px;
-        /* Adjust as needed */
-        left: 0;
-        width: 100%;
-        height: 20px;
-        /* Adjust to match the SVG */
-        background-image: url("{{ url_for('static', filename='images/underlines/footer-underline.svg') }}");
-        background-repeat: no-repeat;
-        background-size: contain;
-        z-index: -1;
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      /* Adjust as needed */
+      left: 0;
+      width: 100%;
+      height: 20px;
+      /* Adjust to match the SVG */
+      background-image: url("{{ url_for('static', filename='images/underlines/footer-underline.svg') }}");
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: -1;
     }
+
     #menu-wrapper.open .top-line {
       transform: rotate(45deg);
-      top: 1.25rem; /* top-3.5 */
+      top: 1.25rem;
+      /* top-3.5 */
     }
+
     #menu-wrapper.open .middle-line {
       opacity: 0;
     }
+
     #menu-wrapper.open .bottom-line {
       transform: rotate(-45deg);
-      top: 1.25rem; /* top-3.5 */
+      top: 1.25rem;
+      /* top-3.5 */
     }
+
+    /* --------------------- Navigation --------------------- */
+    .navigation {
+      position: relative;
+      display: table;
+    }
+
+    .nav-item {
+      font-family: 'Anton SC', sans-serif;
+      color: var(--contrast-blue);
+      text-decoration: none;
+    }
+
+    .nav-link:hover {
+      color: #3f4b67;
+    }
+
+    .user-account-link .account-link {
+      text-decoration: none;
+      color: #000000;
+    }
+
+    .skip-link {
+      display: none;
+    }
+
+    .nav-item.active a {
+      position: relative;
+      color: #3f4b67;
+    }
+
+    .slippery {
+      position: absolute;
+      height: 2px;
+      transform: scaleX(1);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .dropdown-menu {
+      background-color: #ffffff52;
+      min-width: 0;
+      padding: 0;
+    }
+
+    .dropdown-item {
+      padding: .25rem 1rem;
+      color: var(--contrast-blue)
+    }
+
+    #langDropdownMenu,
+    #mobileLangMenu {
+      display: none;
+    }
+
+    #langDropdownMenu.show,
+    #mobileLangMenu.show {
+      display: block;
+    }
+
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -63,99 +131,66 @@
 </head>
 
 <body class="bg-[#0a0c19] text-white overflow-x-hidden">
-
-  <!-- Navigation -->
-  <nav class="bg-[#0a0c19] shadow-md p-4 w-full">
-    <div class="container mx-auto flex justify-between items-center">
+  <header>
+    <div class="flex flex-wrap items-center justify-between px-6 py-4">
       <!-- Logo -->
-      <a href="{{ url_for('main.home', lang=lang) }}" class="cursor-pointer">
-        <img src="{{ url_for('static', filename='images/404studiologo.svg') }}" alt="404 Studio Logo" class="h-10 lg:h-15">
-      </a>
-
-      <!-- Desktop Menu -->
-      <ul class="hidden md:flex space-x-6 items-center font-poppins">
-        <li><a href="{{ url_for('main.home', lang=lang) }}" class="hover:text-primaryorange">{{ _('Home') }}</a></li>
-        <li><a href="{{ url_for('main.about', lang=lang) }}" class="hover:text-primaryorange">{{ _('About') }}</a></li>
-
-        <!-- Services Dropdown -->
-        <li class="relative group">
-          <a href="{{ url_for('main.services', lang=lang) }}" class="hover:text-primaryorange flex items-center">
-            {{ _('Services') }}
-            <!-- <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
-            </svg> -->
+      <div class="w-full md:w-auto mb-4 md:mb-0">
+        <a href="{{ url_for('main.home', lang=lang) }}" class="cursor-pointer">
+          <img src="{{ url_for('static', filename='images/404studiologo.svg') }}" alt="404 Studio Logo"
+            class="h-10 lg:h-15">
+        </a>
+      </div>
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex items-center space-x-6">
+        {% for page, label in [('main.home', 'Home'), ('main.about', 'About'), ('main.services', 'Services'), ('main.portfolio', 'Portfolio'), ('main.pricing', 'Pricing'), ('main.contact', 'Contact')] %}
+          <a href="{{ url_for(page, lang=lang) }}" class="relative group {% if request.path == url_for(page, lang=lang) %}text-primaryorange{% endif %}">
+            <span class="text-white">{{ _(label) }}</span>
+            <span class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <!-- <ul id="services-dropdown" class="absolute hidden group-hover:block shadow-lg py-2 w-48 border rounded-lg z-10">
-            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">1</a></li>
-            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">2</a></li>
-            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">3</a></li>
-            <li><a href="#" class="block px-4 py-2 hover:bg-gray-100">4</a></li>
-          </ul> -->
-        </li>
-        <li><a href="{{ url_for('main.portfolio', lang=lang) }}">{{ _('Portfolio') }}</a></li>
+        {% endfor %}
 
-        <li><a href="{{ url_for('main.pricing', lang=lang) }}" class="hover:text-primaryorange">{{ _('Pricing') }}</a></li>
-        <li><a href="{{ url_for('main.contact', lang=lang) }}" class="hover:text-primaryorange">{{ _('Contact') }}</a></li>
-        <div class="dropdown" style="display:inline-block; position:relative;">
-    <button id="langDropdownBtn" type="button" aria-haspopup="true" aria-expanded="false" onclick="toggleDropdown()">
-      {{ ('Language') }}
-    </button>
-    <div id="langDropdownMenu" style="display:none; position:absolute; background:#fff; border:1px solid #ccc; margin-top:2px; min-width:100px; z-index:1000;">
-      <a href="{{ url_for('main.set_language', lang_code='en') }}" style="display:block; padding:5px 10px; text-decoration:none; color:{{ 'black' if lang != 'en' else 'gray' }};">
-        English
-      </a>
-      <a href="{{ url_for('main.set_language', lang_code='es') }}" style="display:block; padding:5px 10px; text-decoration:none; color:{{ 'black' if lang != 'es' else 'gray' }};">
-        Español
-      </a>
-    </div>
-  </div>
-        <!-- <li>
-          <a class="quidel-button">
-            <span>{{ _('Schedule Consultation') }}</span>
+        <!-- Desktop Language Dropdown -->
+        <div class="relative">
+          <a onclick="toggleDropdown('langDropdownMenu')" id="langDropdownBtn" type="button" class="relative group cursor-pointer">
+            <span>{{ _('Language') }}</span>
+            <span class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
           </a>
-        </li> -->
-      </ul>
+          <div id="langDropdownMenu" class="absolute mt-2 w-32 bg-white text-black rounded-md shadow-lg hidden z-10">
+            <a href="{{ url_for('main.set_language', lang_code='en') }}" class="block px-4 py-2 hover:bg-gray-100 {% if lang == 'en' %}text-gray-400{% endif %}">English</a>
+            <a href="{{ url_for('main.set_language', lang_code='es') }}" class="block px-4 py-2 hover:bg-gray-100 {% if lang == 'es' %}text-gray-400{% endif %}">Español</a>
+          </div>
+        </div>
+      </nav>
 
       <!-- Mobile Menu Button -->
-      <div id="menu-wrapper" class="md:hidden">
-        <button id="mobile-menu-button" class="relative w-6 h-6">
-          <span class="top-line absolute h-0.75 w-8 right-1 top-1 transition-transform duration-300 rounded-lg bg-white"></span>
-          <span class="middle-line absolute h-0.75 w-8 right-1 top-3.5 transition-opacity duration-300 rounded-lg bg-white"></span>
-          <span class="bottom-line absolute h-0.75 w-8 right-1 top-6 transition-transform duration-300 rounded-lg bg-white"></span>
+      <div class="md:hidden">
+        <button id="mobile-menu-button" class="flex flex-col space-y-1.5">
+          <span class="w-8 h-0.5 bg-white rounded"></span>
+          <span class="w-8 h-0.5 bg-white rounded"></span>
+          <span class="w-8 h-0.5 bg-white rounded"></span>
         </button>
-      </div>      
+      </div>
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-black shadow-md p-4 w-full font-poppins">
-      <ul class="space-y-4 text-white">
-        <li><a href="{{ url_for('main.home', lang=lang) }}" class="block">{{ _('Home') }}</a></li>
-        <li><a href="{{ url_for('main.about', lang=lang) }}" class="block">{{ _('About') }}</a></li>
-
-        <!-- Mobile Services Dropdown -->
-        <li class="relative">
-          <a href="{{ url_for('main.services', lang=lang) }}" class="flex justify-between w-full text-left">
-            {{ _('Services') }}
-            <!-- <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
-            </svg> -->
-          </a>
-          <!-- <ul id="mobile-services-dropdown" class="hidden bg-black mt-2 py-2 w-48 rounded-lg z-10">
-          </ul> -->
-        </li>
-        
-        <li><a href="{{ url_for('main.portfolio', lang=lang) }}">{{ _('Portfolio') }}</a></li>
-        <li><a href="{{ url_for('main.pricing', lang=lang) }}" class="block">{{ _('Pricing') }}</a></li>
-        <li><a href="{{ url_for('main.contact', lang=lang) }}" class="block">{{ _('Contact') }}</a></li>
-        <!-- <li><a href="#" class="block hover:text-primaryorange">Blog</a></li> -->
-        <!-- <li>
-          <button href="#" class="quidel-button inverted block">
-            Schedule Consultation
-          </button>
-        </li> -->
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 font-poppins bg-[#0a0c19]">
+      <ul class="space-y-4">
+        {% for page, label in [('main.home', 'Home'), ('main.about', 'About'), ('main.services', 'Services'), ('main.portfolio', 'Portfolio'), ('main.pricing', 'Pricing'), ('main.contact', 'Contact')] %}
+          <li><a href="{{ url_for(page, lang=lang) }}" class="block hover:underline">{{ _(label) }}</a></li>
+        {% endfor %}
+        <!-- Mobile Language Dropdown -->
+<li class="relative">
+  <button onclick="toggleDropdown('mobileLangMenu')" id="mobileLangBtn" type="button" class="block w-full text-left">
+    {{ _('Language') }}
+  </button>
+  <div id="mobileLangMenu" class="hidden mt-2 bg-white text-black rounded-md shadow-md">
+    <a href="{{ url_for('main.set_language', lang_code='en') }}" class="block px-4 py-2 hover:bg-gray-100 {% if lang == 'en' %}text-gray-400{% endif %}">English</a>
+    <a href="{{ url_for('main.set_language', lang_code='es') }}" class="block px-4 py-2 hover:bg-gray-100 {% if lang == 'es' %}text-gray-400{% endif %}">Español</a>
+  </div>
+</li>
       </ul>
     </div>
-  </nav>
+  </header>
 
   <main class="max-w-screen mx-auto">
     {% block content %}
@@ -169,10 +204,12 @@
         <div class="col-span-full 2xl:col-span-2 lg:mb-0 flex items-center flex-col 2xl:items-start">
           <!-- Logo -->
           <a href="{{ url_for('main.home', lang=lang) }}" class="cursor-pointer">
-            <img src="{{ url_for('static', filename='images/404studiologo.svg') }}" alt="404 Studio Logo" class="h-10 lg:h-15">
+            <img src="{{ url_for('static', filename='images/404studiologo.svg') }}" alt="404 Studio Logo"
+              class="h-10 lg:h-15">
           </a>
           <div class="flex items-center justify-between w-full max-w-xl mx-auto flex-col  2xl:flex-col 2xl:items-start">
-            <p class="pt-5 text-sm lg:max-w-xs text-center lg:text-left">{{ _('Helping businesses transform their digital presence \nCustom web solutions that drive real growth and lasting impact.') }}</p>
+            <p class="pt-5 text-sm lg:max-w-xs text-center lg:text-left">{{ _('Helping businesses transform their
+              digital presence \nCustom web solutions that drive real growth and lasting impact.') }}</p>
           </div>
         </div>
         <!--End Col-->
@@ -191,6 +228,12 @@
             <li>
               <a href="{{ url_for('main.contact', lang=lang) }}" class="hover:text-primaryorange">{{ _('Contact') }}</a>
             </li>
+            <li>
+              <a href="{{ url_for('main.services', lang=lang) }}" class="hover:text-primaryorange">{{ _('Services') }}</a>
+            </li>
+            <li>
+              <a href="{{ url_for('main.portfolio', lang=lang) }}" class="hover:text-primaryorange">{{ _('Portfolio') }}</a>
+            </li>
           </ul>
         </div>
         <!--End Col-->
@@ -198,13 +241,14 @@
           <h4 class="text-lg font-medium mb-4 mt-7">{{ _('Latest Work') }}</h4>
           <ul class="text-sm  transition-all duration-500">
             <li class="mb-3">
-              <a href="https://wovendignity.com" target="_blank" class="hover:text-primaryorange">Woven Dignity</a>
+              <a href="{{ url_for('main.portfolio', lang=lang) }}#woven-dignity" class="hover:text-primaryorange">Woven Dignity</a>
             </li>
             <li class="mb-3">
-              <a href="https://ilcabejaia.com" target="_blank" class="hover:text-primaryorange">ILCABejaia</a>
+              <a href="{{ url_for('main.portfolio', lang=lang) }}#ilca-bejaia" class="hover:text-primaryorange">ILCABejaia</a>
             </li>
             <li class="mb-3">
-              <a href="https://balancedaccountant.com" target="_blank" class="hover:text-primaryorange">Balanced Accountant</a>
+              <a href="{{ url_for('main.portfolio', lang=lang) }}#balanced-accountant" class="hover:text-primaryorange">Balanced
+                Accountant</a>
             </li>
           </ul>
         </div>
@@ -216,7 +260,7 @@
               <a href="javascript:;" class="hover:text-primaryorange">{{ _('FAQs') }}</a>
             </li>
             <li class="mb-3">
-              <a href="javascript:;" class="hover:text-primaryorange">{{ _('Schedule Appointment') }}</a>
+              <a href="https://cal.com/404-studio-kaleb-humpal/30-minute-consultation-meeting?development_package=Not+Sure+Yet&hosting_plan=Not+Sure+Yet&project_details=Free Consultation" target="_blank" class="hover:text-primaryorange">{{ _('Schedule Appointment') }}</a>
             </li>
             <li>
               <a href="{{ url_for('main.contact', lang=lang) }}" class="hover:text-primaryorange">{{ _('Contact') }}</a>
@@ -228,7 +272,8 @@
           <h4 class="text-lg font-bold mb-4 mt-7 text-[20px]">{{ _('Ready to build?') }}</h4>
           <ul class="text-sm  transition-all duration-500">
             <li class="mb-3">
-              <p class=" hover:text-primaryorange">{{ _("Let's start with a discovery call — We'll map your vision and bring your website to life!") }}</a>
+              <p class=" hover:text-primaryorange">{{ _("Let's start with a discovery call — We'll map your vision and
+                bring your website to life!") }}</a>
             </li>
             <li>
               <button class="quidel-button">
@@ -240,19 +285,20 @@
       </div>
       <!--Grid-->
       <div class="py-7 border-t border-gray-200">
-  <div class="flex items-center justify-center flex-col lg:justify-between lg:flex-row">
-    <div class="text-center lg:text-left">
-      <span class="text-sm text-gray-500 block">© <a href="#">404 Studio</a> {{ _('2025, All rights reserved.') }}</span>
-      <span class="text-xs text-gray-400 block mt-1">
-        {{ _('Icons created by ') }}
-        <a href="https://www.flaticon.com/authors/smalllikeart" title="smalllikeart">smalllikeart</a>, 
-        <a href="https://www.flaticon.com/authors/chip-icons" title="Chip Icons">Chip Icons</a>, 
-        <a href="https://www.flaticon.com/authors/hajicon" title="HAJICON">HAJICON</a>, 
-        <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> — 
-        {{ _('from ') }}<a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>
-      </span>
-    </div>
-    <div class="flex mt-4 space-x-4 sm:justify-center lg:mt-0">
+        <div class="flex items-center justify-center flex-col lg:justify-between lg:flex-row">
+          <div class="text-center lg:text-left">
+            <span class="text-sm text-gray-500 block">© <a href="#">404 Studio</a> {{ _('2025, All rights reserved.')
+              }}</span>
+            <span class="text-xs text-gray-400 block mt-1">
+              {{ _('Icons created by ') }}
+              <a href="https://www.flaticon.com/authors/smalllikeart" title="smalllikeart">smalllikeart</a>,
+              <a href="https://www.flaticon.com/authors/chip-icons" title="Chip Icons">Chip Icons</a>,
+              <a href="https://www.flaticon.com/authors/hajicon" title="HAJICON">HAJICON</a>,
+              <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> —
+              {{ _('from ') }}<a href="https://www.flaticon.com/" title="Flaticon">Flaticon</a>
+            </span>
+          </div>
+          <div class="flex mt-4 space-x-4 sm:justify-center lg:mt-0">
             <a href="javascript:;"
               class="w-9 h-9 rounded-full bg-gray-700 flex justify-center items-center hover:bg-primaryorange">
               <svg class="w-[1.25rem] h-[1.125rem] text-white" viewBox="0 0 15 15" fill="none"
@@ -280,12 +326,20 @@
                   fill="currentColor" />
               </svg>
             </a>
-            </div>
           </div>
         </div>
       </div>
     </div>
+    </div>
   </footer>
+
+  <script src="{{ url_for('static', filename='js/hoverSlippery.js') }}"></script>
+  <script>
+    // Initialize HoverSlippery
+    $('.overline').hoverSlippery({
+      overline: true,
+    });
+  </script>
 
   <!-- Scripts for mobile menu toggle -->
   <script>
@@ -294,42 +348,49 @@
       const mobileMenu = document.getElementById('mobile-menu');
       const wrapper = document.getElementById('menu-wrapper');
       const dropdown = document.getElementById('mobile-services-dropdown');
-  
+
       mobileMenuButton.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
         wrapper.classList.toggle('open'); // toggle class to animate burger
       });
-  
+
       window.toggleDropdownMobile = () => {
         dropdown.classList.toggle('hidden');
       };
     });
   </script>
-  
+
   <script>
     function toggleMenu() {
       document.getElementById("mobile-menu").classList.toggle("hidden");
     }
-  
+
     function toggleDropdownMobile() {
       document.getElementById("mobile-services-dropdown").classList.toggle("hidden");
     }
   </script>
   <script>
-  function toggleDropdown() {
-    const menu = document.getElementById('langDropdownMenu');
-    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+    function toggleDropdown(menuId) {
+  const menu = document.getElementById(menuId);
+  menu.classList.toggle('show');
+}
+
+// Close dropdowns if clicked outside
+window.onclick = function(event) {
+  const desktopBtn = document.getElementById('langDropdownBtn');
+  const desktopMenu = document.getElementById('langDropdownMenu');
+  const mobileBtn = document.getElementById('mobileLangBtn');
+  const mobileMenu = document.getElementById('mobileLangMenu');
+
+  if (!desktopBtn.contains(event.target) && !desktopMenu.contains(event.target)) {
+    desktopMenu.classList.remove('show');
   }
-  // Close dropdown if clicked outside
-  window.onclick = function(event) {
-    if (!event.target.matches('#langDropdownBtn')) {
-      const menu = document.getElementById('langDropdownMenu');
-      if (menu.style.display === 'block') {
-        menu.style.display = 'none';
-      }
-    }
+  if (!mobileBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
+    mobileMenu.classList.remove('show');
   }
-</script>
+}
+
+  </script>
 </body>
 
 </html>

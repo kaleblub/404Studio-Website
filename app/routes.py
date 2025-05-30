@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request, redirect, flash, url_for, make_response
 from .utils import get_country_from_ip, get_user_lang
+from urllib.parse import urlparse, urlunparse
 from .forms import ContactForm
 import os
 import smtplib
@@ -67,7 +68,24 @@ reviews = [
 def set_language(lang_code):
     if lang_code not in ['en', 'es']:
         lang_code = 'en'
-    resp = make_response(redirect(url_for('main.home', lang=lang_code)))
+    
+    referrer = request.referrer or url_for('main.home', lang=lang_code)
+    parsed_url = urlparse(referrer)
+
+    # Split path and change the lang code
+    path_parts = parsed_url.path.strip('/').split('/')
+    if len(path_parts) > 0 and path_parts[0] in ['en', 'es']:
+        path_parts[0] = lang_code
+    else:
+        # If no lang in path, default to home in target lang
+        path_parts.insert(0, lang_code)
+
+    new_path = '/' + '/'.join(path_parts)
+
+    # Reconstruct the URL with the new path
+    new_url = urlunparse(parsed_url._replace(path=new_path))
+
+    resp = make_response(redirect(new_url))
     resp.set_cookie('lang', lang_code, max_age=60*60*24*30, path='/')
     return resp
 
@@ -125,8 +143,19 @@ def home(lang):
 @main.route('/<lang>/links')
 def links_page(lang):
     if lang not in ['en', 'es']:
-        return redirect(url_for('main.links', lang='en'))
+        return redirect(url_for('main.links_page', lang='en'))
     return render_template('links-page.html')
+
+
+@main.route('/links', strict_slashes=False)
+def links_redirect():
+    lang = request.cookies.get('lang')
+    if lang not in ['en', 'es']:
+        lang = get_user_lang()
+    print(f"Redirecting to: /{lang}/links")
+    return redirect(url_for('main.links_page', lang=lang))
+
+
 
 @main.route('/<lang>/about')
 def about(lang):
@@ -176,6 +205,7 @@ def pricing(lang):
 
 projects = [
     {
+        "id": "balanced-accountant",
         "title": "Balanced Accountant",
         "description": "Migrated from Squarespace to a modern custom design and built from scratch with Flask, HTML5, Tailwindcss, and JavaScript.",
         "tech": [
@@ -186,6 +216,7 @@ projects = [
         "mobile_mockup": "balanced-accountant-home-page-mobile-mockup.png",
     },
     {
+        "id": "woven-dignity",
         "title": "Woven Dignity",
         "description": "Woven Dignity is a non-profit organization specializing in handmade cards, with the main focus being to provide refugee women with hope and empowerment through sustainable work.",
         "tech": [
@@ -196,6 +227,7 @@ projects = [
         "mobile_mockup": "woven-dignity-home-page-mobile-mockup.png",
     },
     {
+        "id": "ilca-bejaia",
         "title": "ILCA Bejaia",
         "description": "ILCA Bejaia is an International Learning Center in Algeria offering language courses and learning resources.",
         "tech": [
@@ -212,3 +244,7 @@ def portfolio(lang):
     if lang not in ['en', 'es']:
         return redirect(url_for('main.portfolio', lang='en'))
     return render_template('portfolio.html', projects=projects)
+
+@main.errorhandler(404)
+def not_found(e):
+    return redirect(url_for('main.index'))

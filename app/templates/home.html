@@ -256,7 +256,7 @@
                 class="font-inter text-gray-400 text-[14px] md:text-[16px] lg:text-[18px] leading-[18px] md:leading-normal mt-4">
                 {{ _("Whether you're starting from scratch, stuck in the middle, or scaling something big—I'm here to build, guide, and solve. Design, development, automation, or something weird? Let’s make it real.") }}</p>
             <div class="flex gap-4 justify-center md:justify-start mt-6">
-                <a class="quidel-button">
+                <a class="quidel-button" href="https://cal.com/404-studio-kaleb-humpal/30-minute-consultation-meeting?development_package=Not+Sure+Yet&hosting_plan=Not+Sure+Yet&project_details=Free Consultation" target="_blank">
                     <span>{{ _("Discuss Services") }}</span>
                 </a>
 
@@ -273,11 +273,9 @@
 <!-- Services Section -->
 <section class="bg-[#0a0c19]">
     <div class="container px-6 py-10 mx-auto">
-        <!-- <h1 class="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl text-white">explore our <br> awesome Components</h1> -->
         <div class="relative">
             <!-- <span class="title left-[25%] lg:left-[-3%] top-[-2rem]">SERVICES</span> -->
-            <h2
-                class="section-services relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">
+            <h2 class="section-services relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">
                 {{ _('Explore Our Areas of Expertise') }}
             </h2>
             <p class="mt-4 xl:mt-6 text-gray-400">
@@ -295,14 +293,13 @@
                         class="w-12 h-12 transition-all duration-300 group-hover:play-gif" />
                 </span>
 
-                <h1 class="text-xl font-semibold capitalize text-white">{{ _('Development') }}</h1>
+                <h3 class="text-xl font-semibold capitalize text-white">{{ _('Development') }}</h3>
 
                 <p class="text-gray-400">
                     {{ _('We build fast, modern, and scalable websites and web applications tailored to your brand, using the latest technologies to ensure performance and functionality.') }}
                 </p>
 
-                <a href="#"
-                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
+                <a href="{{ url_for('main.services', lang=lang) }}#development" class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
                     <span class="mx-1">{{ _('read more') }}</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -322,13 +319,13 @@
                         class="w-12 h-12 transition-all duration-300 group-hover:play-gif" />
                 </span>
 
-                <h1 class="text-xl font-semibold capitalize text-white">{{ _('Hosting') }}</h1>
+                <h3 class="text-xl font-semibold capitalize text-white">{{ _('Hosting') }}</h3>
 
                 <p class="text-gray-400">
                     {{ _('Enjoy reliable, secure, and fast website hosting solutions. We handle uptime, backups, and server management so you can focus on your business.') }}
                 </p>
 
-                <a href="#"
+                <a href="{{ url_for('main.services', lang=lang) }}#hosting"
                     class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
                     <span class="mx-1">{{ _('read more') }}</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
@@ -349,14 +346,13 @@
                         class="w-12 h-12 transition-all duration-300 group-hover:play-gif" />
                 </span>
 
-                <h1 class="text-xl font-semibold capitalize text-white">{{ _('Design') }}
-                </h1>
+                <h3 class="text-xl font-semibold capitalize text-white">{{ _('Design') }}</h3>
 
                 <p class="text-gray-400">
                     {{ _('From wireframes to final visuals, our design process ensures your website not only looks stunning but also delivers an intuitive user experience that converts.') }}
                 </p>
 
-                <a href="#"
+                <a href="{{ url_for('main.services', lang=lang) }}#design"
                     class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
                     <span class="mx-1">{{ _('read more') }}</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
@@ -377,13 +373,13 @@
                         class="w-12 h-12 transition-all duration-300 group-hover:play-gif" />
                 </span>
 
-                <h1 class="text-xl font-semibold capitalize text-white">{{ _('Management') }}</h1>
+                <h3 class="text-xl font-semibold capitalize text-white">{{ _('Management') }}</h3>
 
                 <p class="text-gray-400">
                     {{ _('We manage everything from content updates to performance monitoring, so your website stays fresh, functional, and aligned with your business goals.') }}
                 </p>
 
-                <a href="#"
+                <a href="{{ url_for('main.services', lang=lang) }}#management"
                     class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
                     <span class="mx-1">{{ _('read more') }}</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
@@ -404,13 +400,13 @@
                         class="w-12 h-12 transition-all duration-300 group-hover:play-gif" />
                 </span>
 
-                <h1 class="text-xl font-semibold capitalize text-white">{{ _('Troubleshooting') }}</h1>
+                <h3 class="text-xl font-semibold capitalize text-white">{{ _('Troubleshooting') }}</h3>
 
                 <p class="text-gray-400">
                     {{ _('Got bugs or technical issues? We diagnose and resolve website errors, broken features, or performance slowdowns quickly and efficiently.') }}
                 </p>
 
-                <a href="#"
+                <a href="{{ url_for('main.services', lang=lang) }}#troubleshooting"
                     class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
                     <span class="mx-1">{{ _('read more') }}</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
@@ -431,13 +427,13 @@
                         class="w-12 h-12 transition-all duration-300 group-hover:play-gif" />
                 </span>
 
-                <h1 class="text-xl font-semibold capitalize text-white">{{ _('Other Services') }}</h1>
+                <h3 class="text-xl font-semibold capitalize text-white">{{ _('Other Services') }}</h3>
 
                 <p class="text-gray-400">
                     {{ _("Need something custom? From SEO and analytics setup to email configuration or third-party integrations—we’ve got you covered.") }}
                 </p>
 
-                <a href="{{ url_for('main.services', lang=lang) }}" class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
+                <a href="{{ url_for('main.services', lang=lang) }}#other" class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
                     <span class="mx-1">{{ _('read more') }}</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -598,8 +594,7 @@
         <div class="xl:items-center xl:-mx-8 xl:flex">
             <div class="flex flex-col items-center xl:items-start xl:mx-8 lg:w-2/5">
                 <!-- <span class="title left-[50%] lg:left-[3%] top-[14rem]">PRICING</span> -->
-                <h2
-                    class="section-pricing relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-center lg:text-left text-white">
+                <h2 class="section-pricing relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-center lg:text-left text-white">
                     {{ _('Our Pricing Packages & Plans') }}</h2>
 
                 <div class="mt-4">
@@ -612,8 +607,7 @@
                     {{ _('Need help with building a website? Or want to let us handle hosting your website?') }}
                 </p>
 
-                <a href="#"
-                    class="flex items-center mt-4 -mx-1 text-sm text-gray-700 capitalize text-primaryorange hover:underline hover:text-accentpurple hover:text-primabg-primaryorange">
+                <a href="https://cal.com/404-studio-kaleb-humpal/30-minute-consultation-meeting?development_package=Other&hosting_plan=Other&project_details=Need+Different+Digital+Solution" target="_blank" class="flex items-center mt-4 -mx-1 text-sm text-gray-700 capitalize text-primaryorange hover:underline hover:text-accentpurple hover:text-primabg-primaryorange">
                     <span class="mx-1">{{ _('Need a different service') }}</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -628,7 +622,7 @@
                 <div class="mt-8 space-y-8 md:-mx-4 md:flex md:items-center md:justify-center md:space-y-0 xl:mt-0">
                     <div class="max-w-sm mx-auto border rounded-lg md:mx-4 border-gray-700 bg-gray-900 hover:bg-gray-950 duration-400 ease-in-out">
                         <div class="p-6 flex flex-col">
-                            <h1 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl text-white">{{ _('Web Development Packages') }}</h1>
+                            <h2 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl text-white">{{ _('Web Development Packages') }}</h2>
 
                             <p class="mt-4 text-gray-400">
                                 {{ _('Custom site builds, redesigns, and ecommerce integration.') }}
@@ -642,17 +636,16 @@
                                 Yearly payment
                             </p> -->
 
-                            <button
-                                class="quidel-button quidel-full">
+                            <a href="{{ url_for('main.pricing', lang=lang) }}?type=development" class="quidel-button quidel-full">
                                 {{ _('View Packages') }}
-                            </button>
+                            </a>
                         </div>
 
                         <hr class="border-gray-200 border-gray-700">
 
                         <div class="p-6">
-                            <h1 class="text-lg font-medium text-gray-700 capitalize lg:text-xl text-white">
-                                {{ _('What’s included:') }}</h1>
+                            <h3 class="text-lg font-medium text-gray-700 capitalize lg:text-xl text-white">
+                                {{ _('What’s included:') }}</h3>
 
                             <div class="mt-8 space-y-4">
                                 <div class="flex items-center">
@@ -720,7 +713,7 @@
 
                     <div class="max-w-sm mx-auto border rounded-lg md:mx-4 border-gray-700 bg-gray-900 hover:bg-gray-950 duration-400 ease-in-out">
                         <div class="p-6 flex flex-col">
-                            <h1 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl text-white">{{ _('Web Hosting Packages') }}</h1>
+                            <h2 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl text-white">{{ _('Web Hosting Packages') }}</h2>
 
                             <p class="mt-4 text-gray-400">
                                 {{ _('Fast, secure hosting managed by 404 Studio.') }}
@@ -735,17 +728,16 @@
                                 {{ _('12 Payments Yearly') }}
                             </p>
 
-                            <button
-                                class="quidel-button quidel-full">
+                            <a href="{{ url_for('main.pricing', lang=lang) }}?type=hosting" class="quidel-button quidel-full">
                                 {{ _('View Plans') }}
-                            </button>
+                            </a>
                         </div>
 
                         <hr class="border-gray-200 border-gray-700">
 
                         <div class="p-6">
-                            <h1 class="text-lg font-medium text-gray-700 capitalize lg:text-xl text-white">
-                                {{ _('What’s included:') }}</h1>
+                            <h3 class="text-lg font-medium text-gray-700 capitalize lg:text-xl text-white">
+                                {{ _('What’s included:') }}</h3>
 
                             <div class="mt-8 space-y-4">
                                 <div class="flex items-center">
@@ -828,13 +820,12 @@
 
     <!-- Centered Card -->
     <div class="relative z-10 flex items-center justify-center h-full">
-        <div
-            class="flex flex-col bg-[#0a0c19] text-white p-8 rounded-xl w-full max-w-2xl md:w-2/6 shadow-xl text-center items-center">
+        <div class="flex flex-col bg-[#0a0c19] text-white p-8 rounded-xl w-full max-w-2xl md:w-2/6 shadow-xl text-center items-center">
             <h2 class="font-montserrat text-[30px] lg:text-[58px] font-semibold text-white">{{ _('Need Help Choosing?') }}</h2>
             <p class="mb-6 font-inter text-gray-300">{{ _('Schedule a free consultation now, and we will figure out which package and/or plan is right for your situation!') }}</p>
-            <button class="quidel-button">
+            <a class="quidel-button" href="https://cal.com/404-studio-kaleb-humpal/30-minute-consultation-meeting?development_package=Not+Sure+Yet&hosting_plan=Not+Sure+Yet&project_details=Free Consultation" target="_blank">
                 <span>{{ _('Schedule Free Consultation') }}</span>
-            </button>
+            </a>
         </div>
     </div>
 </section>
