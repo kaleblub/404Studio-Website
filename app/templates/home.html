@@ -49,10 +49,16 @@
     }
 
     .section-services::before {
-        content: {{ _('SERVICES')|tojson }};
+        content: {
+                {
+                _('SERVICES')|tojson
+            }
+        }
+
+        ;
         background: linear-gradient(180deg,
-                rgba(239, 176, 113, 1) 0%,
-                rgba(74, 108, 247, 0) 100%);
+            rgba(239, 176, 113, 1) 0%,
+            rgba(74, 108, 247, 0) 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -65,7 +71,8 @@
         font-size: 40px;
         line-height: 1 !important;
         font-weight: 700;
-        font-family: 'Inter', sans-serif;
+        font-family: 'Inter',
+        sans-serif;
     }
 
     /* Responsive font sizes */
@@ -195,6 +202,7 @@
             top: -10%;
         }
     }
+
     @media (min-width: 1536px) {
         .section-pricing::before {
             top: -15%;
@@ -202,8 +210,7 @@
     }
 </style>
 <!-- Hero Section -->
-<section
-    class="bg-[#0a0c19] relative flex flex-col items-center md:items-center max-w-screen min-h-screen pt-10 px-3">
+<section class="bg-[#0a0c19] relative flex flex-col items-center md:items-center max-w-screen min-h-screen pt-10 px-3">
 
     <!-- Hero Content -->
     <div class="relative flex flex-col md:flex-row-reverse items-center w-full">
@@ -254,9 +261,13 @@
                 {{ _('Digital Unknown') }}</h1>
             <p
                 class="font-inter text-gray-400 text-[14px] md:text-[16px] lg:text-[18px] leading-[18px] md:leading-normal mt-4">
-                {{ _("Whether you're starting from scratch, stuck in the middle, or scaling something big—I'm here to build, guide, and solve. Design, development, automation, or something weird? Let’s make it real.") }}</p>
+                {{ _("Whether you're starting from scratch, stuck in the middle, or scaling something big—I'm here to
+                build, guide, and solve. Design, development, automation, or something weird? Let’s make it real.") }}
+            </p>
             <div class="flex gap-4 justify-center md:justify-start mt-6">
-                <a class="quidel-button" href="https://cal.com/404-studio-kaleb-humpal/30-minute-consultation-meeting?development_package=Not+Sure+Yet&hosting_plan=Not+Sure+Yet&project_details=Free Consultation" target="_blank">
+                <a class="quidel-button"
+                    href="https://cal.com/404-studio-kaleb-humpal/30-minute-consultation-meeting?development_package=Not+Sure+Yet&hosting_plan=Not+Sure+Yet&project_details=Free Consultation"
+                    target="_blank">
                     <span>{{ _("Discuss Services") }}</span>
                 </a>
 
@@ -275,20 +286,21 @@
     <div class="container px-6 py-10 mx-auto">
         <div class="relative">
             <!-- <span class="title left-[25%] lg:left-[-3%] top-[-2rem]">SERVICES</span> -->
-            <h2 class="section-services relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">
+            <h2
+                class="section-services relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">
                 {{ _('Explore Our Areas of Expertise') }}
             </h2>
             <p class="mt-4 xl:mt-6 text-gray-400">
-                {{ _('From building beautiful, functional websites to keeping them secure and running smoothly, we offer full-spectrum services to help your online presence thrive.') }}
+                {{ _('From building beautiful, functional websites to keeping them secure and running smoothly, we offer
+                full-spectrum services to help your online presence thrive.') }}
             </p>
         </div>
 
         <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3">
             <div class="space-y-3 group bg-gray-900 p-5 rounded hover:bg-gray-950 duration-400 ease-in-out">
-                <span
-                    class="inline-block rounded-full">
+                <span class="inline-block rounded-full">
                     <img src="{{ url_for('static', filename='images/icons/development-0.png') }}"
-                        data-animated="{{ url_for('static', filename='images/icons/development.gif') }}" 
+                        data-animated="{{ url_for('static', filename='images/icons/development.gif') }}"
                         data-static="{{ url_for('static', filename='images/icons/development-0.png') }}"
                         class="w-12 h-12 transition-all duration-300 group-hover:play-gif" />
                 </span>
@@ -296,10 +308,12 @@
                 <h3 class="text-xl font-semibold capitalize text-white">{{ _('Development') }}</h3>
 
                 <p class="text-gray-400">
-                    {{ _('We build fast, modern, and scalable websites and web applications tailored to your brand, using the latest technologies to ensure performance and functionality.') }}
+                    {{ _('We build fast, modern, and scalable websites and web applications tailored to your brand,
+                    using the latest technologies to ensure performance and functionality.') }}
                 </p>
 
-                <a href="{{ url_for('main.services', lang=lang) }}#development" class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
+                <a href="{{ url_for('main.services', lang=lang) }}#development"
+                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
                     <span class="mx-1">{{ _('read more') }}</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -311,10 +325,9 @@
             </div>
 
             <div class="space-y-3 group bg-gray-900 p-5 rounded hover:bg-gray-950 duration-400 ease-in-out">
-                <span
-                    class="inline-block rounded-full">
+                <span class="inline-block rounded-full">
                     <img src="{{ url_for('static', filename='images/icons/hosting-0.png') }}"
-                        data-animated="{{ url_for('static', filename='images/icons/hosting.gif') }}" 
+                        data-animated="{{ url_for('static', filename='images/icons/hosting.gif') }}"
                         data-static="{{ url_for('static', filename='images/icons/hosting-0.png') }}"
                         class="w-12 h-12 transition-all duration-300 group-hover:play-gif" />
                 </span>
@@ -322,7 +335,8 @@
                 <h3 class="text-xl font-semibold capitalize text-white">{{ _('Hosting') }}</h3>
 
                 <p class="text-gray-400">
-                    {{ _('Enjoy reliable, secure, and fast website hosting solutions. We handle uptime, backups, and server management so you can focus on your business.') }}
+                    {{ _('Enjoy reliable, secure, and fast website hosting solutions. We handle uptime, backups, and
+                    server management so you can focus on your business.') }}
                 </p>
 
                 <a href="{{ url_for('main.services', lang=lang) }}#hosting"
@@ -338,10 +352,9 @@
             </div>
 
             <div class="space-y-3 group bg-gray-900 p-5 rounded hover:bg-gray-950 duration-400 ease-in-out">
-                <span
-                    class="inline-block rounded-full">
+                <span class="inline-block rounded-full">
                     <img src="{{ url_for('static', filename='images/icons/design-0.png') }}"
-                        data-animated="{{ url_for('static', filename='images/icons/design.gif') }}" 
+                        data-animated="{{ url_for('static', filename='images/icons/design.gif') }}"
                         data-static="{{ url_for('static', filename='images/icons/design-0.png') }}"
                         class="w-12 h-12 transition-all duration-300 group-hover:play-gif" />
                 </span>
@@ -349,7 +362,8 @@
                 <h3 class="text-xl font-semibold capitalize text-white">{{ _('Design') }}</h3>
 
                 <p class="text-gray-400">
-                    {{ _('From wireframes to final visuals, our design process ensures your website not only looks stunning but also delivers an intuitive user experience that converts.') }}
+                    {{ _('From wireframes to final visuals, our design process ensures your website not only looks
+                    stunning but also delivers an intuitive user experience that converts.') }}
                 </p>
 
                 <a href="{{ url_for('main.services', lang=lang) }}#design"
@@ -365,10 +379,9 @@
             </div>
 
             <div class="space-y-3 group bg-gray-900 p-5 rounded hover:bg-gray-950 duration-400 ease-in-out">
-                <span
-                    class="inline-block rounded-full">
+                <span class="inline-block rounded-full">
                     <img src="{{ url_for('static', filename='images/icons/teamwork-0.png') }}"
-                        data-animated="{{ url_for('static', filename='images/icons/teamwork.gif') }}" 
+                        data-animated="{{ url_for('static', filename='images/icons/teamwork.gif') }}"
                         data-static="{{ url_for('static', filename='images/icons/teamwork-0.png') }}"
                         class="w-12 h-12 transition-all duration-300 group-hover:play-gif" />
                 </span>
@@ -376,7 +389,8 @@
                 <h3 class="text-xl font-semibold capitalize text-white">{{ _('Management') }}</h3>
 
                 <p class="text-gray-400">
-                    {{ _('We manage everything from content updates to performance monitoring, so your website stays fresh, functional, and aligned with your business goals.') }}
+                    {{ _('We manage everything from content updates to performance monitoring, so your website stays
+                    fresh, functional, and aligned with your business goals.') }}
                 </p>
 
                 <a href="{{ url_for('main.services', lang=lang) }}#management"
@@ -392,10 +406,9 @@
             </div>
 
             <div class="space-y-3 group bg-gray-900 p-5 rounded hover:bg-gray-950 duration-400 ease-in-out">
-                <span
-                    class="inline-block rounded-full">
+                <span class="inline-block rounded-full">
                     <img src="{{ url_for('static', filename='images/icons/troubleshooting-0.png') }}"
-                        data-animated="{{ url_for('static', filename='images/icons/troubleshooting.gif') }}" 
+                        data-animated="{{ url_for('static', filename='images/icons/troubleshooting.gif') }}"
                         data-static="{{ url_for('static', filename='images/icons/troubleshooting-0.png') }}"
                         class="w-12 h-12 transition-all duration-300 group-hover:play-gif" />
                 </span>
@@ -403,7 +416,8 @@
                 <h3 class="text-xl font-semibold capitalize text-white">{{ _('Troubleshooting') }}</h3>
 
                 <p class="text-gray-400">
-                    {{ _('Got bugs or technical issues? We diagnose and resolve website errors, broken features, or performance slowdowns quickly and efficiently.') }}
+                    {{ _('Got bugs or technical issues? We diagnose and resolve website errors, broken features, or
+                    performance slowdowns quickly and efficiently.') }}
                 </p>
 
                 <a href="{{ url_for('main.services', lang=lang) }}#troubleshooting"
@@ -419,10 +433,9 @@
             </div>
 
             <div class="space-y-3 group bg-gray-900 p-5 rounded hover:bg-gray-950 duration-400 ease-in-out">
-                <span
-                    class="inline-block rounded-full">
+                <span class="inline-block rounded-full">
                     <img src="{{ url_for('static', filename='images/icons/idea-0.png') }}"
-                        data-animated="{{ url_for('static', filename='images/icons/idea.gif') }}" 
+                        data-animated="{{ url_for('static', filename='images/icons/idea.gif') }}"
                         data-static="{{ url_for('static', filename='images/icons/idea-0.png') }}"
                         class="w-12 h-12 transition-all duration-300 group-hover:play-gif" />
                 </span>
@@ -430,10 +443,12 @@
                 <h3 class="text-xl font-semibold capitalize text-white">{{ _('Other Services') }}</h3>
 
                 <p class="text-gray-400">
-                    {{ _("Need something custom? From SEO and analytics setup to email configuration or third-party integrations—we’ve got you covered.") }}
+                    {{ _("Need something custom? From SEO and analytics setup to email configuration or third-party
+                    integrations—we’ve got you covered.") }}
                 </p>
 
-                <a href="{{ url_for('main.services', lang=lang) }}#other" class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
+                <a href="{{ url_for('main.services', lang=lang) }}#other"
+                    class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
                     <span class="mx-1">{{ _('read more') }}</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -446,6 +461,86 @@
         </div>
     </div>
 </section>
+
+<!-- Why You Need a Website Section -->
+<section class="bg-[#0a0c19] py-20 px-6">
+  <div class="container mx-auto">
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <h2 class="text-[32px] lg:text-[42px] font-bold text-white leading-tight font-montserrat">
+        Why Your Business <span class="text-primaryorange">Needs a Website</span>
+      </h2>
+      <p class="text-gray-400 text-base mt-4">
+        From boosting your credibility to unlocking growth — here's what a website can do for you.
+      </p>
+    </div>
+
+    <!-- Main Content: Cards Left, List Right -->
+    <div class="flex flex-col lg:flex-row gap-12 items-start">
+      <!-- Left: 4 Value Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full lg:w-2/3">
+        <div class="bg-gray-900 hover:bg-gray-950 rounded-lg p-6 shadow-md transition">
+          <h3 class="text-xl font-semibold text-white">Look Professional</h3>
+          <p class="text-gray-400 mt-2 text-sm">
+            A modern website instantly shows you're a real, credible business — not just a name on social media.
+          </p>
+        </div>
+        <div class="bg-gray-900 hover:bg-gray-950 rounded-lg p-6 shadow-md transition">
+          <h3 class="text-xl font-semibold text-white">Be Found Online</h3>
+          <p class="text-gray-400 mt-2 text-sm">
+            Most customers search online before buying. A website gives them a place to find and trust you.
+          </p>
+        </div>
+        <div class="bg-gray-900 hover:bg-gray-950 rounded-lg p-6 shadow-md transition">
+          <h3 class="text-xl font-semibold text-white">Build Trust Instantly</h3>
+          <p class="text-gray-400 mt-2 text-sm">
+            Display reviews, explain your services, and show your brand — all in one clean, central place.
+          </p>
+        </div>
+        <div class="bg-gray-900 hover:bg-gray-950 rounded-lg p-6 shadow-md transition">
+          <h3 class="text-xl font-semibold text-white">Sell or Book 24/7</h3>
+          <p class="text-gray-400 mt-2 text-sm">
+            Whether it’s online orders, bookings, or inquiries — a website works for you even when you sleep.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right: Benefit List + CTA -->
+      <div class="w-full lg:w-1/3">
+        <h3 class="text-[26px] lg:text-[32px] font-semibold text-white mb-6">
+          More Benefits
+        </h3>
+
+        <ul class="space-y-4 text-gray-300 text-sm">
+          {% for benefit in [
+            'Gain credibility with new clients',
+            'Show up in Google and Maps',
+            'Share updates, sales, and offers easily',
+            'Stand out from the competition',
+            'Collect emails or leads with forms',
+            'Offer support and answers 24/7'
+          ] %}
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-primaryorange flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414L8.414 15H5v-3.414l8.293-8.293a1 1 0 011.414 0zM5 13.586L13.586 5 15 6.414 6.414 15H5v-1.414z"
+                clip-rule="evenodd" />
+            </svg>
+            {{ benefit }}
+          </li>
+          {% endfor %}
+        </ul>
+
+        <a href="https://cal.com/404-studio-kaleb-humpal/30-minute-consultation-meeting"
+          target="_blank"
+          class="quidel-button mt-8">
+          Let’s Build Your Website
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!-- About Section -->
 <section class="bg-[#0a0c19] gap-16 overflow-x-hidden">
@@ -474,7 +569,10 @@
                 </h2>
                 <p
                     class="font-inter text-gray-400 text-[14px] md:text-[16px] lg:text-[18px] leading-[18px] md:leading-normal mt-4 z-1">
-                    {{ _('404 Studio LLC is a web development agency committed to delivering modern, user-centric websites that elevate your business. With years of experience in the industry, we are passionate about bringing your vision to life through cutting-edge design, development, and ongoing support.') }}
+                    {{ _('404 Studio LLC is a web development agency committed to delivering modern, user-centric
+                    websites that elevate your business. With years of experience in the industry, we are passionate
+                    about bringing your vision to life through cutting-edge design, development, and ongoing support.')
+                    }}
                 </p>
                 <div class="flex gap-4 justify-center lg:justify-start mt-6">
                     <a href="{{ url_for('main.about', lang=lang) }}" class="quidel-button inverted cursor-pointer"">
@@ -487,105 +585,127 @@
 </section>
 
 <!-- Reviews Section -->
-<section class="relative min-h-screen overflow-x-hidden">
-    <!-- Background layer -->
-    <div class="absolute inset-0 flex">
-        <div class="w-3/4 bg-[#0a0c19]"></div>
-        <div class="w-1/5 md:w-2/5 bg-primaryorange"></div>
-    </div>
+<section class=" relative min-h-screen overflow-x-hidden">
+                        <!-- Background layer -->
+                        <div class="absolute inset-0 flex">
+                            <div class="w-3/4 bg-[#0a0c19]"></div>
+                            <div class="w-1/5 md:w-2/5 bg-primaryorange"></div>
+                        </div>
 
-    <!-- Foreground content -->
-    <div class="relative z-10 flex flex-col justify-center w-full min-h-screen px-4 py-10 md:mx-24 z-1">
-        <!-- <span class="title left-[0%] lg:left-[-2%] top-[2%] lg:top-[11rem]">REVIEWS</span> -->
-        <h2
-            class="section-reviews relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">
-            {{ ('What our customers are saying') }}
-        </h2>
+                        <!-- Foreground content -->
+                        <div
+                            class="relative z-10 flex flex-col justify-center w-full min-h-screen px-4 py-10 md:mx-24 z-1">
+                            <!-- <span class="title left-[0%] lg:left-[-2%] top-[2%] lg:top-[11rem]">REVIEWS</span> -->
+                            <h2
+                                class="section-reviews relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">
+                                {{ ('What our customers are saying') }}
+                            </h2>
 
-        <div class="grid w-full grid-cols-1 gap-8 mt-8 2xl:grid-cols-4 lg:mt-16 md:grid-cols-2 lg:grid-cols-3">
-            <!-- Testimonials (example) -->
-            <div class="w-full p-8 rounded-md shadow-lg bg-gray-900">
-                <p class="leading-loose text-gray-400">
-                    {{ _('“404 Studio LLC has revamped our website and online store that was previously crashing. With patience, diligence, and professionalism the team at 404 has taken care of our needs. Weekly, we continue to have updates in the shop with sales and new items and 404 Studio is eager to take care of these items. Working with our diverse team, 404 Studio strives to meet deadlines, offer advice to improve our services, and unifies team work. With competitive pricing and polite customer service, I would recommend 404 Studio to others.”') }}
-                </p>
-                <div class="flex items-center mt-6 -mx-2">
-                    <img class="object-cover mx-2 rounded-full w-14 h-14"
-                        src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
-                        alt="">
-                    <div class="mx-2">
-                        <h3 class="font-semibold text-white">Ruth Boyd</h3>
-                        <span class="text-sm text-gray-400">{{ _('Founder of Woven Dignity') }}</span>
-                    </div>
-                </div>
-            </div>
+                            <div
+                                class="grid w-full grid-cols-1 gap-8 mt-8 2xl:grid-cols-4 lg:mt-16 md:grid-cols-2 lg:grid-cols-3">
+                                <!-- Testimonials (example) -->
+                                <div class="w-full p-8 rounded-md shadow-lg bg-gray-900">
+                                    <p class="leading-loose text-gray-400">
+                                        {{ _('“404 Studio LLC has revamped our website and online store that was
+                                        previously crashing. With patience, diligence, and professionalism the team at
+                                        404 has taken care of our needs. Weekly, we continue to have updates in the shop
+                                        with sales and new items and 404 Studio is eager to take care of these items.
+                                        Working with our diverse team, 404 Studio strives to meet deadlines, offer
+                                        advice to improve our services, and unifies team work. With competitive pricing
+                                        and polite customer service, I would recommend 404 Studio to others.”') }}
+                                    </p>
+                                    <div class="flex items-center mt-6 -mx-2">
+                                        <img class="object-cover mx-2 rounded-full w-14 h-14"
+                                            src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
+                                            alt="">
+                                        <div class="mx-2">
+                                            <h3 class="font-semibold text-white">Ruth Boyd</h3>
+                                            <span class="text-sm text-gray-400">{{ _('Founder of Woven Dignity')
+                                                }}</span>
+                                        </div>
+                                    </div>
+                                </div>
 
-            <div class="w-full p-8 rounded-md shadow-lg bg-gray-900">
-                <p class="leading-loose text-gray-400">
-                    {{ _('“404 Studio LLC has revamped our website and online store that was previously crashing. With patience, diligence, and professionalism the team at 404 has taken care of our needs. Weekly, we continue to have updates in the shop with sales and new items and 404 Studio is eager to take care of these items. Working with our diverse team, 404 Studio strives to meet deadlines, offer advice to improve our services, and unifies team work. With competitive pricing and polite customer service, I would recommend 404 Studio to others.”') }}
-                </p>
-                <div class="flex items-center mt-6 -mx-2">
-                    <img class="object-cover mx-2 rounded-full w-14 h-14"
-                        src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
-                        alt="">
-                    <div class="mx-2">
-                        <h3 class="font-semibold text-white">Nassima Amari</h3>
-                        <span class="text-sm text-gray-400">{{ _('ILCA Bejaia') }}</span>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="w-full p-8 rounded-md shadow-lg bg-gray-900">
-                <p class="leading-loose text-gray-400">
-                    {{ _('“404 Studio LLC has revamped our website and online store that was previously crashing. With patience, diligence, and professionalism the team at 404 has taken care of our needs. Weekly, we continue to have updates in the shop with sales and new items and 404 Studio is eager to take care of these items. Working with our diverse team, 404 Studio strives to meet deadlines, offer advice to improve our services, and unifies team work. With competitive pricing and polite customer service, I would recommend 404 Studio to others.”') }}
-                </p>
-                <div class="flex items-center mt-6 -mx-2">
-                    <img class="object-cover mx-2 rounded-full w-14 h-14"
-                        src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
-                        alt="">
-                    <div class="mx-2">
-                        <h3 class="font-semibold text-white">Tina Bralley</h3>
-                        <span class="text-sm text-gray-400">{{ _('Balanced Accountant') }}</span>
-                    </div>
-                </div>
-            </div>
+                                <div class="w-full p-8 rounded-md shadow-lg bg-gray-900">
+                                    <p class="leading-loose text-gray-400">
+                                        {{ _('“404 Studio LLC has revamped our website and online store that was
+                                        previously crashing. With patience, diligence, and professionalism the team at
+                                        404 has taken care of our needs. Weekly, we continue to have updates in the shop
+                                        with sales and new items and 404 Studio is eager to take care of these items.
+                                        Working with our diverse team, 404 Studio strives to meet deadlines, offer
+                                        advice to improve our services, and unifies team work. With competitive pricing
+                                        and polite customer service, I would recommend 404 Studio to others.”') }}
+                                    </p>
+                                    <div class="flex items-center mt-6 -mx-2">
+                                        <img class="object-cover mx-2 rounded-full w-14 h-14"
+                                            src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
+                                            alt="">
+                                        <div class="mx-2">
+                                            <h3 class="font-semibold text-white">Nassima Amari</h3>
+                                            <span class="text-sm text-gray-400">{{ _('ILCA Bejaia') }}</span>
+                                        </div>
+                                    </div>
+                                </div>
 
 
-            <div class="w-full p-8 rounded-md shadow-lg bg-gray-900">
-                <p class="leading-loose text-gray-400">
-                    {{ _('“ Lorem ipsum dolor sit amet consectetur adipisicing elit... ”') }}
-                </p>
-                <div class="flex items-center mt-6 -mx-2">
-                    <img class="object-cover mx-2 rounded-full w-14 h-14"
-                        src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
-                        alt="">
-                    <div class="mx-2">
-                        <h3 class="font-semibold text-white">Robbert</h3>
-                        <span class="text-sm text-gray-400">{{ _('CTO, Robert Consultency') }}</span>
-                    </div>
-                </div>
-            </div>
+                                <div class="w-full p-8 rounded-md shadow-lg bg-gray-900">
+                                    <p class="leading-loose text-gray-400">
+                                        {{ _('“404 Studio LLC has revamped our website and online store that was
+                                        previously crashing. With patience, diligence, and professionalism the team at
+                                        404 has taken care of our needs. Weekly, we continue to have updates in the shop
+                                        with sales and new items and 404 Studio is eager to take care of these items.
+                                        Working with our diverse team, 404 Studio strives to meet deadlines, offer
+                                        advice to improve our services, and unifies team work. With competitive pricing
+                                        and polite customer service, I would recommend 404 Studio to others.”') }}
+                                    </p>
+                                    <div class="flex items-center mt-6 -mx-2">
+                                        <img class="object-cover mx-2 rounded-full w-14 h-14"
+                                            src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
+                                            alt="">
+                                        <div class="mx-2">
+                                            <h3 class="font-semibold text-white">Tina Bralley</h3>
+                                            <span class="text-sm text-gray-400">{{ _('Balanced Accountant') }}</span>
+                                        </div>
+                                    </div>
+                                </div>
 
-        </div>
 
-        <div class="items-center hidden mt-12 md:flex">
-            <button title="left arrow"
-                class="cursor-pointer p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 text-gray-200 border-gray-700 hover:bg-primaryorange hover:bg-gray-100">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-                </svg>
-            </button>
+                                <div class="w-full p-8 rounded-md shadow-lg bg-gray-900">
+                                    <p class="leading-loose text-gray-400">
+                                        {{ _('“ Lorem ipsum dolor sit amet consectetur adipisicing elit... ”') }}
+                                    </p>
+                                    <div class="flex items-center mt-6 -mx-2">
+                                        <img class="object-cover mx-2 rounded-full w-14 h-14"
+                                            src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
+                                            alt="">
+                                        <div class="mx-2">
+                                            <h3 class="font-semibold text-white">Robbert</h3>
+                                            <span class="text-sm text-gray-400">{{ _('CTO, Robert Consultency')
+                                                }}</span>
+                                        </div>
+                                    </div>
+                                </div>
 
-            <button title="right arrow"
-                class="cursor-pointer p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 text-gray-200 border-gray-700 hover:bg-primaryorange lg:mx-6 hover:bg-gray-100">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-            </button>
-        </div>
-    </div>
+                            </div>
+
+                            <div class="items-center hidden mt-12 md:flex">
+                                <button title="left arrow"
+                                    class="cursor-pointer p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 text-gray-200 border-gray-700 hover:bg-primaryorange hover:bg-gray-100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                                    </svg>
+                                </button>
+
+                                <button title="right arrow"
+                                    class="cursor-pointer p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 text-gray-200 border-gray-700 hover:bg-primaryorange lg:mx-6 hover:bg-gray-100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
 </section>
 
 <!-- Pricing Options -->
@@ -594,7 +714,8 @@
         <div class="xl:items-center xl:-mx-8 xl:flex">
             <div class="flex flex-col items-center xl:items-start xl:mx-8 lg:w-2/5">
                 <!-- <span class="title left-[50%] lg:left-[3%] top-[14rem]">PRICING</span> -->
-                <h2 class="section-pricing relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-center lg:text-left text-white">
+                <h2
+                    class="section-pricing relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-center lg:text-left text-white">
                     {{ _('Our Pricing Packages & Plans') }}</h2>
 
                 <div class="mt-4">
@@ -607,7 +728,9 @@
                     {{ _('Need help with building a website? Or want to let us handle hosting your website?') }}
                 </p>
 
-                <a href="https://cal.com/404-studio-kaleb-humpal/30-minute-consultation-meeting?development_package=Other&hosting_plan=Other&project_details=Need+Different+Digital+Solution" target="_blank" class="flex items-center mt-4 -mx-1 text-sm text-gray-700 capitalize text-primaryorange hover:underline hover:text-accentpurple hover:text-primabg-primaryorange">
+                <a href="https://cal.com/404-studio-kaleb-humpal/30-minute-consultation-meeting?development_package=Other&hosting_plan=Other&project_details=Need+Different+Digital+Solution"
+                    target="_blank"
+                    class="flex items-center mt-4 -mx-1 text-sm text-gray-700 capitalize text-primaryorange hover:underline hover:text-accentpurple hover:text-primabg-primaryorange">
                     <span class="mx-1">{{ _('Need a different service') }}</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -620,23 +743,27 @@
 
             <div class="flex-1 xl:mx-8">
                 <div class="mt-8 space-y-8 md:-mx-4 md:flex md:items-center md:justify-center md:space-y-0 xl:mt-0">
-                    <div class="max-w-sm mx-auto border rounded-lg md:mx-4 border-gray-700 bg-gray-900 hover:bg-gray-950 duration-400 ease-in-out">
+                    <div
+                        class="max-w-sm mx-auto border rounded-lg md:mx-4 border-gray-700 bg-gray-900 hover:bg-gray-950 duration-400 ease-in-out">
                         <div class="p-6 flex flex-col">
-                            <h2 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl text-white">{{ _('Web Development Packages') }}</h2>
+                            <h2 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl text-white">{{ _('Web
+                                Development Packages') }}</h2>
 
                             <p class="mt-4 text-gray-400">
                                 {{ _('Custom site builds, redesigns, and ecommerce integration.') }}
                             </p>
 
                             <h2 class="mt-4 text-2xl font-semibold sm:text-3xl text-accentpurple">
-                                <span class="text-base font-medium text-gray-300">{{ _('Starting from') }}</span> $1,000</span>
+                                <span class="text-base font-medium text-gray-300">{{ _('Starting from') }}</span>
+                                $1,000</span>
                             </h2>
 
                             <!-- <p class="mt-1 text-gray-400">
                                 Yearly payment
                             </p> -->
 
-                            <a href="{{ url_for('main.pricing', lang=lang) }}?type=development" class="quidel-button quidel-full">
+                            <a href="{{ url_for('main.pricing', lang=lang) }}?type=development"
+                                class="quidel-button quidel-full">
                                 {{ _('View Packages') }}
                             </a>
                         </div>
@@ -711,24 +838,27 @@
                         </div>
                     </div>
 
-                    <div class="max-w-sm mx-auto border rounded-lg md:mx-4 border-gray-700 bg-gray-900 hover:bg-gray-950 duration-400 ease-in-out">
+                    <div
+                        class="max-w-sm mx-auto border rounded-lg md:mx-4 border-gray-700 bg-gray-900 hover:bg-gray-950 duration-400 ease-in-out">
                         <div class="p-6 flex flex-col">
-                            <h2 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl text-white">{{ _('Web Hosting Packages') }}</h2>
+                            <h2 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl text-white">{{ _('Web
+                                Hosting Packages') }}</h2>
 
                             <p class="mt-4 text-gray-400">
                                 {{ _('Fast, secure hosting managed by 404 Studio.') }}
                             </p>
 
                             <h2 class="mt-4 text-2xl font-semibold sm:text-3xl text-accentpurple">
-                                <span class="text-base font-medium text-gray-300">{{ _('Starting from') }}</span> $20.00 <span
-                                    class="text-base font-medium text-gray-300">{{ _('/Month') }}</span>
+                                <span class="text-base font-medium text-gray-300">{{ _('Starting from') }}</span> $20.00
+                                <span class="text-base font-medium text-gray-300">{{ _('/Month') }}</span>
                             </h2>
 
                             <p class="mt-1 text-gray-400">
                                 {{ _('12 Payments Yearly') }}
                             </p>
 
-                            <a href="{{ url_for('main.pricing', lang=lang) }}?type=hosting" class="quidel-button quidel-full">
+                            <a href="{{ url_for('main.pricing', lang=lang) }}?type=hosting"
+                                class="quidel-button quidel-full">
                                 {{ _('View Plans') }}
                             </a>
                         </div>
@@ -820,10 +950,15 @@
 
     <!-- Centered Card -->
     <div class="relative z-10 flex items-center justify-center h-full">
-        <div class="flex flex-col bg-[#0a0c19] text-white p-8 rounded-xl w-full max-w-2xl md:w-2/6 shadow-xl text-center items-center">
-            <h2 class="font-montserrat text-[30px] lg:text-[58px] font-semibold text-white">{{ _('Need Help Choosing?') }}</h2>
-            <p class="mb-6 font-inter text-gray-300">{{ _('Schedule a free consultation now, and we will figure out which package and/or plan is right for your situation!') }}</p>
-            <a class="quidel-button" href="https://cal.com/404-studio-kaleb-humpal/30-minute-consultation-meeting?development_package=Not+Sure+Yet&hosting_plan=Not+Sure+Yet&project_details=Free Consultation" target="_blank">
+        <div
+            class="flex flex-col bg-[#0a0c19] text-white p-8 rounded-xl w-full max-w-2xl md:w-2/6 shadow-xl text-center items-center">
+            <h2 class="font-montserrat text-[30px] lg:text-[58px] font-semibold text-white">{{ _('Need Help Choosing?')
+                }}</h2>
+            <p class="mb-6 font-inter text-gray-300">{{ _('Schedule a free consultation now, and we will figure out
+                which package and/or plan is right for your situation!') }}</p>
+            <a class="quidel-button"
+                href="https://cal.com/404-studio-kaleb-humpal/30-minute-consultation-meeting?development_package=Not+Sure+Yet&hosting_plan=Not+Sure+Yet&project_details=Free Consultation"
+                target="_blank">
                 <span>{{ _('Schedule Free Consultation') }}</span>
             </a>
         </div>
@@ -870,58 +1005,75 @@
 
                         <div class="hidden">
                             <label class="block mb-2 text-sm text-gray-200">Company Code</label>
-                            {{ form.company_code(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 focus:border-accentpurple focus-visible:border-accentpurple") }}
+                            {{ form.company_code(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300
+                            rounded-lg border border-gray-700 focus:border-accentpurple
+                            focus-visible:border-accentpurple") }}
                         </div>
 
                         <div class="-mx-2 md:items-center md:flex">
                             <div class="flex-1 px-2 mt-4">
-                            <label class="block mb-2 text-sm text-gray-200">{{ _('First Name') }}</label>
-                            {{ form.first_name(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:border-accentpurple focus-visible:border-accentpurple") }}
+                                <label class="block mb-2 text-sm text-gray-200">{{ _('First Name') }}</label>
+                                {{ form.first_name(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300
+                                rounded-lg border border-gray-700 placeholder-gray-600 focus:border-accentpurple
+                                focus-visible:border-accentpurple") }}
                             </div>
 
                             <div class="flex-1 px-2 mt-4">
-                            <label class="block mb-2 text-sm text-gray-200">{{ _('Last Name') }}</label>
-                            {{ form.last_name(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:border-accentpurple focus-visible:border-accentpurple") }}
+                                <label class="block mb-2 text-sm text-gray-200">{{ _('Last Name') }}</label>
+                                {{ form.last_name(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300
+                                rounded-lg border border-gray-700 placeholder-gray-600 focus:border-accentpurple
+                                focus-visible:border-accentpurple") }}
                             </div>
                         </div>
 
                         <div class="-mx-2 md:items-center md:flex">
                             <div class="flex-1 px-2 mt-4">
                                 <label class="block mb-2 text-sm text-gray-200">{{ _('Email address') }}</label>
-                                {{ form.email(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:border-accentpurple focus-visible:border-accentpurple") }}
+                                {{ form.email(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg
+                                border border-gray-700 placeholder-gray-600 focus:border-accentpurple
+                                focus-visible:border-accentpurple") }}
                             </div>
 
                             <div class="flex-1 px-2 mt-4">
                                 <label class="block mb-2 text-sm text-gray-200">{{ _('Company Name') }}</label>
-                                {{ form.company(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:border-accentpurple focus-visible:border-accentpurple") }}
+                                {{ form.company(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300
+                                rounded-lg border border-gray-700 placeholder-gray-600 focus:border-accentpurple
+                                focus-visible:border-accentpurple") }}
                             </div>
                         </div>
 
                         <div class="-mx-2 md:items-center md:flex">
                             <div class="flex-1 px-2 mt-4">
                                 <label class="block mb-2 text-sm text-gray-200">{{ _('Business Type / Area') }}</label>
-                                {{ form.business_type(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:border-accentpurple focus-visible:border-accentpurple") }}
+                                {{ form.business_type(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300
+                                rounded-lg border border-gray-700 placeholder-gray-600 focus:border-accentpurple
+                                focus-visible:border-accentpurple") }}
 
                             </div>
 
                             <div class="flex-1 px-2 mt-4">
                                 <label class="block mb-2 text-sm text-gray-200">{{ _('Service Interested In') }}</label>
-                                {{ form.service(class="block w-full px-5 py-2.5 mt-2 text-gray-700 border border-gray-200 rounded-lg bg-gray-900 text-gray-300 border-gray-700 focus:border-accentpurple focus-visible:border-accentpurple")}}
+                                {{ form.service(class="block w-full px-5 py-2.5 mt-2 text-gray-700 border
+                                border-gray-200 rounded-lg bg-gray-900 text-gray-300 border-gray-700
+                                focus:border-accentpurple focus-visible:border-accentpurple")}}
                             </div>
                         </div>
 
                         <div class="mt-4">
                             <label class="block mb-2 text-sm text-gray-200">{{ _('Subject') }}</label>
-                            {{ form.subject(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:border-accentpurple focus-visible:border-accentpurple") }}
+                            {{ form.subject(class="block w-full px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg
+                            border border-gray-700 placeholder-gray-600 focus:border-accentpurple
+                            focus-visible:border-accentpurple") }}
                         </div>
 
                         <div class="w-full mt-4">
                             <label class="block mb-2 text-sm text-gray-200">{{ _('Message') }}</label>
-                            {{ form.message(class="block w-full h-32 px-5 py-2.5 mt-2 bg-gray-900 text-gray-300 rounded-lg border border-gray-700 placeholder-gray-600 focus:border-accentpurple focus-visible:border-accentpurple") }}
+                            {{ form.message(class="block w-full h-32 px-5 py-2.5 mt-2 bg-gray-900 text-gray-300
+                            rounded-lg border border-gray-700 placeholder-gray-600 focus:border-accentpurple
+                            focus-visible:border-accentpurple") }}
                         </div>
 
-                        <button
-                            class="quidel-button quidel-full" type="submit">
+                        <button class="quidel-button quidel-full" type="submit">
                             {{ _('Send message') }}
                         </button>
                     </form>
@@ -1011,21 +1163,21 @@
 </script>
 <script>
     document.querySelectorAll('.group').forEach(card => {
-    const img = card.querySelector('img[data-animated]');
+        const img = card.querySelector('img[data-animated]');
 
-    if (!img) return;
+        if (!img) return;
 
-    const staticSrc = img.getAttribute('data-static');
-    const animatedSrc = img.getAttribute('data-animated');
+        const staticSrc = img.getAttribute('data-static');
+        const animatedSrc = img.getAttribute('data-animated');
 
-    card.addEventListener('mouseenter', () => {
-      img.src = animatedSrc;
+        card.addEventListener('mouseenter', () => {
+            img.src = animatedSrc;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            img.src = staticSrc;
+        });
     });
-
-    card.addEventListener('mouseleave', () => {
-      img.src = staticSrc;
-    });
-  });
 </script>
 
 {% endblock %}
