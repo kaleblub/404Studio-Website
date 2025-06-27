@@ -49,13 +49,7 @@
     }
 
     .section-services::before {
-        content: {
-                {
-                _('SERVICES')|tojson
-            }
-        }
-
-        ;
+        content: {{ _('SERVICES')|tojson }};
         background: linear-gradient(180deg,
             rgba(239, 176, 113, 1) 0%,
             rgba(74, 108, 247, 0) 100%);
@@ -86,6 +80,44 @@
 
     @media (min-width: 1024px) {
         .section-services::before {
+            font-size: 95px;
+            left: -3%;
+            top: -25%;
+        }
+    }
+
+    .section-why::before {
+        content: {{ _('WHY?')|tojson }};
+        background: linear-gradient(180deg,
+            rgba(239, 176, 113, 1) 0%,
+            rgba(74, 108, 247, 0) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        opacity: 0.2;
+        position: absolute;
+        /* adjust as needed to hover above */
+        left: -5%;
+        top: -15%;
+        font-size: 40px;
+        line-height: 1 !important;
+        font-weight: 700;
+        font-family: 'Inter',
+        sans-serif;
+    }
+
+    /* Responsive font sizes */
+    @media (min-width: 540px) {
+        .section-why::before {
+            font-size: 60px;
+            left: -3%;
+            top: -50%;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .section-why::before {
             font-size: 95px;
             left: -3%;
             top: -25%;
@@ -208,17 +240,54 @@
             top: -15%;
         }
     }
+        .section-contact::before {
+        content: {{ _('CONTACT')|tojson }};
+        background: linear-gradient(180deg,
+            rgba(239, 176, 113, 1) 0%,
+            rgba(74, 108, 247, 0) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        opacity: 0.2;
+        position: absolute;
+        /* adjust as needed to hover above */
+        left: -5%;
+        top: -15%;
+        font-size: 40px;
+        line-height: 1 !important;
+        font-weight: 700;
+        font-family: 'Inter',
+        sans-serif;
+    }
+
+    /* Responsive font sizes */
+    @media (min-width: 540px) {
+        .section-contact::before {
+            font-size: 60px;
+            left: -3%;
+            top: -50%;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .section-contact::before {
+            font-size: 95px;
+            left: -3%;
+            top: -25%;
+        }
+    }
 </style>
 <!-- Hero Section -->
-<section class="bg-[#0a0c19] relative flex flex-col items-center md:items-center max-w-screen min-h-screen pt-10 px-3">
+<section class="bg-[#0a0c19] relative flex flex-col items-center md:items-center max-w-screen min-h-screen pt-10 px-3 overflow-hidden">
 
     <!-- Hero Content -->
-    <div class="relative flex flex-col md:flex-row-reverse items-center w-full">
+    <div class="relative flex flex-col md:flex-row-reverse items-center justify-between w-full max-w-screen-2xl mx-auto px-4 lg:px-8">
         <!-- Right Side: Hero Image -->
         <div id="tesseract-container"
-            class="relative flex justify-evenly w-full md:w-3/6 min-h-[500px] md:h-5/6 max-h-[700px]">
+            class="relative flex justify center md:justify-end w-full md:w-1/6 min-h-[500px] md:h-5/6 max-h-[700px]">
             <div
-                class="tesseract-wrapper absolute md:relative w-[200px] h-[200px] md:w-[375px] lg:w-[500px] md:h-[375px] lg:h-[500px] object-cover left-0 sm:left-[50px] bottom-[50%] md:bottom-0 flex items-center justify-center">
+                class="tesseract-wrapper absolute md:relative w-[200px] h-[200px] md:w-[375px] lg:w-[500px] md:h-[375px] lg:h-[500px] object-cover left-0 md:left-[-180px] bottom-[50%] md:bottom-0 flex items-center justify-center">
                 <div class="tesseract scale-[0.7] md:scale-[1.5] lg:scale-[2] xl:scale-[2.4]">
                     <div class="cube-1">
                         <div class="sides front"></div>
@@ -251,16 +320,13 @@
 
         </div>
         <!-- Left Side: Text Content -->
-        <div
-            class="absolute top-[32vh] md:top-0 md:left-0 lg:left-8 z-10 w-full md:w-3/6 sm:max-lg:max-w-[480px] pr-2 pl-2 md:px-12 py-12 text-center md:text-left sm:content-center bg-transparent">
-            <h1
-                class="font-montserrat text-[56px] md:text-[65px] lg:text-[72px] xl:text-[85px] font-bold leading-tight top-[-225px] absolute md:relative md:top-0 text-right md:text-left">
+        <div class="absolute md:relative top-[32vh] md:top-0 md:left-0 lg:left-8 z-10 max-w-screen-xl w-full sm:w-4/6 sm:max-lg:max-w-[480px] px-2 md:px-12 py-12 text-center md:text-left sm:content-center bg-transparent">
+            <h1 class="font-montserrat text-[56px] md:text-[65px] lg:text-[72px] xl:text-[85px] font-bold leading-tight top-[-225px] absolute md:relative md:top-0 text-right md:text-left">
                 {{ _('Your Guide Through The') }}</h1>
             <h1 class="font-montserrat text-[56px] md:text-[65px] lg:text-[72px] xl:text-[85px] font-bold leading-tight text-right md:text-left glitch"
                 data-text="Digital Unknown">
                 {{ _('Digital Unknown') }}</h1>
-            <p
-                class="font-inter text-gray-400 text-[14px] md:text-[16px] lg:text-[18px] leading-[18px] md:leading-normal mt-4">
+            <p class="w-full md:w-4/5 font-inter text-gray-400 text-[14px] md:text-[16px] lg:text-[18px] leading-[18px] md:leading-normal text-right md:text-left mt-4">
                 {{ _("Whether you're starting from scratch, stuck in the middle, or scaling something big—I'm here to
                 build, guide, and solve. Design, development, automation, or something weird? Let’s make it real.") }}
             </p>
@@ -281,6 +347,81 @@
     </div>
 </section>
 
+<!-- Why You Need a Website Section -->
+<section class="bg-[#0a0c19] py-20 px-6">
+  <div class="container mx-auto">
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-12">
+      <h2 class="section-why relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">
+        {{ _('Why Your Business ') }}<span class="text-primaryorange">{{ _('Needs a Website') }}</span>
+      </h2>
+      <p class="text-gray-400 text-base mt-4">
+        {{ _("From boosting your credibility to unlocking growth — here's what a website can do for you.") }}
+      </p>
+    </div>
+
+    <!-- Main Content: Cards Left, List Right -->
+    <div class="flex flex-col lg:flex-row gap-12 items-start">
+      <!-- Left: 4 Value Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full lg:w-2/3">
+        <div class="bg-gray-900 hover:bg-gray-950 rounded-lg p-6 shadow-md transition">
+          <h3 class="text-xl font-semibold text-white">{{ _('Look Professional') }}</h3>
+          <p class="text-gray-400 mt-2 text-sm">
+            {{ _("A modern website instantly shows you're a real, credible business — not just a name on social media.") }}"
+          </p>
+        </div>
+        <div class="bg-gray-900 hover:bg-gray-950 rounded-lg p-6 shadow-md transition">
+          <h3 class="text-xl font-semibold text-white">Be Found Online</h3>
+          <p class="text-gray-400 mt-2 text-sm">
+            {{ _('Most customers search online before buying. A website gives them a place to find and trust you.') }}
+          </p>
+        </div>
+        <div class="bg-gray-900 hover:bg-gray-950 rounded-lg p-6 shadow-md transition">
+          <h3 class="text-xl font-semibold text-white">{{ _('Build Trust Instantly') }}</h3>
+          <p class="text-gray-400 mt-2 text-sm">
+            {{ _('Display reviews, explain your services, and show your brand — all in one clean, central place.') }}'
+          </p>
+        </div>
+        <div class="bg-gray-900 hover:bg-gray-950 rounded-lg p-6 shadow-md transition">
+          <h3 class="text-xl font-semibold text-white">Sell or Book 24/7</h3>
+          <p class="text-gray-400 mt-2 text-sm">
+            {{ _("Whether it’s online orders, bookings, or inquiries — a website works for you even when you sleep.") }}
+          </p>
+        </div>
+      </div>
+
+      <!-- Right: Benefit List + CTA -->
+      <div class="w-full lg:w-1/3">
+        <h3 class="text-[26px] lg:text-[32px] font-semibold text-white mb-6">
+          {{ _('More Benefits') }}
+        </h3>
+
+        <ul class="space-y-4 text-gray-300 text-sm">
+          {% for benefit in [
+            'Gain credibility with new clients',
+            'Show up in Google and Maps',
+            'Share updates, sales, and offers easily',
+            'Stand out from the competition',
+            'Collect emails or leads with forms',
+            'Offer support and answers 24/7'
+          ] %}
+          <li class="flex items-start gap-3">
+            <img class="w-5 h-5" src="{{ url_for('static', filename='images/icons/check-mark-svgrepo-com.svg')}}" alt="">
+            {{ benefit }}
+          </li>
+          {% endfor %}
+        </ul>
+
+        <a href="https://cal.com/404-studio-kaleb-humpal/30-minute-consultation-meeting"
+          target="_blank"
+          class="quidel-button mt-8">
+          {{ _("Let’s Build Your Website") }}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Services Section -->
 <section class="bg-[#0a0c19]">
     <div class="container px-6 py-10 mx-auto">
@@ -291,8 +432,7 @@
                 {{ _('Explore Our Areas of Expertise') }}
             </h2>
             <p class="mt-4 xl:mt-6 text-gray-400">
-                {{ _('From building beautiful, functional websites to keeping them secure and running smoothly, we offer
-                full-spectrum services to help your online presence thrive.') }}
+                {{ _('From building beautiful, functional websites to keeping them secure and running smoothly, we offer full-spectrum services to help your online presence thrive.') }}
             </p>
         </div>
 
@@ -308,8 +448,7 @@
                 <h3 class="text-xl font-semibold capitalize text-white">{{ _('Development') }}</h3>
 
                 <p class="text-gray-400">
-                    {{ _('We build fast, modern, and scalable websites and web applications tailored to your brand,
-                    using the latest technologies to ensure performance and functionality.') }}
+                    {{ _('We build fast, modern, and scalable websites and web applications tailored to your brand, using the latest technologies to ensure performance and functionality.') }}
                 </p>
 
                 <a href="{{ url_for('main.services', lang=lang) }}#development"
@@ -335,8 +474,7 @@
                 <h3 class="text-xl font-semibold capitalize text-white">{{ _('Hosting') }}</h3>
 
                 <p class="text-gray-400">
-                    {{ _('Enjoy reliable, secure, and fast website hosting solutions. We handle uptime, backups, and
-                    server management so you can focus on your business.') }}
+                    {{ _('Enjoy reliable, secure, and fast website hosting solutions. We handle uptime, backups, and server management so you can focus on your business.') }}
                 </p>
 
                 <a href="{{ url_for('main.services', lang=lang) }}#hosting"
@@ -362,8 +500,7 @@
                 <h3 class="text-xl font-semibold capitalize text-white">{{ _('Design') }}</h3>
 
                 <p class="text-gray-400">
-                    {{ _('From wireframes to final visuals, our design process ensures your website not only looks
-                    stunning but also delivers an intuitive user experience that converts.') }}
+                    {{ _('From wireframes to final visuals, our design process ensures your website not only looks stunning but also delivers an intuitive user experience that converts.') }}
                 </p>
 
                 <a href="{{ url_for('main.services', lang=lang) }}#design"
@@ -389,8 +526,7 @@
                 <h3 class="text-xl font-semibold capitalize text-white">{{ _('Management') }}</h3>
 
                 <p class="text-gray-400">
-                    {{ _('We manage everything from content updates to performance monitoring, so your website stays
-                    fresh, functional, and aligned with your business goals.') }}
+                    {{ _('We manage everything from content updates to performance monitoring, so your website stays fresh, functional, and aligned with your business goals.') }}
                 </p>
 
                 <a href="{{ url_for('main.services', lang=lang) }}#management"
@@ -416,8 +552,7 @@
                 <h3 class="text-xl font-semibold capitalize text-white">{{ _('Troubleshooting') }}</h3>
 
                 <p class="text-gray-400">
-                    {{ _('Got bugs or technical issues? We diagnose and resolve website errors, broken features, or
-                    performance slowdowns quickly and efficiently.') }}
+                    {{ _('Got bugs or technical issues? We diagnose and resolve website errors, broken features, or performance slowdowns quickly and efficiently.') }}
                 </p>
 
                 <a href="{{ url_for('main.services', lang=lang) }}#troubleshooting"
@@ -443,8 +578,7 @@
                 <h3 class="text-xl font-semibold capitalize text-white">{{ _('Other Services') }}</h3>
 
                 <p class="text-gray-400">
-                    {{ _("Need something custom? From SEO and analytics setup to email configuration or third-party
-                    integrations—we’ve got you covered.") }}
+                    {{ _("Need something custom? From SEO and analytics setup to email configuration or third-party integrations—we’ve got you covered.") }}
                 </p>
 
                 <a href="{{ url_for('main.services', lang=lang) }}#other"
@@ -461,86 +595,6 @@
         </div>
     </div>
 </section>
-
-<!-- Why You Need a Website Section -->
-<section class="bg-[#0a0c19] py-20 px-6">
-  <div class="container mx-auto">
-    <!-- Header -->
-    <div class="text-center max-w-3xl mx-auto mb-12">
-      <h2 class="text-[32px] lg:text-[42px] font-bold text-white leading-tight font-montserrat">
-        Why Your Business <span class="text-primaryorange">Needs a Website</span>
-      </h2>
-      <p class="text-gray-400 text-base mt-4">
-        From boosting your credibility to unlocking growth — here's what a website can do for you.
-      </p>
-    </div>
-
-    <!-- Main Content: Cards Left, List Right -->
-    <div class="flex flex-col lg:flex-row gap-12 items-start">
-      <!-- Left: 4 Value Cards -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full lg:w-2/3">
-        <div class="bg-gray-900 hover:bg-gray-950 rounded-lg p-6 shadow-md transition">
-          <h3 class="text-xl font-semibold text-white">Look Professional</h3>
-          <p class="text-gray-400 mt-2 text-sm">
-            A modern website instantly shows you're a real, credible business — not just a name on social media.
-          </p>
-        </div>
-        <div class="bg-gray-900 hover:bg-gray-950 rounded-lg p-6 shadow-md transition">
-          <h3 class="text-xl font-semibold text-white">Be Found Online</h3>
-          <p class="text-gray-400 mt-2 text-sm">
-            Most customers search online before buying. A website gives them a place to find and trust you.
-          </p>
-        </div>
-        <div class="bg-gray-900 hover:bg-gray-950 rounded-lg p-6 shadow-md transition">
-          <h3 class="text-xl font-semibold text-white">Build Trust Instantly</h3>
-          <p class="text-gray-400 mt-2 text-sm">
-            Display reviews, explain your services, and show your brand — all in one clean, central place.
-          </p>
-        </div>
-        <div class="bg-gray-900 hover:bg-gray-950 rounded-lg p-6 shadow-md transition">
-          <h3 class="text-xl font-semibold text-white">Sell or Book 24/7</h3>
-          <p class="text-gray-400 mt-2 text-sm">
-            Whether it’s online orders, bookings, or inquiries — a website works for you even when you sleep.
-          </p>
-        </div>
-      </div>
-
-      <!-- Right: Benefit List + CTA -->
-      <div class="w-full lg:w-1/3">
-        <h3 class="text-[26px] lg:text-[32px] font-semibold text-white mb-6">
-          More Benefits
-        </h3>
-
-        <ul class="space-y-4 text-gray-300 text-sm">
-          {% for benefit in [
-            'Gain credibility with new clients',
-            'Show up in Google and Maps',
-            'Share updates, sales, and offers easily',
-            'Stand out from the competition',
-            'Collect emails or leads with forms',
-            'Offer support and answers 24/7'
-          ] %}
-          <li class="flex items-start gap-3">
-            <svg class="w-5 h-5 text-primaryorange flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414L8.414 15H5v-3.414l8.293-8.293a1 1 0 011.414 0zM5 13.586L13.586 5 15 6.414 6.414 15H5v-1.414z"
-                clip-rule="evenodd" />
-            </svg>
-            {{ benefit }}
-          </li>
-          {% endfor %}
-        </ul>
-
-        <a href="https://cal.com/404-studio-kaleb-humpal/30-minute-consultation-meeting"
-          target="_blank"
-          class="quidel-button mt-8">
-          Let’s Build Your Website
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <!-- About Section -->
 <section class="bg-[#0a0c19] gap-16 overflow-x-hidden">
@@ -563,16 +617,12 @@
         <div class="pt-10 lg:pt-0 lg:w-1/2">
             <div class="relative">
                 <!-- <span class="title left-[25%] lg:left-[-5%] top-[-2rem]">ABOUT</span> -->
-                <h2
-                    class="section-about relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">
+                <h2 class="section-about relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">
                     {{ _('Your Partner in Web Development and Digital Solutions') }}
                 </h2>
                 <p
                     class="font-inter text-gray-400 text-[14px] md:text-[16px] lg:text-[18px] leading-[18px] md:leading-normal mt-4 z-1">
-                    {{ _('404 Studio LLC is a web development agency committed to delivering modern, user-centric
-                    websites that elevate your business. With years of experience in the industry, we are passionate
-                    about bringing your vision to life through cutting-edge design, development, and ongoing support.')
-                    }}
+                    {{ _('404 Studio LLC is a web development agency committed to delivering modern, user-centric websites that elevate your business. With years of experience in the industry, we are passionate about bringing your vision to life through cutting-edge design, development, and ongoing support.') }}
                 </p>
                 <div class="flex gap-4 justify-center lg:justify-start mt-6">
                     <a href="{{ url_for('main.about', lang=lang) }}" class="quidel-button inverted cursor-pointer"">
@@ -585,127 +635,104 @@
 </section>
 
 <!-- Reviews Section -->
-<section class=" relative min-h-screen overflow-x-hidden">
-                        <!-- Background layer -->
-                        <div class="absolute inset-0 flex">
-                            <div class="w-3/4 bg-[#0a0c19]"></div>
-                            <div class="w-1/5 md:w-2/5 bg-primaryorange"></div>
-                        </div>
+<section class="relative min-h-screen overflow-x-hidden">
+    <!-- Background layer -->
+    <div class="absolute inset-0 flex">
+        <div class="w-3/4 bg-[#0a0c19]"></div>
+        <div class="w-1/5 md:w-2/5 bg-primaryorange"></div>
+    </div>
 
-                        <!-- Foreground content -->
-                        <div
-                            class="relative z-10 flex flex-col justify-center w-full min-h-screen px-4 py-10 md:mx-24 z-1">
-                            <!-- <span class="title left-[0%] lg:left-[-2%] top-[2%] lg:top-[11rem]">REVIEWS</span> -->
-                            <h2
-                                class="section-reviews relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">
-                                {{ ('What our customers are saying') }}
-                            </h2>
+    <!-- Foreground content -->
+    <div class="relative z-10 flex flex-col justify-center w-full min-h-screen py-10 z-1">
+        <!-- <span class="title left-[0%] lg:left-[-2%] top-[2%] lg:top-[11rem]">REVIEWS</span> -->
+        <h2 class="section-reviews relative font-montserrat ml-20 text-[30px] lg:text-[58px] font-semibold text-left text-white">
+            {{ _('What our customers are saying') }}
+        </h2>
 
-                            <div
-                                class="grid w-full grid-cols-1 gap-8 mt-8 2xl:grid-cols-4 lg:mt-16 md:grid-cols-2 lg:grid-cols-3">
-                                <!-- Testimonials (example) -->
-                                <div class="w-full p-8 rounded-md shadow-lg bg-gray-900">
-                                    <p class="leading-loose text-gray-400">
-                                        {{ _('“404 Studio LLC has revamped our website and online store that was
-                                        previously crashing. With patience, diligence, and professionalism the team at
-                                        404 has taken care of our needs. Weekly, we continue to have updates in the shop
-                                        with sales and new items and 404 Studio is eager to take care of these items.
-                                        Working with our diverse team, 404 Studio strives to meet deadlines, offer
-                                        advice to improve our services, and unifies team work. With competitive pricing
-                                        and polite customer service, I would recommend 404 Studio to others.”') }}
-                                    </p>
-                                    <div class="flex items-center mt-6 -mx-2">
-                                        <img class="object-cover mx-2 rounded-full w-14 h-14"
-                                            src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
-                                            alt="">
-                                        <div class="mx-2">
-                                            <h3 class="font-semibold text-white">Ruth Boyd</h3>
-                                            <span class="text-sm text-gray-400">{{ _('Founder of Woven Dignity')
-                                                }}</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="w-full p-8 rounded-md shadow-lg bg-gray-900">
-                                    <p class="leading-loose text-gray-400">
-                                        {{ _('“404 Studio LLC has revamped our website and online store that was
-                                        previously crashing. With patience, diligence, and professionalism the team at
-                                        404 has taken care of our needs. Weekly, we continue to have updates in the shop
-                                        with sales and new items and 404 Studio is eager to take care of these items.
-                                        Working with our diverse team, 404 Studio strives to meet deadlines, offer
-                                        advice to improve our services, and unifies team work. With competitive pricing
-                                        and polite customer service, I would recommend 404 Studio to others.”') }}
-                                    </p>
-                                    <div class="flex items-center mt-6 -mx-2">
-                                        <img class="object-cover mx-2 rounded-full w-14 h-14"
-                                            src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
-                                            alt="">
-                                        <div class="mx-2">
-                                            <h3 class="font-semibold text-white">Nassima Amari</h3>
-                                            <span class="text-sm text-gray-400">{{ _('ILCA Bejaia') }}</span>
-                                        </div>
-                                    </div>
-                                </div>
+        <div class="swiper mySwiper w-full mt-8 lg:mt-16">
+            <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide p-8 rounded-md shadow-lg bg-gray-900 !w-full md:!w-[70%] lg:!w-[50%] xl:!w-[33%]">
+                <p class="leading-loose text-gray-400">
+                    {{ _('“404 Studio LLC has revamped our website and online store that was
+                    previously crashing. With patience, diligence, and professionalism the team at
+                    404 has taken care of our needs. Weekly, we continue to have updates in the shop
+                    with sales and new items and 404 Studio is eager to take care of these items.
+                    Working with our diverse team, 404 Studio strives to meet deadlines, offer
+                    advice to improve our services, and unifies team work. With competitive pricing
+                    and polite customer service, I would recommend 404 Studio to others.”') }}
+                </p>
+                <div class="flex items-center mt-6 -mx-2">
+                    <img class="object-cover mx-2 rounded-full w-14 h-14"
+                        src="{{ url_for('static', filename='images/review-images/woven-dignity.ico')}}"
+                        alt="">
+                    <div class="mx-2">
+                        <h3 class="font-semibold text-white">Ruth Boyd</h3>
+                        <span class="text-sm text-gray-400">{{ _('Founder of Woven Dignity') }}</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide p-8 rounded-md shadow-lg bg-gray-900 !w-full md:!w-[70%] lg:!w-[50%] xl:!w-[33%]">
+                <p class="leading-loose text-gray-400">
+                    {{ _('“404 Studio LLC has revamped our website and online store that was
+                    previously crashing. With patience, diligence, and professionalism the team at
+                    404 has taken care of our needs. Weekly, we continue to have updates in the shop
+                    with sales and new items and 404 Studio is eager to take care of these items.
+                    Working with our diverse team, 404 Studio strives to meet deadlines, offer
+                    advice to improve our services, and unifies team work. With competitive pricing
+                    and polite customer service, I would recommend 404 Studio to others.”') }}
+                </p>
+                <div class="flex items-center mt-6 -mx-2">
+                    <img class="object-cover mx-2 rounded-full w-14 h-14"
+                        src="{{ url_for('static', filename='images/review-images/ILCA-Logo.ico')}}"
+                        alt="">
+                    <div class="mx-2">
+                        <h3 class="font-semibold text-white">Nassima Amari</h3>
+                        <span class="text-sm text-gray-400">{{ _('ILCA Bejaia') }}</span>
+                    </div>
+                </div>
+            </div>
 
 
-                                <div class="w-full p-8 rounded-md shadow-lg bg-gray-900">
-                                    <p class="leading-loose text-gray-400">
-                                        {{ _('“404 Studio LLC has revamped our website and online store that was
-                                        previously crashing. With patience, diligence, and professionalism the team at
-                                        404 has taken care of our needs. Weekly, we continue to have updates in the shop
-                                        with sales and new items and 404 Studio is eager to take care of these items.
-                                        Working with our diverse team, 404 Studio strives to meet deadlines, offer
-                                        advice to improve our services, and unifies team work. With competitive pricing
-                                        and polite customer service, I would recommend 404 Studio to others.”') }}
-                                    </p>
-                                    <div class="flex items-center mt-6 -mx-2">
-                                        <img class="object-cover mx-2 rounded-full w-14 h-14"
-                                            src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
-                                            alt="">
-                                        <div class="mx-2">
-                                            <h3 class="font-semibold text-white">Tina Bralley</h3>
-                                            <span class="text-sm text-gray-400">{{ _('Balanced Accountant') }}</span>
-                                        </div>
-                                    </div>
-                                </div>
+            <div class="swiper-slide p-8 rounded-md shadow-lg bg-gray-900 !w-full md:!w-[70%] lg:!w-[50%] xl:!w-[33%]">
+                <p class="leading-loose text-gray-400">
+                    {{ _('“404 Studio LLC has revamped our website and online store that was
+                    previously crashing. With patience, diligence, and professionalism the team at
+                    404 has taken care of our needs. Weekly, we continue to have updates in the shop
+                    with sales and new items and 404 Studio is eager to take care of these items.
+                    Working with our diverse team, 404 Studio strives to meet deadlines, offer
+                    advice to improve our services, and unifies team work. With competitive pricing
+                    and polite customer service, I would recommend 404 Studio to others.”') }}
+                </p>
+                <div class="flex items-center mt-6 -mx-2">
+                    <img class="object-cover mx-2 rounded-full w-14 h-14"
+                        src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
+                        alt="">
+                    <div class="mx-2">
+                        <h3 class="font-semibold text-white">Tina Bralley</h3>
+                        <span class="text-sm text-gray-400">{{ _('Balanced Accountant') }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div class="items-center hidden mt-12 mb-[2rem] md:flex">
+            <button title="left arrow" class="swiper-button-prev cursor-pointer p-2 mx-[15px] text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 text-gray-200 border-gray-700 bg-[#14213d] hover:bg-primaryorange">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-accentpurple w-6 h-6" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
 
-                                <div class="w-full p-8 rounded-md shadow-lg bg-gray-900">
-                                    <p class="leading-loose text-gray-400">
-                                        {{ _('“ Lorem ipsum dolor sit amet consectetur adipisicing elit... ”') }}
-                                    </p>
-                                    <div class="flex items-center mt-6 -mx-2">
-                                        <img class="object-cover mx-2 rounded-full w-14 h-14"
-                                            src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80"
-                                            alt="">
-                                        <div class="mx-2">
-                                            <h3 class="font-semibold text-white">Robbert</h3>
-                                            <span class="text-sm text-gray-400">{{ _('CTO, Robert Consultency')
-                                                }}</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="items-center hidden mt-12 md:flex">
-                                <button title="left arrow"
-                                    class="cursor-pointer p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 text-gray-200 border-gray-700 hover:bg-primaryorange hover:bg-gray-100">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-                                    </svg>
-                                </button>
-
-                                <button title="right arrow"
-                                    class="cursor-pointer p-2 text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 text-gray-200 border-gray-700 hover:bg-primaryorange lg:mx-6 hover:bg-gray-100">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
+            <button title="right arrow" class="swiper-button-next cursor-pointer p-2 mx-[15px] text-gray-800 transition-colors duration-300 border rounded-full rtl:-scale-x-100 text-gray-200 border-gray-700 bg-[#14213d] hover:bg-primaryorange lg:mx-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-accentpurple w-6 h-6" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+    </div>
 </section>
 
 <!-- Pricing Options -->
@@ -714,8 +741,7 @@
         <div class="xl:items-center xl:-mx-8 xl:flex">
             <div class="flex flex-col items-center xl:items-start xl:mx-8 lg:w-2/5">
                 <!-- <span class="title left-[50%] lg:left-[3%] top-[14rem]">PRICING</span> -->
-                <h2
-                    class="section-pricing relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-center lg:text-left text-white">
+                <h2 class="section-pricing relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-center lg:text-left text-white">
                     {{ _('Our Pricing Packages & Plans') }}</h2>
 
                 <div class="mt-4">
@@ -743,11 +769,9 @@
 
             <div class="flex-1 xl:mx-8">
                 <div class="mt-8 space-y-8 md:-mx-4 md:flex md:items-center md:justify-center md:space-y-0 xl:mt-0">
-                    <div
-                        class="max-w-sm mx-auto border rounded-lg md:mx-4 border-gray-700 bg-gray-900 hover:bg-gray-950 duration-400 ease-in-out">
+                    <div class="max-w-sm mx-auto border rounded-lg md:mx-4 border-gray-700 bg-gray-900 hover:bg-gray-950 duration-400 ease-in-out">
                         <div class="p-6 flex flex-col">
-                            <h2 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl text-white">{{ _('Web
-                                Development Packages') }}</h2>
+                            <h3 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl text-white">{{ _('Web Development Packages') }}</h2>
 
                             <p class="mt-4 text-gray-400">
                                 {{ _('Custom site builds, redesigns, and ecommerce integration.') }}
@@ -771,8 +795,8 @@
                         <hr class="border-gray-200 border-gray-700">
 
                         <div class="p-6">
-                            <h3 class="text-lg font-medium text-gray-700 capitalize lg:text-xl text-white">
-                                {{ _('What’s included:') }}</h3>
+                            <h4 class="text-lg font-medium text-gray-700 capitalize lg:text-xl text-white">
+                                {{ _('What’s included:') }}</h4>
 
                             <div class="mt-8 space-y-4">
                                 <div class="flex items-center">
@@ -841,8 +865,7 @@
                     <div
                         class="max-w-sm mx-auto border rounded-lg md:mx-4 border-gray-700 bg-gray-900 hover:bg-gray-950 duration-400 ease-in-out">
                         <div class="p-6 flex flex-col">
-                            <h2 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl text-white">{{ _('Web
-                                Hosting Packages') }}</h2>
+                            <h3 class="text-xl font-medium text-gray-700 capitalize lg:text-2xl text-white">{{ _('Web Hosting Packages') }}</h3>
 
                             <p class="mt-4 text-gray-400">
                                 {{ _('Fast, secure hosting managed by 404 Studio.') }}
@@ -866,8 +889,8 @@
                         <hr class="border-gray-200 border-gray-700">
 
                         <div class="p-6">
-                            <h3 class="text-lg font-medium text-gray-700 capitalize lg:text-xl text-white">
-                                {{ _('What’s included:') }}</h3>
+                            <h4 class="text-lg font-medium text-gray-700 capitalize lg:text-xl text-white">
+                                {{ _('What’s included:') }}</h4>
 
                             <div class="mt-8 space-y-4">
                                 <div class="flex items-center">
@@ -952,10 +975,8 @@
     <div class="relative z-10 flex items-center justify-center h-full">
         <div
             class="flex flex-col bg-[#0a0c19] text-white p-8 rounded-xl w-full max-w-2xl md:w-2/6 shadow-xl text-center items-center">
-            <h2 class="font-montserrat text-[30px] lg:text-[58px] font-semibold text-white">{{ _('Need Help Choosing?')
-                }}</h2>
-            <p class="mb-6 font-inter text-gray-300">{{ _('Schedule a free consultation now, and we will figure out
-                which package and/or plan is right for your situation!') }}</p>
+            <h2 class="font-montserrat text-[30px] lg:text-[58px] font-semibold text-white">{{ _('Need Help Choosing?') }}</h2>
+            <p class="mb-6 font-inter text-gray-300">{{ _('Schedule a free consultation now, and we will figure out which package and/or plan is right for your situation!') }}</p>
             <a class="quidel-button"
                 href="https://cal.com/404-studio-kaleb-humpal/30-minute-consultation-meeting?development_package=Not+Sure+Yet&hosting_plan=Not+Sure+Yet&project_details=Free Consultation"
                 target="_blank">
@@ -984,11 +1005,9 @@
             </div>
 
             <div class="mt-8 lg:w-3/5 lg:mx-6">
-                <div
-                    class="w-full px-8 py-10 overflow-hidden rounded-lg shadow-2xl bg-gray-900 shadow-gray-300/50 shadow-black/50">
-                    <h2 class="text-2xl font-semibold text-gray-800 capitalize text-white lg:text-3xl">
-                        {{ _('Contact us for more info') }}
-                    </h2>
+                <h2 class="section-contact relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">
+{{ _('Contact us for more info') }}                </h2>
+                <div class="w-full px-8 py-10 overflow-hidden rounded-lg bg-gray-900">
                     <h3 class="text-lg font-medium text-gray-700">{{ _('What do you want to ask') }}</h3>
                     {% with messages = get_flashed_messages(with_categories=true) %}
                     {% if messages %}
@@ -1082,12 +1101,14 @@
         </div>
     </div>
 </section>
+{% endblock %}
+{% block scripts %}
 <script>
     var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
+        slidesPerView: 4,
         spaceBetween: 28,
-        centeredSlides: true,
-        loop: true,
+        centeredSlides: false,
+        loop: false,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -1179,5 +1200,27 @@
         });
     });
 </script>
-
+<script>
+  const swiper = new Swiper('.mySwiper', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 24,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1280: {
+        slidesPerView: 3,
+      },
+    },
+  });
+</script>
 {% endblock %}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="" lang="{{ lang or 'en'}}">
+<html class="overflow-x: hidden;" lang="{{ lang or 'en'}}">
 
 <head>
   <meta charset="UTF-8">
@@ -13,6 +13,8 @@
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/tailwind-styles.css') }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 
   <link rel="icon" href="{{ url_for('static', filename='images/icons/404.ico') }}">
   <!-- Page Specific Styles -->
@@ -28,27 +30,6 @@
     }
   </script>
   <style>
-    .underlined-footer {
-      position: relative;
-      display: inline-block;
-      z-index: 1;
-    }
-
-    .underlined-footer::after {
-      content: "";
-      position: absolute;
-      bottom: -10px;
-      /* Adjust as needed */
-      left: 0;
-      width: 100%;
-      height: 20px;
-      /* Adjust to match the SVG */
-      background-image: url("{{ url_for('static', filename='images/underlines/footer-underline.svg') }}");
-      background-repeat: no-repeat;
-      background-size: contain;
-      z-index: -1;
-    }
-
     #menu-wrapper.open .top-line {
       transform: rotate(45deg);
       top: 1.25rem;
@@ -123,7 +104,6 @@
     #mobileLangMenu.show {
       display: block;
     }
-
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -132,7 +112,7 @@
 
 <body class="bg-[#0a0c19] text-white overflow-x-hidden">
   <header>
-    <div class="flex flex-wrap items-center justify-between px-6 py-4">
+    <div class="max-w-screen-xl mx-auto px-6 py-4 flex items-center justify-between">
       <!-- Logo -->
       <div class="w-full md:w-auto mb-4 md:mb-0">
         <a href="{{ url_for('main.home', lang=lang) }}" class="cursor-pointer">
@@ -142,52 +122,66 @@
       </div>
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center space-x-6">
-        {% for page, label in [('main.home', 'Home'), ('main.about', 'About'), ('main.services', 'Services'), ('main.portfolio', 'Portfolio'), ('main.pricing', 'Pricing'), ('main.contact', 'Contact')] %}
-          <a href="{{ url_for(page, lang=lang) }}" class="relative group {% if request.path == url_for(page, lang=lang) %}text-primaryorange{% endif %}">
-            <span class="text-white">{{ _(label) }}</span>
-            <span class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
-          </a>
+        {% for page, label in [('main.home', 'Home'), ('main.about', 'About'), ('main.services', 'Services'),
+        ('main.portfolio', 'Portfolio'), ('main.pricing', 'Pricing'), ('main.contact', 'Contact')] %}
+        <a href="{{ url_for(page, lang=lang) }}"
+          class="relative group {% if request.path == url_for(page, lang=lang) %}text-primaryorange{% endif %}">
+          <span class="text-white">{{ _(label) }}</span>
+          <span
+            class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
+        </a>
         {% endfor %}
 
         <!-- Desktop Language Dropdown -->
         <div class="relative">
-          <a onclick="toggleDropdown('langDropdownMenu')" id="langDropdownBtn" type="button" class="relative group cursor-pointer">
+          <a onclick="toggleDropdown('langDropdownMenu')" id="langDropdownBtn" type="button"
+            class="relative group cursor-pointer">
             <span>{{ _('Language') }}</span>
-            <span class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
+            <span
+              class="absolute left-0 bottom-0 h-0.5 w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
           </a>
           <div id="langDropdownMenu" class="absolute mt-2 w-32 bg-white text-black rounded-md shadow-lg hidden z-10">
-            <a href="{{ url_for('main.set_language', lang_code='en') }}" class="block px-4 py-2 hover:bg-gray-100 {% if lang == 'en' %}text-gray-400{% endif %}">English</a>
-            <a href="{{ url_for('main.set_language', lang_code='es') }}" class="block px-4 py-2 hover:bg-gray-100 {% if lang == 'es' %}text-gray-400{% endif %}">Español</a>
+            <a href="{{ url_for('main.set_language', lang_code='en') }}"
+              class="block px-4 py-2 hover:bg-gray-100 {% if lang == 'en' %}text-gray-400{% endif %}">English</a>
+            <a href="{{ url_for('main.set_language', lang_code='es') }}"
+              class="block px-4 py-2 hover:bg-gray-100 {% if lang == 'es' %}text-gray-400{% endif %}">Español</a>
           </div>
         </div>
       </nav>
 
       <!-- Mobile Menu Button -->
-      <div class="md:hidden">
-        <button id="mobile-menu-button" class="flex flex-col space-y-1.5">
-          <span class="w-8 h-0.5 bg-white rounded"></span>
-          <span class="w-8 h-0.5 bg-white rounded"></span>
-          <span class="w-8 h-0.5 bg-white rounded"></span>
+      <div id="menu-wrapper" class="md:hidden">
+        <button id="mobile-menu-button" class="relative w-6 h-6">
+          <span
+            class="top-line absolute h-0.75 w-8 bg-white right-1 top-1 transition-transform duration-300 rounded-lg"></span>
+          <span
+            class="middle-line absolute h-0.75 w-8 bg-white right-1 top-3.5 transition-opacity duration-300 rounded-lg"></span>
+          <span
+            class="bottom-line absolute h-0.75 w-8 bg-white right-1 top-6 transition-transform duration-300 rounded-lg"></span>
         </button>
       </div>
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 font-poppins bg-[#0a0c19]">
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 text-right font-poppins bg-[#0a0c19]">
       <ul class="space-y-4">
-        {% for page, label in [('main.home', 'Home'), ('main.about', 'About'), ('main.services', 'Services'), ('main.portfolio', 'Portfolio'), ('main.pricing', 'Pricing'), ('main.contact', 'Contact')] %}
-          <li><a href="{{ url_for(page, lang=lang) }}" class="block hover:underline">{{ _(label) }}</a></li>
+        {% for page, label in [('main.home', 'Home'), ('main.about', 'About'), ('main.services', 'Services'),
+        ('main.portfolio', 'Portfolio'), ('main.pricing', 'Pricing'), ('main.contact', 'Contact')] %}
+        <li><a href="{{ url_for(page, lang=lang) }}" class="block hover:underline">{{ _(label) }}</a></li>
         {% endfor %}
         <!-- Mobile Language Dropdown -->
-<li class="relative">
-  <button onclick="toggleDropdown('mobileLangMenu')" id="mobileLangBtn" type="button" class="block w-full text-left">
-    {{ _('Language') }}
-  </button>
-  <div id="mobileLangMenu" class="hidden mt-2 bg-white text-black rounded-md shadow-md">
-    <a href="{{ url_for('main.set_language', lang_code='en') }}" class="block px-4 py-2 hover:bg-gray-100 {% if lang == 'en' %}text-gray-400{% endif %}">English</a>
-    <a href="{{ url_for('main.set_language', lang_code='es') }}" class="block px-4 py-2 hover:bg-gray-100 {% if lang == 'es' %}text-gray-400{% endif %}">Español</a>
-  </div>
-</li>
+        <li class="relative">
+          <button onclick="toggleDropdown('mobileLangMenu')" id="mobileLangBtn" type="button"
+            class="block w-full text-right">
+            {{ _('Language') }}
+          </button>
+          <div id="mobileLangMenu" class="hidden mt-2 bg-white text-black rounded-md shadow-md">
+            <a href="{{ url_for('main.set_language', lang_code='en') }}"
+              class="block px-4 py-2 hover:bg-gray-100 {% if lang == 'en' %}text-gray-400{% endif %}">English</a>
+            <a href="{{ url_for('main.set_language', lang_code='es') }}"
+              class="block px-4 py-2 hover:bg-gray-100 {% if lang == 'es' %}text-gray-400{% endif %}">Español</a>
+          </div>
+        </li>
       </ul>
     </div>
   </header>
@@ -229,10 +223,12 @@
               <a href="{{ url_for('main.contact', lang=lang) }}" class="hover:text-primaryorange">{{ _('Contact') }}</a>
             </li>
             <li>
-              <a href="{{ url_for('main.services', lang=lang) }}" class="hover:text-primaryorange">{{ _('Services') }}</a>
+              <a href="{{ url_for('main.services', lang=lang) }}" class="hover:text-primaryorange">{{ _('Services')
+                }}</a>
             </li>
             <li>
-              <a href="{{ url_for('main.portfolio', lang=lang) }}" class="hover:text-primaryorange">{{ _('Portfolio') }}</a>
+              <a href="{{ url_for('main.portfolio', lang=lang) }}" class="hover:text-primaryorange">{{ _('Portfolio')
+                }}</a>
             </li>
           </ul>
         </div>
@@ -241,14 +237,16 @@
           <h4 class="text-lg font-medium mb-4 mt-7">{{ _('Latest Work') }}</h4>
           <ul class="text-sm  transition-all duration-500">
             <li class="mb-3">
-              <a href="{{ url_for('main.portfolio', lang=lang) }}#woven-dignity" class="hover:text-primaryorange">Woven Dignity</a>
+              <a href="{{ url_for('main.portfolio', lang=lang) }}#woven-dignity" class="hover:text-primaryorange">Woven
+                Dignity</a>
             </li>
             <li class="mb-3">
-              <a href="{{ url_for('main.portfolio', lang=lang) }}#ilca-bejaia" class="hover:text-primaryorange">ILCABejaia</a>
+              <a href="{{ url_for('main.portfolio', lang=lang) }}#ilca-bejaia"
+                class="hover:text-primaryorange">ILCABejaia</a>
             </li>
             <li class="mb-3">
-              <a href="{{ url_for('main.portfolio', lang=lang) }}#balanced-accountant" class="hover:text-primaryorange">Balanced
-                Accountant</a>
+              <a href="{{ url_for('main.portfolio', lang=lang) }}#balanced-accountant"
+                class="hover:text-primaryorange">Balanced Accountant</a>
             </li>
           </ul>
         </div>
@@ -260,7 +258,8 @@
               <a href="javascript:;" class="hover:text-primaryorange">{{ _('FAQs') }}</a>
             </li>
             <li class="mb-3">
-              <a href="https://cal.com/404-studio-kaleb-humpal/30-minute-consultation-meeting?development_package=Not+Sure+Yet&hosting_plan=Not+Sure+Yet&project_details=Free Consultation" target="_blank" class="hover:text-primaryorange">{{ _('Schedule Appointment') }}</a>
+              <a href="https://cal.com/404-studio-kaleb-humpal/30-minute-consultation-meeting?development_package=Not+Sure+Yet&hosting_plan=Not+Sure+Yet&project_details=Free Consultation"
+                target="_blank" class="hover:text-primaryorange">{{ _('Schedule Appointment') }}</a>
             </li>
             <li>
               <a href="{{ url_for('main.contact', lang=lang) }}" class="hover:text-primaryorange">{{ _('Contact') }}</a>
@@ -334,6 +333,7 @@
   </footer>
 
   <script src="{{ url_for('static', filename='js/hoverSlippery.js') }}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     // Initialize HoverSlippery
     $('.overline').hoverSlippery({
@@ -343,54 +343,62 @@
 
   <!-- Scripts for mobile menu toggle -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const mobileMenuButton = document.getElementById('mobile-menu-button');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const wrapper = document.getElementById('menu-wrapper');
-      const dropdown = document.getElementById('mobile-services-dropdown');
+  document.addEventListener('DOMContentLoaded', () => {
+    // Elements
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const wrapper = document.getElementById('menu-wrapper');
+    // const mobileServicesDropdown = document.getElementById('mobile-services-dropdown');
+    const desktopLangBtn = document.getElementById('langDropdownBtn');
+    const desktopLangMenu = document.getElementById('langDropdownMenu');
+    const mobileLangBtn = document.getElementById('mobileLangBtn');
+    const mobileLangMenu = document.getElementById('mobileLangMenu');
 
-      mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        wrapper.classList.toggle('open'); // toggle class to animate burger
-      });
-
-      window.toggleDropdownMobile = () => {
-        dropdown.classList.toggle('hidden');
-      };
+    // Toggle mobile menu visibility and burger animation
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      if (wrapper) wrapper.classList.toggle('open');
     });
-  </script>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById("mobile-menu").classList.toggle("hidden");
-    }
+    // Toggle mobile services dropdown visibility
+    // window.toggleDropdownMobile = () => {
+    //   if (mobileServicesDropdown) {
+    //     mobileServicesDropdown.classList.toggle('hidden');
+    //   }
+    // };
 
-    function toggleDropdownMobile() {
-      document.getElementById("mobile-services-dropdown").classList.toggle("hidden");
-    }
-  </script>
-  <script>
-    function toggleDropdown(menuId) {
-  const menu = document.getElementById(menuId);
-  menu.classList.toggle('show');
-}
+    // Generic dropdown toggle by menu ID (used for language dropdowns)
+    window.toggleDropdown = (menuId) => {
+      const menu = document.getElementById(menuId);
+      if (menu) {
+        menu.classList.toggle('show');
+      }
+    };
 
-// Close dropdowns if clicked outside
-window.onclick = function(event) {
-  const desktopBtn = document.getElementById('langDropdownBtn');
-  const desktopMenu = document.getElementById('langDropdownMenu');
-  const mobileBtn = document.getElementById('mobileLangBtn');
-  const mobileMenu = document.getElementById('mobileLangMenu');
+    // Close language dropdowns if clicking outside
+    window.onclick = (event) => {
+      if (
+        desktopLangBtn && desktopLangMenu &&
+        !desktopLangBtn.contains(event.target) &&
+        !desktopLangMenu.contains(event.target)
+      ) {
+        desktopLangMenu.classList.remove('show');
+      }
 
-  if (!desktopBtn.contains(event.target) && !desktopMenu.contains(event.target)) {
-    desktopMenu.classList.remove('show');
-  }
-  if (!mobileBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
-    mobileMenu.classList.remove('show');
-  }
-}
+      if (
+        mobileLangBtn && mobileLangMenu &&
+        !mobileLangBtn.contains(event.target) &&
+        !mobileLangMenu.contains(event.target)
+      ) {
+        mobileLangMenu.classList.remove('show');
+      }
+    };
+  });
+</script>
 
-  </script>
+  {% block scripts %}
+
+  {% endblock %}
 </body>
 
 </html>

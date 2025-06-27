@@ -172,8 +172,7 @@
                     </span>
                     <h3 class="text-title text-sm font-medium">{{ _('Custom Development') }}</h3>
                 </div>
-                <p class="mt-4 text-sm text-gray-300">{{ _('From landing pages to complex platforms, we tailor every
-                    build to your specific needs.') }}</p>
+                <p class="mt-4 text-sm text-gray-300">{{ _('From landing pages to complex platforms, we tailor every build to your specific needs.') }}</p>
             </div>
 
             <div>
@@ -185,8 +184,7 @@
                     </span>
                     <h3 class="text-title text-sm font-medium">{{ _('Responsive & Accessible') }}</h3>
                 </div>
-                <p class="mt-4 text-sm text-gray-300">{{ _('Every website works beautifully across all devices and meets
-                    accessibility standards.') }}</p>
+                <p class="mt-4 text-sm text-gray-300">{{ _('Every website works beautifully across all devices and meets accessibility standards.') }}</p>
             </div>
 
             <div>
@@ -198,8 +196,7 @@
                     </span>
                     <h3 class="text-title text-sm font-medium">{{ _('Scalable Tech Stack') }}</h3>
                 </div>
-                <p class="mt-4 text-sm text-gray-300">{{ _('Built with tools like TailwindCSS, Python, JavaScript, and
-                    more—ready to scale as your business grows.') }}</p>
+                <p class="mt-4 text-sm text-gray-300">{{ _('Built with tools like TailwindCSS, Python, JavaScript, and more—ready to scale as your business grows.') }}</p>
             </div>
 
         </div>
@@ -227,12 +224,11 @@
                                     {{ project.title }}</h2>
                                 <!-- <p class="text-[--body-text-color] text-sm font-normal my-0">From $19.99</p> -->
                             </div>
-                            <p class="text-[--body-text-color] text-sm font-normal nb my-0 text-gray-300">{{
-                                project.description }}</p>
+                            <p class="text-[--body-text-color] text-sm font-normal nb my-0 text-gray-300">{{ project.description }}</p>
                             <div class="my-6 flex gap-1">
                                 <div class="size-7 rounded-btn border bg-ui flex justify-center items-center"
-                                    title="{{ project.tech[0] }}">
-                                    <img src="{{ url_for('static', filename='images/icons/' ~ project.tech[1]) }}">
+                                    title="{{ project.tech[0][0] }}">
+                                    <img src="{{ url_for('static', filename='images/icons/' ~ project.tech[0][1]) }}">
                                 </div>
                             </div>
                             <div class="mt-6 grid grid-cols-1 gap-3">
