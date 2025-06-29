@@ -49,7 +49,7 @@
     }
 
     .section-services::before {
-        content: {{ _('SERVICES')|tojson }};
+        content: "{{ _('SERVICES') }}";
         background: linear-gradient(180deg,
             rgba(239, 176, 113, 1) 0%,
             rgba(74, 108, 247, 0) 100%);
@@ -87,7 +87,7 @@
     }
 
     .section-why::before {
-        content: {{ _('WHY?')|tojson }};
+        content: "{{ _('WHY?') }}";
         background: linear-gradient(180deg,
             rgba(239, 176, 113, 1) 0%,
             rgba(74, 108, 247, 0) 100%);
@@ -327,8 +327,7 @@
                 data-text="Digital Unknown">
                 {{ _('Digital Unknown') }}</h1>
             <p class="w-full md:w-4/5 font-inter text-gray-400 text-[14px] md:text-[16px] lg:text-[18px] leading-[18px] md:leading-normal text-right md:text-left mt-4">
-                {{ _("Whether you're starting from scratch, stuck in the middle, or scaling something big—I'm here to
-                build, guide, and solve. Design, development, automation, or something weird? Let’s make it real.") }}
+                {{ _("Whether you're starting from scratch, stuck in the middle, or scaling something big—I'm here to build, guide, and solve. Design, development, automation, or something weird? Let’s make it real.") }}
             </p>
             <div class="flex gap-4 justify-center md:justify-start mt-6">
                 <a class="quidel-button"
@@ -367,11 +366,11 @@
         <div class="bg-gray-900 hover:bg-gray-950 rounded-lg p-6 shadow-md transition">
           <h3 class="text-xl font-semibold text-white">{{ _('Look Professional') }}</h3>
           <p class="text-gray-400 mt-2 text-sm">
-            {{ _("A modern website instantly shows you're a real, credible business — not just a name on social media.") }}"
+            {{ _("A modern website instantly shows you're a real, credible business — not just a name on social media.") }}
           </p>
         </div>
         <div class="bg-gray-900 hover:bg-gray-950 rounded-lg p-6 shadow-md transition">
-          <h3 class="text-xl font-semibold text-white">Be Found Online</h3>
+          <h3 class="text-xl font-semibold text-white">{{ _('Be Found Online') }}</h3>
           <p class="text-gray-400 mt-2 text-sm">
             {{ _('Most customers search online before buying. A website gives them a place to find and trust you.') }}
           </p>
@@ -379,11 +378,11 @@
         <div class="bg-gray-900 hover:bg-gray-950 rounded-lg p-6 shadow-md transition">
           <h3 class="text-xl font-semibold text-white">{{ _('Build Trust Instantly') }}</h3>
           <p class="text-gray-400 mt-2 text-sm">
-            {{ _('Display reviews, explain your services, and show your brand — all in one clean, central place.') }}'
+            {{ _('Display reviews, explain your services, and show your brand — all in one clean, central place.') }}
           </p>
         </div>
         <div class="bg-gray-900 hover:bg-gray-950 rounded-lg p-6 shadow-md transition">
-          <h3 class="text-xl font-semibold text-white">Sell or Book 24/7</h3>
+          <h3 class="text-xl font-semibold text-white">{{ _('Sell or Book 24/7') }}</h3>
           <p class="text-gray-400 mt-2 text-sm">
             {{ _("Whether it’s online orders, bookings, or inquiries — a website works for you even when you sleep.") }}
           </p>
@@ -398,12 +397,12 @@
 
         <ul class="space-y-4 text-gray-300 text-sm">
           {% for benefit in [
-            'Gain credibility with new clients',
-            'Show up in Google and Maps',
-            'Share updates, sales, and offers easily',
-            'Stand out from the competition',
-            'Collect emails or leads with forms',
-            'Offer support and answers 24/7'
+            _('Gain credibility with new clients'),
+            _('Show up in Google and Maps'),
+            _('Share updates, sales, and offers easily'),
+            _('Stand out from the competition'),
+            _('Collect emails or leads with forms'),
+            _('Offer support and answers 24/7')
           ] %}
           <li class="flex items-start gap-3">
             <img class="w-5 h-5" src="{{ url_for('static', filename='images/icons/check-mark-svgrepo-com.svg')}}" alt="">
@@ -453,7 +452,7 @@
 
                 <a href="{{ url_for('main.services', lang=lang) }}#development"
                     class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
-                    <span class="mx-1">{{ _('read more') }}</span>
+                    <span class="mx-1">{{ _('Read More') }}</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
@@ -479,7 +478,7 @@
 
                 <a href="{{ url_for('main.services', lang=lang) }}#hosting"
                     class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
-                    <span class="mx-1">{{ _('read more') }}</span>
+                    <span class="mx-1">{{ _('Read more') }}</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
@@ -505,7 +504,7 @@
 
                 <a href="{{ url_for('main.services', lang=lang) }}#design"
                     class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
-                    <span class="mx-1">{{ _('read more') }}</span>
+                    <span class="mx-1">{{ _('Read more') }}</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
@@ -531,7 +530,7 @@
 
                 <a href="{{ url_for('main.services', lang=lang) }}#management"
                     class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
-                    <span class="mx-1">{{ _('read more') }}</span>
+                    <span class="mx-1">{{ _('Read more') }}</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
@@ -557,7 +556,7 @@
 
                 <a href="{{ url_for('main.services', lang=lang) }}#troubleshooting"
                     class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
-                    <span class="mx-1">{{ _('read more') }}</span>
+                    <span class="mx-1">{{ _('Read more') }}</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
@@ -583,7 +582,7 @@
 
                 <a href="{{ url_for('main.services', lang=lang) }}#other"
                     class="inline-flex items-center -mx-1 text-sm text-primaryorange capitalize transition-colors duration-300 transform text-primaryorange hover:underline hover:text-accentpurple">
-                    <span class="mx-1">{{ _('read more') }}</span>
+                    <span class="mx-1">{{ _('Read more') }}</span>
                     <svg class="w-4 h-4 mx-1 rtl:-scale-x-100" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd"
@@ -654,13 +653,7 @@
             <!-- Slide 1 -->
             <div class="swiper-slide p-8 rounded-md shadow-lg bg-gray-900 !w-full md:!w-[70%] lg:!w-[50%] xl:!w-[33%]">
                 <p class="leading-loose text-gray-400">
-                    {{ _('“404 Studio LLC has revamped our website and online store that was
-                    previously crashing. With patience, diligence, and professionalism the team at
-                    404 has taken care of our needs. Weekly, we continue to have updates in the shop
-                    with sales and new items and 404 Studio is eager to take care of these items.
-                    Working with our diverse team, 404 Studio strives to meet deadlines, offer
-                    advice to improve our services, and unifies team work. With competitive pricing
-                    and polite customer service, I would recommend 404 Studio to others.”') }}
+                    {{ _('“404 Studio LLC has revamped our website and online store that was previously crashing. With patience, diligence, and professionalism the team at 404 has taken care of our needs. Weekly, we continue to have updates in the shop with sales and new items and 404 Studio is eager to take care of these items. Working with our diverse team, 404 Studio strives to meet deadlines, offer advice to improve our services, and unifies team work. With competitive pricing and polite customer service, I would recommend 404 Studio to others.”') }}
                 </p>
                 <div class="flex items-center mt-6 -mx-2">
                     <img class="object-cover mx-2 rounded-full w-14 h-14"
@@ -675,13 +668,7 @@
             <!-- Slide 2 -->
             <div class="swiper-slide p-8 rounded-md shadow-lg bg-gray-900 !w-full md:!w-[70%] lg:!w-[50%] xl:!w-[33%]">
                 <p class="leading-loose text-gray-400">
-                    {{ _('“404 Studio LLC has revamped our website and online store that was
-                    previously crashing. With patience, diligence, and professionalism the team at
-                    404 has taken care of our needs. Weekly, we continue to have updates in the shop
-                    with sales and new items and 404 Studio is eager to take care of these items.
-                    Working with our diverse team, 404 Studio strives to meet deadlines, offer
-                    advice to improve our services, and unifies team work. With competitive pricing
-                    and polite customer service, I would recommend 404 Studio to others.”') }}
+                    {{ _('“404 Studio LLC has revamped our website and online store that was previously crashing. With patience, diligence, and professionalism the team at 404 has taken care of our needs. Weekly, we continue to have updates in the shop with sales and new items and 404 Studio is eager to take care of these items. Working with our diverse team, 404 Studio strives to meet deadlines, offer advice to improve our services, and unifies team work. With competitive pricing and polite customer service, I would recommend 404 Studio to others.”') }}
                 </p>
                 <div class="flex items-center mt-6 -mx-2">
                     <img class="object-cover mx-2 rounded-full w-14 h-14"
@@ -697,13 +684,7 @@
 
             <div class="swiper-slide p-8 rounded-md shadow-lg bg-gray-900 !w-full md:!w-[70%] lg:!w-[50%] xl:!w-[33%]">
                 <p class="leading-loose text-gray-400">
-                    {{ _('“404 Studio LLC has revamped our website and online store that was
-                    previously crashing. With patience, diligence, and professionalism the team at
-                    404 has taken care of our needs. Weekly, we continue to have updates in the shop
-                    with sales and new items and 404 Studio is eager to take care of these items.
-                    Working with our diverse team, 404 Studio strives to meet deadlines, offer
-                    advice to improve our services, and unifies team work. With competitive pricing
-                    and polite customer service, I would recommend 404 Studio to others.”') }}
+                    {{ _('“404 Studio LLC has revamped our website and online store that was previously crashing. With patience, diligence, and professionalism the team at 404 has taken care of our needs. Weekly, we continue to have updates in the shop with sales and new items and 404 Studio is eager to take care of these items. Working with our diverse team, 404 Studio strives to meet deadlines, offer advice to improve our services, and unifies team work. With competitive pricing and polite customer service, I would recommend 404 Studio to others.”') }}
                 </p>
                 <div class="flex items-center mt-6 -mx-2">
                     <img class="object-cover mx-2 rounded-full w-14 h-14"
@@ -973,8 +954,7 @@
 
     <!-- Centered Card -->
     <div class="relative z-10 flex items-center justify-center h-full">
-        <div
-            class="flex flex-col bg-[#0a0c19] text-white p-8 rounded-xl w-full max-w-2xl md:w-2/6 shadow-xl text-center items-center">
+        <div class="flex flex-col bg-[#0a0c19] text-white p-8 rounded-xl w-full max-w-2xl shadow-xl text-center items-center">
             <h2 class="font-montserrat text-[30px] lg:text-[58px] font-semibold text-white">{{ _('Need Help Choosing?') }}</h2>
             <p class="mb-6 font-inter text-gray-300">{{ _('Schedule a free consultation now, and we will figure out which package and/or plan is right for your situation!') }}</p>
             <a class="quidel-button"
@@ -1005,8 +985,7 @@
             </div>
 
             <div class="mt-8 lg:w-3/5 lg:mx-6">
-                <h2 class="section-contact relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">
-{{ _('Contact us for more info') }}                </h2>
+                <h2 class="section-contact relative font-montserrat text-[30px] lg:text-[58px] font-semibold text-left text-white">{{ _('Contact us for more info') }}</h2>
                 <div class="w-full px-8 py-10 overflow-hidden rounded-lg bg-gray-900">
                     <h3 class="text-lg font-medium text-gray-700">{{ _('What do you want to ask') }}</h3>
                     {% with messages = get_flashed_messages(with_categories=true) %}

@@ -122,8 +122,14 @@
       </div>
       <!-- Desktop Navigation -->
       <nav class="hidden md:flex items-center space-x-6">
-        {% for page, label in [('main.home', 'Home'), ('main.about', 'About'), ('main.services', 'Services'),
-        ('main.portfolio', 'Portfolio'), ('main.pricing', 'Pricing'), ('main.contact', 'Contact')] %}
+        {% for page, label in [
+          ('main.home', _('Home')),
+          ('main.about', _('About')),
+          ('main.services', _('Services')),
+          ('main.portfolio', _('Portfolio')),
+          ('main.pricing', _('Pricing')),
+          ('main.contact', _('Contact'))
+        ] %}
         <a href="{{ url_for(page, lang=lang) }}"
           class="relative group {% if request.path == url_for(page, lang=lang) %}text-primaryorange{% endif %}">
           <span class="text-white">{{ _(label) }}</span>
@@ -165,8 +171,14 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 text-right font-poppins bg-[#0a0c19]">
       <ul class="space-y-4">
-        {% for page, label in [('main.home', 'Home'), ('main.about', 'About'), ('main.services', 'Services'),
-        ('main.portfolio', 'Portfolio'), ('main.pricing', 'Pricing'), ('main.contact', 'Contact')] %}
+        {% for page, label in [
+          ('main.home', _('Home')),
+          ('main.about', _('About')),
+          ('main.services', _('Services')),
+          ('main.portfolio', _('Portfolio')),
+          ('main.pricing', _('Pricing')),
+          ('main.contact', _('Contact'))
+        ] %}
         <li><a href="{{ url_for(page, lang=lang) }}" class="block hover:underline">{{ _(label) }}</a></li>
         {% endfor %}
         <!-- Mobile Language Dropdown -->
@@ -202,8 +214,7 @@
               class="h-10 lg:h-15">
           </a>
           <div class="flex items-center justify-between w-full max-w-xl mx-auto flex-col  2xl:flex-col 2xl:items-start">
-            <p class="pt-5 text-sm lg:max-w-xs text-center lg:text-left">{{ _('Helping businesses transform their
-              digital presence \nCustom web solutions that drive real growth and lasting impact.') }}</p>
+            <p class="pt-5 text-sm lg:max-w-xs text-center lg:text-left">{{ _('Helping businesses transform their digital presence \nCustom web solutions that drive real growth and lasting impact.') }}</p>
           </div>
         </div>
         <!--End Col-->
@@ -237,8 +248,7 @@
           <h4 class="text-lg font-medium mb-4 mt-7">{{ _('Latest Work') }}</h4>
           <ul class="text-sm  transition-all duration-500">
             <li class="mb-3">
-              <a href="{{ url_for('main.portfolio', lang=lang) }}#woven-dignity" class="hover:text-primaryorange">Woven
-                Dignity</a>
+              <a href="{{ url_for('main.portfolio', lang=lang) }}#woven-dignity" class="hover:text-primaryorange">Woven Dignity</a>
             </li>
             <li class="mb-3">
               <a href="{{ url_for('main.portfolio', lang=lang) }}#ilca-bejaia"
@@ -271,8 +281,7 @@
           <h4 class="text-lg font-bold mb-4 mt-7 text-[20px]">{{ _('Ready to build?') }}</h4>
           <ul class="text-sm  transition-all duration-500">
             <li class="mb-3">
-              <p class=" hover:text-primaryorange">{{ _("Let's start with a discovery call — We'll map your vision and
-                bring your website to life!") }}</a>
+              <p class=" hover:text-primaryorange">{{ _("Let's start with a discovery call — We'll map your vision and bring your website to life!") }}</a>
             </li>
             <li>
               <button class="quidel-button">
@@ -286,8 +295,7 @@
       <div class="py-7 border-t border-gray-200">
         <div class="flex items-center justify-center flex-col lg:justify-between lg:flex-row">
           <div class="text-center lg:text-left">
-            <span class="text-sm text-gray-500 block">© <a href="#">404 Studio</a> {{ _('2025, All rights reserved.')
-              }}</span>
+            <span class="text-sm text-gray-500 block">© <a href="#">404 Studio</a> {{ _('2025, All rights reserved.') }}</span>
             <span class="text-xs text-gray-400 block mt-1">
               {{ _('Icons created by ') }}
               <a href="https://www.flaticon.com/authors/smalllikeart" title="smalllikeart">smalllikeart</a>,

@@ -1,4 +1,4 @@
-# Spanish translations for PROJECT.
+# Spanish translations for 404 Studio.
 # Copyright (C) 2025 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-05-21 22:53-0500\n"
+"POT-Creation-Date: 2025-06-29 10:10-0500\n"
 "PO-Revision-Date: 2025-05-21 01:41-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -33,7 +33,10 @@ msgid ""
 "technology, we exist to simplify the complicated and illuminate the "
 "digital path forward for individuals and small businesses."
 msgstr ""
-"En 404 Studio, no solo creamos sitios web, sino que creamos experiencias digitales. Nacidos de la pasión por el diseño, el desarrollo y la tecnología significativa, existimos para simplificar lo complicado e iluminar el camino digital para individuos y pequeñas empresas."
+"En 404 Studio, no solo creamos sitios web, sino que creamos experiencias "
+"digitales. Nacidos de la pasión por el diseño, el desarrollo y la "
+"tecnología significativa, existimos para simplificar lo complicado e "
+"iluminar el camino digital para individuos y pequeñas empresas."
 
 #: app/templates/about.html:75
 msgid "Built for Visionaries"
@@ -44,8 +47,8 @@ msgid ""
 "We love working with people who dare to imagine differently — whether "
 "you're a founder, artist, or side-hustler."
 msgstr ""
-"Nos encanta trabajar con personas que se atreven a imaginar de forma diferente"
-", ya seas fundador, artista o emprendedor."
+"Nos encanta trabajar con personas que se atreven a imaginar de forma "
+"diferente, ya seas fundador, artista o emprendedor."
 
 #: app/templates/about.html:86
 msgid "Transparent & Collaborative"
@@ -76,7 +79,8 @@ msgid ""
 "We don’t build for confusion. We build clean, intuitive experiences with "
 "structure and intention."
 msgstr ""
-"No creamos para la confusión. Creamos experiencias claras e intuitivas con estructura e intención."
+"No creamos para la confusión. Creamos experiencias claras e intuitivas "
+"con estructura e intención."
 
 #: app/templates/about.html:121
 msgid "Function Meets Design"
@@ -87,7 +91,8 @@ msgid ""
 "Design isn't decoration—it's part of the build. We believe form and "
 "function should elevate each other."
 msgstr ""
-"El diseño no es decoración, es parte de la construcción. Creemos que la forma y la función deben complementarse mutuamente."
+"El diseño no es decoración, es parte de la construcción. Creemos que la "
+"forma y la función deben complementarse mutuamente."
 
 #: app/templates/about.html:130
 msgid "People First"
@@ -98,10 +103,11 @@ msgid ""
 "Clients are collaborators, not just customers. Your goals, your voice, "
 "your wins matter most."
 msgstr ""
-"Los clientes son colaboradores, no solo consumidores. Tus objetivos, tu voz, tus logros son lo más importante."
+"Los clientes son colaboradores, no solo consumidores. Tus objetivos, tu "
+"voz, tus logros son lo más importante."
 
 #: app/templates/about.html:143
-msgid "Technologies We Use"
+msgid "Technologies We Specialize in"
 msgstr "Tecnologías Que Usamos"
 
 #: app/templates/about.html:146
@@ -109,10 +115,11 @@ msgid ""
 "We use powerful, reliable tools to create web solutions that are "
 "flexible, scalable, and fast."
 msgstr ""
-"Utilizamos herramientas potentes y confiables para crear soluciones web flexibles, escalables y rápidas."
+"Utilizamos herramientas potentes y confiables para crear soluciones web "
+"flexibles, escalables y rápidas."
 
 #: app/templates/about.html:178
-msgid "El Camino Recorrido"
+msgid "The Journey So Far"
 msgstr ""
 
 #: app/templates/about.html:182
@@ -151,83 +158,85 @@ msgstr "Construyamos Algo Brillante"
 
 #: app/templates/about.html:207
 msgid "Whether you’re ready now or just exploring, reach out and say hi."
-msgstr "Ya sea que estés listo ahora o simplemente estés explorando, contáctanos y dinos hola."
+msgstr ""
+"Ya sea que estés listo ahora o simplemente estés explorando, contáctanos "
+"y dinos hola."
 
 #: app/templates/about.html:209
-#, fuzzy
 msgid "Contact Us"
 msgstr "Contáctenos"
 
-#: app/templates/base.html:78 app/templates/base.html:133
-#: app/templates/base.html:184
+#: app/templates/base.html:126 app/templates/base.html:175
+#: app/templates/base.html:225
 msgid "Home"
 msgstr "Inicio"
 
-#: app/templates/base.html:79 app/templates/base.html:134
+#: app/templates/base.html:127 app/templates/base.html:176
 msgid "About"
 msgstr "Acerca de"
 
-#: app/templates/base.html:84 app/templates/base.html:139
+#: app/templates/base.html:128 app/templates/base.html:177
+#: app/templates/base.html:237
 msgid "Services"
 msgstr "Servicios"
 
-#: app/templates/base.html:96 app/templates/base.html:148
-#: app/templates/links-page.html:116
+#: app/templates/base.html:129 app/templates/base.html:178
+#: app/templates/base.html:241 app/templates/links-page.html:118
 msgid "Portfolio"
 msgstr "Portafolio"
 
-#: app/templates/base.html:98 app/templates/base.html:149
-#: app/templates/base.html:190
+#: app/templates/base.html:130 app/templates/base.html:179
+#: app/templates/base.html:231
 msgid "Pricing"
 msgstr "Precios"
 
-#: app/templates/base.html:99 app/templates/base.html:150
-#: app/templates/base.html:193 app/templates/base.html:223
+#: app/templates/base.html:131 app/templates/base.html:180
+#: app/templates/base.html:234 app/templates/base.html:275
 msgid "Contact"
 msgstr "Contacto"
 
-#: app/templates/base.html:115
-msgid "Schedule Consultation"
-msgstr "Agendar consulta"
+#: app/templates/base.html:145 app/templates/base.html:188
+msgid "Language"
+msgstr "Idioma"
 
-#: app/templates/base.html:176
-#, fuzzy
+#: app/templates/base.html:217
 msgid ""
 "Helping businesses transform their digital presence \n"
 "Custom web solutions that drive real growth and lasting impact."
 msgstr ""
-"Ayudamos a las empresas a transformar su presencia digital. Soluciones web personalizadas que impulsan un crecimiento real y un impacto duradero."
+"Ayudamos a las empresas a transformar su presencia digital. Soluciones "
+"web personalizadas que impulsan un crecimiento real y un impacto "
+"duradero."
 
-#: app/templates/base.html:181
-#, fuzzy
+#: app/templates/base.html:222
 msgid "Quick Links"
 msgstr "Enlaces"
 
-#: app/templates/base.html:187
+#: app/templates/base.html:228
 msgid "About Us"
 msgstr "Sobre nosotros"
 
-#: app/templates/base.html:199
+#: app/templates/base.html:248
 msgid "Latest Work"
 msgstr "Últimos trabajos"
 
-#: app/templates/base.html:214
+#: app/templates/base.html:265
 msgid "Resources"
 msgstr "Recursos"
 
-#: app/templates/base.html:217
+#: app/templates/base.html:268
 msgid "FAQs"
 msgstr "Preguntas frecuentes"
 
-#: app/templates/base.html:220
+#: app/templates/base.html:272
 msgid "Schedule Appointment"
 msgstr "Agendar cita"
 
-#: app/templates/base.html:229
+#: app/templates/base.html:281
 msgid "Ready to build?"
 msgstr "¿Listo para construir?"
 
-#: app/templates/base.html:232
+#: app/templates/base.html:284
 msgid ""
 "Let's start with a discovery call — We'll map your vision and bring your "
 "website to life!"
@@ -235,24 +244,23 @@ msgstr ""
 "Comencemos con una llamada de descubrimiento: ¡asignaremos su visión y "
 "daremos vida a su sitio web!"
 
-#: app/templates/base.html:236
+#: app/templates/base.html:288
 msgid "Meet With Our Team"
 msgstr "Reúnete con nuestro equipo"
 
-#: app/templates/base.html:246
+#: app/templates/base.html:298
 msgid "2025, All rights reserved."
 msgstr "2025, Todos los derechos reservados."
 
-#: app/templates/base.html:248
+#: app/templates/base.html:300
 msgid "Icons created by "
 msgstr "Iconos creados por "
 
-#: app/templates/base.html:253
+#: app/templates/base.html:305
 msgid "from "
 msgstr "de "
 
 #: app/templates/contact.html:5
-#, fuzzy
 msgid "CONTACT US"
 msgstr "CONTÁCTENOS"
 
@@ -265,9 +273,10 @@ msgid ""
 "We’d love to hear from you. Please fill out this form or shoot us an "
 "email or message."
 msgstr ""
-"Nos encantaría saber de usted. Complete este formulario o envíenos un correo electrónico o mensaje."
+"Nos encantaría saber de usted. Complete este formulario o envíenos un "
+"correo electrónico o mensaje."
 
-#: app/templates/contact.html:71 app/templates/links-page.html:108
+#: app/templates/contact.html:71 app/templates/links-page.html:110
 msgid "Email"
 msgstr "Correo electrónico"
 
@@ -280,7 +289,6 @@ msgid "Live chat"
 msgstr "Chat en vivo"
 
 #: app/templates/contact.html:91
-#, fuzzy
 msgid "Schedule new chat"
 msgstr "Programar un nuevo chat"
 
@@ -316,195 +324,322 @@ msgstr "Envíanos un mensaje en WhatsApp"
 msgid "Company Code"
 msgstr "Código de la empresa"
 
-#: app/templates/contact.html:148 app/templates/home.html:892
+#: app/templates/contact.html:148 app/templates/home.html:1013
 msgid "First Name"
 msgstr "Nombre de pila"
 
-#: app/templates/contact.html:153 app/templates/home.html:897
+#: app/templates/contact.html:153 app/templates/home.html:1020
 msgid "Last Name"
 msgstr "Apellido"
 
-#: app/templates/contact.html:160 app/templates/home.html:904
+#: app/templates/contact.html:160 app/templates/home.html:1029
 msgid "Email address"
 msgstr "Dirección de correo electrónico"
 
-#: app/templates/contact.html:165 app/templates/home.html:909
+#: app/templates/contact.html:165 app/templates/home.html:1036
 msgid "Company Name"
 msgstr "Nombre de Empresa"
 
-#: app/templates/contact.html:172 app/templates/home.html:916
+#: app/templates/contact.html:172 app/templates/home.html:1045
 msgid "Business Type / Area"
 msgstr "Tipo de Negocio / Área"
 
-#: app/templates/contact.html:178
-#, fuzzy
+#: app/templates/contact.html:178 app/templates/home.html:1053
 msgid "Service Interested In"
-msgstr "Servicio de interés"
+msgstr "Servicio de Interés"
 
-#: app/templates/contact.html:185 app/templates/home.html:928
+#: app/templates/contact.html:184 app/templates/home.html:1061
 msgid "Subject"
 msgstr "Sujeto"
 
-#: app/templates/contact.html:190 app/templates/home.html:933
+#: app/templates/contact.html:189 app/templates/home.html:1068
 msgid "Message"
 msgstr "Mensaje"
 
-#: app/templates/contact.html:196 app/templates/home.html:939
+#: app/templates/contact.html:195 app/templates/home.html:1075
 msgid "Send message"
 msgstr "Enviar mensaje"
 
 #: app/templates/home.html:52 app/templates/services.html:7
-#, fuzzy
 msgid "SERVICES"
 msgstr "SERVICIOS"
 
-#: app/templates/home.html:89
-#, fuzzy
+#: app/templates/home.html:90
+msgid "WHY?"
+msgstr "¿POR QUÉ?"
+
+#: app/templates/home.html:128
 msgid "ABOUT"
 msgstr "ACERCA DE"
 
-#: app/templates/home.html:126
-#, fuzzy
+#: app/templates/home.html:165
 msgid "REVIEWS"
 msgstr "RESEÑAS"
 
-#: app/templates/home.html:163 app/templates/pricing.html:7
+#: app/templates/home.html:202 app/templates/pricing.html:7
 msgid "PRICING"
 msgstr "PRECIOS"
 
-#: app/templates/home.html:251
+#: app/templates/home.html:244
+msgid "CONTACT"
+msgstr "CONTACTO"
+
+#: app/templates/home.html:325
 msgid "Your Guide Through The"
 msgstr "Su guía a través de lo"
 
-#: app/templates/home.html:254
+#: app/templates/home.html:328
 msgid "Digital Unknown"
 msgstr "Desconocido Digital"
 
-#: app/templates/home.html:257
+#: app/templates/home.html:330
 msgid ""
 "Whether you're starting from scratch, stuck in the middle, or scaling "
 "something big—I'm here to build, guide, and solve. Design, development, "
 "automation, or something weird? Let’s make it real."
 msgstr ""
-"Ya sea que estés empezando desde cero, atascado en el proceso o escalando algo grande, estoy aquí para construir, guiar y resolver. ¿Diseño, desarrollo, automatización o algo inusual? Hagámoslo realidad."
+"Ya sea que estés empezando desde cero, atascado en el proceso o escalando"
+" algo grande, estoy aquí para construir, guiar y resolver. ¿Diseño, "
+"desarrollo, automatización o algo inusual? Hagámoslo realidad."
 
-#: app/templates/home.html:260
-#, fuzzy
+#: app/templates/home.html:336
 msgid "Discuss Services"
 msgstr "Discutir Servicios"
 
-#: app/templates/home.html:265
+#: app/templates/home.html:341
 msgid "See Our Work"
 msgstr "Vea Nuestro Trabajo"
 
-#: app/templates/home.html:281
+#: app/templates/home.html:355
+msgid "Why Your Business "
+msgstr "¿Por qué su empresa "
+
+#: app/templates/home.html:355
+msgid "Needs a Website"
+msgstr "necesita un sitio web?"
+
+#: app/templates/home.html:358
+msgid ""
+"From boosting your credibility to unlocking growth — here's what a "
+"website can do for you."
+msgstr ""
+"Desde aumentar su credibilidad hasta impulsar el crecimiento: esto es lo "
+"que un sitio web puede hacer por usted."
+
+#: app/templates/home.html:367
+msgid "Look Professional"
+msgstr "Luce profesional"
+
+#: app/templates/home.html:369
+msgid ""
+"A modern website instantly shows you're a real, credible business — not "
+"just a name on social media."
+msgstr ""
+"Un sitio web moderno demuestra al instante que eres una empresa real y "
+"creíble, no solo un nombre en las redes sociales."
+
+#: app/templates/home.html:373
+msgid "Be Found Online"
+msgstr "Ser encontrado en línea"
+
+#: app/templates/home.html:375
+msgid ""
+"Most customers search online before buying. A website gives them a place "
+"to find and trust you."
+msgstr ""
+"La mayoría de los clientes buscan en línea antes de comprar. Un sitio web"
+" les ofrece un lugar donde encontrarlo y confiar en usted."
+
+#: app/templates/home.html:379
+msgid "Build Trust Instantly"
+msgstr "Genere confianza al instante"
+
+#: app/templates/home.html:381
+msgid ""
+"Display reviews, explain your services, and show your brand — all in one "
+"clean, central place."
+msgstr ""
+"Muestra reseñas, explica tus servicios y muestra tu marca, todo en un "
+"lugar limpio y céntrico."
+
+#: app/templates/home.html:385
+msgid "Sell or Book 24/7"
+msgstr "Vender o reservar 24/7"
+
+#: app/templates/home.html:387
+msgid ""
+"Whether it’s online orders, bookings, or inquiries — a website works for "
+"you even when you sleep."
+msgstr ""
+"Ya sean pedidos, reservas o consultas en línea, un sitio web funciona "
+"para usted incluso cuando duerme."
+
+#: app/templates/home.html:395
+msgid "More Benefits"
+msgstr "Más beneficios"
+
+#: app/templates/home.html:400
+msgid "Gain credibility with new clients"
+msgstr "Ganar credibilidad con nuevos clientes"
+
+#: app/templates/home.html:401
+msgid "Show up in Google and Maps"
+msgstr "Aparecer en Google y Maps"
+
+#: app/templates/home.html:402
+msgid "Share updates, sales, and offers easily"
+msgstr "Comparte actualizaciones, ventas y ofertas fácilmente"
+
+#: app/templates/home.html:403
+msgid "Stand out from the competition"
+msgstr "Destacar de la competencia"
+
+#: app/templates/home.html:404
+msgid "Collect emails or leads with forms"
+msgstr "Recopilar correos electrónicos o clientes potenciales con formularios"
+
+#: app/templates/home.html:405
+msgid "Offer support and answers 24/7"
+msgstr "Ofrecemos soporte y respuestas 24/7"
+
+#: app/templates/home.html:417
+msgid "Let’s Build Your Website"
+msgstr "Construyamos tu sitio web"
+
+#: app/templates/home.html:431
 msgid "Explore Our Areas of Expertise"
 msgstr "Explora Nuestras Áreas de Especialización"
 
-#: app/templates/home.html:284
+#: app/templates/home.html:434
 msgid ""
 "From building beautiful, functional websites to keeping them secure and "
 "running smoothly, we offer full-spectrum services to help your online "
 "presence thrive."
 msgstr ""
-"Desde la creación de sitios web atractivos y funcionales hasta su seguridad y correcto funcionamiento, ofrecemos servicios integrales para que su presencia en línea prospere."
+"Desde la creación de sitios web atractivos y funcionales hasta su "
+"seguridad y correcto funcionamiento, ofrecemos servicios integrales para "
+"que su presencia en línea prospere."
 
-#: app/templates/home.html:298 app/templates/pricing.html:68
+#: app/templates/home.html:447 app/templates/pricing.html:127
 msgid "Development"
 msgstr "Desarrollo"
 
-#: app/templates/home.html:301
+#: app/templates/home.html:450
 msgid ""
 "We build fast, modern, and scalable websites and web applications "
 "tailored to your brand, using the latest technologies to ensure "
 "performance and functionality."
 msgstr ""
-"Creamos sitios web y aplicaciones web rápidos, modernos y escalables, adaptados a su marca, utilizando las últimas tecnologías para garantizar rendimiento y funcionalidad."
+"Creamos sitios web y aplicaciones web rápidos, modernos y escalables, "
+"adaptados a su marca, utilizando las últimas tecnologías para garantizar "
+"rendimiento y funcionalidad."
 
-#: app/templates/home.html:306 app/templates/home.html:332
-#: app/templates/home.html:361 app/templates/home.html:391
-#: app/templates/home.html:419 app/templates/home.html:446
-#, fuzzy
-msgid "read more"
-msgstr "leer más"
+#: app/templates/home.html:455
+msgid "Read More"
+msgstr "Leer Más"
 
-#: app/templates/home.html:324 app/templates/pricing.html:76
+#: app/templates/home.html:473 app/templates/pricing.html:134
 msgid "Hosting"
 msgstr "Alojamiento"
 
-#: app/templates/home.html:327
+#: app/templates/home.html:476
 msgid ""
 "Enjoy reliable, secure, and fast website hosting solutions. We handle "
 "uptime, backups, and server management so you can focus on your business."
 msgstr ""
-"Disfrute de soluciones de alojamiento web confiables, seguras y rápidas. Nos encargamos del tiempo de actividad, las copias de seguridad y la administración del servidor para que usted pueda concentrarse en su negocio."
+"Disfrute de soluciones de alojamiento web confiables, seguras y rápidas. "
+"Nos encargamos del tiempo de actividad, las copias de seguridad y la "
+"administración del servidor para que usted pueda concentrarse en su "
+"negocio."
 
-#: app/templates/home.html:352
+#: app/templates/home.html:481 app/templates/home.html:507
+#: app/templates/home.html:533 app/templates/home.html:559
+#: app/templates/home.html:585
+msgid "Read more"
+msgstr "Leer Más"
+
+#: app/templates/home.html:499
 msgid "Design"
 msgstr "Diseño"
 
-#: app/templates/home.html:356
+#: app/templates/home.html:502
 msgid ""
 "From wireframes to final visuals, our design process ensures your website"
 " not only looks stunning but also delivers an intuitive user experience "
 "that converts."
 msgstr ""
-"Desde los wireframes hasta las imágenes finales, nuestro proceso de diseño garantiza que su sitio web no solo tenga un aspecto impresionante, sino que también ofrezca una experiencia de usuario intuitiva que convierta."
+"Desde los wireframes hasta las imágenes finales, nuestro proceso de "
+"diseño garantiza que su sitio web no solo tenga un aspecto impresionante,"
+" sino que también ofrezca una experiencia de usuario intuitiva que "
+"convierta."
 
-#: app/templates/home.html:383
+#: app/templates/home.html:525
 msgid "Management"
 msgstr "Gestión"
 
-#: app/templates/home.html:386
+#: app/templates/home.html:528
 msgid ""
 "We manage everything from content updates to performance monitoring, so "
 "your website stays fresh, functional, and aligned with your business "
 "goals."
 msgstr ""
-"Nos encargamos de todo, desde las actualizaciones de contenido hasta la supervisión del rendimiento, para que su sitio web se mantenga actualizado, funcional y alineado con los objetivos de su negocio."
+"Nos encargamos de todo, desde las actualizaciones de contenido hasta la "
+"supervisión del rendimiento, para que su sitio web se mantenga "
+"actualizado, funcional y alineado con los objetivos de su negocio."
 
-#: app/templates/home.html:411
+#: app/templates/home.html:551
 msgid "Troubleshooting"
 msgstr "Solución de Problemas"
 
-#: app/templates/home.html:414
+#: app/templates/home.html:554
 msgid ""
 "Got bugs or technical issues? We diagnose and resolve website errors, "
 "broken features, or performance slowdowns quickly and efficiently."
 msgstr ""
-"¿Tiene errores o problemas técnicos? Diagnosticamos y solucionamos errores del sitio web, funciones defectuosas o ralentizaciones del rendimiento de forma rápida y eficiente."
+"¿Tiene errores o problemas técnicos? Diagnosticamos y solucionamos "
+"errores del sitio web, funciones defectuosas o ralentizaciones del "
+"rendimiento de forma rápida y eficiente."
 
-#: app/templates/home.html:439
-#, fuzzy
+#: app/templates/home.html:577
 msgid "Other Services"
-msgstr "Otros servicios"
+msgstr "Otros Servicios"
 
-#: app/templates/home.html:442
+#: app/templates/home.html:580
 msgid ""
 "Need something custom? From SEO and analytics setup to email "
 "configuration or third-party integrations—we’ve got you covered."
 msgstr ""
-"¿Necesitas algo personalizado? Desde la configuración de SEO y analítica hasta la configuración del correo electrónico o integraciones con terceros, lo tenemos cubierto."
+"¿Necesitas algo personalizado? Desde la configuración de SEO y analítica "
+"hasta la configuración del correo electrónico o integraciones con "
+"terceros, lo tenemos cubierto."
 
-#: app/templates/home.html:482
+#: app/templates/home.html:620
 msgid "Your Partner in Web Development and Digital Solutions"
 msgstr "Su socio en desarrollo web y soluciones digitales"
 
-#: app/templates/home.html:486
+#: app/templates/home.html:624
 msgid ""
 "404 Studio LLC is a web development agency committed to delivering "
 "modern, user-centric websites that elevate your business. With years of "
 "experience in the industry, we are passionate about bringing your vision "
 "to life through cutting-edge design, development, and ongoing support."
 msgstr ""
-"404 Studio LLC es una agencia de desarrollo web comprometida con la creación de sitios web modernos y centrados en el usuario que impulsen su negocio. Con años de experiencia en el sector, nos apasiona hacer realidad su visión mediante diseño, desarrollo y soporte continuo de vanguardia."
+"404 Studio LLC es una agencia de desarrollo web comprometida con la "
+"creación de sitios web modernos y centrados en el usuario que impulsen su"
+" negocio. Con años de experiencia en el sector, nos apasiona hacer "
+"realidad su visión mediante diseño, desarrollo y soporte continuo de "
+"vanguardia."
 
-#: app/templates/home.html:490
+#: app/templates/home.html:628
 msgid "Read more about us"
 msgstr "Lea más sobre nosotros"
 
-#: app/templates/home.html:518 app/templates/home.html:533
-#: app/templates/home.html:549
+#: app/templates/home.html:648
+msgid "What our customers are saying"
+msgstr "Lo que dicen nuestros socios"
+
+#: app/templates/home.html:656 app/templates/home.html:671
+#: app/templates/home.html:687
 msgid ""
 "“404 Studio LLC has revamped our website and online store that was "
 "previously crashing. With patience, diligence, and professionalism the "
@@ -515,152 +650,143 @@ msgid ""
 "unifies team work. With competitive pricing and polite customer service, "
 "I would recommend 404 Studio to others.”"
 msgstr ""
-"“404 Studio LLC ha renovado nuestro sitio web y tienda en línea, que anteriormente fallaban. Con paciencia, diligencia y profesionalismo, el equipo de 404 ha atendido nuestras necesidades. Semanalmente, continuamos actualizando la tienda con ofertas y nuevos artículos, y en 404 Studio estamos ansiosos por encargarnos de estos asuntos. Trabajando con nuestro diverso equipo, 404 Studio se esfuerza por cumplir con los plazos, ofrecer consejos para mejorar nuestros servicios y unificar el trabajo en equipo. Con precios competitivos y un servicio al cliente amable, recomendaría 404 Studio a otros.”"
+"“404 Studio LLC ha renovado nuestro sitio web y tienda en línea, que "
+"anteriormente fallaban. Con paciencia, diligencia y profesionalismo, el "
+"equipo de 404 ha atendido nuestras necesidades. Semanalmente, continuamos"
+" actualizando la tienda con ofertas y nuevos artículos, y en 404 Studio "
+"estamos ansiosos por encargarnos de estos asuntos. Trabajando con nuestro"
+" diverso equipo, 404 Studio se esfuerza por cumplir con los plazos, "
+"ofrecer consejos para mejorar nuestros servicios y unificar el trabajo en"
+" equipo. Con precios competitivos y un servicio al cliente amable, "
+"recomendaría 404 Studio a otros.”"
 
-#: app/templates/home.html:526
+#: app/templates/home.html:664
 msgid "Founder of Woven Dignity"
 msgstr "Fundador de Woven Dignity"
 
-#: app/templates/home.html:541
+#: app/templates/home.html:679
 msgid "ILCA Bejaia"
 msgstr "ILCA Bejaia"
 
-#: app/templates/home.html:557
+#: app/templates/home.html:695
 msgid "Balanced Accountant"
 msgstr "Balanced Accountant"
 
-#: app/templates/home.html:565
-msgid "“ Lorem ipsum dolor sit amet consectetur adipisicing elit... ”"
-msgstr "\"Lorem ipsum dolor sit amet consectetur adipising elit ...\""
-
-#: app/templates/home.html:573
-msgid "CTO, Robert Consultency"
-msgstr ""
-
-#: app/templates/home.html:608
+#: app/templates/home.html:726
 msgid "Our Pricing Packages & Plans"
 msgstr "Nuestros Paquetes de Precios"
 
-#: app/templates/home.html:617
+#: app/templates/home.html:735
 msgid ""
 "Need help with building a website? Or want to let us handle hosting your "
 "website?"
 msgstr ""
-"¿Necesitas ayuda para crear un sitio web? ¿O prefieres que nos encarguemos del alojamiento de tu sitio web?"
+"¿Necesitas ayuda para crear un sitio web? ¿O prefieres que nos "
+"encarguemos del alojamiento de tu sitio web?"
 
-#: app/templates/home.html:622
+#: app/templates/home.html:741
 msgid "Need a different service"
 msgstr "¿Necesita un servicio diferente?"
 
-#: app/templates/home.html:636
-#, fuzzy
+#: app/templates/home.html:755
 msgid "Web Development Packages"
 msgstr "Paquetes de desarrollo web"
 
-#: app/templates/home.html:639
+#: app/templates/home.html:758
 msgid "Custom site builds, redesigns, and ecommerce integration."
-msgstr "Creación de sitios personalizados, rediseños e integración de comercio electrónico."
+msgstr ""
+"Creación de sitios personalizados, rediseños e integración de comercio "
+"electrónico."
 
-#: app/templates/home.html:643 app/templates/home.html:735
+#: app/templates/home.html:762 app/templates/home.html:856
 msgid "Starting from"
 msgstr "A partir de"
 
-#: app/templates/home.html:652
-#, fuzzy
+#: app/templates/home.html:772
 msgid "View Packages"
 msgstr "Ver Paquetes"
 
-#: app/templates/home.html:660 app/templates/home.html:753
+#: app/templates/home.html:780 app/templates/home.html:874
 msgid "What’s included:"
 msgstr "Qué incluye:"
 
-#: app/templates/home.html:671
-#, fuzzy
+#: app/templates/home.html:791
 msgid "Fully responsive design"
 msgstr "Diseño totalmente responsivo"
 
-#: app/templates/home.html:682
+#: app/templates/home.html:802
 msgid "CMS or static site options"
 msgstr "Opciones de CMS o sitio estático"
 
-#: app/templates/home.html:693
+#: app/templates/home.html:813
 msgid "SEO Setup"
 msgstr "Configuración de SEO"
 
-#: app/templates/home.html:704
+#: app/templates/home.html:824
 msgid "Launch Support & Revisions"
 msgstr "Soporte de Lanzamiento y Revisiones"
 
-#: app/templates/home.html:728
-#, fuzzy
+#: app/templates/home.html:849
 msgid "Web Hosting Packages"
 msgstr "Paquetes de Alojamiento Web"
 
-#: app/templates/home.html:731
+#: app/templates/home.html:852
 msgid "Fast, secure hosting managed by 404 Studio."
 msgstr "Alojamiento rápido y seguro administrado por 404 Studio."
 
-#: app/templates/home.html:736
-#, fuzzy
+#: app/templates/home.html:857
 msgid "/Month"
 msgstr "/Mes"
 
-#: app/templates/home.html:740
+#: app/templates/home.html:861
 msgid "12 Payments Yearly"
 msgstr "12 Pagos Anuales"
 
-#: app/templates/home.html:745
+#: app/templates/home.html:866
 msgid "View Plans"
 msgstr "Ver Planes"
 
-#: app/templates/home.html:764
+#: app/templates/home.html:885
 msgid "SSL + security updates"
 msgstr "SSL + actualizaciones de seguridad"
 
-#: app/templates/home.html:775
-#, fuzzy
+#: app/templates/home.html:896
 msgid "Weekly backups"
 msgstr "Copias de seguridad semanales"
 
-#: app/templates/home.html:786
-#, fuzzy
+#: app/templates/home.html:907
 msgid "Up to 5 email addresses"
 msgstr "Hasta 3 correos electrónicos"
 
-#: app/templates/home.html:797 app/templates/pricing.html:146
+#: app/templates/home.html:918 app/templates/pricing.html:239
 msgid "Priority Support"
 msgstr "Soporte prioritario"
 
-#: app/templates/home.html:838
+#: app/templates/home.html:958
 msgid "Need Help Choosing?"
 msgstr "¿Necesitas ayuda para elegir?"
 
-#: app/templates/home.html:839
+#: app/templates/home.html:959
 msgid ""
 "Schedule a free consultation now, and we will figure out which package "
 "and/or plan is right for your situation!"
 msgstr ""
-"¡Programe una consulta gratuita ahora y determinaremos qué paquete o plan es el más adecuado para su situación!"
+"¡Programe una consulta gratuita ahora y determinaremos qué paquete o plan"
+" es el más adecuado para su situación!"
 
-#: app/templates/home.html:841 app/templates/services.html:168
-#, fuzzy
+#: app/templates/home.html:963 app/templates/services.html:168
 msgid "Schedule Free Consultation"
 msgstr "Programe una Consulta Gratuita"
 
-#: app/templates/home.html:869
-#, fuzzy
+#: app/templates/home.html:988
 msgid "Contact us for more info"
 msgstr "Contacta con nosotros para más información"
 
-#: app/templates/home.html:871
+#: app/templates/home.html:990
 msgid "What do you want to ask"
 msgstr "¿Qué quieres preguntar?"
 
-#: app/templates/home.html:922
-msgid "Service Interested In"
-msgstr "Servicio de interés"
-
-#: app/templates/links-page.html:81
+#: app/templates/links-page.html:83
 msgid ""
 "We build professional websites, provide hosting, offer ongoing support, "
 "and digital solutions. Reach out to us anytime!"
@@ -668,38 +794,38 @@ msgstr ""
 "Creamos sitios web profesionales, proporcionamos alojamiento, ofrecemos "
 "soporte continuo y soluciones digitales. "
 
-#: app/templates/links-page.html:83
-msgid "Join our email list</a> for updates and offers."
+#: app/templates/links-page.html:85
+#, fuzzy
+msgid "Join our email list for updates and offers."
 msgstr ""
 "Únase a nuestra lista de correo electrónico </a> Para actualizaciones y "
 "ofertas."
 
-#: app/templates/links-page.html:99
+#: app/templates/links-page.html:101
 msgid "Website Home Page"
-msgstr "página de inicio del sitio web"
+msgstr "Página de inicio del sitio web"
 
-#: app/templates/links-page.html:100
+#: app/templates/links-page.html:102
 msgid "Visit our website and become familiar with what we do!"
 msgstr "¡Visite nuestro sitio web y familiarícese con lo que hacemos!"
 
-#: app/templates/links-page.html:109
+#: app/templates/links-page.html:111
 msgid "Send us an Email."
 msgstr "Envíanos un correo electrónico."
 
-#: app/templates/links-page.html:117
+#: app/templates/links-page.html:119
 msgid "Take a look at our past works."
 msgstr "Eche un vistazo a nuestros trabajos pasados."
 
-#: app/templates/links-page.html:125
+#: app/templates/links-page.html:127
 msgid "Whatsapp"
 msgstr "Whatsapp"
 
-#: app/templates/links-page.html:126
+#: app/templates/links-page.html:128
 msgid "Reach out to us through Whatsapp."
 msgstr "Comuníquese con nosotros a través de WhatsApp."
 
 #: app/templates/portfolio.html:9
-#, fuzzy
 msgid "PORTFOLIO"
 msgstr "PORTAFOLIO"
 
@@ -716,7 +842,6 @@ msgstr ""
 "las ideas en la web."
 
 #: app/templates/portfolio.html:172
-#, fuzzy
 msgid "Custom Development"
 msgstr "Desarrollo Personalizado"
 
@@ -737,7 +862,8 @@ msgid ""
 "Every website works beautifully across all devices and meets "
 "accessibility standards."
 msgstr ""
-"Todos los sitios web funcionan a la perfección en todos los dispositivos y cumplen con los estándares de accesibilidad."
+"Todos los sitios web funcionan a la perfección en todos los dispositivos "
+"y cumplen con los estándares de accesibilidad."
 
 #: app/templates/portfolio.html:196
 msgid "Scalable Tech Stack"
@@ -748,210 +874,208 @@ msgid ""
 "Built with tools like TailwindCSS, Python, JavaScript, and more—ready to "
 "scale as your business grows."
 msgstr ""
-"Desarrollado con herramientas como TailwindCSS, Python, JavaScript y más, listo para escalar a medida que crece su negocio."
+"Desarrollado con herramientas como TailwindCSS, Python, JavaScript y más,"
+" listo para escalar a medida que crece su negocio."
 
-#: app/templates/portfolio.html:225
-msgid ""
-"ILCA Bejaia is an International Learning Center in Algeria offering "
-"language courses and learning resources."
-msgstr ""
-"ILCA Bejaia es un Centro Internacional de Aprendizaje en Argelia que ofrece cursos de idiomas y recursos de aprendizaje."
-
-#: app/templates/portfolio.html:246 app/templates/portfolio.html:420
+#: app/templates/portfolio.html:236
 msgid "View Live Site"
 msgstr "Ver sitio en vivo"
 
-#: app/templates/portfolio.html:299
-msgid ""
-"Woven Dignity is a non-profit organization specializing in handmade "
-"cards, with the main focus being to provide refugee women with hope and "
-"empowerment through sustainable work."
-msgstr ""
-"Woven Dignity es una organización sin fines de lucro especializada en tarjetas hechas a mano, cuyo principal objetivo es brindar esperanza y empoderamiento a las mujeres refugiadas a través del trabajo sostenible."
-
-#: app/templates/portfolio.html:364
-msgid ""
-"Migrated from Squarespace to a modern custom design and built from "
-"scratch with Flask, HTML5, Tailwindcss, and JavaScript."
-msgstr ""
-"Migra de Squarespace a un diseño moderno y personalizado, creado desde cero con Flask, HTML5, Tailwind CSS y JavaScript."
-
-#: app/templates/pricing.html:52
-#, fuzzy
+#: app/templates/pricing.html:110
 msgid "Pricing Packages"
 msgstr "Paquetes de Precios"
 
-#: app/templates/pricing.html:55
+#: app/templates/pricing.html:113
 msgid "Choose your focus: Development, Hosting, or Both."
 msgstr "Elige tu enfoque: Desarrollo, Hosting o Ambos."
 
-#: app/templates/pricing.html:84
-#, fuzzy
+#: app/templates/pricing.html:141
 msgid "Both"
 msgstr "Ambos"
 
-#: app/templates/pricing.html:105
-msgid "Need something outside of hosting or development?"
-msgstr "¿Necesita algo más que alojamiento o desarrollo?"
+#: app/templates/pricing.html:159 app/templates/pricing.html:164
+msgid "Continue"
+msgstr ""
 
-#: app/templates/pricing.html:107
-msgid "Request a Custom Quote"
-msgstr "Solicitar una cotización personalizada"
+#: app/templates/pricing.html:174
+msgid "Continue with Selected Packages"
+msgstr "Continuar con paquetes seleccionados"
 
-#: app/templates/pricing.html:117
+#: app/templates/pricing.html:194
+msgid "Need help with a different type of digital project?"
+msgstr "¿Necesita ayuda con un tipo diferente de proyecto digital?"
+
+#: app/templates/pricing.html:195
+msgid ""
+"Schedule a free consultation now, and we will figure out a solution for "
+"you!"
+msgstr ""
+"¡Programe una consulta gratuita ahora y determinaremos qué paquete o plan"
+" es el más adecuado para su situación!"
+
+#: app/templates/pricing.html:197
+msgid "Discuss with Us Now"
+msgstr "Discute con nosotros ahora"
+
+#: app/templates/pricing.html:207
 msgid "Starter Site"
 msgstr "Sitio de inicio"
 
-#: app/templates/pricing.html:119
+#: app/templates/pricing.html:209
 msgid "A simple but professional one-pager or brochure site."
 msgstr "Un sitio web de una sola página o folleto simple pero profesional."
 
-#: app/templates/pricing.html:120
+#: app/templates/pricing.html:210
 msgid "Responsive design"
 msgstr "Diseño responsivo"
 
-#: app/templates/pricing.html:120
+#: app/templates/pricing.html:210
 msgid "Up to 5 sections/pages"
 msgstr "Hasta 5 secciones/páginas"
 
-#: app/templates/pricing.html:120
+#: app/templates/pricing.html:210
 msgid "Basic SEO"
 msgstr "SEO básico"
 
-#: app/templates/pricing.html:120
+#: app/templates/pricing.html:210
 msgid "1 Revision Round"
 msgstr "1 Ronda de revisión"
 
-#: app/templates/pricing.html:123
+#: app/templates/pricing.html:214
 msgid "Growth Website"
 msgstr "Sitio web de crecimiento"
 
-#: app/templates/pricing.html:125
+#: app/templates/pricing.html:216
 msgid "Ideal for businesses ready to scale with more content and structure."
 msgstr "Ideal para empresas listas para escalar con más contenido y estructura."
 
-#: app/templates/pricing.html:126
+#: app/templates/pricing.html:217
 msgid "Multi-page layout"
 msgstr "Diseño de varias páginas"
 
-#: app/templates/pricing.html:126
+#: app/templates/pricing.html:217
 msgid "CMS integration"
 msgstr "Integración de CMS"
 
-#: app/templates/pricing.html:126
-#, fuzzy
+#: app/templates/pricing.html:217
 msgid "Contact forms"
 msgstr "Formularios de contacto"
 
-#: app/templates/pricing.html:126
+#: app/templates/pricing.html:217
 msgid "2 Revision Rounds"
 msgstr "2 rondas de revisión"
 
-#: app/templates/pricing.html:129
+#: app/templates/pricing.html:221
 msgid "Pro Custom Build"
 msgstr "Construcción Personalizada Profesional"
 
-#: app/templates/pricing.html:131
+#: app/templates/pricing.html:223
 msgid "Full custom development, animations, and advanced features."
 msgstr "Desarrollo personalizado completo, animaciones y funciones avanzadas."
 
-#: app/templates/pricing.html:132
+#: app/templates/pricing.html:224
 msgid "Full-stack Flask setup"
 msgstr "Configuración completa de Flask"
 
-#: app/templates/pricing.html:132
+#: app/templates/pricing.html:224
 msgid "Custom APIs"
 msgstr "API personalizadas"
 
-#: app/templates/pricing.html:132
+#: app/templates/pricing.html:224
 msgid "Advanced UI/UX"
 msgstr "Interfaz de usuario/experiencia de usuario avanzada"
 
-#: app/templates/pricing.html:132
+#: app/templates/pricing.html:224
 msgid "3 Revision Rounds"
 msgstr "3 rondas de revisión"
 
-#: app/templates/pricing.html:137
-#, fuzzy
+#: app/templates/pricing.html:229
 msgid "Basic Hosting"
 msgstr "Alojamiento Web Básico"
 
-#: app/templates/pricing.html:138
+#: app/templates/pricing.html:230
 msgid "$20/mo"
 msgstr "$20/mes"
 
-#: app/templates/pricing.html:139
+#: app/templates/pricing.html:231
 msgid "Great for small websites and portfolios."
 msgstr "Ideal para sitios web pequeños y portafolios."
 
-#: app/templates/pricing.html:140
+#: app/templates/pricing.html:232
 msgid "Free SSL"
 msgstr "SSL gratis"
 
-#: app/templates/pricing.html:140
+#: app/templates/pricing.html:232
 msgid "Weekly Backups"
 msgstr "Copias de seguridad semanales"
 
-#: app/templates/pricing.html:140
+#: app/templates/pricing.html:232
 msgid "1 Email Address"
 msgstr "1 dirección de correo electrónico"
 
-#: app/templates/pricing.html:140
+#: app/templates/pricing.html:232
 msgid "Basic Support"
 msgstr "Soporte básico"
 
-#: app/templates/pricing.html:143
-#, fuzzy
+#: app/templates/pricing.html:236
 msgid "Business Hosting"
-msgstr "Alojamiento Web para Empresas or Alojamiento Web Empresarial"
+msgstr "Alojamiento Web Empresarial"
 
-#: app/templates/pricing.html:144
+#: app/templates/pricing.html:237
 msgid "$35/mo"
 msgstr "$35/mes"
 
-#: app/templates/pricing.html:145
+#: app/templates/pricing.html:238
 msgid "Optimized for growing businesses."
 msgstr "Optimizado para empresas en crecimiento."
 
-#: app/templates/pricing.html:146
+#: app/templates/pricing.html:239
 msgid "Daily Backups"
 msgstr "Copias de seguridad diarias"
 
-#: app/templates/pricing.html:146
+#: app/templates/pricing.html:239
 msgid "Up to 3 Emails"
 msgstr "Hasta 3 correos electrónicos"
 
-#: app/templates/pricing.html:146
+#: app/templates/pricing.html:239
 msgid "Performance Monitoring"
 msgstr "Monitoreo del rendimiento"
 
-#: app/templates/pricing.html:149
-msgid "Pro Hosting & Care"
-msgstr "Alojamiento Pro y Soporte or Alojamiento Pro y Mantenimiento"
+#: app/templates/pricing.html:243
+msgid "Pro Hosting"
+msgstr "Alojamiento Profesional"
 
-#: app/templates/pricing.html:150
+#: app/templates/pricing.html:244
 msgid "$60/mo"
 msgstr "$60/mes"
 
-#: app/templates/pricing.html:151
+#: app/templates/pricing.html:245
 msgid "All-in-one care plan for serious businesses."
 msgstr "Plan de atención todo en uno para empresas serias."
 
-#: app/templates/pricing.html:152
+#: app/templates/pricing.html:246
 msgid "All Business Features"
 msgstr "Todas las funciones comerciales"
 
-#: app/templates/pricing.html:152
+#: app/templates/pricing.html:246
 msgid "Monthly Reports"
 msgstr "Informes mensuales"
 
-#: app/templates/pricing.html:152
+#: app/templates/pricing.html:246
 msgid "5+ Emails"
 msgstr "5+ correos electrónicos"
 
-#: app/templates/pricing.html:152
+#: app/templates/pricing.html:246
 msgid "Uptime Alerts"
 msgstr "Alertas de tiempo de actividad"
+
+#: app/templates/pricing.html:264
+msgid "Development Package"
+msgstr "Paquetes de Desarrollo Web"
+
+#: app/templates/pricing.html:265
+msgid "Hosting Package"
+msgstr "Paquetes de Alojamiento Web"
 
 #: app/templates/services.html:52
 msgid "Services Built for Impact"
@@ -962,10 +1086,11 @@ msgid ""
 "Whether you're starting a business or scaling an idea, these are the "
 "tools to help you launch smarter, grow faster, and run leaner."
 msgstr ""
-"Ya sea que estés iniciando un negocio o expandiendo una idea, estas son las herramientas que te ayudarán a lanzarte de forma más inteligente, crecer más rápido y operar de forma más eficiente."
+"Ya sea que estés iniciando un negocio o expandiendo una idea, estas son "
+"las herramientas que te ayudarán a lanzarte de forma más inteligente, "
+"crecer más rápido y operar de forma más eficiente."
 
 #: app/templates/services.html:61
-#, fuzzy
 msgid "Custom Web Development"
 msgstr "Desarrollo Web Personalizado"
 
@@ -975,10 +1100,12 @@ msgid ""
 "JavaScript, Python(Django or Flask), and SQL — optimized for performance,"
 " accessibility, and scalability. Curated for your specific needs."
 msgstr ""
-"Creamos sitios web rápidos y optimizados para dispositivos móviles con HTML5, TailwindCSS, JavaScript, Python (Django o Flask) y SQL, optimizados para un rendimiento óptimo, accesibilidad y escalabilidad. Diseñados para satisfacer tus necesidades específicas."
+"Creamos sitios web rápidos y optimizados para dispositivos móviles con "
+"HTML5, TailwindCSS, JavaScript, Python (Django o Flask) y SQL, "
+"optimizados para un rendimiento óptimo, accesibilidad y escalabilidad. "
+"Diseñados para satisfacer tus necesidades específicas."
 
 #: app/templates/services.html:66
-#, fuzzy
 msgid "Fully responsive and SEO-friendly"
 msgstr "Totalmente responsivo y optimizado para SEO"
 
@@ -988,10 +1115,11 @@ msgstr "Plantillas Jinja para contenido dinámico"
 
 #: app/templates/services.html:68
 msgid "Backend-ready with connections for any database with Flask or Django"
-msgstr "Listo para backend con conexiones para cualquier base de datos con Flask o Django"
+msgstr ""
+"Listo para backend con conexiones para cualquier base de datos con Flask "
+"o Django"
 
 #: app/templates/services.html:82
-#, fuzzy
 msgid "Managed Hosting"
 msgstr "Alojamiento Administrado"
 
@@ -1001,19 +1129,19 @@ msgid ""
 "think about. Includes monitoring, updates, and monthly performance "
 "reviews."
 msgstr ""
-"Alojamiento confiable con seguridad, copias de seguridad y disponibilidad ilimitada. Incluye monitoreo, actualizaciones y revisiones mensuales de rendimiento."
+"Alojamiento confiable con seguridad, copias de seguridad y disponibilidad"
+" ilimitada. Incluye monitoreo, actualizaciones y revisiones mensuales de "
+"rendimiento."
 
 #: app/templates/services.html:87
 msgid "Free SSL, domain integration & CDN"
 msgstr "SSL gratuito, integración de dominios y CDN"
 
 #: app/templates/services.html:88
-#, fuzzy
 msgid "Daily/weekly backups"
 msgstr "Copias de seguridad diarias/semanales"
 
 #: app/templates/services.html:89
-#, fuzzy
 msgid "Priority support & issue resolution"
 msgstr "Soporte prioritario y resolución de problemas"
 
@@ -1027,7 +1155,9 @@ msgid ""
 "beautiful user interfaces that convert — using Figma and custom Tailwind "
 "styling."
 msgstr ""
-"Desde los wireframes hasta los píxeles finales, diseñamos interfaces de usuario claras, funcionales y atractivas que convierten, utilizando Figma y el estilo personalizado de Tailwind."
+"Desde los wireframes hasta los píxeles finales, diseñamos interfaces de "
+"usuario claras, funcionales y atractivas que convierten, utilizando Figma"
+" y el estilo personalizado de Tailwind."
 
 #: app/templates/services.html:102
 msgid "Style guides & component libraries"
@@ -1042,9 +1172,8 @@ msgid "Mobile-first design with feedback loops"
 msgstr "Diseño móvil con bucles de retroalimentación"
 
 #: app/templates/services.html:118
-#, fuzzy
 msgid "Automations & Integrations"
-msgstr "Automatizaciones e integraciones"
+msgstr "Automatizaciones y Integraciones"
 
 #: app/templates/services.html:120
 msgid ""
@@ -1052,14 +1181,15 @@ msgid ""
 " We streamline your stack and reduce manual work through smart "
 "automations."
 msgstr ""
-"¿Necesitas conectar tu sitio web con Mailchimp, Supabase, Stripe o Notion? Optimizamos tu infraestructura y reducimos el trabajo manual mediante automatizaciones inteligentes."
+"¿Necesitas conectar tu sitio web con Mailchimp, Supabase, Stripe o "
+"Notion? Optimizamos tu infraestructura y reducimos el trabajo manual "
+"mediante automatizaciones inteligentes."
 
 #: app/templates/services.html:123
 msgid "Form to CRM/email automations"
 msgstr "Automatizaciones de formularios a CRM/correo electrónico"
 
 #: app/templates/services.html:124
-#, fuzzy
 msgid "Custom backend APIs"
 msgstr "API de backend personalizadas"
 
@@ -1072,7 +1202,8 @@ msgid ""
 "Other automation ideas that can help make things more effectient for your"
 " business"
 msgstr ""
-"Otras ideas de automatización que pueden ayudar a mejorar la eficiencia de su negocio."
+"Otras ideas de automatización que pueden ayudar a mejorar la eficiencia "
+"de su negocio."
 
 #: app/templates/services.html:134
 msgid "Site Fixes & Weird Stuff"
@@ -1084,7 +1215,9 @@ msgid ""
 "take on one-off troubleshooting tasks and legacy site cleanups with fast "
 "turnaround."
 msgstr ""
-"¿Formularios rotos? ¿Problemas de alojamiento? ¿El sitio de un cliente necesita ayuda urgente? Nos encargamos de tareas puntuales de resolución de problemas y limpieza de sitios antiguos con una rápida respuesta."
+"¿Formularios rotos? ¿Problemas de alojamiento? ¿El sitio de un cliente "
+"necesita ayuda urgente? Nos encargamos de tareas puntuales de resolución "
+"de problemas y limpieza de sitios antiguos con una rápida respuesta."
 
 #: app/templates/services.html:139
 msgid "Bug fixes & legacy cleanup"
@@ -1107,7 +1240,8 @@ msgid ""
 "We’ll help you figure it out in a free 20-minute consult. No pressure, "
 "just solutions."
 msgstr ""
-"Te ayudaremos a resolverlo en una consulta gratuita de 20 minutos. Sin presiones, solo soluciones."
+"Te ayudaremos a resolverlo en una consulta gratuita de 20 minutos. Sin "
+"presiones, solo soluciones."
 
 #: env/lib/python3.13/site-packages/click/_termui_impl.py:556
 #, python-brace-format
@@ -1637,11 +1771,11 @@ msgstr "No es un valor flotante válido."
 #~ "services to help your online presence"
 #~ " thrive."
 #~ msgstr ""
-#~ "Desde la creación de sitios web atractivos"
-#~ "y funcionales hasta su seguridad y correcto funcionamiento,"
-#~ "ofrecemos una gama completa de"
-#~ "servicios para que su presencia en línea"
-#~ " prospere."
+#~ "Desde la creación de sitios web "
+#~ "atractivosy funcionales hasta su seguridad "
+#~ "y correcto funcionamiento,ofrecemos una gama"
+#~ " completa deservicios para que su "
+#~ "presencia en línea prospere."
 
 #~ msgid ""
 #~ "We build fast, modern, and scalable "
@@ -1650,11 +1784,11 @@ msgstr "No es un valor flotante válido."
 #~ "technologies to ensure performance and "
 #~ "functionality."
 #~ msgstr ""
-#~ "Creamos sitios web y aplicaciones web rápidos, modernos y escalables"
-#~ "adaptados"
-#~ "a su marca, utilizando las últimas "
-#~ "tecnologías para garantizar el rendimiento y "
-#~ "funcionalidad."
+#~ "Creamos sitios web y aplicaciones web"
+#~ " rápidos, modernos y escalablesadaptadosa "
+#~ "su marca, utilizando las últimas "
+#~ "tecnologías para garantizar el rendimiento "
+#~ "y funcionalidad."
 
 #~ msgid "read more"
 #~ msgstr "leer más"
@@ -1665,8 +1799,12 @@ msgstr "No es un valor flotante válido."
 #~ "backups, and server management so you"
 #~ " can focus on your business."
 #~ msgstr ""
-#~ "Disfruta de soluciones de alojamiento web confiables, seguras y rápidas."
-#~ " Nos encargamos del tiempo de actividad, las copias de seguridad y la administración del servidor para que puedas concentrarte en tu negocio."
+#~ "Disfruta de soluciones de alojamiento "
+#~ "web confiables, seguras y rápidas. Nos"
+#~ " encargamos del tiempo de actividad, "
+#~ "las copias de seguridad y la "
+#~ "administración del servidor para que "
+#~ "puedas concentrarte en tu negocio."
 
 #~ msgid "Design"
 #~ msgstr "Diseño"
@@ -1678,11 +1816,12 @@ msgstr "No es un valor flotante válido."
 #~ "delivers an intuitive user experience "
 #~ "that converts."
 #~ msgstr ""
-#~ "Desde los wireframes hasta las imágenes finales, nuestro"
-#~ "proceso de diseño garantiza que su sitio web"
-#~ " no solo tenga un aspecto impresionante, sino que también "
-#~ "ofrezca una experiencia de usuario intuitiva "
-#~ "que convierta."
+#~ "Desde los wireframes hasta las imágenes"
+#~ " finales, nuestroproceso de diseño "
+#~ "garantiza que su sitio web no solo"
+#~ " tenga un aspecto impresionante, sino "
+#~ "que también ofrezca una experiencia de"
+#~ " usuario intuitiva que convierta."
 
 #~ msgid "Management"
 #~ msgstr "Gestión"
@@ -1763,7 +1902,9 @@ msgstr "No es un valor flotante válido."
 #~ msgstr "Paquetes de desarrollo web"
 
 #~ msgid "Custom site builds, redesigns, and ecommerce integration."
-#~ msgstr "Creación de sitios personalizados, rediseños e integración de comercio electrónico."
+#~ msgstr ""
+#~ "Creación de sitios personalizados, rediseños"
+#~ " e integración de comercio electrónico."
 
 #~ msgid "Starting from"
 #~ msgstr "A partir de"
@@ -3539,4 +3680,63 @@ msgstr "No es un valor flotante válido."
 #~ "Comience gratis. Comienza gratis.\n"
 #~ "                Agrega a todo tu equipo"
 #~ " a medida que crecen tus necesidades."
+
+#~ msgid "El Camino Recorrido"
+#~ msgstr ""
+
+#~ msgid "About"
+#~ msgstr "Acerca de"
+
+#~ msgid "Schedule Consultation"
+#~ msgstr "Agendar consulta"
+
+#~ msgid "Service Interested"
+#~ msgstr "Servicio de interés"
+
+#~ msgid "“ Lorem ipsum dolor sit amet consectetur adipisicing elit... ”"
+#~ msgstr "\"Lorem ipsum dolor sit amet consectetur adipising elit ...\""
+
+#~ msgid ""
+#~ "ILCA Bejaia is an International Learning"
+#~ " Center in Algeria offering language "
+#~ "courses and learning resources."
+#~ msgstr ""
+#~ "ILCA Bejaia es un Centro Internacional"
+#~ " de Aprendizaje en Argelia que ofrece"
+#~ " cursos de idiomas y recursos de "
+#~ "aprendizaje."
+
+#~ msgid ""
+#~ "Woven Dignity is a non-profit "
+#~ "organization specializing in handmade cards,"
+#~ " with the main focus being to "
+#~ "provide refugee women with hope and "
+#~ "empowerment through sustainable work."
+#~ msgstr ""
+#~ "Woven Dignity es una organización sin"
+#~ " fines de lucro especializada en "
+#~ "tarjetas hechas a mano, cuyo principal"
+#~ " objetivo es brindar esperanza y "
+#~ "empoderamiento a las mujeres refugiadas "
+#~ "a través del trabajo sostenible."
+
+#~ msgid ""
+#~ "Migrated from Squarespace to a modern"
+#~ " custom design and built from scratch"
+#~ " with Flask, HTML5, Tailwindcss, and "
+#~ "JavaScript."
+#~ msgstr ""
+#~ "Migra de Squarespace a un diseño "
+#~ "moderno y personalizado, creado desde "
+#~ "cero con Flask, HTML5, Tailwind CSS "
+#~ "y JavaScript."
+
+#~ msgid "Need something outside of hosting or development?"
+#~ msgstr "¿Necesita algo más que alojamiento o desarrollo?"
+
+#~ msgid "Request a Custom Quote"
+#~ msgstr "Solicitar una cotización personalizada"
+
+#~ msgid "Pro Hosting & Care"
+#~ msgstr "Alojamiento Pro y Soporte or Alojamiento Pro y Mantenimiento"
 
