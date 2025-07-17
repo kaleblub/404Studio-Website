@@ -63,7 +63,7 @@
 			})();
 		</script>
 	</head>
-	<body class="font-sans text-base antialiased bg-light dark:bg-dark text-dark dark:text-light selection:bg-dark selection:text-light dark:selection:bg-light dark:selection:text-dark" data-sveltekit-preload-data="hover">
+	<body class="font-sans text-base antialiased bg-dark text-light selection:bg-dark selection:bg-light dark:selection:text-dark" data-sveltekit-preload-data="hover">
 		<div class="w-full m-auto max-w-[1400px]">
 			<div class="grid grid-cols-12 mx-auto lg:gap-16 xl:gap-20 2xl:gap-24">
 				<div class="top-0 flex flex-col items-start col-span-12 gap-6 p-6 overflow-y-auto lg:h-screen lg:sticky lg:col-span-6 xl:col-span-5 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-14 md:p-12 lg:p-16 xl:p-20 2xl:p-24 lg:pr-0 xl:pr-0 2xl:pr-0">
@@ -93,8 +93,8 @@
 				</div>
 				<div class="col-span-12 p-6 -mt-6 lg:col-span-6 xl:col-span-7 md:p-12 lg:p-16 xl:p-20 2xl:p-24 lg:pl-0 xl:pl-0 2xl:pl-0 md:-mt-12 lg:mt-0">
 					<div class="flex flex-col gap-6 text-base md:text-xl md:gap-6 lg:gap-7 xl:gap-8">
-						<a class="rounded-[20px] md:rounded-[25px] p-5 md:p-6 bg-dark/5 hover:bg-dark/10 dark:bg-light/5 dark:hover:bg-light/10 flex items-center gap-[1.5em]" href="{{ url_for('main.home', lang=lang) }}" target="_blank"
-							><div class="w-[80px] md:w-[90px] md:h-[90px] md:rounded-[18px] h-[80px] rounded-[15px] shrink-0 flex items-center justify-center bg-light dark:bg-dark">
+						<a class="rounded-[20px] md:rounded-[25px] p-5 md:p-6 bg-light/5 hover:bg-light/10 flex items-center gap-[1.5em]" href="{{ url_for('main.home', lang=lang) }}" target="_blank"
+							><div class="w-[80px] md:w-[90px] md:h-[90px] md:rounded-[18px] h-[80px] rounded-[15px] shrink-0 flex items-center justify-center bg-dark">
 								<span class="icon"><img src="{{ url_for('static', filename='images/icons/pc-50.png') }}" alt="Website Icon"></span>
 							</div>
 							<div class="flex flex-col">
@@ -102,8 +102,8 @@
 								<p class="opacity-50 font-medium mt-[0.1em]">{{ _('Visit our website and become familiar with what we do!') }}</p>
 							</div>
                         </a>
-						<a class="rounded-[20px] md:rounded-[25px] p-5 md:p-6 bg-dark/5 hover:bg-dark/10 dark:bg-light/5 dark:hover:bg-light/10 flex items-center gap-[1.5em]" href="mailto:kaleb.humpal@404studio.net" target="_blank">
-                            <div class="w-[80px] md:w-[90px] md:h-[90px] md:rounded-[18px] h-[80px] rounded-[15px] shrink-0 flex items-center justify-center bg-light dark:bg-dark">
+						<a class="rounded-[20px] md:rounded-[25px] p-5 md:p-6 bg-light/5 hover:bg-light/10 flex items-center gap-[1.5em]" href="mailto:kaleb.humpal@404studio.net" target="_blank">
+                            <div class="w-[80px] md:w-[90px] md:h-[90px] md:rounded-[18px] h-[80px] rounded-[15px] shrink-0 flex items-center justify-center bg-dark">
 								<span class="icon"><img src="{{ url_for('static', filename='images/icons/email-50.png') }}" alt="Email Icon"></span>
 							</div>
 							<div class="flex flex-col">
@@ -111,7 +111,7 @@
 								<p class="opacity-50 font-medium mt-[0.1em]">{{ _('Send us an Email.') }}</p>
 							</div>
                         </a>
-						<a class="rounded-[20px] md:rounded-[25px] p-5 md:p-6 bg-dark/5 hover:bg-dark/10 dark:bg-light/5 dark:hover:bg-light/10 flex items-center gap-[1.5em]" href="{{ url_for('main.portfolio', lang=lang) }}" target="_blank"><div class="w-[80px] md:w-[90px] md:h-[90px] md:rounded-[18px] h-[80px] rounded-[15px] shrink-0 flex items-center justify-center bg-light dark:bg-dark">
+						<a class="rounded-[20px] md:rounded-[25px] p-5 md:p-6 bg-light/5 hover:bg-light/10 flex items-center gap-[1.5em]" href="{{ url_for('main.portfolio', lang=lang) }}" target="_blank"><div class="w-[80px] md:w-[90px] md:h-[90px] md:rounded-[18px] h-[80px] rounded-[15px] shrink-0 flex items-center justify-center bg-light dark:bg-dark">
 								<span class="icon"><img src="{{ url_for('static', filename='images/icons/portfolio-50.png') }}" alt="Portfolio/Briefcase Icon"></span>
 							</div>
 							<div class="flex flex-col">
@@ -119,8 +119,8 @@
 								<p class="opacity-50 font-medium mt-[0.1em]">{{ _('Take a look at our past works.') }}</p>
 							</div>
                         </a>
-						<a class="rounded-[20px] md:rounded-[25px] p-5 md:p-6 bg-dark/5 hover:bg-dark/10 dark:bg-light/5 dark:hover:bg-light/10 flex items-center gap-[1.5em]" href="https://wa.me/+593991862613" target="_blank">
-                            <div class="w-[80px] md:w-[90px] md:h-[90px] md:rounded-[18px] h-[80px] rounded-[15px] shrink-0 flex items-center justify-center bg-light dark:bg-dark">
+						<a class="rounded-[20px] md:rounded-[25px] p-5 md:p-6 bg-light/5 hover:bg-light/10 flex items-center gap-[1.5em]" href="https://wa.me/+593991862613" target="_blank">
+                            <div class="w-[80px] md:w-[90px] md:h-[90px] md:rounded-[18px] h-[80px] rounded-[15px] shrink-0 flex items-center justify-center bg-dark">
 								<span class="icon"><img src="{{ url_for('static', filename='images/icons/whatsapp-50.png') }}" alt="Whatsapp Icon"></span>
 							</div>
 							<div class="flex flex-col">
@@ -128,8 +128,8 @@
 								<p class="opacity-50 font-medium mt-[0.1em]">{{ _('Reach out to us through Whatsapp.') }}</p>
 							</div>
                         </a>
-						<!-- <a class="rounded-[20px] md:rounded-[25px] p-5 md:p-6 bg-dark/5 hover:bg-dark/10 dark:bg-light/5 dark:hover:bg-light/10 flex items-center gap-[1.5em]" href="#" target="_blank">
-                            <div class="w-[80px] md:w-[90px] md:h-[90px] md:rounded-[18px] h-[80px] rounded-[15px] shrink-0 flex items-center justify-center bg-light dark:bg-dark">
+						<!-- <a class="rounded-[20px] md:rounded-[25px] p-5 md:p-6 bg-light/5 hover:bg-light/10 flex items-center gap-[1.5em]" href="#" target="_blank">
+                            <div class="w-[80px] md:w-[90px] md:h-[90px] md:rounded-[18px] h-[80px] rounded-[15px] shrink-0 flex items-center justify-center bg-dark">
 								<span class="icon"><img src="{{ url_for('static', filename='images/whatsapp.svg') }}" alt="Whatsapp Icon"></span>
 							</div>
 							<div class="flex flex-col">
