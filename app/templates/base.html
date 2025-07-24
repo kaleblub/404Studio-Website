@@ -2,14 +2,30 @@
 <html class="overflow-x: hidden;" lang="{{ lang or 'en'}}">
 
 <head>
+  <!-- Charset & Viewport -->
   <meta charset="UTF-8" />
-  <meta name="robots" content="index, follow" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Mobile App Meta Tags -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="404Studio" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#0a0c19" />
+  <meta name="msapplication-TileColor" content="#0a0c19" />
+  <meta name="msapplication-config" content="browserconfig.xml" />
+
+  <!-- Favicon and Manifest -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicons/apple-touch-icon.png') }}" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicons/favicon-32x32.png') }}" />
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicons/favicon-16x16.png') }}" />
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicons/favicon.ico') }}" />
+  <link rel="mask-icon" href="{{ url_for('static', filename='images/favicons/safari-pinned-tab.svg') }}" color="#0a0c19" />
+  <link rel="manifest" href="{{ url_for('static', filename='site.webmanifest') }}" />
 
   <title>{% block title %}404 Studio - Web Development Agency - Premium Solutions{% endblock %}</title>
-  
-  <link rel="canonical" href="{% block canonical %}https://404studio.net{% endblock %}" />
-  
+    
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -30,50 +46,25 @@
 
   <link rel="icon" href="{{ url_for('static', filename='images/icons/404.ico') }}" />
 
-  <!-- Open Graph -->
-  {% block og_type %}
-    <meta property="og:type" content="website">
-  {% endblock %}
+  {% block meta %}
+    <meta name="description" content="Default description for 404 Studio. Clean, modern websites for creative thinkers.">
 
-  {% block og_url %}
-    <meta property="og:url" content="https://404studio.net">
-  {% endblock %}
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="404 Studio - Clean, Custom Web Development" />
+    <meta property="og:description" content="Default description for 404 Studio. Clean, modern websites for creative thinkers." />
+    <meta property="og:image" content="{{ url_for('static', filename='images/og/{{ lang }}/home.jpg') }}" />
+    <meta property="og:url" content="https://404studio.net/{{ lang }}/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="{{ 'en_US' if lang == 'en' else 'es_ES' }}" />
 
-  {% block og_title %}
-    <meta property="og:title" content="404 Studio – Clean, Custom Web Development">
-  {% endblock %}
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="404 Studio" />
+    <meta name="twitter:description" content="Default description for 404 Studio. Clean, modern websites for creative thinkers." />
+    <meta name="twitter:image" content="{{ url_for('static', filename='images/og/{{ lang }}/home.jpg') }}" />
 
-  {% block og_description %}
-    <meta property="og:description" content="Need a stunning, fast website? 404 Studio builds modern sites that perform.">
-  {% endblock %}
-
-  {% block og_image %}
-    <meta property="og:image" content="{{ url_for('static', filename='images/og/home.jpg') }}">
-  {% endblock %}
-
-  <!-- Twitter -->
-  {% block twitter_card %}
-    <meta name="twitter:card" content="summary_large_image">
-  {% endblock %}
-
-  {% block twitter_url %}
-    <meta name="twitter:url" content="https://404studio.net">
-  {% endblock %}
-
-  {% block twitter_title %}
-    <meta name="twitter:title" content="404 Studio – Clean, Custom Web Development">
-  {% endblock %}
-
-  {% block twitter_description %}
-    <meta name="twitter:description" content="Need a stunning, fast website? 404 Studio builds modern sites that perform.">
-  {% endblock %}
-
-  {% block twitter_image %}
-    <meta name="twitter:image" content="{{ url_for('static', filename='images/og/home.webp') }}">
-  {% endblock %}
-
-  {% block twitter_creator %}
-    <meta name="twitter:creator" content="404 Studio LLC">
+    <!-- Canonical -->
+    <link rel="canonical" href="https://404studio.net/{{ lang }}/" />
   {% endblock %}
 
   <!-- Your existing styles and scripts -->

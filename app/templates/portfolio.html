@@ -2,51 +2,24 @@
 
 {% block title %}Portfolio - 404 Studio{% endblock %}
 
-<!-- Open Graph -->
-{% block og_type %}
-  <meta property="og:type" content="website">
-{% endblock %}
+{% block meta %}
+  <meta name="description" content="See what we’ve built. Checkout our portfolio of beautifully crafted, high-performance websites.">
 
-{% block og_url %}
-  <meta property="og:url" content="https://404studio.net/{{ lang }}/portfolio">
-{% endblock %}
+  <meta property="og:title" content="Portfolio — 404 Studio" />
+  <meta property="og:description" content="See what we’ve built. Checkout our portfolio of beautifully crafted, high-performance websites." />
+  <meta property="og:image" content="{{ url_for('static', filename='images/og/{{ lang }}/portfolio.jpg') }}" />
+  <meta property="og:url" content="https://404studio.net/{{ lang }}/portfolio" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="{{ 'en_US' if lang == 'en' else 'es_ES' }}" />
 
-{% block og_title %}
-  <meta property="og:title" content="Our Work - 404 Studio">
-{% endblock %}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio — 404 Studio" />
+  <meta name="twitter:description" content="See what we’ve built. Checkout our portfolio of beautifully crafted, high-performance websites." />
+  <meta name="twitter:image" content="{{ url_for('static', filename='images/og/{{ lang }}/portfolio.jpg') }}" />
 
-{% block og_description %}
-  <meta property="og:description" content="Check out our portfolio of beautifully crafted, high-performance websites.">
-{% endblock %}
+  <link rel="canonical" href="https://404studio.net/{{ lang }}/portfolio" />
+{% endblock meta %}
 
-{% block og_image %}
-  <meta property="og:image" content="{{ url_for('static', filename='images/og/portfolio.jpg') }}">
-{% endblock %}
-
-<!-- Twitter -->
-{% block twitter_card %}
-  <meta name="twitter:card" content="summary_large_image">
-{% endblock %}
-
-{% block twitter_url %}
-  <meta name="twitter:url" content="https://404studio.net/{{ lang }}/portfolio">
-{% endblock %}
-
-{% block twitter_title %}
-  <meta name="twitter:title" content="Our Work - 404 Studio">
-{% endblock %}
-
-{% block twitter_description %}
-  <meta name="twitter:description" content="Check out our portfolio of beautifully crafted, high-performance websites.">
-{% endblock %}
-
-{% block twitter_image %}
-  <meta name="twitter:image" content="{{ url_for('static', filename='images/og/portfolio.jpg') }}">
-{% endblock %}
-
-{% block twitter_creator %}
-  <meta name="twitter:creator" content="404 Studio LLC">
-{% endblock %}
 {% block extra_head %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/portfolio.css') }}">
 

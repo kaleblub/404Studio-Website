@@ -2,52 +2,26 @@
 
 {% block title %}About Us - 404 Studio{% endblock %}
 
-<!-- Open Graph -->
-{% block og_type %}
-  <meta property="og:type" content="website">
-{% endblock %}
+{% block meta %}
+  <meta name="description" content="Learn more about 404 Studio — a web development studio passionate about helping visionaries build standout digital experiences.">
 
-{% block og_url %}
-  <meta property="og:url" content="https://404studio.net/{{ lang }}/about">
-{% endblock %}
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="About — 404 Studio" />
+  <meta property="og:description" content="Learn more about 404 Studio — a web development studio passionate about helping visionaries build standout digital experiences." />
+  <meta property="og:image" content="{{ url_for('static', filename='images/og/{{ lang }}/about.jpg') }}" />
+  <meta property="og:url" content="https://404studio.net/{{ lang }}/about" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="{{ 'en_US' if lang == 'en' else 'es_ES' }}" />
 
-{% block og_title %}
-  <meta property="og:title" content="About 404 Studio - Custom Web Development">
-{% endblock %}
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="About — 404 Studio" />
+  <meta name="twitter:description" content="Learn more about 404 Studio — a web development studio passionate about helping visionaries build standout digital experiences." />
+  <meta name="twitter:image" content="{{ url_for('static', filename='images/og/{{ lang }}/about.jpg') }}" />
 
-{% block og_description %}
-  <meta property="og:description" content="Learn more about 404 Studio, your partner in custom web design and development.">
+  <!-- Canonical -->
+  <link rel="canonical" href="https://404studio.net/{{ lang }}/about" />
 {% endblock %}
-
-{% block og_image %}
-  <meta property="og:image" content="{{ url_for('static', filename='images/og/about.jpg') }}">
-{% endblock %}
-
-<!-- Twitter -->
-{% block twitter_card %}
-  <meta name="twitter:card" content="summary_large_image">
-{% endblock %}
-
-{% block twitter_url %}
-  <meta name="twitter:url" content="https://404studio.net/{{ lang }}/about">
-{% endblock %}
-
-{% block twitter_title %}
-  <meta name="twitter:title" content="About 404 Studio - Custom Web Development">
-{% endblock %}
-
-{% block twitter_description %}
-  <meta name="twitter:description" content="Learn more about 404 Studio, your partner in custom web design and development.">
-{% endblock %}
-
-{% block twitter_image %}
-  <meta name="twitter:image" content="{{ url_for('static', filename='images/og/about.jpg') }}">
-{% endblock %}
-
-{% block twitter_creator %}
-  <meta name="twitter:creator" content="404 Studio LLC">
-{% endblock %}
-
 
 {% block extra_head %}
 

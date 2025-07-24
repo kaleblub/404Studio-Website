@@ -2,49 +2,26 @@
 
 {% block title %}Contact Us - 404 Studio{% endblock %}
 
-<!-- Open Graph -->
-{% block og_type %}
+{% block meta %}
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://404studio.net/{{ lang }}/contact">
+
+  <!-- Meta Description -->
+  <meta name="description" content="Ready to get started? Reach out today for a free consultation.">
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-{% endblock %}
-
-{% block og_url %}
   <meta property="og:url" content="https://404studio.net/{{ lang }}/contact">
-{% endblock %}
-
-{% block og_title %}
   <meta property="og:title" content="Let's Talk - 404 Studio">
-{% endblock %}
-
-{% block og_description %}
   <meta property="og:description" content="Ready to get started? Reach out today for a free consultation.">
-{% endblock %}
+  <meta property="og:image" content="{{ url_for('static', filename='images/og/{{ lang }}/contact.jpg') }}">
 
-{% block og_image %}
-  <meta property="og:image" content="{{ url_for('static', filename='images/og/contact.jpg') }}">
-{% endblock %}
-
-<!-- Twitter -->
-{% block twitter_card %}
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-{% endblock %}
-
-{% block twitter_url %}
   <meta name="twitter:url" content="https://404studio.net/{{ lang }}/contact">
-{% endblock %}
-
-{% block twitter_title %}
   <meta name="twitter:title" content="Let's Talk - 404 Studio">
-{% endblock %}
-
-{% block twitter_description %}
   <meta name="twitter:description" content="Ready to get started? Reach out today for a free consultation.">
-{% endblock %}
-
-{% block twitter_image %}
-  <meta name="twitter:image" content="{{ url_for('static', filename='images/og/contact.jpg') }}">
-{% endblock %}
-
-{% block twitter_creator %}
+  <meta name="twitter:image" content="{{ url_for('static', filename='images/og/{{ lang }}/contact.jpg') }}">
   <meta name="twitter:creator" content="404 Studio LLC">
 {% endblock %}
 
