@@ -99,20 +99,19 @@ def root_redirect():
         response.set_cookie('lang', lang, max_age=60*60*24*30, path='/')
         return response
     else:
-        # If cookie is valid, just redirect without setting cookie again
+        # If cookie valid, just redirect
         return redirect(url_for('main.home', lang=lang))
 
 
 @main.route('/<lang>/', methods=['GET', 'POST'])
 def home(lang):
     if lang not in ['en', 'es']:
-        # Fallback: redirect to default language URL
         return redirect(url_for('main.home', lang='en'))
 
     cookie_lang = request.cookies.get('lang')
     if cookie_lang != lang:
-        # Cookie doesn't match URL, so set cookie and redirect once
-        response = make_response(redirect(url_for('main.home', lang=lang)))
+        # Set cookie but render page immediately — no redirect!
+        response = make_response(render_template('home.html', reviews=reviews, form=ContactForm()))
         response.set_cookie('lang', lang, max_age=60*60*24*30, path='/')
         return response
 
