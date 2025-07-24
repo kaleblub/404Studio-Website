@@ -189,8 +189,7 @@
 
     <!-- Centered Card -->
     <div class="relative z-10 flex items-center justify-center h-full">
-        <div
-            class="flex flex-col bg-[#0a0c19] text-white p-8 rounded-xl w-full max-w-2xl shadow-xl text-center items-center">
+        <div class="flex flex-col bg-[#0a0c19] text-white p-8 rounded-xl w-full md:w-4/6 shadow-xl text-center items-center">
             <h2 class="font-montserrat text-[30px] lg:text-[58px] font-semibold text-white">{{ _('Need help with a different type of digital project?') }}</h2>
             <p class="mb-6 font-inter text-gray-300">{{ _('Schedule a free consultation now, and we will figure out a solution for you!') }}</p>
             <a class="quidel-button" href="https://cal.com/404-studio-kaleb-humpal/30-minute-consultation-meeting?development_package=Other&hosting_plan=Other&project_details=Looking+for+a+different+service" target="_blank">
@@ -412,8 +411,8 @@
         <button id="cta-button-mobile" class="w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg opacity-50 cursor-not-allowed transition duration-300">Continue</button>
       </div>
       <div class="desktop-cta hidden md:block fixed bottom-20 right-10 w-48 bg-[#141726] p-4 rounded-lg shadow z-50">
-        <h4 class="text-white text-xl font-bold mb-2">Ready with your selection?</h4>
-        <button id="cta-button-desktop" class="w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg opacity-50 cursor-not-allowed transition duration-300">Continue</button>
+        <h4 class="text-white text-xl font-bold mb-2">{{ _('Ready with your selection?') }}</h4>
+        <button id="cta-button-desktop" class="w-full bg-indigo-600 text-white font-semibold py-3 rounded-lg opacity-50 cursor-not-allowed transition duration-300">{{ _('Continue') }}</button>
       </div>
     `;
 
