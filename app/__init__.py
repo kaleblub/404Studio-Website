@@ -1,3 +1,4 @@
+from werkzeug.middleware.proxy_fix import ProxyFix
 from flask import Flask, request
 from flask_babel import Babel, _
 
@@ -18,6 +19,8 @@ def create_app():
     app.config['SECRET_KEY'] = 'your-secret-key'
     app.config['BABEL_DEFAULT_LOCALE'] = 'en'
     app.config['BABEL_TRANSLATION_DIRECTORIES'] = '../translations'
+
+    app.wsgi_app = ProxyFix(app.wsgi_app, x_proto=1, x_host=1)
 
     babel.init_app(app, locale_selector=get_locale)
 
