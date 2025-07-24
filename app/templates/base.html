@@ -2,38 +2,57 @@
 <html class="overflow-x: hidden;" lang="{{ lang or 'en'}}">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="robots" content="index, follow" />
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>404 Studio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <title>{% block title %}404 Studio{% endblock %}</title>
+  
+  <link rel="canonical" href="{% block canonical %}https://404studio.net{% endblock %}" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMD2LS33KT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    rel="stylesheet" />
 
-  gtag('config', 'G-ZMD2LS33KT');
-</script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/tailwind-styles.css') }}">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZMD2LS33KT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-ZMD2LS33KT');
+  </script>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/tailwind-styles.css') }}" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+  <link rel="icon" href="{{ url_for('static', filename='images/icons/404.ico') }}" />
 
-  <link rel="icon" href="{{ url_for('static', filename='images/icons/404.ico') }}">
-  <!-- Page Specific Styles -->
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{% block og_url %}https://404studio.net{% endblock %}" />
+  <meta property="og:title" content="{% block og_title %}404 Studio – Clean, Custom Web Development{% endblock %}" />
+  <meta property="og:description" content="{% block og_description %}Need a stunning, fast website? 404 Studio builds modern sites that perform.{% endblock %}" />
+  <meta property="og:image" content="{% block og_image %}{% endblock %}" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="{% block twitter_url %}https://404studio.net{% endblock %}" />
+  <meta name="twitter:title" content="{% block twitter_title %}404 Studio – Clean, Custom Web Development{% endblock %}" />
+  <meta name="twitter:description" content="{% block twitter_description %}Need a stunning, fast website? 404 Studio builds modern sites that perform.{% endblock %}" />
+  <meta name="twitter:image" content="{% block twitter_image %}{% endblock %}" />
+  <meta name="twitter:creator" content="404 Studio LLC" />
+
+  <!-- Your existing styles and scripts -->
   {% block extra_head %}
   {% endblock extra_head %}
+  
   <script>
     function toggleMenu() {
       document.getElementById("mobile-menu").classList.toggle("hidden");
     }
-
     function toggleDropdown() {
       document.getElementById("services-dropdown").classList.toggle("hidden");
     }
@@ -114,9 +133,7 @@
       display: block;
     }
   </style>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
 </head>
 
 <body class="bg-[#0a0c19] text-white overflow-x-hidden">

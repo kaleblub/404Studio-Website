@@ -1,6 +1,16 @@
-<!-- <meta name="color-scheme" content="dark light">Canonical URLPrimary Meta Tags -->
-<!-- <body class="bg-gray-50 bg-gray-950"> -->
 {% extends 'base.html' %}
+
+{% block title %}Portfolio - 404 Studio{% endblock %}
+{% block canonical %}https://404studio.net/{{ lang }}/portfolio{% endblock %}
+
+{% block og_url %}https://404studio.net/{{ lang }}/portfolio{% endblock %}
+{% block og_title %}Our Work - 404 Studio{% endblock %}
+{% block og_description %}Check out our portfolio of beautifully crafted, high-performance websites.{% endblock %}
+
+{% block twitter_url %}https://404studio.net/{{ lang }}/portfolio{% endblock %}
+{% block twitter_title %}Our Work - 404 Studio{% endblock %}
+{% block twitter_description %}Check out our portfolio of beautifully crafted, high-performance websites.{% endblock %}
+
 {% block extra_head %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/portfolio.css') }}">
 
