@@ -1,15 +1,52 @@
 {% extends 'base.html' %}
 
 {% block title %}Pricing - 404 Studio{% endblock %}
-{% block canonical %}https://404studio.net/{{ lang }}/pricing{% endblock %}
 
-{% block og_url %}https://404studio.net/{{ lang }}/pricing{% endblock %}
-{% block og_title %}Transparent Pricing - 404 Studio{% endblock %}
-{% block og_description %}Simple, honest pricing for website development and web hosting.{% endblock %}
+<!-- Open Graph -->
+{% block og_type %}
+  <meta property="og:type" content="website">
+{% endblock %}
 
-{% block twitter_url %}https://404studio.net/{{ lang }}/pricing{% endblock %}
-{% block twitter_title %}Transparent Pricing - 404 Studio{% endblock %}
-{% block twitter_description %}Simple, honest pricing for website development and web hosting.{% endblock %}
+{% block og_url %}
+  <meta property="og:url" content="https://404studio.net/{{ lang }}/pricing">
+{% endblock %}
+
+{% block og_title %}
+  <meta property="og:title" content="Transparent Pricing - 404 Studio">
+{% endblock %}
+
+{% block og_description %}
+  <meta property="og:description" content="Simple, honest pricing for website development and web hosting.">
+{% endblock %}
+
+{% block og_image %}
+  <meta property="og:image" content="{{ url_for('static', filename='images/og/pricing.jpg') }}">
+{% endblock %}
+
+<!-- Twitter -->
+{% block twitter_card %}
+  <meta name="twitter:card" content="summary_large_image">
+{% endblock %}
+
+{% block twitter_url %}
+  <meta name="twitter:url" content="https://404studio.net/{{ lang }}/pricing">
+{% endblock %}
+
+{% block twitter_title %}
+  <meta name="twitter:title" content="Transparent Pricing - 404 Studio">
+{% endblock %}
+
+{% block twitter_description %}
+  <meta name="twitter:description" content="Simple, honest pricing for website development and web hosting.">
+{% endblock %}
+
+{% block twitter_image %}
+  <meta name="twitter:image" content="{{ url_for('static', filename='images/og/pricing.jpg') }}">
+{% endblock %}
+
+{% block twitter_creator %}
+  <meta name="twitter:creator" content="404 Studio LLC">
+{% endblock %}
 
 {% block extra_head %}
 

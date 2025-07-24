@@ -1,15 +1,52 @@
 {% extends 'base.html' %}
 
 {% block title %}About Us - 404 Studio{% endblock %}
-{% block canonical %}https://404studio.net/{{ lang }}/about{% endblock %}
 
-{% block og_url %}https://404studio.net/{{ lang }}/about{% endblock %}
-{% block og_title %}About 404 Studio - Custom Web Development{% endblock %}
-{% block og_description %}Learn more about 404 Studio, your partner in custom web design and development.{% endblock %}
+<!-- Open Graph -->
+{% block og_type %}
+  <meta property="og:type" content="website">
+{% endblock %}
 
-{% block twitter_url %}https://404studio.net/{{ lang }}/about{% endblock %}
-{% block twitter_title %}About 404 Studio - Custom Web Development{% endblock %}
-{% block twitter_description %}Learn more about 404 Studio, your partner in custom web design and development.{% endblock %}
+{% block og_url %}
+  <meta property="og:url" content="https://404studio.net/{{ lang }}/about">
+{% endblock %}
+
+{% block og_title %}
+  <meta property="og:title" content="About 404 Studio - Custom Web Development">
+{% endblock %}
+
+{% block og_description %}
+  <meta property="og:description" content="Learn more about 404 Studio, your partner in custom web design and development.">
+{% endblock %}
+
+{% block og_image %}
+  <meta property="og:image" content="{{ url_for('static', filename='images/og/about.jpg') }}">
+{% endblock %}
+
+<!-- Twitter -->
+{% block twitter_card %}
+  <meta name="twitter:card" content="summary_large_image">
+{% endblock %}
+
+{% block twitter_url %}
+  <meta name="twitter:url" content="https://404studio.net/{{ lang }}/about">
+{% endblock %}
+
+{% block twitter_title %}
+  <meta name="twitter:title" content="About 404 Studio - Custom Web Development">
+{% endblock %}
+
+{% block twitter_description %}
+  <meta name="twitter:description" content="Learn more about 404 Studio, your partner in custom web design and development.">
+{% endblock %}
+
+{% block twitter_image %}
+  <meta name="twitter:image" content="{{ url_for('static', filename='images/og/about.jpg') }}">
+{% endblock %}
+
+{% block twitter_creator %}
+  <meta name="twitter:creator" content="404 Studio LLC">
+{% endblock %}
 
 
 {% block extra_head %}
