@@ -33,6 +33,11 @@ def send_email(subject, body):
 
 reviews = [
     {
+        "review_content": "\"Excellent work. Hope to work with him again asap\"",
+        "reviewer": "Client review",
+        "reviewer_titlle": "(Upwork)"
+    },
+    {
         "review_content": "\"I have used Tina on Several Different occasions, and in each instance was very pleased. Her accounting skills are second to none, and she is well informed, If she is stumped with a question, she continues her research until she finds the right answer. She has helped me to find the right software, and has help me with implementing it. She is very trust worthy, and I would recommend her to anyone.\"",
         "reviewer": "Devi",
         "reviewer_title": "Manager at Chambers Construction",
@@ -204,11 +209,48 @@ def pricing(lang):
 
 projects = [
     {
+        "id": "nationwide-legal",
+        "title": "Nationwide Legal Directory",
+        "description": "SEO-first, CMS-driven court information system built to scale across hundreds of U.S. jurisdictions.",
+        "role": "Front-end architecture, SEO strategy, template system",
+        "client_type": "Legal services company",
+        "industry": "Legal / Information Directory",
+        "features": [
+            "CMS-driven court templates",
+            "Structured data (JSON-LD)",
+            "Mobile-first accessibility",
+            "FAQ & breadcrumb schema",
+            "Lighthouse 90+ scores"
+        ],
+        "seo_focus": True,
+        "tech": [
+            ("Next.js", "nextjs-icon-svgrepo-com.svg"),
+            ("TailwindCSS", "tailwind-css.png"),
+        ],
+        "link": "https://state.1court.ai/",
+        "desktop_mockup": "state-1court-ai-desktop-mockup.png",
+        "mobile_mockup": "state-1court-ai-mobile-mockup.png",
+        "testimonial": "Excellent work. Hope to work with him again asap."
+    },
+    {
         "id": "balanced-accountant",
         "title": "Balanced Accountant",
         "description": "Migrated from Squarespace to a modern custom design and built from scratch with Flask, HTML5, Tailwindcss, and JavaScript.",
+        "role": "Front-end architecture, SEO strategy, Custom CMS",
+        "client_type": "Accounting company",
+        "industry": "Accounting",
+        "features": [
+            "CMS-driven information",
+            "Structured data (JSON-LD)",
+            "Mobile-first accessibility",
+            "FAQ & breadcrumb schema",
+            "Lighthouse 90+ scores"
+        ],
+        "seo_focus": True,
         "tech": [
+            ("Flask", "flask.webp"),
             ("HTML5", "html-5-2.png"),
+            ("TailwindCSS", "tailwind-css.png"),
         ],
         "link": "https://balancedaccountant.com/",
         "desktop_mockup": "balanced-accountant-home-page-mockup.png",
