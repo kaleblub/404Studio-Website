@@ -274,7 +274,7 @@ projects = [
         "tech": [
             ("HTML5", "html-5-2.png"),
         ],
-        "link": "https://ilcabejaia.com/",
+        "link": "https://ilca-website.vercel.app/",
         "desktop_mockup": "ilca-bejaia-home-page-mockup.png",
         "mobile_mockup": "woven-dignity-home-page-mobile-mockup.png",
     }
